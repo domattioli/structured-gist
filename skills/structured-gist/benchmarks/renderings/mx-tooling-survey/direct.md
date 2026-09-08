@@ -1,4 +1,0 @@
-```text
-- Load-tool evaluation ▸ Scenario ↪ three weeks; replay 70% reads, 25% writes, 5% bulk exports against staging ▸ Candidates A. incumbent open source ↪ reads and writes clean; cannot model long-polling bulk exports; external driver is the duct tape to retire B. commercial service ↪ best reporting, auto run comparison; blocked: recorded traffic must upload to vendor cloud, scrubbing fails policy C. newer open source ↪ full scenario natively, self-hosted; runner lost coordination twice, two maintainers, no governance D. eliminated week one ↪ licensing flipped to per-seat, costing more than observability budget
-- Recommendation I. adopt C for regression gate now ↪ scheduled gate tolerates flaky reruns II. keep A for ad-hoc interactive testing III. revisit B in a year ↪ promised self-hosted replay would dissolve governance blocker
-```

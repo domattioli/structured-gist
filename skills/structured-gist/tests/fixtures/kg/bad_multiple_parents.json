@@ -1,2 +1,0 @@
-{ "edges": [ {"from": "c1", "to": "p1", "type": "composed-of"}, {"from": "c2", "to": "p1", "type": "composed-of"} ], "nodes": [ {"id": "c1", "text": "First concept", "type": "concept"}, {"id": "c2", "text": "Second concept", "type": "concept"}, {"id": "p1", "text": "Part with two parents", "type": "unordered-part"} ], "schema": "nested-notes-kg/v1", "source_id": "bad_multiple_parents"
-}

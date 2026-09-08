@@ -1,3 +1,6 @@
 ```
-- Outcome ↪ summary follows below a. detail
-``` 
+- Outcome
+    ↪ summary follows below
+        a. detail
+```
+

@@ -1,3 +1,0 @@
-```text
-- Metric glossary ▸ Growth a. activation rate ↪ signups completing setup wizard within seven days b. weekly active teams ↪ three-plus members active in window c. time to first value ↪ minutes signup to first pipeline run d. seat expansion rate ↪ added licenses, existing teams, per quarter ▸ Revenue a. churn rate ↪ monthly, paying teams only, cancellations over month-start actives b. net revenue retention ↪ year-old teams' revenue now versus then ▸ Operations a. support first-response, business hours b. error budget burn fraction c. deployment frequency per week d. lead time, first commit to deploy e. p95 query latency ↪ sampled from read replica, not primary ▸ Refresh ↪ hourly, except revenue daily after billing batch
-```

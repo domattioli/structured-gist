@@ -1,1 +1,8 @@
-# Good responsive fixture — real GFM list, renderer-wrapped (no R11) - Wrap discipline - ▸ Purpose - ↪ chat-app viewports vary, so instead of the linter hard-wrapping at a fixed width the renderer wraps every physical line to the actual box width using its own list rendering, keeping desktop full-width and phone clean with zero linter-side width budget needed. - ▸ Scope - a. chat-app replies - b. any markdown surface with variable viewport
+# Good responsive fixture — real GFM list, renderer-wrapped (no R11)
+
+- Wrap discipline
+  - ▸ Purpose
+    - ↪ chat-app viewports vary, so instead of the linter hard-wrapping at a fixed width the renderer wraps every physical line to the actual box width using its own list rendering, keeping desktop full-width and phone clean with zero linter-side width budget needed.
+  - ▸ Scope
+    - a. chat-app replies
+    - b. any markdown surface with variable viewport

@@ -1,2 +1,0 @@
-{ "edges": [], "nodes": [ {"id": "c1", "text": "Concept", "type": "invalid-type"} ], "schema": "nested-notes-kg/v1", "source_id": "bad_unknown_node_type"
-}

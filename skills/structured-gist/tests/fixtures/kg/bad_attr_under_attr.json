@@ -1,2 +1,0 @@
-{ "edges": [ {"from": "c1", "to": "a1", "type": "has-attribute"}, {"from": "a1", "to": "a2", "type": "has-attribute"} ], "nodes": [ {"id": "c1", "text": "Concept", "type": "concept"}, {"id": "a1", "text": "first attr", "type": "attribute"}, {"id": "a2", "text": "second attr", "type": "attribute"} ], "schema": "nested-notes-kg/v1", "source_id": "bad_attr_under_attr"
-}

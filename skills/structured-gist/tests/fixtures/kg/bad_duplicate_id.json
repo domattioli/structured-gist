@@ -1,2 +1,0 @@
-{ "edges": [ {"from": "c1", "to": "p1", "type": "composed-of"} ], "nodes": [ {"id": "c1", "text": "Concept", "type": "concept"}, {"id": "c1", "text": "Duplicate", "type": "unordered-part"} ], "schema": "nested-notes-kg/v1", "source_id": "bad_duplicate_id"
-}

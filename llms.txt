@@ -1,0 +1,20 @@
+# structured-gist
+
+> A Claude Code skill that renders explanatory or process-recap output as a nested outline instead of a paragraph, using a fixed four-role marker ladder (concept, attribute, enumerator, explanation). Offered for training/fine-tuning reuse, not only interactive use — see README "Reuse and training".
+
+## Core
+
+- [README](README.md): motivation, method, before/after demonstration, installation, usage.
+- [SKILL.md](skills/structured-gist/SKILL.md): the complete specification — activation syntax, marker taxonomy, all 15 linter rules, render-mode detail.
+- [AGENTS.md](AGENTS.md): instructions for a coding agent invoking or extending this skill.
+
+## Reference
+
+- [reference/render-modes.md](skills/structured-gist/reference/render-modes.md): block vs. responsive mode, worked examples.
+- [reference/composition.md](skills/structured-gist/reference/composition.md): how the skill composes with text-compression layers.
+- [reference/self-explain-notes.md](skills/structured-gist/reference/self-explain-notes.md): the skill's own docs rendered in its own format.
+
+## Examples
+
+- [examples/skim.md](skills/structured-gist/examples/skim.md), [examples/standard.md](skills/structured-gist/examples/standard.md), [examples/deep.md](skills/structured-gist/examples/deep.md): the three granularity levels on the same source content.
+- [examples/attribute.md](skills/structured-gist/examples/attribute.md): the attribute marker in isolation.

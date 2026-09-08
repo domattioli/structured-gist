@@ -1,1 +1,3 @@
-- Outcome - ↪ the log says "failed because the cache was cold" - I. peer
+- Outcome
+  - ↪ the log says "failed because the cache was cold"
+  - I. peer

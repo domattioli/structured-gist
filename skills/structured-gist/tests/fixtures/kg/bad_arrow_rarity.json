@@ -1,2 +1,0 @@
-{ "schema": "nested-notes-kg/v1", "source_id": "bad-arrow-rarity", "nodes": [ {"id": "c1", "type": "concept", "text": "Root"}, {"id": "p1", "type": "unordered-part", "text": "lone part"}, {"id": "e1", "type": "explanation", "text": "explanation one"}, {"id": "e2", "type": "explanation", "text": "explanation two"} ], "edges": [ {"type": "composed-of", "from": "c1", "to": "p1"}, {"type": "explains", "from": "p1", "to": "e1"}, {"type": "explains", "from": "c1", "to": "e2"} ]
-}

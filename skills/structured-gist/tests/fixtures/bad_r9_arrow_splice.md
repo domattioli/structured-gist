@@ -1,3 +1,5 @@
 ```
-- Outcome ↪ first fact → changed; second fact → broke
-``` 
+- Outcome
+    ↪ first fact → changed; second fact → broke
+```
+

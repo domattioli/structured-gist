@@ -1,2 +1,0 @@
-{ "schema": "nested-notes-kg/v1", "source_id": "bad-mixed-child-role", "nodes": [ {"id": "c1", "type": "concept", "text": "Root"}, {"id": "a1", "type": "attribute", "text": "Attribute child"}, {"id": "p1", "type": "unordered-part", "text": "part child"} ], "edges": [ {"type": "has-attribute", "from": "c1", "to": "a1"}, {"type": "composed-of", "from": "c1", "to": "p1"} ]
-}

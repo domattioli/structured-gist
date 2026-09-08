@@ -1,2 +1,0 @@
-{ "schema": "nested-notes-kg/v1", "source_id": "bad-orphan", "nodes": [ {"id": "c1", "type": "concept", "text": "Root"}, {"id": "p1", "type": "unordered-part", "text": "attached part"}, {"id": "a9", "type": "attribute", "text": "Orphan attribute"} ], "edges": [ {"type": "composed-of", "from": "c1", "to": "p1"} ]
-}

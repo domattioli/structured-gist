@@ -1,2 +1,0 @@
-{ "edges": [], "nodes": [ {"id": "c1", "text": "This concept has too many words", "type": "concept"} ], "schema": "nested-notes-kg/v1", "source_id": "bad_word_budget"
-}

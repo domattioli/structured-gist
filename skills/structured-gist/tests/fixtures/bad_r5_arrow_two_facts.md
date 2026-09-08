@@ -1,3 +1,7 @@
 ```
-- Outcome ↪ first fact ↪ second fact ↪ third fact
-``` 
+- Outcome
+    ↪ first fact
+    ↪ second fact
+    ↪ third fact
+```
+
