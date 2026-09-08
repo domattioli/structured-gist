@@ -1,21 +1,34 @@
 # Contributing
 
-This repository is a one-way, scrub-and-sync export of a skill developed in a private governance repo. Nobody edits files here directly and merges nothing back upstream — so a normal "open a PR, get it merged" flow does not apply. Two real paths exist instead.
+## Reporting a bug
 
-## Report an issue or suggest a change
+Open an issue with a minimal repro: the input outline (or prompt) and the expected vs. actual linter/render output. "The linter should catch X but doesn't" is more useful with the actual fixture text than a description of it.
 
-Open a GitHub issue: a linter false positive/negative, a render-mode defect, a trigger phrase that should activate the skill and doesn't, unclear docs. Include a minimal repro (the input outline or prompt, expected vs. actual). Issues are read and may inform the next scrub-sync from the private repo, but there is no SLA and no guarantee a given request lands.
+## Proposing a change
 
-## Fork and extend independently
+Open an issue first for anything that changes behavior — a new rule, a render-mode change, a new trigger phrase. Small fixes (typos, a broken link, a clearer error message) can go straight to a PR.
 
-If you want to change behavior yourself rather than wait, fork the repo. It works standalone:
+## Development
 
-- `skills/structured-gist/SKILL.md` is the complete specification — read it before changing anything.
-- `skills/structured-gist/tests/lint_outline.py` is the conformance linter (15 rules, stdlib Python only, zero dependencies). Run it against your own fixtures: `python3 skills/structured-gist/tests/lint_outline.py < your_output.md`.
-- `skills/structured-gist/tests/` has the pytest suite (`pytest skills/structured-gist/tests/`) — extend it alongside any linter-rule change; an unfollowed rule with no test is a rule that silently rots.
-- Bump `version:` in `SKILL.md` frontmatter and add a row to `skills/structured-gist/tests/benchmark.md` for any behavior change — every version there justifies itself with a measured number, not a description. See existing rows for the format.
-- A fork's changes never sync back here automatically; if you want to propose them for the upstream skill, open an issue describing the change and link the fork.
+- `skills/structured-gist/SKILL.md` is the complete specification. Read it before changing linter behavior.
+- Linter: `python3 skills/structured-gist/tests/lint_outline.py < your_output.md` (15 rules, stdlib only, zero dependencies).
+- Tests: `pytest skills/structured-gist/tests/`. Run before every PR.
+- Any rule change needs a fixture pair (`good_*.md` / `bad_*.md`) and a test asserting both.
 
-## What won't be accepted upstream
+## Good patterns
 
-Pull requests opened directly against this repo. Since nothing here is hand-edited, a merged PR would be silently overwritten on the next scrub-sync — worse than no contribution at all. Use one of the two paths above instead.
+- One rule, one PR. A linter-rule change and a docs fix are two PRs, not one.
+- New rules ship with both a passing and a failing fixture — a rule nobody can prove fires (or doesn't) is unverifiable.
+- Bump `version:` in `SKILL.md` frontmatter and add a row to `skills/structured-gist/tests/benchmark.md` for any behavior change, with a real measured number, not a description.
+- Keep the `↪` explanation node exempt from any wording-compression change you're testing elsewhere — it's supposed to stay full prose regardless of what else changes.
+
+## Anti-patterns
+
+- Don't add a "mode" for a one-off case. If a rule needs an exception, name the exception in the rule, don't fork the renderer.
+- Don't relax a linter rule to make a specific bad example pass. Fix the example, or open an issue arguing the rule itself is wrong.
+- Don't change render-mode defaults without checking both `block` and `responsive` output — a fix for one surface has broken the other before.
+- Don't submit a rule change without a fixture. "I tested it manually" isn't reproducible by the next contributor.
+
+## Code style
+
+Shell and Python only, stdlib preference throughout — the linter has zero runtime dependencies by design. Match the existing style in the file you're editing rather than introducing a new one.
