@@ -7,7 +7,7 @@ Source: "Explain why the load_local_skills hook was needed." Exhaustive — full
     I. install_skills.sh = consumer flow
         a. wants .claude/skills.manifest.json
         b. looks under .claude/skills/
-            ↪ DomI uses top-level skills/ → never matches
+            ↪ this repo uses top-level skills/ → never matches
     II. harness scans ~/.claude/skills/ only
         ↪ registry built once at start; no hot reload
 

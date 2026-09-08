@@ -7,7 +7,7 @@ Source: "Explain why the load_local_skills hook was needed."
 ```
 - Discovery gap
     I. install_skills.sh consumer-only
-        ↪ lacks .claude/manifest DomI has
+        ↪ lacks .claude/manifest this repo has
     II. harness scans ~/.claude/skills/ @ start only
         ↪ registry built once; no hot reload
 

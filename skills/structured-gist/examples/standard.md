@@ -5,7 +5,7 @@ Source: "Explain why the load_local_skills hook was needed." Full ladder, soft c
 ```
 - Discovery gap
     I. install_skills.sh = consumer-only
-        ↪ wants a manifest DomI lacks; looks under
+        ↪ wants a manifest this repo lacks; looks under
         .claude/skills/
     II. harness scans ~/.claude/skills/ only
         ↪ registry built once at start; no hot reload

@@ -31,13 +31,13 @@ naturally trigger. Named here instead of forced into the outline:
 - **caveman coexistence** (`## Caveman coexistence`) — wording compresses
   per whatever caveman level is active; the `↪` leaf is exempt regardless;
   markers stay Latin even under `wenyan-*`.
-- **install** (`## Install`) — DomI marketplace skill, pulled via
+- **install** (`## Install`) — this repo marketplace skill, pulled via
   `skills.manifest.json` / the sync contract; never vendored.
 
 GitHub-authoring (which surfaces render as `inline` outlines, which
 template/footer scaffolding stays verbatim) is intentionally **absent**
 from this index as of v0.2.11/ — it was never a rule of this skill. It
-was DomI comment-discipline policy defined in terms of ``'s
+was this repo comment-discipline policy defined in terms of ``'s
 own template grammar, wearing a structured-gist section; it now lives at
 , owned by the skill
 that actually defines the templates.

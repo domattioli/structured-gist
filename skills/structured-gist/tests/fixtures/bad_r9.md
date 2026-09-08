@@ -2,5 +2,5 @@
 
 ```
 - Discovery
-    I. hook consumer-only; lacks manifest that DomI has
+    I. hook consumer-only; lacks manifest that this repo has
 ```

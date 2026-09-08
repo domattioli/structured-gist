@@ -12,7 +12,7 @@ preservation, carve-outs, caveman independence): full content lives in
 inlined the outline verbatim and drifted stale against the actual example
 after the v0.2.5 taxonomy redesign; single source of truth now). GitHub
 authoring is no longer a structured-gist rule as of v0.2.11/ — it moved to
-``  since it's DomI
+``  since it's this repo
 comment-discipline policy, not a rule of this skill.
 
 ## Verdict
