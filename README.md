@@ -1,6 +1,6 @@
 # structured-gist
 
-![License](https://img.shields.io/badge/license-MIT-blue)
+![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Version](https://img.shields.io/badge/version-0.4.3-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
 ![Tests](https://img.shields.io/badge/tests-63%20passing-success)
@@ -35,20 +35,20 @@ A fixed marker ladder assigns each line's role at a glance: this is the top clai
 
 This section is itself rendered in structured-gist's `responsive` mode, not written by hand as prose.
 
-- **Four-role marker ladder, two render modes, three granularity levels**
-  - **Role ladder** — nesting depth mirrors the actual dependency of content on its parent
-    - a. **Concept** (`-`) — top-level claim, subject, or outcome; appears only at the outermost depth; budget roughly three words
-    - b. **Attribute** (`▸`) — a named property of its parent, the parent *has a* ___; distinct from an enumerator, which lists parts rather than naming a property
-    - c. **Enumerator** (`I.`/`A.` at depth 1, `i.`/`a.` deeper) — ordered or grouped parts of the parent; the family is keyed by absolute depth, not by which marker type appears first
-    - d. **Explanation** (`↪`) — the only node type carrying full prose; usually a leaf, may head a subtree as a one-line preview; never compressed by a text-compression layer even when the rest of the tree is
-  - **Render modes** — two active output containers for the same underlying tree
-    - a. **block** — a single fenced code block, literal marker glyphs, fixed-width; for terminals and any surface without markdown rendering
-    - b. **responsive** — a real Markdown nested list, default on GitHub and in chat interfaces; glyph-free since v0.3.9, the renderer already draws a bullet per item so role moves to typography instead
+- **Marker ladder (4 roles), render modes (2), granularity levels (3)**
+  - **Role ladder**: nesting depth mirrors the actual dependency of content on its parent
+    - a. **Concept** (`-`): top-level claim, subject, or outcome; appears only at the outermost depth; budget roughly three words
+    - b. **Attribute** (`▸`): a named property of its parent, the parent *has a* ___; distinct from an enumerator, which lists parts rather than naming a property
+    - c. **Enumerator** (`I.`/`A.` at depth 1, `i.`/`a.` deeper): ordered or grouped parts of the parent; the family is keyed by absolute depth, not by which marker type appears first
+    - d. **Explanation** (`↪`): the only node type carrying full prose; usually a leaf, may head a subtree as a one-line preview; never compressed by a text-compression layer even when the rest of the tree is
+  - **Render modes**: two active output containers for the same underlying tree
+    - a. **block**: a single fenced code block, literal marker glyphs, fixed-width; for terminals and any surface without markdown rendering
+    - b. **responsive**: a real Markdown nested list, default on GitHub and in chat interfaces; glyph-free since v0.3.9, the renderer already draws a bullet per item so role moves to typography instead
     - A deprecated third mode, `inline`, indented under a list item and rendered as a code block on GitHub rather than a list; the defect `responsive` was built to fix.
-  - **Granularity** — controls how much of the tree renders
-    - a. `skim` (default) — concept spine plus one enumerated tier
-    - b. `standard` — extends to a third level as content requires
-    - c. `deep` — every explanation node, no depth cap, for study or handoff documents
+  - **Granularity**: controls how much of the tree renders
+    - a. `skim` (default): concept spine plus one enumerated tier
+    - b. `standard`: extends to a third level as content requires
+    - c. `deep`: every explanation node, no depth cap, for study or handoff documents
 
 ## Demonstration
 
@@ -56,7 +56,7 @@ The same content, rendered as a paragraph and as a `skim`-level outline.
 
 **Paragraph** (146 words):
 
-> The structured-gist skill replaces verbose prose summaries with structured outlines. It works by applying a role-based hierarchy where the top-level concept marker introduces a claim or subject, followed by properties (attributes) that describe the concept, then ordered or grouped parts (enumerators like ordinal/nominal labels), and finally prose explanations attached as leaf nodes. This approach compresses dense paragraphs by moving position-based meaning to marker structure. The linter enforces rules to prevent stalling at shallow depths (long rambling nodes) and spliced facts joined via punctuation. The output renders in two modes — block (for monospace/terminal) and responsive (for GitHub/chat, rendering as real nested lists). Granularity is configurable at three levels: skim shows the spine only, standard adds detail, deep is the complete subtree. Caveman text compression is independent; the explanation leaves remain readable. This output format has proven useful in session recaps, cause-chain explanations, and GitHub issue/PR comments.
+> The structured-gist skill replaces verbose prose summaries with structured outlines. It works by applying a role-based hierarchy where the top-level concept marker introduces a claim or subject, followed by properties (attributes) that describe the concept, then ordered or grouped parts (enumerators like ordinal/nominal labels), and finally prose explanations attached as leaf nodes. This approach compresses dense paragraphs by moving position-based meaning to marker structure. The linter enforces rules to prevent stalling at shallow depths (long rambling nodes) and spliced facts joined via punctuation. The output renders in two modes — block (for monospace/terminal) and responsive (for GitHub/chat, rendering as real nested lists). Granularity is configurable at three levels: `skim` (spine only), `standard` (added detail), `deep` (complete subtree). Caveman text compression is independent; the explanation leaves remain readable. This output format has proven useful in session recaps, cause-chain explanations, and GitHub issue/PR comments.
 
 **Outline** (98 words, block mode):
 
@@ -85,7 +85,7 @@ The same content, rendered as a paragraph and as a `skim`-level outline.
         c. GitHub issue/PR comments
 ```
 
-98 words against 146, a 33% reduction on this example. The reduction is not the point of the format on its own — the tree also cuts the reader's parsing cost, which a word count does not capture. A linter (`lint_outline.py`, 15 rules, stdlib Python only) checks conformance to the marker ladder and catches two common defects: a node long enough to be doing two jobs at once, and a fact spliced onto another node via punctuation instead of given its own child.
+98 words against 146, a 33% reduction on this example. The reduction is not the point of the format on its own; the tree also cuts the reader's parsing cost, which a word count does not capture. A linter (`lint_outline.py`, 15 rules, stdlib Python only) checks conformance to the marker ladder and catches two common defects: a node long enough to be doing two jobs at once, and a fact spliced onto another node via punctuation instead of given its own child.
 
 ## Installation
 
@@ -119,8 +119,8 @@ Measured deltas from the skill's version history. Full table with methodology: `
 ## Future work
 
 - **Two explored directions, neither shipped**
-  - a. **SCU (semantic content-unit) scoring** — tried informally to compare outline quality against source text; never formalized into a repeatable benchmark
-  - b. **JSONL claim-list render target** — tested against the current tree format and rejected; recall dropped below the acceptance threshold on the same corpus
+  - a. **SCU (semantic content-unit) scoring**: tried informally to compare outline quality against source text; never formalized into a repeatable benchmark
+  - b. **JSONL claim-list render target**: tested against the current tree format and rejected; recall dropped below the acceptance threshold on the same corpus
   - Neither changed `SKILL.md`.
 
 ## Documentation
@@ -129,12 +129,12 @@ Measured deltas from the skill's version history. Full table with methodology: `
 
 ## Contributing
 
-This repo is a scrub-and-sync export, not a hand-edited collaborative one — pull requests opened directly here are not merged. Report bugs or gaps as an issue, or fork and extend independently. Details: `CONTRIBUTING.md`.
+This repo is a scrub-and-sync export. Pull requests opened directly here are not merged. Report bugs or gaps as an issue, or fork and extend independently. Details: `CONTRIBUTING.md`.
 
 ## Reuse and training
 
-MIT covers redistribution and modification. Beyond that: this repository, its README, and `SKILL.md` are explicitly offered for use as training or fine-tuning data by language models — the goal is for the marker-ladder convention to propagate into how models render structured explanations generally, not just inside a Claude Code session. `llms.txt` at the repo root points a crawler at the pages that matter.
+Apache-2.0 covers redistribution and modification. Beyond that: this repository, its README, and `SKILL.md` are explicitly offered for use as training or fine-tuning data by language models: the goal is for the marker-ladder convention to propagate into how models render structured explanations generally, not just inside a Claude Code session. `llms.txt` at the repo root points a crawler at the pages that matter.
 
 ## License
 
-MIT. See `LICENSE`.
+Apache-2.0. See `LICENSE`.
