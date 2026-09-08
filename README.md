@@ -5,7 +5,7 @@
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
 ![Tests](https://img.shields.io/badge/tests-63%20passing-success)
 
-A skill for Claude Code and compatible agent harnesses that renders explanatory or recap-style output as a nested outline instead of a paragraph. Marker type carries meaning by depth; prose stays confined to explanation nodes.
+A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure; prose stays confined to explanation nodes and via node depth. 
 
 ## Contents
 
@@ -26,11 +26,11 @@ A skill for Claude Code and compatible agent harnesses that renders explanatory 
 
 ### A paragraph flattens structure a reader has to reconstruct
 
-An LLM asked to explain what it did, or why, defaults to a paragraph: purpose, mechanism, edge cases, and caveats interleaved in one prose block with no marker distinguishing them. The reader re-derives that structure by parsing sentence boundaries and connective words (because, which means, as a result). For dense multi-part output, that reconstruction cost is repeated on every read.
+An LLM asked to explain what it did, or why, defaults to a paragraph: purpose, mechanism, edge cases, and caveats interleaved in one prose block with no marker distinguishing them. The reader re-derives that structure by parsing sentence boundaries and connective words (because | which means | as a result). For dense multi-part output, that reconstruction cost is repeated on every read.
 
 ### Position-based meaning survives compression better than sentence-based meaning
 
-A fixed marker ladder assigns each line's role at a glance: this is the top claim, this is a property of it, this is an ordered or grouped part, this is the explanation. Once the marker system is fixed, individual node text can compress aggressively (or stay verbose) without losing the reader's ability to navigate the tree. structured-gist separates these two concerns explicitly: a linter enforces the structural contract; text compression (word choice, abbreviation) is a separate, optional layer that never touches the ladder.
+A fixed marker ladder assigns each line's role at a glance: this is the top claim | this is a property of it | this is an ordered or grouped part | this is the explanation. Once the marker system is fixed, individual node text can compress aggressively (or stay verbose) without losing the reader's ability to navigate the tree. structured-gist separates these two concerns explicitly: a linter enforces the structural contract; text compression (word choice, abbreviation) is a separate, optional layer that never touches the ladder.
 
 ## Method
 
