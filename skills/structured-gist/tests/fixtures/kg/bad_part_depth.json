@@ -1,0 +1,2 @@
+{ "schema": "nested-notes-kg/v1", "source_id": "bad-part-depth", "nodes": [ {"id": "c1", "type": "concept", "text": "Root"}, {"id": "a1", "type": "attribute", "text": "Holder"}, {"id": "s1", "type": "ordered-part", "rank": 1, "text": "depth-two step"}, {"id": "s2", "type": "ordered-part", "rank": 1, "text": "depth-three step"} ], "edges": [ {"type": "has-attribute", "from": "c1", "to": "a1"}, {"type": "composed-of", "from": "a1", "to": "s1"}, {"type": "composed-of", "from": "s1", "to": "s2"} ]
+}

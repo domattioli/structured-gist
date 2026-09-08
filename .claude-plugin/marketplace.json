@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "structured-gist",
+  "description": "Hierarchical lecture-note output skill. Replace verbose prose with structured, scannable outlines. Four-role marker hierarchy (concept → attribute → enumerator → explanation), three granularities (skim/standard/deep), two render modes (block/responsive), deterministic conformance linter.",
+  "owner": {
+    "name": "domattioli",
+    "url": "https://github.com/domattioli"
+  },
+  "plugins": [
+    {
+      "name": "structured-gist",
+      "description": "Render explanatory/recap prose as nested lecture-note outline. Concept → Attribute → Enumerator → Explanation. Skim/standard/deep granularity. Block (monospace) or responsive (GitHub/chat) rendering. Deterministic linter gates conformance.",
+      "source": "./plugins/structured-gist",
+      "category": "productivity"
+    }
+  ]
+}

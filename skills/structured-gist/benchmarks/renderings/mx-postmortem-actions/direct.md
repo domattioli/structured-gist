@@ -1,0 +1,4 @@
+```text
+- May 3 outage ▸ Scope ↪ 47 minutes, search feature only ▸ Root cause ↪ invalidation queue consumer deployed with concurrency one; overflow policy silently dropped oldest messages; stale cache treated as authoritative ▸ Response grades a. detection fast ↪ staleness alert nine minutes after deploy b. communication clean ↪ status updates every fifteen minutes c. diagnosis slow ↪ half hour on the index before queue metrics checked; drops left no trace
+- Action items I. queue overflow pages, never drops ↪ one-line policy change, shipped next day II. concurrency required in manifest ↪ lint rejects implicit defaults; platform team, end of month III. runbook starts at queue depth chart IV. quarterly game-day rehearses this failure ↪ replay mitigation worked but cost twelve minutes reading its documentation
+```

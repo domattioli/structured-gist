@@ -1,0 +1,2 @@
+{ "edges": [ {"from": "c1", "to": "c2", "type": "composed-of"} ], "nodes": [ {"id": "c1", "text": "First concept", "type": "concept"}, {"id": "c2", "text": "Second concept", "type": "concept"} ], "schema": "nested-notes-kg/v1", "source_id": "bad_concept_depth"
+}

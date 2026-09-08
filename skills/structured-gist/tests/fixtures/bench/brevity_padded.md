@@ -1,0 +1,4 @@
+```text
+- Deployment process ▸ Preparation phase a. collect approved changes b. build artifact ↪ requires coordination across teams requires coordination across teams coordination ▸ Configuration stage ↪ set credentials and permissions set credentials permissions ▸ Validation checks i. run automated tests ii. verify staging environment ↪ catch issues early before production catch issues early before ▸ Cutover execution i. stop old service ii. start new version iii. monitor health checks ▸ Post-deployment activities a. document changes b. alert stakeholders ↪ keep users informed users keep informed
+- Risk management ▸ Timeline requirements ↪ cycle takes four hours of setup work cycle hours setup work ▸ Network verification a. verify network configuration b. prepare rollback procedures ↪ handle unexpected issues in deployment issues deployment handle ▸ Analysis phase ↪ capture performance metrics and usage data performance metrics data
+```

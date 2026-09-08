@@ -1,0 +1,2 @@
+{ "edges": [ { "from": "c1", "to": "p1", "type": "composed-of" }, { "from": "p1", "to": "e1", "type": "explains" } ], "nodes": [ { "id": "c1", "text": "Root", "type": "concept" }, { "id": "p1", "text": "lone part", "type": "unordered-part" }, { "id": "e1", "text": "token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx unbreakable", "type": "explanation" } ], "schema": "nested-notes-kg/v1", "source_id": "bad-render-overflow"
+}

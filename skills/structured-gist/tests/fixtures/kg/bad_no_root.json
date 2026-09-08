@@ -1,0 +1,2 @@
+{ "schema": "nested-notes-kg/v1", "source_id": "bad-no-root", "nodes": [ {"id": "a1", "type": "attribute", "text": "Rootless attribute"}, {"id": "p1", "type": "unordered-part", "text": "rootless part"} ], "edges": [ {"type": "composed-of", "from": "a1", "to": "p1"} ]
+}

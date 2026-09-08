@@ -1,0 +1,16 @@
+{
+  "type": "skill-bundle",
+  "id": "structured-gist",
+  "name": "structured-gist",
+  "version": "0.4.2",
+  "description": "Hierarchical lecture-note output skill. Replace verbose prose with structured, scannable outlines.",
+  "author": "domattioli",
+  "homepage": "https://github.com/domattioli/structured-gist",
+  "license": "MIT",
+  "skills": [
+    {
+      "id": "structured-gist",
+      "path": "../../skills/structured-gist"
+    }
+  ]
+}

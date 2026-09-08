@@ -1,0 +1,2 @@
+{ "schema": "nested-notes-kg/v1", "source_id": "bad-rank-duplicate", "nodes": [ {"id": "c1", "type": "concept", "text": "Root"}, {"id": "s1", "type": "ordered-part", "rank": 1, "text": "first step"}, {"id": "s2", "type": "ordered-part", "rank": 1, "text": "clashing step"} ], "edges": [ {"type": "composed-of", "from": "c1", "to": "s1"}, {"type": "composed-of", "from": "c1", "to": "s2"} ]
+}

@@ -1,0 +1,2 @@
+{ "edges": [ {"from": "c1", "to": "p1", "type": "composed-of"}, {"from": "c1", "to": "p2", "type": "composed-of"}, {"from": "c1", "to": "p3", "type": "composed-of"} ], "nodes": [ {"id": "c1", "text": "Example concept", "type": "concept"}, {"id": "p1", "text": "first part", "type": "unordered-part"}, {"id": "p2", "text": "second part", "type": "unordered-part"}, {"id": "p3", "text": "third part", "type": "unordered-part"} ], "schema": "nested-notes-kg/v1", "source_id": "flat"
+}
