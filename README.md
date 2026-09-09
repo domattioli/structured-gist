@@ -23,7 +23,7 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 10. [Reuse and training](#10-reuse-and-training)
 11. [License](#11-license)
 
-## 1. Motivation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 1. Motivation&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Claude's explanatory prose has a real failure mode people call "Claudish": dense with unexplained jargon from whatever domain it is working in, and by turns contrarian, sycophantic, padded with filler, or simply saying nothing across many words. Word-count compression does not fix this. caveman-lite, for instance, shortens Claudish prose without reorganizing it; the result reads as plain English, but the underlying thought stays unstructured, and its content stays non-deterministic from one run to the next.
 
@@ -31,7 +31,7 @@ The missing structure is concept and sub-concept with their relationship: what i
 
 structured-gist renders that decomposition directly, as an explicit tree instead of a paragraph the reader has to parse for it.
 
-## 2. Method&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 2. Method&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 This section is itself rendered in structured-gist's `block` mode, not written by hand as prose. It covers the marker taxonomy and a worked example (a real word-count comparison) in one outline.
 
@@ -98,14 +98,14 @@ This section is itself rendered in structured-gist's `block` mode, not written b
 
 `block` is one of three render modes; `responsive` (the GitHub/chat default) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
 
-## 3. Installation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 3. Installation&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 ```bash
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
 ```
 
-## 4. Usage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 4. Usage&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 ```bash
 /structured-gist [skim|standard|deep] [block|responsive]
@@ -115,7 +115,7 @@ No level given defaults to `skim`. No mode given defaults by surface: `responsiv
 
 Trigger phrases: "structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 
-## 5. Benchmarks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 5. Benchmarks&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Measured deltas from the skill's version history. Full table with methodology: `skills/structured-gist/tests/benchmark.md`.
 
@@ -129,7 +129,7 @@ Measured deltas from the skill's version history. Full table with methodology: `
 
 Word count and rule/test coverage are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
 
-## 6. Limitations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 6. Limitations&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 - **Slop reduction**
   - A. non-deterministic
@@ -145,7 +145,7 @@ Word count and rule/test coverage are the metrics tracked today. Other metrics (
   - B. audience mismatch
     - a wrong choice for the audience is a caller error, not linter-catchable
 
-## 7. Future work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 7. Future work&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 - **Explored directions**
   - A. SCU scoring
@@ -159,18 +159,18 @@ Word count and rule/test coverage are the metrics tracked today. Other metrics (
     - neither direction changed the shipped spec
 - **Additional benchmark metrics**: word count and rule/test coverage (see [Benchmarks](#6-benchmarks)) are the only tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
 
-## 8. Documentation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 8. Documentation&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 `skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to.
 
-## 9. Contributing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 9. Contributing&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 This repo is a scrub-and-sync export. Pull requests opened directly here are not merged. Report bugs or gaps as an issue, or fork and extend independently. Details: `CONTRIBUTING.md`.
 
-## 10. Reuse and training&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 10. Reuse and training&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Apache-2.0 covers redistribution and modification. Beyond that: this repository, its README, and `SKILL.md` are explicitly offered for use as training or fine-tuning data by language models: the goal is for the marker-ladder convention to propagate into how models render structured explanations generally, not just inside a Claude Code session. `llms.txt` at the repo root points a crawler at the pages that matter.
 
-## 11. License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 11. License&emsp;&emsp;&emsp;&emsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Apache-2.0. See `LICENSE`.
