@@ -3,6 +3,11 @@
   "size_bucket": "medium",
   "pressure_tags": ["adversarial", "root_cause_reversal", "medium"],
   "source_word_count": 361,
+  "intent": {
+    "reader": "someone reading this after the fact (postmortem, handoff) who needs to act on the real cause",
+    "task": "know which diagnosis turned out to be correct, not just the order theories were proposed in",
+    "rationale": "an outline that faithfully reports the initial theory but drops the reversal is actively misleading for this task, even though the initial-theory facts are individually true"
+  },
   "facts": [
     {"id": "f1", "text": "the outage started at 14:02", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "The checkout outage started at 14:02"},
     {"id": "f2", "text": "the first signal was a wave of database connection errors from the payments service", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the first signal on-call saw was a wave of database connection errors from the payments service"},
@@ -15,7 +20,7 @@
     {"id": "f9", "text": "under load, enough connections were tied up simultaneously to starve everything else, producing the pool-exhaustion symptoms", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "under load that was enough connections tied up simultaneously to starve everything else — which is what actually produced the pool-exhaustion symptoms"},
     {"id": "f10", "text": "the slow query was traced to a schema migration that had shipped two days earlier", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": true, "source_quote": "The slow query itself was traced to a schema migration that had shipped two days earlier"},
     {"id": "f11", "text": "the migration had silently dropped an index the query depended on", "category": "failure", "weight": 3, "precision_sensitive": false, "source_quote": "had silently dropped an index the query depended on"},
-    {"id": "f12", "text": "the real root cause was the missing index, not the connection pool", "category": "outcome", "weight": 3, "precision_sensitive": false, "source_quote": "the real root cause was that missing index, not the connection pool"},
+    {"id": "f12", "text": "the real root cause was the missing index, not the connection pool", "category": "outcome", "weight": 3, "weight_reason": "this is the corrected conclusion the case is testing -- dropping it while keeping the initial theory (f3) would actively mislead a reader acting on the recap", "precision_sensitive": false, "source_quote": "the real root cause was that missing index, not the connection pool"},
     {"id": "f13", "text": "the pool exhaustion was a downstream symptom of the slow query", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "the pool exhaustion was a downstream symptom of the slow query"},
     {"id": "f14", "text": "the slow query was itself a downstream symptom of the migration", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "the slow query was a downstream symptom of the migration"},
     {"id": "f15", "text": "raising the pool size only bought headroom and reduced symptom frequency; it did not fix the query itself", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "it reduced how often the symptom surfaced, but it did nothing to fix the query itself"},

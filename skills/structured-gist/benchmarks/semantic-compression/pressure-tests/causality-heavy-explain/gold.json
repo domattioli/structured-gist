@@ -3,6 +3,11 @@
   "size_bucket": "medium",
   "pressure_tags": ["adversarial", "causality_heavy", "medium"],
   "source_word_count": 369,
+  "intent": {
+    "reader": "an engineer who needs to reason about the causal mechanism, e.g. to judge whether the same feedback loop could recur elsewhere",
+    "task": "understand why the cascade happened in causal order, not just which facts are true",
+    "rationale": "this case exists to pressure-test relation retention specifically -- a flattened list that keeps every fact but drops the causal chain fails this task even at high fact retention"
+  },
   "facts": [
     {"id": "f1", "text": "the webhook receiver originally used synchronous processing", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the receiver's synchronous design"},
     {"id": "f2", "text": "the handler called a downstream enrichment API directly and held the HTTP request open until it returned", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the handler called a downstream enrichment API directly and held the HTTP request open until that call returned"},
@@ -23,7 +28,7 @@
     {"id": "f17", "text": "the receiver's response time no longer depends on the enrichment API's response time; the two are decoupled", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "the two are decoupled — the receiver's latency and the downstream API's latency stopped being coupled to each other"},
     {"id": "f18", "text": "a slow downstream call no longer produces a sender-facing timeout", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "a slow downstream call no longer produces a sender-facing timeout"},
     {"id": "f19", "text": "without a sender-facing timeout, no retry is produced", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "which means it no longer produces a retry"},
-    {"id": "f20", "text": "the retry-storm failure mode that caused the cascades is gone entirely, not just less frequent", "category": "outcome", "weight": 3, "precision_sensitive": false, "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"}
+    {"id": "f20", "text": "the retry-storm failure mode that caused the cascades is gone entirely, not just less frequent", "category": "outcome", "weight": 3, "weight_reason": "confirms full resolution, not just mitigation -- distinguishing 'gone entirely' from 'reduced' is exactly what a reader judging recurrence risk needs", "precision_sensitive": false, "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"}
   ],
   "relations": [
     {"id": "r1", "type": "causal", "text": "synchronous waiting on an already-slow API (f2, f3) caused the sender's connection to stay open for the same duration (f4)", "fact_ids": ["f2", "f3", "f4"], "source_quote": "a slow downstream call meant the webhook sender's HTTP connection stayed open for that same several seconds"},
