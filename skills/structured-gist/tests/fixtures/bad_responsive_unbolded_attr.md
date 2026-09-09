@@ -1,0 +1,5 @@
+- **Launch plan**
+  - Scope
+    - a. validate output
+  - Status
+    - a. ready

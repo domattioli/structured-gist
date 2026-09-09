@@ -345,6 +345,50 @@ else
 fi
 
 # ---------------------------------------------------------------------------
+# 27. Linter tests: good_responsive_glyphfree.md lints clean (bold-attr fix)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_responsive_glyphfree.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_responsive_glyphfree.md lints clean (exit 0)" 0 || assert "good_responsive_glyphfree.md lints clean (exit 0)" 1
+else
+  assert "good_responsive_glyphfree.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 28. Linter tests: good_responsive_explanation_leaf.md lints clean
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_responsive_explanation_leaf.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_responsive_explanation_leaf.md lints clean (exit 0)" 0 || assert "good_responsive_explanation_leaf.md lints clean (exit 0)" 1
+else
+  assert "good_responsive_explanation_leaf.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 29. Linter tests: good_responsive_role_ladder.md lints clean (regression)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_responsive_role_ladder.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_responsive_role_ladder.md lints clean (exit 0)" 0 || assert "good_responsive_role_ladder.md lints clean (exit 0)" 1
+else
+  assert "good_responsive_role_ladder.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 30. Linter tests: bad_responsive_unbolded_attr.md fails
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/bad_responsive_unbolded_attr.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 1 ] && assert "bad_responsive_unbolded_attr.md fails" 0 || assert "bad_responsive_unbolded_attr.md fails" 1
+else
+  assert "bad_responsive_unbolded_attr.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
 # Summary
 # ---------------------------------------------------------------------------
 echo

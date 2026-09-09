@@ -271,6 +271,43 @@ class TestBadFixtures:
         rule_ids = [v[1] for v in violations]
         assert 'R8' in rule_ids, f"Expected R8 violation, got: {violations}"
 
+    def test_good_responsive_glyphfree_passes(self, fixtures_dir):
+        """Glyph-free responsive attribute (SKILL.md v0.3.9: `- **Bold**`
+        at depth>=1, no literal `▸`) must lint clean — the case the
+        linter could not recognize before the bold-attr family fix."""
+        good_file = fixtures_dir / 'good_responsive_glyphfree.md'
+        assert good_file.exists(), f"good_responsive_glyphfree.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_responsive_glyphfree.md has violations: {violations}"
+
+    def test_good_responsive_explanation_leaf_passes(self, fixtures_dir):
+        """Glyph-free responsive explanation leaf (plain prose item, no
+        literal `↪`) must lint clean under a bold attribute parent."""
+        good_file = fixtures_dir / 'good_responsive_explanation_leaf.md'
+        assert good_file.exists(), f"good_responsive_explanation_leaf.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_responsive_explanation_leaf.md has violations: {violations}"
+
+    def test_good_responsive_role_ladder_passes(self, fixtures_dir):
+        """Regression fixture: a full real-world glyph-free responsive
+        outline (bold attributes, uppercase depth-1 enumerators, plain
+        explanation leaves, split across 3 root concepts to respect R5)
+        must lint clean end to end."""
+        good_file = fixtures_dir / 'good_responsive_role_ladder.md'
+        assert good_file.exists(), f"good_responsive_role_ladder.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_responsive_role_ladder.md has violations: {violations}"
+
+    def test_bad_responsive_unbolded_attr_caught(self, fixtures_dir):
+        """A depth>=1 label that looks like an attribute but was never
+        bolded is NOT a glyph-free attribute — it must still be caught
+        (as some violation; it degrades to a bare explanation leaf with
+        illegal children, not silently accepted as structure)."""
+        bad_file = fixtures_dir / 'bad_responsive_unbolded_attr.md'
+        assert bad_file.exists(), f"bad_responsive_unbolded_attr.md not found at {bad_file}"
+        violations = lint_file(str(bad_file))
+        assert violations, "bad_responsive_unbolded_attr.md should have violations"
+
     def test_responsive_mode_skips_r11(self):
         """A responsive-mode >64-char physical line must never fire R11 —
         only `block` mode (fenced) does; the chat renderer wraps
@@ -442,3 +479,54 @@ class TestNormativeBlocks:
             assert not violations, (
                 f"attribute.md block {block_index} has violations: {violations}"
             )
+
+
+def _extract_readme_section(readme_text: str, heading: str) -> str:
+    """
+    Return the body of one '## <heading>' section of README.md, up to (not
+    including) the next '## ' heading. `lint_text`/`extract_outline_from_text`
+    only look at content inside the FIRST fenced block when one exists
+    anywhere in the input, so a section must be isolated before linting —
+    passing the whole README would silently only check its first code fence
+    and skip every non-fenced `responsive`-mode outline entirely (exactly
+    how the Method section's broken outline shipped undetected).
+    """
+    pattern = re.compile(
+        r'^##\s+' + re.escape(heading) + r'\s*$(.*?)(?=^##\s|\Z)',
+        re.MULTILINE | re.DOTALL,
+    )
+    m = pattern.search(readme_text)
+    assert m, f"README.md section '## {heading}' not found"
+    body = m.group(1)
+    # Drop non-outline scaffolding this repo's README convention adds to
+    # every section: the italic/plain intro sentence and the back-to-top div.
+    body = re.sub(r'<div align="right">.*?</div>', '', body, flags=re.DOTALL)
+    lines = [
+        line for line in body.split('\n')
+        if line.strip() and not line.strip().startswith('This section is')
+    ]
+    return '\n'.join(lines)
+
+
+class TestReadmeOutlines:
+    """
+    Lint the README's own live `responsive`-mode outlines directly — not a
+    frozen copy fixture — so an edit to README.md that reintroduces a lint
+    violation fails CI immediately instead of shipping silently (the exact
+    gap that let the Method section's outline ship broken: nothing in this
+    suite ever looked at README.md's non-fenced content before).
+    """
+
+    @pytest.fixture
+    def readme_text(self):
+        readme_file = Path(__file__).parent.parent.parent.parent / 'README.md'
+        assert readme_file.exists(), f"README.md not found at {readme_file}"
+        return readme_file.read_text(encoding='utf-8')
+
+    def test_method_section_outline_clean(self, readme_text):
+        """README '## 2. Method' section's outline must lint clean — this
+        is the section that regressed (bold-attr + plain-leaf responsive
+        forms the linter couldn't recognize before the v0.4.4 fix)."""
+        section = _extract_readme_section(readme_text, '2. Method')
+        violations = lint_text(section)
+        assert not violations, f"README Method section has violations: {violations}"

@@ -42,6 +42,20 @@ def _looks_like_ladder_marker(s: str) -> bool:
     return False
 
 
+_BOLD_ONLY = re.compile(r'^\*\*[^*].*\*\*$')
+
+
+def _looks_like_bold_attr(s: str) -> bool:
+    """
+    True if `s` is a single bold span and nothing else — the glyph-free
+    `responsive`-mode attribute convention (SKILL.md v0.3.9, `## Render
+    modes`): `- **Bold Name**` at depth >= 1, no literal `▸`. A depth-0
+    concept is also often bold (`- **Title**`) but must stay family
+    'dash' there, so every caller gates this on depth >= 1.
+    """
+    return bool(_BOLD_ONLY.match(s.strip()))
+
+
 def extract_outline_from_text(text: str) -> Tuple[List[str], bool]:
     """
     Extract outline lines from text.
@@ -88,7 +102,11 @@ def extract_outline_from_text(text: str) -> Tuple[List[str], bool]:
     is_responsive = False
     for line in raw_lines:
         m = _RESPONSIVE_ITEM.match(line)
-        if m and _looks_like_ladder_marker(m.group(2)):
+        if not m:
+            continue
+        depth = len(m.group(1)) // 2
+        content = m.group(2)
+        if _looks_like_ladder_marker(content) or (depth >= 1 and _looks_like_bold_attr(content)):
             is_responsive = True
             break
 
@@ -102,7 +120,10 @@ def extract_outline_from_text(text: str) -> Tuple[List[str], bool]:
     # '- ' only for a depth-0 concept, whose content has no glyph of its
     # own (the list bullet AND the concept marker are both '-'). Every
     # deeper item's content already starts with its own ladder glyph, so
-    # it needs only the re-indent.
+    # it needs only the re-indent. A depth>=1 bold-only attribute (v0.3.9
+    # glyph-free convention, no literal `▸`) has no glyph of its own
+    # either — re-add the `▸ ` glyph here so family/R1 validation treats
+    # it as 'attr', same as block/inline mode would.
     rewritten = []
     for line in raw_lines:
         m = _RESPONSIVE_ITEM.match(line)
@@ -113,6 +134,14 @@ def extract_outline_from_text(text: str) -> Tuple[List[str], bool]:
         depth = len(indent_str) // 2
         if _looks_like_ladder_marker(content):
             rewritten.append(' ' * (depth * 4) + content)
+        elif depth >= 1 and _looks_like_bold_attr(content):
+            rewritten.append(' ' * (depth * 4) + '▸ ' + content)
+        elif depth >= 1:
+            # Glyph-free responsive-mode explanation leaf (SKILL.md v0.3.9):
+            # plain prose item, no literal `↪`. Re-add it so family/R1
+            # validation (and the R7/R9 arrow exemptions) treat it as the
+            # explanation node it is, same as block/inline mode would.
+            rewritten.append(' ' * (depth * 4) + '↪ ' + content)
         else:
             rewritten.append(' ' * (depth * 4) + '- ' + content)
     return rewritten, False
