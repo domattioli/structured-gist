@@ -109,8 +109,9 @@ Measured deltas from the skill's version history. Full table with methodology: `
 | v0.4.0 | direct-prompt outline vs. experimental KG-mode generation, 20-source corpus | outline-quality composite (retention × robustness × brevity) | 0.549 → 0.760 (KG mode wins structure, loses retention; not shipped — see Future work) |
 | v0.4.2 | linter rule coverage | rules gated / tests passing | 11 rules / 33 tests → 15 rules / 46 tests |
 | v0.4.3 | rename + trigger-phrase expansion | tests passing | 46 → 63 (no rule-logic change) |
+| eval-only (#10) | semantic-compression suite curated: 8 regression/pressure-test cases, weighted retention scored against gold fact lists (sonnet run on all 8; haiku run on 3 of 8 — full-suite Opus 5 run planned this weekend) | weighted retention (skim → standard → deep) | 0.37 → 0.89 → 0.99; compression itself correlates *negatively* with usefulness (r = -0.75) — kept as a separate reported cost, never blended into a quality score |
 
-Word count and rule/test coverage are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
+Word count, rule/test coverage, and semantic retention (`skills/structured-gist/benchmarks/semantic-compression/`) are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -144,7 +145,7 @@ Word count and rule/test coverage are the metrics tracked today. Other metrics (
     - b. recall dropped below the acceptance threshold
   - C. no SKILL.md change
     - neither direction changed the shipped spec
-- **Additional benchmark metrics**: word count and rule/test coverage (see [Benchmarks](#6-benchmarks)) are the only tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
+- **Additional benchmark metrics**: word count, rule/test coverage, and semantic retention (see [Benchmarks](#5-benchmarks)) are the tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
