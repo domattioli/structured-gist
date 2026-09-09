@@ -13,16 +13,15 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 1. [Motivation](#1-motivation)
 2. [Method](#2-method)
-3. [Demonstration](#3-demonstration)
-4. [Installation](#4-installation)
-5. [Usage](#5-usage)
-6. [Benchmarks](#6-benchmarks)
-7. [Limitations](#7-limitations)
-8. [Future work](#8-future-work)
-9. [Documentation](#9-documentation)
-10. [Contributing](#10-contributing)
-11. [Reuse and training](#11-reuse-and-training)
-12. [License](#12-license)
+3. [Installation](#3-installation)
+4. [Usage](#4-usage)
+5. [Benchmarks](#5-benchmarks)
+6. [Limitations](#6-limitations)
+7. [Future work](#7-future-work)
+8. [Documentation](#8-documentation)
+9. [Contributing](#9-contributing)
+10. [Reuse and training](#10-reuse-and-training)
+11. [License](#11-license)
 
 ## 1. Motivation&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
@@ -34,7 +33,7 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 
 ## 2. Method&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
-This section is itself rendered in structured-gist's `block` mode, not written by hand as prose.
+This section is itself rendered in structured-gist's `block` mode, not written by hand as prose. It covers the marker taxonomy and a worked example (a real word-count comparison) in one outline.
 
 ```text
 - Governing concepts
@@ -71,60 +70,42 @@ This section is itself rendered in structured-gist's `block` mode, not written b
             ↪ content depth, chosen by audience
         c. no interaction
             ↪ neither touches the ladder or rules
+- Worked example
+    ▸ Test case
+        ↪ Sonnet 4 rendered the same content two ways
+    ▸ Word count
+        a. paragraph
+            ↪ 146 words
+        b. outline
+            ↪ 100 words, skim, block mode
+        c. reduction
+            ↪ 31.5%, tree also cuts parsing cost
+    ▸ Outline content
+        a. purpose
+            ↪ replaces verbose summaries with outlines
+        b. structure
+            ↪ role hierarchy, position over sentence structure
+        c. linter rules
+            i. flags shallow-depth stalling
+            ii. detects punctuation-spliced facts
+        d. use cases
+            i. session recaps
+            ii. cause-chain explanations
+            iii. GitHub issue/PR comments
+    ▸ Linter
+        ↪ lint_outline.py, 15 rules, stdlib only
 ```
 
 `block` is one of three render modes; `responsive` (the GitHub/chat default) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
 
-## 3. Demonstration&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
-
-A test case for identical content using Sonnet 4 to render a paragraph and a `skim`-level structured gist:
-
-**Paragraph** (146 words):
-
-> The structured-gist skill replaces verbose prose summaries with structured outlines. It works by applying a role-based hierarchy where the top-level concept marker introduces a claim or subject, followed by properties (attributes) that describe the concept, then ordered or grouped parts (enumerators like ordinal/nominal labels), and finally prose explanations attached as leaf nodes. This approach compresses dense paragraphs by moving position-based meaning to marker structure. The linter enforces rules to prevent stalling at shallow depths (long rambling nodes) and spliced facts joined via punctuation. The output renders in two modes — block (for monospace/terminal) and responsive (for GitHub/chat, rendering as real nested lists). Granularity is configurable at three levels: `skim` (spine only), `standard` (added detail), `deep` (complete subtree). Caveman text compression is independent; the explanation leaves remain readable. This output format has proven useful in session recaps, cause-chain explanations, and GitHub issue/PR comments.
-
-**Outline** (100 words, block mode):
-
-```text
-- structured-gist output format
-    ▸ Purpose
-        ↪ replaces verbose prose summaries with structured outlines
-    ▸ Structure
-        a. role-based hierarchy
-            i. concept
-            ii. attribute
-            iii. enumerator
-            iv. explanation
-        b. position-based meaning mapped to marker structure
-    ▸ Linter rules
-        i. prevent stalling at shallow depths
-        ii. detect spliced facts joined via punctuation
-    ▸ Rendering
-        a. block mode (monospace/terminal)
-        b. responsive mode
-            ↪ GitHub/chat, real nested lists
-    ▸ Granularity
-        i. skim (spine only)
-        ii. standard (detail)
-        iii. deep (complete subtree)
-    ▸ Integration
-        ↪ text compression (caveman) independent; explanations stay readable
-    ▸ Use cases
-        a. session recaps
-        b. cause-chain explanations
-        c. GitHub issue/PR comments
-```
-
-100 words against 146, a 31.5% reduction on this example. The reduction is not the point of the format on its own; the tree also cuts the reader's parsing cost, which a word count does not capture. A linter (`lint_outline.py`, 15 rules, stdlib Python only) checks conformance to the marker ladder and catches two common defects: a node long enough to be doing two jobs at once, and a fact spliced onto another node via punctuation instead of given its own child.
-
-## 4. Installation&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 3. Installation&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 ```bash
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
 ```
 
-## 5. Usage&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 4. Usage&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 ```bash
 /structured-gist [skim|standard|deep] [block|responsive]
@@ -134,7 +115,7 @@ No level given defaults to `skim`. No mode given defaults by surface: `responsiv
 
 Trigger phrases: "structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 
-## 6. Benchmarks&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 5. Benchmarks&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Measured deltas from the skill's version history. Full table with methodology: `skills/structured-gist/tests/benchmark.md`.
 
@@ -146,9 +127,9 @@ Measured deltas from the skill's version history. Full table with methodology: `
 | v0.4.2 | linter rule coverage | rules gated / tests passing | 11 rules / 33 tests → 15 rules / 46 tests |
 | v0.4.3 | rename + trigger-phrase expansion | tests passing | 46 → 63 (no rule-logic change) |
 
-Word count and rule/test coverage are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#8-future-work) for status and how to propose one.
+Word count and rule/test coverage are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
 
-## 7. Limitations&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 6. Limitations&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 - **Slop reduction**
   - A. non-deterministic
@@ -164,7 +145,7 @@ Word count and rule/test coverage are the metrics tracked today. Other metrics (
   - B. audience mismatch
     - a wrong choice for the audience is a caller error, not linter-catchable
 
-## 8. Future work&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 7. Future work&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 - **Explored directions**
   - A. SCU scoring
@@ -178,18 +159,18 @@ Word count and rule/test coverage are the metrics tracked today. Other metrics (
     - neither direction changed the shipped spec
 - **Additional benchmark metrics**: word count and rule/test coverage (see [Benchmarks](#6-benchmarks)) are the only tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
 
-## 9. Documentation&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 8. Documentation&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 `skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to.
 
-## 10. Contributing&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 9. Contributing&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 This repo is a scrub-and-sync export. Pull requests opened directly here are not merged. Report bugs or gaps as an issue, or fork and extend independently. Details: `CONTRIBUTING.md`.
 
-## 11. Reuse and training&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 10. Reuse and training&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Apache-2.0 covers redistribution and modification. Beyond that: this repository, its README, and `SKILL.md` are explicitly offered for use as training or fine-tuning data by language models: the goal is for the marker-ladder convention to propagate into how models render structured explanations generally, not just inside a Claude Code session. `llms.txt` at the repo root points a crawler at the pages that matter.
 
-## 12. License&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
+## 11. License&nbsp;&nbsp;<sub>[^ Back to top](#structured-gist)</sub>
 
 Apache-2.0. See `LICENSE`.
