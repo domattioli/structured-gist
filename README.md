@@ -17,11 +17,12 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 4. [Installation](#4-installation)
 5. [Usage](#5-usage)
 6. [Benchmarks](#6-benchmarks)
-7. [Future work](#7-future-work)
-8. [Documentation](#8-documentation)
-9. [Contributing](#9-contributing)
-10. [Reuse and training](#10-reuse-and-training)
-11. [License](#11-license)
+7. [Limitations](#7-limitations)
+8. [Future work](#8-future-work)
+9. [Documentation](#9-documentation)
+10. [Contributing](#10-contributing)
+11. [Reuse and training](#11-reuse-and-training)
+12. [License](#12-license)
 
 ## 1. Motivation
 
@@ -153,7 +154,15 @@ Measured deltas from the skill's version history. Full table with methodology: `
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 7. Future work
+## 7. Limitations
+
+structured-gist reduces symptoms of AI-generated prose (em-dash glue, unexplained jargon, unclear claim structure) by moving content into a marker ladder the reader can skim. It does not do this deterministically: the linter enforces the structural contract (marker family, nesting, node length, delimiter splicing), not sentence quality, so a compliant outline can still contain jargon, a weak claim, or awkward wording inside a node's text. The tool makes such prose easier to spot and skip past; it does not remove it.
+
+Two further limits, both narrower in scope. First, the linter checks structure, not truth: a well-formed outline can misrepresent its source content, and no rule catches that. Second, granularity is a manual choice (`skim`/`standard`/`deep`) — the tool does not decide how much detail a given explanation warrants, so an inappropriate granularity choice for the audience is a caller error, not a linter-catchable one.
+
+<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
+
+## 8. Future work
 
 - **Two explored directions, neither shipped**
   - a. **SCU (semantic content-unit) scoring**: tried informally to compare outline quality against source text; never formalized into a repeatable benchmark
@@ -162,25 +171,25 @@ Measured deltas from the skill's version history. Full table with methodology: `
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 8. Documentation
+## 9. Documentation
 
 `skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 9. Contributing
+## 10. Contributing
 
 This repo is a scrub-and-sync export. Pull requests opened directly here are not merged. Report bugs or gaps as an issue, or fork and extend independently. Details: `CONTRIBUTING.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 10. Reuse and training
+## 11. Reuse and training
 
 Apache-2.0 covers redistribution and modification. Beyond that: this repository, its README, and `SKILL.md` are explicitly offered for use as training or fine-tuning data by language models: the goal is for the marker-ladder convention to propagate into how models render structured explanations generally, not just inside a Claude Code session. `llms.txt` at the repo root points a crawler at the pages that matter.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 11. License
+## 12. License
 
 Apache-2.0. See `LICENSE`.
 
