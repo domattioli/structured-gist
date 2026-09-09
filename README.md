@@ -7,7 +7,7 @@
 ![Tests](https://img.shields.io/badge/tests-57%20passing-success)
 ![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)
 
-A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure; prose stays confined to explanation nodes and via node depth. 
+A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure and via node depth; prose stays confined to explanation nodes. 
 
 ## Contents
 
