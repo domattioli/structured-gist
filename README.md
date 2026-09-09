@@ -39,7 +39,7 @@ structured-gist renders that decomposition as an explicit tree instead of a para
 
 This section is itself rendered in structured-gist's `block` mode, not written by hand as prose. It covers the marker taxonomy and a worked example (a real word-count comparison) in one outline.
 
-The worked example below compares Sonnet 4 rendering the same content two ways. As a paragraph, it reads:
+The worked example below compares Sonnet 5's unadulterated description of how this skill works vs. the dogfood-ed skill output. As a paragraph, it reads:
 
 > structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
