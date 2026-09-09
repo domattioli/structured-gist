@@ -155,6 +155,7 @@ task-weight re-annotation and Semantic Preservation Recall" below, now run
 in a follow-up PR) — mixing a metric-definition correction with new human
 judgment and changed benchmark scores in one change would make neither
 auditable.
+
 The category buckets above remain a reasonable **default** for
 hand-authoring a new case, and category never implies every fact in it
 must carry the default weight: the same "outcome" category already holds
@@ -254,6 +255,7 @@ The new artifacts:
 - `results/spr.json`, `results/SPR_SCORES.md`, `results/weight_comparison.json`
   — generated; regenerate with
   `python3 scoring/deterministic.py && python3 scoring/combine.py && python3 scoring/spr.py`.
+
 ## Scoring dimensions (decomposable — no master scalar)
 
 Every case reports these, computed by `scoring/deterministic.py` (no
