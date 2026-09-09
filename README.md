@@ -39,47 +39,37 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 This section is itself rendered in structured-gist's `block` mode, not written by hand as prose.
 
 ```text
-- Marker laddering
-    ▸ concept
-        i. top-level claim or subject
-        ii. outermost depth only
-        iii. budget roughly three words
-    ▸ attribute
-        i. a named property of the parent
-        ii. has a ___, not a part
-    ▸ enumerator
-        i. ordered or grouped parts
-        ii. family set by absolute depth
-    ▸ explanation
-        i. the only node carrying full prose
-        ii. usually a leaf, compression-exempt
-- Render modes
-    ▸ block
-        i. one fenced code block, literal glyphs
-        ii. fixed width
-        iii. for terminals, non-markdown surfaces
-    ▸ responsive
-        i. a real Markdown nested list
-        ii. default on GitHub, chat interfaces
-        iii. glyph-free, renderer draws the bullet
-    ▸ inline (deprecated)
-        i. indents under a list item
-        ii. renders as a GitHub code block
-- Granularity
-    ▸ skim (default)
-        ↪ concept spine plus one tier
-    ▸ standard
-        ↪ extends to a third level
-    ▸ deep
-        i. every explanation node, no cap
-        ii. for study or handoff documents
-- Independent axes
-    ▸ render mode
-        ↪ display container, chosen by surface
-    ▸ granularity
-        ↪ content depth, chosen by audience
-    ▸ no interaction
-        ↪ neither touches the ladder or rules
+- Governing concepts
+    ▸ Marker laddering
+        a. concept
+            ↪ top-level claim, outermost depth, ~3 words
+        b. attribute
+            ↪ has a ___, not a part
+        c. enumerator
+            ↪ ordered or grouped parts, family by depth
+        d. explanation
+            ↪ only node with full prose, compression-exempt
+    ▸ Render modes
+        a. block
+            ↪ fenced code, literal glyphs, for terminals
+        b. responsive
+            ↪ real list, GitHub default, glyph-free
+        c. inline (deprecated)
+            ↪ indents under list, renders as a code block
+    ▸ Granularity
+        a. skim (default)
+            ↪ concept spine plus one tier
+        b. standard
+            ↪ extends to a third level
+        c. deep
+            ↪ every node surfaced, no cap, for handoff
+    ▸ Independent axes
+        a. render mode
+            ↪ display container, chosen by surface
+        b. granularity
+            ↪ content depth, chosen by audience
+        c. no interaction
+            ↪ neither touches the ladder or rules
 ```
 
 `block` is one of three render modes; `responsive` (the GitHub/chat default) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
