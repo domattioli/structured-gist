@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/badge/version-0.4.8-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
 ![Tests](https://img.shields.io/badge/tests-57%20passing-success)
-![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
 
 A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure and via node depth; prose stays confined to explanation nodes. 
 

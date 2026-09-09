@@ -1,0 +1,15 @@
+{
+  "title": "structured-gist",
+  "upload_type": "software",
+  "creators": [
+    {"name": "Mattioli, Dominik"}
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "documentation",
+    "outline",
+    "structured-notes"
+  ]
+}
