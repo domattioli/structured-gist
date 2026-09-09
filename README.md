@@ -43,67 +43,34 @@ The worked example below compares Opus 5's unadulterated description of how this
 
 > structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
-That's 191 words. Rendered as an outline in `skim` granularity and `block` mode, the same content drops to 146 words — a 23.6% reduction, and the tree also cuts parsing cost for the reader.
+That's 191 words. Rendered as an outline in `skim` granularity and `block` mode, the same content drops down 64% to 68 words. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify | qualify this.
 
 ```text
-- Governing concepts
-    ▸ Marker laddering
-        a. concept ('-')
-            ↪ top-level claim, outermost depth, ~3 words
-        b. attribute ('▸')
-            ↪ has a ___, not a part
-        c. enumerator ('I./A./i./a.')
-            a. ordinal ('I./i.')
-                ↪ order matters, a sequence or ranking
-            b. nominal ('A./a.')
-                ↪ grouped peers, order-agnostic
-        d. explanation ('↪')
-            ↪ only node with full prose, compression-exempt
-    ▸ Render modes
-        a. block
-            ↪ fenced code, literal glyphs, for terminals
-        b. responsive
-            ↪ real list, GitHub default, glyph-free
-        c. inline (deprecated)
-            ↪ indents under list, renders as a code block
-    ▸ Granularity
-        a. skim (default)
-            ↪ concept spine plus one tier
-        b. standard
-            ↪ extends to a third level
-        c. deep
-            ↪ every node surfaced, no cap, for handoff
-    ▸ Independent axes
-        a. render mode
-            ↪ display container, chosen by surface
-        b. granularity
-            ↪ content depth, chosen by audience
-        c. no interaction
-            ↪ neither touches the ladder or rules
-- Worked example
-    ▸ Test case
-        ↪ Opus 5 rendered the same content two ways
-    ▸ Word count
-        a. paragraph
-            ↪ 191 words
-        b. outline
-            ↪ 146 words, skim, block mode
-        c. reduction
-            ↪ 23.6%, tree also cuts parsing cost
-    ▸ Outline content
-        a. purpose
-            ↪ replaces verbose summaries with compact outlines
-        b. role hierarchy
-            ↪ node position encodes meaning, not sentence grammar
-        c. linter rules
-            i. flags shallow-depth stalling
-            ii. detects punctuation-spliced facts
-        d. fit
-            i. session recaps
-            ii. cause-chain explanations
-            iii. GitHub issue/PR comments
-    ▸ Linter
-        ↪ lint_outline.py, 15 rules, stdlib only
+-- structured-gist
+    ▸ Purpose
+        ↪ replaces verbose prose summaries with compact
+          outlines a reader takes in at a glance
+    ▸ Mechanism
+        ↪ role hierarchy, not sentence grammar, carries
+          relationships: node position encodes meaning
+    ▸ Role ladder
+        i. concept
+        ii. attribute
+        iii. enumerator
+        iv. explanation
+- Linter
+    ▸ Rationale
+        ↪ the format decays quickly when hand-written
+    ▸ Rules
+        a. shallow-depth stalling
+        b. punctuation-spliced facts
+    ▸ Implementation
+        a. lint_outline.py
+        b. stdlib-only
+- Fit
+    a. session recaps
+    b. cause-chain explanations
+    c. GitHub issue + PR comments
 ```
 
 `block` is one of three render modes; `responsive` (the GitHub/chat default) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
