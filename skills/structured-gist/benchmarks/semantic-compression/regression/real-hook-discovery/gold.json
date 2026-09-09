@@ -1,0 +1,40 @@
+{
+  "case_id": "real-hook-discovery",
+  "size_bucket": "small",
+  "pressure_tags": ["realistic_recap", "small"],
+  "source_word_count": 231,
+  "facts": [
+    {"id": "f1", "text": "load_local_skills expected a manifest at .claude/skills.manifest.json", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "look for a manifest at `.claude/skills.manifest.json`"},
+    {"id": "f2", "text": "load_local_skills expected skill directories under .claude/skills/", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "expect skill directories under `.claude/skills/`"},
+    {"id": "f3", "text": "this repo actually keeps skills at the top level in skills/, not under a .claude/ prefix", "category": "constraint", "weight": 3, "precision_sensitive": true, "source_quote": "this repo actually keeps its skills at the top level, in `skills/`, not under a `.claude/` prefix at all"},
+    {"id": "f4", "text": "because the paths never matched, nothing ever got symlinked into ~/.claude/skills/", "category": "failure", "weight": 3, "precision_sensitive": true, "source_quote": "nothing ever got symlinked into `~/.claude/skills/`"},
+    {"id": "f5", "text": "the harness scans ~/.claude/skills/ only once at startup; there is no hot reload", "category": "constraint", "weight": 3, "precision_sensitive": false, "source_quote": "the harness only scans `~/.claude/skills/` once at startup — there is no hot reload"},
+    {"id": "f6", "text": "a skill that missed the initial scan never appeared for the rest of the session", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "a skill that missed the initial scan simply never appeared for the rest of the session"},
+    {"id": "f7", "text": "the fix walks the repo for every skills/<name>/SKILL.md", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "The fix walks the repo for every `skills/<name>/SKILL.md`"},
+    {"id": "f8", "text": "the search is capped at maxdepth 2", "category": "constraint", "weight": 3, "precision_sensitive": true, "source_quote": "capping the search at `maxdepth 2`"},
+    {"id": "f9", "text": "maxdepth 2 is used so fixture directories nested under tests/fixtures/ aren't mistaken for real skills", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": true, "source_quote": "so fixture directories nested deeper under `tests/fixtures/` don't get mistaken for real skills"},
+    {"id": "f10", "text": "each matched skill's frontmatter is validated before anything else happens", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "Each match gets its frontmatter validated before anything else happens"},
+    {"id": "f11", "text": "the script skips a name that is already linked rather than clobbering it", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "skipping any name that's already linked rather than clobbering it"},
+    {"id": "f12", "text": "as a last step the script walks every link it just created and confirms the symlink resolves", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "it walks every link it just created and confirms the symlink resolves"},
+    {"id": "f13", "text": "the script confirms the target's version field actually parses, so a broken link fails loudly instead of silently", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "the target's version field actually parses, so a broken link fails loudly instead of silently"},
+    {"id": "f14", "text": "with the fix in place, all 77 skills load at session start", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "all 77 skills load at session start"},
+    {"id": "f15", "text": "any consumer repo now picks up skill updates automatically at its next session bootstrap, with no manual resync step required", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "picks up skill updates automatically the next time it bootstraps a session, with no manual resync step required"}
+  ],
+  "relations": [
+    {"id": "r1", "type": "causal", "text": "the mismatch between load_local_skills's expected .claude/-prefixed paths (f1, f2) and the repo's actual top-level skills/ layout (f3) caused skills to never be symlinked (f4)", "fact_ids": ["f1", "f2", "f3", "f4"], "source_quote": "Because the paths never matched, nothing ever got symlinked into `~/.claude/skills/`"},
+    {"id": "r2", "type": "causal", "text": "the combination of a startup-only scan and no hot reload (f5) caused a skill that missed the initial scan to never appear for the rest of the session (f6)", "fact_ids": ["f5", "f6"], "source_quote": "the harness only scans `~/.claude/skills/` once at startup — there is no hot reload — so a skill that missed the initial scan simply never appeared"},
+    {"id": "r3", "type": "temporal_order", "text": "frontmatter validation (f10) happens before the script symlinks the skill directory (f11)", "fact_ids": ["f10", "f11"], "source_quote": "Each match gets its frontmatter validated before anything else happens. Only after that does the script symlink"},
+    {"id": "r4", "type": "dependency", "text": "the symlink-verification step (f12, f13) runs only after symlinking (f11) has already created the links", "fact_ids": ["f11", "f12", "f13"], "source_quote": "As a last step it walks every link it just created and confirms the symlink resolves"},
+    {"id": "r5", "type": "causal", "text": "applying the fix (f7-f13) produced both outcomes: all 77 skills loading at start (f14) and automatic update propagation (f15)", "fact_ids": ["f7", "f14", "f15"], "source_quote": "With the fix in place, all 77 skills load at session start"}
+  ],
+  "questions": [
+    {"id": "q1", "question": "What broke the skill install flow?", "gold_answer": "load_local_skills looked for skills under a .claude/ prefix (manifest + .claude/skills/), but the repo actually keeps skills at top-level skills/, so the paths never matched.", "type": "factual", "fact_ids": ["f1", "f2", "f3"]},
+    {"id": "q2", "question": "Why did skills never get symlinked into ~/.claude/skills/?", "gold_answer": "Because the install script's expected paths never matched the repo's actual skill directory layout.", "type": "relational", "fact_ids": ["r1"]},
+    {"id": "q3", "question": "Why does a skill that misses the initial scan never show up later in the same session?", "gold_answer": "The harness only scans ~/.claude/skills/ once at startup and has no hot reload.", "type": "relational", "fact_ids": ["r2", "f5"]},
+    {"id": "q4", "question": "Why is the fix's directory search capped at maxdepth 2?", "gold_answer": "So fixture directories nested deeper under tests/fixtures/ don't get mistaken for real skills.", "type": "factual", "fact_ids": ["f8", "f9"]},
+    {"id": "q5", "question": "Does the fix ever overwrite an existing symlink?", "gold_answer": "No — it skips any name that's already linked rather than clobbering it.", "type": "factual", "fact_ids": ["f11"]},
+    {"id": "q6", "question": "Does frontmatter validation happen before or after symlinking?", "gold_answer": "Before — validation happens first, symlinking only after.", "type": "relational", "fact_ids": ["r3"]},
+    {"id": "q7", "question": "How many skills load at session start after the fix?", "gold_answer": "77", "type": "factual", "fact_ids": ["f14"]},
+    {"id": "q8", "question": "What does a consumer repo need to do to pick up new skill updates after the fix?", "gold_answer": "Nothing manual — it happens automatically the next time it bootstraps a session.", "type": "factual", "fact_ids": ["f15"]}
+  ]
+}

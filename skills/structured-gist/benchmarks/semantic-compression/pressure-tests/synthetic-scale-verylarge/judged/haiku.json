@@ -1,0 +1,832 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "Six alerts (most routine; one critical)",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "Root cause: missing idempotency check / Would prevent second confirmation regardless of timing",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "Status: fix design exists but not yet reviewed",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Priority: single highest-priority unresolved action / Ranked above every other item on team board",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "Risk: race condition still live in production",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "log-rotation job triggered manually / resolved in 2 minutes",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "outage in unrelated dependent service / resolved in 6 minutes once dependency recovered",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "Only critical incident involved real financial impact",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "Only critical incident still unresolved at code level",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "Only critical incident missed by automated monitoring",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "Other five were unremarkable operational noise",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "i. CPU spike (traffic burst) / autoscaler added capacity automatically / resolved in 3 minutes",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "Four patch releases (v3.14.1\u2013v3.14.4)",
+        "status": "retained"
+      },
+      "f21": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f22": {
+        "evidence": "crash on one specific older OS version / fixed with one-line null check / shipped same day it was found",
+        "status": "retained"
+      },
+      "f23": {
+        "evidence": "button overlapped with status bar / affected devices with particular screen notch shape / purely cosmetic, no functional impact",
+        "status": "retained"
+      },
+      "f24": {
+        "evidence": "c. v3.14.3: regression hotfix (depends on v3.14.1)",
+        "status": "partial"
+      },
+      "f25": {
+        "evidence": "v3.14.1's null check was too aggressive / null check also suppressed legitimate error state / v3.14.3 narrowed the condition",
+        "status": "retained"
+      },
+      "f26": {
+        "evidence": "c. v3.14.3: regression hotfix (depends on v3.14.1) / v3.14.3 exists specifically as follow-up correction",
+        "status": "retained"
+      },
+      "f27": {
+        "evidence": "new setting to disable specific animation / in response to accessibility feedback",
+        "status": "retained"
+      },
+      "f28": {
+        "evidence": "unrelated to other three releases / unrelated to checkout-service and data-platform workstreams",
+        "status": "retained"
+      },
+      "f29": {
+        "evidence": "Schema-drift failures (five connectors, same fix class)",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "traffic normalized across new pods / resolved in 5 minutes",
+        "status": "retained"
+      },
+      "f30": {
+        "evidence": "a. crm-connector (Monday) / source CRM renamed lead_status to pipeline_stage / mapping updated same day",
+        "status": "retained"
+      },
+      "f31": {
+        "evidence": "b. billing-events-connector (Tuesday) / historical rows defaulted to single-currency assumption",
+        "status": "retained"
+      },
+      "f32": {
+        "evidence": "c. support-tickets-connector (Wednesday) / source renamed priority column to severity / fixed same way",
+        "status": "retained"
+      },
+      "f33": {
+        "evidence": "d. inventory-connector (Thursday) / upstream column dropped: warehouse_region_legacy / mapping updated to read warehouse_region (already existed in parallel for months)",
+        "status": "retained"
+      },
+      "f34": {
+        "evidence": "e. marketing-events-connector (Friday) / campaign_id renamed to campaign_uuid / fixed same way as others",
+        "status": "retained"
+      },
+      "f35": {
+        "evidence": "add schema-drift detection / alerts before connector fails at ingest time",
+        "status": "retained"
+      },
+      "f36": {
+        "evidence": "not yet started; logged as next-quarter candidate",
+        "status": "retained"
+      },
+      "f37": {
+        "evidence": "unrelated to checkout-service and mobile-release workstreams",
+        "status": "retained"
+      },
+      "f38": {
+        "evidence": "On-call documentation cleanup (separate top-level thread, no explicit 'unrelated' statement given)",
+        "status": "partial"
+      },
+      "f39": {
+        "evidence": "runbook grew to cover 40 different alert types / across a dozen services",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "engineer manually flushed affected cache keys / resolved in 8 minutes / no customer-facing impact confirmed afterward",
+        "status": "retained"
+      },
+      "f40": {
+        "evidence": "table of contents not updated over a year / several sections unreachable without full-text search",
+        "status": "retained"
+      },
+      "f41": {
+        "evidence": "a. split single runbook file into one per service / b. added top-level index linking all new files",
+        "status": "retained"
+      },
+      "f42": {
+        "evidence": "c. archived 9 sections for decommissioned services",
+        "status": "retained"
+      },
+      "f43": {
+        "evidence": "every surviving section's guidance byte-for-byte same / only file layout and index changed",
+        "status": "retained"
+      },
+      "f44": {
+        "evidence": "new hire during first on-call shift couldn't find right section / couldn't find it under time pressure during real page",
+        "status": "retained"
+      },
+      "f45": {
+        "evidence": "not prompted by incident where runbook caused mishandled alert",
+        "status": "retained"
+      },
+      "f46": {
+        "evidence": "update code-owner metadata on three newly split files / tracked as small cleanup task with no urgency",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Approximately 140 customers charged twice / Window: 40 minutes (roughly 09:10\u201309:50)",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "Two retries firing close together both read confirmation status before either wrote it / Both read stale state; second charge went through",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Only critical incident missed by automated monitoring",
+        "status": "partial"
+      },
+      "f8": {
+        "evidence": "Discovery: customer support ticket 6 hours later",
+        "status": "partial"
+      },
+      "f9": {
+        "evidence": "Response: team confirmed 140 affected customers / Refunds issued same day, before postmortem finished",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "The CPU spike alert was caused by a 'traffic burst'",
+        "note": "No gold fact attributes the CPU spike to a traffic burst; f2's source_quote only mentions the autoscaler response and 3-minute clearance, not a cause.",
+        "source_supported": true
+      },
+      {
+        "claim": "The stale-cache warning involved 'a cache layer serving outdated pricing data'",
+        "note": "No gold fact specifies the cached data was pricing data; f4's source_quote only mentions flushing cache keys, with no mention of pricing content.",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The critical double-charge race condition: only this incident had real financial impact, was still unresolved at code level, and was missed by automated monitoring; the other five were unremarkable operational noise.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Approximately 140 customers, over a 40-minute window (roughly 09:10-09:50).",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Not caught by monitoring \u2014 discovered via a customer support ticket 6 hours later.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No \u2014 fix design exists but not yet reviewed; it's the single highest-priority unresolved action, ranked above every other item on the team board.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "v3.14.3 depended on v3.14.1, because v3.14.1's null check was too aggressive and suppressed a legitimate error state, so v3.14.3 narrowed the condition.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Five connectors, all broken by the same schema-drift failure class (renamed/added/dropped upstream columns).",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "A new hire during their first on-call shift couldn't find the right section under time pressure during a real page; explicitly not prompted by any incident of the runbook causing a mishandled alert.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "No \u2014 every surviving section's guidance is byte-for-byte the same; only the file layout and index changed.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Both read stale state; second charge went through / Approximately 140 customers charged twice",
+        "status": "retained"
+      },
+      "r10": {
+        "evidence": "table of contents not updated over a year / several sections unreachable ... [followed by] Reorganization (layout only; no guidance changed)",
+        "status": "retained"
+      },
+      "r11": {
+        "evidence": "new hire during first on-call shift couldn't find right section / feedback prompted this reorganization / not prompted by incident where runbook caused mishandled alert",
+        "status": "retained"
+      },
+      "r12": {
+        "evidence": "every surviving section's guidance byte-for-byte same / only file layout and index changed",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "Only critical incident missed by automated monitoring",
+        "status": "partial"
+      },
+      "r3": {
+        "evidence": "Only critical incident involved real financial impact / still unresolved at code level / missed by automated monitoring / Other five were unremarkable operational noise",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "Discovery: customer support ticket 6 hours later / Response: team confirmed 140 affected customers / Refunds issued same day",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "Root cause: missing idempotency check / Status: fix design exists but not yet reviewed / Risk: race condition still live / Priority: single highest-priority unresolved action",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "c. v3.14.3: regression hotfix (depends on v3.14.1)",
+        "status": "retained"
+      },
+      "r7": {
+        "evidence": "unrelated to other three releases (stated only for v3.14.4, not explicitly for v3.14.2)",
+        "status": "partial"
+      },
+      "r8": {
+        "evidence": "Schema-drift failures (five connectors, same fix class)",
+        "status": "retained"
+      },
+      "r9": {
+        "evidence": "fifth time in five days same failure class hit different connector / pattern repeat triggered follow-up item",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "Five routine alerts / One critical: double-charge race condition",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f12": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f13": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f14": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f15": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f16": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f19": {
+        "evidence": "A. Five routine alerts",
+        "status": "partial"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f20": {
+        "evidence": "A. Three independent releases / B. One regression hotfix (depends on A)",
+        "status": "partial"
+      },
+      "f21": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f22": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f23": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f24": {
+        "evidence": "B. One regression hotfix (depends on A)",
+        "status": "partial"
+      },
+      "f25": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f26": {
+        "evidence": "B. One regression hotfix (depends on A)",
+        "status": "partial"
+      },
+      "f27": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f28": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f29": {
+        "evidence": "A. Five schema-drift failures (same class)",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f30": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f31": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f32": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f33": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f34": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f35": {
+        "evidence": "B. Follow-up: drift detection (not started)",
+        "status": "retained"
+      },
+      "f36": {
+        "evidence": "B. Follow-up: drift detection (not started)",
+        "status": "partial"
+      },
+      "f37": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f38": {
+        "evidence": "On-call documentation cleanup (listed as separate top-level thread)",
+        "status": "partial"
+      },
+      "f39": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f40": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f41": {
+        "evidence": "A. Runbook reorganized by service",
+        "status": "retained"
+      },
+      "f42": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f43": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f44": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f45": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f46": {
+        "evidence": "B. Metadata updates pending on 3 files",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "B. One critical: double-charge race condition",
+        "status": "partial"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "",
+        "status": "omitted"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "The one critical item is the double-charge race condition (implied to matter most by being separated out from the five routine alerts), but no reason is given.",
+        "verdict": "partial"
+      },
+      "q2": {
+        "answer_given": "Not stated \u2014 no customer count or time window appears anywhere in the outline.",
+        "verdict": "unanswerable"
+      },
+      "q3": {
+        "answer_given": "Not stated \u2014 monitoring/discovery method is not mentioned.",
+        "verdict": "unanswerable"
+      },
+      "q4": {
+        "answer_given": "Not stated \u2014 fix/shipping status is not mentioned anywhere in the outline.",
+        "verdict": "unanswerable"
+      },
+      "q5": {
+        "answer_given": "\"One regression hotfix (depends on A)\" where A = \"Three independent releases\" \u2014 does not name v3.14.3 or v3.14.1 specifically, and implies dependency on the whole group of three rather than one release; no reason given.",
+        "verdict": "wrong"
+      },
+      "q6": {
+        "answer_given": "Five schema-drift failures (same class).",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Not stated \u2014 no motivation for the reorganization is given.",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "Not stated \u2014 nothing about whether guidance content changed.",
+        "verdict": "unanswerable"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r10": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r11": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r12": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "A. Five routine alerts / B. One critical: double-charge race condition",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r5": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r6": {
+        "evidence": "B. One regression hotfix (depends on A)",
+        "status": "partial"
+      },
+      "r7": {
+        "evidence": "A. Three independent releases",
+        "status": "partial"
+      },
+      "r8": {
+        "evidence": "A. Five schema-drift failures (same class)",
+        "status": "retained"
+      },
+      "r9": {
+        "evidence": "B. Follow-up: drift detection (not started)",
+        "status": "partial"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "\u25b8 Six alerts",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "Refunds issued same day; idempotency fix unreviewed",
+        "status": "partial"
+      },
+      "f11": {
+        "evidence": "idempotency fix unreviewed",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Highest-priority; race condition still live",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "Highest-priority; race condition still live",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "iv. Disk space",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "v. Dependency outage",
+        "status": "partial"
+      },
+      "f16": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f19": {
+        "evidence": "a. Five routine (auto/quick resolution)",
+        "status": "partial"
+      },
+      "f2": {
+        "evidence": "i. CPU spike",
+        "status": "partial"
+      },
+      "f20": {
+        "evidence": "\u25b8 Four releases (v3.14.1\u2013v3.14.4)",
+        "status": "retained"
+      },
+      "f21": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f22": {
+        "evidence": "a. v3.14.1: crash on older OS / fixed with one-line null check",
+        "status": "partial"
+      },
+      "f23": {
+        "evidence": "b. v3.14.2: button overlapped with notch / cosmetic; no functional impact",
+        "status": "retained"
+      },
+      "f24": {
+        "evidence": "c. v3.14.3: login regression hotfix",
+        "status": "retained"
+      },
+      "f25": {
+        "evidence": "v3.14.1's null check too aggressive, suppressed error / hotfix narrowed the condition",
+        "status": "retained"
+      },
+      "f26": {
+        "evidence": "c. v3.14.3: login regression hotfix (only item with a dependency arrow among the four)",
+        "status": "retained"
+      },
+      "f27": {
+        "evidence": "d. v3.14.4: accessibility feature / disable animation setting; user feedback response",
+        "status": "retained"
+      },
+      "f28": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f29": {
+        "evidence": "\u25b8 Five schema-drift failures",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "ii. Deploy latency",
+        "status": "partial"
+      },
+      "f30": {
+        "evidence": "i. crm-connector: lead_status to pipeline_stage",
+        "status": "partial"
+      },
+      "f31": {
+        "evidence": "ii. billing-events-connector: new currency_code column",
+        "status": "partial"
+      },
+      "f32": {
+        "evidence": "iii. support-tickets-connector: priority to severity",
+        "status": "partial"
+      },
+      "f33": {
+        "evidence": "iv. inventory-connector: dropped warehouse_region_legacy",
+        "status": "partial"
+      },
+      "f34": {
+        "evidence": "v. marketing-events-connector: campaign_id to campaign_uuid",
+        "status": "partial"
+      },
+      "f35": {
+        "evidence": "add drift detection to alert before ingest failure",
+        "status": "retained"
+      },
+      "f36": {
+        "evidence": "not yet started; next-quarter candidate",
+        "status": "retained"
+      },
+      "f37": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f38": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f39": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "iii. Stale cache",
+        "status": "partial"
+      },
+      "f40": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f41": {
+        "evidence": "a. Split single file into per-service files / b. Added top-level index linking all files",
+        "status": "retained"
+      },
+      "f42": {
+        "evidence": "c. Archived 9 sections for decommissioned services",
+        "status": "retained"
+      },
+      "f43": {
+        "evidence": "No alert-handling guidance changed; layout only",
+        "status": "retained"
+      },
+      "f44": {
+        "evidence": "Prompted by new hire feedback (couldn't locate section)",
+        "status": "retained"
+      },
+      "f45": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f46": {
+        "evidence": "Update code-owner metadata on 3 files (minor)",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "~140 customers charged twice (40-min window)",
+        "status": "partial"
+      },
+      "f6": {
+        "evidence": "Race in retry path; payment check read stale state",
+        "status": "partial"
+      },
+      "f7": {
+        "evidence": "Missed by monitoring; discovered via support ticket",
+        "status": "partial"
+      },
+      "f8": {
+        "evidence": "Missed by monitoring; discovered via support ticket",
+        "status": "partial"
+      },
+      "f9": {
+        "evidence": "Refunds issued same day; idempotency fix unreviewed",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "The critical double-charge race condition \u2014 it charged ~140 customers twice, was missed by monitoring, and is the highest-priority item with the race condition still live.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "~140 customers, over a 40-minute window.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Missed by monitoring; discovered via support ticket.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No \u2014 the idempotency fix is unreviewed, and it is the highest-priority unresolved item.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "v3.14.3 depended on v3.14.1, because v3.14.1's null check was too aggressive and suppressed a legitimate error, so v3.14.3 narrowed the condition.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Five connectors, all schema-drift failures.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Prompted by new hire feedback (couldn't locate section).",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "No alert-handling guidance changed; layout only.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Race in retry path; payment check read stale state / ~140 customers charged twice",
+        "status": "retained"
+      },
+      "r10": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r11": {
+        "evidence": "Prompted by new hire feedback (couldn't locate section)",
+        "status": "partial"
+      },
+      "r12": {
+        "evidence": "No alert-handling guidance changed; layout only",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "Missed by monitoring; discovered via support ticket",
+        "status": "partial"
+      },
+      "r3": {
+        "evidence": "a. Five routine (auto/quick resolution) / b. One critical: double-charge race condition",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "Missed by monitoring; discovered via support ticket / Refunds issued same day",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "idempotency fix unreviewed / Highest-priority; race condition still live",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "c. v3.14.3: login regression hotfix / v3.14.1's null check too aggressive",
+        "status": "retained"
+      },
+      "r7": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r8": {
+        "evidence": "\u25b8 Five schema-drift failures",
+        "status": "retained"
+      },
+      "r9": {
+        "evidence": "\u25b8 Follow-up item / add drift detection to alert before ingest failure",
+        "status": "partial"
+      }
+    }
+  }
+}

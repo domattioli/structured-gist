@@ -1,0 +1,1437 @@
+{
+  "causality-heavy-explain": {
+    "pressure_tags": [
+      "adversarial",
+      "causality_heavy",
+      "medium"
+    ],
+    "size_bucket": "medium",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.9024,
+        "conformance_clean": false,
+        "conformance_violation_count": 6,
+        "conformance_violations": [
+          {
+            "line": 7,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 9,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 11,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 13,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 30,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 32,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 333,
+        "recoverability": 1.0,
+        "reduction_pct": 9.76,
+        "relation_retention": 0.9375,
+        "source_words": 369,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.975,
+        "weighted_retention": 0.9722
+      },
+      "skim": {
+        "compression_ratio": 0.1382,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.2,
+        "output_words": 51,
+        "recoverability": 0.5625,
+        "reduction_pct": 86.18,
+        "relation_retention": 0.0625,
+        "source_words": 369,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.575,
+        "weighted_retention": 0.5556
+      },
+      "standard": {
+        "compression_ratio": 0.4499,
+        "conformance_clean": false,
+        "conformance_violation_count": 6,
+        "conformance_violations": [
+          {
+            "line": 7,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 8,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 9,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 10,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 20,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 21,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.05,
+        "output_words": 166,
+        "recoverability": 0.9375,
+        "reduction_pct": 55.01,
+        "relation_retention": 0.5625,
+        "source_words": 369,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.8,
+        "weighted_retention": 0.8
+      }
+    },
+    "test_class": "pressure-tests"
+  },
+  "cause-chain-reversal": {
+    "haiku": {
+      "deep": {
+        "compression_ratio": 0.3684,
+        "conformance_clean": false,
+        "conformance_violation_count": 8,
+        "conformance_violations": [
+          {
+            "line": 12,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 3,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 5,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 6,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 11,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 14,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 15,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 18,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.1,
+        "output_words": 133,
+        "recoverability": 0.9375,
+        "reduction_pct": 63.16,
+        "relation_retention": 0.9167,
+        "source_words": 361,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.85,
+        "weighted_retention": 0.8333
+      },
+      "skim": {
+        "compression_ratio": 0.0443,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.85,
+        "output_words": 16,
+        "recoverability": 0.3125,
+        "reduction_pct": 95.57,
+        "relation_retention": 0.0833,
+        "source_words": 361,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.125,
+        "weighted_retention": 0.101
+      },
+      "standard": {
+        "compression_ratio": 0.1967,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 5,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 9,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.3,
+        "output_words": 71,
+        "recoverability": 0.625,
+        "reduction_pct": 80.33,
+        "relation_retention": 0.5,
+        "source_words": 361,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.55,
+        "weighted_retention": 0.5707
+      }
+    },
+    "pressure_tags": [
+      "adversarial",
+      "root_cause_reversal",
+      "medium"
+    ],
+    "size_bucket": "medium",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 1.1385,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 411,
+        "recoverability": 1.0,
+        "reduction_pct": -13.85,
+        "relation_retention": 1.0,
+        "source_words": 361,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "skim": {
+        "compression_ratio": 0.2493,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.15,
+        "output_words": 90,
+        "recoverability": 0.8125,
+        "reduction_pct": 75.07,
+        "relation_retention": 0.6667,
+        "source_words": 361,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.65,
+        "weighted_retention": 0.6414
+      },
+      "standard": {
+        "compression_ratio": 0.9861,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 356,
+        "recoverability": 0.8125,
+        "reduction_pct": 1.39,
+        "relation_retention": 1.0,
+        "source_words": 361,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.975,
+        "weighted_retention": 0.9747
+      }
+    },
+    "test_class": "pressure-tests"
+  },
+  "migration-tristate": {
+    "haiku": {
+      "deep": {
+        "compression_ratio": 0.9,
+        "conformance_clean": false,
+        "conformance_violation_count": 20,
+        "conformance_violations": [
+          {
+            "line": 21,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 22,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 41,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 42,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 7,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 9,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 14,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 21,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 22,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 24,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 29,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 34,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 34,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 34,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 36,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 39,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 41,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 42,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 43,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 45,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 252,
+        "recoverability": 1.0,
+        "reduction_pct": 10.0,
+        "relation_retention": 1.0,
+        "source_words": 280,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.9737,
+        "weighted_retention": 0.9884
+      },
+      "skim": {
+        "compression_ratio": 0.1036,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 4,
+            "message": "'\u2014' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 5,
+            "message": "'\u2014' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.6842,
+        "output_words": 29,
+        "recoverability": 0.3125,
+        "reduction_pct": 89.64,
+        "relation_retention": 0.1667,
+        "source_words": 280,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.2368,
+        "weighted_retention": 0.25
+      },
+      "standard": {
+        "compression_ratio": 0.4536,
+        "conformance_clean": false,
+        "conformance_violation_count": 5,
+        "conformance_violations": [
+          {
+            "line": 7,
+            "message": "'\u2014' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 10,
+            "message": "'\u2014' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 15,
+            "message": "'\u2014' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 9,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 20,
+            "message": "continuation indent (15) != node indent (12)",
+            "rule": "R11"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.1579,
+        "output_words": 127,
+        "recoverability": 0.6875,
+        "reduction_pct": 54.64,
+        "relation_retention": 0.75,
+        "source_words": 280,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.7105,
+        "weighted_retention": 0.7442
+      }
+    },
+    "pressure_tags": [
+      "adversarial",
+      "tristate_status",
+      "medium"
+    ],
+    "size_bucket": "medium",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.675,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 189,
+        "recoverability": 1.0,
+        "reduction_pct": 32.5,
+        "relation_retention": 1.0,
+        "source_words": 280,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "skim": {
+        "compression_ratio": 0.0964,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.5789,
+        "output_words": 27,
+        "recoverability": 0.3125,
+        "reduction_pct": 90.36,
+        "relation_retention": 0.25,
+        "source_words": 280,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.2895,
+        "weighted_retention": 0.314
+      },
+      "standard": {
+        "compression_ratio": 0.5143,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 144,
+        "recoverability": 1.0,
+        "reduction_pct": 48.57,
+        "relation_retention": 0.9167,
+        "source_words": 280,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.9211,
+        "weighted_retention": 0.9477
+      }
+    },
+    "test_class": "pressure-tests"
+  },
+  "near-identical-numbers": {
+    "pressure_tags": [
+      "adversarial",
+      "numeric_precision",
+      "medium"
+    ],
+    "size_bucket": "medium",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.9239,
+        "conformance_clean": false,
+        "conformance_violation_count": 6,
+        "conformance_violations": [
+          {
+            "line": 24,
+            "message": "too many arrows (3) vs non-arrow nodes (2) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 4,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 9,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 14,
+            "message": "text too wordy (5 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 21,
+            "message": "text too wordy (5 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 26,
+            "message": "2 mid-line arrows chain multiple facts under one marker \u2014 nest each as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 255,
+        "recoverability": 1.0,
+        "reduction_pct": 7.61,
+        "relation_retention": 1.0,
+        "source_words": 276,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "skim": {
+        "compression_ratio": 0.1812,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.5714,
+        "output_words": 50,
+        "recoverability": 0.5,
+        "reduction_pct": 81.88,
+        "relation_retention": 0.25,
+        "source_words": 276,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.3214,
+        "weighted_retention": 0.3115
+      },
+      "standard": {
+        "compression_ratio": 0.5797,
+        "conformance_clean": false,
+        "conformance_violation_count": 7,
+        "conformance_violations": [
+          {
+            "line": 16,
+            "message": "too many arrows (3) vs non-arrow nodes (2) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 4,
+            "message": "text too wordy (8 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 7,
+            "message": "text too wordy (8 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 10,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 4,
+            "message": "'\u2192' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 7,
+            "message": "'\u2192' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 18,
+            "message": "2 mid-line arrows chain multiple facts under one marker \u2014 nest each as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 160,
+        "recoverability": 1.0,
+        "reduction_pct": 42.03,
+        "relation_retention": 0.9167,
+        "source_words": 276,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.8929,
+        "weighted_retention": 0.9508
+      }
+    },
+    "test_class": "regression"
+  },
+  "negation-and-true-peers": {
+    "pressure_tags": [
+      "adversarial",
+      "true_peers",
+      "negation",
+      "small"
+    ],
+    "size_bucket": "small",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.886,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 1,
+            "message": "concept 'Four workstreams' starts with a count-word ('four') \u2014 remove the count and keep only the noun",
+            "rule": "R15"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 241,
+        "recoverability": 1.0,
+        "reduction_pct": 11.4,
+        "relation_retention": 1.0,
+        "source_words": 272,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.975,
+        "weighted_retention": 0.9895
+      },
+      "skim": {
+        "compression_ratio": 0.1691,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 1,
+            "message": "concept 'Four workstreams' starts with a count-word ('four') \u2014 remove the count and keep only the noun",
+            "rule": "R15"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.95,
+        "output_words": 46,
+        "recoverability": 0.0625,
+        "reduction_pct": 83.09,
+        "relation_retention": 0.125,
+        "source_words": 272,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.025,
+        "weighted_retention": 0.0316
+      },
+      "standard": {
+        "compression_ratio": 0.8272,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 1,
+            "message": "concept 'Four workstreams' starts with a count-word ('four') \u2014 remove the count and keep only the noun",
+            "rule": "R15"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 225,
+        "recoverability": 1.0,
+        "reduction_pct": 17.28,
+        "relation_retention": 1.0,
+        "source_words": 272,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.975,
+        "weighted_retention": 0.9895
+      }
+    },
+    "test_class": "pressure-tests"
+  },
+  "real-benchmark-archaeology": {
+    "pressure_tags": [
+      "realistic_recap",
+      "medium",
+      "unresolved_question_heavy"
+    ],
+    "size_bucket": "medium",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.7382,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 12,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 30,
+            "message": "attribute 'What's absent' is interrogative (starts with a question word) \u2014 use a descriptive property name instead",
+            "rule": "R14"
+          }
+        ],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 344,
+        "recoverability": 0.875,
+        "reduction_pct": 26.18,
+        "relation_retention": 1.0,
+        "source_words": 466,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.9583,
+        "weighted_retention": 0.9658
+      },
+      "skim": {
+        "compression_ratio": 0.1588,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.3333,
+        "output_words": 74,
+        "recoverability": 0.5625,
+        "reduction_pct": 84.12,
+        "relation_retention": 0.5,
+        "source_words": 466,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.4583,
+        "weighted_retention": 0.4658
+      },
+      "standard": {
+        "compression_ratio": 0.4077,
+        "conformance_clean": false,
+        "conformance_violation_count": 3,
+        "conformance_violations": [
+          {
+            "line": 32,
+            "message": "too many arrows (1) vs non-arrow nodes (0) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 7,
+            "message": "attribute 'Why adopted' is interrogative (starts with a question word) \u2014 use a descriptive property name instead",
+            "rule": "R14"
+          },
+          {
+            "line": 22,
+            "message": "attribute 'What's absent' is interrogative (starts with a question word) \u2014 use a descriptive property name instead",
+            "rule": "R14"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0417,
+        "output_words": 190,
+        "recoverability": 0.8125,
+        "reduction_pct": 59.23,
+        "relation_retention": 0.9167,
+        "source_words": 466,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.8542,
+        "weighted_retention": 0.8846
+      }
+    },
+    "test_class": "regression"
+  },
+  "real-hook-discovery": {
+    "pressure_tags": [
+      "realistic_recap",
+      "small"
+    ],
+    "size_bucket": "small",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.7229,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 167,
+        "recoverability": 1.0,
+        "reduction_pct": 27.71,
+        "relation_retention": 1.0,
+        "source_words": 231,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "skim": {
+        "compression_ratio": 0.2121,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.4,
+        "output_words": 49,
+        "recoverability": 0.6875,
+        "reduction_pct": 78.79,
+        "relation_retention": 0.6,
+        "source_words": 231,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.4333,
+        "weighted_retention": 0.3923
+      },
+      "standard": {
+        "compression_ratio": 0.5411,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 125,
+        "recoverability": 1.0,
+        "reduction_pct": 45.89,
+        "relation_retention": 0.9,
+        "source_words": 231,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.9667,
+        "weighted_retention": 0.9538
+      }
+    },
+    "test_class": "regression"
+  },
+  "synthetic-scale-verylarge": {
+    "haiku": {
+      "deep": {
+        "compression_ratio": 0.5583,
+        "conformance_clean": false,
+        "conformance_violation_count": 43,
+        "conformance_violations": [
+          {
+            "line": 5,
+            "message": "too many arrows (31) vs non-arrow nodes (9) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 45,
+            "message": "too many arrows (14) vs non-arrow nodes (5) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 65,
+            "message": "too many arrows (22) vs non-arrow nodes (8) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 95,
+            "message": "too many arrows (13) vs non-arrow nodes (8) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 2,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 42,
+            "message": "text too wordy (4 words, max 3)",
+            "rule": "R7"
+          },
+          {
+            "line": 63,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 99,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 100,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 101,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 2,
+            "message": "parenthetical with 4 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 22,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 44,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 48,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 52,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 63,
+            "message": "parenthetical with 5 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 99,
+            "message": "parenthetical with 5 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 12,
+            "message": "continuation indent (18) != node indent (16)",
+            "rule": "R11"
+          },
+          {
+            "line": 14,
+            "message": "continuation indent (18) != node indent (16)",
+            "rule": "R11"
+          },
+          {
+            "line": 21,
+            "message": "continuation indent (18) != node indent (16)",
+            "rule": "R11"
+          },
+          {
+            "line": 24,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 25,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 30,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 32,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 35,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 38,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 39,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 40,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 50,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 54,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 56,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 61,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 72,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 79,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 80,
+            "message": "continuation indent (14) != node indent (12)",
+            "rule": "R11"
+          },
+          {
+            "line": 85,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 92,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 98,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 104,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 105,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 107,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 109,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          },
+          {
+            "line": 112,
+            "message": "continuation indent (10) != node indent (8)",
+            "rule": "R11"
+          }
+        ],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0217,
+        "output_words": 733,
+        "recoverability": 1.0,
+        "reduction_pct": 44.17,
+        "relation_retention": 0.9167,
+        "source_words": 1313,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.9348,
+        "weighted_retention": 0.9079
+      },
+      "skim": {
+        "compression_ratio": 0.0465,
+        "conformance_clean": false,
+        "conformance_violation_count": 3,
+        "conformance_violations": [
+          {
+            "line": 4,
+            "message": "text too wordy (4 words, max 3)",
+            "rule": "R7"
+          },
+          {
+            "line": 3,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 6,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.7391,
+        "output_words": 61,
+        "recoverability": 0.1875,
+        "reduction_pct": 95.35,
+        "relation_retention": 0.25,
+        "source_words": 1313,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.1739,
+        "weighted_retention": 0.1579
+      },
+      "standard": {
+        "compression_ratio": 0.1828,
+        "conformance_clean": false,
+        "conformance_violation_count": 14,
+        "conformance_violations": [
+          {
+            "line": 15,
+            "message": "text too wordy (4 words, max 3)",
+            "rule": "R7"
+          },
+          {
+            "line": 9,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 17,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 19,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 21,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 28,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 29,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 30,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 32,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 12,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          },
+          {
+            "line": 13,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          },
+          {
+            "line": 22,
+            "message": "line exceeds 64 chars (67)",
+            "rule": "R11"
+          },
+          {
+            "line": 32,
+            "message": "line exceeds 64 chars (67)",
+            "rule": "R11"
+          },
+          {
+            "line": 43,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          }
+        ],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.2174,
+        "output_words": 240,
+        "recoverability": 1.0,
+        "reduction_pct": 81.72,
+        "relation_retention": 0.625,
+        "source_words": 1313,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.587,
+        "weighted_retention": 0.5553
+      }
+    },
+    "pressure_tags": [
+      "synthetic_scale",
+      "very_large",
+      "buried_failure",
+      "multiple_threads",
+      "near_identical_siblings",
+      "skim_honesty_test"
+    ],
+    "size_bucket": "very_large",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.7403,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 27,
+            "message": "too many arrows (5) vs non-arrow nodes (4) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 37,
+            "message": "too many arrows (7) vs non-arrow nodes (6) in block",
+            "rule": "R5"
+          }
+        ],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 972,
+        "recoverability": 1.0,
+        "reduction_pct": 25.97,
+        "relation_retention": 0.9583,
+        "source_words": 1313,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.9891,
+        "weighted_retention": 0.9947
+      },
+      "skim": {
+        "compression_ratio": 0.0548,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.587,
+        "output_words": 72,
+        "recoverability": 0.3125,
+        "reduction_pct": 94.52,
+        "relation_retention": 0.25,
+        "source_words": 1313,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.2609,
+        "weighted_retention": 0.2526
+      },
+      "standard": {
+        "compression_ratio": 0.3519,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.087,
+        "output_words": 462,
+        "recoverability": 1.0,
+        "reduction_pct": 64.81,
+        "relation_retention": 0.7917,
+        "source_words": 1313,
+        "status": "scored",
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unweighted_retention": 0.7391,
+        "weighted_retention": 0.7316
+      }
+    },
+    "test_class": "pressure-tests"
+  }
+}

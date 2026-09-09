@@ -1,0 +1,113 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "load_local_skills assumed `.claude/` layout"},
+      "f2": {"status": "partial", "evidence": "load_local_skills assumed `.claude/` layout"},
+      "f3": {"status": "retained", "evidence": "repo keeps skills top-level, in `skills/`"},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "retained", "evidence": "harness scans once, no hot reload"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "walk, validate, symlink into"},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "retained", "evidence": "walk, validate, symlink into"},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "partial", "evidence": "verify each new link"},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "retained", "evidence": "77 skills load at session start"},
+      "f15": {"status": "partial", "evidence": "consumer repos auto-update"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "retained", "evidence": "walk, validate, symlink into"},
+      "r4": {"status": "retained", "evidence": "I. walk, validate, symlink ... II. verify each new link"},
+      "r5": {"status": "retained", "evidence": "The fix ... Result A. 77 skills load at session start"}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "load_local_skills assumed a `.claude/` layout, but this repo keeps skills top-level in `skills/`, so the paths didn't line up.", "verdict": "correct"},
+      "q2": {"answer_given": "Not clearly stated as a causal chain — skim lists the `.claude/` assumption and the actual top-level `skills/` layout as two separate sibling bullets under 'Discovery gap' with no explicit connector saying this caused the symlink failure.", "verdict": "partial"},
+      "q3": {"answer_given": "The harness scans once at startup with no hot reload.", "verdict": "correct"},
+      "q4": {"answer_given": "Not mentioned — maxdepth is absent from skim entirely.", "verdict": "unanswerable"},
+      "q5": {"answer_given": "Not mentioned — no skip/clobber behavior is described in skim.", "verdict": "unanswerable"},
+      "q6": {"answer_given": "Before — the outline lists the steps in order: walk, validate, symlink.", "verdict": "correct"},
+      "q7": {"answer_given": "77.", "verdict": "correct"},
+      "q8": {"answer_given": "Consumer repos auto-update.", "verdict": "correct"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "expected a manifest at `.claude/skills.manifest.json`"},
+      "f2": {"status": "retained", "evidence": "skill dirs under `.claude/skills/`"},
+      "f3": {"status": "retained", "evidence": "this repo's skills live top-level, in `skills/`"},
+      "f4": {"status": "partial", "evidence": "but this repo's skills live top-level, in `skills/`"},
+      "f5": {"status": "retained", "evidence": "harness scans `~/.claude/skills/` once, at startup ... no hot reload"},
+      "f6": {"status": "retained", "evidence": "no hot reload, so a missed skill never showed up the rest of the session"},
+      "f7": {"status": "retained", "evidence": "walk repo for `skills/<name>/SKILL.md`"},
+      "f8": {"status": "retained", "evidence": "maxdepth 2 skips nested"},
+      "f9": {"status": "retained", "evidence": "maxdepth 2 skips nested `tests/fixtures/` dirs"},
+      "f10": {"status": "retained", "evidence": "validate frontmatter, then symlink into"},
+      "f11": {"status": "retained", "evidence": "skips names already linked rather than clobbering"},
+      "f12": {"status": "retained", "evidence": "verify each new link ... confirms it resolves"},
+      "f13": {"status": "retained", "evidence": "confirms it resolves and its version parses, so broken links fail loudly instead of silently"},
+      "f14": {"status": "retained", "evidence": "77 skills load at session start"},
+      "f15": {"status": "retained", "evidence": "consumer repos get skill updates automatically ... next bootstrap; no manual resync step needed"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"},
+      "r2": {"status": "retained", "evidence": "no hot reload, so a missed skill never showed up the rest of the session"},
+      "r3": {"status": "retained", "evidence": "validate frontmatter, then symlink into"},
+      "r4": {"status": "retained", "evidence": "II. validate frontmatter, then symlink ... III. verify each new link"},
+      "r5": {"status": "retained", "evidence": "The fix ... Result A. 77 skills load at session start"}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "load_local_skills expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level in `skills/`.", "verdict": "correct"},
+      "q2": {"answer_given": "The expected `.claude/`-prefixed paths (manifest + skill dirs) never matched the repo's actual top-level `skills/` layout.", "verdict": "correct"},
+      "q3": {"answer_given": "The harness scans `~/.claude/skills/` only once at startup and has no hot reload.", "verdict": "correct"},
+      "q4": {"answer_given": "So nested `tests/fixtures/` dirs don't get mistaken for real skills.", "verdict": "correct"},
+      "q5": {"answer_given": "No — it skips names already linked rather than clobbering them.", "verdict": "correct"},
+      "q6": {"answer_given": "Before — validate frontmatter, then symlink.", "verdict": "correct"},
+      "q7": {"answer_given": "77.", "verdict": "correct"},
+      "q8": {"answer_given": "Nothing manual — updates happen automatically at the next bootstrap, no manual resync step needed.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "expected a manifest at `.claude/skills.manifest.json`"},
+      "f2": {"status": "retained", "evidence": "skill dirs under `.claude/skills/`"},
+      "f3": {"status": "retained", "evidence": "repo keeps skills top-level, in `skills/`"},
+      "f4": {"status": "retained", "evidence": "paths never matched, so nothing got symlinked into `~/.claude/skills/`"},
+      "f5": {"status": "retained", "evidence": "harness scans `~/.claude/skills/` once, at startup"},
+      "f6": {"status": "retained", "evidence": "no hot reload, so a skill missing the initial scan never appeared the rest of the session"},
+      "f7": {"status": "retained", "evidence": "walk repo for `skills/<name>/SKILL.md`"},
+      "f8": {"status": "retained", "evidence": "maxdepth 2 so nested"},
+      "f9": {"status": "retained", "evidence": "maxdepth 2 so nested `tests/fixtures/` dirs aren't mistaken for real skills"},
+      "f10": {"status": "retained", "evidence": "validate frontmatter of each match"},
+      "f11": {"status": "retained", "evidence": "skips names already linked rather than clobbering them"},
+      "f12": {"status": "retained", "evidence": "verify each new link ... a. symlink resolves"},
+      "f13": {"status": "retained", "evidence": "b. version field parses ... so a broken link fails loudly instead of silently"},
+      "f14": {"status": "retained", "evidence": "77 skills load at session start"},
+      "f15": {"status": "retained", "evidence": "consumer repos get skill updates ... automatically, next time it bootstraps a session; no manual resync step needed"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "paths never matched, so nothing got symlinked into `~/.claude/skills/`"},
+      "r2": {"status": "retained", "evidence": "no hot reload, so a skill missing the initial scan never appeared the rest of the session"},
+      "r3": {"status": "retained", "evidence": "II. validate frontmatter of each match ... III. symlink skill dir into"},
+      "r4": {"status": "retained", "evidence": "III. symlink skill dir into ... IV. verify each new link"},
+      "r5": {"status": "retained", "evidence": "The fix ... Result A. 77 skills load at session start"}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "load_local_skills assumed a `.claude/` layout (manifest at `.claude/skills.manifest.json`, skill dirs under `.claude/skills/`), but the repo keeps skills top-level in `skills/`, so paths never matched.", "verdict": "correct"},
+      "q2": {"answer_given": "Because the expected `.claude/`-prefixed paths never matched the repo's actual top-level `skills/` layout.", "verdict": "correct"},
+      "q3": {"answer_given": "The harness scans `~/.claude/skills/` only once at startup with no hot reload.", "verdict": "correct"},
+      "q4": {"answer_given": "So nested `tests/fixtures/` dirs aren't mistaken for real skills.", "verdict": "correct"},
+      "q5": {"answer_given": "No — it skips names already linked rather than clobbering them.", "verdict": "correct"},
+      "q6": {"answer_given": "Before — validate frontmatter (step II) happens before symlinking (step III).", "verdict": "correct"},
+      "q7": {"answer_given": "77.", "verdict": "correct"},
+      "q8": {"answer_given": "Nothing manual — it happens automatically the next time it bootstraps a session, no manual resync step needed.", "verdict": "correct"}
+    }
+  }
+}

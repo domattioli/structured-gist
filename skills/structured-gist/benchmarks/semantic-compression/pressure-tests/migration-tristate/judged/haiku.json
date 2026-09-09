@@ -1,0 +1,431 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "fully migrated to new infrastructure / cutover completed last month",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "final for now; not a scheduling delay",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "attempted migration then rolled back; currently reverted to old infrastructure",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "migration attempted two months ago / ran on new infrastructure three weeks",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "users encountered data-consistency bugs where search results lagged behind source-of-truth database",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "currently reverted to old infrastructure ... fully reverted",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "decision on future re-attempt not yet made",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "currently mid-migration; actively in progress right now",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "some endpoints already cut over to new infrastructure / cutover endpoints serving production traffic from new location",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "remaining endpoints still on old infrastructure",
+        "status": "partial"
+      },
+      "f19": {
+        "evidence": "only service on this list running simultaneously on both infrastructures",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "old infrastructure decommissioned entirely / no fallback path exists",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "not started; scheduled for next quarter",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "not started; scheduled for next quarter",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "will start after billing's cutover lessons are incorporated into the migration runbook",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "still running entirely on old infrastructure",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "explicitly not migrating under current plan",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "contains large amount of bespoke compliance logic / expensive and risky to port",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "migration risk not worth the benefit for this particular service",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "search-service's data-consistency bugs occurred 'in ways old infrastructure never exhibited'",
+        "note": "not supported by any gold fact; f13's source_quote only says bugs caused reversion, with no comparison to the old infrastructure's past behavior",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "contains large amount of bespoke compliance logic, expensive and risky to port, and migration risk not worth the benefit",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "final for now; not a scheduling delay",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "search-service",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "users encountered data-consistency bugs where search results lagged behind source-of-truth database",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "reporting-service; only service on this list running simultaneously on both infrastructures",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "next quarter",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "decision on future re-attempt not yet made",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "will start after billing's cutover lessons are incorporated into the migration runbook",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "Technical challenges + Business decision + Decision finality all under auth-service",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "Failure mechanism: users encountered data-consistency bugs ... directly following rolled-back status",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "billing: 'commitment is irreversible even if we wanted one' vs search: 'currently reverted to old infrastructure'",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "auth-service: explicitly not migrating, final for now vs notifications-service: not started; scheduled for next quarter",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "only service on this list running simultaneously on both infrastructures",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "billing-service \u2014 fully migrated",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "search-service \u2014 attempted then reverted",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f13": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f14": {
+        "evidence": "search-service \u2014 attempted then reverted",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f16": {
+        "evidence": "reporting-service \u2014 in-progress",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f19": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "notifications-service \u2014 scheduled",
+        "status": "partial"
+      },
+      "f5": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "auth-service \u2014 explicitly not migrating",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "",
+        "status": "omitted"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "not stated in outline",
+        "verdict": "unanswerable"
+      },
+      "q3": {
+        "answer_given": "not stated in outline",
+        "verdict": "unanswerable"
+      },
+      "q4": {
+        "answer_given": "search-service",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "not stated in outline",
+        "verdict": "unanswerable"
+      },
+      "q6": {
+        "answer_given": "reporting-service is labeled 'in-progress' but no mention of running on both infrastructures simultaneously or being the only such service",
+        "verdict": "partial"
+      },
+      "q7": {
+        "answer_given": "only 'scheduled' given, no specific timing",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "not stated in outline",
+        "verdict": "unanswerable"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "billing-service \u2014 fully migrated / search-service \u2014 attempted then reverted",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "auth-service \u2014 explicitly not migrating / notifications-service \u2014 scheduled",
+        "status": "partial"
+      },
+      "r6": {
+        "evidence": "",
+        "status": "lost"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "cutover completed last month",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "search-service \u2014 attempted then reverted",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "attempted two months ago / ran for three weeks",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "users encountered data-consistency bugs; search results lagged behind database",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "search-service \u2014 attempted then reverted",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f16": {
+        "evidence": "reporting-service \u2014 in-progress",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "some endpoints already cutover",
+        "status": "partial"
+      },
+      "f18": {
+        "evidence": "rest still on old infrastructure",
+        "status": "partial"
+      },
+      "f19": {
+        "evidence": "running both simultaneously",
+        "status": "partial"
+      },
+      "f2": {
+        "evidence": "old infrastructure decommissioned / no fallback path available",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "notifications-service \u2014 scheduled for next quarter",
+        "status": "partial"
+      },
+      "f4": {
+        "evidence": "notifications-service \u2014 scheduled for next quarter",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "will start after billing lessons are folded into the migration runbook",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "auth-service \u2014 explicitly not migrating",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "contains bespoke compliance logic / expensive and risky to port",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "risk not justified by benefit",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "contains bespoke compliance logic, expensive and risky to port, risk not justified by benefit",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "not stated in outline",
+        "verdict": "unanswerable"
+      },
+      "q4": {
+        "answer_given": "search-service",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "users encountered data-consistency bugs; search results lagged behind database",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "reporting-service, running both simultaneously (not stated as the only one)",
+        "verdict": "partial"
+      },
+      "q7": {
+        "answer_given": "next quarter",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "not stated in outline",
+        "verdict": "unanswerable"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "will start after billing lessons are folded into the migration runbook",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "contains bespoke compliance logic ... risk not justified by benefit (but decision finality f10 omitted)",
+        "status": "partial"
+      },
+      "r3": {
+        "evidence": "Failure reason: users encountered data-consistency bugs; search results lagged behind database",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "billing: old infrastructure decommissioned / no fallback path available; search: attempted then reverted (no explicit contrast statement)",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "auth-service \u2014 explicitly not migrating vs notifications-service \u2014 scheduled for next quarter",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "running both simultaneously (uniqueness among services not stated)",
+        "status": "partial"
+      }
+    }
+  }
+}

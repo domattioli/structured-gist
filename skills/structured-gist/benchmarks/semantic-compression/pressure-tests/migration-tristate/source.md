@@ -1,0 +1,9 @@
+Here's where each service stands in the platform migration as of this week. `billing-service` is fully migrated: the cutover completed last month, and the old billing infrastructure has since been decommissioned entirely, so there's no fallback path left even if we wanted one.
+
+`notifications-service` has not started yet — it's scheduled to migrate next quarter, once the billing cutover's lessons have been folded into the migration runbook. Nothing has moved for notifications-service; it is still running entirely on the old infrastructure today.
+
+`auth-service` is explicitly not going to be migrated, at least not under the current plan. The team reviewed it and decided against migration because auth-service carries a large amount of bespoke compliance logic that would be expensive and risky to port, and the judgment was that the migration risk wasn't worth the benefit for this particular service. That decision is final for now, not a scheduling delay.
+
+`search-service` is the most complicated case: it was migrated, then rolled back. The migration was attempted two months ago, ran for about three weeks, and was reverted after users started hitting data-consistency bugs where search results lagged behind the source-of-truth database in ways the old infrastructure never exhibited. Search-service is back on the old infrastructure now, fully reverted, and whether to attempt the migration again has not been decided.
+
+`reporting-service` is currently mid-migration, actively in progress right now. Some of its endpoints have already been cut over to the new infrastructure and are serving production traffic there, while the rest are still being served from the old infrastructure until their own cutover is scheduled. It is the only service on this list that is simultaneously running on both infrastructures at once.

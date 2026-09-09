@@ -1,0 +1,310 @@
+{
+  "case_id": "migration-tristate",
+  "size_bucket": "medium",
+  "pressure_tags": [
+    "adversarial",
+    "tristate_status",
+    "medium"
+  ],
+  "source_word_count": 280,
+  "facts": [
+    {
+      "id": "f1",
+      "text": "billing-service is fully migrated; cutover completed last month",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "the cutover completed last month"
+    },
+    {
+      "id": "f2",
+      "text": "the old billing infrastructure has been decommissioned entirely, so there is no fallback path",
+      "category": "negation",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "the old billing infrastructure has since been decommissioned entirely, so there's no fallback path left even if we wanted one"
+    },
+    {
+      "id": "f3",
+      "text": "notifications-service has not started migrating",
+      "category": "negation",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "`notifications-service` has not started yet"
+    },
+    {
+      "id": "f4",
+      "text": "notifications-service is scheduled to migrate next quarter",
+      "category": "next_action",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "it's scheduled to migrate next quarter"
+    },
+    {
+      "id": "f5",
+      "text": "notifications-service's migration will happen once billing cutover lessons are folded into the migration runbook",
+      "category": "constraint",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "once the billing cutover's lessons have been folded into the migration runbook"
+    },
+    {
+      "id": "f6",
+      "text": "notifications-service is still running entirely on the old infrastructure today",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "it is still running entirely on the old infrastructure today"
+    },
+    {
+      "id": "f7",
+      "text": "auth-service is explicitly not going to be migrated under the current plan",
+      "category": "negation",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "`auth-service` is explicitly not going to be migrated, at least not under the current plan"
+    },
+    {
+      "id": "f8",
+      "text": "auth-service carries a large amount of bespoke compliance logic that would be expensive and risky to port",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "auth-service carries a large amount of bespoke compliance logic that would be expensive and risky to port"
+    },
+    {
+      "id": "f9",
+      "text": "the judgment was that migration risk wasn't worth the benefit for auth-service",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "the judgment was that the migration risk wasn't worth the benefit for this particular service"
+    },
+    {
+      "id": "f10",
+      "text": "the decision not to migrate auth-service is final for now, not a scheduling delay",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "That decision is final for now, not a scheduling delay"
+    },
+    {
+      "id": "f11",
+      "text": "search-service was migrated, then rolled back",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "it was migrated, then rolled back"
+    },
+    {
+      "id": "f12",
+      "text": "the search-service migration was attempted two months ago and ran for about three weeks",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": true,
+      "source_quote": "The migration was attempted two months ago, ran for about three weeks"
+    },
+    {
+      "id": "f13",
+      "text": "search-service's migration was reverted after data-consistency bugs where results lagged behind the source-of-truth database",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "was reverted after users started hitting data-consistency bugs where search results lagged behind the source-of-truth database"
+    },
+    {
+      "id": "f14",
+      "text": "search-service is back on the old infrastructure now, fully reverted",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "Search-service is back on the old infrastructure now, fully reverted"
+    },
+    {
+      "id": "f15",
+      "text": "whether to attempt search-service's migration again has not been decided",
+      "category": "unresolved_question",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "whether to attempt the migration again has not been decided"
+    },
+    {
+      "id": "f16",
+      "text": "reporting-service is currently mid-migration, actively in progress right now",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "`reporting-service` is currently mid-migration, actively in progress right now"
+    },
+    {
+      "id": "f17",
+      "text": "some reporting-service endpoints have already cut over and are serving production traffic on the new infrastructure",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "Some of its endpoints have already been cut over to the new infrastructure and are serving production traffic there"
+    },
+    {
+      "id": "f18",
+      "text": "the rest of reporting-service's endpoints are still served from the old infrastructure until their own cutover is scheduled",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "the rest are still being served from the old infrastructure until their own cutover is scheduled"
+    },
+    {
+      "id": "f19",
+      "text": "reporting-service is the only service on the list simultaneously running on both infrastructures at once",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "It is the only service on this list that is simultaneously running on both infrastructures at once"
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "notifications-service's scheduled migration (f4) depends on billing-service's cutover lessons (f1) being folded into the runbook first (f5)",
+      "fact_ids": [
+        "f1",
+        "f4",
+        "f5"
+      ],
+      "source_quote": "once the billing cutover's lessons have been folded into the migration runbook"
+    },
+    {
+      "id": "r2",
+      "type": "causal",
+      "text": "auth-service's compliance-logic burden and the resulting risk judgment (f8, f9) caused the final decision not to migrate it (f7, f10)",
+      "fact_ids": [
+        "f8",
+        "f9",
+        "f7",
+        "f10"
+      ],
+      "source_quote": "the judgment was that the migration risk wasn't worth the benefit for this particular service"
+    },
+    {
+      "id": "r3",
+      "type": "causal",
+      "text": "data-consistency bugs (f13) caused search-service's migration to be rolled back (f11, f14)",
+      "fact_ids": [
+        "f13",
+        "f11",
+        "f14"
+      ],
+      "source_quote": "was reverted after users started hitting data-consistency bugs"
+    },
+    {
+      "id": "r4",
+      "type": "contrast_supersession",
+      "text": "billing-service's migration ended in a permanent, irreversible cutover with the old infra decommissioned (f1, f2), while search-service's migration ended in a full reversion back to the old infra (f11, f14) — both were migrated, but landed in opposite end states",
+      "fact_ids": [
+        "f1",
+        "f2",
+        "f11",
+        "f14"
+      ],
+      "source_quote": "Search-service is back on the old infrastructure now, fully reverted"
+    },
+    {
+      "id": "r5",
+      "type": "contrast_supersession",
+      "text": "auth-service's status (deliberately never migrating, f7) is a different kind of \"not migrated\" than notifications-service's status (not yet migrated, but scheduled, f3, f4) — the two must not be conflated",
+      "fact_ids": [
+        "f7",
+        "f3",
+        "f4"
+      ],
+      "source_quote": "`auth-service` is explicitly not going to be migrated, at least not under the current plan"
+    },
+    {
+      "id": "r6",
+      "type": "comparative_outcome",
+      "text": "reporting-service is the only service running on both infrastructures concurrently (f19), unlike every other service which is fully on one infrastructure or the other",
+      "fact_ids": [
+        "f19",
+        "f16",
+        "f17",
+        "f18"
+      ],
+      "source_quote": "It is the only service on this list that is simultaneously running on both infrastructures at once"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which service is explicitly not going to be migrated at all?",
+      "gold_answer": "auth-service.",
+      "type": "factual",
+      "fact_ids": [
+        "f7"
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Why won't auth-service be migrated?",
+      "gold_answer": "It carries a lot of bespoke compliance logic that would be expensive and risky to port, and the migration risk was judged not worth the benefit.",
+      "type": "factual",
+      "fact_ids": [
+        "f8",
+        "f9"
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Is auth-service's non-migration a permanent decision or just a scheduling delay?",
+      "gold_answer": "Permanent for now — explicitly stated as not a scheduling delay.",
+      "type": "factual",
+      "fact_ids": [
+        "f10"
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Which service was migrated and then rolled back?",
+      "gold_answer": "search-service.",
+      "type": "factual",
+      "fact_ids": [
+        "f11"
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "Why was search-service's migration rolled back?",
+      "gold_answer": "Data-consistency bugs — search results lagged behind the source-of-truth database.",
+      "type": "factual",
+      "fact_ids": [
+        "f13"
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Which service is running on both the old and new infrastructure at the same time?",
+      "gold_answer": "reporting-service, and it's the only one on the list in that state.",
+      "type": "relational",
+      "fact_ids": [
+        "r6"
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "When is notifications-service scheduled to migrate?",
+      "gold_answer": "Next quarter.",
+      "type": "factual",
+      "fact_ids": [
+        "f4"
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "Has a decision been made about whether to re-attempt search-service's migration?",
+      "gold_answer": "No, that has not been decided yet.",
+      "type": "factual",
+      "fact_ids": [
+        "f15"
+      ]
+    }
+  ]
+}

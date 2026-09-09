@@ -1,0 +1,40 @@
+{
+  "case_id": "near-identical-numbers",
+  "size_bucket": "medium",
+  "pressure_tags": ["adversarial", "numeric_precision", "medium"],
+  "source_word_count": 276,
+  "facts": [
+    {"id": "f1", "text": "Service A's request timeout was decreased from 30 seconds to 5 seconds", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "Service A's request timeout was decreased from 30 seconds to 5 seconds"},
+    {"id": "f2", "text": "Service A's change shipped at commit abc1234 in config/service-a.yaml", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "shipped at commit `abc1234` in `config/service-a.yaml`"},
+    {"id": "f3", "text": "Service A's decrease was intentional: it was masking slow downstream failures by waiting too long before giving up", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "Service A was masking slow downstream failures by waiting too long before giving up"},
+    {"id": "f4", "text": "the shorter timeout forces faster failure detection for Service A", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "the shorter timeout forces faster failure detection"},
+    {"id": "f5", "text": "Service B's request timeout was increased from 30 seconds to 45 seconds", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "it was increased from 30 seconds to 45 seconds"},
+    {"id": "f6", "text": "Service B's change shipped at commit def5678 in config/service-b.yaml", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "shipped at commit `def5678` in `config/service-b.yaml`"},
+    {"id": "f7", "text": "Service B was timing out on legitimate slow requests during nightly batch jobs", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "Service B was timing out on legitimate slow requests during nightly batch jobs"},
+    {"id": "f8", "text": "Service B's timeout was raised to give those slow batch requests room to finish", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "the timeout was raised to give those requests room to finish"},
+    {"id": "f9", "text": "Service C's rollout bumped it to version 2.3.1 and touched config/service-c/timeout.toml", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "it bumped the service to version `2.3.1` and touched `config/service-c/timeout.toml`"},
+    {"id": "f10", "text": "Service C's rollout was not a raw timeout-seconds change; it changed the timeout unit from seconds to a duration string", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "which changed the timeout unit from seconds to a duration string"},
+    {"id": "f11", "text": "Service C's effective timeout functionally stayed the same at 30 seconds", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "functionally keeping the same 30-second effective timeout but changing how it's configured"},
+    {"id": "f12", "text": "Service D's rollout was targeting version 2.4.0-rc1", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "It was targeting version `2.4.0-rc1`"},
+    {"id": "f13", "text": "Service D's deploy was stopped mid-rollout after a health check failure, before completion", "category": "failure", "weight": 3, "precision_sensitive": false, "source_quote": "the deploy was stopped mid-rollout after a health check failure"},
+    {"id": "f14", "text": "Service D is still running its previous config, unchanged", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "Service D is still running its previous config unchanged"}
+  ],
+  "relations": [
+    {"id": "r1", "type": "comparative_outcome", "text": "Service A's timeout decreased (f1) while Service B's timeout increased (f5) — opposite directions for the same class of change", "fact_ids": ["f1", "f5"], "source_quote": "A cut its timeout to a sixth of its previous value while B nearly doubled its own — opposite directions, opposite motivations"},
+    {"id": "r2", "type": "causal", "text": "Service A was masking slow downstream failures (f3), which caused the timeout to be cut so failures would be detected faster (f1, f4)", "fact_ids": ["f3", "f1", "f4"], "source_quote": "the shorter timeout forces faster failure detection"},
+    {"id": "r3", "type": "causal", "text": "Service B was timing out on legitimate slow nightly-batch requests (f7), which caused the timeout to be raised so those requests could finish (f5, f8)", "fact_ids": ["f7", "f5", "f8"], "source_quote": "the timeout was raised to give those requests room to finish"},
+    {"id": "r4", "type": "contrast_supersession", "text": "Service C's rollout looks like a timeout change (version bump, touched a timeout file, f9) but its effective timeout value did not actually change (f10, f11)", "fact_ids": ["f9", "f10", "f11"], "source_quote": "functionally keeping the same 30-second effective timeout but changing how it's configured"},
+    {"id": "r5", "type": "comparative_outcome", "text": "commits abc1234 (Service A) and def5678 (Service B) look like similar short hashes for 'the same kind of timeout change' but correspond to opposite-direction changes on different services", "fact_ids": ["f2", "f6", "f1", "f5"], "source_quote": "different commits (`abc1234` versus `def5678`) that look superficially similar as short hashes"},
+    {"id": "r6", "type": "causal", "text": "a health check failure caused Service D's rollout to be aborted mid-way (f13), leaving it on its previous unchanged config (f14)", "fact_ids": ["f13", "f14"], "source_quote": "the deploy was stopped mid-rollout after a health check failure, and Service D is still running its previous config unchanged"}
+  ],
+  "questions": [
+    {"id": "q1", "question": "What did Service A's timeout change from and to?", "gold_answer": "From 30 seconds to 5 seconds.", "type": "factual", "fact_ids": ["f1"]},
+    {"id": "q2", "question": "What did Service B's timeout change from and to?", "gold_answer": "From 30 seconds to 45 seconds.", "type": "factual", "fact_ids": ["f5"]},
+    {"id": "q3", "question": "Did Service A's and Service B's timeout changes go in the same direction?", "gold_answer": "No — Service A's timeout decreased while Service B's increased.", "type": "relational", "fact_ids": ["r1"]},
+    {"id": "q4", "question": "Which commit corresponds to Service A's change, and which to Service B's?", "gold_answer": "abc1234 for Service A, def5678 for Service B.", "type": "factual", "fact_ids": ["f2", "f6"]},
+    {"id": "q5", "question": "Did Service C's rollout actually change its effective timeout value?", "gold_answer": "No — it changed the config format/unit but the effective timeout stayed at 30 seconds.", "type": "factual", "fact_ids": ["f10", "f11"]},
+    {"id": "q6", "question": "What version was Service D's rollout targeting, and did it complete?", "gold_answer": "Version 2.4.0-rc1; no, it was aborted mid-rollout after a health check failure.", "type": "factual", "fact_ids": ["f12", "f13"]},
+    {"id": "q7", "question": "Is Service D currently running the new config or its previous one?", "gold_answer": "Its previous config, unchanged.", "type": "factual", "fact_ids": ["f14"]},
+    {"id": "q8", "question": "Why was Service A's timeout shortened while Service B's was lengthened?", "gold_answer": "A: to force faster failure detection after it masked slow downstream failures. B: to give legitimate slow nightly-batch requests room to finish.", "type": "relational", "fact_ids": ["r2", "r3"]}
+  ]
+}

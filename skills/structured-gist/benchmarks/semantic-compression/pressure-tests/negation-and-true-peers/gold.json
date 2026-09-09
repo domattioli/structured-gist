@@ -1,0 +1,44 @@
+{
+  "case_id": "negation-and-true-peers",
+  "size_bucket": "small",
+  "pressure_tags": ["adversarial", "true_peers", "negation", "small"],
+  "source_word_count": 272,
+  "facts": [
+    {"id": "f1", "text": "the four workstreams are genuinely independent of each other this quarter", "category": "constraint", "weight": 3, "precision_sensitive": false, "source_quote": "they are genuinely independent of each other"},
+    {"id": "f2", "text": "none of the four workstreams is a sub-part of another, and none depends on another finishing first", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "none of them is a sub-part of another, none of them depends on another finishing first"},
+    {"id": "f3", "text": "the four workstreams don't share a common parent theme beyond both happening this quarter", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "they don't share a common parent theme beyond \"things the team is doing this quarter.\""},
+    {"id": "f4", "text": "the security audit reviews all first-party code for common vulnerability classes", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The security audit is reviewing all first-party code for common vulnerability classes"},
+    {"id": "f5", "text": "the security audit explicitly does not cover third-party dependencies", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "It explicitly does not cover third-party dependencies"},
+    {"id": "f6", "text": "third-party coverage is being tracked as a separate future effort, not an oversight", "category": "next_action", "weight": 2.5, "precision_sensitive": false, "source_quote": "that's out of scope for this audit and is being tracked as a separate future effort, not an oversight"},
+    {"id": "f7", "text": "the security audit has so far found no critical-severity issues, only a handful of already-fixed low-severity findings", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "the audit has not found any critical-severity issues, only a handful of low-severity findings already fixed"},
+    {"id": "f8", "text": "the docs overhaul is rewriting the onboarding guide and the API reference from scratch", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The docs overhaul is rewriting the onboarding guide and the API reference from scratch"},
+    {"id": "f9", "text": "the rewrite is happening because both docs were found to describe an old version of the setup flow", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "both were found to describe an old version of the setup flow"},
+    {"id": "f10", "text": "the docs overhaul has no dependency on the security audit or vice versa", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "This workstream has no dependency on the security audit or vice versa"},
+    {"id": "f11", "text": "the docs overhaul and security audit run in the same quarter purely by scheduling coincidence", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "they happen to be running in the same quarter purely by scheduling coincidence"},
+    {"id": "f12", "text": "the performance investigation looked into why the dashboard was loading slowly for some users", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The performance investigation looked into why the dashboard was loading slowly for some users"},
+    {"id": "f13", "text": "the database was the first suspect for the slowness", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The database was the first suspect"},
+    {"id": "f14", "text": "the investigation explicitly ruled out the database: it was not the bottleneck", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "the investigation explicitly ruled it out: the database was not the bottleneck"},
+    {"id": "f15", "text": "query times were normal", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "Query times were normal"},
+    {"id": "f16", "text": "the actual bottleneck was an unoptimized client-side rendering path re-running the same computation on every scroll event", "category": "outcome", "weight": 3, "precision_sensitive": false, "source_quote": "The actual bottleneck turned out to be an unoptimized client-side rendering path that re-ran the same computation on every scroll event"},
+    {"id": "f17", "text": "the hiring push is not expanding headcount at all", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "it is not expanding headcount at all"},
+    {"id": "f18", "text": "the hiring push is backfilling exactly one departure from earlier this year, nothing more", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "it is backfilling exactly one departure from earlier this year, nothing more"},
+    {"id": "f19", "text": "the hiring push has no connection to the other three workstreams", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "It has no connection to the other three workstreams"},
+    {"id": "f20", "text": "the hiring push isn't motivated by any of the other workstreams' findings and doesn't block or unblock any of them", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "it isn't motivated by any of their findings and doesn't block or unblock any of them"}
+  ],
+  "relations": [
+    {"id": "r1", "type": "contrast_supersession", "text": "the database, the apparent suspect (f13), was explicitly ruled out as the bottleneck (f14, f15); the real bottleneck was an unoptimized client-side rendering path (f16)", "fact_ids": ["f13", "f14", "f15", "f16"], "source_quote": "the investigation explicitly ruled it out: the database was not the bottleneck"},
+    {"id": "r2", "type": "dependency", "text": "the docs overhaul (f8, f9) and the security audit (f4-f7) have no dependency relationship; they only coincide in timing (f10, f11)", "fact_ids": ["f8", "f4", "f10", "f11"], "source_quote": "This workstream has no dependency on the security audit or vice versa"},
+    {"id": "r3", "type": "dependency", "text": "the hiring push (f17, f18) has no connection to, and is not motivated by, any of the other three workstreams (f19, f20)", "fact_ids": ["f17", "f18", "f19", "f20"], "source_quote": "it isn't motivated by any of their findings and doesn't block or unblock any of them"},
+    {"id": "r4", "type": "dependency", "text": "all four workstreams are independent peers with no shared parent category and no cross-dependencies", "fact_ids": ["f1", "f2", "f3"], "source_quote": "none of them is a sub-part of another, none of them depends on another finishing first"}
+  ],
+  "questions": [
+    {"id": "q1", "question": "What does the security audit explicitly not cover?", "gold_answer": "Third-party dependencies.", "type": "factual", "fact_ids": ["f5"]},
+    {"id": "q2", "question": "Is the gap in third-party dependency coverage an oversight or a deliberate scope decision?", "gold_answer": "Deliberate — it's tracked as a separate future effort, not an oversight.", "type": "factual", "fact_ids": ["f6"]},
+    {"id": "q3", "question": "Was the database found to be the bottleneck in the performance investigation?", "gold_answer": "No — it was explicitly ruled out; query times were normal.", "type": "factual", "fact_ids": ["f14", "f15"]},
+    {"id": "q4", "question": "If not the database, what was the actual bottleneck?", "gold_answer": "An unoptimized client-side rendering path re-running the same computation on every scroll event.", "type": "relational", "fact_ids": ["r1"]},
+    {"id": "q5", "question": "Is the hiring push increasing the team's headcount?", "gold_answer": "No — it's backfilling exactly one departure, not expanding headcount.", "type": "factual", "fact_ids": ["f17", "f18"]},
+    {"id": "q6", "question": "Does the hiring push depend on or relate to any of the other three workstreams?", "gold_answer": "No — it has no connection to them and isn't motivated by their findings.", "type": "relational", "fact_ids": ["r3"]},
+    {"id": "q7", "question": "Does the docs overhaul depend on the security audit finishing first?", "gold_answer": "No — they have no dependency on each other; they just happen to run in the same quarter.", "type": "relational", "fact_ids": ["r2"]},
+    {"id": "q8", "question": "Are the four workstreams organized under a shared parent category, or are they independent peers?", "gold_answer": "Independent peers — none is a sub-part of another and they share no parent theme beyond the quarter.", "type": "relational", "fact_ids": ["r4"]}
+  ]
+}
