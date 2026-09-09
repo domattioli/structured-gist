@@ -3,6 +3,10 @@
   "size_bucket": "medium",
   "pressure_tags": ["realistic_recap", "medium", "unresolved_question_heavy"],
   "source_word_count": 466,
+  "intent": {
+    "reader": "a teammate resuming an in-progress investigation",
+    "task": "know what's already established, what's still unresolved, and which named identifiers to search for next"
+  },
   "facts": [
     {"id": "f1", "text": "seconds_to_locate_fact was the original primary metric", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The original primary metric was `seconds_to_locate_fact`"},
     {"id": "f2", "text": "seconds_to_locate_fact measures wall-clock time to find a fact by scanning an outline versus reading prose end to end", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "wall-clock time for a reader to find a single fact by scanning an outline versus reading prose end to end"},

@@ -157,3 +157,32 @@ For reproducibility, not because this suite runs it automatically:
    recoverability/unsupported-claim arithmetic) are deterministic, source
    is unchanged, and rerunning them against the same `renderings/`+
    `judged/` files reproduces `results/` byte-for-byte.
+
+## 6. Semantic sufficiency (formalized in a follow-up measurement PR)
+
+A later PR formalized this document's `weighted_retention` number under
+the name **semantic sufficiency** — "how much of the information that
+matters to the intended reader/task survived the transformation" —
+without changing the arithmetic in §1 or any score recorded above. What
+changed:
+
+- Each case's `gold.json` now states an `intent` (reader/task, optional
+  rationale) so a fact's `weight` has an explicit referent: importance for
+  *that* reader/task, not a universal ranking. The category buckets this
+  file and `README.md` describe remain a default for hand-authoring a new
+  case, not a claim that every fact in a category is equally important.
+- `scoring/combine.py` emits `semantic_sufficiency` alongside the existing
+  `weighted_retention` key, computed once and aliased, not independently
+  derived — every number quoted above (skim 0.37 / standard 0.89 / deep
+  0.99, the `causality-heavy-explain` 0.80-vs-0.56 split, the model-
+  sensitivity table in §4) is unchanged and now also readable under the
+  new name.
+- The baselines throughout this document and `README.md`'s Cases table are
+  restated as observed reference points from the committed renderings, not
+  a formal definition of "sufficient" or a required threshold, and
+  `skim < standard < deep` is documented as an observed pattern, not a
+  semantic requirement — see `README.md`.
+
+No case's `weighted_retention`/`semantic_sufficiency` value changed as a
+result of this formalization — `results/combined.json`'s diff for that PR
+is additive keys only (`intent`, `semantic_sufficiency`).

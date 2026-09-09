@@ -15,10 +15,24 @@ Score encoding for a fact/relation status, used throughout:
 (mutated counts as 0 for retention -- it is a DIFFERENT failure mode from
 omission, tracked separately, never averaged into "the fact came through OK".)
 
+Semantic sufficiency: sum(weight_i * retention_i) / sum(weight_i) over a
+case's gold facts -- "how much of the information that matters to the
+case's intended reader/task survived the transformation." This is the same
+arithmetic this suite has always run under the name `weighted_retention`;
+`semantic_sufficiency` is the formal name for that number going forward.
+Both keys are emitted with an identical value -- `weighted_retention` is
+kept only because README.md/RESULTS.md quote baselines like "wRetention >=
+0.95" and this suite doesn't want two independently-computed metrics that
+mean the same thing. See README.md "Semantic sufficiency" and "Weight
+semantics" for what a fact's `weight` means now (importance to the case's
+stated `intent.reader`/`intent.task`, with category as a default heuristic,
+not a universal importance ranking) and why baselines are observed
+reference points, not a formal definition of sufficiency.
+
 Scoring dimensions reported (decomposable, no master scalar):
-    weighted_retention, unweighted_retention, relation_retention,
-    recoverability, unsupported_claim_count, conformance_violation_count,
-    reduction_pct / compression_ratio
+    semantic_sufficiency (= weighted_retention), unweighted_retention,
+    relation_retention, recoverability, unsupported_claim_count,
+    conformance_violation_count, reduction_pct / compression_ratio
 
 No compression-adjusted "density" composite is computed. Round-1 evidence
 (see ../RESULTS.md) showed every meaning-per-word formula tried is
@@ -81,7 +95,7 @@ def score_semantic(gold: dict, verdict: dict) -> dict:
         if st == "mutated":
             n_mutated += 1
 
-    weighted_retention = weighted_units / total_weight
+    semantic_sufficiency = weighted_units / total_weight
     unweighted_retention = unweighted_units / len(facts) if facts else None
 
     rel_scores = [
@@ -100,8 +114,14 @@ def score_semantic(gold: dict, verdict: dict) -> dict:
 
     unsupported = [h for h in halluc if not h.get("source_supported", False)]
 
+    sem_sufficiency_rounded = round(semantic_sufficiency, 4)
+
     return {
-        "weighted_retention": round(weighted_retention, 4),
+        "semantic_sufficiency": sem_sufficiency_rounded,
+        # Historical alias, NOT independently computed -- always equal to
+        # semantic_sufficiency above. Kept for continuity with baselines
+        # already written down in README.md/RESULTS.md ("wRetention >= ...").
+        "weighted_retention": sem_sufficiency_rounded,
         "unweighted_retention": round(unweighted_retention, 4) if unweighted_retention is not None else None,
         "relation_retention": round(relation_retention, 4) if relation_retention is not None else None,
         "recoverability": round(recoverability, 4) if recoverability is not None else None,
@@ -135,6 +155,11 @@ def main():
                 "test_class": test_class,
                 "pressure_tags": gold.get("pressure_tags", []),
                 "size_bucket": gold.get("size_bucket"),
+                # What the weights in this case's facts encode importance
+                # for -- see README.md "Intended reader/task". Absent on a
+                # case that hasn't been annotated yet; combine.py does not
+                # require it.
+                "intent": gold.get("intent"),
             }
 
             det_case = det.get(case_id, {})
@@ -167,15 +192,26 @@ def write_scores_table(combined: dict):
         if not cases:
             continue
         lines.append(f"## {test_class}\n")
+
+        lines.append("**Case intent** (what each case's fact weights are importance-*for* -- see README.md \"Intended reader/task\"; cases without one predate this schema field):\n")
+        for case_id, c in sorted(cases.items()):
+            intent = c.get("intent")
+            if intent:
+                rationale = f" _{intent['rationale']}_" if intent.get("rationale") else ""
+                lines.append(f"- `{case_id}` -- reader: {intent.get('reader', '?')}; task: {intent.get('task', '?')}.{rationale}")
+            else:
+                lines.append(f"- `{case_id}` -- (no `intent` recorded yet)")
+        lines.append("")
+
         header = (
             "| case | tier | level | src_w | out_w | reduction% | conform_viol | "
-            "wRetention | relRetention | omission% | unsupported_claims | recoverability |"
+            "semSufficiency | relRetention | omission% | unsupported_claims | recoverability |"
         )
         lines.append(header)
         lines.append("|---" * 12 + "|")
         for case_id, tiers in sorted(cases.items()):
             for tier, levels in tiers.items():
-                if tier in ("test_class", "pressure_tags", "size_bucket"):
+                if tier in ("test_class", "pressure_tags", "size_bucket", "intent"):
                     continue
                 for level in LEVELS:
                     r = levels.get(level)
@@ -184,7 +220,7 @@ def write_scores_table(combined: dict):
                     lines.append(
                         f"| {case_id} | {tier} | {level} | {r.get('source_words')} | {r.get('output_words')} | "
                         f"{r.get('reduction_pct')} | {r.get('conformance_violation_count')} | "
-                        f"{r.get('weighted_retention')} | {r.get('relation_retention')} | "
+                        f"{r.get('semantic_sufficiency')} | {r.get('relation_retention')} | "
                         f"{round((r.get('omission_rate') or 0)*100,1)} | {r.get('unsupported_claim_count')} | "
                         f"{r.get('recoverability')} |"
                     )
