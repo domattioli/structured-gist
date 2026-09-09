@@ -38,53 +38,98 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 
 This section is itself rendered in structured-gist's `responsive` mode, not written by hand as prose.
 
+Responsive mode (default on GitHub):
+
 - **Marker laddering**
   - A. concept
-    - top-level claim or subject
-    - outermost depth only
-    - budget roughly three words
+    - i. top-level claim or subject
+    - ii. outermost depth only
+    - iii. budget roughly three words
   - B. attribute
-    - a named property of the parent
-    - "the parent has a ___"
-      - not a listed part
+    - i. a named property of the parent
+    - ii. has a ___, not a part
   - C. enumerator
-    - ordered or grouped parts
-    - family set by absolute depth rather than which marker appeared first
+    - i. ordered or grouped parts
+    - ii. family set by absolute depth
   - D. explanation
-    - the only node type carrying full prose
-      - usually a leaf
-      - exempt from any text-compression layer
+    - i. the only node carrying full prose
+    - ii. usually a leaf, compression-exempt
 
 - **Render modes**
   - A. block
-    - a single fenced code block with literal glyphs
-    - fixed width
-    - for terminals and non-markdown surfaces
+    - i. one fenced code block, literal glyphs
+    - ii. fixed width
+    - iii. for terminals, non-markdown surfaces
   - B. responsive
-    - a real Markdown nested list
-    - the default on GitHub and in chat interfaces
-    - glyph-free because the renderer already draws a bullet per item
+    - i. a real Markdown nested list
+    - ii. default on GitHub, chat interfaces
+    - iii. glyph-free, renderer draws the bullet
   - C. inline (deprecated)
-    - gets indented under a list item
-    - renders as a code block on GitHub rather than a real list
-      - the exact defect responsive mode fixes
+    - i. indents under a list item
+    - ii. renders as a GitHub code block
 
 - **Granularity**
   - A. skim (default)
-    - concept spine plus one enumerated tier
+    - i. concept spine plus one tier
   - B. standard
-    - extends to a third level as content requires
+    - i. extends to a third level
   - C. deep
-    - renders every explanation node with no depth cap
-    - for study or handoff documents
+    - i. every explanation node, no cap
+    - ii. for study or handoff documents
 
 - **Independent axes**
   - A. render mode
-    - display container only, chosen by surface
+    - i. display container, chosen by surface
   - B. granularity
-    - content depth only, chosen by audience
+    - i. content depth, chosen by audience
   - C. no interaction
-    - neither changes the marker ladder or which linter rule fires
+    - i. neither touches the ladder or rules
+
+Same content, `block` mode (terminals / plain-text surfaces):
+
+```text
+- Marker laddering
+    ▸ concept
+        i. top-level claim or subject
+        ii. outermost depth only
+        iii. budget roughly three words
+    ▸ attribute
+        i. a named property of the parent
+        ii. has a ___, not a part
+    ▸ enumerator
+        i. ordered or grouped parts
+        ii. family set by absolute depth
+    ▸ explanation
+        i. the only node carrying full prose
+        ii. usually a leaf, compression-exempt
+- Render modes
+    ▸ block
+        i. one fenced code block, literal glyphs
+        ii. fixed width
+        iii. for terminals, non-markdown surfaces
+    ▸ responsive
+        i. a real Markdown nested list
+        ii. default on GitHub, chat interfaces
+        iii. glyph-free, renderer draws the bullet
+    ▸ inline (deprecated)
+        i. indents under a list item
+        ii. renders as a GitHub code block
+- Granularity
+    ▸ skim (default)
+        ↪ concept spine plus one tier
+    ▸ standard
+        ↪ extends to a third level
+    ▸ deep
+        i. every explanation node, no cap
+        ii. for study or handoff documents
+- Independent axes
+    ▸ render mode
+        ↪ display container, chosen by surface
+    ▸ granularity
+        ↪ content depth, chosen by audience
+    ▸ no interaction
+        ↪ neither touches the ladder or rules
+```
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
