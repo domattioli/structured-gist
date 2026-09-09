@@ -27,9 +27,9 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## 1. Motivation
 
-Claude's explanatory prose has a real failure mode people call "Claudish": dense with unexplained jargon from whatever domain it is working in, and by turns contrarian, sycophantic, padded with filler, or simply saying nothing across many words. Word-count compression does not fix this. caveman-lite, for instance, shortens Claudish prose without reorganizing it; the result reads as plain English, but the underlying thought stays unstructured, and its content stays non-deterministic from one run to the next.
+Claude's explanatory prose has a real failure mode: people call it "Claudish." It's dense with unexplained jargon. It swings between contrarian, sycophantic, and padded with filler. Often it just says nothing across many words. Word-count compression does not fix this. caveman-lite, for instance, shortens Claudish prose without reorganizing it. The result reads as plain English. But the underlying thought stays unstructured, and its content stays non-deterministic from one run to the next.
 
-The missing structure is concept and sub-concept with their relationship: what is being claimed and what supports that claim, including how the supporting pieces relate to each other and to the claim (whether ordered or grouped, or independent). This is also how a complex subject gets learned from a well-built lecture, and how a slide deck gets built: one concept per slide with minimal words, the relationships carried by layout rather than by prose.
+What's missing is structure: concept, sub-concept, and the relationship between them. What is being claimed? What supports that claim? How do the supporting pieces relate to each other and to the claim — ordered, grouped, or independent? This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
 
 structured-gist renders that decomposition directly, as an explicit tree instead of a paragraph the reader has to parse for it.
 
@@ -38,6 +38,12 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 ## 2. Method
 
 This section is itself rendered in structured-gist's `block` mode, not written by hand as prose. It covers the marker taxonomy and a worked example (a real word-count comparison) in one outline.
+
+The worked example below compares Sonnet 4 rendering the same content two ways. As a paragraph, it reads:
+
+> structured-gist replaces verbose prose summaries with outlines that carry a role hierarchy, where position in the tree does the work sentence structure would otherwise do. A linter enforces this with 15 rules covering things like flagging shallow-depth stalling, where a node sits at a level without adding structure, and detecting punctuation-spliced facts, where two claims get joined by a comma or semicolon instead of being split into separate nodes. Typical use cases include session recaps, cause-chain explanations, and GitHub issue or PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it. The linter itself lives at `lint_outline.py`, is stdlib-only, and enforces all 15 rules automatically.
+
+That's 146 words. Rendered as an outline in `skim` granularity and `block` mode, the same content drops to 100 words — a 31.5% reduction, and the tree also cuts parsing cost for the reader.
 
 ```text
 - Governing concepts
