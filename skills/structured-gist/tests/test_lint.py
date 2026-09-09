@@ -543,14 +543,15 @@ def _extract_readme_section(readme_text: str, heading: str) -> str:
     how the Method section's broken outline shipped undetected).
     """
     pattern = re.compile(
-        r'^##\s+' + re.escape(heading) + r'\s*$(.*?)(?=^##\s|\Z)',
+        r'^##\s+' + re.escape(heading) + r'\b.*$(.*?)(?=^##\s|\Z)',
         re.MULTILINE | re.DOTALL,
     )
     m = pattern.search(readme_text)
     assert m, f"README.md section '## {heading}' not found"
     body = m.group(1)
     # Drop non-outline scaffolding this repo's README convention adds to
-    # every section: the italic/plain intro sentence and the back-to-top div.
+    # every section: the italic/plain intro sentence and any legacy
+    # back-to-top div (the current convention is an inline heading link).
     body = re.sub(r'<div align="right">.*?</div>', '', body, flags=re.DOTALL)
     lines = [
         line for line in body.split('\n')
