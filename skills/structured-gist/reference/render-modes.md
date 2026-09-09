@@ -14,10 +14,11 @@ highlight anyway. `text` = plaintext = no highlighting. Tag the fence
 ## Cost of each mode
 
 - **`block`** — literal text, so inline `**bold**`, `code`, *italic*, and
-  clickable `file:line` refs do NOT render. Use for monospace/terminal output
-  and committed `.md` fences, where GitHub's markdown rendering is irrelevant
-  and faithful spacing is the win. R11 (below) applies — the linter owns line
-  width since no renderer will wrap the fence for you.
+  clickable `file:line` refs do NOT render. **Default mode on all surfaces.**
+  Use for monospace/terminal output and committed `.md` fences, where GitHub's
+  markdown rendering is irrelevant and faithful spacing is the win. R11 (below)
+  applies — the linter owns line width since no renderer will wrap the fence
+  for you.
 - **`inline`** — **DEPRECATED (v0.3.8).** The literal glyphs (`I.` `A.` `i.` `↪`)
   aren't real GFM list items, so inline indented each rung 4 spaces to fake the
   nesting — but GFM reads a line indented ≥4 spaces past a list item's content
@@ -28,8 +29,9 @@ highlight anyway. `text` = plaintext = no highlighting. Tag the fence
 - **`responsive`** — a real GFM nested list (`- ▸ …`, 2 spaces/rung); the
   renderer wraps each line to its own box width with no code blocks. Correct on
   **any** markdown-rendering surface — GitHub issue/PR/comment bodies AND
-  chat-app replies. Default for all such surfaces since v0.3.8. GitHub wraps its own
-  markdown, so R11 does not apply.
+  chat-app replies. Opt-in only — `block` is the default on all surfaces; pick
+  `responsive` explicitly when a real GFM nested list is wanted instead. GitHub
+  wraps its own markdown, so R11 does not apply.
 - **`responsive`** (v0.3.7) — every node IS a real GFM list item, so the
   chat-app renderer (Claude Code app/web, or any markdown surface with a
   variable viewport) wraps each line to its own box width with a hanging
