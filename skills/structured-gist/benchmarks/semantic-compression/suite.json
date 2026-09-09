@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {"id": "near-identical-numbers", "lane": "deterministic"},
+    {"id": "real-benchmark-archaeology", "lane": "deterministic"},
+    {"id": "real-hook-discovery", "lane": "deterministic"},
+    {"id": "causality-heavy-explain", "lane": "deterministic"},
+    {"id": "cause-chain-reversal", "lane": "deterministic"},
+    {"id": "migration-tristate", "lane": "deterministic"},
+    {"id": "negation-and-true-peers", "lane": "deterministic"},
+    {"id": "registrar-hedge", "lane": "deterministic"},
+    {"id": "synthetic-scale-verylarge", "lane": "deterministic"}
+  ],
+  "conditions": {}
+}

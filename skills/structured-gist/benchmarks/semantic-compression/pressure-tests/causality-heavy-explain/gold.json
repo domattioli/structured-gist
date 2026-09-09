@@ -1,48 +1,342 @@
 {
   "case_id": "causality-heavy-explain",
   "size_bucket": "medium",
-  "pressure_tags": ["adversarial", "causality_heavy", "medium"],
+  "pressure_tags": [
+    "adversarial",
+    "causality_heavy",
+    "medium"
+  ],
   "source_word_count": 369,
   "facts": [
-    {"id": "f1", "text": "the webhook receiver originally used synchronous processing", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the receiver's synchronous design"},
-    {"id": "f2", "text": "the handler called a downstream enrichment API directly and held the HTTP request open until it returned", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the handler called a downstream enrichment API directly and held the HTTP request open until that call returned"},
-    {"id": "f3", "text": "the downstream enrichment API was already slow under normal conditions, often several seconds", "category": "constraint", "weight": 3, "precision_sensitive": false, "source_quote": "That downstream API was already slow under normal conditions, often taking several seconds to respond"},
-    {"id": "f4", "text": "because the handler waited synchronously, a slow downstream call kept the sender's HTTP connection open for that same duration", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "Because the handler waited on it synchronously, a slow downstream call meant the webhook sender's HTTP connection stayed open for that same several seconds"},
-    {"id": "f5", "text": "under real load, some calls ran long enough to exceed the sender's timeout", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "some of those calls ran long enough to exceed the sender's timeout"},
-    {"id": "f6", "text": "senders that see a timeout assume failure and retry by design", "category": "constraint", "weight": 3, "precision_sensitive": false, "source_quote": "Senders that see a timeout assume the request failed and, by design, retry it"},
-    {"id": "f7", "text": "every timeout produced a retry", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "every timeout produced a retry"},
-    {"id": "f8", "text": "each retry was itself a new synchronous call to the same already-slow endpoint", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the retry was itself a new synchronous call to the same already-slow endpoint"},
-    {"id": "f9", "text": "retries did not relieve pressure on the downstream API, they added to it", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "retries didn't relieve pressure on the downstream API, they added to it"},
-    {"id": "f10", "text": "added pressure pushed more calls past the timeout threshold, producing still more retries", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "which pushed more calls past the timeout threshold and produced still more retries"},
-    {"id": "f11", "text": "during ordinary traffic the loop stayed small enough to go unnoticed", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "During ordinary traffic this loop stayed small enough to go unnoticed"},
-    {"id": "f12", "text": "during peak traffic the same feedback loop cascaded: queue depth outgrew drain rate, and latency, timeout rate, and retry volume all climbed together", "category": "failure", "weight": 3, "precision_sensitive": false, "source_quote": "during peak traffic the same feedback loop ran hot enough to cascade: the downstream API's queue depth grew faster than it could drain, latency climbed further, timeout rates climbed further, and retry volume climbed further"},
-    {"id": "f13", "text": "the receiver ended up spending most of its capacity on retried requests instead of new ones", "category": "failure", "weight": 3, "precision_sensitive": false, "source_quote": "until the receiver was spending most of its capacity on retried requests instead of new ones"},
-    {"id": "f14", "text": "the cascade drove the decision to introduce a message queue in front of the enrichment step", "category": "decision", "weight": 3, "precision_sensitive": false, "source_quote": "That cascade is what drove the decision to introduce a message queue in front of the enrichment step"},
-    {"id": "f15", "text": "with the queue in place, the receiver acknowledges the sender immediately on receipt", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "the webhook receiver acknowledges the sender immediately on receipt"},
-    {"id": "f16", "text": "enrichment work is handed to a worker process instead of being done inline", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "hands the enrichment work to a worker process instead of doing it inline"},
-    {"id": "f17", "text": "the receiver's response time no longer depends on the enrichment API's response time; the two are decoupled", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "the two are decoupled — the receiver's latency and the downstream API's latency stopped being coupled to each other"},
-    {"id": "f18", "text": "a slow downstream call no longer produces a sender-facing timeout", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "a slow downstream call no longer produces a sender-facing timeout"},
-    {"id": "f19", "text": "without a sender-facing timeout, no retry is produced", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "which means it no longer produces a retry"},
-    {"id": "f20", "text": "the retry-storm failure mode that caused the cascades is gone entirely, not just less frequent", "category": "outcome", "weight": 3, "precision_sensitive": false, "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"}
+    {
+      "id": "f1",
+      "text": "the webhook receiver originally used synchronous processing",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "the receiver's synchronous design"
+    },
+    {
+      "id": "f2",
+      "text": "the handler called a downstream enrichment API directly and held the HTTP request open until it returned",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "the handler called a downstream enrichment API directly and held the HTTP request open until that call returned"
+    },
+    {
+      "id": "f3",
+      "text": "the downstream enrichment API was already slow under normal conditions, often several seconds",
+      "category": "constraint",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "That downstream API was already slow under normal conditions, often taking several seconds to respond"
+    },
+    {
+      "id": "f4",
+      "text": "because the handler waited synchronously, a slow downstream call kept the sender's HTTP connection open for that same duration",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "Because the handler waited on it synchronously, a slow downstream call meant the webhook sender's HTTP connection stayed open for that same several seconds"
+    },
+    {
+      "id": "f5",
+      "text": "under real load, some calls ran long enough to exceed the sender's timeout",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "some of those calls ran long enough to exceed the sender's timeout"
+    },
+    {
+      "id": "f6",
+      "text": "senders that see a timeout assume failure and retry by design",
+      "category": "constraint",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "Senders that see a timeout assume the request failed and, by design, retry it"
+    },
+    {
+      "id": "f7",
+      "text": "every timeout produced a retry",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "every timeout produced a retry"
+    },
+    {
+      "id": "f8",
+      "text": "each retry was itself a new synchronous call to the same already-slow endpoint",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "the retry was itself a new synchronous call to the same already-slow endpoint"
+    },
+    {
+      "id": "f9",
+      "text": "retries did not relieve pressure on the downstream API, they added to it",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "retries didn't relieve pressure on the downstream API, they added to it"
+    },
+    {
+      "id": "f10",
+      "text": "added pressure pushed more calls past the timeout threshold, producing still more retries",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "which pushed more calls past the timeout threshold and produced still more retries"
+    },
+    {
+      "id": "f11",
+      "text": "during ordinary traffic the loop stayed small enough to go unnoticed",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "During ordinary traffic this loop stayed small enough to go unnoticed"
+    },
+    {
+      "id": "f12",
+      "text": "during peak traffic the same feedback loop cascaded: queue depth outgrew drain rate, and latency, timeout rate, and retry volume all climbed together",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "during peak traffic the same feedback loop ran hot enough to cascade: the downstream API's queue depth grew faster than it could drain, latency climbed further, timeout rates climbed further, and retry volume climbed further",
+      "epistemic_candidate": true
+    },
+    {
+      "id": "f13",
+      "text": "the receiver ended up spending most of its capacity on retried requests instead of new ones",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "until the receiver was spending most of its capacity on retried requests instead of new ones"
+    },
+    {
+      "id": "f14",
+      "text": "the cascade drove the decision to introduce a message queue in front of the enrichment step",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "That cascade is what drove the decision to introduce a message queue in front of the enrichment step"
+    },
+    {
+      "id": "f15",
+      "text": "with the queue in place, the receiver acknowledges the sender immediately on receipt",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "the webhook receiver acknowledges the sender immediately on receipt"
+    },
+    {
+      "id": "f16",
+      "text": "enrichment work is handed to a worker process instead of being done inline",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "hands the enrichment work to a worker process instead of doing it inline"
+    },
+    {
+      "id": "f17",
+      "text": "the receiver's response time no longer depends on the enrichment API's response time; the two are decoupled",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "the two are decoupled \u2014 the receiver's latency and the downstream API's latency stopped being coupled to each other"
+    },
+    {
+      "id": "f18",
+      "text": "a slow downstream call no longer produces a sender-facing timeout",
+      "category": "negation",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "a slow downstream call no longer produces a sender-facing timeout"
+    },
+    {
+      "id": "f19",
+      "text": "without a sender-facing timeout, no retry is produced",
+      "category": "negation",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "which means it no longer produces a retry"
+    },
+    {
+      "id": "f20",
+      "text": "the retry-storm failure mode that caused the cascades is gone entirely, not just less frequent",
+      "category": "outcome",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"
+    }
   ],
   "relations": [
-    {"id": "r1", "type": "causal", "text": "synchronous waiting on an already-slow API (f2, f3) caused the sender's connection to stay open for the same duration (f4)", "fact_ids": ["f2", "f3", "f4"], "source_quote": "a slow downstream call meant the webhook sender's HTTP connection stayed open for that same several seconds"},
-    {"id": "r2", "type": "causal", "text": "the connection staying open (f4) caused some calls to exceed the sender's timeout under load (f5)", "fact_ids": ["f4", "f5"], "source_quote": "some of those calls ran long enough to exceed the sender's timeout"},
-    {"id": "r3", "type": "causal", "text": "timeouts (f5) combined with senders' retry-on-timeout behavior (f6) caused every timeout to produce a retry (f7)", "fact_ids": ["f5", "f6", "f7"], "source_quote": "every timeout produced a retry"},
-    {"id": "r4", "type": "causal", "text": "because each retry was itself a synchronous call to the same slow endpoint (f8), retries added load instead of relieving it (f9)", "fact_ids": ["f7", "f8", "f9"], "source_quote": "retries didn't relieve pressure on the downstream API, they added to it"},
-    {"id": "r5", "type": "causal", "text": "added pressure from retries (f9) pushed more calls past the timeout threshold, producing still more retries (f10) — a feedback loop", "fact_ids": ["f9", "f10"], "source_quote": "which pushed more calls past the timeout threshold and produced still more retries"},
-    {"id": "r6", "type": "causal", "text": "the same feedback loop (f10) that was unnoticeable at ordinary traffic (f11) became a full cascade under peak traffic (f12)", "fact_ids": ["f10", "f11", "f12"], "source_quote": "during peak traffic the same feedback loop ran hot enough to cascade"},
-    {"id": "r7", "type": "causal", "text": "the cascade and capacity drain (f12, f13) directly drove the decision to introduce a message queue (f14)", "fact_ids": ["f12", "f13", "f14"], "source_quote": "That cascade is what drove the decision to introduce a message queue in front of the enrichment step"},
-    {"id": "r8", "type": "causal", "text": "immediate acknowledgement plus offloading enrichment to a worker (f15, f16) decouples receiver latency from downstream latency (f17), so slow calls no longer trigger a timeout (f18) or a retry (f19), eliminating the retry-storm failure mode entirely (f20)", "fact_ids": ["f15", "f16", "f17", "f18", "f19", "f20"], "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"}
+    {
+      "id": "r1",
+      "type": "causal",
+      "text": "synchronous waiting on an already-slow API (f2, f3) caused the sender's connection to stay open for the same duration (f4)",
+      "fact_ids": [
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "source_quote": "a slow downstream call meant the webhook sender's HTTP connection stayed open for that same several seconds"
+    },
+    {
+      "id": "r2",
+      "type": "causal",
+      "text": "the connection staying open (f4) caused some calls to exceed the sender's timeout under load (f5)",
+      "fact_ids": [
+        "f4",
+        "f5"
+      ],
+      "source_quote": "some of those calls ran long enough to exceed the sender's timeout"
+    },
+    {
+      "id": "r3",
+      "type": "causal",
+      "text": "timeouts (f5) combined with senders' retry-on-timeout behavior (f6) caused every timeout to produce a retry (f7)",
+      "fact_ids": [
+        "f5",
+        "f6",
+        "f7"
+      ],
+      "source_quote": "every timeout produced a retry"
+    },
+    {
+      "id": "r4",
+      "type": "causal",
+      "text": "because each retry was itself a synchronous call to the same slow endpoint (f8), retries added load instead of relieving it (f9)",
+      "fact_ids": [
+        "f7",
+        "f8",
+        "f9"
+      ],
+      "source_quote": "retries didn't relieve pressure on the downstream API, they added to it"
+    },
+    {
+      "id": "r5",
+      "type": "causal",
+      "text": "added pressure from retries (f9) pushed more calls past the timeout threshold, producing still more retries (f10) \u2014 a feedback loop",
+      "fact_ids": [
+        "f9",
+        "f10"
+      ],
+      "source_quote": "which pushed more calls past the timeout threshold and produced still more retries"
+    },
+    {
+      "id": "r6",
+      "type": "causal",
+      "text": "the same feedback loop (f10) that was unnoticeable at ordinary traffic (f11) became a full cascade under peak traffic (f12)",
+      "fact_ids": [
+        "f10",
+        "f11",
+        "f12"
+      ],
+      "source_quote": "during peak traffic the same feedback loop ran hot enough to cascade"
+    },
+    {
+      "id": "r7",
+      "type": "causal",
+      "text": "the cascade and capacity drain (f12, f13) directly drove the decision to introduce a message queue (f14)",
+      "fact_ids": [
+        "f12",
+        "f13",
+        "f14"
+      ],
+      "source_quote": "That cascade is what drove the decision to introduce a message queue in front of the enrichment step"
+    },
+    {
+      "id": "r8",
+      "type": "causal",
+      "text": "immediate acknowledgement plus offloading enrichment to a worker (f15, f16) decouples receiver latency from downstream latency (f17), so slow calls no longer trigger a timeout (f18) or a retry (f19), eliminating the retry-storm failure mode entirely (f20)",
+      "fact_ids": [
+        "f15",
+        "f16",
+        "f17",
+        "f18",
+        "f19",
+        "f20"
+      ],
+      "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"
+    }
   ],
   "questions": [
-    {"id": "q1", "question": "Why was a message queue introduced in front of the enrichment step?", "gold_answer": "Because the retry-storm feedback loop cascaded out of control under peak traffic, driving that decision.", "type": "relational", "fact_ids": ["r7"]},
-    {"id": "q2", "question": "What was the original trigger that led to sender timeouts?", "gold_answer": "The synchronous handler holding the sender's HTTP connection open for the full duration of a slow downstream enrichment call.", "type": "relational", "fact_ids": ["r1", "r2"]},
-    {"id": "q3", "question": "Why did retries make the problem worse instead of better?", "gold_answer": "Because each retry was itself a new synchronous call to the same already-slow endpoint, so retries added load rather than relieving it.", "type": "relational", "fact_ids": ["r4"]},
-    {"id": "q4", "question": "Was the feedback loop a problem during ordinary traffic?", "gold_answer": "No — it stayed small enough to go unnoticed; it only cascaded under peak traffic.", "type": "factual", "fact_ids": ["f11", "f12"]},
-    {"id": "q5", "question": "After the fix, does a slow downstream call still cause a sender-facing timeout?", "gold_answer": "No — the receiver acks immediately, decoupling receiver latency from downstream latency, so no timeout (and thus no retry) occurs.", "type": "relational", "fact_ids": ["r8"]},
-    {"id": "q6", "question": "Is the retry-storm failure mode merely reduced after the fix, or fully eliminated?", "gold_answer": "Fully eliminated, not just less frequent.", "type": "factual", "fact_ids": ["f20"]},
-    {"id": "q7", "question": "What handles enrichment work now, instead of the receiver doing it inline?", "gold_answer": "A separate worker process, after the receiver has already acknowledged the sender.", "type": "factual", "fact_ids": ["f15", "f16"]},
-    {"id": "q8", "question": "Which happens first now when a webhook arrives: the sender acknowledgement or the enrichment processing?", "gold_answer": "The acknowledgement happens first, immediately; enrichment happens afterward via a worker.", "type": "relational", "fact_ids": ["f15", "f16"]}
+    {
+      "id": "q1",
+      "question": "Why was a message queue introduced in front of the enrichment step?",
+      "gold_answer": "Because the retry-storm feedback loop cascaded out of control under peak traffic, driving that decision.",
+      "type": "relational",
+      "fact_ids": [
+        "r7"
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "What was the original trigger that led to sender timeouts?",
+      "gold_answer": "The synchronous handler holding the sender's HTTP connection open for the full duration of a slow downstream enrichment call.",
+      "type": "relational",
+      "fact_ids": [
+        "r1",
+        "r2"
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Why did retries make the problem worse instead of better?",
+      "gold_answer": "Because each retry was itself a new synchronous call to the same already-slow endpoint, so retries added load rather than relieving it.",
+      "type": "relational",
+      "fact_ids": [
+        "r4"
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Was the feedback loop a problem during ordinary traffic?",
+      "gold_answer": "No \u2014 it stayed small enough to go unnoticed; it only cascaded under peak traffic.",
+      "type": "factual",
+      "fact_ids": [
+        "f11",
+        "f12"
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "After the fix, does a slow downstream call still cause a sender-facing timeout?",
+      "gold_answer": "No \u2014 the receiver acks immediately, decoupling receiver latency from downstream latency, so no timeout (and thus no retry) occurs.",
+      "type": "relational",
+      "fact_ids": [
+        "r8"
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Is the retry-storm failure mode merely reduced after the fix, or fully eliminated?",
+      "gold_answer": "Fully eliminated, not just less frequent.",
+      "type": "factual",
+      "fact_ids": [
+        "f20"
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "What handles enrichment work now, instead of the receiver doing it inline?",
+      "gold_answer": "A separate worker process, after the receiver has already acknowledged the sender.",
+      "type": "factual",
+      "fact_ids": [
+        "f15",
+        "f16"
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "Which happens first now when a webhook arrives: the sender acknowledgement or the enrichment processing?",
+      "gold_answer": "The acknowledgement happens first, immediately; enrichment happens afterward via a worker.",
+      "type": "relational",
+      "fact_ids": [
+        "f15",
+        "f16"
+      ]
+    }
   ]
 }

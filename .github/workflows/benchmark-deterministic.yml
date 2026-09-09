@@ -1,0 +1,36 @@
+name: Benchmark (deterministic)
+
+on:
+  push:
+    branches:
+      - main
+      - development
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  deterministic-scoring:
+    runs-on: ubuntu-latest
+    name: Semantic-compression deterministic scoring
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Run deterministic benchmark
+        run: bash skills/structured-gist/benchmarks/semantic-compression/run_deterministic.sh
+
+      - name: Upload deterministic results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: deterministic-results
+          path: skills/structured-gist/benchmarks/semantic-compression/results/
+          retention-days: 30

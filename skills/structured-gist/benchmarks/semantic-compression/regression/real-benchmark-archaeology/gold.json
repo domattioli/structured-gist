@@ -1,50 +1,354 @@
 {
   "case_id": "real-benchmark-archaeology",
   "size_bucket": "medium",
-  "pressure_tags": ["realistic_recap", "medium", "unresolved_question_heavy"],
+  "pressure_tags": [
+    "realistic_recap",
+    "medium",
+    "unresolved_question_heavy"
+  ],
   "source_word_count": 466,
   "facts": [
-    {"id": "f1", "text": "seconds_to_locate_fact was the original primary metric", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The original primary metric was `seconds_to_locate_fact`"},
-    {"id": "f2", "text": "seconds_to_locate_fact measures wall-clock time to find a fact by scanning an outline versus reading prose end to end", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "wall-clock time for a reader to find a single fact by scanning an outline versus reading prose end to end"},
-    {"id": "f3", "text": "seconds_to_locate_fact was never once measured across six separate version bumps", "category": "failure", "weight": 3, "precision_sensitive": true, "source_quote": "across six separate version bumps it was never once measured"},
-    {"id": "f4", "text": "the metric was formally retired on 2026-07-03", "category": "decision", "weight": 3, "precision_sensitive": true, "source_quote": "the metric was formally retired on 2026-07-03"},
-    {"id": "f5", "text": "word_count_reduction_pct replaced it as the declared primary benchmark", "category": "decision", "weight": 3, "precision_sensitive": false, "source_quote": "replaced with `word_count_reduction_pct` as the declared primary benchmark"},
-    {"id": "f6", "text": "word_count_reduction_pct was chosen because it was the only metric the project's history had ever recorded a real number for", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "specifically because that was the only metric the project's history had ever recorded a real number for"},
-    {"id": "f7", "text": "v0.2.9 measured a 147-word paragraph becoming an 88-word outline, a 40.1% reduction", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "a 147-word dense paragraph became an 88-word outline over the same matched scope, a 40.1% reduction"},
-    {"id": "f8", "text": "v0.4.0 introduced a three-axis benchmark, outline_quality_composite (retention, robustness, brevity), under spec-023", "category": "decision", "weight": 3, "precision_sensitive": true, "source_quote": "v0.4.0 introduced a more ambitious three-axis benchmark called `outline_quality_composite`, combining retention, robustness, and brevity, under spec-023"},
-    {"id": "f9", "text": "the composite compared direct-prompt mode against an experimental KG mode across a 20-source corpus", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "compared the normal direct-prompt outline mode against an experimental knowledge-graph generation mode, called KG mode, across a 20-source corpus"},
-    {"id": "f10", "text": "direct-prompt mode scored a composite of 0.5488", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "Direct-prompt mode scored a composite of 0.5488"},
-    {"id": "f11", "text": "KG mode scored a composite of 0.7604", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "KG mode scored higher overall at 0.7604"},
-    {"id": "f12", "text": "KG mode's robustness score was a perfect 1.0 by construction, since it enforces structure mechanically", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "its robustness score was a perfect 1.0 by construction, since KG mode enforces structure mechanically"},
-    {"id": "f13", "text": "KG mode's retention score of 0.7608 was noticeably lower than direct-prompt's 0.8285", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "KG mode's retention score, 0.7608, was noticeably lower than direct-prompt's 0.8285"},
-    {"id": "f14", "text": "KG mode's stricter word budgets ended up dropping real content", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "because KG mode's stricter word budgets ended up dropping real content"},
-    {"id": "f15", "text": "the recorded verdict was \"iterate,\" not \"ship\"", "category": "decision", "weight": 3, "precision_sensitive": false, "source_quote": "The recorded verdict was \"iterate,\" not \"ship\""},
-    {"id": "f16", "text": "KG mode never became the default rendering path", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "KG mode never became the default rendering path"},
-    {"id": "f17", "text": "KG mode was later explicitly excluded from the public-facing scaffold under spec-026's FR-006", "category": "decision", "weight": 3, "precision_sensitive": true, "source_quote": "it was later explicitly excluded from the public-facing scaffold of this repository under spec-026's FR-006"},
-    {"id": "f18", "text": "compare_corpus.py, score_outline.py, and the 20-source corpus behind the v0.4.0 row do not exist anywhere in this checkout", "category": "failure", "weight": 3, "precision_sensitive": true, "source_quote": "the `compare_corpus.py` and `score_outline.py` scripts along with the 20-source corpus that fed them, does not exist anywhere in this checkout"},
-    {"id": "f19", "text": "those scripts lived in a private upstream repository and were stripped out by a series of \"sync from DomI structured-gist skill\" commits when the public scaffold was built", "category": "cause_rationale", "weight": 2.5, "precision_sensitive": false, "source_quote": "Those lived in a private upstream repository, and a series of \"sync from DomI structured-gist skill\" commits stripped them out when this public scaffold was built"},
-    {"id": "f20", "text": "only tiny non-functional placeholder stub files and the historical benchmark.md row remain as evidence the measurement ever happened", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "leaving only tiny non-functional placeholder stub files and the historical benchmark.md row as the sole surviving evidence that the measurement ever happened"},
-    {"id": "f21", "text": "SCU (semantic content-unit) scoring compared outline quality against source text unit by unit", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "\"SCU scoring,\" short for semantic content-unit scoring, compared outline quality against source text unit by unit"},
-    {"id": "f22", "text": "SCU scoring was never formalized into a repeatable benchmark anyone could rerun", "category": "failure", "weight": 3, "precision_sensitive": false, "source_quote": "it was never formalized into a repeatable benchmark anyone could rerun"},
-    {"id": "f23", "text": "a JSONL claim-list output format was tested as a replacement for the tree outline and rejected because its recall dropped below the acceptance threshold", "category": "failure", "weight": 3, "precision_sensitive": false, "source_quote": "a JSONL claim-list output format was tested as a possible replacement for the tree-shaped outline itself, and it was rejected outright because its recall dropped below the acceptance threshold the team had set"},
-    {"id": "f24", "text": "unresolved: whether KG mode should be revisited now that a real retention-scoring approach exists, or whether its retention gap makes it a dead end", "category": "unresolved_question", "weight": 2, "precision_sensitive": false, "source_quote": "now that a real retention-scoring approach exists, should KG mode be revisited, or does its retention gap make that a dead end regardless of how good its structural robustness is?"}
+    {
+      "id": "f1",
+      "text": "seconds_to_locate_fact was the original primary metric",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "The original primary metric was `seconds_to_locate_fact`"
+    },
+    {
+      "id": "f2",
+      "text": "seconds_to_locate_fact measures wall-clock time to find a fact by scanning an outline versus reading prose end to end",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "wall-clock time for a reader to find a single fact by scanning an outline versus reading prose end to end"
+    },
+    {
+      "id": "f3",
+      "text": "seconds_to_locate_fact was never once measured across six separate version bumps",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": true,
+      "source_quote": "across six separate version bumps it was never once measured"
+    },
+    {
+      "id": "f4",
+      "text": "the metric was formally retired on 2026-07-03",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": true,
+      "source_quote": "the metric was formally retired on 2026-07-03"
+    },
+    {
+      "id": "f5",
+      "text": "word_count_reduction_pct replaced it as the declared primary benchmark",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "replaced with `word_count_reduction_pct` as the declared primary benchmark"
+    },
+    {
+      "id": "f6",
+      "text": "word_count_reduction_pct was chosen because it was the only metric the project's history had ever recorded a real number for",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "specifically because that was the only metric the project's history had ever recorded a real number for"
+    },
+    {
+      "id": "f7",
+      "text": "v0.2.9 measured a 147-word paragraph becoming an 88-word outline, a 40.1% reduction",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "a 147-word dense paragraph became an 88-word outline over the same matched scope, a 40.1% reduction"
+    },
+    {
+      "id": "f8",
+      "text": "v0.4.0 introduced a three-axis benchmark, outline_quality_composite (retention, robustness, brevity), under spec-023",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": true,
+      "source_quote": "v0.4.0 introduced a more ambitious three-axis benchmark called `outline_quality_composite`, combining retention, robustness, and brevity, under spec-023"
+    },
+    {
+      "id": "f9",
+      "text": "the composite compared direct-prompt mode against an experimental KG mode across a 20-source corpus",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": true,
+      "source_quote": "compared the normal direct-prompt outline mode against an experimental knowledge-graph generation mode, called KG mode, across a 20-source corpus"
+    },
+    {
+      "id": "f10",
+      "text": "direct-prompt mode scored a composite of 0.5488",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "Direct-prompt mode scored a composite of 0.5488"
+    },
+    {
+      "id": "f11",
+      "text": "KG mode scored a composite of 0.7604",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "KG mode scored higher overall at 0.7604"
+    },
+    {
+      "id": "f12",
+      "text": "KG mode's robustness score was a perfect 1.0 by construction, since it enforces structure mechanically",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "its robustness score was a perfect 1.0 by construction, since KG mode enforces structure mechanically"
+    },
+    {
+      "id": "f13",
+      "text": "KG mode's retention score of 0.7608 was noticeably lower than direct-prompt's 0.8285",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": true,
+      "source_quote": "KG mode's retention score, 0.7608, was noticeably lower than direct-prompt's 0.8285"
+    },
+    {
+      "id": "f14",
+      "text": "KG mode's stricter word budgets ended up dropping real content",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "because KG mode's stricter word budgets ended up dropping real content"
+    },
+    {
+      "id": "f15",
+      "text": "the recorded verdict was \"iterate,\" not \"ship\"",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "The recorded verdict was \"iterate,\" not \"ship\""
+    },
+    {
+      "id": "f16",
+      "text": "KG mode never became the default rendering path",
+      "category": "negation",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "KG mode never became the default rendering path"
+    },
+    {
+      "id": "f17",
+      "text": "KG mode was later explicitly excluded from the public-facing scaffold under spec-026's FR-006",
+      "category": "decision",
+      "weight": 3,
+      "precision_sensitive": true,
+      "source_quote": "it was later explicitly excluded from the public-facing scaffold of this repository under spec-026's FR-006"
+    },
+    {
+      "id": "f18",
+      "text": "compare_corpus.py, score_outline.py, and the 20-source corpus behind the v0.4.0 row do not exist anywhere in this checkout",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": true,
+      "source_quote": "the `compare_corpus.py` and `score_outline.py` scripts along with the 20-source corpus that fed them, does not exist anywhere in this checkout"
+    },
+    {
+      "id": "f19",
+      "text": "those scripts lived in a private upstream repository and were stripped out by a series of \"sync from DomI structured-gist skill\" commits when the public scaffold was built",
+      "category": "cause_rationale",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "Those lived in a private upstream repository, and a series of \"sync from DomI structured-gist skill\" commits stripped them out when this public scaffold was built"
+    },
+    {
+      "id": "f20",
+      "text": "only tiny non-functional placeholder stub files and the historical benchmark.md row remain as evidence the measurement ever happened",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "leaving only tiny non-functional placeholder stub files and the historical benchmark.md row as the sole surviving evidence that the measurement ever happened"
+    },
+    {
+      "id": "f21",
+      "text": "SCU (semantic content-unit) scoring compared outline quality against source text unit by unit",
+      "category": "descriptive",
+      "weight": 1,
+      "precision_sensitive": false,
+      "source_quote": "\"SCU scoring,\" short for semantic content-unit scoring, compared outline quality against source text unit by unit"
+    },
+    {
+      "id": "f22",
+      "text": "SCU scoring was never formalized into a repeatable benchmark anyone could rerun",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "it was never formalized into a repeatable benchmark anyone could rerun",
+      "epistemic_candidate": true
+    },
+    {
+      "id": "f23",
+      "text": "a JSONL claim-list output format was tested as a replacement for the tree outline and rejected because its recall dropped below the acceptance threshold",
+      "category": "failure",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "a JSONL claim-list output format was tested as a possible replacement for the tree-shaped outline itself, and it was rejected outright because its recall dropped below the acceptance threshold the team had set"
+    },
+    {
+      "id": "f24",
+      "text": "unresolved: whether KG mode should be revisited now that a real retention-scoring approach exists, or whether its retention gap makes it a dead end",
+      "category": "unresolved_question",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "now that a real retention-scoring approach exists, should KG mode be revisited, or does its retention gap make that a dead end regardless of how good its structural robustness is?"
+    }
   ],
   "relations": [
-    {"id": "r1", "type": "causal", "text": "seconds_to_locate_fact's six-bump measurement failure (f3) caused its retirement and replacement by word_count_reduction_pct (f4, f5), specifically because the latter was the only metric with a real recorded number (f6)", "fact_ids": ["f3", "f4", "f5", "f6"], "source_quote": "the metric was formally retired on 2026-07-03 and replaced with `word_count_reduction_pct` as the declared primary benchmark, specifically because that was the only metric the project's history had ever recorded a real number for"},
-    {"id": "r2", "type": "comparative_outcome", "text": "KG mode (f11, f12) beats direct-prompt (f10) on composite score and robustness but loses to it on retention (f13)", "fact_ids": ["f10", "f11", "f12", "f13"], "source_quote": "KG mode's retention score, 0.7608, was noticeably lower than direct-prompt's 0.8285"},
-    {"id": "r3", "type": "causal", "text": "KG mode's stricter word budgets (f14) caused its lower retention score (f13)", "fact_ids": ["f14", "f13"], "source_quote": "because KG mode's stricter word budgets ended up dropping real content"},
-    {"id": "r4", "type": "causal", "text": "the retention shortfall (f13) drove the \"iterate\" verdict (f15), which meant KG mode was never shipped as default and was excluded from the public scaffold (f16, f17)", "fact_ids": ["f13", "f15", "f16", "f17"], "source_quote": "The recorded verdict was \"iterate,\" not \"ship\" — KG mode never became the default rendering path, and it was later explicitly excluded from the public-facing scaffold"},
-    {"id": "r5", "type": "causal", "text": "the public-scaffold sync process (f19) is why the real scorer code and corpus no longer exist in this checkout (f18)", "fact_ids": ["f19", "f18"], "source_quote": "a series of \"sync from DomI structured-gist skill\" commits stripped them out when this public scaffold was built"},
-    {"id": "r6", "type": "contrast_supersession", "text": "a JSONL claim-list format was proposed to replace the tree-shaped outline format but failed to supersede it, being rejected for recall below threshold (f23)", "fact_ids": ["f23"], "source_quote": "a JSONL claim-list output format was tested as a possible replacement for the tree-shaped outline itself, and it was rejected outright because its recall dropped below the acceptance threshold"}
+    {
+      "id": "r1",
+      "type": "causal",
+      "text": "seconds_to_locate_fact's six-bump measurement failure (f3) caused its retirement and replacement by word_count_reduction_pct (f4, f5), specifically because the latter was the only metric with a real recorded number (f6)",
+      "fact_ids": [
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "source_quote": "the metric was formally retired on 2026-07-03 and replaced with `word_count_reduction_pct` as the declared primary benchmark, specifically because that was the only metric the project's history had ever recorded a real number for"
+    },
+    {
+      "id": "r2",
+      "type": "comparative_outcome",
+      "text": "KG mode (f11, f12) beats direct-prompt (f10) on composite score and robustness but loses to it on retention (f13)",
+      "fact_ids": [
+        "f10",
+        "f11",
+        "f12",
+        "f13"
+      ],
+      "source_quote": "KG mode's retention score, 0.7608, was noticeably lower than direct-prompt's 0.8285"
+    },
+    {
+      "id": "r3",
+      "type": "causal",
+      "text": "KG mode's stricter word budgets (f14) caused its lower retention score (f13)",
+      "fact_ids": [
+        "f14",
+        "f13"
+      ],
+      "source_quote": "because KG mode's stricter word budgets ended up dropping real content"
+    },
+    {
+      "id": "r4",
+      "type": "causal",
+      "text": "the retention shortfall (f13) drove the \"iterate\" verdict (f15), which meant KG mode was never shipped as default and was excluded from the public scaffold (f16, f17)",
+      "fact_ids": [
+        "f13",
+        "f15",
+        "f16",
+        "f17"
+      ],
+      "source_quote": "The recorded verdict was \"iterate,\" not \"ship\" \u2014 KG mode never became the default rendering path, and it was later explicitly excluded from the public-facing scaffold"
+    },
+    {
+      "id": "r5",
+      "type": "causal",
+      "text": "the public-scaffold sync process (f19) is why the real scorer code and corpus no longer exist in this checkout (f18)",
+      "fact_ids": [
+        "f19",
+        "f18"
+      ],
+      "source_quote": "a series of \"sync from DomI structured-gist skill\" commits stripped them out when this public scaffold was built"
+    },
+    {
+      "id": "r6",
+      "type": "contrast_supersession",
+      "text": "a JSONL claim-list format was proposed to replace the tree-shaped outline format but failed to supersede it, being rejected for recall below threshold (f23)",
+      "fact_ids": [
+        "f23"
+      ],
+      "source_quote": "a JSONL claim-list output format was tested as a possible replacement for the tree-shaped outline itself, and it was rejected outright because its recall dropped below the acceptance threshold"
+    }
   ],
   "questions": [
-    {"id": "q1", "question": "What was the original primary benchmark metric, and why was it retired?", "gold_answer": "seconds_to_locate_fact; retired because it was never measured across six version bumps.", "type": "factual", "fact_ids": ["f1", "f3", "f4"]},
-    {"id": "q2", "question": "Which metric replaced it, and why was that one chosen?", "gold_answer": "word_count_reduction_pct, because it was the only metric the project's history had ever actually recorded a real number for.", "type": "factual", "fact_ids": ["f5", "f6"]},
-    {"id": "q3", "question": "Did KG mode score higher or lower than direct-prompt mode on retention?", "gold_answer": "Lower — 0.7608 versus direct-prompt's 0.8285.", "type": "relational", "fact_ids": ["r2", "f13"]},
-    {"id": "q4", "question": "Why did KG mode lose on retention despite winning on robustness?", "gold_answer": "Its stricter word budgets ended up dropping real content.", "type": "relational", "fact_ids": ["r3"]},
-    {"id": "q5", "question": "Was KG mode ever shipped as the default rendering path?", "gold_answer": "No — the verdict was \"iterate,\" and it was later excluded from the public scaffold.", "type": "factual", "fact_ids": ["f15", "f16", "f17"]},
-    {"id": "q6", "question": "Does the actual v0.4.0 scoring code and corpus exist in this checkout?", "gold_answer": "No — it was stripped out by the public-scaffold sync; only non-functional stub files and the historical benchmark.md row remain.", "type": "factual", "fact_ids": ["f18", "f19", "f20"]},
-    {"id": "q7", "question": "Why was the JSONL claim-list output format rejected?", "gold_answer": "Because its recall dropped below the acceptance threshold.", "type": "factual", "fact_ids": ["f23"]},
-    {"id": "q8", "question": "What open question does this audit leave unresolved?", "gold_answer": "Whether KG mode should be revisited now that a real retention-scoring approach exists, given its retention gap.", "type": "factual", "fact_ids": ["f24"]}
+    {
+      "id": "q1",
+      "question": "What was the original primary benchmark metric, and why was it retired?",
+      "gold_answer": "seconds_to_locate_fact; retired because it was never measured across six version bumps.",
+      "type": "factual",
+      "fact_ids": [
+        "f1",
+        "f3",
+        "f4"
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Which metric replaced it, and why was that one chosen?",
+      "gold_answer": "word_count_reduction_pct, because it was the only metric the project's history had ever actually recorded a real number for.",
+      "type": "factual",
+      "fact_ids": [
+        "f5",
+        "f6"
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Did KG mode score higher or lower than direct-prompt mode on retention?",
+      "gold_answer": "Lower \u2014 0.7608 versus direct-prompt's 0.8285.",
+      "type": "relational",
+      "fact_ids": [
+        "r2",
+        "f13"
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Why did KG mode lose on retention despite winning on robustness?",
+      "gold_answer": "Its stricter word budgets ended up dropping real content.",
+      "type": "relational",
+      "fact_ids": [
+        "r3"
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "Was KG mode ever shipped as the default rendering path?",
+      "gold_answer": "No \u2014 the verdict was \"iterate,\" and it was later excluded from the public scaffold.",
+      "type": "factual",
+      "fact_ids": [
+        "f15",
+        "f16",
+        "f17"
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Does the actual v0.4.0 scoring code and corpus exist in this checkout?",
+      "gold_answer": "No \u2014 it was stripped out by the public-scaffold sync; only non-functional stub files and the historical benchmark.md row remain.",
+      "type": "factual",
+      "fact_ids": [
+        "f18",
+        "f19",
+        "f20"
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "Why was the JSONL claim-list output format rejected?",
+      "gold_answer": "Because its recall dropped below the acceptance threshold.",
+      "type": "factual",
+      "fact_ids": [
+        "f23"
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "What open question does this audit leave unresolved?",
+      "gold_answer": "Whether KG mode should be revisited now that a real retention-scoring approach exists, given its retention gap.",
+      "type": "factual",
+      "fact_ids": [
+        "f24"
+      ]
+    }
   ]
 }

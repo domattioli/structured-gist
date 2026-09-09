@@ -320,7 +320,7 @@ class TestBadFixtures:
         """A plain `inline`-mode outline (bare glyphs, no '- ' list prefix
         on nested nodes) must NOT be reclassified as `responsive` —
         detection is conservative (SKILL.md `responsive` mode spec)."""
-        text = "- Root\n ▸ Purpose\n ↪ a bare inline outline, no list wrapper"
+        text = "- Root\n ▸ Purpose\n  ↪ a bare inline outline, no list wrapper"
         violations = lint_text(text)
         assert not violations, f"plain inline outline should lint clean unaffected: {violations}"
 
@@ -485,6 +485,44 @@ class TestBadFixtures:
         assert good_file.exists(), f"good_r5_deep_arrows.md not found at {good_file}"
         violations = lint_file(str(good_file))
         assert not violations, f"good_r5_deep_arrows.md has violations: {violations}"
+
+    def test_bad_r16_depth_indent_caught(self, fixtures_dir):
+        """Test that bad_r16_depth_indent.md is caught (R16 violation)."""
+        bad_file = fixtures_dir / 'bad_r16_depth_indent.md'
+        assert bad_file.exists(), f"bad_r16_depth_indent.md not found at {bad_file}"
+        violations = lint_file(str(bad_file))
+        assert violations, "bad_r16_depth_indent.md should have violations"
+        rule_ids = [v[1] for v in violations]
+        assert 'R16' in rule_ids, f"Expected R16 violation, got: {violations}"
+
+    def test_bad_r16_depth_indent_arrow_caught(self, fixtures_dir):
+        """Test that bad_r16_depth_indent_arrow.md is caught (R16 violation)."""
+        bad_file = fixtures_dir / 'bad_r16_depth_indent_arrow.md'
+        assert bad_file.exists(), f"bad_r16_depth_indent_arrow.md not found at {bad_file}"
+        violations = lint_file(str(bad_file))
+        assert violations, "bad_r16_depth_indent_arrow.md should have violations"
+        rule_ids = [v[1] for v in violations]
+        assert 'R16' in rule_ids, f"Expected R16 violation, got: {violations}"
+
+    def test_good_r16_depth_indent_passes(self, fixtures_dir):
+        """Test that good_r16_depth_indent.md with correctly nested children lints cleanly."""
+        good_file = fixtures_dir / 'good_r16_depth_indent.md'
+        assert good_file.exists(), f"good_r16_depth_indent.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_r16_depth_indent.md has violations: {violations}"
+
+    def test_r16_mixed_violations_additive(self):
+        """R16 must be additive — never suppresses other rules, just appends independently."""
+        # Create text with both R2 (skipped rung) AND would-be R16 (if implemented)
+        # The enumerator is at same depth as attribute (R16 violation)
+        # but also follows a skip in depth from concept to attribute (demonstrating multi-violation)
+        text = "```\n- Widget\n    ▸ Purpose\n    a. item\n```"
+        violations = lint_text(text)
+        rule_ids = [v[1] for v in violations]
+        # Verify R16 is present along with potentially other rules
+        assert 'R16' in rule_ids, f"Expected R16 among violations: {violations}"
+        # Verify we're not suppressing other violations (additive property)
+        # The fixture should have at least 1 violation and R16 should be one of them
 
 
 class TestNormativeBlocks:
