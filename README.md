@@ -31,15 +31,15 @@ Claude's explanatory prose is increasingly a dense, rambling, incomprehensible m
 
 What's missing is structure: concept, sub-concept, and the relationship between them. This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
  
-structured-gist renders that decomposition as an explicit tree instead of a paragraph the reader has to parse for it. We can't get rid of the AI slop, but we can push it to the peripheries and help you get to the gist faster.
+`structured-gist` renders that decomposition as an explicit tree instead of a paragraph the reader has to parse for it. We can't get rid of the AI slop, but we can push it to the peripheries and help you get to the gist faster.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 2. Method
 
-This section is itself rendered in structured-gist's `block` mode, not written by hand as prose. It covers the marker taxonomy and a worked example (a real word-count comparison) in one outline.
+The example below compares Opus 5's unadulterated description of how this skill works vs. the dogfood-ed skill output. It covers the marker taxonomy and overall gist of how `structured-gist` works.
 
-The worked example below compares Opus 5's unadulterated description of how this skill works vs. the dogfood-ed skill output. As a paragraph, it reads:
+As a paragraph, it reads:
 
 > structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
@@ -94,7 +94,7 @@ Rendered as an outline in `skim` granularity and `block` mode (the default modal
 
 No level given defaults to `skim`. No mode given defaults by surface: `responsive` on any markdown-rendering surface, `block` on a plain terminal.
 
-Trigger phrases: "structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
+Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "cliff notes", "spark notes", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
