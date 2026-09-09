@@ -25,13 +25,11 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## 1. Motivation
 
-### A paragraph flattens structure a reader has to reconstruct
+Claude's explanatory prose has a real failure mode people call "Claudish": dense with unexplained jargon from whatever domain it is working in, and by turns contrarian, sycophantic, padded with filler, or simply saying nothing across many words. Word-count compression does not fix this. caveman-lite, for instance, shortens Claudish prose without reorganizing it; the result reads as plain English, but the underlying thought stays unstructured, and its content stays non-deterministic from one run to the next.
 
-An LLM asked to explain what it did, or why, defaults to a paragraph: purpose, mechanism, edge cases, and caveats interleaved in one prose block with no marker distinguishing them. The reader re-derives that structure by parsing sentence boundaries and connective words (because | which means | as a result). For dense multi-part output, that reconstruction cost is repeated on every read.
+The missing structure is concept and sub-concept with their relationship: what is being claimed and what supports that claim, including how the supporting pieces relate to each other and to the claim (whether ordered or grouped, or independent). This is also how a complex subject gets learned from a well-built lecture, and how a slide deck gets built: one concept per slide with minimal words, the relationships carried by layout rather than by prose.
 
-### Position-based meaning survives compression better than sentence-based meaning
-
-A fixed marker ladder assigns each line's role at a glance: this is the top claim | this is a property of it | this is an ordered or grouped part | this is the explanation. Once the marker system is fixed, individual node text can compress aggressively (or stay verbose) without losing the reader's ability to navigate the tree. structured-gist separates these two concerns explicitly: a linter enforces the structural contract; text compression (word choice, abbreviation) is a separate, optional layer that never touches the ladder.
+structured-gist renders that decomposition directly, as an explicit tree instead of a paragraph the reader has to parse for it.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
