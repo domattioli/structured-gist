@@ -1,0 +1,502 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "Original metric \u25b8 Definition",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "a. direct-prompt composite 0.5488",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "b. KG composite 0.7604 (higher overall)",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "c. KG robustness 1.0 \u21aa perfect by construction \u2014 KG mode enforces structure mechanically",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "d. KG retention 0.7608 vs 0.8285 (direct-prompt)",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "lower because KG's stricter word budgets dropped real content",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "\"iterate,\" not \"ship\"",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "KG mode never became the default rendering path",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "later excluded from the public scaffold under spec-026 FR-006",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "compare_corpus.py, score_outline.py, and the 20-source corpus behind the v0.4.0 row \u2014 none exist in this checkout",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "scripts lived in a private upstream repo; \"sync from DomI structured-gist skill\" commits stripped them when this public scaffold was built",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "wall-clock time for a reader to locate one fact scanning an outline vs reading prose end-to-end",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "only tiny, non-functional placeholder stub files and the historical benchmark.md row remain",
+        "status": "retained"
+      },
+      "f21": {
+        "evidence": "semantic content-unit scoring, compared outline vs source text unit by unit",
+        "status": "retained"
+      },
+      "f22": {
+        "evidence": "never formalized into a repeatable benchmark",
+        "status": "retained"
+      },
+      "f23": {
+        "evidence": "tested as a replacement for the tree-shaped outline; rejected \u2014 recall fell below the acceptance threshold",
+        "status": "retained"
+      },
+      "f24": {
+        "evidence": "should KG mode be revisited \u2014 or does its retention gap make that a dead end regardless of structural robustness?",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "across six version bumps, never once measured",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "retired 2026-07-03, due to that unmeasured track record",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Replacement metric \u25b8 Adoption reason",
+        "status": "partial"
+      },
+      "f6": {
+        "evidence": "declared primary benchmark because it was the only metric ever recorded with a real number",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "147-word paragraph \u2192 88-word outline (matched scope) ... 40.1% reduction",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "v0.4.0 introduced outline_quality_composite (spec-023): three axes \u2014 retention, robustness, brevity",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "direct-prompt outline mode vs experimental KG (knowledge-graph) mode, across a 20-source corpus",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "every row cites \"not-measured\" or \"n/a\"",
+        "note": "specific claim about table cell formatting/wording; not supported by any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "a literal word count, not an estimate",
+        "note": "asserts the 40.1% figure is exact rather than an estimate; not supported by gold fact f7 or any other fact",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "An unnamed original metric measuring wall-clock time to locate a fact; never once measured across six version bumps, retired 2026-07-03 as a result",
+        "verdict": "partial"
+      },
+      "q2": {
+        "answer_given": "An unnamed replacement metric, adopted because it was the only one ever recorded with a real number",
+        "verdict": "partial"
+      },
+      "q3": {
+        "answer_given": "Lower \u2014 0.7608 vs 0.8285",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Its stricter word budgets ended up dropping real content",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 verdict was \"iterate,\" not \"ship\"; KG never became default and was later excluded from the public scaffold under spec-026 FR-006",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "No \u2014 the scripts and corpus don't exist in this checkout; stripped by sync commits from a private upstream repo; only stub files and the historical benchmark.md row remain",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Recall fell below the acceptance threshold",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Whether to revisit KG mode now that a real retention-scoring approach exists, or treat its retention gap as a dead end regardless of robustness",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "retired 2026-07-03, due to that unmeasured track record ... declared primary benchmark because it was the only metric ever recorded with a real number",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "KG composite 0.7604 (higher overall) ... KG robustness 1.0 ... KG retention 0.7608 vs 0.8285",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "lower because KG's stricter word budgets dropped real content",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "\"iterate,\" not \"ship\" \u2014 KG mode never became the default rendering path; later excluded from the public scaffold under spec-026 FR-006",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "scripts lived in a private upstream repo; \"sync from DomI structured-gist skill\" commits stripped them when this public scaffold was built",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "tested as a replacement for the tree-shaped outline; rejected \u2014 recall fell below the acceptance threshold",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "I. seconds_to_locate_fact, never measured",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f12": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f13": {
+        "evidence": "II. KG mode scored higher, weaker retention",
+        "status": "partial"
+      },
+      "f14": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f15": {
+        "evidence": "III. iterate, not shipped",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "III. iterate, not shipped",
+        "status": "partial"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "A. compare_corpus.py, score_outline.py gone",
+        "status": "partial"
+      },
+      "f19": {
+        "evidence": "B. stripped from public scaffold",
+        "status": "partial"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f20": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f21": {
+        "evidence": "A. SCU scoring, never formalized",
+        "status": "partial"
+      },
+      "f22": {
+        "evidence": "A. SCU scoring, never formalized",
+        "status": "retained"
+      },
+      "f23": {
+        "evidence": "B. JSONL claim-list, rejected",
+        "status": "partial"
+      },
+      "f24": {
+        "evidence": "I. revisit KG mode or dead end?",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "I. seconds_to_locate_fact, never measured",
+        "status": "partial"
+      },
+      "f4": {
+        "evidence": "II. retired 2026-07-03",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "A. word_count_reduction_pct now primary",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "B. 40.1% cut (v0.2.9 test)",
+        "status": "partial"
+      },
+      "f8": {
+        "evidence": "I. outline_quality_composite, v0.4.0",
+        "status": "partial"
+      },
+      "f9": {
+        "evidence": "II. KG mode scored higher, weaker retention",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "seconds_to_locate_fact; retired 2026-07-03, apparently because it was never measured",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "word_count_reduction_pct is now primary; no reason given in this outline",
+        "verdict": "partial"
+      },
+      "q3": {
+        "answer_given": "Lower (outline says 'weaker retention')",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "not stated in this outline",
+        "verdict": "unanswerable"
+      },
+      "q5": {
+        "answer_given": "No \u2014 verdict was 'iterate, not shipped'",
+        "verdict": "partial"
+      },
+      "q6": {
+        "answer_given": "No \u2014 the two scripts are gone, stripped from the public scaffold",
+        "verdict": "partial"
+      },
+      "q7": {
+        "answer_given": "not stated, only that it was rejected",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "whether to revisit KG mode or treat it as a dead end",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "I. seconds_to_locate_fact, never measured / II. retired 2026-07-03",
+        "status": "partial"
+      },
+      "r2": {
+        "evidence": "II. KG mode scored higher, weaker retention",
+        "status": "partial"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "II. KG mode scored higher, weaker retention / III. iterate, not shipped",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "A. compare_corpus.py, score_outline.py gone / B. stripped from public scaffold",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "B. JSONL claim-list, rejected",
+        "status": "partial"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Original metric \u25b8 Definition",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "a. direct-prompt composite 0.5488",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "b. KG composite 0.7604",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "robustness 1.0",
+        "status": "partial"
+      },
+      "f13": {
+        "evidence": "c. KG retention 0.7608 vs 0.8285",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "lower \u2014 stricter word budgets dropped real content",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "\"iterate\" \u2014 KG never became default",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "KG never became default",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "excluded under spec-026 FR-006",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "compare_corpus.py, score_outline.py, the 20-source corpus",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "lived in a private upstream repo; stripped by sync commits into this scaffold",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "wall-clock time to locate one fact: outline scan vs prose read",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f21": {
+        "evidence": "unit-by-unit comparison, never formalized into a repeatable benchmark",
+        "status": "partial"
+      },
+      "f22": {
+        "evidence": "never formalized into a repeatable benchmark",
+        "status": "retained"
+      },
+      "f23": {
+        "evidence": "rejected \u2014 recall fell below the acceptance threshold",
+        "status": "retained"
+      },
+      "f24": {
+        "evidence": "revisit KG mode now that retention scoring exists, or is its retention gap a dead end regardless of robustness?",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "never measured across six version bumps",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "retired 2026-07-03",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Replacement metric \u25b8 Why adopted",
+        "status": "partial"
+      },
+      "f6": {
+        "evidence": "only metric ever recorded with a real number",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "147-word paragraph \u2192 88-word outline, 40.1% reduction",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "v0.4.0's outline_quality_composite (spec-023): retention, robustness, brevity",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "a. direct-prompt composite 0.5488 / b. KG composite 0.7604",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "40.1% reduction, literal count",
+        "note": "the outline asserts the reduction figure is a 'literal count' as opposed to an estimate; gold fact f7 states the number but makes no claim about whether it was exact vs. estimated",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "An unnamed original metric defined as wall-clock time to locate a fact; retired 2026-07-03 because never measured across six version bumps",
+        "verdict": "partial"
+      },
+      "q2": {
+        "answer_given": "An unnamed replacement metric, adopted because it was the only metric ever recorded with a real number",
+        "verdict": "partial"
+      },
+      "q3": {
+        "answer_given": "Lower \u2014 0.7608 vs 0.8285",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Stricter word budgets dropped real content",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 verdict was 'iterate'; excluded under spec-026 FR-006",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "No \u2014 the scripts and corpus are absent, stripped by sync commits from a private upstream repo into this scaffold",
+        "verdict": "partial"
+      },
+      "q7": {
+        "answer_given": "Recall fell below the acceptance threshold",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Whether to revisit KG mode now that retention scoring exists, or treat its retention gap as a dead end regardless of robustness",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "never measured across six version bumps \u2014 retired 2026-07-03 ... only metric ever recorded with a real number",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "b. KG composite 0.7604, robustness 1.0 / c. KG retention 0.7608 vs 0.8285 \u21aa lower",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "lower \u2014 stricter word budgets dropped real content",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "c. KG retention 0.7608 vs 0.8285 ... Verdict \u21aa \"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "lived in a private upstream repo; stripped by sync commits into this scaffold",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "B. JSONL claim-list format \u21aa rejected \u2014 recall fell below the acceptance threshold",
+        "status": "partial"
+      }
+    }
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "run this quarter, genuinely independent of each other",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "a. no dependency either way",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "b. shared quarter is scheduling coincidence only",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "dashboard was loading slowly for some users",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "\u25b8 Database \u21aa explicitly ruled out as the cause (implies it was suspected, but 'first suspect' framing is not stated)",
+        "status": "partial"
+      },
+      "f14": {
+        "evidence": "a. not the bottleneck",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "b. query times were normal",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "unoptimized client-side rendering path re-ran the same computation on every scroll event",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "a. not expanding headcount at all",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "b. backfills exactly one earlier departure",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "independent of the other three",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. none is a sub-part of another / b. none depends on another finishing first",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "a. not motivated by their findings / b. doesn't block or unblock any",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "c. no shared theme beyond the quarter",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "reviews all first-party code for common vulnerability classes",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "a. explicitly out of scope, not covered (third-party dependencies)",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "b. not an oversight / c. tracked as a separate future effort",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "a. no critical-severity issues found / b. handful of low-severity findings, already fixed",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "rewrites the onboarding guide and API reference from scratch",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "both were found to describe an old version of the setup flow",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "The hiring push is 'sometimes assumed to mean the team is growing' (\u25b8 Perception)",
+        "note": "No gold fact states or implies that anyone perceives/assumes the hiring push means growth; this framing device is not supported by any gold fact.",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Third-party dependencies (explicitly out of scope, not covered)",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Deliberate \u2014 not an oversight, tracked as a separate future effort",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No \u2014 not the bottleneck; query times were normal",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "An unoptimized client-side rendering path re-ran the same computation on every scroll event",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 not expanding headcount at all; backfills exactly one earlier departure",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "No \u2014 independent of the other three: not motivated by their findings; doesn't block or unblock any",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "No \u2014 independent of the audit: no dependency either way; shared quarter is scheduling coincidence only",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Independent peers \u2014 genuinely independent: none is a sub-part of another, none depends on another finishing first, no shared theme beyond the quarter",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Database: explicitly ruled out as the cause: not the bottleneck; query times were normal / Root cause: unoptimized client-side rendering path re-ran the same computation on every scroll event",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "independent of the audit: a. no dependency either way / b. shared quarter is scheduling coincidence only",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "independent of the other three: a. not motivated by their findings / b. doesn't block or unblock any",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "genuinely independent of each other: a. none is a sub-part of another b. none depends on another finishing first c. no shared theme beyond the quarter",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "\u25b8 Independence",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f12": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f13": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f14": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f15": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f16": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f19": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f20": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f5": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "",
+        "status": "omitted"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "unanswerable from this outline; only a bare 'Exclusion' label is given with no content",
+        "verdict": "unanswerable"
+      },
+      "q2": {
+        "answer_given": "unanswerable; no content under 'Exclusion' or elsewhere addresses oversight vs. deliberate scoping",
+        "verdict": "unanswerable"
+      },
+      "q3": {
+        "answer_given": "unanswerable; the 'Database' label gives no indication of the outcome",
+        "verdict": "unanswerable"
+      },
+      "q4": {
+        "answer_given": "unanswerable; 'Root cause' is a bare label with no content",
+        "verdict": "unanswerable"
+      },
+      "q5": {
+        "answer_given": "unanswerable; 'Reality' is a bare label with no content",
+        "verdict": "unanswerable"
+      },
+      "q6": {
+        "answer_given": "unanswerable; 'Relation to workstreams' is a bare label with no polarity given",
+        "verdict": "unanswerable"
+      },
+      "q7": {
+        "answer_given": "unanswerable; 'Relation to audit' is a bare label with no polarity given",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "The workstreams appear to be independent (per the 'Independence' sub-heading), but no detail is given on shared themes or sub-parts",
+        "verdict": "partial"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "\u25b8 Independence",
+        "status": "partial"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "run this quarter, genuinely independent of each other",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "no dependency either way",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "sharing the quarter is scheduling coincidence only",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "dashboard was loading slowly for some users",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "\u25b8 Database \u21aa explicitly ruled out as the bottleneck (implies it was suspected, but 'first suspect' framing is not stated)",
+        "status": "partial"
+      },
+      "f14": {
+        "evidence": "explicitly ruled out as the bottleneck",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "query times were normal",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "unoptimized client-side rendering path that re-ran the same computation on every scroll event",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "not expanding headcount at all",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "backfilling exactly one earlier departure, nothing more",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "no connection to the other three",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "none is a sub-part of another, none depends on another finishing first",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "not motivated by their findings, doesn't block or unblock any of them",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "they share no theme beyond the quarter",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "reviews all first-party code for common vulnerability classes",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "explicitly does not cover third-party dependencies",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "not an oversight, tracked as a separate future effort",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "has not found any critical-severity issues so far; only a handful of low-severity findings, already fixed",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "rewrites the onboarding guide and API reference from scratch",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "both were found to describe an old version of the setup flow",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "The hiring push is 'sometimes assumed to mean the team is growing' (\u25b8 Perception)",
+        "note": "No gold fact states or implies that anyone perceives/assumes the hiring push means growth; this framing device is not supported by any gold fact.",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Third-party dependencies (explicitly does not cover third-party dependencies)",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Deliberate \u2014 not an oversight, tracked as a separate future effort",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No \u2014 explicitly ruled out as the bottleneck; query times were normal",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "An unoptimized client-side rendering path that re-ran the same computation on every scroll event",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 not expanding headcount at all; backfilling exactly one earlier departure, nothing more",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "No \u2014 no connection to the other three; not motivated by their findings, doesn't block or unblock any of them",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "No \u2014 no dependency either way; sharing the quarter is scheduling coincidence only",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Independent peers \u2014 genuinely independent, none is a sub-part of another, none depends on another finishing first, and they share no theme beyond the quarter",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Database: explicitly ruled out as the bottleneck; query times were normal / Root cause: unoptimized client-side rendering path that re-ran the same computation on every scroll event",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "no dependency either way; sharing the quarter is scheduling coincidence only",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "no connection to the other three; not motivated by their findings, doesn't block or unblock any of them",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "genuinely independent of each other: none is a sub-part of another, none depends on another finishing first, and they share no theme beyond the quarter",
+        "status": "retained"
+      }
+    }
+  }
+}

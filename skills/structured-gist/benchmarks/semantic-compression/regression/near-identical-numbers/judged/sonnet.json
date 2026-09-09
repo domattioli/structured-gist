@@ -1,0 +1,382 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "Timeout 30 seconds \u2192 5 seconds",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "Not a raw seconds change ... changed the timeout unit from seconds to a duration string",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "functionally keeps the same 30-second effective timeout, just changes how it's configured",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Target version 2.4.0-rc1",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "deploy was stopped mid-rollout after a health check check failure",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "Service D is still running its previous config, unchanged",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "Commit `abc1234` / File `config/service-a.yaml`",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "intentional: Service A was masking slow downstream failures by waiting too long",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the shorter timeout forces faster failure detection",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Timeout 30 seconds \u2192 45 seconds",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "Commit `def5678` / File `config/service-b.yaml`",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Service B was timing out on legitimate slow requests during nightly batch jobs",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "the timeout was raised to give those requests room to finish",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "Version \u2192 2.3.1 / File `config/service-c/timeout.toml`",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "four services shipped timeout-config changes this week",
+        "note": "gold facts contain no temporal information ('this week') for when these changes shipped",
+        "source_supported": true
+      },
+      {
+        "claim": "Meant to change timeout too (Service D bullet)",
+        "note": "gold facts state D's deploy was aborted and it still runs its previous config, but do not assert what the halted rollout was 'meant' to change \u2014 this is an inference not directly grounded in a fact",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "30 seconds \u2192 5 seconds",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "30 seconds \u2192 45 seconds",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No \u2014 'Opposite directions: A cut... to a sixth... B nearly doubled its own... opposite directions, opposite motivations'",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "abc1234 for A, def5678 for B",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 'functionally keeps the same 30-second effective timeout, just changes how it's configured'",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Target version 2.4.0-rc1; no, 'deploy was stopped mid-rollout after a health check failure'",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Its previous config, unchanged",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "A: was masking slow downstream failures by waiting too long, so shorter timeout forces faster detection. B: was timing out on legitimate slow nightly-batch requests, so timeout raised to give them room to finish",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "A cut its timeout to a sixth of its previous value (30 seconds \u2192 5 seconds); B nearly doubled its own (30 seconds \u2192 45 seconds) \u2014 opposite directions, opposite motivations",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "intentional: Service A was masking slow downstream failures by waiting too long, so the shorter timeout forces faster failure detection",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "opposite fix: Service B was timing out on legitimate slow requests during nightly batch jobs, so the timeout was raised to give those requests room to finish",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "Not a raw seconds change ... functionally keeps the same 30-second effective timeout, just changes how it's configured",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "`abc1234` (A) versus `def5678` (B) \u2014 different commits that look superficially similar as short hashes",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "deploy was stopped mid-rollout after a health check failure; Service D is still running its previous config, unchanged",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "A. Service A = timeout 30 seconds \u2192 5 seconds",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "seconds \u2192 duration string (does not state this is NOT a raw seconds change)",
+        "status": "partial"
+      },
+      "f11": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f12": {
+        "evidence": "D. Service D = aborted, target 2.4.0-rc1",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "D. Service D = aborted (no mention of health-check failure or 'mid-rollout')",
+        "status": "partial"
+      },
+      "f14": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f5": {
+        "evidence": "B. Service B = timeout 30 seconds \u2192 45 seconds",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "C. Service C = version 2.3.1, seconds \u2192 duration string (file path config/service-c/timeout.toml not given)",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "30 seconds \u2192 5 seconds",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "30 seconds \u2192 45 seconds",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No, opposite directions (per 'A/B confusion risk: A. opposite directions')",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Not stated \u2014 skim only says 'similar-looking commits' without giving actual hash values",
+        "verdict": "unanswerable"
+      },
+      "q5": {
+        "answer_given": "Not stated \u2014 skim shows 'seconds \u2192 duration string' but never says whether the effective value changed",
+        "verdict": "unanswerable"
+      },
+      "q6": {
+        "answer_given": "Target 2.4.0-rc1; aborted (implies not completed)",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Not stated \u2014 skim only says 'aborted', no mention of which config it's running",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "Not stated \u2014 no rationale given for either service",
+        "verdict": "unanswerable"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "A. opposite directions",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r5": {
+        "evidence": "B. similar-looking commits (no actual hash values given)",
+        "status": "partial"
+      },
+      "r6": {
+        "evidence": "",
+        "status": "lost"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Timeout 30 seconds \u2192 5 seconds, commit `abc1234`",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "seconds \u2192 duration string",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "functionally the same 30-second effective timeout, just reconfigured",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Aborted, target version 2.4.0-rc1",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "stopped mid-rollout after a health check failure",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "still running previous config",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "commit `abc1234` given, but file config/service-a.yaml not mentioned",
+        "status": "partial"
+      },
+      "f3": {
+        "evidence": "was masking slow downstream failures; shorter timeout forces faster failure detection",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "shorter timeout forces faster failure detection",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Timeout 30 seconds \u2192 45 seconds, commit `def5678`",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "commit `def5678` given, but file config/service-b.yaml not mentioned",
+        "status": "partial"
+      },
+      "f7": {
+        "evidence": "was timing out legitimate slow requests during nightly batch jobs",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "raised for headroom",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "Version 2.3.1, seconds \u2192 duration string (file config/service-c/timeout.toml not mentioned)",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "four services changed timeouts this week",
+        "note": "gold facts contain no temporal information ('this week') for when these changes shipped",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "30 seconds \u2192 5 seconds",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "30 seconds \u2192 45 seconds",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No \u2014 'Opposite directions: A cut to a sixth of its value... B nearly doubled its own'",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "abc1234 for A, def5678 for B",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 'functionally the same 30-second effective timeout, just reconfigured'",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Target version 2.4.0-rc1; no, 'Aborted... stopped mid-rollout after a health check failure'",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Still running previous config",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "A: was masking slow downstream failures, shorter timeout forces faster detection. B: was timing out legitimate slow requests during nightly batch jobs, raised for headroom",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "A cut to a sixth of its value (30 seconds \u2192 5 seconds); B nearly doubled its own (30 seconds \u2192 45 seconds)",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "was masking slow downstream failures; shorter timeout forces faster failure detection",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "was timing out legitimate slow requests during nightly batch jobs; raised for headroom",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "functionally the same 30-second effective timeout, just reconfigured (but the file/version 'looks like a real change' framing is thin since file path is omitted)",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "`abc1234` versus `def5678` \u2014 similarly short, easy to mix up",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "stopped mid-rollout after a health check failure; still running previous config",
+        "status": "retained"
+      }
+    }
+  }
+}

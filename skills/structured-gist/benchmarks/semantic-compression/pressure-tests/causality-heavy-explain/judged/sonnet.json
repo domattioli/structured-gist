@@ -1,0 +1,467 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "Synchronous design",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "the same loop runs hot enough to cascade",
+        "status": "partial"
+      },
+      "f11": {
+        "evidence": "the loop stays small enough to go unnoticed",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "queue depth grows faster than drains",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "receiver ends up spending most of",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "the peak-traffic cascade drove the decision",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "receiver acknowledges the sender right",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "enrichment work goes to a worker process",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "so the two are",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "a slow downstream call no longer produces a",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "no timeout means no retry",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "handler called the downstream enrichment",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "is gone entirely, not just",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "already slow under normal conditions,",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "because the handler waited synchronously,",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "some calls ran long",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "senders that see a timeout assume failure",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "produced a retry",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "each retry was itself a new synchronous",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "added pressure instead of relieving it",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "timeouts hit a meaningful fraction of requests",
+        "note": "Gold f5 only states 'some calls' ran long enough to exceed the timeout under real load; the outline's 'meaningful fraction of requests' quantifies the incidence beyond anything gold actually asserts.",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The peak-traffic cascade drove the decision to put a message queue in front of the enrichment step.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Because the handler waited synchronously, a slow call held the sender's connection open for that same duration, which then ran long enough to exceed the sender's timeout.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Each retry was itself a new synchronous call to the same slow endpoint, so retries added pressure instead of relieving it.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No \u2014 the loop stayed small enough to go unnoticed during ordinary traffic; it only ran hot enough to cascade during peak traffic.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 receiver latency no longer depends on enrichment latency (decoupled), so a slow downstream call no longer produces a sender-facing timeout.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Fully eliminated \u2014 'the specific retry-storm failure mode that caused the cascades is gone entirely, not just less frequent.'",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "A worker process handles enrichment work instead of it being done inline.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Acknowledgement happens first, immediately on receipt, instead of waiting on enrichment; hand-off to the worker happens after.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "because the handler waited synchronously,",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "some calls ran long",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "and retry by design, so every timeout",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "call to the same slow endpoint, so retries",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "the same loop runs hot enough to cascade",
+        "status": "partial"
+      },
+      "r6": {
+        "evidence": "the same loop runs hot enough to cascade",
+        "status": "retained"
+      },
+      "r7": {
+        "evidence": "the peak-traffic cascade drove the decision",
+        "status": "retained"
+      },
+      "r8": {
+        "evidence": "no timeout means no retry",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "Synchronous design",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "Feedback loop",
+        "status": "partial"
+      },
+      "f11": {
+        "evidence": "ordinary traffic",
+        "status": "partial"
+      },
+      "f12": {
+        "evidence": "peak traffic",
+        "status": "partial"
+      },
+      "f13": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f14": {
+        "evidence": "Queue-based redesign",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "acknowledge immediately",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "hand off to worker",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "no timeout",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "no retry",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "connection held open",
+        "status": "partial"
+      },
+      "f20": {
+        "evidence": "failure mode gone",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "connection held open",
+        "status": "partial"
+      },
+      "f5": {
+        "evidence": "sender timeouts",
+        "status": "partial"
+      },
+      "f6": {
+        "evidence": "automatic retry",
+        "status": "partial"
+      },
+      "f7": {
+        "evidence": "automatic retry",
+        "status": "partial"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "retry adds load",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Not stated; the outline only shows 'Queue-based redesign' as a section following 'Feedback loop' with no reason given.",
+        "verdict": "unanswerable"
+      },
+      "q2": {
+        "answer_given": "Connection held open (listed first under Synchronous design, before sender timeouts), but no cause is stated for why.",
+        "verdict": "partial"
+      },
+      "q3": {
+        "answer_given": "Retries added load (item IV), but no reason given for why they added rather than relieved load.",
+        "verdict": "partial"
+      },
+      "q4": {
+        "answer_given": "Unclear; 'ordinary traffic' and 'peak traffic' are listed as bare labels with no description of either.",
+        "verdict": "unanswerable"
+      },
+      "q5": {
+        "answer_given": "No \u2014 'no timeout' is listed under 'Retry storm eliminated'.",
+        "verdict": "partial"
+      },
+      "q6": {
+        "answer_given": "Fully gone \u2014 'failure mode gone' is listed as its own item.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "A worker process ('hand off to worker').",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Acknowledge immediately is listed before hand off to worker, so acknowledgement happens first.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r5": {
+        "evidence": "Feedback loop",
+        "status": "partial"
+      },
+      "r6": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r7": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r8": {
+        "evidence": "",
+        "status": "lost"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Synchronous design",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "loop cascades until retries dominate the",
+        "status": "partial"
+      },
+      "f11": {
+        "evidence": "loop stays small enough to go unnoticed",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "loop cascades until retries dominate the",
+        "status": "partial"
+      },
+      "f13": {
+        "evidence": "retries dominate the",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "the peak-traffic cascade drove the decision",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "acknowledge immediately",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "hand off to worker",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "the two are decoupled",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "a slow call no longer produces a",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "no timeout means no retry",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "called the enrichment API directly, held",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "not just reduced",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "already slow under normal conditions,",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "I. connection held open",
+        "status": "partial"
+      },
+      "f5": {
+        "evidence": "II. sender timeouts",
+        "status": "partial"
+      },
+      "f6": {
+        "evidence": "III. automatic retry",
+        "status": "partial"
+      },
+      "f7": {
+        "evidence": "III. automatic retry",
+        "status": "partial"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "IV. retry adds load",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "The peak-traffic cascade drove the decision to queue enrichment instead of calling it inline.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "The handler called the enrichment API directly and held the connection open until it returned (Handler behavior), and the API was already slow (Downstream API); this is listed as producing 'connection held open' then 'sender timeouts' as direct effects.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Retries added load (item IV under Direct effects), but no explicit reason is given for why they add rather than relieve pressure.",
+        "verdict": "partial"
+      },
+      "q4": {
+        "answer_given": "No \u2014 the loop stays small enough to go unnoticed during ordinary traffic; it only cascades during peak traffic.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No \u2014 a slow call no longer produces a sender-facing timeout, because receiver latency is decoupled from enrichment latency.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "The retry-storm failure mode is gone entirely, not just reduced.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "A worker process, per the 'hand off to worker' step in the new flow.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Acknowledge immediately is step I, hand off to worker is step II, so acknowledgement happens first.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Direct effects",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r5": {
+        "evidence": "loop cascades until retries dominate the",
+        "status": "partial"
+      },
+      "r6": {
+        "evidence": "loop stays small enough to go unnoticed",
+        "status": "retained"
+      },
+      "r7": {
+        "evidence": "the peak-traffic cascade drove the decision",
+        "status": "retained"
+      },
+      "r8": {
+        "evidence": "no timeout means no retry",
+        "status": "retained"
+      }
+    }
+  }
+}

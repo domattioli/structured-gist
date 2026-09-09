@@ -1,0 +1,437 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "fully migrated, cutover completed last month",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "final decision now, not a scheduling delay",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "migrated, then rolled back; now fully reverted to old infrastructure",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "migrated two months ago / ran about three weeks",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "reverted after data-consistency bugs ... results lagged the source-of-truth db",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "now fully reverted to old infrastructure",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "whether to re-attempt is undecided",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "mid-migration, actively in progress",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "some endpoints on new infrastructure ... already serving production traffic",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "remaining endpoints on old infrastructure ... their own cutover not yet scheduled",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "only service on both infrastructures at once",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "old infrastructure fully decommissioned, no fallback even if wanted",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "not started, still fully on old infrastructure",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "scheduled next quarter",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "once billing's lessons update the runbook",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "still fully on old infrastructure",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "will not migrate, under current plan",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "bespoke compliance logic ... costly and risky to port",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "migration risk judged not worth the benefit",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "results lagged the source-of-truth db, unlike old infrastructure",
+        "note": "the 'unlike old infrastructure' comparison is not present in any gold fact or source_quote; it's an invented contrastive addition",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "bespoke compliance logic costly and risky to port; migration risk judged not worth the benefit",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "final decision now, not a scheduling delay",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "search-service",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "data-consistency bugs -> results lagged the source-of-truth db",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "reporting-service, only service on both infrastructures at once",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "next quarter",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "whether to re-attempt is undecided",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "scheduled next quarter, once billing's lessons update the runbook",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "risk vs benefit ... migration risk judged not worth the benefit / Finality: final decision now, not a scheduling delay",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "reverted after data-consistency bugs -> results lagged the source-of-truth db",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "old infrastructure fully decommissioned, no fallback even if wanted / now fully reverted to old infrastructure",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "will not migrate, under current plan / not started ... scheduled next quarter",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "Distinction: only service on both infrastructures at once",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "Status: done",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "Status: won't migrate",
+        "status": "partial"
+      },
+      "f11": {
+        "evidence": "Status: reverted",
+        "status": "partial"
+      },
+      "f12": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f13": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f14": {
+        "evidence": "Status: reverted",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f16": {
+        "evidence": "Status: in progress",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f18": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f19": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f3": {
+        "evidence": "Status: scheduled",
+        "status": "partial"
+      },
+      "f4": {
+        "evidence": "Status: scheduled",
+        "status": "partial"
+      },
+      "f5": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f6": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f7": {
+        "evidence": "Status: won't migrate",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "",
+        "status": "omitted"
+      }
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service (Status: won't migrate)",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "no reasoning given in outline",
+        "verdict": "unanswerable"
+      },
+      "q3": {
+        "answer_given": "not explicitly stated; 'won't migrate' is contrasted with 'scheduled' for notifications but finality is not asserted",
+        "verdict": "partial"
+      },
+      "q4": {
+        "answer_given": "search-service (Status: reverted)",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "no cause given in outline",
+        "verdict": "unanswerable"
+      },
+      "q6": {
+        "answer_given": "not stated; reporting-service only shows 'in progress' with no mention of running on both infrastructures at once",
+        "verdict": "unanswerable"
+      },
+      "q7": {
+        "answer_given": "not given; outline only says 'scheduled' with no timeframe",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "not mentioned in outline",
+        "verdict": "unanswerable"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "Status: done / Status: reverted",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "Status: won't migrate / Status: scheduled",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "",
+        "status": "lost"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "fully migrated; old infrastructure decommissioned, no fallback remains",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "final decision now, not a scheduling delay",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "migrated, ran about three weeks, then rolled back",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "ran about three weeks",
+        "status": "partial"
+      },
+      "f13": {
+        "evidence": "results lagged the source-of-truth database",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "now fully reverted",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "whether to re-attempt is undecided",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "mid-migration: some endpoints already cut to new infrastructure",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "some of its endpoints already cut to new infrastructure",
+        "status": "partial"
+      },
+      "f18": {
+        "evidence": "rest still on old awaiting their cutover",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "only service running on both infrastructures at once",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "old infrastructure decommissioned, no fallback remains",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "not started, still fully on old infrastructure",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "scheduled next quarter, after billing's lessons update the runbook",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "after billing's lessons update the runbook",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "still fully on old infrastructure",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "will not migrate under the current plan",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "compliance logic too costly and risky to port",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "risk judged not worth the benefit",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "results lagged the source-of-truth database, unlike old infrastructure",
+        "note": "the 'unlike old infrastructure' comparison is not present in any gold fact or source_quote; it's an invented contrastive addition",
+        "source_supported": true
+      }
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "compliance logic too costly and risky to port; risk judged not worth the benefit",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "final decision now, not a scheduling delay",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "search-service",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "results lagged the source-of-truth database",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "reporting-service, only service running on both infrastructures at once",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "next quarter",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "whether to re-attempt is undecided",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "scheduled next quarter, after billing's lessons update the runbook",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "Reasoning ... risk judged not worth the benefit / Finality: final decision now, not a scheduling delay",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "Rollback cause: results lagged the source-of-truth database",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "old infrastructure decommissioned, no fallback remains / now fully reverted",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "will not migrate under the current plan / not started ... scheduled next quarter",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "Distinction: only service running on both infrastructures at once",
+        "status": "retained"
+      }
+    }
+  }
+}
