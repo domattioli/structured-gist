@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-Deterministic pytest tests for scoring/combine.py's arithmetic, focused on
-the semantic-sufficiency formalization: `semantic_sufficiency` must be the
-exact same number as the historical `weighted_retention` (an alias, not an
-independently computed metric), and the new case-level `intent` /
-per-fact `weight_reason` schema fields must not be consumed by any
-arithmetic -- they exist only to make an already-computed weight
-interpretable.
+Deterministic pytest tests for scoring/combine.py's arithmetic:
+`task_weighted_fact_retention` must be the exact same number as the
+historical `weighted_retention` (an alias, not an independently computed
+metric); the new case-level `intent` / per-fact `weight_reason` schema
+fields must not be consumed by any arithmetic -- they exist only to make
+an already-computed weight interpretable, not to prove it was task-derived;
+an empty fact list must not fabricate a 0.0 retention score; and a
+hallucination entry with no `source_supported` verdict yet must count as
+unverified, never as silently unsupported.
 """
 import sys
 from pathlib import Path
@@ -46,7 +48,7 @@ RELATIONS = [
 QUESTIONS = [{"id": "q1", "question": "?", "gold_answer": "a", "fact_ids": ["f1"]}]
 
 
-def test_semantic_sufficiency_matches_hand_calculation():
+def test_task_weighted_fact_retention_matches_hand_calculation():
     gold = _gold(FACTS, RELATIONS, QUESTIONS)
     verdict = _verdict(
         {"f1": "retained", "f2": "partial", "f3": "omitted"},
@@ -54,13 +56,13 @@ def test_semantic_sufficiency_matches_hand_calculation():
         {"q1": "correct"},
     )
     result = score_semantic(gold, verdict)
-    assert result["semantic_sufficiency"] == 0.5833
+    assert result["task_weighted_fact_retention"] == 0.5833
     assert result["unweighted_retention"] == round((1.0 + 0.5 + 0.0) / 3, 4)
     assert result["relation_retention"] == 0.5
     assert result["recoverability"] == 1.0
 
 
-def test_weighted_retention_is_an_exact_alias_of_semantic_sufficiency():
+def test_weighted_retention_is_an_exact_alias_of_task_weighted_fact_retention():
     gold = _gold(FACTS, RELATIONS, QUESTIONS)
     for fact_status in (
         {"f1": "retained", "f2": "retained", "f3": "retained"},
@@ -69,20 +71,20 @@ def test_weighted_retention_is_an_exact_alias_of_semantic_sufficiency():
     ):
         verdict = _verdict(fact_status)
         result = score_semantic(gold, verdict)
-        assert result["weighted_retention"] == result["semantic_sufficiency"]
+        assert result["weighted_retention"] == result["task_weighted_fact_retention"]
 
 
 def test_mutated_scores_as_zero_like_omitted():
     gold = _gold(FACTS)
     mutated = score_semantic(gold, _verdict({"f1": "mutated", "f2": "omitted", "f3": "omitted"}))
     omitted = score_semantic(gold, _verdict({"f1": "omitted", "f2": "omitted", "f3": "omitted"}))
-    assert mutated["semantic_sufficiency"] == omitted["semantic_sufficiency"]
+    assert mutated["task_weighted_fact_retention"] == omitted["task_weighted_fact_retention"]
 
 
 def test_missing_fact_status_defaults_to_omitted():
     gold = _gold(FACTS)
     result = score_semantic(gold, _verdict({}))
-    assert result["semantic_sufficiency"] == 0.0
+    assert result["task_weighted_fact_retention"] == 0.0
 
 
 def test_intent_and_weight_reason_do_not_affect_arithmetic():
@@ -112,13 +114,17 @@ def test_missing_intent_and_weight_reason_handled_deliberately():
     """gold.json without `intent` or any `weight_reason` must still score cleanly."""
     gold = _gold(FACTS)  # no "intent" key, no fact carries "weight_reason"
     result = score_semantic(gold, _verdict({"f1": "retained", "f2": "retained", "f3": "retained"}))
-    assert result["semantic_sufficiency"] == 1.0
+    assert result["task_weighted_fact_retention"] == 1.0
 
 
-def test_no_facts_does_not_divide_by_zero():
+def test_no_facts_is_not_applicable_not_zero():
+    """A case with zero gold facts has nothing to score retention against --
+    that's None (not applicable), never a fabricated 0.0 ('nothing important
+    survived')."""
     gold = _gold([])
     result = score_semantic(gold, _verdict({}))
-    assert result["semantic_sufficiency"] == 0.0
+    assert result["task_weighted_fact_retention"] is None
+    assert result["weighted_retention"] is None
     assert result["unweighted_retention"] is None
 
 
@@ -133,7 +139,27 @@ def test_unsupported_claim_correction_unaffected_by_this_change():
     )
     result = score_semantic(gold, verdict)
     assert result["unsupported_claim_count"] == 1
+    assert result["unverified_claim_count"] == 0
     assert result["flagged_vs_gold_count"] == 2
+
+
+def test_missing_source_supported_counts_as_unverified_not_unsupported():
+    """A hallucination entry that hasn't been checked against source.md yet
+    (no `source_supported` key at all) must not silently read as
+    'confirmed unsupported' -- it's unknown, tracked separately."""
+    gold = _gold(FACTS)
+    verdict = _verdict(
+        {"f1": "retained", "f2": "retained", "f3": "retained"},
+        hallucinations=[
+            {"claim": "not yet checked against source.md"},
+            {"claim": "confirmed unsupported", "source_supported": False},
+            {"claim": "confirmed supported", "source_supported": True},
+        ],
+    )
+    result = score_semantic(gold, verdict)
+    assert result["unsupported_claim_count"] == 1
+    assert result["unverified_claim_count"] == 1
+    assert result["flagged_vs_gold_count"] == 3
 
 
 def test_score_semantic_is_deterministic():
