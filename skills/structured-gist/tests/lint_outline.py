@@ -231,6 +231,38 @@ def count_words(text: str) -> int:
 _STRAY_LEADING_MARKER = re.compile(r'^(•|→|↪|▸|-)\s')
 
 
+def r9_arrow_chain_violation(text: str) -> Optional[str]:
+    """
+    Return a short reason string if an arrow-family (`↪`/leading `→`) node's
+    TEXT itself chains multiple facts under one marker — SKILL.md R9: "A
+    chained mid-line → (X → Y; Z → W) packs multiple facts under one marker
+    and trips R9 the same way, while a single X → Y causality idiom (≤2-word
+    tail) stays exempt." Two chain shapes trip this:
+    - 2+ mid-line `→` occurrences (e.g. "first fact → changed; second fact →
+      broke")
+    - a `;`-joined run of 3+ facts (2+ semicolons), arrows or not (e.g.
+      "first fact; second fact; third fact")
+    A single arrow with no semicolon, or a single semicolon splitting only
+    two facts, stays exempt — the one-arrow / short-compound-sentence
+    idiom the `↪` leaf is meant to carry.
+    """
+    # strip inline code spans and HTML entities, same as r9_delimiter_violation
+    t = re.sub(r'`[^`]*`', '', text)
+    t = re.sub(r'&#?\w+;', ' ', t)
+    if t.startswith('**') and t.endswith('**'):
+        t = t[2:-2]
+
+    arrow_count = len(re.findall(r'→', t))
+    if arrow_count >= 2:
+        return f"{arrow_count} mid-line arrows chain multiple facts under one marker — nest each as a child"
+
+    segment_count = len([seg for seg in t.split(';') if seg.strip()])
+    if segment_count >= 3:
+        return f"{segment_count} facts joined by ';' under one marker — nest each as a child"
+
+    return None
+
+
 def r9_delimiter_violation(text: str) -> Optional[str]:
     """
     Return a short reason string if `text` appends >2 words after a delimiter
@@ -422,21 +454,33 @@ def lint_text(text: str) -> List[Violation]:
                     break # new top-level block
                 block_end += 1
 
-            # Count arrows at any depth, and non-arrow enumerators at depth 1
+            # Count LEAF arrows (arrow-rarity is about prose sprawl, not
+            # structural branch-preview arrows — a non-leaf `↪` that
+            # previews its own subtree (R4) IS structure, not extra prose,
+            # so it must not count against the ratio the same way a leaf
+            # arrow does), against non-arrow nodes at ANY depth in the
+            # block (not just depth 1 — a deep tree's enumerators living
+            # at depth >= 2 are real structural siblings of depth-2 arrow
+            # leaves and must count too, or a perfectly balanced deep
+            # outline gets flagged for no reason).
             arrow_count = 0
-            depth1_non_arrow_count = 0
+            non_arrow_count = 0
             for j in range(block_start + 1, block_end):
                 _, jdepth, jfamily, _, _ = parsed[j]
                 if jfamily == 'arrow':
-                    arrow_count += 1
-                elif jdepth == 1 and jfamily != 'arrow':
-                    depth1_non_arrow_count += 1
+                    has_children = (
+                        j + 1 < block_end and parsed[j + 1][1] > jdepth
+                    )
+                    if not has_children:
+                        arrow_count += 1
+                else:
+                    non_arrow_count += 1
 
-            if arrow_count > depth1_non_arrow_count:
+            if arrow_count > non_arrow_count:
                 for j in range(block_start + 1, block_end):
                     _, jdepth, jfamily, jtext, _ = parsed[j]
                     if jfamily == 'arrow':
-                        violations.append((parsed[j][0], 'R5', f"too many arrows ({arrow_count}) vs depth-1 non-arrow nodes ({depth1_non_arrow_count}) in block"))
+                        violations.append((parsed[j][0], 'R5', f"too many arrows ({arrow_count}) vs non-arrow nodes ({non_arrow_count}) in block"))
                         break # Report once per block
 
             i = block_end
@@ -521,6 +565,13 @@ def lint_text(text: str) -> List[Violation]:
     # should split the tail into a nested child. Arrow (↪) leaves are exempt.
     for lineno, _depth, family, text, _line in parsed:
         if family == 'arrow':
+            # Arrow (↪) leaves are the prose home — a colon/dash/arrow
+            # *inside* a single sentence is fine (SKILL.md R9 exemptions).
+            # But a CHAINED mid-line arrow or ';'-joined multi-fact run
+            # packs several facts under one marker and still trips R9.
+            reason = r9_arrow_chain_violation(text)
+            if reason is not None:
+                violations.append((lineno, 'R9', reason))
             continue
         reason = r9_delimiter_violation(text)
         if reason is not None:

@@ -389,6 +389,75 @@ else
 fi
 
 # ---------------------------------------------------------------------------
+# 31. Linter tests: bad_r9_arrow_splice.md fails with R9 (chained mid-line →)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/bad_r9_arrow_splice.md"
+if [ -f "$fixture_file" ]; then
+  output=$(python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" 2>&1) && rc=0 || rc=$?
+  has_r9=$(grep -q "\[R9\]" <<< "$output" && echo 1 || echo 0)
+  [ "$rc" -eq 1 ] && [ "$has_r9" -eq 1 ] && assert "bad_r9_arrow_splice.md fails with R9" 0 || assert "bad_r9_arrow_splice.md fails with R9" 1
+else
+  assert "bad_r9_arrow_splice.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 32. Linter tests: bad_r10_arrow_multi.md fails with R9 (';'-joined chain)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/bad_r10_arrow_multi.md"
+if [ -f "$fixture_file" ]; then
+  output=$(python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" 2>&1) && rc=0 || rc=$?
+  has_r9=$(grep -q "\[R9\]" <<< "$output" && echo 1 || echo 0)
+  [ "$rc" -eq 1 ] && [ "$has_r9" -eq 1 ] && assert "bad_r10_arrow_multi.md fails with R9" 0 || assert "bad_r10_arrow_multi.md fails with R9" 1
+else
+  assert "bad_r10_arrow_multi.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 33. Linter tests: good_arrow_branch_preview.md lints clean (R5 ratio fix)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_arrow_branch_preview.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_arrow_branch_preview.md lints clean (exit 0)" 0 || assert "good_arrow_branch_preview.md lints clean (exit 0)" 1
+else
+  assert "good_arrow_branch_preview.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 34. Linter tests: good_r5_deep_arrows.md lints clean (R5 ratio fix)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_r5_deep_arrows.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_r5_deep_arrows.md lints clean (exit 0)" 0 || assert "good_r5_deep_arrows.md lints clean (exit 0)" 1
+else
+  assert "good_r5_deep_arrows.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 35. Linter tests: good_r2_no_skip.md lints clean (R2 coverage)
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_r2_no_skip.md"
+if [ -f "$fixture_file" ]; then
+  python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_r2_no_skip.md lints clean (exit 0)" 0 || assert "good_r2_no_skip.md lints clean (exit 0)" 1
+else
+  assert "good_r2_no_skip.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
+# 36. Linter tests: bad_r2_skip_rung.md fails with R2
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/bad_r2_skip_rung.md"
+if [ -f "$fixture_file" ]; then
+  output=$(python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" 2>&1) && rc=0 || rc=$?
+  has_r2=$(grep -q "\[R2\]" <<< "$output" && echo 1 || echo 0)
+  [ "$rc" -eq 1 ] && [ "$has_r2" -eq 1 ] && assert "bad_r2_skip_rung.md fails with R2" 0 || assert "bad_r2_skip_rung.md fails with R2" 1
+else
+  assert "bad_r2_skip_rung.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
 # Summary
 # ---------------------------------------------------------------------------
 echo

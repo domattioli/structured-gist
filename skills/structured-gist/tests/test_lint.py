@@ -435,6 +435,57 @@ class TestBadFixtures:
         violations = lint_file(str(bad_file))
         assert violations, "bad_responsive_dash_at_depth1.md should have violations"
 
+    def test_good_r2_no_skip_passes(self, fixtures_dir):
+        """Test that good_r2_no_skip.md (proper depth progression) lints cleanly."""
+        good_file = fixtures_dir / 'good_r2_no_skip.md'
+        assert good_file.exists(), f"good_r2_no_skip.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_r2_no_skip.md has violations: {violations}"
+
+    def test_bad_r2_skip_rung_caught(self, fixtures_dir):
+        """Test that bad_r2_skip_rung.md (skipped rung) is caught (R2 violation)."""
+        bad_file = fixtures_dir / 'bad_r2_skip_rung.md'
+        assert bad_file.exists(), f"bad_r2_skip_rung.md not found at {bad_file}"
+        violations = lint_file(str(bad_file))
+        assert violations, "bad_r2_skip_rung.md should have violations"
+        rule_ids = [v[1] for v in violations]
+        assert 'R2' in rule_ids, f"Expected R2 violation, got: {violations}"
+
+    def test_bad_r9_arrow_splice_caught(self, fixtures_dir):
+        """A chained-arrow explanation node (X → Y; Z → W) must trip R9 even
+        though it lives on a `↪` line — arrow nodes are not blanket-exempt."""
+        bad_file = fixtures_dir / 'bad_r9_arrow_splice.md'
+        assert bad_file.exists(), f"bad_r9_arrow_splice.md not found at {bad_file}"
+        violations = lint_file(str(bad_file))
+        rule_ids = [v[1] for v in violations]
+        assert 'R9' in rule_ids, f"Expected R9 violation, got: {violations}"
+
+    def test_bad_r10_arrow_multi_caught(self, fixtures_dir):
+        """A `;`-joined 3-fact chain under one `↪` marker must trip R9."""
+        bad_file = fixtures_dir / 'bad_r10_arrow_multi.md'
+        assert bad_file.exists(), f"bad_r10_arrow_multi.md not found at {bad_file}"
+        violations = lint_file(str(bad_file))
+        rule_ids = [v[1] for v in violations]
+        assert 'R9' in rule_ids, f"Expected R9 violation, got: {violations}"
+
+    def test_good_arrow_branch_preview_passes(self, fixtures_dir):
+        """A legitimate non-leaf branch-preview `↪` (first child, no depth-1
+        sibling enumerator) must lint clean — regression for the R5
+        arrow-rarity ratio false positive."""
+        good_file = fixtures_dir / 'good_arrow_branch_preview.md'
+        assert good_file.exists(), f"good_arrow_branch_preview.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_arrow_branch_preview.md has violations: {violations}"
+
+    def test_good_r5_deep_arrows_passes(self, fixtures_dir):
+        """A deep outline whose leaf arrows are balanced by non-arrow
+        enumerators at depth >= 2 must lint clean — R5's denominator must
+        count non-arrow nodes at any depth, not only depth 1."""
+        good_file = fixtures_dir / 'good_r5_deep_arrows.md'
+        assert good_file.exists(), f"good_r5_deep_arrows.md not found at {good_file}"
+        violations = lint_file(str(good_file))
+        assert not violations, f"good_r5_deep_arrows.md has violations: {violations}"
+
 
 class TestNormativeBlocks:
     """Test that EVERY fenced block in normative files lints cleanly."""
