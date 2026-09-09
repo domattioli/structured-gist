@@ -41,13 +41,13 @@ This section is itself rendered in structured-gist's `block` mode, not written b
 ```text
 - Governing concepts
     ▸ Marker laddering
-        a. concept
+        a. concept ('-')
             ↪ top-level claim, outermost depth, ~3 words
-        b. attribute
+        b. attribute ('▸')
             ↪ has a ___, not a part
-        c. enumerator
+        c. enumerator ('I./A./i./a.')
             ↪ ordered or grouped parts, family by depth
-        d. explanation
+        d. explanation ('↪')
             ↪ only node with full prose, compression-exempt
     ▸ Render modes
         a. block
