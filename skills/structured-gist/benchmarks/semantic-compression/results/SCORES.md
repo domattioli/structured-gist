@@ -10,7 +10,7 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 - `real-benchmark-archaeology` -- reader: a teammate resuming an in-progress investigation; task: know what's already established, what's still unresolved, and which named identifiers to search for next.
 - `real-hook-discovery` -- reader: an engineer resuming this debugging thread later, or a teammate picking it up cold; task: confirm what broke, why, and whether the fix is complete enough to trust without re-reading the full investigation.
 
-| case | tier | level | src_w | out_w | reduction% | conform_viol | semSufficiency | relRetention | omission% | unsupported_claims | recoverability |
+| case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | near-identical-numbers | sonnet | skim | 276 | 50 | 81.88 | 0 | 0.3115 | 0.25 | 57.1 | 0 | 0.5 |
 | near-identical-numbers | sonnet | standard | 276 | 160 | 42.03 | 7 | 0.9508 | 0.9167 | 0 | 0 | 1.0 |
@@ -32,7 +32,7 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 - `negation-and-true-peers` -- reader: a stakeholder getting a status update spanning several unrelated workstreams; task: know what did and did NOT happen in each workstream independently, without inferring a shared cause or hierarchy that isn't there. _negations here are load-bearing -- dropping a negation changes what the fact means, not just how much detail survives_
 - `synthetic-scale-verylarge` -- reader: someone triaging a large weekly ops digest under time pressure; task: find the one item that actually needs attention among many that don't, without reading the full source. _most 'outcome' facts here are deliberately low-weight because they are resolved noise (f2-f4, f14-f15); f10-f12 (the true root cause and its unresolved status) are weighted high because missing them defeats the reader's actual task even though they share a category with the noise facts_
 
-| case | tier | level | src_w | out_w | reduction% | conform_viol | semSufficiency | relRetention | omission% | unsupported_claims | recoverability |
+| case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | causality-heavy-explain | sonnet | skim | 369 | 51 | 86.18 | 0 | 0.5556 | 0.0625 | 20.0 | 0 | 0.5625 |
 | causality-heavy-explain | sonnet | standard | 369 | 166 | 55.01 | 6 | 0.8 | 0.5625 | 5.0 | 0 | 0.9375 |

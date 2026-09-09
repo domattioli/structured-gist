@@ -15,24 +15,35 @@ Score encoding for a fact/relation status, used throughout:
 (mutated counts as 0 for retention -- it is a DIFFERENT failure mode from
 omission, tracked separately, never averaged into "the fact came through OK".)
 
-Semantic sufficiency: sum(weight_i * retention_i) / sum(weight_i) over a
-case's gold facts -- "how much of the information that matters to the
-case's intended reader/task survived the transformation." This is the same
-arithmetic this suite has always run under the name `weighted_retention`;
-`semantic_sufficiency` is the formal name for that number going forward.
-Both keys are emitted with an identical value -- `weighted_retention` is
-kept only because README.md/RESULTS.md quote baselines like "wRetention >=
-0.95" and this suite doesn't want two independently-computed metrics that
-mean the same thing. See README.md "Semantic sufficiency" and "Weight
-semantics" for what a fact's `weight` means now (importance to the case's
-stated `intent.reader`/`intent.task`, with category as a default heuristic,
-not a universal importance ranking) and why baselines are observed
-reference points, not a formal definition of sufficiency.
+Task-weighted fact retention: sum(weight_i * retention_i) / sum(weight_i)
+over a case's gold facts -- "what fraction of the (weighted) gold facts
+survived the transformation." This is the same arithmetic this suite has
+always run under the name `weighted_retention`; `task_weighted_fact_retention`
+is the precise name for that number going forward, chosen instead of the
+previously-used `semantic_sufficiency` -- see README.md "Semantic
+sufficiency vs. task-weighted fact retention". This scalar measures retained,
+*weighted* facts. It does NOT itself measure relationship preservation
+(that's `relation_retention`, computed separately below) and does NOT itself
+prove task completion -- "semantic sufficiency" is the broader question of
+whether enough of what matters to the task survived, and this suite answers
+that with a profile of independent dimensions, not one scalar. See
+README.md "Weight semantics" for what a fact's `weight` currently means: it
+was assigned primarily by a category default (decision/constraint/negation/
+failure ~3, cause_rationale/outcome/next_action ~2.5, unresolved_question ~2,
+descriptive ~1), NOT derived from each case's `intent.reader`/`intent.task`
+-- intent was added after the fact to make weights *interpretable*, not to
+prove they are already task-sensitive. Both `task_weighted_fact_retention`
+and `weighted_retention` are emitted with an identical value --
+`weighted_retention` is kept only because README.md/RESULTS.md quote
+baselines like "wRetention >= 0.95" and this suite doesn't want two
+independently-computed metrics that mean the same thing. No third,
+independently-named alias is emitted for this number.
 
 Scoring dimensions reported (decomposable, no master scalar):
-    semantic_sufficiency (= weighted_retention), unweighted_retention,
+    task_weighted_fact_retention (= weighted_retention), unweighted_retention,
     relation_retention, recoverability, unsupported_claim_count,
-    conformance_violation_count, reduction_pct / compression_ratio
+    unverified_claim_count, conformance_violation_count,
+    reduction_pct / compression_ratio
 
 No compression-adjusted "density" composite is computed. Round-1 evidence
 (see ../RESULTS.md) showed every meaning-per-word formula tried is
@@ -42,14 +53,17 @@ resurrect one here.
 Hallucination / unsupported-claim correction: a judge here never sees
 source.md, so "no matching gold fact" is not proof a claim is unsupported —
 gold's fact list is a curated subset of the source, not an exhaustive one.
-Every hallucination entry in judged/*.json therefore carries a
+Every hallucination entry in judged/*.json is expected to carry a
 `source_supported` boolean, set by checking the claim directly against
 source.md (see RESULTS.md "Hallucination correction" for how the current
-values were verified). Only entries with source_supported=false count
-toward `unsupported_claim_count`, the canonical metric. The raw judge-flagged
-count is preserved as `flagged_vs_gold_count` for transparency but is NOT
-the metric to gate on -- round 1 found it overcounts by roughly 20-to-0 on
-this corpus.
+values were verified). Only entries with an explicit source_supported=false
+count toward `unsupported_claim_count`, the canonical "confirmed unsupported"
+metric. An entry that omits `source_supported` entirely (not yet adjudicated)
+is neither counted as unsupported nor silently dropped -- it counts toward
+`unverified_claim_count` instead, so "unknown" is never conflated with
+"confirmed unsupported". The raw judge-flagged count is preserved as
+`flagged_vs_gold_count` for transparency but is NOT the metric to gate on --
+round 1 found it overcounts by roughly 20-to-0 on this corpus.
 """
 import json
 import statistics
@@ -79,7 +93,6 @@ def score_semantic(gold: dict, verdict: dict) -> dict:
     qv = verdict.get("questions", {})
     halluc = verdict.get("hallucinations", [])
 
-    total_weight = sum(f["weight"] for f in facts) or 1.0
     weighted_units = 0.0
     unweighted_units = 0.0
     n_omitted = 0
@@ -95,8 +108,16 @@ def score_semantic(gold: dict, verdict: dict) -> dict:
         if st == "mutated":
             n_mutated += 1
 
-    semantic_sufficiency = weighted_units / total_weight
-    unweighted_retention = unweighted_units / len(facts) if facts else None
+    # A case with no gold facts has nothing to score retention against --
+    # that is "not applicable", not "0% of important meaning survived".
+    # Report None rather than dividing by a fabricated denominator.
+    if facts:
+        total_weight = sum(f["weight"] for f in facts)
+        task_weighted_fact_retention = weighted_units / total_weight
+        unweighted_retention = unweighted_units / len(facts)
+    else:
+        task_weighted_fact_retention = None
+        unweighted_retention = None
 
     rel_scores = [
         {"retained": 1.0, "partial": 0.5, "lost": 0.0}.get(
@@ -112,22 +133,30 @@ def score_semantic(gold: dict, verdict: dict) -> dict:
     ]
     recoverability = (sum(q_scores) / len(q_scores)) if q_scores else None
 
-    unsupported = [h for h in halluc if not h.get("source_supported", False)]
+    # source_supported is a tri-state, not a bool: an entry may be
+    # confirmed-unsupported (False), confirmed-supported (True), or not yet
+    # checked against source.md at all (key absent). Only the first counts
+    # as "unsupported" -- an absent key must never silently read as False.
+    unsupported = [h for h in halluc if h.get("source_supported") is False]
+    unverified = [h for h in halluc if "source_supported" not in h]
 
-    sem_sufficiency_rounded = round(semantic_sufficiency, 4)
+    twfr_rounded = round(task_weighted_fact_retention, 4) if task_weighted_fact_retention is not None else None
 
     return {
-        "semantic_sufficiency": sem_sufficiency_rounded,
+        "task_weighted_fact_retention": twfr_rounded,
         # Historical alias, NOT independently computed -- always equal to
-        # semantic_sufficiency above. Kept for continuity with baselines
-        # already written down in README.md/RESULTS.md ("wRetention >= ...").
-        "weighted_retention": sem_sufficiency_rounded,
+        # task_weighted_fact_retention above. Kept for continuity with
+        # baselines already written down in README.md/RESULTS.md
+        # ("wRetention >= ..."). Not to be confused with the broader
+        # "semantic sufficiency" concept -- see README.md.
+        "weighted_retention": twfr_rounded,
         "unweighted_retention": round(unweighted_retention, 4) if unweighted_retention is not None else None,
         "relation_retention": round(relation_retention, 4) if relation_retention is not None else None,
         "recoverability": round(recoverability, 4) if recoverability is not None else None,
         "omission_rate": round(n_omitted / len(facts), 4) if facts else 0.0,
         "mutation_rate": round(n_mutated / len(facts), 4) if facts else 0.0,
         "unsupported_claim_count": len(unsupported),
+        "unverified_claim_count": len(unverified),
         "unsupported_claims": unsupported,
         "flagged_vs_gold_count": len(halluc),
     }
@@ -155,10 +184,12 @@ def main():
                 "test_class": test_class,
                 "pressure_tags": gold.get("pressure_tags", []),
                 "size_bucket": gold.get("size_bucket"),
-                # What the weights in this case's facts encode importance
-                # for -- see README.md "Intended reader/task". Absent on a
-                # case that hasn't been annotated yet; combine.py does not
-                # require it.
+                # The stated reader/task this case's fact weights are meant
+                # to matter *for* -- interpretive context, not proof the
+                # weights below were derived from it (most were set by
+                # category default; see README.md "Intended reader/task").
+                # Absent on a case that hasn't been annotated yet;
+                # combine.py does not require it.
                 "intent": gold.get("intent"),
             }
 
@@ -205,7 +236,7 @@ def write_scores_table(combined: dict):
 
         header = (
             "| case | tier | level | src_w | out_w | reduction% | conform_viol | "
-            "semSufficiency | relRetention | omission% | unsupported_claims | recoverability |"
+            "twFactRetention | relRetention | omission% | unsupported_claims | recoverability |"
         )
         lines.append(header)
         lines.append("|---" * 12 + "|")
@@ -220,7 +251,7 @@ def write_scores_table(combined: dict):
                     lines.append(
                         f"| {case_id} | {tier} | {level} | {r.get('source_words')} | {r.get('output_words')} | "
                         f"{r.get('reduction_pct')} | {r.get('conformance_violation_count')} | "
-                        f"{r.get('semantic_sufficiency')} | {r.get('relation_retention')} | "
+                        f"{r.get('task_weighted_fact_retention')} | {r.get('relation_retention')} | "
                         f"{round((r.get('omission_rate') or 0)*100,1)} | {r.get('unsupported_claim_count')} | "
                         f"{r.get('recoverability')} |"
                     )
