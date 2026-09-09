@@ -37,23 +37,36 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 
 This section is itself rendered in structured-gist's `responsive` mode, not written by hand as prose.
 
-- **Marker ladder**
+- **Marker laddering**
   - A. concept
-    - top-level claim or subject, outermost depth only, budget roughly three words
+    - top-level claim or subject
+    - outermost depth only
+    - budget roughly three words
   - B. attribute
-    - a named property of the parent — "the parent has a ___", not a listed part
+    - a named property of the parent
+    - "the parent has a ___"
+      - not a listed part
   - C. enumerator
-    - ordered or grouped parts, family set by absolute depth rather than which marker appeared first
+    - ordered or grouped parts
+    - family set by absolute depth rather than which marker appeared first
   - D. explanation
-    - the only node type carrying full prose, usually a leaf, exempt from any text-compression layer
+    - the only node type carrying full prose
+      - usually a leaf
+      - exempt from any text-compression layer
 
 - **Render modes**
   - A. block
-    - a single fenced code block with literal glyphs, fixed width, for terminals and non-markdown surfaces
+    - a single fenced code block with literal glyphs
+    - fixed width
+    - for terminals and non-markdown surfaces
   - B. responsive
-    - a real Markdown nested list, the default on GitHub and in chat interfaces, glyph-free since v0.3.9 because the renderer already draws a bullet per item
+    - a real Markdown nested list
+    - the default on GitHub and in chat interfaces
+    - glyph-free because the renderer already draws a bullet per item
   - C. inline (deprecated)
-    - gets indented under a list item and renders as a code block on GitHub rather than a real list — the exact defect responsive mode fixes
+    - gets indented under a list item
+    - renders as a code block on GitHub rather than a real list
+      - the exact defect responsive mode fixes
 
 - **Granularity**
   - A. skim (default)
@@ -61,7 +74,8 @@ This section is itself rendered in structured-gist's `responsive` mode, not writ
   - B. standard
     - extends to a third level as content requires
   - C. deep
-    - renders every explanation node with no depth cap, for study or handoff documents
+    - renders every explanation node with no depth cap
+    - for study or handoff documents
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
