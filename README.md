@@ -39,18 +39,28 @@ This section is itself rendered in structured-gist's `responsive` mode, not writ
 
 - **Marker ladder (4 roles), render modes (2), granularity levels (3)**
   - **Role ladder**: nesting depth mirrors the actual dependency of content on its parent
-    - a. **Concept** (`-`): top-level claim, subject, or outcome; appears only at the outermost depth; budget roughly three words
-    - b. **Attribute** (`▸`): a named property of its parent, the parent *has a* ___; distinct from an enumerator, which lists parts rather than naming a property
-    - c. **Enumerator** (`I.`/`A.` at depth 1, `i.`/`a.` deeper): ordered or grouped parts of the parent; the family is keyed by absolute depth, not by which marker type appears first
-    - d. **Explanation** (`↪`): the only node type carrying full prose; usually a leaf, may head a subtree as a one-line preview; never compressed by a text-compression layer even when the rest of the tree is
+    - a. **Concept** (`-`)
+      - top-level claim or subject; outermost depth only; budget roughly three words
+    - b. **Attribute** (`▸`)
+      - a named property of its parent, the parent *has a* ___ — distinct from an enumerator, which lists parts rather than naming a property
+    - c. **Enumerator** (`I.`/`A.` at depth 1, `i.`/`a.` deeper)
+      - ordered or grouped parts of the parent, keyed by absolute depth rather than which marker type appears first
+    - d. **Explanation** (`↪`)
+      - the only node type carrying full prose — usually a leaf, may head a subtree as a one-line preview; never compressed by a text-compression layer
   - **Render modes**: two active output containers for the same underlying tree
-    - a. **block**: a single fenced code block, literal marker glyphs, fixed-width; for terminals and any surface without markdown rendering
-    - b. **responsive**: a real Markdown nested list, default on GitHub and in chat interfaces; glyph-free since v0.3.9, the renderer already draws a bullet per item so role moves to typography instead
-    - A deprecated third mode, `inline`, indented under a list item and rendered as a code block on GitHub rather than a list; the defect `responsive` was built to fix.
+    - a. **block**
+      - a single fenced code block, literal marker glyphs, fixed-width — for terminals and any surface without markdown rendering
+    - b. **responsive**
+      - a real Markdown nested list, default on GitHub and in chat interfaces — glyph-free since v0.3.9, the renderer already draws a bullet per item so role moves to typography instead
+    - c. **inline** (deprecated)
+      - indented under a list item and rendered as a code block on GitHub rather than a list; the defect `responsive` was built to fix
   - **Granularity**: controls how much of the tree renders
-    - a. `skim` (default): concept spine plus one enumerated tier
-    - b. `standard`: extends to a third level as content requires
-    - c. `deep`: every explanation node, no depth cap, for study or handoff documents
+    - a. `skim` (default)
+      - concept spine plus one enumerated tier
+    - b. `standard`
+      - extends to a third level as content requires
+    - c. `deep`
+      - every explanation node, no depth cap — for study or handoff documents
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
