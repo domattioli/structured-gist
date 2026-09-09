@@ -27,7 +27,7 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## 1. Motivation
 
-Claude's explanatory prose has a real failure mode: people call it "Claudish." It's dense with unexplained jargon. It swings between contrarian, sycophantic, and padded with filler. Often it just says nothing across many words. Word-count compression does not fix this. caveman-lite, for instance, shortens Claudish prose without reorganizing it. The result reads as plain English. But the underlying thought stays unstructured, and its content stays non-deterministic from one run to the next.
+Claude's explanatory prose has a real failure mode: people call it "Claudish." It's a dense rambling, jumbled mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, caveman, can shorten Claudish prose but does not reorganize it. Other mechanisms like claudish-to-english still rely on unstructured prose. Both are useful, but neither cuts through the noise.
 
 What's missing is structure: concept, sub-concept, and the relationship between them. What is being claimed? What supports that claim? How do the supporting pieces relate to each other and to the claim — ordered, grouped, or independent? This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
 
@@ -39,11 +39,11 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 
 This section is itself rendered in structured-gist's `block` mode, not written by hand as prose. It covers the marker taxonomy and a worked example (a real word-count comparison) in one outline.
 
-The worked example below compares Sonnet 4 rendering the same content two ways. As a paragraph, it reads:
+The worked example below compares Opus 5's unadulterated description of how this skill works vs. the dogfood-ed skill output. As a paragraph, it reads:
 
-> structured-gist replaces verbose prose summaries with outlines that carry a role hierarchy, where position in the tree does the work sentence structure would otherwise do. A linter enforces this with 15 rules covering things like flagging shallow-depth stalling, where a node sits at a level without adding structure, and detecting punctuation-spliced facts, where two claims get joined by a comma or semicolon instead of being split into separate nodes. Typical use cases include session recaps, cause-chain explanations, and GitHub issue or PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it. The linter itself lives at `lint_outline.py`, is stdlib-only, and enforces all 15 rules automatically.
+> structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at `lint_outline.py`, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
-That's 146 words. Rendered as an outline in `skim` granularity and `block` mode, the same content drops to 100 words — a 31.5% reduction, and the tree also cuts parsing cost for the reader.
+That's 191 words. Rendered as an outline in `skim` granularity and `block` mode, the same content drops to 146 words — a 23.6% reduction, and the tree also cuts parsing cost for the reader.
 
 ```text
 - Governing concepts
@@ -82,23 +82,23 @@ That's 146 words. Rendered as an outline in `skim` granularity and `block` mode,
             ↪ neither touches the ladder or rules
 - Worked example
     ▸ Test case
-        ↪ Sonnet 4 rendered the same content two ways
+        ↪ Opus 5 rendered the same content two ways
     ▸ Word count
         a. paragraph
-            ↪ 146 words
+            ↪ 191 words
         b. outline
-            ↪ 100 words, skim, block mode
+            ↪ 146 words, skim, block mode
         c. reduction
-            ↪ 31.5%, tree also cuts parsing cost
+            ↪ 23.6%, tree also cuts parsing cost
     ▸ Outline content
         a. purpose
-            ↪ replaces verbose summaries with outlines
-        b. structure
-            ↪ role hierarchy, position over sentence structure
+            ↪ replaces verbose summaries with compact outlines
+        b. role hierarchy
+            ↪ node position encodes meaning, not sentence grammar
         c. linter rules
             i. flags shallow-depth stalling
             ii. detects punctuation-spliced facts
-        d. use cases
+        d. fit
             i. session recaps
             ii. cause-chain explanations
             iii. GitHub issue/PR comments
