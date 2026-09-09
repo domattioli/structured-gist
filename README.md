@@ -36,56 +36,7 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 
 ## 2. Method
 
-This section is itself rendered in structured-gist's `responsive` mode, not written by hand as prose.
-
-Responsive mode (default on GitHub):
-
-- **Marker laddering**
-  - A. concept
-    - i. top-level claim or subject
-    - ii. outermost depth only
-    - iii. budget roughly three words
-  - B. attribute
-    - i. a named property of the parent
-    - ii. has a ___, not a part
-  - C. enumerator
-    - i. ordered or grouped parts
-    - ii. family set by absolute depth
-  - D. explanation
-    - i. the only node carrying full prose
-    - ii. usually a leaf, compression-exempt
-
-- **Render modes**
-  - A. block
-    - i. one fenced code block, literal glyphs
-    - ii. fixed width
-    - iii. for terminals, non-markdown surfaces
-  - B. responsive
-    - i. a real Markdown nested list
-    - ii. default on GitHub, chat interfaces
-    - iii. glyph-free, renderer draws the bullet
-  - C. inline (deprecated)
-    - i. indents under a list item
-    - ii. renders as a GitHub code block
-
-- **Granularity**
-  - A. skim (default)
-    - i. concept spine plus one tier
-  - B. standard
-    - i. extends to a third level
-  - C. deep
-    - i. every explanation node, no cap
-    - ii. for study or handoff documents
-
-- **Independent axes**
-  - A. render mode
-    - i. display container, chosen by surface
-  - B. granularity
-    - i. content depth, chosen by audience
-  - C. no interaction
-    - i. neither touches the ladder or rules
-
-Same content, `block` mode (terminals / plain-text surfaces):
+This section is itself rendered in structured-gist's `block` mode, not written by hand as prose.
 
 ```text
 - Marker laddering
@@ -130,6 +81,8 @@ Same content, `block` mode (terminals / plain-text surfaces):
     ▸ no interaction
         ↪ neither touches the ladder or rules
 ```
+
+`block` is one of three render modes; `responsive` (the GitHub/chat default) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
