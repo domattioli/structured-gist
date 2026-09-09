@@ -46,7 +46,10 @@ This section is itself rendered in structured-gist's `block` mode, not written b
         b. attribute ('▸')
             ↪ has a ___, not a part
         c. enumerator ('I./A./i./a.')
-            ↪ ordered or grouped parts, family by depth
+            i. ordinal ('I./i.')
+                ↪ order matters, a sequence or ranking
+            ii. nominal ('A./a.')
+                ↪ grouped peers, order-agnostic
         d. explanation ('↪')
             ↪ only node with full prose, compression-exempt
     ▸ Render modes
