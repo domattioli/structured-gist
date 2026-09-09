@@ -2,9 +2,9 @@
 
 ![Status](https://img.shields.io/badge/status-beta-yellow)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Version](https://img.shields.io/badge/version-0.4.5-informational)
+![Version](https://img.shields.io/badge/version-0.4.7-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
-![Tests](https://img.shields.io/badge/tests-50%20passing-success)
+![Tests](https://img.shields.io/badge/tests-57%20passing-success)
 ![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)
 
 A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure; prose stays confined to explanation nodes and via node depth. 
@@ -63,6 +63,14 @@ This section is itself rendered in structured-gist's `responsive` mode, not writ
     - extends to a third level as content requires
   - C. deep
     - renders every explanation node with no depth cap, for study or handoff documents
+
+- **Independent axes**
+  - A. render mode
+    - display container only, chosen by surface
+  - B. granularity
+    - content depth only, chosen by audience
+  - C. no interaction
+    - neither changes the marker ladder or which linter rule fires
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 

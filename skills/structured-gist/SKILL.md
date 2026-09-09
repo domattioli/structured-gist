@@ -1,6 +1,6 @@
 ---
 name: structured-gist
-version: "0.4.6"
+version: "0.4.7"
 benchmark: word_count_reduction_pct
 description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — role ladder concept (-) → attribute (▸, a named property of the concept) → ordinal/nominal enumerator (I./A./i./a.) → explanation (↪, one prose sentence per branch; usually a leaf, may preview a branch). No plain bullets. Render modes — block (monospace/terminal, fenced; ladder glyphs literal) and responsive (default for any markdown-rendering surface incl. GitHub issue/PR/comment bodies AND chat-app replies — a real GFM nested list the renderer wraps to its own box width; glyph-free since v0.3.9: the renderer's bullets carry structure, role moves to typography — bold attributes, literal enumerator labels, plain prose leaves); the legacy inline mode is deprecated (its 4-space rungs render as code blocks on GitHub). Granularity skim (default) / standard / deep. Independent of caveman (structure vs wording). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 ---
@@ -114,6 +114,8 @@ Word budget — terse by default at EVERY level (recursive):
 
 Distinctness: same content → `skim` shallower than `standard` shallower-or-equal `deep`.
 
+**Two independent axes, not one naming scheme.** Granularity (`skim`/`standard`/`deep`, here) controls how much of the tree is surfaced — content depth. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container the same tree is wrapped in. Neither axis changes the marker ladder or which linter rule fires: the same 15 rules gate every granularity/render-mode combination. Pick a granularity for the audience, a render mode for the surface; the two choices don't interact.
+
 ## Spacing
 
 **Indent: 4 spaces per rung** (L1=0, L2=4, L3=8, `↪`=parent content +4) — single source of truth for indent, referenced by Marker taxonomy above. 2-space steps render too tight past L2.
@@ -146,7 +148,7 @@ Note: *which* GitHub surfaces should render as `responsive` outlines, and which 
 
 ## Render modes
 
-Same outline, two active containers, **scoped by surface**. The structure (ladder / nesting / `↪`) is identical; only the wrapper differs.
+Same outline, two active containers, **scoped by surface**. The structure (ladder / nesting / `↪`) is identical; only the wrapper differs. Render mode is a presentation choice, independent of granularity (`## Granularity levels` above) and of the linter's structural rules — see the independence note there.
 
 | surface | mode |
 |---|---|
@@ -210,6 +212,8 @@ Carve-outs align: when caveman auto-clarity yields for security/irreversible war
 ## Limitations
 
 - The robustness axis measures structural conformance only — a perturbation-stability term was designed twice and cut twice with recorded proofs (`benchmarks/scoring.md`).
+- Slop reduction is non-deterministic: the linter enforces marker structure, nesting, node length, and delimiter splicing, not sentence quality — a compliant outline can still carry jargon or a weak claim inside a node's text. The tool improves skimmability; it does not remove bad prose.
+- The linter checks structure, not truth — a well-formed outline can still misrepresent its source content, and no rule catches that.
 
 ## Install
 
