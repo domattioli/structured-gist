@@ -27,12 +27,16 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## 1. Motivation
 
-Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganizing it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
+Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression reduces filler,<sup><a href="https://github.com/JuliusBrussee/caveman">[1]</a></sup> but does not necessarily restructure the ideas into human readable format. Other mechanisms focus on rephrasing the prose,<sup><a href="https://github.com/gvzdv/claudish-to-english">[2]</a></sup> but their unstructured output are still vulnerable to the same noisy filler.
 
 What's missing is structure: concept, sub-concept, and the relationship between them. This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
  
 `structured-gist` renders that decomposition as an explicit tree instead of a paragraph the reader has to parse for it. We can't get rid of the AI slop, but we can push it to the peripheries and help you get to the gist faster.
-
+<em>
+> [1] [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)
+>
+> [2] [gvzdv/claudish-to-english](https://github.com/gvzdv/claudish-to-english)
+> </em>
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 2. Method
