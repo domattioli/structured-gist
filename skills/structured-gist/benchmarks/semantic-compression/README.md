@@ -150,9 +150,11 @@ identifier facts (`f2`, `f6`, `f9`, `f12`) are still category-`descriptive`
 at weight `1`, while less identifier-specific rationale/outcome facts sit at
 weight `2.5`–`3` — defensible as *weighted fact retention*, not yet proven
 as *task-weighted* retention for that case's stated task. This PR does not
-retroactively reweight the corpus to fix that (see "Next experiment"
-below) — mixing a metric-definition correction with new human judgment and
-changed benchmark scores in one change would make neither auditable.
+retroactively reweight the corpus to fix that in this PR (see "Blinded
+task-weight re-annotation and Semantic Preservation Recall" below, now run
+in a follow-up PR) — mixing a metric-definition correction with new human
+judgment and changed benchmark scores in one change would make neither
+auditable.
 
 The category buckets above remain a reasonable **default** for
 hand-authoring a new case, and category never implies every fact in it
@@ -196,37 +198,63 @@ interpretation of an already-set weight, a referent future re-weighting
 work can be checked against, and something a reader can use to judge
 whether `task_weighted_fact_retention` actually matches this case's
 consumption task. It does not make the legacy category-default weights
-task-derived — see "Weight semantics" above and "Next experiment: blinded
-task-weight re-annotation" below.
+task-derived — see "Weight semantics" above and "Blinded task-weight
+re-annotation and Semantic Preservation Recall" below.
 
-## Next experiment: blinded task-weight re-annotation (not run in this suite yet)
+## Blinded task-weight re-annotation and Semantic Preservation Recall (run; experimental)
 
-The open question "Weight semantics" leaves unanswered: *are these weights
-actually task-sensitive, or just category defaults with a task description
-attached after the fact?* The smallest measurement that would answer it,
-deferred to a future change rather than run here:
+The "Weight semantics" question above — *are these weights actually
+task-sensitive, or just category defaults with a task description attached
+after the fact?* — has now been measured, in a follow-up PR to the one
+that wrote this file. Every retained case was blindly re-annotated (fresh,
+isolated annotator per case; access to `source.md` + `intent.reader`/
+`intent.task` + gold fact/relation text only — no category labels, no
+`weight` values, no renderings, no judge verdicts, no scores) on an integer
+1-3 task-importance scale, for both facts and (newly) relations. That
+comparison found the category heuristic to be, at best, a moderate proxy
+for task importance (mean exact agreement 46%, mean Spearman rho 0.30,
+one case with negative correlation) — **not** a rubber stamp.
 
-1. For each retained case, give an annotator only: `source.md`, the
-   case's `intent.reader`/`intent.task`, and the gold semantic units
-   (fact/relation/question text, without ids revealing anything else).
-2. Hide from that annotator: the model renderings, the skim/standard/deep
-   labels, the judge verdicts, the existing `weight` values, and the
-   existing scores.
-3. Ask the annotator to assign an importance weight to each fact based
-   solely on the stated task — no access to the category-default heuristic.
-4. Compare those task-derived weights against the current category-derived
-   weights already in `gold.json`.
-5. Re-run `scoring/combine.py`'s arithmetic against the already-recorded
-   fact-retention verdicts in `judged/*.json` (no re-judging needed) using
-   the new weights, and see whether: scores change materially, mode
-   rankings (skim/standard/deep) change, or the apparent
-   skim/standard/deep frontier shifts.
+On top of that annotation, the same follow-up PR tests a candidate broader
+metric, **Semantic Preservation Recall (SPR)**: a Pyramid-style weighted
+semantic-recall measure over this benchmark's existing fact + relation
+representation, combining task-weighted fact recall and task-weighted
+relation recall into one blinded-weight-proportional number (formula and
+full results in `SPR_FINDINGS.md`). SPR is **experimental** —
+`scoring/spr.py`, additive to and never replacing `scoring/combine.py`'s
+canonical `task_weighted_fact_retention`/`relation_retention`/
+`recoverability`, none of which changed. It is not in `SKILL.md`, not a
+required threshold, and not a replacement for this suite's existing
+decomposed-metrics profile (see "Scoring dimensions" below, still
+unchanged).
 
-If that comparison shows the two weight sets converge, the category
-heuristic gets to keep being used with more confidence. If it diverges
-materially, that is itself the finding, and only then would this corpus's
-weights be revised — as its own change, not folded into a metric-naming
-correction.
+**Read `SPR_FINDINGS.md` for the full write-up**, including: the blinded
+annotation protocol; per-case legacy-vs-blind weight comparison; the exact
+formulas for `blinded_task_weighted_fact_recall`,
+`task_weighted_relation_recall`, and SPR; behavior on every named pressure
+case (`causality-heavy-explain`, `cause-chain-reversal`,
+`migration-tristate`, `near-identical-numbers`, `synthetic-scale-verylarge`);
+five concrete failure modes actively found while trying to falsify the
+metric (relation-weight ceiling effects, a modest relation-volume score
+correlation, granularity sensitivity, bounded fact/relation double
+-counting, and why the critical-loss diagnostic must stay un-collapsed);
+and the classification decision (kept as **A: promising experimental
+metric**, not yet promoted to durable-secondary or primary).
+
+The new artifacts:
+- `scoring/blind_weights/<case_id>.json` — the blinded annotations
+  themselves (`annotation_protocol: "blinded-task-importance-v1"`), a
+  separate artifact from `gold.json` so provenance stays auditable; no
+  existing `weight` value in any `gold.json` was changed by this
+  annotation.
+- `scoring/spr.py` (+ `scoring/test_spr.py`) — the new arithmetic. It
+  reads `gold.json`'s legacy `weight` field in exactly one place
+  (`compare_weights()`, a descriptive comparison, never a score input) —
+  regression-tested so the legacy and blinded weight sources cannot
+  accidentally mix.
+- `results/spr.json`, `results/SPR_SCORES.md`, `results/weight_comparison.json`
+  — generated; regenerate with
+  `python3 scoring/deterministic.py && python3 scoring/combine.py && python3 scoring/spr.py`.
 
 ## Scoring dimensions (decomposable — no master scalar)
 
@@ -299,6 +327,7 @@ hallucination" heuristic.
 ```
 python3 scoring/deterministic.py   # word counts, compression, lint gate
 python3 scoring/combine.py         # merges in judged/*.json -> results/
+python3 scoring/spr.py             # experimental: SPR + blinded weight comparison -> results/
 ```
 
 Regenerating `renderings/` or `judged/` (i.e. actually re-generating

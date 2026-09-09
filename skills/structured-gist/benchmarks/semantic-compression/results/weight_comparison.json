@@ -1,0 +1,210 @@
+{
+  "causality-heavy-explain": {
+    "exact_agreement_rate": 0.55,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f2",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f8",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 1,
+        "blind_weight": 2,
+        "fact_id": "f1",
+        "legacy_weight": 1
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.65,
+    "n_facts": 20,
+    "spearman_rho": 0.3287
+  },
+  "cause-chain-reversal": {
+    "exact_agreement_rate": 0.5,
+    "largest_disagreements": [
+      {
+        "abs_diff": 1.5,
+        "blind_weight": 1,
+        "fact_id": "f19",
+        "legacy_weight": 2.5
+      },
+      {
+        "abs_diff": 1,
+        "blind_weight": 2,
+        "fact_id": "f2",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 1,
+        "blind_weight": 2,
+        "fact_id": "f4",
+        "legacy_weight": 3
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.475,
+    "n_facts": 20,
+    "spearman_rho": 0.5736
+  },
+  "migration-tristate": {
+    "exact_agreement_rate": 0.5263,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 1,
+        "fact_id": "f5",
+        "legacy_weight": 3
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f16",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 1.5,
+        "blind_weight": 1,
+        "fact_id": "f8",
+        "legacy_weight": 2.5
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.7368,
+    "n_facts": 19,
+    "spearman_rho": 0.2446
+  },
+  "near-identical-numbers": {
+    "exact_agreement_rate": 0.2857,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f2",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f6",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f9",
+        "legacy_weight": 1
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 1.0357,
+    "n_facts": 14,
+    "spearman_rho": -0.274
+  },
+  "negation-and-true-peers": {
+    "exact_agreement_rate": 0.6,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f11",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 1.5,
+        "blind_weight": 1,
+        "fact_id": "f9",
+        "legacy_weight": 2.5
+      },
+      {
+        "abs_diff": 1.5,
+        "blind_weight": 1,
+        "fact_id": "f15",
+        "legacy_weight": 2.5
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.525,
+    "n_facts": 20,
+    "spearman_rho": 0.6886
+  },
+  "real-benchmark-archaeology": {
+    "exact_agreement_rate": 0.4167,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 1,
+        "fact_id": "f22",
+        "legacy_weight": 3
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 1,
+        "fact_id": "f23",
+        "legacy_weight": 3
+      },
+      {
+        "abs_diff": 1,
+        "blind_weight": 2,
+        "fact_id": "f1",
+        "legacy_weight": 1
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.6042,
+    "n_facts": 24,
+    "spearman_rho": 0.2478
+  },
+  "real-hook-discovery": {
+    "exact_agreement_rate": 0.3333,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 3,
+        "fact_id": "f7",
+        "legacy_weight": 1
+      },
+      {
+        "abs_diff": 1.5,
+        "blind_weight": 1,
+        "fact_id": "f9",
+        "legacy_weight": 2.5
+      },
+      {
+        "abs_diff": 1,
+        "blind_weight": 2,
+        "fact_id": "f1",
+        "legacy_weight": 1
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.8333,
+    "n_facts": 15,
+    "spearman_rho": 0.1491
+  },
+  "synthetic-scale-verylarge": {
+    "exact_agreement_rate": 0.4783,
+    "largest_disagreements": [
+      {
+        "abs_diff": 2,
+        "blind_weight": 1,
+        "fact_id": "f21",
+        "legacy_weight": 3
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 1,
+        "fact_id": "f24",
+        "legacy_weight": 3
+      },
+      {
+        "abs_diff": 2,
+        "blind_weight": 1,
+        "fact_id": "f28",
+        "legacy_weight": 3
+      }
+    ],
+    "mean_abs_diff_legacy_scale": 0.6739,
+    "n_facts": 46,
+    "spearman_rho": 0.4588
+  }
+}

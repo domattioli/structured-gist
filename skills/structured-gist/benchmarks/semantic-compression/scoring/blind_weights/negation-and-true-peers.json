@@ -1,0 +1,49 @@
+{
+  "case_id": "negation-and-true-peers",
+  "annotation_protocol": "blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 3,
+    "f4": 2,
+    "f5": 3,
+    "f6": 2,
+    "f7": 3,
+    "f8": 2,
+    "f9": 1,
+    "f10": 3,
+    "f11": 3,
+    "f12": 2,
+    "f13": 2,
+    "f14": 3,
+    "f15": 1,
+    "f16": 3,
+    "f17": 3,
+    "f18": 3,
+    "f19": 3,
+    "f20": 3
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3,
+    "r3": 3,
+    "r4": 3
+  },
+  "rationale": {
+    "f2": "Names the specific mechanism (no sub-part, no finish-order dependency) the task asks the reader not to infer; distinct contribution from f1's general claim.",
+    "f3": "Directly forecloses a 'shared parent theme' inference, which is exactly what the task warns against.",
+    "f5": "A did-not-happen fact for this workstream; dropping it lets a reader wrongly assume full coverage.",
+    "f6": "Clarifies the negation's cause (deliberate, not a gap) but is supplementary nuance, not required to know what did/didn't happen.",
+    "f7": "The audit's actual outcome-to-date; core status content a stakeholder update must carry.",
+    "f9": "Background motivation for the rewrite; losing it doesn't affect knowing what did/didn't happen or the independence framing.",
+    "f13": "Needed only as setup so the ruling-out in f14 is legible; low standalone value.",
+    "f15": "Redundant elaboration of f14's negation; losing it doesn't change the reader's understanding.",
+    "f17": "Corrects a stated common misreading (growth) of the hiring push — a did-not-happen fact central to the task.",
+    "f18": "The actual scope of the hiring push; core status fact paired with the f17 negation.",
+    "f20": "Reinforces no-dependency/no-motivation link to other workstreams, directly serving the 'no hierarchy' requirement, though partly redundant with f19.",
+    "r1": "Captures the suspect-ruled-out-then-true-cause pattern for the performance workstream; losing it would leave the reader thinking the database was still implicated.",
+    "r2": "States the absence of a dependency between two workstreams that share a quarter — exactly the false-inference the task guards against.",
+    "r3": "States hiring push's non-connection to the other three; dropping it risks the reader inferring a shared driver.",
+    "r4": "The single relation stating all four workstreams are independent peers with no parent/hierarchy — the crux of the stated task."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "case_id": "near-identical-numbers",
+  "annotation_protocol": "blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 2,
+    "f4": 1,
+    "f5": 3,
+    "f6": 3,
+    "f7": 2,
+    "f8": 1,
+    "f9": 3,
+    "f10": 2,
+    "f11": 2,
+    "f12": 3,
+    "f13": 3,
+    "f14": 3
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 2,
+    "r3": 2,
+    "r4": 3,
+    "r5": 3,
+    "r6": 3
+  },
+  "rationale": {
+    "f1": "Core near-identical number pair with f5 (both start at 30s, opposite endpoints) -- dropping or blurring it directly enables the A/B mixup the task is testing for.",
+    "f2": "Exact commit SHA + path for A; losing it makes it impossible to cite the right commit and invites confusion with def5678.",
+    "f5": "Core near-identical number pair with f1 -- same 30s baseline, opposite direction (45 vs 5); essential to keep the two services' numbers from becoming interchangeable.",
+    "f6": "Exact commit SHA + path for B; same criticality as f2, and the two SHAs are explicitly flagged as easy to confuse.",
+    "f9": "Version 2.3.1 and its path are the only concrete identifiers for C's rollout; losing them leaves no way to cite C's actual change.",
+    "f11": "Confirms C's effective timeout is still 30s (same number as A/B's original baseline), preventing a reader from assuming C introduced a new numeric value.",
+    "f12": "Version 2.4.0-rc1 is D's only concrete identifier and is easily mistaken for a completed/deployed version without the surrounding context (f13/f14).",
+    "f13": "Establishes that 2.4.0-rc1 was never actually deployed -- without this, a reader could wrongly cite D as running 2.4.0-rc1.",
+    "f14": "Confirms D's actual current state (previous config, unchanged) as opposed to the targeted-but-aborted version -- critical to avoid misciting D's live version.",
+    "r1": "Directly states the opposite-direction relationship between A and B that the whole case is designed to test recall of.",
+    "r4": "Prevents conflating C's version bump / file touch with an actual timeout-value change, distinguishing 2.3.1 (a version) from a timeout duration.",
+    "r5": "Explicitly names the abc1234 vs def5678 near-identical-hash confusion risk -- this is the central point of the stated task.",
+    "r6": "Ties the health-check failure to D's abort and its still-previous config, which is what prevents misciting D's version as 2.4.0-rc1."
+  }
+}

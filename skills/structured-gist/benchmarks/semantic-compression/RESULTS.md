@@ -210,3 +210,34 @@ No case's `weighted_retention`/`task_weighted_fact_retention` value changed
 as a result of either PR — `results/combined.json`'s diff across both is
 additive keys only (`intent`, then `task_weighted_fact_retention` replacing
 `semantic_sufficiency`, plus `unverified_claim_count`).
+
+## 7. Blinded task-weight re-annotation and Semantic Preservation Recall (PR C, measurement-only)
+
+**PR C** ran PR B's deferred experiment: a fresh, isolated annotator per
+case rated every gold fact and relation's task importance (integer 1-3)
+using only `source.md` + `intent.reader`/`intent.task` + the gold unit
+text — blind to category labels, existing `weight` values, renderings,
+judge verdicts, and scores. It found the category heuristic §6 describes
+to be, at best, a moderate proxy for task-derived importance (mean exact
+agreement 46%, mean Spearman rho 0.30 across the 8 retained cases, one case
+—`near-identical-numbers`— with *negative* correlation, directly confirming
+the exact-identifier counterexample `README.md` "Weight semantics"
+predicted from inspection alone).
+
+On top of that annotation, PR C also tested a candidate broader metric,
+**Semantic Preservation Recall (SPR)**, that promotes relations to a
+first-class weighted semantic unit alongside facts (`scoring/spr.py`, full
+write-up in `SPR_FINDINGS.md`). No case's `task_weighted_fact_retention`,
+`relation_retention`, or any other `combine.py`-computed value changed —
+SPR is purely additive, computed from the same already-recorded
+`judged/*.json` verdicts. Headline result: on `causality-heavy-explain`
+`standard` — the exact case §1 already flagged (fact retention 0.80 next to
+relation retention 0.5625) — SPR (0.7143) with 4 blind-weight-3 units lost
+tells a materially more honest story than fact retention (0.80) alone,
+which is the core hypothesis PR C set out to test. PR C also found real
+failure modes (a relation-weight ceiling effect that erases differentiation
+in 2 of 8 cases, and a modest relation-volume-to-score correlation) and
+classified SPR as **A: promising experimental metric** — kept for further
+evidence-gathering, not promoted to `SKILL.md`, a required threshold, or a
+replacement for this suite's existing decomposed metrics. See
+`SPR_FINDINGS.md` for full detail.

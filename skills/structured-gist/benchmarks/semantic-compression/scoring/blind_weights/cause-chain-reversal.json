@@ -1,0 +1,46 @@
+{
+  "case_id": "cause-chain-reversal",
+  "annotation_protocol": "blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 1,
+    "f2": 2,
+    "f3": 3,
+    "f4": 2,
+    "f5": 3,
+    "f6": 2,
+    "f7": 3,
+    "f8": 2,
+    "f9": 3,
+    "f10": 2,
+    "f11": 3,
+    "f12": 3,
+    "f13": 2,
+    "f14": 2,
+    "f15": 3,
+    "f16": 2,
+    "f17": 3,
+    "f18": 2,
+    "f19": 1,
+    "f20": 3
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3,
+    "r3": 3,
+    "r4": 2,
+    "r5": 3,
+    "r6": 1
+  },
+  "rationale": {
+    "f3": "the initial (incorrect) diagnosis the reader must recognize as superseded, not the answer",
+    "f5": "explains why the wrong theory appeared confirmed, the key trap for a post-hoc reader",
+    "f9": "shows pool exhaustion was a downstream symptom of the slow query, not itself the cause",
+    "f12": "explicit statement of the correct diagnosis, the direct answer to the stated task",
+    "f15": "prevents the reader from mistaking the pool increase for the actual fix",
+    "f17": "states the actual fix that resolved the issue",
+    "f20": "postmortem's explicit final confirmation of which diagnosis was correct",
+    "r3": "directly states the diagnosis reversal, the exact answer the task requires",
+    "r5": "clarifies the first action taken (pool increase) was not the real fix, guarding against a common misread of the timeline",
+    "r6": "pure temporal ordering of events, which the task explicitly says is not what matters"
+  }
+}
