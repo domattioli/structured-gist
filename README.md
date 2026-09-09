@@ -38,36 +38,23 @@ structured-gist renders that decomposition directly, as an explicit tree instead
 
 This section is itself rendered in structured-gist's `responsive` mode, not written by hand as prose.
 
-- **Marker laddering**
+- **Marker ladder**
   - A. concept
-    - top-level claim or subject
-    - outermost depth only
-    - budget roughly three words
+    - top-level claim or subject, outermost depth only, budget roughly three words
   - B. attribute
-    - a named property of the parent
-    - "the parent has a ___"
-      - not a listed part
+    - a named property of the parent, "the parent has a ___", not a listed part
   - C. enumerator
-    - ordered or grouped parts
-    - family set by absolute depth rather than which marker appeared first
+    - ordered or grouped parts, family set by absolute depth rather than which marker appeared first
   - D. explanation
-    - the only node type carrying full prose
-      - usually a leaf
-      - exempt from any text-compression layer
+    - the only node type carrying full prose, usually a leaf, exempt from any text-compression layer
 
 - **Render modes**
   - A. block
-    - a single fenced code block with literal glyphs
-    - fixed width
-    - for terminals and non-markdown surfaces
+    - a single fenced code block with literal glyphs, fixed width, for terminals and non-markdown surfaces
   - B. responsive
-    - a real Markdown nested list
-    - the default on GitHub and in chat interfaces
-    - glyph-free because the renderer already draws a bullet per item
+    - a real Markdown nested list, the default on GitHub and in chat interfaces, glyph-free since v0.3.9 because the renderer already draws a bullet per item
   - C. inline (deprecated)
-    - gets indented under a list item
-    - renders as a code block on GitHub rather than a real list
-      - the exact defect responsive mode fixes
+    - gets indented under a list item and renders as a code block on GitHub rather than a real list, the exact defect responsive mode fixes
 
 - **Granularity**
   - A. skim (default)
@@ -75,8 +62,7 @@ This section is itself rendered in structured-gist's `responsive` mode, not writ
   - B. standard
     - extends to a third level as content requires
   - C. deep
-    - renders every explanation node with no depth cap
-    - for study or handoff documents
+    - renders every explanation node with no depth cap, for study or handoff documents
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -152,13 +138,25 @@ Measured deltas from the skill's version history. Full table with methodology: `
 | v0.4.2 | linter rule coverage | rules gated / tests passing | 11 rules / 33 tests → 15 rules / 46 tests |
 | v0.4.3 | rename + trigger-phrase expansion | tests passing | 46 → 63 (no rule-logic change) |
 
+Word count and rule/test coverage are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#8-future-work) for status and how to propose one.
+
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 7. Limitations
 
-structured-gist reduces symptoms of AI-generated prose (em-dash glue, unexplained jargon, unclear claim structure) by moving content into a marker ladder the reader can skim. It does not do this deterministically: the linter enforces the structural contract (marker family, nesting, node length, delimiter splicing), not sentence quality, so a compliant outline can still contain jargon, a weak claim, or awkward wording inside a node's text. The tool makes such prose easier to spot and skip past; it does not remove it.
-
-Two further limits, both narrower in scope. First, the linter checks structure, not truth: a well-formed outline can misrepresent its source content, and no rule catches that. Second, granularity is a manual choice (`skim`/`standard`/`deep`) — the tool does not decide how much detail a given explanation warrants, so an inappropriate granularity choice for the audience is a caller error, not a linter-catchable one.
+- **Slop reduction**
+  - A. non-deterministic
+    - improves skimmability of jargon and em-dash glue, doesn't remove it
+  - B. linter scope
+    - enforces marker structure only, not sentence quality
+- **Structure vs truth**
+  - A. no truth check
+    - a well-formed outline can still misrepresent its source content
+- **Granularity choice**
+  - A. caller-selected
+    - skim, standard, or deep is picked manually, not decided by the tool
+  - B. audience mismatch
+    - a wrong choice for the audience is a caller error, not linter-catchable
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -168,6 +166,7 @@ Two further limits, both narrower in scope. First, the linter checks structure, 
   - a. **SCU (semantic content-unit) scoring**: tried informally to compare outline quality against source text; never formalized into a repeatable benchmark
   - b. **JSONL claim-list render target**: tested against the current tree format and rejected; recall dropped below the acceptance threshold on the same corpus
   - Neither changed `SKILL.md`.
+- **Additional benchmark metrics**: word count and rule/test coverage (see [Benchmarks](#6-benchmarks)) are the only tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
