@@ -3,34 +3,40 @@
 `scoring/findability.py` tests structured-gist's practical thesis, which is
 **not** "fewer words" — it is **"hierarchical structure makes the important
 information easier to locate."** This is Eval B of a two-eval
-measurement-only PR (Eval A: `WORDING_FIDELITY_FINDINGS.md`). Neither eval
-changes `SKILL.md`, the grammar, the linter, or any existing rendering,
-judge verdict, or gold semantic judgment.
+measurement-only PR (Eval A: `WORDING_FIDELITY_FINDINGS.md`, unchanged by
+this revision). Neither eval changes `SKILL.md`, the grammar, the linter,
+or any existing rendering, judge verdict, or gold semantic judgment.
 
 Named conservatively, per the PR brief: **Evidence Access Cost**, not
 "reading speed," "human findability," or "time-to-answer" — this is a
 deterministic proxy, not a timed-reader study (see "Whether a human study
 is warranted" below).
 
+**This is a revision.** A second review of this eval, after its first
+corpus run, found a second methodological confound in the baseline this
+module compared the gist against. This document now describes the fixed
+methodology and a from-scratch re-run of the corpus. The two prior
+baselines are kept in the code (as documented diagnostics, never deleted)
+and described below as a record of how the methodology got here — that
+history is itself useful evidence of the refinement, not something to
+hide.
+
 ## The critical design requirement: control for compression
 
 The obvious wrong experiment is: compare a fact's position in the full,
 unabridged `source.md` against its position in a much shorter gist, and
 conclude the gist is "easier to navigate" because the fraction is smaller.
-That mostly measures **deletion**, not organization — a gist is short
-by design, so of course a fact sits at a smaller fraction of it. This
-module instead builds a **content-matched baseline**: the same
-answer-supporting evidence, located via each fact/relation's
-`source_quote`, deduplicated, kept in original source order, with
-structured-gist's hierarchy removed. Both sides of every comparison hold
-the same underlying evidence content; only the *organization* differs.
+That mostly measures **deletion**, not organization — a gist is short by
+design, so of course a fact sits at a smaller fraction of it. The fix has
+to hold the actual evidence content constant on both sides and vary only
+its *order*. Getting this right took two attempts.
 
-## A failure mode found and fixed before scoring: the literal per-question baseline is mathematically degenerate
+## Failure mode 1: the literal per-question baseline is mathematically degenerate
 
 The PR brief's literal 5-step baseline construction is **per question**:
 resolve that one question's own support-unit IDs, locate their spans,
 dedupe, keep source order, concatenate — nothing else. This module
-initially implemented exactly that, then proved (and unit-tests, see
+initially implemented exactly that, then proved (and unit-tested, see
 `test_naive_per_question_baseline_is_always_fully_traversed`) that it
 cannot work:
 
@@ -49,164 +55,199 @@ argument makes the *first* required unit start exactly where the baseline
 starts, so `EvidenceSpan = 1.0` too. This holds for a single support unit
 (trivially — it IS the whole baseline) and for any number of them (the
 first and last merged spans are, respectively, the first and last content
-in the baseline, by construction).
+in the baseline, by construction). `naive_per_question_baseline_tokens()`
+is kept in the module (unused by scoring) purely as the executable version
+of this proof.
 
-This is not a data artifact — it is a property of the construction that
-holds before a single number is computed. `naive_per_question_baseline_
-tokens()` is kept in this module (unused by scoring) purely as the
-executable version of this proof; it is never called by `main()`.
+## Failure mode 2 (found in review, fixed by this revision): the case-level all-gold baseline still let compression leak in
 
-**Why this matters.** With `EAC_baseline` and `EvidenceSpan_baseline`
-pinned at 1.0 by construction, `ΔEAC = EAC_gist - 1` and `ΔEvidenceSpan =
-EvidenceSpan_gist - 1` would just be `1 - gist_value` restated — the
-baseline contributes zero information. The comparison would *look*
-compression-controlled (both sides go through the same formula) while
-actually degenerating back into "how early does the gist itself put this
-evidence," a raw-position measurement with no content-matched anchor at
-all. That is exactly the confound the PR brief's own "critical design
-requirement" section warns against, just reached by a different route.
+The fix for failure mode 1 was a **case-level** baseline: build one
+baseline per case from *all* of that case's gold facts and relations (not
+just one question's), and reuse it for every question in the case
+(`build_case_baseline`). This is still in the module, and it correctly
+solved failure mode 1's degeneracy — non-trivial baseline values are
+achievable (`test_evidence_reordered_closer_to_start_improves_gist_eac`
+and its mirror still pass, unchanged).
 
-## The fix: a case-level content-matched baseline
+But a case-level all-gold baseline has its own, more subtle problem: it
+contains **every** gold fact/relation for the case, regardless of whether
+a *given rendering* actually retained it. A `skim` rendering routinely
+retains only a small fraction of a case's gold units — that's the whole
+point of skim. Comparing that skim gist's positions against a baseline
+sized to the case's *entire* gold content means the two sides of the
+comparison do not hold the same evidence after all:
 
-Instead of building a fresh, evidence-only baseline per question, this
-module builds **one baseline per case**, from *all* of that case's gold
-facts and relations (not just one question's), and reuses it for every
-question in the case. This is a small, documented generalization of the
-same 5 steps — "the support unit IDs" becomes "the case's support unit
-IDs," not "this question's" — motivated directly by the proof above, and
-by the observation that the *actual gist rendering* also naturally
-contains all of a case's facts, not just one question's; pairing it
-against a baseline built the same way is the more honest match. Concretely
-(`build_case_baseline`):
+- baseline: built from (in one representative case) ~284 tokens of nearly
+  all of that case's annotated content
+- skim gist: ~36 tokens containing only the small subset skim actually
+  retained
 
-1. Resolve every fact/relation's `source_quote` to a token span in
-   `source.md` (exact, normalized, first-occurrence — see "Alignment"
-   below).
-2. Merge overlapping/touching spans (`merge_spans`) — necessary and
-   common: a relation's `source_quote` routinely spans (and thus
-   overlaps) its component facts' own quotes (**every one of this
-   corpus's 8 cases exhibits this** — checked directly before writing any
-   scoring code, not assumed).
-3. Concatenate the merged spans in source order into `baseline.tokens`.
-4. Record each original unit's position **within this baseline** (not the
-   original source) by re-mapping its source offset into the merged
-   span's baseline offset.
+Question eligibility only required that *this question's own* support
+units be retained and alignable — it never required the *rest* of the
+case-level baseline's content to have survived in the gist too. So the
+denominator on the baseline side reflected "how big is this case's gold
+content," while the denominator on the gist side reflected "how much did
+this rendering keep" — two different things, silently compared as if they
+were the same. Deletion/compression was still affecting the result, just
+one level removed from failure mode 1's more obvious version of the same
+problem. The prior write-up's claim that "both sides hold the same
+evidence content" was not yet true.
 
-A specific question's EAC/EvidenceSpan then look up only *that question's*
-required units' positions within this shared, case-level baseline — which
-is no longer degenerate, because a question's required units are
-routinely NOT the very first and very last content in the case (other
-facts, needed by other questions, legitimately come before/after them).
-Proven directly in `test_evidence_reordered_closer_to_start_improves_gist_
-eac` and `test_evidence_moved_farther_apart_regresses_gist_eac`, both of
-which produce non-trivial (non-1.0) baseline values.
+## The fix: the retained-unit baseline
 
-This is a real, load-bearing deviation from the PR brief's literal wording
-— documented here rather than silently substituted, per the brief's own
-instruction to document failures rather than patch formulas until they
-look favorable.
+The corrected construction compares the **same set of retained semantic
+units** in two different orders — not a case-level superset on one side
+and a rendering-specific subset on the other.
+
+For each **(case, tier, level)**, build a strict retained set **R**:
+
+> A gold fact/relation belongs to R only if (a) its verdict status in
+> *this specific rendering* is exactly `"retained"` (a separate
+> exploratory view allows `"retained"` or `"partial"`, reported
+> separately, never mixed into the strict numbers), (b) its
+> `source_quote` aligns deterministically in `source.md`, and (c) the
+> judge's recorded evidence for it aligns deterministically in *this
+> specific rendering*. No partial units in the strict view. No fuzzy
+> matching, ever — exact normalized-token containment only (same
+> `text_norm.py` machinery as before). A unit failing any check is
+> **excluded** from R, with the specific reason(s) recorded
+> (`retained_set.strict.excluded` in `results/findability.json`) — it then
+> cannot appear on either side of the comparison, so deletion can never
+> earn credit.
+
+Then build **two orderings over exactly R**:
+
+1. **Source-order baseline** — sort R by original position in
+   `source.md`.
+2. **Gist-order representation** — sort the *same* units in R by their
+   aligned position in the structured-gist rendering.
+
+Same cards, different shuffle. `build_retained_units` (in
+`scoring/findability.py`) constructs R and the two orderings;
+`assert_identical_retained_sets` is a hard runtime assertion (also
+directly unit-tested,
+`test_assert_identical_retained_sets_catches_a_real_mismatch`) that the
+two rankings cover exactly the same unit-id set — a unit the gist deleted
+is excluded from R entirely and therefore cannot appear in either ranking
+(`test_deleted_unit_absent_from_both_orderings`).
+
+**Tie handling.** Multiple units may align to the same source span or the
+same gist position. Ranking breaks ties deterministically: source side
+sorts by `(source_start, source_end, unit_id)`; gist side sorts by
+`(gist_start, gist_end, unit_id)` — never by incidental JSON/dict
+iteration order (`test_ties_at_same_source_position_break_by_unit_id`,
+`test_ties_at_same_gist_position_break_by_unit_id`,
+`test_deterministic_ordering_regardless_of_dict_insertion_order`).
+
+**Duplicate / relation overlap handling.** A fact and a relation may quote
+overlapping (or identical) source text — common in this corpus (every one
+of the 8 cases exhibits it). For this metric, each is still its own
+semantic unit and gets its own rank; they are never collapsed into one
+just because their spans coincide
+(`test_relation_and_fact_sharing_source_span_remain_separate_units`). This
+is a deliberate difference from the diagnostic token baseline below, which
+*does* dedupe overlapping spans at the token level — the retained-unit
+metric is about semantic-unit accessibility, not literal byte traversal,
+so two independently-judged units both being locatable is exactly what it
+should measure, even if their underlying text overlaps.
 
 ## Metric definitions
 
-- **Evidence Access Cost (EAC)** — `content tokens traversed before all
-  required evidence is available / total content tokens in
-  representation`. "Traversed" = read start-to-finish in reading order;
-  "before all required evidence is available" = through the END of the
-  LAST required unit's evidence (an outline is read top to bottom; you
-  don't know you have everything until you've reached the last piece).
-  Computed for the case-level baseline and for the actual gist rendering.
-  `ΔEAC = EAC_gist - EAC_baseline`; negative is better for the gist.
-- **Evidence span / locality** — `tokens from the START of the FIRST
-  required unit to the END of the LAST required unit / total content
-  tokens in representation`. Asks whether related evidence was brought
-  closer together, independent of how far into the document it sits.
-- **Structural traversal diagnostic** (optional, diagnostic only) — for
-  multi-support questions: which output node holds each required unit's
-  evidence, the depth of their lowest common ancestor in the outline
-  tree, and how many other nodes sit between the first and last one in
-  reading order.
+### Headline: unit-rank Evidence Access Cost (over R)
+
+For each strict-scorable question (every required unit in R):
+
+```
+EAC_source = rank(last required unit, source order) / |R|
+EAC_gist   = rank(last required unit, gist order)   / |R|
+delta_eac  = EAC_gist - EAC_source
+```
+
+Ranks are **1-indexed, cumulative traversal**: the first of `|R|` retained
+units is rank 1 (`EAC = 1/|R|`), the last (`|R|`-th) is rank `|R|`
+(`EAC = 1.0`) — simpler and more defensible than token-normalized EAC for
+this primary comparison, and directly hand-verified
+(`test_rank_normalization_first_and_last_of_ten`: first of 10 -> 0.1,
+tenth -> 1.0). Negative `delta_eac` means the gist makes all required
+evidence available earlier, holding the retained content constant.
+
+### Locality (multi-unit questions)
+
+```
+Span_source = (rank(last) - rank(first) + 1) / |R|
+Span_gist   = (rank(last) - rank(first) + 1) / |R|      # gist order
+delta_span  = Span_gist - Span_source
+```
+
+Negative `delta_span` means the required units became more clustered.
+Both source above use the identical retained set R and the identical
+required-unit ranks; only the ordering differs.
+
+### Diagnostic only: the old token-normalized, case-level-baseline metric
+
+`build_case_baseline`, `score_question_view`, `finalize_view` (unchanged
+code, unchanged numbers — see "Verification" below) are kept in the module
+and still computed for every question, reported under
+`diagnostic_token_eac` in `results/findability.json` and in a clearly
+labeled section of `results/FINDABILITY_SCORES.md`. This is Failure mode
+2's construction, described above — it is **no longer the headline causal
+claim about organization**. It remains useful as a diagnostic (it still
+reports non-degenerate, hand-verified token positions and spans, and its
+numbers are a documented data point in this methodology's own history),
+but nothing in this document's conclusions should be read as resting on
+it.
+
+### Other diagnostics (unchanged)
+
 - **Token convention** — identical to Eval A: `scoring/text_norm.py`'s
-  `tokenize()` (conservative normalization + whitespace split + edge-
-  punctuation strip + casefold). Same normalizer, same corpus, same
-  rationale — see `WORDING_FIDELITY_FINDINGS.md`.
+  `tokenize()`.
+- **Structural traversal diagnostic** (multi-support questions only): which
+  output node holds each required unit's evidence, the depth of their
+  lowest common ancestor, and how many other nodes sit between the first
+  and last one in reading order. Unaffected by this revision (gated on the
+  same per-unit alignment/retention checks as before — see "Eligibility"
+  below) — its numbers are unchanged: **58.8%** of the 51 multi-support
+  eligible questions have zero intervening nodes between their first and
+  last required unit; average LCA depth **1.12**.
 
 ## Alignment
 
-Entirely deterministic, no embeddings, no fuzzy/edit-distance matching, no
-model call.
+Unchanged from the original corpus run — same normalizer, same
+deterministic exact-token-containment rule, no fuzzy matching, no model
+calls:
 
-- **Baseline side**: gold `source_quote` → exact token-sequence match in
-  `source.md`. Verified directly before writing any scoring code: **all
-  231 gold facts+relations across all 8 cases align exactly**, at both a
-  simple whitespace-normalized character check and the real tokenizer.
-  Zero corpus-integrity failures (`baseline_integrity.units_unaligned_in_
-  source` is empty for every case in `results/findability.json`). One
-  case (`f1`/`f2` equivalent) had a duplicated phrase in a synthetic unit
-  test, not in the real corpus — the real corpus has zero duplicate
-  `source_quote` occurrences, confirmed directly; "first occurrence wins"
-  (`text_norm.find_start`) is a documented convention for a case this
-  corpus does not currently exercise.
-- **Gist side**: the judge's recorded `evidence` string (from
-  `judged/<tier>.json`, already produced for `combine.py` — not
-  re-annotated here) → exact token-sequence match in the rendering.
-  Judge evidence turned out to have its own real-world messiness,
-  inspected directly before finalizing this module:
-  - **44/1020 evidence strings (4.3%) join multiple non-contiguous
-    rendering locations with `"..."`** (e.g. `"walk, validate, symlink
-    ... verify each new link"`) or, less often, `" / "` (e.g.
-    `"auth-service: explicitly not migrating ... vs notifications-
-    service: not started"`). Handled by splitting on either separator and
-    requiring **every** resulting fragment to align; the unit's overall
-    position is `[min(fragment starts), max(fragment ends))`.
-  - Some fragments echo their own node's marker glyph as if it were
-    quoted text (e.g. `"IV. retry adds load"`, `"h. root: ..."`) even
-    though a real node's `.text` never includes its own marker — stripped
-    via `outline_nodes.strip_marker_prefix` before matching.
-  - **After both fixes: 574/599 (95.8%) of "retained"-status evidence
-    strings align exactly.** The remaining 25 (4.2%) were inspected by
-    hand and are genuinely messier judge-authored composites this
-    module deliberately does not chase further — e.g. an evidence string
-    that embeds a marker glyph *mid-string* to reference a second,
-    separate node (`"Result A. 77 skills load at session start"` — "A."
-    here labels a *different* output node, not literal quoted text), or a
-    `vs`/`->`-joined descriptive comparison that never appears as
-    contiguous rendering text at all. Chasing these further starts to
-    mean encoding this specific judge's writing idiosyncrasies rather
-    than a principled, generalizable alignment rule — the brief's own
-    instruction is to report an alignment failure, not fuzzy-match around
-    it, so that is what this module does: any unit whose evidence does
-    not align makes its dependent question(s) `not_findability_scorable`
-    (never a default success or a guessed position).
-  - **9 of the 264 (case, tier, level, question) combinations (3.4%) are
-    ineligible for exactly this reason — status is "retained" but the
-    evidence could not be located in that specific rendering** (as
-    opposed to 99 combinations ineligible simply because the unit wasn't
-    retained at all). This is the direct, concrete interaction with Eval
-    A the PR brief asked to surface: a small but real fraction of
-    findability's "can't score" cases trace to evidence whose rendering
-    location couldn't be pinned down precisely — sometimes because Eval
-    A-style wording mutation broke a clean quote, sometimes because the
-    judge's own evidence annotation referenced structure rather than
-    quoting text. Both are reported as `unaligned_in_rendering`, not
-    silently patched or fuzzy-matched.
-- No source_quote or evidence string anywhere in this corpus required
-  falling back to fuzzy matching — every alignment success is exact.
+- **Source side**: gold `source_quote` -> exact token-sequence match in
+  `source.md`. All 231 gold facts+relations across all 8 cases align
+  exactly; zero corpus-integrity failures.
+- **Gist side**: judge-recorded `evidence` -> exact token-sequence match in
+  the rendering, including the multi-fragment (`"..."` / `" / "`) and
+  marker-prefix handling described previously. 574/599 (95.8%) of
+  `"retained"`-status evidence strings align exactly; the remainder are
+  reported as `unaligned_in_rendering`, never fuzzy-matched.
+
+This machinery is exactly what both `align_units_to_source` (feeding R)
+and the diagnostic case-level baseline now share — refactored into one
+function so the two paths can never silently diverge in what counts as an
+alignment success.
 
 ## Eligibility
 
-Strict scoring requires, for **every** unit a question's `fact_ids`
-lists: (a) verdict status exactly `"retained"` (not `"partial"` — see
-"Start with fully retained support units" in the PR brief) for both facts
-and relations, (b) the unit's `source_quote` aligns in the case baseline,
-and (c) the unit's judge-recorded evidence aligns in that specific
-rendering. Any failure marks the question `not_findability_scorable` for
-that (case, tier, level) with the specific reason(s) recorded — never
-silently dropped, never scored as a default. An **exploratory** view
-(same logic, `"partial"` allowed alongside `"retained"`) is computed and
-reported separately, never mixed into the strict numbers.
+Strict scoring requires every unit in a question's `fact_ids` to be in R:
+status exactly `"retained"`, source-aligned, and rendering-aligned. Any
+failure marks the question `not_findability_scorable`, with the specific
+reason(s) recorded per unit — never a silently shrunk required set. An
+**exploratory** view (`"partial"` allowed alongside `"retained"`) is
+computed and reported separately.
 
-**Corpus-wide strict eligibility: 156/264 (59.1%)**, rising sharply with
-granularity as retention itself rises with granularity:
+**This eligibility criterion is unchanged from the original run** — it was
+never the confounded part; the confound was in what the baseline's
+denominator was built from, not in which questions were scorable. Rerunning
+the corpus under the corrected methodology therefore reproduces the exact
+same eligibility numbers, re-derived directly from `results/findability.json`
+(not carried over from the prior write-up):
+
+**Corpus-wide strict eligibility: 156/264 (59.1%)** — identical to the
+prior run.
 
 | level | eligible | total | % |
 |---|---|---|---|
@@ -215,185 +256,252 @@ granularity as retention itself rises with granularity:
 | deep | 78 | 88 | 88.6 |
 
 By test class: `pressure-tests` 111/192 (57.8%), `regression` 45/72
-(62.5%) — pressure cases are, unsurprisingly, somewhat harder to strictly
-score, consistent with them being deliberately adversarial.
+(62.5%).
 
-## Results
+## Results (re-derived from a from-scratch re-run of the corpus)
 
-Full machine-readable output: `results/findability.json` (every question's
-`reasons` list is present for every ineligible combination — nothing is
-summarized away). Generated table: `results/FINDABILITY_SCORES.md`.
-Regenerate with `python3 scoring/findability.py` (deterministic, no model/
-network/randomness).
+Full machine-readable output: `results/findability.json` — every
+question's `unit_rank.strict`/`unit_rank.exploratory`, the diagnostic
+`diagnostic_token_eac`, and each rendering's `retained_set.strict.excluded`
+(why any given unit did not make it into R). Generated table:
+`results/FINDABILITY_SCORES.md`. Regenerate with `python3
+scoring/findability.py` (deterministic, no model/network/randomness).
 
-### By question type (strict-eligible only)
+### Headline: unit-rank EAC / locality span (strict-eligible only)
 
-| question type | n | avg ΔEAC | avg Δevidence-span |
+**By question type**
+
+| question type | n | avg ΔEAC | avg Δlocality-span |
 |---|---|---|---|
-| factual | 108 | +0.0251 | +0.0096 |
-| relational | 48 | **-0.0369** | +0.0014 |
+| factual | 108 | +0.0237 | +0.0086 |
+| relational | 48 | **-0.0262** | +0.0013 |
 
-### By support-unit count (strict-eligible only)
+**By support-unit count**
 
-| support | n | avg ΔEAC | avg Δevidence-span |
+| support | n | avg ΔEAC | avg Δlocality-span |
 |---|---|---|---|
-| single | 105 | +0.0150 | +0.0085 |
-| multi | 51 | **-0.0123** | +0.0042 |
+| single | 105 | +0.0020 | +0.0000 |
+| multi | 51 | **+0.0215** | +0.0194 |
 
-### By granularity level (strict-eligible only)
+**By granularity level**
 
-| level | n | avg ΔEAC | avg Δevidence-span |
+| level | n | avg ΔEAC | avg Δlocality-span |
 |---|---|---|---|
-| skim | 17 | **+0.0978** | +0.0908 |
-| standard | 61 | -0.0022 | +0.0056 |
-| deep | 78 | -0.0075 | -0.0101 |
+| skim | 17 | **+0.0147** | +0.0000 |
+| standard | 61 | +0.0083 | +0.0103 |
+| deep | 78 | +0.0070 | +0.0046 |
 
-### Structural traversal diagnostic (multi-support questions, n=51)
+**By test class**
 
-58.8% have zero intervening nodes between their first and last required
-unit (evidence lands in the same or an immediately adjacent node); average
-lowest-common-ancestor depth 1.12 (shallow — related facts are usually
-grouped under a common parent close to the root, not scattered across
-distant branches).
+| class | n | avg ΔEAC |
+|---|---|---|
+| regression | 45 | +0.0029 |
+| pressure-tests | 111 | +0.0105 |
 
-## Corpus conclusions
+**By question type × support-unit count** (the split that turned out to
+matter — see "Reassessing the multi-support claim" below)
+
+| type × support | n | avg ΔEAC |
+|---|---|---|
+| relational, single | 36 | **-0.0354** |
+| relational, multi | 12 | +0.0016 |
+| factual, single | 69 | +0.0214 |
+| factual, multi | 39 | +0.0276 |
+
+**By model, where both exist** (`cause-chain-reversal`, `migration-tristate`,
+`synthetic-scale-verylarge`)
+
+| model | n | avg ΔEAC |
+|---|---|---|
+| sonnet | 120 | +0.0057 |
+| haiku | 36 | **+0.0171** |
+
+### Diagnostic only: the old token-normalized, case-level-baseline metric
+
+Kept for direct comparison, unchanged from the original run (byte-verified
+identical — see "Verification"):
+
+| question type | n | avg ΔEAC (diagnostic) |
+|---|---|---|
+| factual | 108 | +0.0251 |
+| relational | 48 | -0.0369 |
+
+## Reassessing the prior findings
+
+The prior write-up's numbers were produced by a confounded baseline
+(Failure mode 2) and are **not** treated here as a target the corrected
+numbers need to reproduce. Each of the prior claims is checked directly
+against the corrected, from-scratch numbers above.
+
+**1. "Relational questions benefit more than factual questions."**
+**Survives**, same sign, similar order of magnitude: relational -0.0262 vs.
+factual +0.0237 (previously -0.0369 vs. +0.0251). The direction and rough
+shape of this split hold under the corrected, compression-controlled
+comparison.
+
+**2. "Multi-support benefits more than single-support."** **Does NOT
+survive — it reverses.** Previously multi -0.0123 (better) vs. single
++0.0150 (worse). Corrected: multi **+0.0215** (worse) vs. single +0.0020
+(roughly neutral). Breaking this down further by type × support shows
+*why*: the old multi-support number was almost entirely riding on
+relational questions being disproportionately multi-support in the
+uncorrected metric. Once the retained-unit set is held constant,
+relational-single questions are the actual driver of the relational
+benefit (-0.0354, n=36), while relational-multi is close to neutral
+(+0.0016, n=12) and both factual buckets (single +0.0214, multi +0.0276)
+are mild regressions of similar size. **Multi-support, independent of
+question type, is not where the benefit lives — relational content is.**
+This is a materially different, more precise claim than the prior one, and
+the prior "multi-support benefits" framing is retracted, not merely
+softened.
+
+**3. "Skim regresses."** **Survives, but far more weakly than reported.**
+Previously +0.0978 (the largest deviation from zero in the whole table).
+Corrected: **+0.0147** — still the worst-performing level and still a
+regression, but roughly 85% smaller. Most of the originally reported skim
+penalty was an artifact of comparing skim's small gist against a
+much-larger case-level all-gold baseline (Failure mode 2) — once both
+sides are restricted to what skim actually retained, skim is a *mild* net
+negative, not a dramatic one.
+
+**4. "Standard is near-neutral."** **Does NOT survive.** Previously -0.0022
+(essentially zero, slightly favorable). Corrected: **+0.0083** — a small
+but real regression, not neutral.
+
+**5. "Deep modestly improves."** **Does NOT survive — it reverses.**
+Previously -0.0075 (the best-performing level). Corrected: **+0.0070** — a
+small regression, in the same direction as skim and standard. Under the
+corrected metric, **all three granularity levels show a mild net
+regression** in unit-rank EAC; they differ mainly in how large that
+regression is (skim worst, then standard, then deep), not in sign.
+
+**Summary of what changed and why:** the previous per-level story
+("skim bad, standard fine, deep good") was largely an artifact of
+Failure-mode-2's baseline getting progressively less mismatched at higher
+granularity (a `deep` rendering retains most of a case's gold content, so
+its case-level-all-gold baseline was a much closer match to what the gist
+itself held than `skim`'s was) — not evidence that deeper renderings
+genuinely reorganize evidence better. Once the baseline is restricted to
+exactly what each rendering retained, that gradient mostly disappears: all
+three levels look similarly (mildly) worse for unit-rank EAC, and the
+one clearly-surviving, mechanistically sensible signal is the
+relational/factual split (claim #1), sharpened to specifically
+relational-*single*-support questions (claim #2's replacement).
+
+## Corpus conclusions (rewritten from the corrected numbers)
 
 **1. For already-preserved information, does hierarchy reduce evidence-
-access cost?** Mixed, and the mixture itself is the finding, not noise.
-Averaged over everything, the effect is small (relational avg ΔEAC
--0.037, factual avg ΔEAC +0.025) — this is not a uniform win. It **does**
-show a real, if modest, benefit concentrated in exactly the place the PR
-brief's own hypothesis predicted (next question).
+access cost, holding retained content constant?** Mostly no, on average —
+factual +0.0237, relational -0.0262. The overall picture is closer to "a
+small net cost with one specific, real exception" than "small but positive
+overall."
 
-**2. Is the effect stronger for relational/multi-support questions?**
-**Yes, clearly**, and this is the strongest single result in this eval:
-relational questions average ΔEAC **-0.037** (hierarchy helps) vs.
-factual questions' **+0.025** (hierarchy very slightly hurts); multi-
-support questions average **-0.012** vs. single-support's **+0.015**. A
-single fact like "how many skills load at session start?" gets no
-locality benefit from a tree — it's one number, findable or not,
-regardless of organization. A relational/multi-support question like
-"why did A cause B?" is exactly where clustering related facts under a
-shared parent (58.8% of multi-support cases land in the same or an
-adjacent node, per the structural diagnostic) pays off. This directly
-confirms the PR brief's own example split ("What number was used?" vs.
-"Why did A cause B?").
+**2. Where is the exception?** Relational questions, and specifically
+single-support relational questions (-0.0354, n=36) — not multi-support
+questions in general (see reassessment #2 above). A single-support
+relational question ("why did A cause B?" answered by one causal relation
+unit) benefits from the relation being lifted near a well-organized
+grouping; a multi-fact relational question spreads its benefit thin across
+more required units and lands close to neutral (+0.0016).
 
-**3. Does any benefit survive after controlling for compression?**
-**Yes — this is the point of the whole case-level-baseline exercise.**
-Because both sides hold the *same* evidence content, a relational
-question's -0.037 average ΔEAC cannot be explained by "the gist is just
-shorter" — the baseline is built from the same retained facts, in their
-natural source order, at the same nominal size class as the material the
-gist also had to arrange. The benefit is real, though modest in absolute
-terms, and it is concentrated exactly where organization (not deletion)
-would be expected to help.
+**3. Does the surviving benefit hold after controlling for compression?**
+**Yes — this is the entire point of the retained-unit-baseline exercise.**
+Both sides of every comparison now hold the literal same set of semantic
+units; only their order differs. Relational-single's -0.0354 cannot be
+explained by "the gist is shorter" — a shorter gist's advantage is
+already stripped out by construction (both sides are ranked over the same
+`|R|`).
 
-**4. Which granularity mode benefits most?** **None of them, at skim** —
-skim is a clear net negative (avg ΔEAC +0.098, the largest deviation from
-zero in this whole table) — but treat this specific number cautiously:
-only 17 (case, tier, level, question) combinations are strict-eligible at
-skim at all (vs. 61 at standard, 78 at deep), because most facts simply
-don't survive skim's compression. The 17 that do survive are
-disproportionately the highest-weight, most load-bearing facts, and
-even among those, skim's aggressive reorganization (collapsing most
-detail, keeping only a concept spine) evidently scrambles relative
-position enough to cost more than it saves. `standard` is close to
-neutral (-0.002); `deep` shows the most consistent modest improvement
-(-0.008, and the largest n).
+**4. Which granularity mode is worst?** Skim, by a real if now much
+smaller margin (+0.0147 vs. standard +0.0083 vs. deep +0.0070) — but,
+unlike the prior write-up, deep does not "win"; it is simply the least-bad
+of three mild regressions, not a genuine improvement.
 
-**5. Are there cases where structured hierarchy makes evidence harder to
-locate?** Yes, directly demonstrated both synthetically
-(`test_evidence_moved_farther_apart_regresses_gist_eac`) and in the real
-corpus — `skim`'s aggregate ΔEAC is positive, and 108 of 156
-strict-eligible questions (mostly factual, mostly single-support) show a
-positive (worse) ΔEAC individually. The mechanism the synthetic test
-makes concrete: if a model's chosen organization interposes unrelated
-material between two facts that happen to be source-adjacent, hierarchy
-actively hurts relative to flat source-ordered prose — it is not a
-one-directional benefit.
+**5. Is there a model difference?** A new cut this revision adds: on the
+three cases judged under both models, Haiku shows a larger average
+regression (+0.0171, n=36) than Sonnet (+0.0057, n=120) — consistent with,
+though not proof of, Haiku's renderings reorganizing retained evidence less
+favorably. Too small an n (36) to treat as more than a suggestive
+secondary observation; flagged here rather than folded into the headline
+claim.
 
 **6. Is the deterministic proxy strong enough to keep as a regression
-metric?** Not yet, on its own, as a pass/fail gate — the corpus-wide
-average effect is small relative to its own variance (e.g. the standard
-deviation implied by individual per-question deltas swinging from -0.34
-to +0.49 in the raw table dwarfs any of the averages above), and only
-59.1% of (case, tier, level, question) combinations are even
-strict-scorable. It is, however, already strong enough to watch **the
-relational/multi-support vs. factual/single-support split** as a
-directional regression signal (a large positive shift in the relational
-average would mean hierarchy stopped paying for itself where it's
-supposed to), and the eligibility rate itself (drops in strict-scorable
-question count) is a cheap, useful proxy for "did retention regress
-enough to break this eval's ability to measure anything."
+metric?** Not yet, on its own, as a pass/fail gate — same conclusion as
+before, now on firmer ground: only 59.1% of combinations are
+strict-scorable, and the one surviving directional claim (relational-
+single) is a narrower slice of the data (n=36) than the previous, broader
+"relational or multi-support" framing (n=51+48 combined, overlapping). It
+is, however, worth watching **the relational-single-support ΔEAC** as a
+narrower, more honest regression signal than before, plus the eligibility
+rate itself as a cheap check that retention hasn't regressed enough to
+break this eval's ability to measure anything.
 
-**7. Would a later human timing study be worth doing?** Yes, specifically
-to validate direction #2 above (relational > factual benefit) with real
-readers, since that is the one result here with a plausible mechanism, a
-clean sign, and actual (if modest) magnitude — the other directions
-(skim regression, overall small effect) are less obviously worth the cost
-of a human study before more corpus and more cases exist.
+**7. Would a later human timing study be worth doing?** Yes, and now
+specifically targeted at the *narrower* surviving claim — single-support
+relational questions — rather than "relational and/or multi-support" in
+general, since the multi-support half of that prior claim did not survive
+independent scrutiny.
 
 ## Pressure checks (actively tried to falsify this measure)
 
-- **Shorter output getting a free advantage** — addressed by design: the
-  baseline is content-matched (same retained facts), not raw source, so a
-  shorter gist does not automatically get a smaller denominator advantage
-  the baseline doesn't also have available at comparable scale.
+- **Shorter output getting a free advantage** — this is now addressed
+  structurally, not just by design intent: R is built from what each
+  specific rendering retained, so a shorter gist's denominator (`|R|`) is
+  exactly as small as the units it actually kept and could align — it
+  gets no additional advantage from being compared against a
+  larger, unrelated baseline (that was precisely Failure mode 2, now
+  fixed).
 - **Evidence near the beginning of source making hierarchy look worse
-  unfairly** — this is real and reported, not hidden:
-  `test_evidence_reordered_closer_to_start_improves_gist_eac` and its
-  mirror `test_evidence_moved_farther_apart_regresses_gist_eac` show the
-  metric responds correctly to *both* directions — a baseline where
-  required evidence happens to sit early gets a naturally low
-  `EAC_baseline`, and the gist is only credited for improving on it, not
-  for reaching an absolute low number that was cheap to reach anyway.
-- **Questions with one tiny answer dominating averages** — the `skim`
-  n=17 result is exactly this risk materializing: flagged explicitly
-  above rather than folded into a single "does hierarchy help" verdict.
-- **Omitted evidence being rewarded** — cannot happen by construction:
-  omitted/lost/mutated units fail the status check and make the question
-  `not_findability_scorable`, never scored as "conveniently absent."
-- **Duplicated evidence creating artificially low access cost** — checked
-  directly: `test_duplicated_source_phrase_uses_first_occurrence_and_is_
-  flagged_ambiguous` proves the first occurrence is used and the case is
-  flagged (`ambiguous_unit_ids`) rather than silently picking whichever
-  occurrence happens to be more convenient; zero real corpus quotes are
-  duplicated, so this has not affected any reported number.
-- **First-occurrence matching selecting the wrong occurrence** — same
-  test; the real corpus does not currently exercise this path (zero
-  duplicates), so the convention exists but has not been stress-tested
-  against real ambiguity yet — a real finding, not swept under the rug.
-- **Relation `source_quote` overlapping its component facts' quotes** —
-  confirmed directly (every one of the 8 cases exhibits this), and
-  `merge_spans`/`test_overlapping_fact_and_relation_spans_are_deduped_in_
-  baseline` handle it by construction rather than double-counting
-  overlapping content in the baseline's token count.
-- **Content-matched baseline construction accidentally changing source
-  order** — checked directly:
-  `test_baseline_preserves_source_order_regardless_of_gold_list_order`
-  feeds gold facts in scrambled (C, A, B) order and confirms the baseline
-  still comes out in source order.
+  unfairly** — `test_single_required_unit_moved_earlier_in_gist_improves_
+  eac` and its mirror `test_single_required_unit_moved_later_in_gist_
+  regresses_eac` (and the locality-span pair
+  `test_two_required_units_clustered_closer_in_gist_improves_locality_
+  span` / `test_two_required_units_spread_farther_in_gist_regresses_
+  locality_span`) confirm the metric responds correctly to both
+  directions using hand-computed ranks.
+- **The old "multi-support benefits" claim being a confound of question
+  type, not support count** — checked directly and confirmed: see
+  "Reassessing the multi-support claim" above and the type × support
+  cross-tab. This is exactly the kind of thing this pressure-check
+  section exists to catch, and it was caught by re-deriving the numbers
+  from scratch rather than assuming the prior split would hold.
+- **Omitted evidence being rewarded** — cannot happen by construction: a
+  unit whose status is not `"retained"` (strict) is excluded from R
+  entirely (`test_deleted_unit_absent_from_both_orderings`,
+  `test_omitted_required_unit_makes_unit_rank_question_ineligible`).
+- **A fact and a relation sharing a source span silently merging into one
+  unit** — checked directly:
+  `test_relation_and_fact_sharing_source_span_remain_separate_units`
+  proves both remain distinct, separately-ranked units even when their
+  spans are identical.
+- **Ties (same source position, or same gist position) depending on
+  incidental JSON/dict order** — checked directly:
+  `test_ties_at_same_source_position_break_by_unit_id`,
+  `test_ties_at_same_gist_position_break_by_unit_id`, and
+  `test_deterministic_ordering_regardless_of_dict_insertion_order` all
+  pass with retained-set dicts built in scrambled insertion order.
 - **Normalized position hiding large absolute traversal differences** —
-  real and worth flagging: this eval reports only normalized (0-1)
-  fractions, never absolute token counts, so a large-token-count case and
-  a small one contribute equally to an averaged delta regardless of their
-  absolute scale. `results/findability.json` retains `gist_token_count`
-  and `baseline_token_count` per rendering for anyone who wants to
-  re-weight by absolute size; the tables above do not.
+  same caveat as before: this eval reports only normalized (0-1)
+  fractions. `results/findability.json` retains `gist_token_count` and
+  each rendering's `retained_set.*.size` (`|R|`) for anyone who wants to
+  re-weight by absolute scale.
 
 ## Promotion classification
 
-**B — useful experimental metric; promising, but methodology needs
-another round before it is a durable regression gate.** This confirms the
-PR brief's own stated prior for this eval. Concretely promising: the
-relational/multi-support-vs-factual/single-support split is a clean,
-mechanistically sensible, directionally consistent finding, obtained only
-after fixing a real, provable degeneracy in the literal baseline
-construction and being honest about a ~41% strict-ineligibility rate.
-What the next round needs before promotion past B: more cases (8 is a
-small corpus for a metric with this much per-question variance), a check
-of whether the skim regression replicates outside `real-hook-discovery`/
-`cause-chain-reversal`-style short cases, and likely a human-timing
-validation of the one directional claim (#2) worth spending that on
-before trusting the proxy alone as a gate.
+**B — useful experimental metric; not yet a durable regression gate, and
+narrower than previously believed.** The corrected methodology is stronger
+in one specific sense (the comparison is now genuinely compression-
+controlled — both sides hold the literal same retained units) but the
+corpus-level story is *less* uniformly favorable than the prior write-up
+suggested: the granularity gradient (skim bad, deep good) and the
+multi-support claim both do not survive independent scrutiny, leaving only
+the relational/factual split — sharpened to relational-single-support
+specifically — as a claim with a clean, mechanistically sensible,
+directionally consistent, and now compression-controlled basis. That is
+still a real and interesting result, but it is a narrower one than
+previously claimed, obtained only after finding and fixing a *second* real
+baseline confound. Promotion to A would need: more cases (8 is small for
+a metric with this much per-question variance), confirmation that the
+relational-single-support benefit replicates on a larger corpus, and
+likely the human-timing validation flagged in reassessment item #7 before
+trusting the proxy alone as a gate.
