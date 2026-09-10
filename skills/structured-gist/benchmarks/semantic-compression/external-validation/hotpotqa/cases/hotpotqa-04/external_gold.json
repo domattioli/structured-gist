@@ -1,0 +1,37 @@
+{
+  "case_id": "hotpotqa-04",
+  "dataset": "hotpotqa",
+  "intent": {
+    "reader": "someone who needs the answer to a multi-hop question without reading all ten source paragraphs",
+    "task": "answer the question below by composing evidence from at least two paragraphs, using only what survives compression"
+  },
+  "native_evidence": [
+    {
+      "sent_id": 0,
+      "text": "Daltoni (Serbian Cyrillic: Далтони; translation: \"The Daltons\") was a Serbian and former Yugoslav rock band from Niš, notable for being one of the pioneers of the former Yugoslav rock scene.",
+      "title": "Daltoni"
+    },
+    {
+      "sent_id": 0,
+      "text": "The Dalton Gang was a group of outlaws in the American Old West during 1890–1892.",
+      "title": "Dalton Gang"
+    }
+  ],
+  "native_metadata": {
+    "distinct_titles": [
+      "Dalton Gang",
+      "Daltoni"
+    ],
+    "hotpot_id": "5a8b7cb95542995d1e6f13bb",
+    "level": "hard",
+    "n_context_paragraphs": 10,
+    "n_distinct_titles": 2,
+    "n_supporting_facts": 2,
+    "pressure_only": true,
+    "source_word_count": 522,
+    "type": "bridge"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Which group of outlaws from the 1890s shares a name with a Yugoslav rock band?",
+  "reference_answer": "Dalton Gang"
+}

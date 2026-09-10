@@ -1,0 +1,45 @@
+{
+  "case_id": "qasper-07",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 17,
+      "para_idx": 0,
+      "section_idx": 4,
+      "section_name": "Measuring Attention-Alignment Accuracy",
+      "text": "In order to compare attentions of multiple systems as well as to measure the difference between attention and word alignment, we convert the hard word alignments into soft ones and use cross entropy between attention and soft alignment as a loss function. For this purpose, we use manual alignments provided by RWTH German-English dataset as the hard alignments. The statistics of the data are given in Table TABREF8 . We convert the hard alignments to soft alignments using Equation EQREF10 . For unaligned words, we first assume that they have been aligned to all the words in the source side and then do the conversion. DISPLAYFORM0 "
+    },
+    {
+      "global_idx": 29,
+      "para_idx": 0,
+      "section_idx": 7,
+      "section_name": "Impact of Attention Mechanism",
+      "text": "We train both of the systems on the WMT15 German-to-English training data, see Table TABREF18 for some statistics. Table TABREF17 shows the BLEU scores BIBREF12 for both systems on different test sets."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "extractive",
+    "arxiv_id": "1710.03348",
+    "cardinality": "multi",
+    "distance_bucket": "wide",
+    "evidence_distance": 12,
+    "evidence_raw": [
+      "We train both of the systems on the WMT15 German-to-English training data, see Table TABREF18 for some statistics. Table TABREF17 shows the BLEU scores BIBREF12 for both systems on different test sets.",
+      "In order to compare attentions of multiple systems as well as to measure the difference between attention and word alignment, we convert the hard word alignments into soft ones and use cross entropy between attention and soft alignment as a loss function. For this purpose, we use manual alignments provided by RWTH German-English dataset as the hard alignments. The statistics of the data are given in Table TABREF8 . We convert the hard alignments to soft alignments using Equation EQREF10 . For unaligned words, we first assume that they have been aligned to all the words in the source side and then do the conversion. DISPLAYFORM0"
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 2,
+    "nlp_background": "five",
+    "paper_title": "What does Attention in Neural Machine Translation Pay Attention to?",
+    "source_word_count": 3438,
+    "topic_background": "familiar"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What datasets are used?",
+  "reference_answer": "WMT15 German-to-English | RWTH German-English dataset"
+}

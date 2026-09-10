@@ -1,0 +1,45 @@
+{
+  "case_id": "qasper-10",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 12,
+      "para_idx": 1,
+      "section_idx": 6,
+      "section_name": "Data Preparation",
+      "text": "The dataset comprises a total of 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) with consent to the use of anonymized data for research. The speakers are 38 to 88 years old, equally distributed across gender, and comprise a range of ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, and 11% unspecified). The conversations cover 11 topics (e.g., medication compliance, symptom checking, education, greeting) and 9 symptoms (e.g., chest pain, cough) and amount to 41 hours."
+    },
+    {
+      "global_idx": 25,
+      "para_idx": 0,
+      "section_idx": 8,
+      "section_name": "Simulating Symptom Monitoring Dataset for Training",
+      "text": "We divide the construction of data simulation into two stages. In Section SECREF16 , we build templates and expression pools using linguistic analysis followed by manual verification. In Section SECREF20 , we present our proposed framework for generating simulated training data. The templates and framework are verified for logical correctness and clinical soundness."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "extractive",
+    "arxiv_id": "1903.03530",
+    "cardinality": "multi",
+    "distance_bucket": "wide",
+    "evidence_distance": 13,
+    "evidence_raw": [
+      "The dataset comprises a total of 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) with consent to the use of anonymized data for research. The speakers are 38 to 88 years old, equally distributed across gender, and comprise a range of ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, and 11% unspecified). The conversations cover 11 topics (e.g., medication compliance, symptom checking, education, greeting) and 9 symptoms (e.g., chest pain, cough) and amount to 41 hours.",
+      "We divide the construction of data simulation into two stages. In Section SECREF16 , we build templates and expression pools using linguistic analysis followed by manual verification. In Section SECREF20 , we present our proposed framework for generating simulated training data. The templates and framework are verified for logical correctness and clinical soundness."
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 1,
+    "n_evidence_locations": 2,
+    "nlp_background": "infinity",
+    "paper_title": "Fast Prototyping a Dialogue Comprehension System for Nurse-Patient Conversations on Symptom Monitoring",
+    "source_word_count": 3482,
+    "topic_background": "unfamiliar"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "How big is their created dataset?",
+  "reference_answer": "353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) | we build templates and expression pools using linguistic analysis"
+}

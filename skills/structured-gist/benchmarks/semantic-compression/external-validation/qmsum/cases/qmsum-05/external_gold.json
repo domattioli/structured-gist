@@ -1,0 +1,88 @@
+{
+  "case_id": "qmsum-05",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 796,
+      "span_index": 0,
+      "start_idx": 782,
+      "turns": [
+        {
+          "content": "Oh yeah , I think I see . So the discourse refers to \" admission fee \" but it just turns out that they change their mind in the middle of the discourse .",
+          "speaker": "Grad B"
+        },
+        {
+          "content": "Yeah . you have to have some notion of not just {disfmarker} I mean there 's a {disfmarker} there 's change across several turns of discourse",
+          "speaker": "Grad D"
+        },
+        {
+          "content": "Right .",
+          "speaker": "Grad B"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "Grad A"
+        },
+        {
+          "content": "so {vocalsound} I don't know how {disfmarker} if any of this was discussed {disfmarker} but how i if it all this is going to interact with {vocalsound} whatever general {vocalsound} uh , other {disfmarker} other discourse processing that might be happen .",
+          "speaker": "Grad D"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "Grad A"
+        },
+        {
+          "content": "Yeah . {comment} {nonvocalsound} Yeah .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "I mean .",
+          "speaker": "Grad D"
+        },
+        {
+          "content": "What sort of discourse {pause} processing is uh {disfmarker} are the {disfmarker} How much is built into SmartKom and {disfmarker}",
+          "speaker": "Grad B"
+        },
+        {
+          "content": "It works like this . The uh , um {disfmarker} I mean . The first thing we get is that {pause} already the intention is sort of t They tried to figure out the intention , right ? simply by parsing it . And this um {disfmarker} m won't differentiate between all modes , yeah ? but at least it 'll tell us \" OK here we have something that {disfmarker} somebody that wants to go someplace , now it 's up for us to figure out what kind of going there is {disfmarker} is {disfmarker} {pause} is happening , and um , if the discourse takes a couple of turns before everything {disfmarker} all the information is needed , what happens is you know the parser parses it and then it 's handed on to the discourse history which is , um o one of the most elaborate {disfmarker} elaborate modules . It 's {disfmarker} it 's actually the {disfmarker} the whole memory of the entire system , that knows what {disfmarker} wh who said what , which was {disfmarker} what was presented . It helps an an anaphora resolution and it {disfmarker} and it fills in all the structures that are omitted , so , {pause} um , because you say \" OK , {pause} how can I get to the castle ? \" Oh , how {disfmarker} how much is it ? \" and um \" yeah I would like uh {disfmarker} um {disfmarker} to g let 's do it \" and so forth . So even without an a ana {pause} anaphora somebody has to make sure that information we had earlier on is still here .",
+          "speaker": "Grad A"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "Grad B"
+        },
+        {
+          "content": "Because not every module keeps a memory of everything that happened . so {vocalsound} whenever the uh , um person is not actually rejecting what happened before , so as in \" No I really don't want to see that movie . I 'd rather stay home and watch TV \" um {disfmarker} What movie was selected in what cinema in what town is {disfmarker} is going to be sort of added into the disc into the representations every di at each dialogue step , by the discourse model {disfmarker} discourse {pause} model , Yeah , that 's what it 's called . and , um , it does some help in the anaphora resolution and it also helps in coordinating the gesture screen issues . So a person pointing to something on the screen , you know , the discourse model actually stores what was presented at what location on the s on the screen",
+          "speaker": "Grad A"
+        },
+        {
+          "content": "Hmm .",
+          "speaker": "Grad B"
+        },
+        {
+          "content": "so it 's a {disfmarker} it 's a rather huge {vocalsound} {disfmarker} huge thing but um {disfmarker} {vocalsound} {comment} um {disfmarker} {pause} {vocalsound} we can {pause} sort of {disfmarker} It has a very clear interface . We can query it whether admission fees were discussed in the last turn and {disfmarker} and the turn before that or you know how {pause} deep we want to search",
+          "speaker": "Grad A"
+        },
+        {
+          "content": "OK .",
+          "speaker": "Grad B"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Academic",
+    "n_spans": 1,
+    "n_turns": 1029,
+    "native_meeting_id": "Bed003",
+    "source_word_count": 14060
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What was the importance of SmartKom?",
+  "reference_answer": "SmartKom, although it does not code for intentions as specified in this task, provides a model of the discourse, which can be useful for the detection of features through querying and anaphora resolution."
+}

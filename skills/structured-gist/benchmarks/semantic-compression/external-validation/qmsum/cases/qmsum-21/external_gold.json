@@ -1,0 +1,243 @@
+{
+  "case_id": "qmsum-21",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 485,
+      "span_index": 0,
+      "start_idx": 464,
+      "turns": [
+        {
+          "content": "Now i if we look at fashion in general um {disfmarker} Okay . Wha what we really see this year is that uh everything from clothes to shoes and furniture is is inspired by fruits and vegetables ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Ah yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "okay , so I think we really have to take this into account for the design of the the thing .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah , yeah . Okay , yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "'Cause it's it's really what people want . Even if it's in general fashion , we want it to be in the remote control . And then uh if if we take the ordering or the ranking of all the points , fancy look and feel has , on a score of seven would have six as importance . Uh the remote control has to be technologically innovative , it's three . Then easy to use uh it's not so important actually with respect to other y other ones .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "So we see fancy look an look and feel is the most important one , and then if we combine this with the fashion uh from Milan and Paris",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "And fruit and vegetables yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "we go to the fruits and vede vegetables . And the other point I haven't mention is people wan want to have a spongy touch ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "{vocalsound} Spongy {vocalsound} 'Kay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "okay so this is this maybe doesn't really fit with the wooden design .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay , yeah , yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I dunno .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah , but the problem is which kind of material do you need to to be spongy ?",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah thi this is this would be like um",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Pla S",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "plastic-like , but rubber , mayb maybe , you know , rubber-like uh",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Very stuff {disfmarker} Okay , rubber rubber desi okay , yeah . Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "device , so um",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay , tha tha that was the main point , I think , from the trend in fashion .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Industrial Designer"
+        }
+      ]
+    },
+    {
+      "end_idx": 529,
+      "span_index": 1,
+      "start_idx": 500,
+      "turns": [
+        {
+          "content": "So you think {gap} case . Something spongy . {vocalsound} Someth no wood .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "{vocalsound} No wood but {disfmarker} Plastic ?",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Maybe not no wood , but I mean ma maybe not the part you touching you know .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Would some {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Pla",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Maybe you {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "I think we can have wood for example in the bottom and , you know . It depends on the design we want ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah , maybe the base .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "so .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "It's it's natural .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "But still y",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Th The feeling is natural ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah , it's natural",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "and i",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "so maybe we can stay with wood .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And it can be correlated to energy , solar energy , so for the marketing aspect , you know , saying that it's ecol",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah , I mean it's not exactly right for the spongy point of view .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mm , yeah , it's not right , so .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But it's still fashion .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "But we could maybe have both like part of wood and some rubber for the buttons ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "or",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "I dunno .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "something that you can {vocalsound} into it .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Product",
+    "n_spans": 2,
+    "n_turns": 607,
+    "native_meeting_id": "IS1003c",
+    "source_word_count": 6156
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What did the marketing recommend to do when discussing the problem of fashion?",
+  "reference_answer": "That year everything from clothes to shoes and furniture was inspired by fruits and vegetables so the marketing suggested taking that into account. The marketing also mentioned that people wanted a spongy touch which meant the product might be partly wooden and partly rubber-made."
+}

@@ -1,0 +1,76 @@
+{
+  "case_id": "qmsum-17",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 500,
+      "span_index": 0,
+      "start_idx": 489,
+      "turns": [
+        {
+          "content": "What about Kryptonite ? {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Oh .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Which is quite cool . So if you throw it , it's gonna store loads of energy , and you don't need to buy a battery 'cause they're quite f I find them annoying . But we need to find cost .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Don't know the cost .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Didn't have enough data to actually {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Does anyone have costs on the on the web ?",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "All it said was it gave sort of relative , some chips are more expensive than others , sort of things . It didn't give me any actual cost .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay . Right .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Most of the stuff is pretty cheap though bought in bulk . So I don't think it's that much of a problem . Like the chip is probably the most expensive part .",
+          "speaker": "Industrial Designer"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Product",
+    "n_spans": 1,
+    "n_turns": 525,
+    "native_meeting_id": "ES2011c",
+    "source_word_count": 5883
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What was the cost of the Kryptonite when discussing potential options of energy?",
+  "reference_answer": "The website did not give an actual cost, but most of the stuff was cheap. The chip would be the most expensive part anyway, so the group should not worry about the cost of the Kryptonite too much."
+}

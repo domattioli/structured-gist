@@ -1,0 +1,45 @@
+{
+  "case_id": "qasper-08",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 25,
+      "para_idx": 4,
+      "section_idx": 5,
+      "section_name": "Experiments",
+      "text": "Hypothesis 4 (H4) : The proposed template-based synthesis model outperforms a simple word replacement model."
+    },
+    {
+      "global_idx": 38,
+      "para_idx": 3,
+      "section_idx": 6,
+      "section_name": "Results",
+      "text": "To validate our next set of hypothesises (H3, H4. H5), we use the synthesized data in two settings: either using it for training (rows 7, 8 and 19, 20) or tuning (rows 10, 11 and 22, 23). Table TABREF13 supports H4 by showing that the proposed synthesis model outperforms the WordNet baseline in training (rows 7, 8 and 19, 20) except Stat2016, and tuning (10, 11 and 22, 23) over all courses. It also shows that while adding synthetic data from the baseline is not always helpful, adding synthetic data from the template model helps to improve both the training and the tuning process. In both CS and ENGR courses, tuning with synthetic data enhances all ROUGE scores compared to tuning with only the original data. (rows 9 and 11). As for Stat2015, R-1 and R-$L$ improved, while R-2 decreased. For Stat2016, R-2 and R-$L$ improved, and R-1 decreased (rows 21 and 23). Training with both student reflection data and synthetic data compared to training with only student reflection data yields similar improvements, supporting H3 (rows 6, 8 and 18, 20). While the increase in ROUGE scores is small, our results show that enriching training data with synthetic data can benefit both the training and tuning of other models. In general, the best results are obtained when using data synthesis for both training and tuning (rows 11 and 23), supporting H5."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "yes_no",
+    "arxiv_id": "2002.03407",
+    "cardinality": "multi",
+    "distance_bucket": "wide",
+    "evidence_distance": 13,
+    "evidence_raw": [
+      "Hypothesis 4 (H4) : The proposed template-based synthesis model outperforms a simple word replacement model.",
+      "To validate our next set of hypothesises (H3, H4. H5), we use the synthesized data in two settings: either using it for training (rows 7, 8 and 19, 20) or tuning (rows 10, 11 and 22, 23). Table TABREF13 supports H4 by showing that the proposed synthesis model outperforms the WordNet baseline in training (rows 7, 8 and 19, 20) except Stat2016, and tuning (10, 11 and 22, 23) over all courses. It also shows that while adding synthetic data from the baseline is not always helpful, adding synthetic data from the template model helps to improve both the training and the tuning process. In both CS and ENGR courses, tuning with synthetic data enhances all ROUGE scores compared to tuning with only the original data. (rows 9 and 11). As for Stat2015, R-1 and R-$L$ improved, while R-2 decreased. For Stat2016, R-2 and R-$L$ improved, and R-1 decreased (rows 21 and 23). Training with both student reflection data and synthetic data compared to training with only student reflection data yields similar improvements, supporting H3 (rows 6, 8 and 18, 20). While the increase in ROUGE scores is small, our results show that enriching training data with synthetic data can benefit both the training and tuning of other models. In general, the best results are obtained when using data synthesis for both training and tuning (rows 11 and 23), supporting H5."
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 2,
+    "nlp_background": "five",
+    "paper_title": "Abstractive Summarization for Low Resource Data using Domain Transfer and Data Synthesis",
+    "source_word_count": 3759,
+    "topic_background": "familiar"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Is the template-based model realistic?  ",
+  "reference_answer": "Yes"
+}

@@ -1,0 +1,987 @@
+{
+  "case_id": "qmsum-23",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 84,
+      "span_index": 0,
+      "start_idx": 57,
+      "turns": [
+        {
+          "content": "Yeah , I'll start .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Uh uh yeah . Okay ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "great .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Um {disfmarker} Oh , how can I uh {disfmarker} Geez , and sli and show . Um {disfmarker} Just uh press it .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Uh yes . Alright . Um well w we uh we had discussed this already in the fin in the previous uh discussion . {vocalsound} Uh the method of the remote control is just {disfmarker} the function of remote control is basically to send messages to the television set . So that was the main uh important thing what a remote control should do .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Then I found uh two different kind of remote controls , the multi-function uh remote control with many possibilities , but um the lack of the feeling I already mentioned uh in the previous uh discussion .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And the ease-of-use remote control with uh the less p possibilities but a great feeling in in touching the buttons .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound} Um but um {disfmarker} yeah . My personal preferences were ease of uh {disfmarker} the easy to use remote control , because uh the user-friendliness and uh {disfmarker} it can be more trendy in in user design . But um your new goal f was for uh people than {disfmarker} less than forty years old .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Uh-huh .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So maybe um the multi-function can be implemented in uh in our design . But it should b I think it should be a combination , but teletext buttons are not uh in our design . So it should uh take out , well , eight buttons or so . But my {disfmarker} in {gap} my opinion , the the easy to use R_C_ is uh the best uh possi possibility for us .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay . Uh Ruud , did you get that ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , uh b uh most .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay , so",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "the important thing here is {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound} And it's also i indeed uh uh Ruud's uh insight in the in the topic .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Oh , user-friendly .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "In the market , yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah , what what does the market want ? I I don't know .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , okay , w we will s we all uh {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Just for uh for user desi uh user uh friendliness I uh should choose for the the ease of use remote control .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah . Okay . Sebastian .",
+          "speaker": "Project Manager"
+        }
+      ]
+    },
+    {
+      "end_idx": 481,
+      "span_index": 1,
+      "start_idx": 272,
+      "turns": [
+        {
+          "content": "And just about uh the user interface , I came up with um {vocalsound} an easy remote control and an advanced remote control .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "What should we choose in in design ?",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah . Well , um according to Ruud , um people do not use um all the extra features very very often .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Well , the extra functions .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "I have the numbers r I have the numbers right here .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Well , t uh we won't support teletext which which was the third-most {disfmarker} the second-most used function .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Used option .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay . {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound} Okay . {vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well , we we do have a wise board , so I'm not questioning that . {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Uh well {disfmarker} yeah , channel selection is obviously the most important .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah . Okay , so on the relevance scale uh the channel selection , the volume selection and the teletext .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So {disfmarker} Yeah . Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Well , we skip that .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Well , so it just th the basic functions . And we don't have to use it for D_V_D_ players uh and all kind of stuff .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "No , no .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "No .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So {disfmarker} {vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Nope .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "So that's out of the question .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah . Just through uh the easy uh design . We can make uh a nice design when when there's not mu uh much buttons in it .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh uh uh I think we should go for the easier one .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "I think also . Yes . Well ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "No .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "we should save costs uh by not implementing a lot of functions and uh the money that we can save from that we should use for uh having a nice design and uh thinking about the user interface",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah . Okay ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "and {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Ruud , how do you feel about that ? Uh do you agree , do you think the market would would respond to uh a simple {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Uh well if we um include other uh innovative functions {disfmarker} {vocalsound} uh then they uh might ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "'cause young people uh like new features .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mm yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah , that's right .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay , so this is is kind of uh {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh just a few buttons , trendy design , nice lightning effects wh and the sound .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay . Well , is it {disfmarker} maybe there's another possibility . You can make it look like an easy s piece of equipment , but it's quite elaborated , uh because it has many functions .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Maybe it's more important to make the {disfmarker} make it look like a very uh friendly , easy to catch piece of equipment , but um nevertheless {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But but are we not in in the in the manual uh {disfmarker} I mean if you have few buttons , no display , um I mean uh I guess it's l it's working with with a shift functions and um one button can uh",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm . Mm-hmm . Ok like that . Well , I was more thinking about a more elaborate way of controlling , by by these kinds of sticks or something like that . I don't know if if it's user-friendly . That's your field of expertise .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But but how does how does the remote uh report uh r uh give back to the user w in what state it is ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah , I don't know yet . {vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Because we do not implement uh a user history .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm . There's {disfmarker} no , but there's no way to do that , because we cannot implement that kind of the system .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I know , but but if we use uh like a stick , for example , um {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "W Mm-hmm . Well , maybe we can use a light for that . When you move the stick to a to a position , maybe uh a light next to it can lit up . So you know I've just uh pushed the button , or I changed the channel or t uh turned up the volume . Something like that .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And if you use that stick for volume control and channel uh selection , you have the m two most important functions in one uh button .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah . Uh and we could have other buttons for the for the advanced uh functions .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But does it {disfmarker} uh I then should n just use uh i instead of the stick , uh like many cell phones , just a round m well ,",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , draw draw it on the board .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "should we just use a {disfmarker} Um it's already uh {disfmarker} oh , we have a blank . Oh .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "yeah , something like that . Oh",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "It's just an easy uh way of of a round button what {disfmarker} which can be pushed in four directions . Instead of a stick .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "It's not really a stick , but {disfmarker} Yes . Yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "A stick is v vulnerab vulnerable when it's falling down",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , it can break down .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Hmm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "or uh",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yes , yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "just a round uh button should be the trick , I think .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "And {disfmarker} Yes , and this also looks more fancy , I think .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "I think it it will attract uh more uh uh public , I think .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "A younger uh {disfmarker} Huh .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "But you're the marketing man .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And it's also quite easy to use , so it'll {disfmarker} it {disfmarker} uh attract younger people because well new , and it might attract older people because it's easy to use .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Geez . Well , volume and something uh like that . {vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Uh-huh . {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "The programme up and down . {vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay , yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And the vol yeah , the pen doesn't uh really does what I want .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay , that's good .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay , but w we still {vocalsound} we're still in the question of uh um uh putting in advanced options . Um Ruud just told us um the market is interested in some advanced uh new techniques . Um however , uh keeping it simple is is important for the costs and all all those kind of things . We need to find a balance between uh the advanced techniques and and the user-friendliness .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But I think our our next step to look at is just that . So I don't think it's {disfmarker} um we have something to do . Uh we can't discuss it right now , because n no one of us have {disfmarker} has the information to discuss about that , I think .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Um well , for {disfmarker} we do have to uh decide this this meeting . Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yes ?",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "We need to um have the uh the user function {disfmarker} uh the functions decided and um {vocalsound} uh our target audience .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "{vocalsound} Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "but teletext is so uh is just scrapped . 'Kay ,",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay . Do do you want a list of functions ? Do you want an explicit list ? Uh which uh incorporates all function available on the device ?",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Um well , I do not want a full uh {disfmarker} it's not necessary to to have a full list , but I want um the kind of functions , for example uh th the most important are volume and uh programme selecting .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay . Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "The ten digits .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well , for example , that that's what we should think about . {gap} l how is the remote going to look ? Not not in the user interface , but {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Oh , and just one function . The the the the programme to programme button , the switch to uh two channels , when you have uh something on channel four and something on channel six , just one button which which can uh change",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm-hmm . Yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah . A bit of a split mode .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Change .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh l like {disfmarker} Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{disfmarker} yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yes , yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Dual channel watch .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay , well um",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "m maybe I should write that down . {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound} Well {disfmarker} {vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "you're the secretary . {vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh Ruud , um what's your last name ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mielsen .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mielsen , because I I was writing it down in the last uh {disfmarker} Mielsen . Right . Um I put all the minutes I make into the shared folder . So if you want to have a look at it , you know where to find it . Um {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm okay ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Alright .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "but make a s make a sub-folder for it , because it's starting to fill up already . {vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah , that's that's {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "if you want to do it , Sebastian . {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound} Our B_S_C_ uh W_ uh {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "{vocalsound} Sure . {vocalsound} {gap} . {vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay , um {disfmarker} {vocalsound} Okay , so so um {disfmarker} {vocalsound} uh {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound} {gap} {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Volume . Programme . Uh dual channel . Uh {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yes , that's important .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And and do we want um the ten digits ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "The ten digits ? Yeah , I believe so .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Well , are are you sure ?",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well , if you want to go to channel ninety and you have th that button .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "I'm not so sure .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Well , that's complicated ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "but is that so relevant ? Because I don't think {disfmarker} but you should uh shou you should know that . If it were so .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I wouldn't buy it personally . A remote control without the ten digits .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh and I think the most {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "I can imagine when",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I agree actually . {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Just elder elder people would would buy it ,",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "I can imagine when you're {disfmarker} when you have a satellite decoder and and you have , well , about six hundred channels , I can imagine you want this .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "but {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "But if you're uh a regular T_V_ user , and you just want uh to watch the the Dutch television networks , well , you can uh {disfmarker} {gap} {disfmarker} you can use uh about ten buttons . That's enough .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But we do have thirteen different Dutch channels .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "But {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yep . The older people only use five of them .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Well ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "but how how often do you watch all these channels ?",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "and if if we {disfmarker} And if we are targeting at the younger audience , they will probably watch more channels than the older people .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Often .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "No , you're probably right .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay . But I think these uh ten uh buttons look a bit dull . Don't you think ?",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well , it depends on the on the on the looks , on the on the {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "The design .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "On the design .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay . Well , y then there should be {disfmarker} should done {disfmarker} be done something specific with it .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "You c {vocalsound} you can d make them very fancy",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "by um {disfmarker} {vocalsound} I mean Nokia , they have ten digits on their phones and it still looks very fancy .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "So I'm I'm {disfmarker} I do not agree {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay , so you can experiment by {disfmarker} uh with with shape or with size or with colour , that kind of thing .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Exactly , exactly .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And um there are some numbers about uh speech recognition here that uh younger people would like it . Uh it might be expensive and uh hard to implement , but it would be a solution uh for {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay , speech .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Well , maybe it can be combined with the find the remote control .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "So um when you add uh speech recognition to your remote control , uh it's very easy to change uh the channel . That's one thing .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And it's very easy uh to find your remote control .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "To find {disfmarker} yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So maybe that's a possibility , but I'm afraid it will be a bit costly .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Uh {disfmarker} If if we would um drop the ten digits",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "But maybe when we uh {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "but keep the programme and the volume ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "because maybe people do not always want to use their voice , um {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay . Okay , okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Especially elder people uh don't like voice recognition . So then we should implement such a but",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah . But we do focus on younger people . We d it it's a board uh decision .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Well . I I think it should uh should work , it sh we should manage that .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "So",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "we have to i to make um a decision between the ten digits or the voice recognition .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yes . Well , the voice recognition has the main adva has another advantage . It's mas it makes it very easy for us to implement the find uh find the remote control button {disfmarker} uh remote control function .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So that's that's a big advantage , I think .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay , g good .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "There's only one disadvantage uh by implementing this . Um the power saving power saving will be a bit more difficult . So we can expect that there will be a less longer life to the batteries .",
+          "speaker": "Industrial Designer"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Product",
+    "n_spans": 2,
+    "n_turns": 607,
+    "native_meeting_id": "TS3011b",
+    "source_word_count": 7279
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Summarize the discussion about user interface design of remote control.",
+  "reference_answer": "User Interface introduced a remote control easy to use and a multi-functional one and preferred the former as it was more user-friendly. Industrial Designer agreed and proposed that a stick or round button for volume control and channel selection could be used and also suggested that the ten digits could be substituted by voice recognition."
+}

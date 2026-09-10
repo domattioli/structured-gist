@@ -1,0 +1,61 @@
+{
+  "case_id": "qasper-09",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 20,
+      "para_idx": 0,
+      "section_idx": 5,
+      "section_name": "Experiments",
+      "text": "We evaluated our models on 3 different datasets:"
+    },
+    {
+      "global_idx": 21,
+      "para_idx": 1,
+      "section_idx": 5,
+      "section_name": "Experiments",
+      "text": "CSAT dataset for CSAT prediction, consisting of spoken transcripts (automatic via ASR)."
+    },
+    {
+      "global_idx": 22,
+      "para_idx": 2,
+      "section_idx": 5,
+      "section_name": "Experiments",
+      "text": "20 newsgroups for topic identification task, consisting of written text;"
+    },
+    {
+      "global_idx": 23,
+      "para_idx": 3,
+      "section_idx": 5,
+      "section_name": "Experiments",
+      "text": "Fisher Phase 1 corpus for topic identification task, consisting of spoken transcripts (manual);"
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "extractive",
+    "arxiv_id": "1910.10781",
+    "cardinality": "multi",
+    "distance_bucket": "moderate",
+    "evidence_distance": 3,
+    "evidence_raw": [
+      "We evaluated our models on 3 different datasets:",
+      "CSAT dataset for CSAT prediction, consisting of spoken transcripts (automatic via ASR).",
+      "20 newsgroups for topic identification task, consisting of written text;",
+      "Fisher Phase 1 corpus for topic identification task, consisting of spoken transcripts (manual);"
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 4,
+    "nlp_background": "infinity",
+    "paper_title": "Hierarchical Transformers for Long Document Classification",
+    "source_word_count": 2756,
+    "topic_background": "familiar"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What datasets did they use for evaluation?",
+  "reference_answer": "CSAT dataset | 20 newsgroups | Fisher Phase 1 corpus"
+}

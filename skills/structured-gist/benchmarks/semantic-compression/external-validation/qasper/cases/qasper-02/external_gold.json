@@ -1,0 +1,37 @@
+{
+  "case_id": "qasper-02",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 10,
+      "para_idx": 0,
+      "section_idx": 2,
+      "section_name": "Monolingual Model",
+      "text": "We use the Bayesian model of garg2012unsupervised as our base monolingual model. The semantic roles are predicate-specific. To model the role ordering and repetition preferences, the role inventory for each predicate is divided into Primary and Secondary roles as follows:"
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "extractive",
+    "arxiv_id": "1603.01514",
+    "cardinality": "single",
+    "distance_bucket": "n/a",
+    "evidence_distance": 0,
+    "evidence_raw": [
+      "We use the Bayesian model of garg2012unsupervised as our base monolingual model. The semantic roles are predicate-specific. To model the role ordering and repetition preferences, the role inventory for each predicate is divided into Primary and Secondary roles as follows:"
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 1,
+    "n_evidence_locations": 1,
+    "nlp_background": "infinity",
+    "paper_title": "A Bayesian Model of Multilingual Unsupervised Semantic Role Induction",
+    "source_word_count": 3796,
+    "topic_background": "unfamiliar"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What does an individual model consist of?",
+  "reference_answer": "Bayesian model of garg2012unsupervised as our base monolingual model"
+}

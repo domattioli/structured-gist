@@ -1,0 +1,50 @@
+{
+  "case_id": "qasper-06",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 29,
+      "para_idx": 1,
+      "section_idx": 7,
+      "section_name": "Read Speech",
+      "text": "We trained a smaller Jasper 10x3 model with SGD with momentum optimizer for 400 epochs on a combined WSJ dataset (80 hours): LDC93S6A (WSJ0) and LDC94S13A (WSJ1). The results are provided in Table TABREF29 ."
+    },
+    {
+      "global_idx": 30,
+      "para_idx": 0,
+      "section_idx": 8,
+      "section_name": "Conversational Speech",
+      "text": "We also evaluate the Jasper model's performance on a conversational English corpus. The Hub5 Year 2000 (Hub5'00) evaluation (LDC2002S09, LDC2005S13) is widely used in academia. It is divided into two subsets: Switchboard (SWB) and Callhome (CHM). The training data for both the acoustic and language models consisted of the 2000hr Fisher+Switchboard training data (LDC2004S13, LDC2005S13, LDC97S62). Jasper DR 10x5 was trained using SGD with momentum for 50 epochs. We compare to other models trained using the same data and report Hub5'00 results in Table TABREF31 ."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "free_form",
+    "arxiv_id": "1904.03288",
+    "cardinality": "multi",
+    "distance_bucket": "nearby",
+    "evidence_distance": 1,
+    "evidence_raw": [
+      "We trained a smaller Jasper 10x3 model with SGD with momentum optimizer for 400 epochs on a combined WSJ dataset (80 hours): LDC93S6A (WSJ0) and LDC94S13A (WSJ1). The results are provided in Table TABREF29 .",
+      "FLOAT SELECTED: Table 6: WSJ End-to-End Models, WER (%)",
+      "FLOAT SELECTED: Table 7: Hub5’00, WER (%)",
+      "We also evaluate the Jasper model's performance on a conversational English corpus. The Hub5 Year 2000 (Hub5'00) evaluation (LDC2002S09, LDC2005S13) is widely used in academia. It is divided into two subsets: Switchboard (SWB) and Callhome (CHM). The training data for both the acoustic and language models consisted of the 2000hr Fisher+Switchboard training data (LDC2004S13, LDC2005S13, LDC97S62). Jasper DR 10x5 was trained using SGD with momentum for 50 epochs. We compare to other models trained using the same data and report Hub5'00 results in Table TABREF31 ."
+    ],
+    "float_evidence_captions": [
+      "FLOAT SELECTED: Table 6: WSJ End-to-End Models, WER (%)",
+      "FLOAT SELECTED: Table 7: Hub5’00, WER (%)"
+    ],
+    "n_annotators": 2,
+    "n_evidence_locations": 2,
+    "nlp_background": "",
+    "paper_title": "Jasper: An End-to-End Convolutional Neural Acoustic Model",
+    "source_word_count": 1948,
+    "topic_background": ""
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "what competitive results did they obtain?",
+  "reference_answer": "In case of read speech datasets,  their best model got the highest nov93 score of 16.1 and the highest nov92 score of 13.3.\nIn case of Conversational Speech, their best model got the highest SWB of 8.3 and the highest CHM of 19.3."
+}

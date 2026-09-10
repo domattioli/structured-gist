@@ -1,0 +1,135 @@
+{
+  "case_id": "qmsum-20",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 395,
+      "span_index": 0,
+      "start_idx": 386,
+      "turns": [
+        {
+          "content": "and {disfmarker} so . So I {disfmarker} in fact the the {disfmarker} f something I want to discuss is which kind of material are we going to use ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "so will {disfmarker} it will be wooden wooden di wooden remote control or a a plastic remote control like this one . So and {vocalsound} in which which which kind will be the the different bu button ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "so it can be some , you know , classic pushbutton like this one , or you have also some button like L_C_D_ where you know , the button the buttons are unlighted during the night ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "or , you know , you can see them in the darkness .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "User Interface"
+        }
+      ]
+    },
+    {
+      "end_idx": 429,
+      "span_index": 1,
+      "start_idx": 415,
+      "turns": [
+        {
+          "content": "And what tha what about the uh materials ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And the materials , it depends for example you {disfmarker} if you have a wooden material it can be more {disfmarker} the plastic material is more common",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Impersonal , mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "it's very resistant but , you know , something wooden will be like , I don't know high cl so a special high class ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Special for {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "or you know , you can have some {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah , and i if you {disfmarker} we want to put fashion in electronics maybe we can try to do something with wood .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah , even if it is not completely wood , but just a part of the , you know , will be wooden , in wood",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mm-hmm . Mm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "and it can be interesting .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm okay , seems to be interesting , mm .",
+          "speaker": "Project Manager"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Product",
+    "n_spans": 2,
+    "n_turns": 607,
+    "native_meeting_id": "IS1003c",
+    "source_word_count": 6156
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What was the decision of discussion about the material when talking about industrial design?",
+  "reference_answer": "The group decided to use wood partly instead of plastic because they wanted to put fashion in electronics and wood was a good option. By contrast, the plastic material was more common, impersonal, and not so high class as wood."
+}

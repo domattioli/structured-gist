@@ -1,0 +1,80 @@
+{
+  "case_id": "qmsum-19",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 22,
+      "span_index": 0,
+      "start_idx": 10,
+      "turns": [
+        {
+          "content": "Hmm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Would anybody like to go first ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Sure .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So I've been looking at the components design . Um . Mostly by consulting remote control diagrams from the internet and also by incorporating design ideas from the last project meeting . Um , so we need some custom design parts , and other parts we'll just use standard . Um , I assume we'll be custom designing our case , probably a hard plastic or some other material case , to protect the remote and the locator . And we'll need to custom desi design a circuit board , because the circuit board has to take the button input and send it to the output so you have to design that each time . But once we come up with a design we'll send it to the circuit people and they'll just print it out . Um , standard parts include the buttons and the wheels , um the iPod-style wheel . The infrared L_E_D_ is actually gonna be included in the circuit board that comes with it . Um , we need a radio sender and receiver , those are standard . And al we also need a beeper or buzzer or other sort of noise thing for locating the remote . So we have some material options . Um , we can use rubber , plastic , wood or titanium . Um , I'd recommend against titanium because it can only be used in the flat cases and it's really heavy . Um , and the rubber case requires rubber buttons , so if we definitely want plastic buttons , we shouldn't have a rubber case .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And why not wood ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And why not wood ? {vocalsound} {gap} {vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "hmm ? {vocalsound} Uh , well we can use wood . {vocalsound} I don't know why we'd want to . Um and also we should note that if we want an iPod-style wheel button , it's gonna require a m qu slightly more expensive chip . We can't use the minimal chip , we need the next higher grade , which is called regular . I don't think it's much more expensive , but it is more expensive . So that's what I've got on design .",
+          "speaker": "Industrial Designer"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Product",
+    "n_spans": 1,
+    "n_turns": 525,
+    "native_meeting_id": "ES2011c",
+    "source_word_count": 5883
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What did the Industrial Designer say about component design?",
+  "reference_answer": "Industrial Designer thought some parts needed custom design, and other parts should just use standard. For example, the case needed custom design to protect the remote and the locator, and the circuit board needed custom design as well, while the buttons and the wheels, radio sender and receiver were all standard parts. In addition, beeper or other noise things were needed as well for locating the remote. Rubber, plastic, wood and titanium were options of materials, but better not titanium. Regular chips were required if the iPod-style wheel button was used."
+}

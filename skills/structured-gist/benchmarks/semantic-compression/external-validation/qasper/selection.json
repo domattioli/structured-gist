@@ -1,0 +1,479 @@
+{
+  "cardinality_totals": {
+    "multi": 7,
+    "single": 3
+  },
+  "dataset": "qasper",
+  "distance_bucket_definition": {
+    "moderate": [
+      3,
+      10
+    ],
+    "nearby": [
+      0,
+      2
+    ],
+    "wide": [
+      11,
+      Infinity
+    ]
+  },
+  "distance_bucket_totals": {
+    "moderate": 1,
+    "nearby": 3,
+    "wide": 3
+  },
+  "distance_bucket_trace": {
+    "moderate": {
+      "available": 90,
+      "picked_ids": [
+        "1910.10781:12c50dea84f9a8845795fa8b8c1679328bd66246"
+      ],
+      "quota": 1
+    },
+    "nearby": {
+      "available": 78,
+      "picked_ids": [
+        "1809.03449:b0dbe75047310fec4d4ce787be5c32935fc4e37b",
+        "1706.06894:9ca447c8959a693a3f7bdd0a2c516f4b86f95718",
+        "1904.03288:e587559f5ab6e42f7d981372ee34aebdc92b646e"
+      ],
+      "quota": 3
+    },
+    "wide": {
+      "available": 39,
+      "picked_ids": [
+        "1710.03348:91e326fde8b0a538bc34d419541b5990d8aae14b",
+        "2002.03407:10d450960907091f13e0be55f40bcb96f44dd074",
+        "1903.03530:1b1a30e9e68a9ae76af467e60cefb180d135e285"
+      ],
+      "quota": 3
+    }
+  },
+  "eligibility_stats": {
+    "eligible_cardinality": {
+      "multi": 207,
+      "single": 581
+    },
+    "eligible_distance_buckets": {
+      "moderate": 90,
+      "nearby": 78,
+      "wide": 39
+    },
+    "eligible_pool_size": 788,
+    "n_papers": 281,
+    "n_questions_seen": 1005,
+    "rejections": {
+      "empty_evidence": 27,
+      "evidence_location_unresolved": 35,
+      "float_only_evidence": 60,
+      "unanswerable": 95
+    }
+  },
+  "multi_quota": 7,
+  "selected_candidates": [
+    {
+      "answer_text": "SR",
+      "answer_type": "extractive",
+      "arxiv_id": "2004.01853",
+      "candidate_id": "2004.01853:ed2eb4e54b641b7670ab5a7060c7b16c628699ab",
+      "cardinality": "single",
+      "distance_bucket": "n/a",
+      "evidence_distance": 0,
+      "evidence_raw": [
+        "Among all three pre-training tasks, SR works slightly better than the other two tasks (i.e., NSG and MDG). We also tried to randomly use all the three tasks during training with 1/3 probability each (indicated as ALL). Interesting, we observed that, in general, All outperforms all three tasks when employing unlabeled documents of training splits of CNNDM or NYT, which might be due to limited number of unlabeled documents of the training splits. After adding more data (i.e., GIAG-CM) to pre-training, SR consistently achieves highest ROUGE-2 on both CNNDM and NYT. We conclude that SR is the most effective task for pre-training since sentence reordering task requires comprehensively understanding a document in a wide coverage, going beyond individual words and sentences, which is highly close to the essense of abstractive document summarization."
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 1,
+      "n_paragraphs": 42,
+      "nlp_background": "infinity",
+      "paper_title": "STEP: Sequence-to-Sequence Transformer Pre-training for Document Summarization",
+      "question": "Which of the three pretraining tasks is the most helpful?",
+      "question_id": "ed2eb4e54b641b7670ab5a7060c7b16c628699ab",
+      "resolved_locations": [
+        {
+          "global_idx": 39,
+          "para_idx": 3,
+          "section_idx": 19,
+          "section_name": "Results ::: Automatic Evaluation"
+        }
+      ],
+      "sort_key": "001132a79a6dc39bdf248a72ef1b75c02b4a116121827bd54b47ad8837fba81f",
+      "source_word_count": 4402,
+      "topic_background": "familiar"
+    },
+    {
+      "answer_text": "Bayesian model of garg2012unsupervised as our base monolingual model",
+      "answer_type": "extractive",
+      "arxiv_id": "1603.01514",
+      "candidate_id": "1603.01514:50cc6c5f2dcf5fb87b56007f6a825fa7c90b64ed",
+      "cardinality": "single",
+      "distance_bucket": "n/a",
+      "evidence_distance": 0,
+      "evidence_raw": [
+        "We use the Bayesian model of garg2012unsupervised as our base monolingual model. The semantic roles are predicate-specific. To model the role ordering and repetition preferences, the role inventory for each predicate is divided into Primary and Secondary roles as follows:"
+      ],
+      "float_evidence": [],
+      "n_annotators": 1,
+      "n_evidence_locations": 1,
+      "n_paragraphs": 55,
+      "nlp_background": "infinity",
+      "paper_title": "A Bayesian Model of Multilingual Unsupervised Semantic Role Induction",
+      "question": "What does an individual model consist of?",
+      "question_id": "50cc6c5f2dcf5fb87b56007f6a825fa7c90b64ed",
+      "resolved_locations": [
+        {
+          "global_idx": 10,
+          "para_idx": 0,
+          "section_idx": 2,
+          "section_name": "Monolingual Model"
+        }
+      ],
+      "sort_key": "00c565eee20e4a787f2bda5c0e58898855e52eb02d503ce694cf242dda46b5ab",
+      "source_word_count": 3796,
+      "topic_background": "unfamiliar"
+    },
+    {
+      "answer_text": "both corpuses used words that aim to inspire readers while avoiding fear | actual words that lead to these effects are very different in the two contexts | our findings indicate that, using proper methods, automated analysis of large bodies of textual data can provide novel insight insight into extremist propaganda",
+      "answer_type": "extractive",
+      "arxiv_id": "1912.03804",
+      "candidate_id": "1912.03804:f318a2851d7061f05a5b32b94251f943480fbd15",
+      "cardinality": "single",
+      "distance_bucket": "n/a",
+      "evidence_distance": 0,
+      "evidence_raw": [
+        "Comparing these topics with those that appeared on a Catholic women forum, it seems that both ISIS and non-violent groups use topics about motherhood, spousal relationship, and marriage/divorce when they address women. Moreover, we used Depechemood methods to analyze the emotions that these materials are likely to elicit in readers. The result of our emotion analysis suggests that both corpuses used words that aim to inspire readers while avoiding fear. However, the actual words that lead to these effects are very different in the two contexts. Overall, our findings indicate that, using proper methods, automated analysis of large bodies of textual data can provide novel insight insight into extremist propaganda that can assist the counterterrorism community."
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 1,
+      "n_paragraphs": 43,
+      "nlp_background": "five",
+      "paper_title": "Women in ISIS Propaganda: A Natural Language Processing Analysis of Topics and Emotions in a Comparison with Mainstream Religious Group",
+      "question": "What conclusions do the authors draw from their finding that the emotional appeal of ISIS and Catholic materials are similar?",
+      "question_id": "f318a2851d7061f05a5b32b94251f943480fbd15",
+      "resolved_locations": [
+        {
+          "global_idx": 42,
+          "para_idx": 2,
+          "section_idx": 13,
+          "section_name": "Conclusion and Future Work"
+        }
+      ],
+      "sort_key": "00d4fc4fe1fc241e40f624d1efc54a474ab6eaa0db2f7381cc7a9b53e250002a",
+      "source_word_count": 3703,
+      "topic_background": ""
+    },
+    {
+      "answer_text": "By evaluating their model on adversarial sets containing misleading sentences",
+      "answer_type": "free_form",
+      "arxiv_id": "1809.03449",
+      "candidate_id": "1809.03449:b0dbe75047310fec4d4ce787be5c32935fc4e37b",
+      "cardinality": "multi",
+      "distance_bucket": "nearby",
+      "evidence_distance": 2,
+      "evidence_raw": [
+        "MRC Dataset. The MRC dataset used in this paper is SQuAD 1.1, which contains over INLINEFORM0 passage-question pairs and has been randomly partitioned into three parts: a training set ( INLINEFORM1 ), a development set ( INLINEFORM2 ), and a test set ( INLINEFORM3 ). Besides, we also use two of its adversarial sets, namely AddSent and AddOneSent BIBREF6 , to evaluate the robustness to noise of MRC models. The passages in the adversarial sets contain misleading sentences, which are aimed at distracting MRC models. Specifically, each passage in AddSent contains several sentences that are similar to the question but not contradictory to the answer, while each passage in AddOneSent contains a human-approved random sentence that may be unrelated to the passage.",
+        "We compare KAR with other MRC models in both performance and the robustness to noise. Specifically, we not only evaluate the performance of KAR on the development set and the test set, but also do this on the adversarial sets. As for the comparative objects, we only consider the single MRC models that rank in the top 20 on the SQuAD 1.1 leader board and have reported their performance on the adversarial sets. There are totally five such comparative objects, which can be considered as representatives of the state-of-the-art MRC models. As shown in Table TABREF12 , on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them."
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 2,
+      "n_paragraphs": 40,
+      "nlp_background": "five",
+      "paper_title": "Explicit Utilization of General Knowledge in Machine Reading Comprehension",
+      "question": "How do the authors examine whether a model is robust to noise or not?",
+      "question_id": "b0dbe75047310fec4d4ce787be5c32935fc4e37b",
+      "resolved_locations": [
+        {
+          "global_idx": 31,
+          "para_idx": 0,
+          "section_idx": 11,
+          "section_name": "Experimental Settings"
+        },
+        {
+          "global_idx": 33,
+          "para_idx": 0,
+          "section_idx": 12,
+          "section_name": "Model Comparison in both Performance and the Robustness to Noise"
+        }
+      ],
+      "sort_key": "011321b790e1bbfa25043d426a0877ed255b3918305e980fa36cd66fbaab04ef",
+      "source_word_count": 4214,
+      "topic_background": ""
+    },
+    {
+      "answer_text": "tweets are annotated with only Favor or Against for two targets - Galatasaray and Fenerbahçe",
+      "answer_type": "free_form",
+      "arxiv_id": "1706.06894",
+      "candidate_id": "1706.06894:9ca447c8959a693a3f7bdd0a2c516f4b86f95718",
+      "cardinality": "multi",
+      "distance_bucket": "nearby",
+      "evidence_distance": 2,
+      "evidence_raw": [
+        "We have decided to consider tweets about popular sports clubs as our domain for stance detection. Considerable amounts of tweets are being published for sports-related events at every instant. Hence we have determined our targets as Galatasaray (namely Target-1) and Fenerbahçe (namely, Target-2) which are two of the most popular football clubs in Turkey. As is the case for the sentiment analysis tools, the outputs of the stance detection systems on a stream of tweets about these clubs can facilitate the use of the opinions of the football followers by these clubs.",
+        "In a previous study on the identification of public health-related tweets, two tweet data sets in Turkish (each set containing 1 million random tweets) have been compiled where these sets belong to two different periods of 20 consecutive days BIBREF11 . We have decided to use one of these sets (corresponding to the period between August 18 and September 6, 2015) and firstly filtered the tweets using the possible names used to refer to the target clubs. Then, we have annotated the stance information in the tweets for these targets as Favor or Against. Within the course of this study, we have not considered those tweets in which the target is not explicitly mentioned, as our initial filtering process reveals.",
+        "For the purposes of the current study, we have not annotated any tweets with the Neither class. This stance class and even finer-grained classes can be considered in further annotation studies. We should also note that in a few tweets, the target of the stance was the management of the club while in some others a particular footballer of the club is praised or criticised. Still, we have considered the club as the target of the stance in all of the cases and carried out our annotations accordingly."
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 3,
+      "n_paragraphs": 21,
+      "nlp_background": "",
+      "paper_title": "Stance Detection in Turkish Tweets",
+      "question": "How were the tweets annotated?",
+      "question_id": "9ca447c8959a693a3f7bdd0a2c516f4b86f95718",
+      "resolved_locations": [
+        {
+          "global_idx": 7,
+          "para_idx": 0,
+          "section_idx": 1,
+          "section_name": "A Stance Detection Data Set"
+        },
+        {
+          "global_idx": 8,
+          "para_idx": 1,
+          "section_idx": 1,
+          "section_name": "A Stance Detection Data Set"
+        },
+        {
+          "global_idx": 9,
+          "para_idx": 2,
+          "section_idx": 1,
+          "section_name": "A Stance Detection Data Set"
+        }
+      ],
+      "sort_key": "015eb010f08c91ac9083f0d475239a032debdb724fd624378af7a13965dc4003",
+      "source_word_count": 2375,
+      "topic_background": ""
+    },
+    {
+      "answer_text": "In case of read speech datasets,  their best model got the highest nov93 score of 16.1 and the highest nov92 score of 13.3.\nIn case of Conversational Speech, their best model got the highest SWB of 8.3 and the highest CHM of 19.3.",
+      "answer_type": "free_form",
+      "arxiv_id": "1904.03288",
+      "candidate_id": "1904.03288:e587559f5ab6e42f7d981372ee34aebdc92b646e",
+      "cardinality": "multi",
+      "distance_bucket": "nearby",
+      "evidence_distance": 1,
+      "evidence_raw": [
+        "We trained a smaller Jasper 10x3 model with SGD with momentum optimizer for 400 epochs on a combined WSJ dataset (80 hours): LDC93S6A (WSJ0) and LDC94S13A (WSJ1). The results are provided in Table TABREF29 .",
+        "FLOAT SELECTED: Table 6: WSJ End-to-End Models, WER (%)",
+        "FLOAT SELECTED: Table 7: Hub5’00, WER (%)",
+        "We also evaluate the Jasper model's performance on a conversational English corpus. The Hub5 Year 2000 (Hub5'00) evaluation (LDC2002S09, LDC2005S13) is widely used in academia. It is divided into two subsets: Switchboard (SWB) and Callhome (CHM). The training data for both the acoustic and language models consisted of the 2000hr Fisher+Switchboard training data (LDC2004S13, LDC2005S13, LDC97S62). Jasper DR 10x5 was trained using SGD with momentum for 50 epochs. We compare to other models trained using the same data and report Hub5'00 results in Table TABREF31 ."
+      ],
+      "float_evidence": [
+        "FLOAT SELECTED: Table 6: WSJ End-to-End Models, WER (%)",
+        "FLOAT SELECTED: Table 7: Hub5’00, WER (%)"
+      ],
+      "n_annotators": 2,
+      "n_evidence_locations": 2,
+      "n_paragraphs": 33,
+      "nlp_background": "",
+      "paper_title": "Jasper: An End-to-End Convolutional Neural Acoustic Model",
+      "question": "what competitive results did they obtain?",
+      "question_id": "e587559f5ab6e42f7d981372ee34aebdc92b646e",
+      "resolved_locations": [
+        {
+          "global_idx": 29,
+          "para_idx": 1,
+          "section_idx": 7,
+          "section_name": "Read Speech"
+        },
+        {
+          "global_idx": 30,
+          "para_idx": 0,
+          "section_idx": 8,
+          "section_name": "Conversational Speech"
+        }
+      ],
+      "sort_key": "0171d48efaa68f268fe9d00de1a9d8b25f488562a55f6473704e740dcc60cb7e",
+      "source_word_count": 1948,
+      "topic_background": ""
+    },
+    {
+      "answer_text": "WMT15 German-to-English | RWTH German-English dataset",
+      "answer_type": "extractive",
+      "arxiv_id": "1710.03348",
+      "candidate_id": "1710.03348:91e326fde8b0a538bc34d419541b5990d8aae14b",
+      "cardinality": "multi",
+      "distance_bucket": "wide",
+      "evidence_distance": 12,
+      "evidence_raw": [
+        "We train both of the systems on the WMT15 German-to-English training data, see Table TABREF18 for some statistics. Table TABREF17 shows the BLEU scores BIBREF12 for both systems on different test sets.",
+        "In order to compare attentions of multiple systems as well as to measure the difference between attention and word alignment, we convert the hard word alignments into soft ones and use cross entropy between attention and soft alignment as a loss function. For this purpose, we use manual alignments provided by RWTH German-English dataset as the hard alignments. The statistics of the data are given in Table TABREF8 . We convert the hard alignments to soft alignments using Equation EQREF10 . For unaligned words, we first assume that they have been aligned to all the words in the source side and then do the conversion. DISPLAYFORM0"
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 2,
+      "n_paragraphs": 48,
+      "nlp_background": "five",
+      "paper_title": "What does Attention in Neural Machine Translation Pay Attention to?",
+      "question": "What datasets are used?",
+      "question_id": "91e326fde8b0a538bc34d419541b5990d8aae14b",
+      "resolved_locations": [
+        {
+          "global_idx": 17,
+          "para_idx": 0,
+          "section_idx": 4,
+          "section_name": "Measuring Attention-Alignment Accuracy"
+        },
+        {
+          "global_idx": 29,
+          "para_idx": 0,
+          "section_idx": 7,
+          "section_name": "Impact of Attention Mechanism"
+        }
+      ],
+      "sort_key": "02b3820e1e255b184c446957d93a8c31911300c3c3a14a87db3136d6f52422bc",
+      "source_word_count": 3438,
+      "topic_background": "familiar"
+    },
+    {
+      "answer_text": "Yes",
+      "answer_type": "yes_no",
+      "arxiv_id": "2002.03407",
+      "candidate_id": "2002.03407:10d450960907091f13e0be55f40bcb96f44dd074",
+      "cardinality": "multi",
+      "distance_bucket": "wide",
+      "evidence_distance": 13,
+      "evidence_raw": [
+        "Hypothesis 4 (H4) : The proposed template-based synthesis model outperforms a simple word replacement model.",
+        "To validate our next set of hypothesises (H3, H4. H5), we use the synthesized data in two settings: either using it for training (rows 7, 8 and 19, 20) or tuning (rows 10, 11 and 22, 23). Table TABREF13 supports H4 by showing that the proposed synthesis model outperforms the WordNet baseline in training (rows 7, 8 and 19, 20) except Stat2016, and tuning (10, 11 and 22, 23) over all courses. It also shows that while adding synthetic data from the baseline is not always helpful, adding synthetic data from the template model helps to improve both the training and the tuning process. In both CS and ENGR courses, tuning with synthetic data enhances all ROUGE scores compared to tuning with only the original data. (rows 9 and 11). As for Stat2015, R-1 and R-$L$ improved, while R-2 decreased. For Stat2016, R-2 and R-$L$ improved, and R-1 decreased (rows 21 and 23). Training with both student reflection data and synthetic data compared to training with only student reflection data yields similar improvements, supporting H3 (rows 6, 8 and 18, 20). While the increase in ROUGE scores is small, our results show that enriching training data with synthetic data can benefit both the training and tuning of other models. In general, the best results are obtained when using data synthesis for both training and tuning (rows 11 and 23), supporting H5."
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 2,
+      "n_paragraphs": 43,
+      "nlp_background": "five",
+      "paper_title": "Abstractive Summarization for Low Resource Data using Domain Transfer and Data Synthesis",
+      "question": "Is the template-based model realistic?  ",
+      "question_id": "10d450960907091f13e0be55f40bcb96f44dd074",
+      "resolved_locations": [
+        {
+          "global_idx": 25,
+          "para_idx": 4,
+          "section_idx": 5,
+          "section_name": "Experiments"
+        },
+        {
+          "global_idx": 38,
+          "para_idx": 3,
+          "section_idx": 6,
+          "section_name": "Results"
+        }
+      ],
+      "sort_key": "0829bda2ce027db996aa6344881e165af24afde8993c3a3f1d3da3cc3c378ec4",
+      "source_word_count": 3759,
+      "topic_background": "familiar"
+    },
+    {
+      "answer_text": "CSAT dataset | 20 newsgroups | Fisher Phase 1 corpus",
+      "answer_type": "extractive",
+      "arxiv_id": "1910.10781",
+      "candidate_id": "1910.10781:12c50dea84f9a8845795fa8b8c1679328bd66246",
+      "cardinality": "multi",
+      "distance_bucket": "moderate",
+      "evidence_distance": 3,
+      "evidence_raw": [
+        "We evaluated our models on 3 different datasets:",
+        "CSAT dataset for CSAT prediction, consisting of spoken transcripts (automatic via ASR).",
+        "20 newsgroups for topic identification task, consisting of written text;",
+        "Fisher Phase 1 corpus for topic identification task, consisting of spoken transcripts (manual);"
+      ],
+      "float_evidence": [],
+      "n_annotators": 2,
+      "n_evidence_locations": 4,
+      "n_paragraphs": 39,
+      "nlp_background": "infinity",
+      "paper_title": "Hierarchical Transformers for Long Document Classification",
+      "question": "What datasets did they use for evaluation?",
+      "question_id": "12c50dea84f9a8845795fa8b8c1679328bd66246",
+      "resolved_locations": [
+        {
+          "global_idx": 20,
+          "para_idx": 0,
+          "section_idx": 5,
+          "section_name": "Experiments"
+        },
+        {
+          "global_idx": 21,
+          "para_idx": 1,
+          "section_idx": 5,
+          "section_name": "Experiments"
+        },
+        {
+          "global_idx": 22,
+          "para_idx": 2,
+          "section_idx": 5,
+          "section_name": "Experiments"
+        },
+        {
+          "global_idx": 23,
+          "para_idx": 3,
+          "section_idx": 5,
+          "section_name": "Experiments"
+        }
+      ],
+      "sort_key": "0f2738734f63644ade997ef5b8377f8b29c4f95d473509c88dc6ffd6d903b008",
+      "source_word_count": 2756,
+      "topic_background": "familiar"
+    },
+    {
+      "answer_text": "353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) | we build templates and expression pools using linguistic analysis",
+      "answer_type": "extractive",
+      "arxiv_id": "1903.03530",
+      "candidate_id": "1903.03530:1b1a30e9e68a9ae76af467e60cefb180d135e285",
+      "cardinality": "multi",
+      "distance_bucket": "wide",
+      "evidence_distance": 13,
+      "evidence_raw": [
+        "The dataset comprises a total of 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) with consent to the use of anonymized data for research. The speakers are 38 to 88 years old, equally distributed across gender, and comprise a range of ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, and 11% unspecified). The conversations cover 11 topics (e.g., medication compliance, symptom checking, education, greeting) and 9 symptoms (e.g., chest pain, cough) and amount to 41 hours.",
+        "We divide the construction of data simulation into two stages. In Section SECREF16 , we build templates and expression pools using linguistic analysis followed by manual verification. In Section SECREF20 , we present our proposed framework for generating simulated training data. The templates and framework are verified for logical correctness and clinical soundness."
+      ],
+      "float_evidence": [],
+      "n_annotators": 1,
+      "n_evidence_locations": 2,
+      "n_paragraphs": 47,
+      "nlp_background": "infinity",
+      "paper_title": "Fast Prototyping a Dialogue Comprehension System for Nurse-Patient Conversations on Symptom Monitoring",
+      "question": "How big is their created dataset?",
+      "question_id": "1b1a30e9e68a9ae76af467e60cefb180d135e285",
+      "resolved_locations": [
+        {
+          "global_idx": 12,
+          "para_idx": 1,
+          "section_idx": 6,
+          "section_name": "Data Preparation"
+        },
+        {
+          "global_idx": 25,
+          "para_idx": 0,
+          "section_idx": 8,
+          "section_name": "Simulating Symptom Monitoring Dataset for Training"
+        }
+      ],
+      "sort_key": "10c0515fb7dc129b0f7c9e78f689d9b644965eb0cf4f1bf29966741c89383134",
+      "source_word_count": 3482,
+      "topic_background": "unfamiliar"
+    }
+  ],
+  "selected_count": 10,
+  "single_quota": 3,
+  "single_trace": {
+    "available": 581,
+    "picked_ids": [
+      "2004.01853:ed2eb4e54b641b7670ab5a7060c7b16c628699ab",
+      "1603.01514:50cc6c5f2dcf5fb87b56007f6a825fa7c90b64ed",
+      "1912.03804:f318a2851d7061f05a5b32b94251f943480fbd15"
+    ],
+    "quota": 3
+  },
+  "source_word_count_distribution": {
+    "max": 4402,
+    "median": 3482,
+    "min": 1948,
+    "p25": 2756,
+    "p75": 3759
+  }
+}

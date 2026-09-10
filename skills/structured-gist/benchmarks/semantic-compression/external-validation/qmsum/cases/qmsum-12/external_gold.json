@@ -1,0 +1,123 @@
+{
+  "case_id": "qmsum-12",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 38,
+      "span_index": 0,
+      "start_idx": 20,
+      "turns": [
+        {
+          "content": "Okay, thank you. We've got some questions now on funding from Siân Gwenllian.",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "May I begin, maybe, with a question, generally speaking—? We're all aware of the funding issues and the challenges of funding that face schools in general. So, can this lead to more exclusions, because additional learning needs have been hit in light of these challenges, and then that the side-effects of that creates more exclusions?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "In particular now with the new Act coming into force, that's going to place more pressure on the system. In Torfaen, we know that we have schools that are looking at their funding—they are behind, and they have to make these hard choices. And sometimes, they have to look at every aspect within the school in terms of their learners, then, and that does place additional pressure on the schools.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Is the additional learning needs sector being adversely affected, worse than—?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "I'm not sure whether it's being worse affected, but certainly there's pressure, in particular with the new Act coming in, and that's going to place more pressure on the system.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "But maybe we need to spend more in light of the new Act?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Yes.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Yes, certainly.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "What is your experience, then?",
+          "speaker": "Sian Hughes"
+        },
+        {
+          "content": "The same, really. But just sometimes, the Government doesn't think about the staff in the pupil referral units, because we've gone back to the Government to tell them, 'Right, you've provided money to school staff, but what about staff that need training—perhaps more than staff in the school sector?' And in fairness, they have addressed that, but perhaps it's not at the forefront of their minds when they're thinking of providing funding to the schools. So, it's a little bit of an afterthought. But this will be needed in the future, certainly.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "And maybe I can ask the WLGA: are the difficulties that can arise between the money that is kept back by local authorities and the funding that goes directly to schools—can that therefore affect the kind of provision that's happening from authority to authority?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Yes, sure. The delegation levels are already very high in most authority areas, and we've got agreements in place with the Government to make sure that more money, or as much money as possible, is devolved to schools. So, I don't think that's a direct factor. I think the factors that really affect exclusions, which is where I think the question came from: you've got the very narrow measure at the end of key stage 4 attainment, which I think has put pressure on some schools, certainly, and headteachers have felt that—sometimes excluded, or otherwise put into another school as a consequence, which is regrettable, but that's what's happened. And on the additional learning needs side, whilst the Minister has currently made some more money available, if we look at experiences that have happened in England, in particular, because there are direct parallels there with legislation, we know from those experiences that ALN funding has become increasingly under pressure—there have been big issues around tribunals, to the point where local authorities at one point almost gave up going to tribunals, because they were losing them time and time again. So, there are financial pressures there, but I don't think the levels of delegation have any impact on that.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "Okay. But just the pressures coming in with the new Act et cetera could mean more expulsions.",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "It shouldn't, but it could. It's difficult to know how headteachers and governing bodies will react. If they're under pressure financially or in terms of performance measures, they will react in a particular way. Culturally, we've got to get to the point, I think, particularly with the new curriculum coming in, where we say, 'Look, forget the narrow measures that you're being judged by. We're trying to agree with partners, including Estyn and the Welsh Government, a broader range of measures.' That, in a sense, may provide opportunities for schools, and local authorities, to look more constructively at this whole area. So, that's one area, but you're right, I think the ALN legislation will put pressures on, not just local authorities and schools, but also on the post-16 sector, because we're talking now about a wider age range—doing up to 25 as well. So, we've got a host of issues, I think, there to consider and work our way through.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "And is the fact that there's variation from term to term, from week to week sometimes, in the level of provision that a school is going to have to provide for trying to retain those pupils in mainstream schools—is the fact that there is so much variation creating a specific challenge, and maybe that that leads to more exclusions?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "As you say, because it changes, it's difficult then to plan ahead, and from year to year and also, as you've said, within the term. Perhaps you have provision for more learners coming in or moving, and then that causes the pressure within the system, then, because you haven't planned for them, and therefore there's no spare funding there to draw on.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Also, in fairness to PRUs, we've been trying to work on the fact that, if children move out of school, the funding follows them. We don't want a lag in the system, because they have to meet the challenge of the pupils, but the money is still in the schools, because it's once a year that they have that funding.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Okay, thank you.",
+          "speaker": "Sian Hughes"
+        },
+        {
+          "content": "Okay, thank you. We've got some questions now from Janet Finch-Saunders.",
+          "speaker": "Lynne Neagle AM"
+        }
+      ]
+    },
+    {
+      "end_idx": 179,
+      "span_index": 1,
+      "start_idx": 177,
+      "turns": [
+        {
+          "content": "Thank you. And what are your views on the balance between funding being used for diagnosis and support, because I know that the Samaritans report suggested that funding tends to go into diagnosis rather than support? How can the balance be addressed?",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "I think it's a really difficult balance, but it was something that was brought up in the research stages of our report. So, we held a round table during the research period, and participants said that they were particularly concerned about the lack of awareness and knowledge of children who had additional learning needs. And, obviously, this is quite serious because these children are at risk of being excluded and are over-represented in excluded groups. And they were particularly concerned about children who were sort of on the cusp, or not properly diagnosed, and a lot of these children would have things like attention deficit disorder and attention deficit hyperactivity disorder, and, again, these made up the cohort of pupils who were excluded. So, when you consider that, you tend to think, actually, diagnosis could be really useful, so that staff are aware of the pupil's needs, and maybe aware of why the child might be demonstrating challenging behaviour. However, what participants did say was that unless there was a proper understanding of the child's condition or additional learning needs, and that the proper support was there, then diagnosis alone wasn't of value. So, I think one of the participants said that up to 50 per cent of learners in a classroom could have an additional learning need, so, again, if the support isn't there, that child isn't going to benefit from diagnosis. And what was really highlighted is the importance of the school being inclusive, and for that child, regardless of whether they had an additional learning need or not, to have proper opportunity to progress.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "Thank you.",
+          "speaker": "Lynne Neagle AM"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Committee",
+    "n_spans": 2,
+    "n_turns": 229,
+    "native_meeting_id": "education_4",
+    "source_word_count": 14631
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What did the meeting discuss about the funding issues?",
+  "reference_answer": "The committee admitted that the funding issues brought more pressure on schools, especially after the new Act, for they would have to spend more in the light of it. It was pointed out that the government had not noticed the staff in the PRU, who required training. The committee was trying to communicate with Estyn and the Welsh Government for a broader range of measures to provide opportunities for schools and local authorities."
+}

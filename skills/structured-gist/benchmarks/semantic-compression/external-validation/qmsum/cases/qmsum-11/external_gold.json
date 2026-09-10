@@ -1,0 +1,207 @@
+{
+  "case_id": "qmsum-11",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 38,
+      "span_index": 0,
+      "start_idx": 11,
+      "turns": [
+        {
+          "content": "We'll now proceed to questioning ministers. The first question will go to Mr. Albas.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you, Mr. Chair. Today we've learned that federal workers have been told to ignore obvious signs of fraud when it comes to applying for government benefits. Can the Prime Minister confirm that 200,000 applications have been flagged as potentially fraudulent?",
+          "speaker": "Mr. Dan Albas (Central OkanaganSimilkameenNicola, CPC)"
+        },
+        {
+          "content": "Thank you, Mr. Chair. Our priority from the beginning has been to make sure that Canadians get the support they need. We moved very quickly to get the Canada emergency response benefit out, to get the wage subsidy out and to help Canadians in this unprecedented situation. We recognize there will be challenges, and we are going to work through those challenges. Our priority every step of the way was to make sure we helped as many Canadians as possible.",
+          "speaker": "Right Hon. Justin Trudeau (Prime Minister)"
+        },
+        {
+          "content": "Mr. Chair, can the Prime Minister confirm that the instruction has been given to federal employees to ignore these 200,000 applications being flagged as potentially fraudulent? This is important.",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "Our focus has been on helping as many people as we possible can. Our decision from the very beginning was to get the help out to people and figure out, with retroactive action if necessary, where and when there may have been fraudulent use. Our priority was getting that help out.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr. Chair, this came from a memo issued by a deputy minister. Did the minister's office or the Prime Minister sign off on this memo?",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "Again, in this unprecedented situation, our focus has been on helping as many people as possible, as quickly as possible. Other parties might have made a different choice had they been in government, but our focus was getting help to people when they needed it as quickly as possible and cleaning it up afterwards.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr. Chair, I asked a very simple question. Did the Prime Minister or his minister sign off on this memo that was issued by the deputy minister, yes or no?",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "Mr. Chair, we have been focused entirely on getting help to Canadians when they need it, and that has meant that yes, there will be things we will need to clean up after the fact and work to fix, but getting that help into Canadians' pockets during this pandemic was our priority.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "I'm asking the Prime Minister to show some accountability. Did he or his office sign off on this memo?",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "Mr. Chair, my office and I have been absolutely focused on getting the necessary help to Canadians. Perhaps, as Mr. Albas points out, other parties would have been slower to get the money out. We were flowing money to people who needed it.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr. Chair, the question was quite simple. Obviously the Prime Minister doesn't seem comfortable with the answer. Will he at least then commit to investigating every individual case of fraud, or will he write them off, as the story said?",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "Mr. Chair, in this unprecedented situation Canadians have lost their jobs; they've lost their paycheques; they don't know how they're going to be able to support their loved ones and pay for their groceries. We made a decision as a country that we would be there for them and that has been and will continue to be our priority.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr. Chair, the Prime Minister can leave the cottage talk for the cottage. We're asking a very simple question here. Will he commit as a government to enforce the rule of law and to enforce the attestation that says that if someone commits fraud, the fraud will be pursued?",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "My commitment as Prime Minister and as a government is to support and protect Canadians. That is what we are doing by giving them the support they need through this unprecedented situation. Perhaps other parties don't think it's important to support Canadians. We will keep focused on supporting Canadians.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "That's not what I'm asking here, Mr. Chair. The Conservatives supported the legislation that allowed those supports to go through. What we are asking about is fraud. All along we've been told fraud would be detected through audits after the fact, and we expect that to happen. Can the Prime Minister at least confirm that this will happen?",
+          "speaker": "Mr. Dan Albas"
+        },
+        {
+          "content": "When we made the determination that we needed to move quickly to help Canadians, we knew there would be a need to clean up after the fact, to go after fraudulent cases. We will do that. Our priority now and in the coming months is to ensure Canadians get the support they need, and our economy comes roaring back. That's what we're focused on.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "We'll now continue with Mr.Ste-Marie.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Mr.Chair, yesterday, the Prime Minister announced the large employer emergency financing facility. That's good. What's even better is that he announced that the loans would be tied to conditions. One of those conditions forces companies not to resort to tax evasion or tax avoidance through tax havens. Excellent! Unfortunately, I quickly became disillusioned because it is more about abusive tax evasion and avoidance. Basically, we're talking about fraudsters. There are no conditions that would allow us to tighten the screws on profiteers. Companies that legally take advantage of tax havens to avoid paying their taxes will have access to the large employer emergency financing facility. Why does the Prime Minister continue to support the profiteers?",
+          "speaker": "Mr. Gabriel Ste-Marie (Joliette, BQ)"
+        },
+        {
+          "content": "Mr.Chair, we will always be there to counter tax evasion and tax avoidance. It's a priority of our government. There is no tolerance for tax evasion and tax avoidance. In the current situation, our priority is to help workers across the country who could lose their jobs or who have lost their jobs. That's why we are introducing measures that support workers, who will continue to be our priority.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr.Chair, I'm delighted to hear the Prime Minister say that there's no tolerance for tax avoidance. The problem is that his remarks don't reflect reality. Tax avoidance is the legal use of tax havens. The five big Bay Street banks benefit from this, as do the big multinationals. It's time to tighten the screws on these companies. They have to pay their share. Will the Prime Minister and his government outlaw what is immoral?",
+          "speaker": "Mr. Gabriel Ste-Marie"
+        },
+        {
+          "content": "Mr.Chair, when we announced the large employer emergency funding facility, we recognized that those who wanted to receive tax dollars had to have paid their fair share of taxes. That's why we're putting in place measures to carefully assess the tax structures of these businesses before we loan money to them.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr.Chair, sometimes a bank will relocate its most profitable activities carried out in Canada and register them in a subsidiary in the Bahamas, Barbados or another tax haven. Does the Prime Minister consider this bank to be paying its fair share of taxes in Canada?",
+          "speaker": "Mr. Gabriel Ste-Marie"
+        },
+        {
+          "content": "Mr.Chair, we will assess applications for the large employer emergency funding facility on a case-by-case basis. We don't expect the big banks to need these funds. Before we provide any money, we're going to make sure that whoever wants to access these funds is transparent about how the money is being managed, including internationally.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr.Chair, I'll change the subject now. Consumers are paying more and more with their credit cards, which allows contactless payments in shops, not to mention online shopping. This benefits Visa and Mastercard, which charge appallingly high user fees, known as interchange fees. These are almost 10times higher than in Europe and Australia, and it costs our merchants a fortune. Can the Prime Minister follow the example of Europe and Australia by capping interchange fees at0.3%?",
+          "speaker": "Mr. Gabriel Ste-Marie"
+        },
+        {
+          "content": "Mr.Chair, we are always looking for ways to reduce costs for consumers. We have worked with the big banks and the financial industry to ensure that people who need it have access to the help they need. We're reassessing how we can lower costs for consumers. Right now, we're sending money to consumers across the country who need it to get through this crisis. That's what we'll continue to focus on.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr.Chair, the question doesn't concern consumers, but merchants. A credit card company, such as Visa and Mastercard, that charges a fee of 2.5%to3% per transaction undermines the merchant's profit margin and gets richer at the expense of consumers. I invite the Prime Minister to follow the example of Europe and Australia by capping these fees at0.3%.",
+          "speaker": "Mr. Gabriel Ste-Marie"
+        },
+        {
+          "content": "Mr.Chair, we continue to work with financial institutions and the big banks to help consumers during this exceptional and difficult situation. Of course, there are some things we can look at over the longer term as well.",
+          "speaker": "Right Hon. Justin Trudeau"
+        }
+      ]
+    },
+    {
+      "end_idx": 64,
+      "span_index": 1,
+      "start_idx": 50,
+      "turns": [
+        {
+          "content": "Ms. Bergen.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you very much, Mr. Chair. Mr. Chair, I'm hearing in my riding of PortageLisgar that individuals who are dealing with Service Canada through the mail are experiencing delays. It seems that the mail that's going to Service Canada has not been opened. In fact, one of my constituents sent documents, including a doctor's note, two months ago on March 12 and is now being told that she must resend them because they've never been opened. Can the government tell us whether this is a widespread problem, and how are they dealing with unopened mail at Service Canada?",
+          "speaker": "Hon. Candice Bergen (PortageLisgar, CPC)"
+        },
+        {
+          "content": "The honourable minister.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Mr. Chair, I want to assure the honourable member that we are doing everything that we can in Service Canada to meet the expectations of Canadians. In the context of the COVID-19 pandemic, we have had unprecedented volumes, but we have redeployed thousands of staff to front-line services by phone and by other means. We had to close a number of the centres because of COVID-19 concerns and the safety and well-being of Canadians.",
+          "speaker": "Hon. Ahmed Hussen (Minister of Families, Children and Social Development)"
+        },
+        {
+          "content": "Is the minister aware whether this is a widespread problem? Is this happening rarely, or frequently? I'm hearing about it. I know, from many MPs, we are at the front lines of dealing with and helping constituents who are not only wanting to get support but also are trying to get programs unrelated to COVID-19. Is unopened mail a widespread problem at Service Canada?",
+          "speaker": "Hon. Candice Bergen"
+        },
+        {
+          "content": "Mr. Chair, I'm happy to look into the particular case that the honourable member brings up. I am not aware of unopened mail being a widespread issue. I'm happy to work with the honourable member to see what happened in this individual case.",
+          "speaker": "Hon. Ahmed Hussen"
+        },
+        {
+          "content": "Thanks very much. Mr. Chair, the Iver Johnson single-shot rifle is a standard farm gun used by many farmers in my riding, in fact, passed down from generation to generation in some cases. Why are the Liberals making this gun illegal? What's the purpose of banning this particular farm rifle?",
+          "speaker": "Hon. Candice Bergen"
+        },
+        {
+          "content": "The honourable minister.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you very much, Mr. Chair. I just wish to advise the member that we worked very closely with the Canadian firearms program, with law enforcement and with their firearms verification to identify the makes, models and variants of nine rifles, all of which had in their earliest provenance a design for military use, for soldiers to use in combat. Those are the weapons that have been",
+          "speaker": "Hon. Bill Blair (Minister of Public Safety and Emergency Preparedness)"
+        },
+        {
+          "content": "We'll now go back to Ms. Bergen.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "I would challenge the minister on that. I do not believe that he has been consulting with front-line officers. We're hearing from front-line officers that they are concerned about gangs, drug dealers and illegal weapons being smuggled across the border. They are not concerned with these types of farm rifles that are being used by our farmers and, in some cases, hunters. These are specifically used for hunting. So, Mr. Chair, we'd like to see the evidence on why the Liberals are once again targeting law-abiding Canadians, ignoring gangsters and drug dealers. Why are they banning the Iver Johnson?",
+          "speaker": "Hon. Candice Bergen"
+        },
+        {
+          "content": "It's a great opportunity, I think, when the member opposite says what the police are saying. Let's hear what the police are saying. The Canadian Association of Chiefs of Police declared that military assault rifles were produced for the sole purpose of killing people in large numbers and urged the government to enact legislation to ban all military assault rifles, except for law enforcement and military purposes. The Ontario police leaders said that they support a prohibition on all military-designed rifles. They said, In our view, these weapons have no place in our communities and should be reserved for use by Canada's military and law enforcement.",
+          "speaker": "Hon. Bill Blair"
+        },
+        {
+          "content": "Ms. Bergen, we have about 50 seconds left.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Mr. Chair, we've seen this before, where the Liberals introduced a long-gun registry that cost billions of dollars and did absolutely nothing to stop violent crimes. This is a repeat of what the Liberals have done before. Is the minister saying that the Iver Johnson that farmers use is an assault rifle?",
+          "speaker": "Hon. Candice Bergen"
+        },
+        {
+          "content": "Actually, what I'm saying, and what our regulations say very clearly, is that weapons that were designed not for hunting and not for sport purposes but for soldiers to use in combat to kill other soldiers have no place in Canadian society. I would also advise the member that any Canadian killed by gun violence is one too many. We have far too many tragedies where these types of weapons have been used to kill Canadians.",
+          "speaker": "Hon. Bill Blair"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Committee",
+    "n_spans": 2,
+    "n_turns": 276,
+    "native_meeting_id": "covid_4",
+    "source_word_count": 16180
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Summarize the discussion about petitions fraudulence, tax evasion, violence handling and their supervisory.",
+  "reference_answer": "Mr. Dan Albas asked about the handling of fraudulence by the Canadian government but Right Hon. Justin Trudeau, the Prime Minister, was saying that the government put giving support and help to Canadians in the first place. Then Mr. Gabriel Ste-Marie questioned the reason why the government supported the profiteers for tax evasion when implementing the large employer emergency financing facility. However, Right Hon. Justin Trudeau thought they were making plans to help workers to survive this pandemic and was always their priority to overcome. Hon. Candice Bergen required that how they were dealing with unopened mail at Service Canada and put out a violence case that why the Liberals were making this gun illegal and What the purpose of banning this particular farm rifle was. It was demonstrated by Hon. Bill Blair that many Canadians were murdered by these guns which was their explanation of banning guns."
+}

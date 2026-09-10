@@ -1,0 +1,220 @@
+{
+  "case_id": "qmsum-08",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 248,
+      "span_index": 0,
+      "start_idx": 201,
+      "turns": [
+        {
+          "content": "Um {disfmarker}",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "just where we are . Yeah .",
+          "speaker": "Professor E"
+        },
+        {
+          "content": "Well , so um , should we {disfmarker} we don't wan wanna do the recording status first , or {disfmarker} ?",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Well , we have about thirty - two hours uh as of , I guess a week and a half ago , so we probably now have about thirty - five hours .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "And {disfmarker} and that 's {disfmarker} that 's uh {disfmarker} How much of that is digits ? It 's uh {disfmarker} that 's including digits ,",
+          "speaker": "Professor E"
+        },
+        {
+          "content": "That 's including digits .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "right ?",
+          "speaker": "Professor E"
+        },
+        {
+          "content": "I haven't separated it out so I have no clue how much of that is digits .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "So {disfmarker} Yeah . So anyway there 's at least probably thirty hours , or something of {disfmarker} There 's got to be more than thirty hour {disfmarker}",
+          "speaker": "Professor E"
+        },
+        {
+          "content": "Mmm .",
+          "speaker": "PhD A"
+        },
+        {
+          "content": "Of {disfmarker} of non - digits ?",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "i it couldn't {disfmarker} of {disfmarker} Of non - digits .",
+          "speaker": "Professor E"
+        },
+        {
+          "content": "Yeah , absolutely . I mean , the digits don't take up that much time .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "Yeah , yeah . OK .",
+          "speaker": "Professor E"
+        },
+        {
+          "content": "OK , and the transcribers h I , uh , don't have the exact numbers , but I {pause} think it would come to about eleven hours that are finished uh , transcribing from them right now . The next step is to {disfmarker} that I 'm working on is to insure that the data are clean first , and then channelized . What I mean by clean is that they 're spell - checked , that the mark - up is consistent all the way throughout , and also that we now incorporate these additional conventions that uh , Liz requested in terms of um , um {pause} in terms of having a s a systematic handling of numbers , and acronyms which I hadn't been specific about . Um , for example , i they 'll say uh \" ninety - two \" . And you know , so how {disfmarker} you could {disfmarker}",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Nine two ,",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "e Exactly .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "right .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "So if you just say \" nine two \" , the {disfmarker} there are many s ways that could have been expressed . An - and I just had them {disfmarker} I {disfmarker} I mean , a certain number of them did put the words down , but now we have a convention which also involves having it followed by , um , a gloss th and things .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "You know , Jane ?",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "Um , one suggestion and you may already be doing this , but I 've noticed in the past that when I 've gone through transcriptions and you know in {disfmarker} in order to build lexicons and things , if you um , just take all the transcriptions and separate them into words and then alphabetize them , {comment} a lot of times just scanning down that list you 'll find a lot of {pause} inconsistencies and mis",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "Misspelled .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD A"
+        },
+        {
+          "content": "You 're talking about the type token frequency listings , and I use those too . Y you mean just uh {pause} on each {disfmarker} on each line there 's a one word right ? It 's one token from the {disfmarker} from the corpus .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Mm - hmm . Mm - hmm .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "Yeah , those are e extremely efficient and I and I {disfmarker} I agree that 's a very good use of it .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Oh so you already have that , OK .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "Well that 's {disfmarker} that 's a way {disfmarker} that 's {disfmarker} You know , the spell - check basically does that but {disfmarker} but in addition {disfmarker} yes , that 's {disfmarker} that 's exactly the strategy I wanna do in terms of locating these things which are you know colloquial spoken forms which aren't in the lexicon .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Mm - hmm . Cuz a lot of times they 'll appear next to each other , and uh ,",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "Exactly . And then you ca then you can do a s",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD A"
+        },
+        {
+          "content": "i in alphabetized lists , they 'll appear next to each other and {disfmarker} and so it makes it easier .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "Absolutely . I agree . That 's a very good {disfmarker} that 's a very good uh , suggestion . And that was {disfmarker} that 's my strategy for handling a lot of these things , in terms of things that need to be glossed . I didn't get to that point but {disfmarker} So there are numbers , then there are acronyms , and then um , there 's a {disfmarker} he she wants the uh , actually a {disfmarker} an explicit marker of what type of comment this is , so i curly b inside the curly brackets I 'm gonna put either \" VOC \" for vocalized , like cough or like laugh or whatever , \" NONVOC \" for door - slam , and \" GLOSS \" for things that have to do with {disfmarker} if they said a s a spoken form with this {disfmarker} m this pronunciation error .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Right .",
+          "speaker": "Grad C"
+        },
+        {
+          "content": "I already had that convention",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Oh that 's great .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "but I {disfmarker} I haven't been asking these people to do it systematically cuz I think it most {disfmarker} ha most efficiently handled by uh {disfmarker} by a {disfmarker} a filter . That was what I was always planing on . So that , you know you get a whole long list {disfmarker} exactly what you 're saying , you get a whole list of things that say \" curly bracket laugh curly bracket \" ,",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "then y you know it 's {disfmarker} it 's {disfmarker} You {disfmarker} you risk less error if you handle it by a filter , than if you have this transcriber ch laboriously typing in sort of a VOC space ,",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "so man So many ways that error prone .",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Right . Right .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "So , um , {vocalsound} um I 'm {disfmarker} I 'm going to convert that via a filter , into these tagged uh , subcategorized comments , and same thing with you know , we see you get a subset when you do what you 're saying ,",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "you end up with a s with uh , you 're collapsing across a frequency you just have the tokens",
+          "speaker": "Postdoc F"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "PhD B"
+        },
+        {
+          "content": "and you can um , have a filter which more efficiently makes those changes . But the numbers and acronyms have to be handled by hand , because , you know I mean , jus",
+          "speaker": "Postdoc F"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Academic",
+    "n_spans": 1,
+    "n_turns": 726,
+    "native_meeting_id": "Bmr014",
+    "source_word_count": 12565
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What’s the current state of transcriptions?",
+  "reference_answer": "Approximately 32-35 hours of meeting data have been recorded, roughly 30 hours of which comprise non-digits recordings. The transcribers have begun performing digit extraction (see abstract for Bmr013) and should be finished within a few days. Approximately 11 hours of speech have been transcribed."
+}
