@@ -322,11 +322,11 @@ source-blind (that isolation is what makes retention/recoverability
 grading trustworthy). Do not restore the "no matching gold fact ⇒
 hallucination" heuristic.
 
-## Wording fidelity (measurement-only, new)
+## Wording fidelity and findability (measurement-only, new)
 
-A further deterministic measurement, additive to and independent of
-everything above — does not change `SKILL.md`, the grammar, the linter, or
-any existing rendering/judged/gold file, and is not combined into any
+Two further deterministic measurements, additive to and independent of
+everything above — neither changes `SKILL.md`, the grammar, the linter, or
+any existing rendering/judged/gold file, and neither is combined into any
 existing or new master score.
 
 **Wording fidelity** (`scoring/wording_fidelity.py`) tests SKILL.md's own
@@ -336,6 +336,15 @@ actually copied from `source.md`, vs. paraphrased? A lexical-provenance
 test, not a semantic one — a correct paraphrase still fails it. Full
 write-up: `WORDING_FIDELITY_FINDINGS.md`.
 
+**Findability** (`scoring/findability.py`, "Evidence Access Cost")
+asks whether structured-gist's hierarchy makes already-preserved evidence
+easier to reach than the same evidence in flat, original-order prose,
+holding answer content constant — a content-matched baseline built from
+this case's own retained facts/relations, not raw source.md vs. gist (that
+would mostly measure deletion). Full write-up, including a documented
+degenerate-baseline failure mode found and fixed before scoring:
+`FINDABILITY_FINDINGS.md`.
+
 ## Re-running
 
 ```
@@ -343,6 +352,7 @@ python3 scoring/deterministic.py   # word counts, compression, lint gate
 python3 scoring/combine.py         # merges in judged/*.json -> results/
 python3 scoring/spr.py             # experimental: SPR + blinded weight comparison -> results/
 python3 scoring/wording_fidelity.py  # measurement-only: lexical provenance -> results/
+python3 scoring/findability.py       # measurement-only: evidence-access cost -> results/
 ```
 
 Regenerating `renderings/` or `judged/` (i.e. actually re-generating
