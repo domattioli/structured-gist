@@ -1,0 +1,20 @@
+{
+  "case_id": "hotpotqa-07",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "The inventory omits the second sentence of the 'Security Management (magazine)' paragraph, which is the actual textual link between the magazine and computer/IT security content that the question asks about. This sentence is present in source.md (which annotators were instructed to read in full, not just native_evidence) but was excluded solely because it is not one of the two native_evidence spans. Without it, f1 ('Security Management is the monthly magazine of ASIS International') and f2 (a stand-alone definition of computer security) have no textual connection at all, so the inventory as it stands cannot actually demonstrate that Security Management covers computer-security topics -- it can only assert the magazine's existence and separately define computer security.",
+      "source_quote": "The publication combines featured articles on topics such as terrorism and corporate espionage, with staff-written departments covering news and trends, homeland security, IT security, and legal developments."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [
+    {
+      "description": "The existing corpus_defect_notes entry states the bridge relation 'could not be faithfully stated' from native_evidence and was therefore left out (relations: [] and question_fact_ids: [\"f1\"] only). That framing conflates 'not present in the two given native_evidence sentences' with 'not recoverable from source.md'. It is the latter that determines whether a relation belongs in the inventory, and source.md's Security Management paragraph explicitly lists 'IT security' as one of the magazine's covered departments -- which is a direct, explicit match to f2's own text ('Computer security, also known as cyber security or IT security...'). This yields an explicit (not inferred) relation connecting f1 and f2 that the original annotator missed by restricting themselves to the two pre-given supporting-fact sentences instead of the full source document. The relation should have been included with evidence_mode 'explicit' and the source_quote above, and f2/the new fact should have been added to question_fact_ids.",
+      "source_quote": "The publication combines featured articles on topics such as terrorism and corporate espionage, with staff-written departments covering news and trends, homeland security, IT security, and legal developments."
+    }
+  ],
+  "notes": "The original annotator's corpus_defect_note is only half right: it correctly observes that the two given native_evidence sentences do not connect to each other, but incorrectly concludes the bridge is unrecoverable ('genuinely unrecoverable' framing) -- source.md itself (read in full, per protocol) contains an explicit sentence naming 'IT security' as a topic the magazine's departments cover, which is exactly the connective tissue the question needs and matches f2's own 'computer security, also known as ... IT security' language almost verbatim. This should be added as a fact plus an explicit relation rather than left as an unresolved gap; the true remaining defect is milder than described -- a question/evidence-selection quirk in the native benchmark (the officially-annotated native_evidence undersells the paragraph), not an inherent unanswerability."
+}

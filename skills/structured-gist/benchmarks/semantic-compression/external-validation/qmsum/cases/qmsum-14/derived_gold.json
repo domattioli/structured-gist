@@ -1,0 +1,197 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-14",
+  "corpus_defect_notes": [
+    "native_evidence span 2 (idx 176-195) is a contiguous transcript range that also includes several turns unrelated to elder/vulnerable-person support (Tochor's questions about spousal reunification travel policy and the Harrington Lake cottage renovation, and a point of order about scope) interleaved with the one relevant turn about CERB/senior/disability payment amounts and the charities funding turn. Only part of the span is on-topic for this question.",
+    "Coverage-audit correction pass (case qmsum-14): narrowed f2, f3, and f5's text to remove an unquoted 'though Kwan said...' coda appended from a different, later Kwan turn in each case, since those codas were not covered by the fact's own source_quote. The homelessness-funding coda (f5) and the CERB-gap-inaction coda (f2) were already properly captured elsewhere via relations r1 and r2 respectively, so no information was lost. The Canada-child-benefit coda (f3) was not captured elsewhere, so a new relation r3 was added with its own proper, verbatim quote from Kwan's turn to preserve that contrast."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "A single parent with four school-age children lost her spousal and child support due to COVID-19. She pays taxes on her spousal income, but she is not eligible for CERB.",
+      "text": "Kwan raised the case of a single parent with four school-age children who lost spousal and child support income due to COVID-19, paid taxes on that spousal income, but was not eligible for CERB."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "as the member points out, when one moves quickly and efficiently, there will be gaps, and that's why we've been working diligently to try to fill those gaps.",
+      "text": "Trudeau acknowledged that moving quickly to roll out CERB left gaps, including for cases like this single parent, and said the government was working to fill those gaps."
+    },
+    {
+      "category": "outcome",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "We recognize the particular challenge faced by families, single parents and families with young children, which is why we increased the amount of the Canada child benefit to be able to support people in this particular moment.",
+      "text": "Trudeau said the government had increased the Canada child benefit to support families and single parents during the pandemic."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "Canadians who are homeless or living in substandard housing have no access to bathroom facilities for basic hygiene. Those living in crowded SROs and shelters cannot practise social distancing.",
+      "text": "Kwan described the pandemic-era homelessness crisis, noting homeless people and those in crowded shelters or SROs lacked access to bathroom facilities for hygiene and could not practise social distancing, and asked the Prime Minister to commit to matching provincial funds for permanent housing solutions."
+    },
+    {
+      "category": "outcome",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "the federal government almost immediately sent significant resources, hundreds of millions of dollars, to shelters across the country to enable them to create facilities, including renting new spaces, to be able to house homeless people without increasing the danger of the spread of COVID-19.",
+      "text": "Trudeau said the federal government sent hundreds of millions of dollars to shelters to create housing space for homeless people during COVID-19 and pointed to the national housing strategy's goal of cutting chronic homelessness by 50% over the next decade."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "We in Vancouver East have the third-largest urban indigenous population in the country, yet we got less than 2% of the pandemic urban indigenous housing funding. They're overrepresented among the homeless population.",
+      "text": "Kwan said Vancouver East, home to the third-largest urban indigenous population in the country, received less than 2% of pandemic urban indigenous housing funding despite indigenous people being overrepresented among the homeless population."
+    },
+    {
+      "category": "decision",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f7",
+      "source_quote": "We announced a one-time, tax-free payment of $300 for seniors eligible for OAS and an additional $200 for seniors eligible for GIS. This means there will be up to $500 for the most vulnerable seniors to help them with their financial security to get through this challenging time. Beyond this, we announced $20 million to expand the new horizons for seniors program",
+      "text": "Minister Deb Schulte announced a one-time, tax-free payment of $300 for seniors eligible for OAS and an additional $200 for seniors eligible for GIS, for up to $500 total for the most vulnerable seniors, plus $20 million to expand the New Horizons for Seniors program for services such as grocery delivery."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f8",
+      "source_quote": "A senior gets $1,200, people with disabilities get $1,600, and now we've added another ad hoc program on top of those.",
+      "text": "Corey Tochor noted that, under existing pandemic benefits, seniors received $1,200 and people with disabilities received $1,600, on top of the $2,000 CERB payment, while questioning how those specific amounts were determined."
+    },
+    {
+      "category": "cause_rationale",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f9",
+      "source_quote": "Working collaboratively between ESDC and the Department of Finance, we determined that that would be an appropriate amount, based on what workers were earning and what we anticipated they would need to live on",
+      "text": "Minister Carla Qualtrough said the $2,000 CERB amount was determined collaboratively between ESDC and the Department of Finance, based on what workers were earning and what they would need to live on and would lose in employment income."
+    },
+    {
+      "category": "decision",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f10",
+      "source_quote": "We have announced supports in the amount of $350 million to ensure that not only do they continue that great work, but also expand it to serve the most vulnerable to get through the COVID-19 pandemic.",
+      "text": "Minister Ahmed Hussen said the government announced $350 million in support for charities and non-profits so they could continue and expand services to the most vulnerable Canadians during the pandemic."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "f10"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f4",
+        "f5"
+      ],
+      "id": "r1",
+      "source_quote": "The Prime Minister must know that the money the federal government sent is deficient. Many people still remain homeless, and they are at risk.",
+      "text": "Kwan's description of the ongoing homelessness crisis directly contrasts with Trudeau's characterization of federal shelter funding and the national housing strategy as adequate action, since Kwan called the funding deficient.",
+      "type": "contrast"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f1",
+        "f2"
+      ],
+      "id": "r2",
+      "source_quote": "While the Minister of Employment has been aware of this for three weeks and says she is looking into it, there's still been no action.",
+      "text": "Kwan invoked Trudeau's own explanation that rapid CERB rollout created gaps to argue that the specific spousal/child-support gap remained unresolved despite weeks having passed.",
+      "type": "dependency"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f1",
+        "f3"
+      ],
+      "id": "r3",
+      "source_quote": "That does not replace spousal support and child maintenance, Prime Minister.",
+      "text": "Kwan directly rebutted Trudeau's Canada child benefit increase as an answer to the single parent's spousal/child-support gap, saying it does not replace spousal support and child maintenance.",
+      "type": "contrast"
+    }
+  ]
+}

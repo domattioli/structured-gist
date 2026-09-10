@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-01",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Single-paragraph native evidence is fully decomposed: f1-f5 cover every sentence, all source_quotes verified verbatim against source.md, and both relations (r1 condition on data scale, r2 decision_outcome) state real connective tissue rather than restating facts. Reference answer 'SR' is directly supported by f1/f4/f5; no gaps found."
+}

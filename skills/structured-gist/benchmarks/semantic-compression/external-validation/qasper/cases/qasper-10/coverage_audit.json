@@ -1,0 +1,15 @@
+{
+  "case_id": "qasper-10",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [
+    {
+      "unit_ids": ["f4"],
+      "issue": "f4 glues two distinct, separately-referenced construction stages into one fact: (a) building templates and expression pools via linguistic analysis plus manual verification (Section SECREF16), and (b) presenting the framework for generating simulated training data (Section SECREF20). Each stage is explicitly assigned its own section and is independently describable; a reader could lose the description of one stage and still meaningfully retain the other, so per the protocol's splitting test these are two facts glued into one, not a single bundled cause/rationale."
+    }
+  ],
+  "relation_omissions": [],
+  "notes": "The existing corpus_defect_note (para:25/f4 doesn't actually answer 'how big') is not re-flagged. Given that scoping, f1-f3 fully and correctly decompose para:12's three sentences (count/speakers, demographics, topics/symptoms/hours) with verbatim quotes, and question_fact_ids correctly limits the answer to f1+f3 (excluding the demographic-composition fact f2, which describes who the speakers are rather than how big the dataset is). No relation is needed or omitted since these are independent descriptive statistics."
+}

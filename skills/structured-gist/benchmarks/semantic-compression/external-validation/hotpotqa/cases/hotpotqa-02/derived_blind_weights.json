@@ -1,0 +1,11 @@
+{
+  "case_id": "hotpotqa-02",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 2, "f2": 3},
+  "relation_weights": {"r1": 2},
+  "rationale": {
+    "f1": "This fact frames the three named compounds the question is choosing among, but a reader can still correctly extract the converted compound from f2 alone, so losing it only weakens the reader's confidence in the reference set rather than blocking the answer.",
+    "f2": "This fact is the only place the actual conversion (psilocybin quickly converted by the body to psilocin) is stated, so it alone lets a reader answer 'which compound is converted to psilocin' correctly.",
+    "r1": "This relation restates the selection already made explicit in f2 (psilocybin, not psilocin or baeocystin, is what converts), so losing it costs the reader an explicit summary but not the underlying answerable fact."
+  }
+}

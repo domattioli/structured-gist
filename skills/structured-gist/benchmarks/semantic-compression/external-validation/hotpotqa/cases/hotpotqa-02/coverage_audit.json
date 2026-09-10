@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-02",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both facts' source_quotes are verbatim and support their text exactly; the relation correctly identifies psilocybin (not psilocin) as the compound converted to psilocin. The existing corpus_defect_notes entry already flags that the native reference_answer ('psilocin') appears mismatched against the question as worded, and that the evidence actually supports 'psilocybin' as the answer -- this is a native-benchmark question/answer issue, already correctly identified, not a gap in this fact/relation inventory."
+}

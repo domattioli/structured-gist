@@ -1,0 +1,11 @@
+{
+  "case_id": "hotpotqa-05",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 1},
+  "relation_weights": {"r1": 1},
+  "rationale": {
+    "f1": "This fact directly names 'Dirt track racing' as the type run for the Australian Street Stock Championship, which is the literal answer, so losing it removes the only source of the answer term.",
+    "f2": "The question itself already restates this fact's content ('performed on clay or dirt surfaced oval tracks') as part of its own wording, so a reader retains this information from the question even if the fact is dropped, making it merely confirmatory.",
+    "r1": "This relation only formalizes that the identical phrase 'Dirt track racing' in f1 and the term defined in f2 refer to the same thing, which a reader can already see by matching the repeated term itself, so dropping it costs little beyond an explicit restatement."
+  }
+}

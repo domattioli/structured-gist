@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-07",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both native-evidence paragraphs name exactly one dataset each (RWTH German-English manual alignments; WMT15 German-to-English training data), matching the reference_answer's two-part list exactly. f1/f2 quotes verified verbatim; surrounding sentences about equation/table references and conversion procedure are correctly excluded as not naming any additional dataset. No relation is needed since the question only asks which datasets are used, not how they relate."
+}

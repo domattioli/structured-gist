@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-21",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both spans are thoroughly and accurately covered across twelve facts with verbatim-matching quotes. question_fact_ids (f1, f2, f4, f6, f12) correctly isolates Marketing's specific recommendations from the broader discussion, while f3, f5, f7-f11 (other speakers' contributions and Marketing's non-recommendation observations) remain available as context without being mislabeled as answers to this specific question. f5 and f11 both note wood doesn't suit the spongy-touch trend, but these occur at different points in an evolving discussion (before and after the wood-bottom proposal) rather than being a true duplicate. r1's connection between the importance ranking, the Milan/Paris trend, and the fruit-and-vegetable conclusion, and r2's problem-resolution framing, both track explicit textual moves in the transcript. No missing, redundant, unsupported, or granularity issues found."
+}

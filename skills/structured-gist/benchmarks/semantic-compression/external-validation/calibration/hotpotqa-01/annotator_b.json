@@ -1,0 +1,46 @@
+{
+  "case_id": "hotpotqa-01",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "American neo-libertarians believe in the idea of American exceptionalism.",
+      "category": "descriptive",
+      "source_quote": "American neo-libertarians believe in the idea of American exceptionalism",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Neo-libertarianism::sent3"}]
+    },
+    {
+      "id": "f2",
+      "text": "American neo-libertarians support interventionist policy as a way to maintain America's importance in foreign relations.",
+      "category": "descriptive",
+      "source_quote": "support interventionist policy as a way to maintain America 's importance in foreign relations .",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Neo-libertarianism::sent3"}]
+    },
+    {
+      "id": "f3",
+      "text": "American exceptionalism is an ideology holding that the United States is unique among nations in a positive way.",
+      "category": "descriptive",
+      "source_quote": "American exceptionalism is an ideology that holds that the United States is unique among nations in a positive way",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "American exceptionalism::sent0"}]
+    },
+    {
+      "id": "f4",
+      "text": "American exceptionalism's positive-uniqueness claim is particularly with respect to the ideals of democracy and personal freedom.",
+      "category": "descriptive",
+      "source_quote": "particularly with respect to its ideals of democracy and personal freedom .",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "American exceptionalism::sent0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "bridge_inference",
+      "text": "Because neo-libertarianism is grounded in the idea of American exceptionalism, and American exceptionalism's foundational ideals are democracy and personal freedom, those same two ideals (democracy and personal freedom) are the ideological foundation of Neo-libertarianism.",
+      "fact_ids": ["f1", "f4"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Neo-libertarianism::sent3"}, {"dataset": "hotpotqa", "native_evidence_id": "American exceptionalism::sent0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f3", "f4"],
+  "corpus_defect_notes": []
+}

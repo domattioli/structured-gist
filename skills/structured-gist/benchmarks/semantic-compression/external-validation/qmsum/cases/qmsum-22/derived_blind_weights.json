@@ -1,0 +1,24 @@
+{
+  "case_id": "qmsum-22",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 2,
+    "f4": 3,
+    "f5": 3,
+    "f6": 3
+  },
+  "relation_weights": {
+    "r1": 3
+  },
+  "rationale": {
+    "f1": "States the PM's core cost concern about special colours, directly matching the reference summary's 'increase cost' point.",
+    "f2": "Reinforces the same cost-vs-colour-options point, core to the reference summary's central claim about the PM's appearance opinion.",
+    "f3": "Contains the PM's 'fancy' appearance aspiration but bundles it with unrelated function-per-button discussion, diluting its focus on appearance specifically.",
+    "f4": "States the PM's core view that colour can vary but the company image must stay recognizable, matching the reference summary's second point exactly.",
+    "f5": "Elaborates the same recognizability/fashion requirement in the PM's own words, directly reinforcing the reference summary's second point.",
+    "f6": "States the PM's explicit 'attractive' requirement, directly matching the reference summary's 'should be good-looking' opening claim.",
+    "r1": "Captures the central tension in the PM's appearance opinion (wanting it attractive/fancy but constrained by colour-option costs), which is exactly the tradeoff the reference summary describes."
+  }
+}

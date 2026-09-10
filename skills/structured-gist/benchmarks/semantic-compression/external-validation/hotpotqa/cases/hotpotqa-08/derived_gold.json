@@ -1,0 +1,74 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "hotpotqa-08",
+  "corpus_defect_notes": [
+    "coverage audit: f1 originally bundled the Academy Award detail (not needed to answer the question) with the task-relevant Stratton Story/Monty Stratton biography claim; split into f1 (biography link, kept in question_fact_ids) and f3 (Academy Award detail, not task-relevant, excluded from question_fact_ids)."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Douglas Morrow::sent1"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "1949's \"The Stratton Story\", a biography of baseball player Monty Stratton, who was disabled in a hunting accident.",
+      "text": "The 1949 film \"The Stratton Story\" is a biography of baseball player Monty Stratton, who was disabled in a hunting accident."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Monty Stratton::sent0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "Monty Franklin Pierce Stratton (May 21, 1912 \u2013 September 29, 1982), nicknamed \"Gander\" for a trick pitch he developed), was a Major League Baseball pitcher.",
+      "text": "Monty Franklin Pierce Stratton (May 21, 1912 \u2013 September 29, 1982) was a Major League Baseball pitcher nicknamed \"Gander\" for a trick pitch he developed."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Douglas Morrow::sent1"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "He earned an Academy Award for his script for 1949's \"The Stratton Story\"",
+      "text": "Douglas Morrow won an Academy Award for his screenplay for \"The Stratton Story.\""
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Douglas Morrow::sent1"
+        },
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Monty Stratton::sent0"
+        }
+      ],
+      "evidence_mode": "inferred",
+      "fact_ids": [
+        "f1",
+        "f2"
+      ],
+      "id": "r1",
+      "source_quote": "",
+      "text": "The baseball player \"Monty Stratton\" who is the subject of \"The Stratton Story\" (per the Douglas Morrow entry) is the same person as Monty Franklin Pierce Stratton, the MLB pitcher nicknamed \"Gander.\"",
+      "type": "coreference_bridge"
+    }
+  ]
+}

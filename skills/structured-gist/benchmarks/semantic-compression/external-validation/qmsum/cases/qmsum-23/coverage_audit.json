@@ -1,0 +1,15 @@
+{
+  "case_id": "qmsum-23",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "The Project Manager's question about how the remote would give feedback about its current state (relevant since a few-button, no-display design was being considered), and the Industrial Designer's confirmation that a user-history-based state-feedback system could not be implemented, is not captured by any fact — even though it is the actual design problem that the 'light indicator on the stick' idea (f12) was proposed to solve. As it stands, the inventory shows the solution (f12) without the problem/constraint that motivated it.",
+      "source_quote": "But but how does how does the remote uh report uh give back to the user w in what state it is ? ... Because we do not implement uh a user history . ... no , but there's no way to do that , because we cannot implement that kind of the system ."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["r2"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "r2 claims the ten-digits-vs-voice-recognition tradeoff 'was resolved in favor of voice recognition,' but native_evidence span:1 actually ends on the Industrial Designer noting voice recognition's battery-life disadvantage, with no final decision stated — the discussion is left open. This directly contradicts f23's own categorization of the same exchange as an 'unresolved_question,' and overstates what the evidence supports (the reference_answer itself frames this only as a 'suggestion,' not a settled outcome). Given the scale of this span (~210 turns), the 25-fact inventory is proportionate rather than over-atomized, and question_fact_ids reasonably narrows to the facts most central to 'user interface design.' All other quotes checked verbatim match the supplied evidence, and r1's causal framing, while placing the stated rationale (f15) slightly out of chronological order relative to the proposal (f14), is not a substantive misrepresentation."
+}

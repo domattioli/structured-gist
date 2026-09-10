@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-15",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["f3", "f7", "f9"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f3, f7, and f9 each attribute a specific claim to a minister's response (Joly's 'agreed and said she looked forward to working with him'; O'Regan's 'pointing to ongoing forestry-sector investments since 2017'; Morneau's note that 'rent and landlord-tenant relations fall under provincial jurisdiction, so provinces would need to step forward') that is true and present in the same span but not covered by that fact's own cited source_quote. This is the same low-severity, systemic quote-completeness pattern seen across several other cases in this pass, not fabrication. Weak/borderline possible omission: the closing agri-food labour/CERB exchange (Dalton asking about farm labour shortages, Qualtrough on job creation in agriculture) isn't captured, but its fit to the question's four named topics (energy, tourism, green economy, small business funding) is marginal, so this is not flagged as a hard finding. Coverage is otherwise well-scoped: the dairy/CUSMA exchange, the broadband/Internet exchange, the firearms-ban exchange, and the CERB $1,000-threshold exchange are all reasonably excluded as outside the question's four named topics. Quotes checked verbatim against the supplied evidence, and both relations (r1, r2) state genuine connective claims."
+}

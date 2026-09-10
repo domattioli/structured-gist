@@ -1,0 +1,304 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-10",
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass (case qmsum-10): narrowed f9's text to match its existing source_quote (dropped an unsupported 'under severe strain, worsened by international oil price war and COVID-19 demand drop' framing that the quote did not cover); extended f15's source_quote to the full O'Regan turn so its claims about the April 17 measures and BCAP eligibility are actually supported; removed relation r5, which asserted a causal/framing link between the SAGD oil-storage risk (f13) and the government's two-crises framing (f15) that O'Regan's actual answer never addresses; added f16 (Yurdiga's unanswered question about whether a medium-sized energy company in default still qualifies for BCAP) and f17 (Yurdiga's claim that Bills C-69/C-48 pushed over $200 billion of investment out of Canada and caused an Alberta recession), both flagged as missing task-critical content by the coverage audit."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "Ten weeks ago the Minister of Fisheries, in responding to my question in question period, acknowledged that the lobster fishery was being negatively affected by the COVID-19 pandemic and was facing losses of up to 95% of its Asian markets.",
+      "text": "Mr. d'Entremont said the Minister of Fisheries had acknowledged, ten weeks earlier, that the lobster fishery was being negatively affected by COVID-19, facing losses of up to 95% of its Asian markets."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "We've started to put measures in place to address the issue with the $62.5 million for processors, as well as to make sure that the CERB is available for seasonal workers as well as people who have run out of their fishery EI, but we know that more needs to be done. The fishery enterprises are uniquely structured, which is why we're looking at measures to address the concerns they have.",
+      "text": "Minister Bernadette Jordan said the government had put $62.5 million toward processors and made the CERB available to seasonal fishery workers and to those who had run out of fishery EI, while acknowledging more needed to be done because fishery enterprises are uniquely structured."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "most fishermen are not eligible for the wage subsidy program due to the stipulation that it cannot be used for employees who are related to their employer. Most fishing enterprises, like farm enterprises, are family oriented.",
+      "text": "d'Entremont said most fishermen are not eligible for the wage subsidy program because it cannot be used for employees related to their employer, even though fishing enterprises, like farm enterprises, are typically family-run with relatives working on the boat."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "we know that, because of the unique structure of fishing enterprises, they are not eligible for many of the supports we have put in place.",
+      "text": "Jordan acknowledged that fishing enterprises' unique structure makes them ineligible for many existing supports, said the government was working on direct supports for harvesters, and said more still needed to be done."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "lobster fishermen in the gulf region of the Maritimes were shocked to read an additional subsection of regulations that was added to their fishing conditions for the 2021 fishing season. This addition was for a catch limitation or quota to which none of the harvesters or advisory members were privy.",
+      "text": "d'Entremont said lobster fishermen in the gulf region were shocked to find a new catch-limitation or quota subsection added to their 2021 fishing conditions, without any harvester or advisory member being consulted."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "Those were not done under my authorization. They were removed right away from the condition of licence, and they will not happen.",
+      "text": "Jordan said the added gulf licence conditions had not been made under her authorization, had been removed right away, and would not happen."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f7",
+      "source_quote": "the tourism season is already deeply affected by COVID-19. A number of industries, businesses and festivals are having to deal with considerable losses of income. In my constituency, tens of thousands of tourists use the ferry between Bar Harbor, Maine, and Yarmouth, Nova Scotia.",
+      "text": "d'Entremont said the tourism season was already deeply affected by COVID-19, with a number of industries, businesses and festivals facing considerable income losses, citing tens of thousands of tourists who use the Bar Harbor-Yarmouth ferry in his riding."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f8",
+      "source_quote": "I have had the opportunity to speak to my colleague Mr.d'Entremont about solutions to assist people in the tourism sector all over the country, and particularly in the Atlantic region. In light of the new funding for the Atlantic Canada Opportunities Agency, ACOA, I will be happy to work with him and with the leaders of the tourism sector.",
+      "text": "Minister Joly said she had already spoken with d'Entremont about solutions for the tourism sector, particularly in the Atlantic region, and offered to keep working with him and tourism-sector leaders, referencing new funding for the Atlantic Canada Opportunities Agency (ACOA)."
+    },
+    {
+      "category": "failure",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f9",
+      "source_quote": "48 days after the finance minister promised liquidity loans to oil producers and service companies, there are still no applications open for these loans.",
+      "text": "Mr. Yurdiga said that 48 days after the finance minister promised liquidity loans to oil producers and service companies, applications for those loans were still not open."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f10",
+      "source_quote": "It was on April 17 that we started liquidity measures for small and medium-sized businesses in the oil and gas industry, and those are the ones in which 85% of workers are affected. Today's measures will complete that.",
+      "text": "Minister Seamus O'Regan said the government had announced liquidity measures that day for large-cap oil and gas corporations, completing earlier liquidity measures announced April 17 for small and medium-sized oil and gas businesses, which covered 85% of the sector's affected workers."
+    },
+    {
+      "category": "failure",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f11",
+      "source_quote": "The larger companies have sent contractors home and laid off employees. Many of these contractors are indigenous companies, and they are having a difficult time qualifying for programs to save their businesses.",
+      "text": "Yurdiga said larger oil companies had sent contractors home and laid off employees, and that many of these contractors were indigenous companies having a difficult time qualifying for support programs."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f12",
+      "source_quote": "Canada's oil sector provides jobs for more than 576,000 people, including 11,000 indigenous people, in every part of Canada. It is essential that we support those businesses.",
+      "text": "O'Regan said Canada's oil sector provides jobs for more than 576,000 people, including 11,000 indigenous people, and that the government would continue to support those businesses and workers."
+    },
+    {
+      "category": "failure",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f13",
+      "source_quote": "western Canada oil storage is under extreme pressure. If thermal projects such as SAGD are shut down, those facilities could be lost forever.",
+      "text": "Yurdiga warned that western Canada's oil storage was under extreme pressure, and that if thermal projects such as SAGD were shut down, those facilities could be lost forever."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f14",
+      "source_quote": "we have worked with industry and with provinces on every front to ensure the stability of the oil and gas sector of our country. We have concentrated on workers.",
+      "text": "O'Regan said the government had worked with industry and provinces to stabilize the oil and gas sector, with a focus on protecting jobs so companies could keep workers."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f15",
+      "source_quote": "we know that our oil and gas sector is suffering through two crises. We have the impacts of COVID and the effects of a global price war, and we have been tackling both of these on each front. On April 17, we announced liquidity measures to support the small and medium-sized players. That made up 85% of the jobs in this sector. We have announced liquidity will be further made available to larger players. As well, through the BCAP, we are making sure that more companies are eligible so that they can remain whole and so they can hold onto the jobs that we need.",
+      "text": "O'Regan summarized that the oil and gas sector was suffering through two crises at once, the impacts of COVID-19 and a global oil price war, and that the government had been tackling both fronts through the April 17 liquidity measures for small and medium businesses, the same-day measures for larger players, and broadened eligibility under the Business Credit Availability Program (BCAP)."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f16",
+      "source_quote": "Can the minister clarify? On a medium-sized energy company's eligibility, if the company is in default to financial institutions, does it still qualify for the business credit availability program?",
+      "text": "Yurdiga asked whether a medium-sized energy company that is in default to financial institutions still qualifies for the Business Credit Availability Program, a question O'Regan's response did not directly address."
+    },
+    {
+      "category": "cause_rationale",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f17",
+      "source_quote": "These two bills alone pushed over $200 billion of investment out of Canada, causing the Alberta economy to retract to recession levels.",
+      "text": "Yurdiga said Bills C-69 and C-48 alone pushed over $200 billion of investment out of Canada, causing the Alberta economy to retract to recession levels."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "f10",
+    "f11",
+    "f12",
+    "f13",
+    "f14",
+    "f15",
+    "f16",
+    "f17"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "inferred",
+      "fact_ids": [
+        "f1",
+        "f2"
+      ],
+      "id": "r1",
+      "source_quote": "",
+      "text": "Because the lobster fishery lost up to 95% of its Asian export markets due to COVID-19, the government put $62.5 million toward processors and expanded CERB eligibility for fishery workers.",
+      "type": "causal"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f5",
+        "f6"
+      ],
+      "id": "r2",
+      "source_quote": "Those were not done under my authorization. They were removed right away from the condition of licence, and they will not happen.",
+      "text": "In response to the unauthorized gulf lobster quota addition being raised, Jordan confirmed it was removed and would not recur.",
+      "type": "problem_resolution"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f2",
+        "f3"
+      ],
+      "id": "r3",
+      "source_quote": "most fishermen are not eligible for the wage subsidy program due to the stipulation that it cannot be used for employees who are related to their employer.",
+      "text": "Although the government provided CERB and processor support for fisheries, most family-run fishing operations remained excluded from the wage subsidy because it excludes employees related to their employer.",
+      "type": "contrast"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f9",
+        "f10"
+      ],
+      "id": "r4",
+      "source_quote": "It was on April 17 that we started liquidity measures for small and medium-sized businesses in the oil and gas industry, and those are the ones in which 85% of workers are affected. Today's measures will complete that.",
+      "text": "In response to criticism that liquidity loans for oil producers had been delayed 48 days, O'Regan pointed to the April 17 measures for small and medium businesses and new same-day measures for large-cap corporations as completing that support.",
+      "type": "problem_resolution"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "qmsum-07",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 2,
+    "f2": 1,
+    "f3": 3,
+    "f4": 3,
+    "f5": 3
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3
+  },
+  "rationale": {
+    "f1": "PhD F's job-limiting advice is the context the professor's anecdote responds to, so it's needed to place the workshop remark correctly but is not itself what the professor said.",
+    "f2": "Further elaborates the sharing rationale behind PhD F's advice; secondary background to the professor's own remark.",
+    "f3": "States the professor's actual workshop recollection (which school, how many machines, the P-make-like system), the core content of what he said.",
+    "f4": "States the specific detail (all 25 people hitting all 25 machines) that is the crux of the professor's anecdote.",
+    "f5": "States the professor's conclusion (less efficient than using one's own machine), the point of his remark and central to answering the query.",
+    "r1": "States the direct cause-effect the professor was making (everyone sharing machines caused inefficiency), which is the substantive claim in his remark.",
+    "r2": "Captures that the professor's anecdote was explicitly building on PhD F's point about shared-resource limits, a connection the answer needs to correctly frame why he brought it up."
+  }
+}

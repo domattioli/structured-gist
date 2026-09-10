@@ -1,0 +1,15 @@
+{
+  "case_id": "qmsum-13",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "Liz Williams's extended testimony that children with undiagnosed additional learning needs or communication problems are frequently labelled 'naughty' or disruptive by school staff, are consequently off-rolled (especially around key stage 4), and that formal diagnosis is what opens the door to proper support — a substantial, directly special-education-relevant discussion spanning multiple turns in span:2 — is not represented by any fact. More broadly, span:2 (~72 turns) yields only 2 facts (f10, f11) versus span:0's 7 facts from a comparable turn count, and most of its content on off-rolling, mental-health support gaps, Welsh-medium EOTAS provision, and delays entering EOTAS provision — all part of 'issues on special education' as literally asked — is absent from the inventory, even though the question explicitly asks about both 'special education' and 'recruitment of professional staff', not staff recruitment alone.",
+      "source_quote": "Lots of children with communication difficulties especially, if they haven't been formally diagnosed, they are certainly the ones that are deemed naughty, because I suppose people think, 'Well, you should be doing well, you're bright. You should be thriving in school.' But that's not always the case. ... I think that's where formal diagnosis can be helpful. I think the doors are open then to much more school support."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["f9"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f9's cited source_quote ('What we would like to see is that new curriculum around health and well-being...on a statutory basis') covers only the last of the several recommendations f9's text lists (training teachers, learning from what works, listening to young people's voices, statutory curriculum inclusion) — the other recommendations are genuinely present earlier in the same Sarah Stone turn but outside the cited quote. Span:0's 7-fact coverage of curriculum/capacity/staff-training issues is accurate and well-grounded, and relations r1/r2 state real connective claims. The main concern is the severe coverage imbalance across the three spans given the question's dual scope."
+}

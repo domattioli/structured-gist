@@ -1,0 +1,130 @@
+{
+  "case_id": "qmsum-02",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Grad B said setting up all the probabilities for the flat (single-layer) structure, with all features pointing directly to one output node, would be a pain.",
+      "category": "constraint",
+      "source_quote": "Reasons being , you know , it 'd be a pain to set up all the probabilities for that .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f1", "b:f1"]}
+    },
+    {
+      "id": "f2",
+      "text": "Grad B said that if the team later moved on to doing some kind of learning, not knowing belief-nets well would leave them handicapped.",
+      "category": "constraint",
+      "source_quote": "If we moved onto the next step and did learning of some sort , uh according Bhaskara we 'd be handicapped . I don't know belief - nets very well .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f1", "b:f2"]}
+    },
+    {
+      "id": "f3",
+      "text": "Grad C noted that with N features all pointing to one node, the number of probability parameters needed is exponential in N (two to the N).",
+      "category": "cause_rationale",
+      "source_quote": "Well usually , I mean , you know , N {disfmarker} If you have N features , then it 's two to the N {disfmarker} {pause} or exponential in N .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f2", "b:f3"]}
+    },
+    {
+      "id": "f4",
+      "text": "In the team's initial (flat) design, all the features pointed directly to a single node.",
+      "category": "descriptive",
+      "source_quote": "Yeah , they 'd all be like pointing to the one node .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "merged", "source_annotator_ids": ["a:f3", "b:f4"]}
+    },
+    {
+      "id": "f5",
+      "text": "Grad B said the team's next idea, in response to these problems, was to add a middle layer to the belief net.",
+      "category": "decision",
+      "source_quote": "So then our next idea was to add a middle layer , right ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f4", "b:f5"]}
+    },
+    {
+      "id": "f6",
+      "text": "Grad B explained the rationale for the middle layer: the person at the screen is trying to communicate an abstract idea (e.g., 'I am a tourist, I want to go to this place'), drawn from features of the communication.",
+      "category": "cause_rationale",
+      "source_quote": "the thinking behind that was {vocalsound} we have the features that we 've drawn {pause} from the communication of some {disfmarker} Like , the someone s The person at the screen is trying to communicate some abstract idea , like \" I 'm {disfmarker} \" the {disfmarker} the abstract idea being \" I am a tourist I want to go {pause} to this place . \"",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f5", "b:f6"]}
+    },
+    {
+      "id": "f7",
+      "text": "The middle layer was meant to capture a hidden concept — such as whether the user is a tourist or running an errand — that could not be directly extracted from the data.",
+      "category": "descriptive",
+      "source_quote": "the middle thing , we were thinking along the lines of maybe trying to figure out , like , the concept of whether they 're a tourist {pause} or {pause} whether they 're running an errand or something like that along those lines . Or {disfmarker} Yes , we could things we couldn't extract the {disfmarker} from the data , the hidden variables .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "b_only", "source_annotator_ids": ["b:f7"]}
+    },
+    {
+      "id": "f8",
+      "text": "Grad B said the hidden (middle-layer) variables the team came up with were whether the person was on a tour, running an errand, or in a hurry.",
+      "category": "descriptive",
+      "source_quote": "the hidden variables {disfmarker} hair variables we came up with were whether someone was on a tour , running an errand , or whether they were in a hurry",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f6", "b:f8"]}
+    },
+    {
+      "id": "f9",
+      "text": "The team reasoned that someone in a hurry would be less likely to want to do 'Vista' (view/sightsee), since wanting to view things implies not being in a hurry.",
+      "category": "cause_rationale",
+      "source_quote": "right ? Because {pause} if you want to view things you wouldn't be in a hurry .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f7", "b:f9"]}
+    },
+    {
+      "id": "f10",
+      "text": "Grad B said someone in a hurry might instead be more likely to be using their stated destination as a navigational waypoint toward another place, rather than as a final destination.",
+      "category": "descriptive",
+      "source_quote": "Or they might be more likely to be using the place that they want to go to as a {disfmarker} like a {pause} navigational point to go to another place .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f8", "b:f10"]}
+    },
+    {
+      "id": "f11",
+      "text": "Grad B mentioned two more candidate middle-layer variables: whether the destination was the person's final destination, and whether the destination was closed.",
+      "category": "descriptive",
+      "source_quote": "Whether the destination was their final destination , whether the destination was closed .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f9", "b:f11"]}
+    },
+    {
+      "id": "f12",
+      "text": "Grad B said the belief-net was still in a 'toy' version at this point, because the team did not yet know what probabilities to assign.",
+      "category": "descriptive",
+      "source_quote": "right now it 's still kind of {pause} in a toy {pause} version of it , because we didn't know the probabilities of",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f10", "b:f12"]}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "causal",
+      "text": "The team added a middle layer specifically because the flat, all-features-to-one-node structure was too costly to parameterize (probabilities hard to set up, exponential in the number of features, and not pretty) and would not scale to future learning.",
+      "fact_ids": ["f1", "f2", "f3", "f4", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "So then our next idea was to add a middle layer , right ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "merged", "source_annotator_ids": ["a:r1", "b:r1"]}
+    },
+    {
+      "id": "r2",
+      "type": "causal",
+      "text": "The specific hidden variables chosen for the middle layer (tour / errand / hurry) were motivated by reasoning about how a hurried user would behave differently — less likely to want to view things, and more likely to treat the destination as a waypoint rather than an end goal.",
+      "fact_ids": ["f8", "f9", "f10"],
+      "evidence_mode": "explicit",
+      "source_quote": "because we were thinking uh , if they were in a hurry there 'd be less likely to",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "b_only", "source_annotator_ids": ["b:r2"]}
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"],
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass: narrowed f4's text to drop the unsupported claim that 'Grad B remarked also wouldn't look pretty' — f4's own cited source_quote is Grad C's separate turn and did not cover Grad B's adjacent-but-distinct remark, so f4 now only claims what its quote supports. Extended f7's source_quote (within the same, single, uninterrupted Grad B turn already cited) to include the clause 'we couldn't extract the ... from the data, the hidden variables,' which is what actually backs f7's claim that the middle-layer concept 'could not be directly extracted from the data' — the original quote stopped one clause short of that support."
+  ],
+  "adjudication_status": "reconciled",
+  "annotator_metadata": "isolated_llm_agent_pair+adjudicator",
+  "build_date": "2026-09-10"
+}

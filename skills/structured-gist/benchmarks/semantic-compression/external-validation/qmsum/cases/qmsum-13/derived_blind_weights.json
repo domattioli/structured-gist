@@ -1,0 +1,42 @@
+{
+  "case_id": "qmsum-13",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 2,
+    "f2": 3,
+    "f3": 3,
+    "f4": 3,
+    "f5": 3,
+    "f6": 2,
+    "f7": 2,
+    "f8": 2,
+    "f9": 2,
+    "f10": 3,
+    "f11": 1,
+    "f12": 2,
+    "f13": 1,
+    "f14": 1
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3
+  },
+  "rationale": {
+    "f1": "Provides background on which settings' curricula are and aren't reliably quality-assured; useful context but secondary to the collaboration/staff points.",
+    "f2": "States that PRU-school collaboration is the answer to curriculum needs, matching the reference summary's core opening point directly.",
+    "f3": "Ties funding shortfalls directly to a specific staffing gap (a dedicated educational psychologist), the core finance-and-recruitment link the reference summary highlights.",
+    "f4": "States the core staff-recruitment problem (niche expertise hard to replace once lost), central to the recruitment-of-professional-staff theme.",
+    "f5": "States that newly qualified teachers can't enter this provision and that pathways should be built into training, directly matching the reference summary's training-system point.",
+    "f6": "Confirms the small-numbers/limited-training-access problem for this specialist workforce, supporting the recruitment theme.",
+    "f7": "Describes a related capacity constraint (pulling staff out for training is hard), supporting but secondary to the core recruitment problem.",
+    "f8": "Relates to consistent training coverage via statutory policy; touches the training theme but is more about mental-health provision generally than staff recruitment specifically.",
+    "f9": "Lists broad recommendations including teacher training; relevant supporting context but diffuse relative to the specific recruitment/curriculum theme.",
+    "f10": "States explicitly that this training should be embedded in initial teacher training, matching the reference summary's closing point almost verbatim.",
+    "f11": "Concerns broader responsibility/funding for supporting excluded children generally, tangential to the specific special-education-curriculum and staff-recruitment theme.",
+    "f12": "Explains how undiagnosed needs get children mislabeled and off-rolled, relevant to the special-education-needs identification issue but not to staff recruitment.",
+    "f13": "A narrow, under-researched sub-topic (Welsh-medium EOTAS) that is tangential to the core curriculum-collaboration and recruitment themes.",
+    "f14": "Describes vulnerability during the exclusion-to-EOTAS gap; relevant to special education support generally but not to curriculum collaboration or staff recruitment specifically.",
+    "r1": "Ties the funding shortfall, staff-retention difficulty, and training-access problem together into a single root cause, the exact finance-and-recruitment link the reference summary describes.",
+    "r2": "Connects embedding training in initial teacher training to the statutory whole-school approach, capturing the systemic argument behind the reference summary's training recommendation."
+  }
+}

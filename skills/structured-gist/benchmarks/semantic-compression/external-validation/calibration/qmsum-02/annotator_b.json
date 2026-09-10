@@ -1,0 +1,111 @@
+{
+  "case_id": "qmsum-02",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Grad B said that setting up all the probabilities for a flat, single-layer structure (all features pointing directly to one output node) would be a pain.",
+      "category": "constraint",
+      "source_quote": "Reasons being , you know , it 'd be a pain to set up all the probabilities for that .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Grad B said that if they later added a learning step on top of the flat structure, not knowing belief-nets well would leave the team handicapped.",
+      "category": "constraint",
+      "source_quote": "If we moved onto the next step and did learning of some sort , uh according Bhaskara we 'd be handicapped . I don't know belief - nets very well .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "Grad C explained that with N features feeding directly into a single node, the number of probability values needed grows exponentially with N (two to the N).",
+      "category": "cause_rationale",
+      "source_quote": "If you have N features , then it 's two to the N {disfmarker} {pause} or exponential in N .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Grad B said the flat structure also 'wouldn't look pretty,' with Grad C adding that it would mean all the features pointing to a single node.",
+      "category": "descriptive",
+      "source_quote": "And they wouldn't look pretty . So .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "Grad B said their next idea, instead of the flat one-layer structure, was to add a middle layer to the belief net.",
+      "category": "decision",
+      "source_quote": "So then our next idea was to add a middle layer , right ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Grad B explained that the features drawn from the user's communication represent an abstract idea the person is trying to convey — for example, being a tourist who wants to go to a particular place.",
+      "category": "cause_rationale",
+      "source_quote": "the person at the screen is trying to communicate some abstract idea , like \" I 'm {disfmarker} \" the {disfmarker} the abstract idea being \" I am a tourist I want to go {pause} to this place . \"",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "Grad B said the middle layer was meant to capture a hidden concept — such as whether the user is a tourist or running an errand — that could not be directly extracted from the data.",
+      "category": "descriptive",
+      "source_quote": "the middle thing , we were thinking along the lines of maybe trying to figure out , like , the concept of whether they 're a tourist {pause} or {pause} whether they 're running an errand or something like that along those lines",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "Grad B listed the hidden variables devised for the middle layer: whether the person was on a tour, running an errand, or in a hurry.",
+      "category": "descriptive",
+      "source_quote": "the hidden variables {disfmarker} hair variables we came up with were whether someone was on a tour , running an errand , or whether they were in a hurry",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "The reasoning behind the 'hurry' variable was that someone in a hurry would be less likely to want to view things ('do Vista'), since, as Grad C put it, wanting to view things is inconsistent with being in a hurry.",
+      "category": "cause_rationale",
+      "source_quote": "Because {pause} if you want to view things you wouldn't be in a hurry .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "Grad B suggested that a hurried person might instead be using their stated destination merely as a navigational waypoint toward another place, rather than as the actual goal.",
+      "category": "descriptive",
+      "source_quote": "they might be more likely to be using the place that they want to go to as a {disfmarker} like a {pause} navigational point to go to another place .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "Grad B mentioned two more candidate middle-layer variables: whether the destination was the person's final destination, and whether the destination was closed.",
+      "category": "descriptive",
+      "source_quote": "Whether the destination was their final destination , whether the destination was closed .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f12",
+      "text": "Grad B noted that the belief-net was still a rough 'toy' implementation at that point, because the team did not yet know the necessary probabilities.",
+      "category": "descriptive",
+      "source_quote": "right now it 's still kind of {pause} in a toy {pause} version of it , because we didn't know the probabilities of",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "causal",
+      "text": "The decision to add a middle layer between the features and the output node was driven by the structural and practical problems of the flat, single-layer design (the exponential blow-up in probabilities, the difficulty of setting them up, and the risk of being handicapped by a later learning step).",
+      "fact_ids": ["f1", "f2", "f3", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "Uh . So then our next idea was to add a middle layer , right ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "causal",
+      "text": "The specific hidden variables chosen for the middle layer (tour / errand / hurry) were motivated by reasoning about how a hurried user would behave differently — less likely to want to view things, and more likely to treat the destination as a waypoint rather than an end goal.",
+      "fact_ids": ["f8", "f9", "f10"],
+      "evidence_mode": "explicit",
+      "source_quote": "because we were thinking uh , if they were in a hurry there 'd be less likely to",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"],
+  "corpus_defect_notes": []
+}

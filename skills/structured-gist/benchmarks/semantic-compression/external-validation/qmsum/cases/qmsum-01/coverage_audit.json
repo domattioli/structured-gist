@@ -1,0 +1,15 @@
+{
+  "case_id": "qmsum-01",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "Within native_evidence span:0 (and directly preceding the 'I will talk about our problems with the rephrasing...' fact), Grad C plays an audio recording described as 'an actual subject,' as an example for the talk's data section. The example shows that the subject unconsciously mimicked/matched the synthesized system's prosody when speaking to it, and that the system was slow or broke down. This is a plausible referent for the reference_answer's 'recordings of the on-going data collection,' and no fact in derived_gold.json captures it at all.",
+      "source_quote": "This was an actual , um , subject ? Ah . ... But they 're {disfmarker} they 're mimicking the synthesis when they speak to the computer , the {disfmarker} you can observe that all the time , they 're trying to match their prosody onto the machine . ... Oh really . Interesting . Oh , it 's pretty slow . ... The system breaking ."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["f8"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f8's text claims the X-schema slide was borrowed 'from one of Professor E's/Nancy's previous talks,' but its own source_quote only says 'I stole an X-schema from one of your talks I think' — within span:0 the addressee of 'your' is ambiguous and, from the immediate reaction ('Oh. I was like, where'd you get that? OK.' — Grad A), more plausibly Grad A than Professor E or Nancy. The Nancy attribution appears to be imported from a separate, later exchange in source.md ('so basically I'm gonna steal that from Nancy') that falls outside native_evidence span:0 and describes a different slide-reuse instance. f8's core claim (an X-schema slide was reused from someone else's talk) is supported; only the specific attribution exceeds the quote. Separately, f6's parenthetical '(mirror-neuron research)' characterizing 'monkeys in Italy' is a reasonable but uncited inference not stated in f6's own source_quote — flagged as a minor secondary concern, not listed as a hard unsupported unit since the fact's main claim is well-supported and the inference is corroborated by nearby context (f11's mirror-neuron quote) even if not explicitly equated in the source text. Otherwise the inventory's granularity and relation coverage look reasonable for this case; the corpus_defect_notes already correctly flag that the native evidence span doesn't cover the 'inference of user intentions'/'image schemas' portions of reference_answer."
+}

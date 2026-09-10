@@ -1,0 +1,15 @@
+{
+  "case_id": "qasper-05",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [
+    {
+      "unit_ids": ["f2"],
+      "issue": "f2 glues two sequential but independently meaningful steps into one fact: (a) tweets were filtered using the possible names referring to the target clubs, and (b) the stance of the filtered tweets was then annotated as Favor or Against. A reader could lose the filtering-method detail and still have the core annotation answer (Favor/Against), or vice versa, so per the protocol's own splitting test these read as two facts, not one ('firstly filtered... Then, we have annotated...' marks a clear procedural break, not a single bundled cause/rationale like the retry-loop example in the protocol)."
+    }
+  ],
+  "relation_omissions": [],
+  "notes": "Coverage against the three native-evidence paragraphs is otherwise complete and well-grounded: all five source_quotes verified verbatim, background/motivation sentences and future-work commentary are correctly excluded as out of scope for 'how were the tweets annotated', and no relation is missing since the facts function as independent descriptive/constraint statements rather than connective claims."
+}

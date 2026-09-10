@@ -1,0 +1,36 @@
+{
+  "case_id": "qmsum-15",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 3,
+    "f11": 3,
+    "f4": 2,
+    "f5": 3,
+    "f6": 2,
+    "f7": 1,
+    "f8": 2,
+    "f9": 3,
+    "f10": 2
+  },
+  "relation_weights": {
+    "r1": 2,
+    "r2": 2
+  },
+  "rationale": {
+    "f1": "States the energy-corridor/hydroelectric-sharing question, directly matching the reference summary's opening point on energy resources.",
+    "f2": "Records the government's noncommittal response on the energy corridor; relevant but adds little beyond confirming no firm commitment.",
+    "f3": "States the tourism infrastructure investment question, core to the reference summary's tourism point.",
+    "f11": "States the government's direct response committing to work on tourism support, the concrete answer the reference summary's tourism point is built on.",
+    "f4": "Sets up the green-economy criticism (fossil-fuel-heavy announcements); needed context for understanding the exchange but the government's actual response is the more load-bearing fact.",
+    "f5": "States that the government's current focus is the pandemic response over the green transition, matching the reference summary's green-economy point almost verbatim.",
+    "f6": "Elaborates the specific forestry-vs-pipeline funding comparison; detailed supporting evidence for the green-economy criticism, secondary to the core claim.",
+    "f7": "A non-answer response about ongoing forestry investment; tangential to the specific equity question and not reflected in the reference summary.",
+    "f8": "States the small-business rent complaint that sets up the exchange, relevant context for the small-business support point.",
+    "f9": "States the concrete rent-assistance program details, the direct answer matching the reference summary's small-business support point.",
+    "f10": "Describes a further small-business support topic (PPE access); relevant supporting detail, secondary to the core rent-support exchange.",
+    "r1": "Connects the specific forestry-funding comparison to the broader fossil-fuel-favoritism claim, useful supporting elaboration for the green-economy criticism.",
+    "r2": "Shows the rent-assistance program's real-world effectiveness depends on provincial enforcement, a relevant nuance for the small-business support summary."
+  }
+}

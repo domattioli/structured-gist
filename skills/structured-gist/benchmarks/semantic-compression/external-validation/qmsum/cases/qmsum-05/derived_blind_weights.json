@@ -1,0 +1,26 @@
+{
+  "case_id": "qmsum-05",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 3,
+    "f4": 2,
+    "f5": 2,
+    "f6": 3
+  },
+  "relation_weights": {
+    "r1": 2,
+    "r2": 3
+  },
+  "rationale": {
+    "f1": "Directly establishes that SmartKom only figures out intention by parsing without mode differentiation, the basis for the 'does not code for intentions as specified' part of what matters about SmartKom.",
+    "f2": "Establishes the discourse-history module as the system's whole memory, the core mechanism behind SmartKom's importance as a discourse model.",
+    "f3": "States the discourse history's anaphora-resolution and gap-filling functions, a headline capability that is the crux of SmartKom's value.",
+    "f4": "Adds mechanical detail on how information is maintained turn-by-turn; useful but secondary to the core memory/anaphora claims.",
+    "f5": "Describes gesture/screen coordination, a real capability but a secondary one relative to the anaphora/query capabilities most central to the answer.",
+    "f6": "States the queryable interface (e.g., checking whether a topic was discussed earlier), directly matching the 'detection of features through querying' capability that defines SmartKom's importance.",
+    "r1": "Shows how intention-parsing output feeds the discourse history, useful structural context for how the memory gets populated.",
+    "r2": "Ties the memory-storage mechanism to the concrete capabilities (anaphora resolution, gap-filling, querying) that constitute the actual answer to why SmartKom matters."
+  }
+}

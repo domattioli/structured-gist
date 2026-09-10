@@ -1,0 +1,20 @@
+{
+  "case_id": "qmsum-17",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 1,
+    "f2": 3,
+    "f3": 3,
+    "f4": 3
+  },
+  "relation_weights": {
+    "r1": 3
+  },
+  "rationale": {
+    "f1": "Describes what the Kryptonite option does functionally, not its cost; background context rather than an answer to the cost question.",
+    "f2": "States directly that the actual cost was unknown, a core component of the answer to the cost query.",
+    "f3": "States that web research found no actual cost figures, only relative comparisons, matching the reference summary's core claim.",
+    "f4": "States the team's fallback conclusion (cheap in bulk, chip is priciest part, not a real concern), directly matching the reference summary's conclusion.",
+    "r1": "Ties the absence of real cost data to the team's fallback reasoning about bulk pricing, capturing the full logical chain the reference summary's answer depends on."
+  }
+}

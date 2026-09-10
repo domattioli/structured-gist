@@ -1,0 +1,42 @@
+{
+  "case_id": "qasper-04",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The authors use two adversarial sets, AddSent and AddOneSent, to evaluate the robustness to noise of MRC models.",
+      "category": "descriptive",
+      "source_quote": "we also use two of its adversarial sets, namely AddSent and AddOneSent BIBREF6 , to evaluate the robustness to noise of MRC models.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:31"}]
+    },
+    {
+      "id": "f2",
+      "text": "The passages in the adversarial sets contain misleading sentences that are aimed at distracting MRC models.",
+      "category": "descriptive",
+      "source_quote": "The passages in the adversarial sets contain misleading sentences, which are aimed at distracting MRC models.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:31"}]
+    },
+    {
+      "id": "f3",
+      "text": "The authors evaluate KAR's performance on the adversarial sets in addition to the development and test sets.",
+      "category": "descriptive",
+      "source_quote": "we not only evaluate the performance of KAR on the development set and the test set, but also do this on the adversarial sets.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:33"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "cause_rationale",
+      "text": "The adversarial sets serve as a test of robustness to noise specifically because their passages contain misleading sentences designed to distract the model.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "explicit",
+      "source_quote": "The passages in the adversarial sets contain misleading sentences, which are aimed at distracting MRC models.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:31"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

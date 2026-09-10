@@ -1,0 +1,13 @@
+{
+  "case_id": "qasper-10",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 1, "f3": 3, "f4": 1, "f5": 1},
+  "relation_weights": {},
+  "rationale": {
+    "f1": "Gives the core size figures (353 conversations, 40 speakers, role breakdown), directly answering 'how big is their created dataset' and matching the reference answer.",
+    "f2": "Describes speaker age, gender, and ethnicity distribution, which characterizes composition/diversity rather than the size the question asks about.",
+    "f3": "Adds further size dimensions (11 topics, 9 symptoms, 41 hours total), the total-hours figure in particular being essential magnitude information for 'how big'.",
+    "f4": "Describes the first stage of building templates and expression pools for the separate simulated training dataset, a construction-method detail that does not address the size of the created dataset.",
+    "f5": "Describes the second construction stage (the generation framework) for the simulated training dataset, likewise a methodology detail unrelated to dataset size."
+  }
+}

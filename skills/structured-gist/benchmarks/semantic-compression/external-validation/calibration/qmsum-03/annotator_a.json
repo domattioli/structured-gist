@@ -1,0 +1,127 @@
+{
+  "case_id": "qmsum-03",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Professor F reasoned that keeping around five or six transcribers on staff at a time is a small enough number to stay flexible either way, whereas hiring twelve could create a problem later since that many could not be sustained indefinitely.",
+      "category": "decision",
+      "source_quote": "if we hire twelve , then we could , you know , run into a problem later . I mean , we also just couldn't sustain that forever . But {disfmarker} but , um {disfmarker} for all sorts of reasons {disfmarker} but if we hire f you know , f we have five on staff {disfmarker} five or six on staff at any given time , then {vocalsound} it 's a small enough number so we can be flexible either way .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Postdoc A said the automatic pre-segmentations are correct so much of the time that they are an enormous time saver for the transcribers.",
+      "category": "outcome",
+      "source_quote": "but actually i it 's so correct for so much of the time , that it 's an enormous time saver",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "PhD D reported that Jane prepared, and PhD D has been adding to, a spreadsheet recording each collected meeting's start time, date, old and new meeting name, number of speakers, duration, comments, and transcription status.",
+      "category": "descriptive",
+      "source_quote": "Jane also s prepared a {disfmarker} um , started getting all of the {disfmarker} the meetings organized , so she prepared a {disfmarker} {vocalsound} a spreadsheet , which I spent the last couple of days adding to . So I went through all of the data that we have collected so far , and have been putting it into , uh , a spreadsheet {vocalsound} with start time , the date , the old meeting name , the new meeting name , the number of speakers , the duration of the meeting , comments , you know , what its transcription status is , all that kind of stuff .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "The plan is to export this tracking spreadsheet as HTML and put it on the Meeting Recorder web page so people can stay updated on meeting/transcription status.",
+      "category": "next_action",
+      "source_quote": "the idea is that we can take this and then export it as HTML and put it on the Meeting Recorder web page so we can keep people updated about what 's going on .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "PhD D still needed more information from Jane to fill gaps in the spreadsheet before it would be complete.",
+      "category": "unresolved_question",
+      "source_quote": "I 've gotta get some more information from Jane cuz I have some {disfmarker} some gaps here that I need to get her to fill in",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "As of Monday the fourteenth, the group had collected a total of sixty-two hours of meetings, with an average of six speakers per meeting.",
+      "category": "descriptive",
+      "source_quote": "as of Monday , the fourteenth , um , we 've had a total number of meeting sixty - two hours of meetings that we have collected . And , um {disfmarker} Uh , some other interesting things , average number of speakers per meeting is six .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "The spreadsheet's status field will show, for each meeting, whether it is at IBM, at ICSI, completed, or excluded, with a comments field to explain exclusions.",
+      "category": "descriptive",
+      "source_quote": "it 'll also list , uh , like under the status , if it 's at IBM or if it 's at ICSI , uh , or if it 's completed or which ones we 're excluding and {disfmarker} and there 's a place for comments , so we can , {vocalsound} um , say why we 're excluding things",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "Postdoc A said she is still doing final-pass editing of the transcripts (converting to the master channelized-file format, cleaning up places the transcriber was uncertain, and spot-checking), and suggested it would make sense to wait until that is done before seeking participant approval for distribution.",
+      "category": "unresolved_question",
+      "source_quote": "I still am doing some {disfmarker} the final - pass editing , trying to convert it over to the master file as the {disfmarker} being the channelized version and it 's {disfmarker} Yeah , it seems like I get into that a certain way and then something else intervenes {comment} and I have to stop . Cleaning up the things like the , uh , uh , places where the transcriber was uncertain , and {disfmarker} and doing spot - checking here and there . So , um , uh , I guess it would make sense to wait until th that 's done",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "Professor F noted that the group has a DARPA meeting scheduled for the middle of July.",
+      "category": "descriptive",
+      "source_quote": "we are gonna have this DARPA {pause} meeting in the middle of July ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "Professor F said the goal is to be able to say that a subset of the transcribed data is available right now.",
+      "category": "next_action",
+      "source_quote": "Right . So we can s we {disfmarker} we wanna be able to say \" here is a subset that is available right now \"",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "Professor F specified that this available subset needs to have cleared the legal issues (participant approval process).",
+      "category": "constraint",
+      "source_quote": "and that 's has been through the legal issues and so forth .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f12",
+      "text": "Professor F set the target for having this legally-cleared subset ready as before July.",
+      "category": "constraint",
+      "source_quote": "So , by {disfmarker} before July .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f13",
+      "text": "PhD C argued that although editing of the transcripts would continue (fixing errors as they are found), it would not change the substantive content of the meetings.",
+      "category": "descriptive",
+      "source_quote": "the editing will continue . Presumably if {disfmarker} if s errors are found , they will be fixed , but they won't change the {disfmarker} the content of the meetings .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f14",
+      "text": "Postdoc A said that if a participant relies on the transcript itself to judge what they said (including whether it was slanderous), the transcript needs to be more accurate than it would if the participant could be counted on to re-listen to the actual meeting recording.",
+      "category": "unresolved_question",
+      "source_quote": "It 's just , uh , a question of , {vocalsound} uh , if {disfmarker} if the person is using the transcript as the way of them judging what they said and whether it was slanderous , {vocalsound} then it seems like it 's {disfmarker} it 's {disfmarker} i it needs to be more correct than if we could count on them re - listening to the meeting .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "Facts f9-f12 together state a single milestone plan: because the DARPA meeting falls in the middle of July, the group aims to be able to announce that a legally-cleared subset of transcribed data is available before then.",
+      "fact_ids": ["f9", "f10", "f11", "f12"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "condition",
+      "text": "Postdoc A's preference to wait until final-pass editing is fully done before seeking participant approval is in tension with Professor F's push to have a cleared subset ready before the July milestone.",
+      "fact_ids": ["f8", "f10"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12", "f13", "f14"],
+  "corpus_defect_notes": [
+    "The native reference_answer for this case is: 'The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised.' This does not match either the question ('What was the status of transcription?') or the provided native_evidence span (span:0), which is entirely about ICSI Meeting Recorder transcription/staffing status, a meeting-tracking spreadsheet, and participant-approval/legal-clearance planning for a July DARPA meeting. I read the full source.md for this case (an ICSI meeting about speech-recognition front-end experiments and transcription logistics, meeting id Bmr023) and found no mention anywhere of a 'SmartKom demo' being presented to the institute. This looks like a reference_answer that belongs to a different case/meeting (SmartKom is discussed in a different ICSI meeting transcript, not this one) rather than a problem with the evidence provided for this case."
+  ]
+}

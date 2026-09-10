@@ -1,0 +1,38 @@
+{
+  "case_id": "hotpotqa-06",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Scenes from the video game Postal 2 appear in the music video for The Black Eyed Peas single \"Where Is the Love?\"",
+      "category": "descriptive",
+      "source_quote": "Scenes of the game can be seen in the music video of The Black Eyed Peas single \"Where Is the Love?\"",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Postal 2::sent3"}]
+    },
+    {
+      "id": "f2",
+      "text": "\"Where Is the Love?\" was released in June 2003 as the lead single from The Black Eyed Peas' third album, \"Elephunk.\"",
+      "category": "descriptive",
+      "source_quote": "It was released in June 2003 as the lead single from their third album, \"Elephunk\".",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Where Is the Love?::sent2"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "coreference_bridge",
+      "text": "The song whose music video features scenes from Postal 2 is the same song, \"Where Is the Love?,\" that was released in June 2003.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [
+        {"dataset": "hotpotqa", "native_evidence_id": "Postal 2::sent3"},
+        {"dataset": "hotpotqa", "native_evidence_id": "Where Is the Love?::sent2"}
+      ]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}
