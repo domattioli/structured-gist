@@ -338,12 +338,14 @@ write-up: `WORDING_FIDELITY_FINDINGS.md`.
 
 **Findability** (`scoring/findability.py`, "Evidence Access Cost")
 asks whether structured-gist's hierarchy makes already-preserved evidence
-easier to reach than the same evidence in flat, original-order prose,
-holding answer content constant — a content-matched baseline built from
-this case's own retained facts/relations, not raw source.md vs. gist (that
-would mostly measure deletion). Full write-up, including a documented
-degenerate-baseline failure mode found and fixed before scoring:
-`FINDABILITY_FINDINGS.md`.
+easier to reach than the same evidence in flat, original-order prose. The
+headline metric compares the identical set of semantic units a given
+rendering actually retained — source order vs. gist order over that exact
+set — not raw source.md vs. gist (that would mostly measure deletion) and
+not a case-wide baseline of all gold content (that still let compression
+leak into the comparison; see the findings doc). Full write-up, including
+two documented baseline-confound failure modes found and fixed before the
+corrected numbers were finalized: `FINDABILITY_FINDINGS.md`.
 
 ## Re-running
 
