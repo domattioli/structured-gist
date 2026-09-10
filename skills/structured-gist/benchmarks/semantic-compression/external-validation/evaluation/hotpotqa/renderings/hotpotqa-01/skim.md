@@ -1,0 +1,20 @@
+- **Bézout domain**
+  - integral domain (a form of Prüfer domain) where the sum of two principal ideals is itself principal
+- **Splitting of prime ideals in Galois extensions**
+  - interplay between a Galois group and prime-ideal factorization, a core topic in algebraic number theory
+- **Neo-libertarianism**
+  - political philosophy blending libertarian and neoconservative principles
+- **Japanese aesthetics**
+  - ancient Japanese ideals of beauty — wabi, sabi, yūgen
+- **American exceptionalism**
+  - ideology that the US is uniquely exceptional in democracy and personal freedom
+- **Massoud Foundation**
+  - Afghan non-profit preserving Ahmad Shah Massoud's ideals
+- **Hong Kong Democratic Foundation**
+  - Hong Kong public policy think tank founded in 1989
+- **Islamic Foundation Bangladesh**
+  - Bangladeshi government body disseminating Islamic values
+- **Mahatma Gandhi National Foundation**
+  - Kerala foundation propagating Gandhi's ideals and memory
+- **Cognitive dissonance**
+  - psychological discomfort from holding contradictory beliefs

@@ -1,0 +1,176 @@
+- **Order of business**
+  - **Housekeeping**
+    - 20th meeting of the Special Committee on the COVID-19 Pandemic; reminder that in-person members shouldn't also be on video conference, and video participants must use the language-matched audio channel
+  - **Ministerial announcements**
+    - none today
+  - **Document tabling**
+    - i. Blair tables the 2019 annual report on the RCMP's use of law-enforcement justification provisions (Criminal Code ss. 25), covering the nature of investigations where they were used
+    - ii. Sajjan tables the 2018-19 progress report on Canada's national action plan implementing UN Security Council resolutions on women, peace and security
+  - **Petitions presented** (chair reminds members to be concise)
+    - a. May — an e-petition on pollinator decline from neonicotinoid pesticides (EU has already acted), calling for a precautionary ban; a second petition on southern resident killer whales, calling for boat-free safety zones, tourism restrictions, and stronger enforcement
+    - b. Genuis — support for Bill S-204 against forced organ harvesting/trafficking abroad, noting a decade of cross-party bills on the issue and suggesting government could bring forward its own bill to speed things up
+    - c. Cannings — support for Motion M-1, a "green new deal," calling for bold climate action alongside socio-economic/racial equity, ending fossil-fuel subsidies, closing offshore tax havens, and green-transition jobs
+    - d. Johns — e-petition (5,183 signatures) for a guaranteed livable basic income, timed near the anniversary of the National Inquiry into Missing and Murdered Indigenous Women and Girls, which made a similar call
+    - e. Manly — halt Coastal GasLink construction on Wet'suwet'en territory, order the RCMP to stand down its exclusion zone, hold nation-to-nation talks (noted as already happening, which he commends), and prioritize the UN Declaration on the Rights of Indigenous Peoples
+    - f. Lamoureux — on behalf of Winnipeg North constituents, asks Canada/MPs to be attentive to Guyana's contested March presidential election and to advocate for democracy there
+  - **Member statements** (~14 MPs, mostly local COVID-response tributes)
+    - i. Lefebvre — thanks Sudbury's workers/innovators (ProStitch/King Sportswear masks, Crosscut hand sanitizer, SNOLAB ventilator work, Vale's $1M seed capital)
+    - ii. Dalton — describes Pitt Meadows' history/geography and a distanced community "parade" cheering essential workers
+    - iii. Kelloway — highlights individual Cape Breton–Canso community-support acts (iPad delivery to seniors, meal delivery, youth outreach, flower deliveries)
+    - iv. Brébeuf (BQ) — calls for a commission of inquiry into police brutality against Indigenous people (echoing Romeo Saganash), citing unimplemented Viens Commission and MMIWG recommendations
+    - v. MacKinnon — congratulates Gatineau-area high school graduates missing traditional ceremonies
+    - vi. Morantz — highlights the Bruce Oake Recovery Centre construction, built in memory of an overdose death, amid Canada's addictions crisis
+    - vii. Jowhari — thanks Richmond Hill charities/care centres for pandemic donations and services
+    - viii. Lalonde — highlights Orléans-area grade-12 graduates and community gestures honoring them
+    - ix. Vis — highlights rural/Indigenous internet-access gaps worsened by remote work/school, calls for a federal connectivity action plan
+    - x. McLeod — celebrates Canada's first Equator Prize (UN) for the Thaidene Nëné Indigenous-led protected area, thanks past environment minister for a $7.9M commitment
+    - xi. Falk — criticizes only 4 hours allotted to scrutinize $87B in spending as inadequate parliamentary oversight
+    - xii. Godin — tribute to seniors, students, and essential workers in Portneuf–Jacques-Cartier
+    - xiii. Gazan — honors Justice 4 Black Lives Winnipeg, condemns police brutality and systemic racism, links Indigenous and Black liberation
+    - xiv. DeBellefeuille (BQ) — accuses the PM of "locking down" Parliament to avoid accountability, withholding an economic update and refusing a first ministers' meeting on health transfers
+    - xv. Uppal — thanks Edmonton Mill Woods' multicultural/faith organizations for meal and grocery delivery to seniors, families, and truckers
+    - xvi. Fonseca — marks Portugal Day/Portuguese Heritage Month, thanks the ~500,000-strong Luso-Canadian community for resilience during the pandemic
+
+- **Auditor General funding fight**
+  - **Scheer's line of questioning**
+    - i. accuses the PM of avoiding accountability (no budget, no economic update, limiting House sittings); asks whether the AG will get additional funding
+    - ii. cites the AG's own statement that she can now complete only ~14 performance audits/year versus ~27 a decade ago, despite government spending nearly doubling
+    - iii. cites interim AG John Wiersema's past statement that earlier administrative efficiencies (not funding cuts) were the office's own choice and didn't affect its mandate — implying today's shortfall is different and government-caused
+    - iv. Trudeau repeatedly redirects to the day's disability/CERB/wage-subsidy bill and a proposed debate/vote, without ever answering "yes or no"
+  - **Government's defense**
+    - Trudeau/Guilbeault repeat that the government added the equivalent of 38 new full-time staff to the AG's office in 2018-19, contrasted with 60 positions cut under the prior Harper government (a comparison Scheer calls "revisionist history," countering that 2015 was the only election Trudeau won more votes than the Conservatives)
+  - **Kelly's follow-up (separate later exchange)**
+    - i. congratulates the new Auditor General, then repeats the funding question directly; Guilbeault initially discusses wanting to "work with her" rather than answering
+    - ii. disputes the "60 positions cut" framing, saying committee transcripts show the AG's office chose to reduce its own budget, not that the Conservatives cut it
+    - iii. notes the AG has already cut/stopped performance audits for lack of funds, and that the House finance committee (with Liberal backbench support) unanimously passed a motion to fully fund her office the day before
+    - iv. Guilbeault switches briefly to French "in case it's clearer," repeats the 38-staff figure and a general "if she identifies a need, we'll work with her" pledge, never committing to the specific ask
+  - **Point of order**
+    - Kelly later invokes Standing Orders to suggest the PM "misled the House," citing public-accounts-committee transcripts, but the Acting Chair rules this is turning into debate and moves on
+
+- **Disability-support bill and CERB flexibility**
+  - **Blanchet's (BQ) push to split the bill**
+    - i. frames the bill as "chocolate pudding containing cod liver oil" — supports the disability-aid part but not the rest — and explains a bill can procedurally be divided and voted on in parts
+    - ii. repeatedly asks Trudeau to confirm he'll split it so the disability portion passes immediately; Trudeau's "all or some of the measures" answer is read by Blanchet as tacit confirmation, but Trudeau never explicitly confirms a split
+    - iii. separately criticizes the government's proposed CERB changes as overly coercive, arguing the wage subsidy's lack of a work incentive already undermined that program, and insists the bill doesn't need "eight months," just a proper committee process with amendments — contrasting this with what he calls "rubber-stamping"
+    - iv. references the October 2019 election producing a minority government as grounds the government shouldn't act like it holds a majority
+    - v. Trudeau cites providing the bill text to opposition four days early and "hours" of amendment discussions as evidence of good-faith process, given pandemic urgency
+  - **Singh's (NDP) push**
+    - i. presses repeatedly (5 times) for a direct yes/no on extending CERB for families with no work to return to; cites a specific constituent ("Don from Burnaby," an arts worker) fearing CERB's end-of-month expiry; Trudeau avoids a direct answer each time, citing "ongoing discussions" and redirecting to the day's three proposed measures (disability support, wage-subsidy expansion, CERB flexibility)
+    - ii. flags that the disability-support payment, based on the disability tax credit, will reach only ~40% of Canadians with disabilities, excluding many veterans and CPP/disability-payment recipients — often the poorest; Trudeau claims the measure covers "100% of Canadians who receive the disability tax credit" without addressing the excluded 60%, and accuses the NDP of blocking debate/passage entirely by not allowing a vote
+    - iii. counters that a tax-credit approach is fundamentally the wrong mechanism, and states the NDP's conditions for support: extend CERB, remove penalties on those in need, and help all disabled Canadians — Trudeau again avoids a direct commitment, framing the ask as "playing political games"
+  - **Government's same-day bill**
+    - covers three elements: a one-time $600 disability-support payment (reaching an estimated 1.25 million people via the disability tax credit), CERB eligibility flexibility (four-week windows shortened to two weeks), and expanded wage-subsidy access for more businesses
+
+- **CERB extension pressure (multiple ridings)**
+  - **Angus (NDP)**
+    - raises a travel-agency owner with no work to return to, hitting the CERB "wall" in four weeks; separately criticizes proposed penalty provisions as "talking about jailing people" and invokes a 51-year-old bartender with no job to return to, asking a direct yes/no on CERB's July continuation; Qualtrough and Fortier each answer with general "we'll continue to support Canadians" language, no commitment
+  - **Bragdon, Trudel, Blanchette-Joncas (regional/seasonal focus)**
+    - i. Blanchette-Joncas: Quebec tourism recovery outlook is bleak; asks if CERB will extend beyond 16 weeks for tourism workers; Qualtrough (tired, switching to English) promises "news soon" without a date
+    - ii. notes seasonal industries don't qualify for the wage subsidy under current criteria, asks for CERB to include an employment incentive instead of ending outright; Qualtrough repeats the "don't disincentivize work" framing without committing
+    - iii. Trudel: cites a closed Longueuil café and a restaurant owner uncertain of reopening capacity/hours, asks directly "will CERB be extended on July 5?"; Qualtrough answers only "we will be there for Canadian workers in July," no specifics; Joly separately points to CED regional funding for restaurants
+    - iv. Bragdon: separately raises a New Brunswick potato farmer sitting on unsold surplus crop a month after a $50M food-surplus purchase program was announced, with no funds yet delivered; Mendicino cites "hundreds of millions" for farmers generally and migrant-worker support, without addressing the delay
+
+- **Economic transparency demand**
+  - **Rayes (CPC)**
+    - i. repeatedly presses Morneau for an economic update by end of June, noting most provinces are doing so; Morneau defers, citing the importance of "transparency" without committing to a date
+    - ii. notes the Parliamentary Budget Officer is independently calling for an update; Morneau repeats a "daily information" framing instead of a formal update
+    - iii. accuses the government of ignoring experts/opposition/provinces when their advice is inconvenient ("terrible twos" analogy), while listening to scientists when convenient
+    - iv. separately raises that a month-old promise to expand CEBA eligibility to self-employed/dividend-paying businesses still isn't implemented — officials confirmed on a June 2 technical call that information wouldn't be available for "several weeks" more; Fortier (Minister of Middle Class Prosperity) cites expanded eligibility to businesses with payrolls under $20,000 and says financial institutions are adapting, without a fix date
+
+- **Business-relief rollout**
+  - **PPE shortages (Allison)**
+    - i. cites Global News reporting on Canada's struggle to secure reliable PPE: 10 million substandard N95 masks that couldn't be used, masks returned to suppliers, moldy COVID-test swabs received, empty planes that should have carried PPE, and under 5% of a total glove order received
+    - ii. Bains cites over 700 Canadian companies mobilized to retool/rescale for domestic PPE production as part of a made-in-Canada initiative
+    - iii. Anand disputes some specifics as "tainted with inaccuracies" — says Air Canada reimbursed the government for an empty-cargo flight, the government won't pay for unused masks, and over half of received face shields were domestically produced
+  - **Double-standard question (Allison)**
+    - contrasts strict public-health enforcement on ordinary Canadians (fines for park visits, restaurant patio fines, wedding restrictions, Skype goodbyes to dying relatives) against the PM's son attending a large gathering without distancing; Hajdu responds by pivoting to anti-racism solidarity and deferring to local public-health guidance, not addressing the comparison directly
+  - **Energy-sector financing (Cooper)**
+    - i. cites Morneau's March 25 promise of help "within hours, possibly days" for the energy sector; notes 77 days later, no energy company has received EDC, BDC, or LEEFF financing
+    - ii. cites the Canadian Association of Petroleum Producers (frustration with delay) and Saskatchewan's energy minister ("gaping hole" in support); notes eligibility criteria for EDC/BDC weren't even finalized 54 days after the April 17 announcement, confirmed by BDC/EDC officials at finance committee the day prior
+    - iii. mocks a BDC website feature letting companies "sign up for email updates" as inadequate relief after 77 days
+    - iv. O'Regan cites support from the Business Council of Alberta and Alberta's finance minister for the LEEFF program, frames the sector as facing dual crises (COVID plus a Saudi-Russia price war), and reiterates liquidity measures for small/medium players (85% of sector jobs) and larger players via LEEFF, without a specific date for disbursement
+  - **CEBA / sole-proprietor access (Bragdon)**
+    - raises constituents in business nearly 30 years, with hundreds of HST returns filed, still unable to access CEBA because they use personal rather than business chequing accounts; Joly points to Minister Ng's ongoing work and regional development agencies as a funding backstop, without a specific fix date
+
+- **Quebec-specific asks**
+  - **Health transfers (Ste-Marie, BQ)**
+    - i. Quebec estimates ~$3B in additional COVID health costs; federal transfer is ~$115M, under 4% of that; presses whether the government recognizes this as insufficient
+    - ii. Hajdu cites an initial $500M transfer package plus ongoing $40B in existing transfers, without directly addressing the gap or committing to more
+    - iii. Ste-Marie reframes the issue as "needs," not "squabbling," cites federal health-transfer disinvestment as the root cause, and presses for a commitment to a first ministers' meeting with Quebec/provinces on funding by September at the latest, ahead of a possible second wave; no direct commitment given
+  - **Military in long-term care (Brunelle-Duceppe, BQ)**
+    - i. confirms via La Presse reporting that ~500 soldiers remain in Quebec long-term care homes at Quebec's request; Blair confirms the request and ongoing conversation with Quebec's counterpart minister, noting other forms of assistance (e.g., Canadian Red Cross) could supplement
+    - ii. presses for a firm extension given the mission's Friday end date and the urgency of training replacement staff; Blair commits Canadian Armed Forces support through mid-September, working with Quebec and the Red Cross
+    - iii. Brunelle-Duceppe notes Quebec funds 23% of the military's budget and has lost 5,000+ residents (90% in care homes), framing continued support as owed, not negotiated
+  - **Regional economic development (Martel, CPC)**
+    - i. thanks the government for progress on a consular case (André Gauthier) before pivoting to economic asks
+    - ii. criticizes inflexible program design favoring Montreal SMEs over regional needs; Joly cites $71M in additional Quebec regional funding (announced that morning on Radio-Canada) and offers to work with him via the CFDC in his region — dismissed by Martel as a "canned speech"
+    - iii. cites a Université de Trois-Rivières survey ranking Saguenay–Lac-Saint-Jean as the most economically affected region, listing forestry, aluminum, GNL Québec, tourism, the Port of Saguenay, Davie Canada, a military base, and a tax centre as regional assets needing support
+    - iv. separately raises sustainable forestry's role in climate strategy and asks who will defend forestry workers amid existing sector problems plus COVID; Joly defers to working with the Minister of Natural Resources
+
+- **Social-equity questions**
+  - **Disability payment reach (May, GP)**
+    - i. flags the draft bill as "unacceptable" to her caucus, previewing that her questions target its troublesome sections
+    - ii. notes the $600 one-time disability payment, structured via the disability tax credit, will reach only ~40% of disabled Canadians (a figure she credits to Singh raising it in Question Period); asks what other measures are under consideration for the rest
+    - iii. Qualtrough lists complementary measures — CERB access for precariously employed disabled people, a $750/month student top-up, CCB payments for families with disabled children, the GST credit, and provincial-disability-support letters — without directly committing to closing the coverage gap
+  - **CERB penalty provisions (May)**
+    - i. challenges a proposed "reasonableness" test (bill's proposed s. 12.1) that could subject people refusing work to jail time/fines, calling it subjective and pointing to a Hamilton medical officer's report of a COVID spike among young transit commuters as evidence "reasonable" is not a simple bar
+    - ii. calls the approach punitive rather than incentivizing, suggests the government has been unduly swayed by Conservative "fraud" rhetoric, and proposes a sliding-scale CERB/wage-subsidy transition instead of penalties
+    - iii. Qualtrough frames "reasonableness" as capturing individual circumstances (e.g., immunocompromised workers unable to take transit), says the measure targets intentional/criminal fraud (e.g., targeting seniors) flagged by MPs themselves, not honest mistakes, but (citing parliamentary privilege) declines to discuss the not-yet-introduced bill's specific text further
+  - **Anti-Black racism and youth (Chen)**
+    - i. invokes George Floyd's death and Viola Desmond's legacy to frame anti-Black racism as institutionalized in Canada too, and links it to anti-Asian sentiment during the pandemic
+    - ii. cites StatCan data on Black youth being pushed into the justice system, asks what's being done for Black youth specifically
+    - iii. Chagger cites 2016 census figures (1.2M Black Canadians, over a quarter under 15), a youth-created national youth policy, a 56-project Black-Canadian-youth support program (leadership, civic engagement, cultural promotion), and pandemic-specific youth/student employment measures, with outreach to community organizations serving Black youth
+  - **Child care (Mathyssen, NDP)**
+    - i. notes many child-care providers face reduced capacity under COVID and argues universal, publicly funded child care is needed to restart the economy; asks for legislated federal funding
+    - ii. Hussen cites 40,000 spaces created since 2015 and a commitment to 250,000 more before/after-school spaces
+    - iii. Mathyssen counters this isn't universal child care, notes women bore most pandemic job losses and added care burden, and that 26 years of Liberal promises on national child care remain unfulfilled; separately challenges new legislation she frames as threatening jail time/fines for parents who can't find child care
+    - iv. Hussen reiterates the $7.5B/11-year investment commitment and a planned "early learning and child care secretariat," without addressing the universality critique or the penalty-provision question directly
+  - **GBA+ / maternity-benefit gap (Sahota, CPC)**
+    - i. raises pregnant/postpartum women being denied EI benefits or told to return to work despite gaps in coverage; Qualtrough says she's "working hard" on a fix "very soon," referencing a prior fix for fish harvesters as precedent, without details
+    - ii. presses (repeated 5 times across the exchange) on whether a Gender-Based Analysis Plus (GBA+) was conducted on COVID relief programs before rollout, given the PM's stated commitment to rigorous GBA+ for all legislation; Qualtrough never confirms or denies one was conducted, repeating that women's needs were "taken into account from the beginning" and citing benefits like the GST credit and CCB payment reaching women
+    - iii. Sahota accuses the minister of dodging responsibility; Qualtrough claims to "take responsibility" while citing statistics on women helped, without answering the GBA+ question even in her final (5-second) answer
+  - **Gay/MSM blood-donation ban (Garrison, NDP)**
+    - i. during National Blood Donor Week, argues behavior-based screening (used in 17+ other countries) is scientifically superior to the current identity-based deferral, and notes the Liberals promised to end the ban in two election campaigns; Duclos (Treasury Board President, answering for Health) offers general anti-discrimination sentiment without lifting the ban
+    - ii. notes he's personally recruiting allies to donate blood in place of excluded gay men, and stresses urgent need for convalescent plasma donations for COVID research specifically, rejected under the current ban; Duclos again cites "progress" without action
+    - iii. recalls tabling a motion six years earlier (five health ministers ago) calling for the ban's end, with preconditions supposedly meant to be resolved before COVID hit; asks for unanimous consent to fast-track his new motion M-41 given apparent cross-party support; Duclos responds with general anti-discrimination language, no commitment to M-41 or a ban repeal date
+
+- **Public-safety/justice items**
+  - **Parole Board video access for victims (Carrie, CPC)**
+    - i. recalls an April 29 exchange where Minister Blair acknowledged a constituent (Lisa Freeman) couldn't join her father's murderer's parole hearing, and promised victims could join by phone/video going forward; asks how many hearings have used the digital format for victims since
+    - ii. Mendicino repeatedly says the number will be "provided in due course" without giving it across multiple follow-ups
+    - iii. cites the Parole Board's own website distinguishing that staff/inmates get video conference while victims are explicitly limited to telephone participation; presses why the discrepancy exists, and later accuses the government of telling Canadians something untrue about equal access
+    - iv. Mendicino defends the process as "fair" and citing "technology and innovations introduced by the Board," without directly resolving the phone-vs-video discrepancy or providing hearing counts
+  - **Firearms ban vs. farm funding (Bragdon, CPC)**
+    - i. cites the May 1 order-in-council banning 1,500 firearms, notes reports of further additions including common hunting rifles/shotguns, and frames hunters/sport shooters/dealers as among the most vetted members of society
+    - ii. Mendicino defends the policy as targeting guns whose "one objective is to kill people," pledging continued community-safety measures
+    - iii. Bragdon proposes redirecting the estimated ~$250M buyback cost to agricultural support instead; Mendicino reiterates the public-safety rationale and separately cites "hundreds of millions" already committed to farmers, without addressing the buyback-reallocation proposal directly
+
+- **Sector and case-specific support**
+  - **Tourism (Cannings, NDP)**
+    - i. describes tourism in his riding as "burned to the ground" after a promising pre-pandemic outlook, with over half of local tourism businesses facing imminent insolvency, many too small/seasonal to qualify for existing programs; asks for direct, timely support beyond ad-campaign funding
+    - ii. Joly cites the extended wage subsidy (to end of August), CEBA loans, commercial rent relief, and a regional-development-agency backstop (Western Economic Diversification in his riding), inviting him to bring specific business cases to her
+  - **Wine industry excise tax (Cannings)**
+    - flags that the wine industry's excise-tax exemption (key to the sector's growth) may soon be ruled non-compliant with trade agreements, and that industry has proposed a trade-legal replacement (the wine growers' value-added program) that Morneau has known about "for months"; Morneau promises only to "come back... with an update," no commitment given
+  - **Veterans' reimbursement delays (Chiu, CPC)**
+    - notes medical-provider costs rising faster than Veterans Affairs' rate-scale adjustments (up to a year lag), with no retroactive reimbursement allowed; MacAulay cites a general $10B investment in veterans' supports (pension for life, PTSD/chronic-pain centres of excellence) without addressing the retroactivity gap
+  - **Seniors' RRIF relief (Chiu)**
+    - notes constituents find seniors' support inadequate amid inflation from pandemic spending, and cites an opposition proposal for a one-time tax-free RRSP/RRIF withdrawal the government hasn't acted on; Schulte cites a 25% reduction in 2020 minimum RRIF withdrawals plus direct financial support, without addressing the specific RRSP/RRIF withdrawal proposal
+  - **Consular case (Martel, CPC)**
+    - presses for the repatriation of André Gauthier, stranded in the UAE without a passport awaiting civil-lawsuit resolution; Garneau confirms the file is "active" via consular services, no timeline given
+  - **EI sickness benefits gap (Martel)**
+    - notes citizens who fell ill before March 15 are denied both CERB (didn't lose jobs due to COVID) and regular EI (unable to work), with some also facing delayed surgeries; Qualtrough cites a commitment to extend EI sickness benefits from 15 to 26 weeks as addressing this, in progress
+  - **China/Hong Kong and COVID-origin investigation (Chiu)**
+    - i. cites Hong Kong's ~9,000 arrests in the past year (proportionally equivalent to 42,000 in Canada) amid Beijing's new national-security law, and asks whether Canada has begun preparing a Magnitsky-sanctions list; Garneau cites "deep concern" among Canada and allies and defends Hong Kong's "one country, two systems" autonomy, without confirming any sanctions preparation
+    - ii. notes China's embassy has "deplored, rejected and condemned" Canada's stated concerns, and presses on what conditions would trigger sanctions if incarcerations continue; Garneau calls for continued "peaceful and meaningful dialogue," no conditions specified
+    - iii. in a final 22-second exchange, cites China's COVID-19 statements and two detained Canadians, asking when Canada will call for a stronger, independent international investigation into COVID-19's origin; Garneau calls generally for global transparency and cooperation, without endorsing a specific investigative mechanism
+  - **Antibody testing access (Gallant, CPC)**
+    - i. asks why a 14-day quarantine can't be lifted via antibody test for exposed individuals; Hajdu notes testing strategy is a provincial/territorial responsibility and timing-sensitive
+    - ii. cites a specific antibody test (90% accurate, already sold to the US and other countries via a constituent connection through fellow MP Colin Carrie) not yet approved with a Canadian DIN number; Hajdu distinguishes market-access questions from Health Canada's rigor requirements and asks for the company's name to follow up
+    - iii. presses on turnaround time once a company/test is identified; Hajdu cites an expedited process "as little as five to seven days" depending on accuracy/vendor data — which Gallant then contrasts with cases reportedly taking 30-90+ days, without Hajdu reconciling the discrepancy directly
+    - iv. asks whether international data could speed determinations; Hajdu reiterates Health Canada's own accuracy/safety standards
+    - v. asks whether officials have set a daily antibody-testing target for an initial survey; Hajdu references the government-funded immunity task force (a group of scientists) without giving a numeric target
+    - vi. asks for the task force members' names; Hajdu commits to forwarding them to her office "within the next two days," which Gallant notes she'll hold them to
+    - vii. closes by contrasting the government's urgency for a vaccine versus antibody testing; Hajdu "rejects the premise," calling the suggestion disingenuous and citing the PM's consistent engagement since the pandemic's start
+
+- **Adjournment**
+  - per Standing Orders (April 20/May 26), the House is recalled; committee adjourns as the full House prepares to sit at 2:30 p.m.

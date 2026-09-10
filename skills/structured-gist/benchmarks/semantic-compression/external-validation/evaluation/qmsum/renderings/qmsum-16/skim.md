@@ -1,0 +1,30 @@
+- **ADEW/WLGA panel**
+  - **Exclusion causes**
+  - **Support strategies**
+  - **Accountability impact**
+  - **Family engagement**
+  - **Funding pressures**
+  - **Collaborative models**
+  - **Reintegration & transition**
+  - **Provider quality assurance**
+  - **Registration change concerns**
+  - **Curriculum consistency**
+  - **ALN support gaps**
+  - **Staff capacity & training**
+  - **Mental health access**
+  - **Rural transport**
+- **Samaritans/Mind Cymru panel**
+  - **Data gaps on causes**
+  - **Younger children trend**
+  - **Off-rolling patterns**
+  - **Accountability & incentives**
+  - **Whole-school support response**
+  - **Diagnosis vs support funding**
+  - **ACEs & trauma awareness**
+  - **Loneliness-suicide link**
+  - **Labelling as "naughty"**
+  - **Welsh-medium provision gap**
+  - **Delay entering EOTAS**
+  - **Individual/home tuition concerns**
+  - **Post-exclusion responsibility**
+  - **Closing recommendations**

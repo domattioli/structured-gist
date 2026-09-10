@@ -1,0 +1,52 @@
+- **Motivation**
+  - **Gap**
+    - MRC models need large amounts of labeled training data and, per prior work, drop significantly in performance under intentionally injected noise (e.g. misleading sentences); human readers rarely suffer either problem, since they can also draw on general knowledge beyond the given passage-question pair
+  - **Approach**
+    - explicitly extract inter-word semantic connections from WordNet as general knowledge, then use them, in an understandable and controllable way, inside an MRC model's attention mechanism — replacing the existing approach of encoding such knowledge implicitly into vector space, whose effect on the model is neither interpretable nor directly controllable
+- **Data enrichment method**
+  - **Semantic relation chain**
+    - a concatenated sequence of WordNet semantic relations (16 types available via NLTK's interface, e.g. hypernym, hyponym, holonym, meronym, attribute) linking one synset to another; the number of relations chained together is its hop count, and a single relation is a 1-hop chain
+  - **Extended synsets**
+    - for a word, the set of all synsets that are its own senses or reachable from them via semantic relation chains, bounded by a maximum hop count k; without a hop-count limit this set would eventually include nearly all of WordNet, which carries little useful information
+  - **Extraction**
+    - given a passage-question pair, for each word the positions of the passage words it is semantically connected to (excluding its own position, if it is itself a passage word) are recorded as the general knowledge to extract; increasing k extracts more connections but also raises the proportion that are noise rather than useful signal, so k is set via cross-validation on development-set performance
+- **KAR model**
+  - **Architecture**
+    - i. lexicon embedding layer — concatenates pre-trained GloVe word vectors with CNN-derived character embeddings, then passes both passage and question through a shared dense ReLU layer
+    - ii. context embedding layer — a shared BiLSTM over the lexicon embeddings, concatenating forward and backward outputs, for both passage and question
+    - iii. coarse memory layer — knowledge aided mutual attention fuses the question context embeddings into the passage, then a BiLSTM produces the coarse memories (question-aware passage representations)
+    - iv. refined memory layer — knowledge aided self attention fuses the coarse memories into themselves, then a BiLSTM produces the refined memories (final passage representations)
+    - v. answer span prediction layer — trainable projections of the refined memories and an attention-pooled question summary give start and end position distributions; training minimizes negative log-likelihood over the labeled span, and inference takes the max of an upper-triangular answer span matrix
+  - **Knowledge aided mutual attention**
+    - the standard passage-question similarity function (BIBREF3) is modified to use "enhanced" context embeddings: for each word, its semantically connected passage words' context embeddings are gathered and attention-summarized into a matching vector, which is concatenated with the word's own context embedding and passed through a dense ReLU layer; the resulting knowledge aided similarity matrix drives standard passage-attended/question-attended summaries, concatenated and projected to produce the coarse memory layer's outputs
+  - **Knowledge aided self attention**
+    - rather than fusing each passage word's coarse memory with those of all other passage words (as in prior self-attention designs), each word's memory is fused only with the coarse memories of the passage words it is semantically connected to, via the same gather-then-attend-then-concatenate-then-project pattern used in the mutual attention — avoiding fusion the authors consider unnecessary and distracting for unrelated word pairs
+- **Related work**
+  - **Attention mechanisms**
+    - multi-round alignment addresses attention redundancy and attention deficiency; mutual attention has also been used as a skip-connector to densely connect pairwise layers
+  - **Data augmentation**
+    - training a generative model to produce questions from unlabeled text substantially boosts performance; so does training a back-and-forth translation model to paraphrase existing training examples
+  - **Multi-step reasoning**
+    - inspired by humans re-reading difficult documents, some models use reinforcement learning to dynamically choose the number of reasoning steps, while others fix the step count but use stochastic dropout in the output layer to avoid step bias
+  - **Linguistic embeddings**
+    - POS and NER embeddings, or structural embeddings derived from parse trees, have been incorporated into MRC input layers
+  - **Transfer learning**
+    - several MRC breakthroughs draw on feature-based or fine-tuning-based transfer learning from word- or sentence-level models pre-trained on large external corpora
+- **Experiments**
+  - **Dataset**
+    - SQuAD 1.1 (train/dev/test split of passage-question pairs), plus the AddSent and AddOneSent adversarial sets, where each passage contains either several sentences similar to the question but not contradicting the answer (AddSent) or one human-approved, possibly unrelated random sentence (AddOneSent), both intended to distract MRC models
+  - **Setup**
+    - spaCy 2.0.13 tokenization, WordNet 3.0 via NLTK 3.3, TensorFlow 1.11.0 implementation; data enrichment hop count k=3; dense-layer/BiLSTM dimensionality 600; Adam optimizer, learning rate as specified, batch size 32; dropout applied to dense layers and BiLSTMs; exponential moving average applied to boost final performance; evaluated by Exact Match and F1
+- **Results**
+  - **Performance & robustness**
+    - a. compared against the five single MRC models ranked in the SQuAD 1.1 top 20 that also report adversarial-set results, KAR is on par with the state-of-the-art on the development and test sets
+    - b. on both adversarial sets, KAR outperforms all five comparative models by a large margin, i.e. it is comparable in accuracy but substantially more robust to noise
+  - **Ablations**
+    - a. increasing the data-enrichment hop count k from 0 to 5 raises the amount of extracted general knowledge monotonically, but KAR's performance rises only up to k=3 before dropping, indicating the extra knowledge becomes noise beyond that point
+    - b. replacing knowledge aided mutual attention and knowledge aided self attention with their plain (non-knowledge) counterparts drops F1 on the development set and on both AddSent and AddOneSent, confirming the knowledge aided mechanisms' contribution
+    - c. after only one epoch of training, KAR already achieves an EM/F1 on the development set exceeding the final, fully-trained performance of strong baselines DCN and BiDAF
+    - d. compared with a prior encoding-based method that dynamically retrieves general knowledge from Wikipedia and ConceptNet, whose best model scores much lower EM/F1 on the development set, KAR's explicit approach is shown to work better than that existing implicit approach
+  - **Low-data regime**
+    - training subsets are built by sampling 1, 2, 3, or 4 questions per passage, producing four increasingly larger fractions of the full training set; across all four subsets, KAR outperforms re-implemented SAN and QANet (without data augmentation) by a large margin both on the development set and on both adversarial sets
+- **Conclusion**
+  - explicitly injecting WordNet-derived general knowledge into an end-to-end MRC model's attention mechanisms yields performance comparable to the state of the art while substantially improving both robustness to noise and performance under limited training data; future work plans to draw on larger knowledge bases such as ConceptNet and Freebase to widen the scope and quality of the extracted general knowledge

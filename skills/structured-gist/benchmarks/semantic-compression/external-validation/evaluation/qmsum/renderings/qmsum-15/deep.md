@@ -1,0 +1,98 @@
+- **Petitions presented**
+  - A. perinatal mental health strategy
+    - McPherson (NDP) tables a Canadian Perinatal Mental Health Collaborative petition urging a national strategy with universal screening and funded treatment, citing 20% of women and 10% of men affected and an $11B annual economic cost.
+  - B. cystic fibrosis drug pricing
+    - Reid (CPC) asks the government to rescind Patented Medicine Prices Review Board changes and negotiate a national gene-modulator price, citing Trikafta's 90% effectiveness for cystic fibrosis sufferers.
+  - C. family doctor shortage
+    - May (GP) presents a pre-pandemic petition from her Sidney, B.C. riding citing nearly five million Canadians without a family doctor, worst in rural areas.
+  - D. firearms legislation concerns
+    - Vis (CPC) presents opposition to firearms confiscation, arguing enforcement dollars should instead target gangs and border smuggling and that "military-style assault rifle" is an undefined, political term; the chair reminds him petitions must stay a "prcis," not a speech.
+  - E. open-net salmon farming ban
+    - Johns (NDP) tables a 1,198-signature Nova Scotia petition against open-net salmon farm expansion, citing risks to wild Atlantic salmon and existing lobster fisheries, and calling for a shift to closed-containment aquaculture.
+  - F. Wet'suwet'en/Coastal GasLink
+    - Manly (GP) presents a petition calling for halting Coastal GasLink construction, RCMP exclusion-zone withdrawal, and honouring UNDRIP and TRC recommendations; he notes nation-to-nation talks had since begun.
+  - G. COVID airline refunds
+    - Ratansi (Lib.) presents a Don Valley East petition asking that Canadian and foreign airlines be denied financial assistance until they fully refund COVID-cancelled flights.
+- **Ministerial Q&A**
+  - **Benefit-integrity & fraud**
+    - a. CERB fraud memo
+      - Albas (CPC) presses Trudeau six times on reports that federal workers were told to ignore roughly 200,000 flagged-fraudulent applications; Trudeau never confirms or denies the memo, repeating that speed of help was the priority and fraud would be "cleaned up" retroactively.
+    - b. CRA fraud memo denial
+      - Rayes (CPC) puts the same question to Revenue Minister Lebouthillier; she explicitly denies CRA told staff to ignore fraud, but cannot say whether a returning worker must repay the full $2,000 or only $500 per week worked, a gap Qualtrough later says "depends on individual circumstances."
+    - c. StatsCan data leak
+      - Aboultaif (CPC) cites section 34 of the Statistics Act and asks whether a pre-market-open leak of economic data is a criminal offence; Bains calls the breach "completely unacceptable" and says it is "being looked into," but won't confirm an RCMP referral or commit that Liberal staff will cooperate, unlike the SNC-Lavalin precedent Aboultaif raises.
+  - **Corporate aid conditions**
+    - a. tax-haven loophole
+      - Ste-Marie (BQ) notes the large employer emergency financing facility bars illegal tax evasion but not legal use of tax havens by companies like the big banks; Trudeau says applications will be assessed case-by-case with a transparency requirement, without addressing the legality distinction directly.
+    - b. executive pay cap
+      - Savard-Tremblay (BQ) cites a Canadian Centre for Policy Alternatives finding that the 100 highest-paid CEOs earned 227 times the average worker in 2018, with 18% CEO pay growth even at loss-making firms, and demands an executive-compensation ceiling; Morneau confirms compensation conditions are coming, with facility funds barred from dividends or share buybacks and a tax-evasion screen.
+    - c. green recovery vs. pipeline funding
+      - Simard (BQ) contrasts a $1.7B orphan-well cleanup and a $500M EDC loan to TC Energy's Coastal GasLink pipeline (8.6Mt CO2/year) against the Prime Minister's green-recovery task force; Wilkinson defers climate questions to "beyond this phase of the crisis," with an interpretation outage forcing him to repeat the answer.
+    - d. forestry vs. oil liquidity parity
+      - Simard notes the same $500M went to one pipeline project as EDC's entire 2017 softwood-lumber-tariff support for the whole forestry sector (58,000 Quebec jobs, $6B GDP); O'Regan cites the 2017 softwood action plan and strategic innovation fund rather than matching the liquidity figure.
+  - **Vulnerable populations**
+    - a. CERB gap for spousal-support recipients
+      - Kwan (NDP) raises a single parent of four taxed on spousal/child support income but ineligible for CERB, unaddressed three weeks after the Employment Minister said she was "looking into it"; Trudeau acknowledges "gaps" from moving quickly but gives no fix timeline.
+    - b. homelessness funding
+      - Kwan calls federal shelter funding "deficient," criticizes the 50%-chronic-homelessness-reduction target as too modest, and flags that Vancouver East's large urban-indigenous population received under 2% of pandemic urban-indigenous housing funds; Trudeau cites hundreds of millions already sent to shelters and defends the housing strategy as ambitious.
+    - c. seniors OAS/GIS payments
+      - Kusie (CPC) calls the one-time up-to-$500 OAS/GIS payment, announced three months into the pandemic, evidence seniors are treated as an "afterthought"; Schulte cites an earlier ~$375-500 GST top-up as already delivered support.
+    - d. seniors home advocacy
+      - Sgro (Lib.) and Blois (Lib.) thank Schulte for the day's announcement and press for continued advocacy; Schulte cites a $20M New Horizons for Seniors expansion for services like grocery delivery.
+    - e. not-for-profit seniors homes funding gap
+      - May (GP) flags well-run non-profit seniors homes with no revenue loss but rising wage and PPE costs and "nowhere to look for help"; Hajdu points to provincial health-transfer funding rather than a dedicated program.
+    - f. Service Canada mail backlog
+      - Bergen (CPC) cites a constituent whose March 12 documents, including a doctor's note, sat unopened for two months; Hussen says he is not aware of a widespread issue but offers to investigate the individual case, citing redeployed front-line phone staff and pandemic-driven office closures.
+  - **Long-term care & pharmacare**
+    - a. LTC death toll
+      - Davies (NDP) notes over 80% of Canada's COVID deaths occurred in long-term care, the highest share among 14 comparable countries, with no province meeting minimum hands-on-care standards and for-profit homes seeing 2-3x the death rate of public/non-profit ones; Hajdu points to provincial/municipal jurisdiction while promising talks toward stronger national standards.
+    - b. universal pharmacare
+      - Davies links pandemic job losses to lost employer-tied drug coverage and asks for universal pharmacare "at the earliest opportunity"; Hajdu says a national pharmacare plan remains part of her mandate without a timeline.
+  - **Firearms control**
+    - a. farm-rifle ban rationale
+      - Bergen (CPC) argues the Iver Johnson single-shot farm rifle, passed down generations, is being wrongly banned instead of targeting gangs and smugglers; Blair cites Canadian Association of Chiefs of Police and Ontario police-leader statements supporting a ban on weapons of military-combat design, and says the nine banned models share that origin, not hunting or sport use.
+    - b. buyback legislation timeline
+      - May (GP) asks the government to table the full legislative framework, including the buyback program, for first reading rather than delaying; Blair promises it "at the first opportunity," alongside other unspecified gun-control measures.
+    - c. retailer impact
+      - Dalton (CPC) describes a Maple Ridge firearms retailer stuck with unsellable banned-model inventory and eight employees at risk; Blair reiterates that weapons for lawful hunting and sport shooting remain unaffected.
+  - **Indigenous relations**
+    - a. Wet'suwet'en MOU consultation
+      - Schmale (CPC) reports elected Wet'suwet'en chiefs were excluded from secret hereditary-chief-only negotiations on a rights-and-title MOU and want the May 14 signing delayed, with some chiefs calling for Bennett's resignation; Bennett insists the process must be Wet'suwet'en-led between elected and hereditary leadership and denies that Liberal committee members have shut down debate on the topic.
+  - **Sector-specific COVID relief**
+    - a. fisheries
+      - d'Entremont (CPC) flags lobster harvesters excluded from the $62.5M processor aid package and from the wage subsidy because of its family-employee exclusion (common in family-run fishing enterprises), plus a gulf-region catch quota added to licence conditions without ministerial authorization; Jordan confirms the quota was never authorized and has been removed, and says direct-harvester support is still being worked on.
+    - b. Trikafta access
+      - d'Entremont ties the case of 23-year-old Chantelle Lindsay, who died of cystic-fibrosis complications, to the still-unfiled Health Canada application from manufacturer Vertex; Hajdu points to the special access program, through which most applicants have received the drug, and encourages continued pressure on the manufacturer.
+    - c. tourism
+      - d'Entremont raises the Bar Harbor-Yarmouth ferry's survival if the border stays closed, and Gourde raises tourism infrastructure broadly; Joly commits to work with the sector via new Atlantic Canada Opportunities Agency (ACOA) funding.
+    - d. agriculture
+      - Blois highlights Kings-Hants' dairy and horticulture sectors; Bibeau cites a $77.5M emergency processing fund, $50M surplus-food program, $125M AgriRecovery for beef and pork producers, and a dairy-sector loan-capacity increase from $300M to $500M pending all-party support.
+    - e. oil & gas liquidity
+      - Yurdiga (CPC) presses on a 48-day gap between the finance minister's promised liquidity loans and open applications, plus indigenous oil-and-gas contractors struggling to qualify and western storage capacity risk if SAGD thermal projects are shut down; O'Regan confirms large-cap liquidity measures now complete what began April 17 for small/medium producers (85% of sector jobs, 576,000 total jobs including 11,000 indigenous workers), while storage and BCAP-eligibility details remain in progress.
+    - f. dairy processors & CUSMA
+      - Gourde (CPC) wants CUSMA import permits granted directly to Canadian dairy processors ($19B GDP contribution) instead of American multinationals; Freeland reiterates that supply management was preserved in the new NAFTA without directly answering the permit-allocation question.
+    - g. small business rent & PPE
+      - Dalton (CPC) raises landlords refusing to join the rent-assistance program despite tenants losing 50-100% of revenue, and a beauty-salon owner's PPE needs for reopening; Morneau notes rent relief is provincial jurisdiction and offers landlords up to 75% coverage, while Anand says PPE work beyond front-line health care is still being scoped with the provinces.
+  - **Border, trade & consumer costs**
+    - a. Canada-US border restrictions
+      - Masse (NDP) presses repeatedly on whether restrictions will be extended past their expiry, given Windsor-Detroit's high infection rate and premier opposition to reopening; Freeland declines five times to say what changes, if any, are under discussion with the US, citing a "collaborative conversation."
+    - b. interchange/credit-card fees
+      - Ste-Marie (BQ) and Masse (NDP) separately want merchant card fees capped near Europe and Australia's 0.3% (versus Canada's roughly 2.5-3%), and Masse asks whether the government will force banks to match Vancity's zero-rate move; Trudeau and Morneau each point to negotiated bank fee cuts and deferrals rather than a statutory cap.
+    - c. hydroelectric energy corridor
+      - Gourde (CPC) proposes an interprovincial corridor to sell Quebec hydropower into Ontario as a low-carbon, cost-competitive option; Morneau offers only a general "continuing to work towards that."
+    - d. spousal-reunification travel
+      - Tochor (CPC) asks whether spousal reunification counts as essential travel; Blair says CBSA exercises discretion and turns back non-Canadians deemed non-essential, which Tochor says is stranding families.
+  - **Governance & transparency**
+    - a. Harrington Lake cottage renovation
+      - Tochor (CPC) accuses the government of hiding the scale and cost of an NCC-led expansion of the PM's official cottage; Anand says the information has been public since 2018 and denies any concealment.
+    - b. CERB amount rationale
+      - Tochor asks who set the CERB at $2,000 versus lower senior ($1,200) and disability ($1,600) payments; Qualtrough says ESDC and Finance set it jointly based on typical lost employment income.
+    - c. charity wage-subsidy gap
+      - Tochor flags charities and non-profits without their own payroll number being shut out of the wage subsidy; Hussen cites $350M in separate charity-sector funding rather than confirming a program fix.
+    - d. French-interpretation time fairness
+      - Brunelle-Duceppe (BQ) raises a point of order that fellow member Simard lost roughly 45 seconds of speaking time because an interpretation failure forced Wilkinson to repeat his French-language answer; Guilbeault counters that members speaking French as a second language shouldn't be blamed for the delay, and the chair commits to reviewing the recording.
+  - **Vaccine & science policy**
+    - a. open, non-profit vaccine access
+      - May (GP) invokes Jonas Salk's unpatented polio vaccine and asks whether publicly funded COVID vaccine research will be shared globally, non-profit; Bains commits to an "open science," multi-jurisdiction collaborative model while still saying Canada will support its own IP where it drives the work.
+    - b. profit-motive delay concern
+      - May cites a Dalhousie Health Law Institute allegation that a Winnipeg-developed Ebola vaccine was delayed by a for-profit market-timing motive, and asks if the profit model itself will be examined; Bains highlights Canada's Ebola-vaccine and SARS-DNA-sequencing achievements without directly addressing the profit-motive critique.

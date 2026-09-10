@@ -1,0 +1,32 @@
+- **Improving abstractive summarization on low-resource student reflections**
+  - **Problem**: neural summarization needs large data; student reflection corpora are tiny
+  - **Approach**: domain transfer, data synthesis, and their combination
+  - **Result**: tuned + synthesized model beats extractive baselines and single-approach variants, both on ROUGE and human judgment
+- **Related work**
+  - a. abstractive summarization models (pointer networks, coverage, RL)
+  - b. domain transfer prior work (news-to-news only)
+  - c. data synthesis prior work (mostly MT/normalization, not summarization)
+- **Reflection summarization dataset**
+  - a. four course corpora (ENGR, Stat2015, Stat2016, CS)
+  - b. two prompts per lecture (Point of Interest, Muddiest Point)
+  - c. human-written reference summaries
+- **Three explored approaches**
+  - a. domain transfer (pretrain on CNN/DM, fine-tune on reflections)
+  - b. template-based data synthesis
+  - c. combination of both
+- **Proposed template-based synthesis model**
+  - a. template extraction
+  - b. template clustering
+  - c. summary rewriting
+  - d. summary selection
+- **Experiments**
+  - a. six hypotheses tested (H1-H6)
+  - b. extractive baselines
+  - c. domain-transfer PG-net variants
+  - d. synthesis baseline vs. template model
+- **Results**
+  - a. ROUGE: tuning and synthesis both help; combining them helps most
+  - b. human evaluation: tuned model preferred most often for coherence/readability
+- **Conclusions and future work**
+
+  Domain transfer and template-based data synthesis each improve low-resource abstractive summarization, and combining them works best; future work includes domain adaptation, richer synthesis, and other data types.

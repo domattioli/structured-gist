@@ -1,0 +1,81 @@
+- **Hierarchical Transformers for long document classification**
+  - **Problem**
+    - BERT achieves SOTA on several language tasks but consumes only a limited context of symbols, hindering classification of long sequences
+    - long-sequence NLP tasks include topic identification of spoken conversations and call-center customer satisfaction (CSAT) prediction
+    - call transcripts can exceed 5000 words; temporal ordering can matter (e.g. an angry customer becoming satisfied by call's end), so bag-of-words models are ill-suited
+  - **Method**
+    - split the input into shorter segments, obtain a BERT representation for each, then classify using either an LSTM (RoBERT) or another Transformer (ToBERT) over the segment representations
+    - these are called Hierarchical Transformers since they introduce segment-wise and document-wise representation levels
+  - **Novel contributions**
+    - a. two BERT extensions — RoBERT and ToBERT — enabling classification of long texts via segmentation plus a second layer over segment representations
+    - b. state-of-the-art results on the Fisher topic classification task
+    - c. significant improvement on CSAT prediction over the MS-CNN baseline
+- **Related work**
+  - a. dimensionality-reduction approaches
+    - RBM, autoencoders, subspace multinomial models (SMM) reduce a BOW representation before linear classification
+  - b. other document-classification methods
+    - hierarchical attention networks (evaluated on datasets averaging ~150 words); character-level CNNs (prohibitive for very long documents); an arXiv-paper classifier that samples random word blocks — likely unsuited to spoken conversations, whose random blocks don't represent the whole topic
+  - c. CSAT prediction prior work
+    - logistic regression, SVM, and CNN applied to various representations
+  - d. BERT and long-sequence prior work
+    - BIBREF17 applies BERT to document classification, but average document length there is under BERT's 512-token limit
+    - TransformerXL extends Transformers for long-input language modelling via the auto-regressive property, which doesn't apply to this paper's classification tasks
+- **BERT background**
+  - a. architecture
+    - built on the Transformer: self-attention, feed-forward layers, residual connections, layer normalization
+  - b. pretraining objectives
+    - masked language modelling (predict masked words from context) and next-sentence prediction (is sequence 2 the next sentence after sequence 1?)
+  - c. fine-tuning procedure
+    - follows the standard approach of adding a task-specific output layer; two output types used — pooled last-transformer-block output (H) and posterior probabilities (P)
+  - d. model size
+    - BERT-Base (used here, for faster training) has 110M parameters; BERT-Large has 340M; methods are stated to apply to BERT-Large as well
+  - e. limitations for long sequences
+    - self-attention has O(n²) complexity in sequence length; learned positional embeddings likely don't generalize beyond positions seen in training
+  - f. fine-tuning variants investigated
+    - pre-trained BERT weights vs. weights fine-tuned per-segment on the task dataset (same label, per-segment fine-tuning) vs. using fine-tuned segment-level BERT predictions directly as next-layer input
+- **Recurrence over BERT (RoBERT)**
+  - a. segmentation
+    - input split into fixed-size segments with overlap; each segment yields an H or P representation from BERT
+  - b. aggregation
+    - segment representations are stacked into a sequence fed to a small (100-dim) LSTM layer, whose output becomes the document embedding
+  - c. classification head
+    - two fully connected layers — ReLU (30-dim) then softmax (class-count dim) — produce the final prediction
+  - d. complexity benefit
+    - reduces BERT's effective complexity to O(n/k · k²) = O(nk) (k = segment size; LSTM adds negligible O(k)), and sidesteps the positional-embedding generalization issue
+- **Transformer over BERT (ToBERT)**
+  - a. motivation
+    - Transformers better capture long-distance relationships than recurrent networks, motivating replacement of the LSTM with a small (2-layer) Transformer over segment representations
+  - b. positional embeddings variant
+    - a variant learns segment-level positional embeddings, to test whether preserving input order matters (at the cost of being limited to sequence lengths seen in training)
+  - c. complexity tradeoff
+    - ToBERT's O(n²/k²) complexity is asymptotically worse than RoBERT's, since the top-level Transformer is itself quadratic in the number of segments, but in practice n/k is small enough that no performance/memory issues were observed
+- **Experiments**
+  - a. three datasets
+    - CSAT (spoken transcripts, ASR-generated) for satisfaction prediction; 20 newsgroups (written text) for topic identification; Fisher Phase 1 (spoken transcripts, manual) for topic identification
+  - b. CSAT dataset details
+    - US English call-center telephone speech; original 1-9 satisfaction ratings binarized at 4.5 (satisfied/dissatisfied) to balance the skewed distribution; 4331 calls split into 2866 train / 362 validation / 1103 test
+    - transcripts obtained via a TDNN-LSTM ASR system trained on Fisher/Switchboard with lattice-free MMI; word error rates of 9.2% (Switchboard) and 17.3% (CallHome) on Eval2000
+  - c. 20 newsgroups details
+    - ~20,000 documents across 20 topics; standard split of 11314 train / 7532 test, with 90%/10% of the training split used for train/validation; 53160-word vocabulary used for fair comparison
+  - d. Fisher details
+    - 10-minute two-person telephone conversations, 40 topics; same train/test split as BIBREF3 (1374/1372 documents), with 10% of training held out for validation
+  - e. dataset length statistics
+    - Fisher's average document length far exceeds 20 newsgroups and CSAT; almost all Fisher documents exceed 1000 words; over 50% of CSAT documents exceed 500 words vs. only 10% of 20newsgroups; a few CSAT/20newsgroups documents exceed 5000 words
+  - f. architecture/training details
+    - documents split into 200-token segments with a 50-token shift; RoBERT's LSTM trained with Adam (initial LR 0.001, decayed by 0.95 if validation loss plateaus for 3 epochs); ToBERT's Transformer trained with BERT-style Adam (initial LR 5e-5); accuracy reported, averaged over 5 runs to account for TensorFlow GPU non-determinism, using the best-validation-accuracy checkpoint
+- **Results**
+  - a. pre-trained BERT features
+    - features from the pooled final-transformer-block output, without fine-tuning, give sub-par performance; ToBERT exploits pre-trained features better than RoBERT and converges faster
+  - b. fine-tuned BERT features
+    - fine-tuning BERT on the task datasets gives significant improvement over pre-trained features; ToBERT outperforms RoBERT by 13.63% on Fisher and 0.81% on 20newsgroups; on CSAT, ToBERT performs slightly worse than RoBERT, but not statistically significantly given the dataset's small size
+  - c. using fine-tuned BERT predictions directly
+    - three aggregation methods compared: average segment-wise predictions, most-frequent predicted class, and a trained classification model
+    - simple averaging or majority-vote is competitive for CSAT and 20newsgroups but not for Fisher; the benefit of RoBERT/ToBERT over these simple baselines appears proportional to the fraction of long documents in the dataset (CSAT/20newsgroups skew shorter than Fisher), and Fisher's 40-class task may also yield less confident per-segment predictions
+    - across document-length ranges on Fisher, ToBERT outperforms average voting in every interval — described as a SOTA result on Fisher
+  - d. position embeddings
+    - no significant effect for Fisher or 20newsgroups (topic doesn't shift much within these documents), but a slight (0.64% absolute F1) improvement for CSAT, where sentiment can shift during a call
+  - e. comparison with prior work
+    - ToBERT beats CNN-based baselines by a significant margin on CSAT and Fisher (CSAT baseline: multi-scale CNN, MS-CNN, replicated from BIBREF5); on 20 newsgroups, the result is 0.6% below the prior state of the art
+- **Conclusions**
+
+  RoBERT and ToBERT both extend BERT to long-document classification across CSAT, 20newsgroups, and Fisher; ToBERT consistently outperforms RoBERT on both pre-trained and fine-tuned features, and fine-tuned BERT outperforms pre-trained BERT throughout. Both methods beat simple averaging/majority-vote baselines, with the benefit scaling with average document length per task; position embeddings help only marginally (CSAT). Best results are on Fisher, with good CSAT gains over the CNN baseline; both methods are quick to fine-tune with competitive performance. Future work: training directly on long documents end-to-end.

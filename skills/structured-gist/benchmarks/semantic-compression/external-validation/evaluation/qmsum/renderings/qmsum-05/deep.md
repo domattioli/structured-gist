@@ -1,0 +1,71 @@
+- **Feature slide recap**
+  - **Features listed**
+    - a. prosody
+    - b. discourse
+    - c. verb choice
+    - d. landmark-iness
+    - e. nice walls
+    - f. context
+    - g. time of day
+  - **Landmark-iness vs saliency**
+    - Grad A raises "saliency" as a possibly-equivalent term, but the group agrees an object can be salient without being a landmark, and landmark-iness here means specifically touristic, not navigational, landmark status.
+- **Belief-net rationale**
+  - **Flat structure rejected**
+    - an initial design pointed every feature directly at the output node, but with N features the probability table needed is exponential in N, making it a pain to hand-set and unworkable if the group later moves to learning.
+  - **Middle layer added**
+    - a hidden middle layer of feature-derived concepts (tourist vs errand, in-a-hurry, final destination, closed) sits between the raw extracted features and the three-way output, so the model can infer intention rather than wiring every feature straight to the output.
+  - **Output modes**
+    - the belief-net's single output node takes one of three modes — Vista (view), Tango (approach/inspect), or Enter — inferred probabilistically from the middle layer.
+- **JavaBayes demo**
+  - **Evidence set**
+    - a. admission fee discussed — false
+    - b. nice walls — true
+    - c. time of day — night
+  - **Query result**
+    - querying the mode node with that evidence gives a probability distribution slightly biased toward Tango.
+  - **Earlier failure**
+    - the previous day's demo got stuck always returning Tango regardless of evidence, which the group attributes to hand-tuned, not learned, probabilities rather than a bug.
+- **Enterable node test**
+  - **Motivating case**
+    - a statue and a celebrity's house (e.g. Tom Cruise's) can both be physically enterable landmarks, but a statue can never be entered while the house technically could be, though visitors normally aren't allowed in — prompting a distinction between "has a door" and "publicly enterable."
+  - **Node added**
+    - the group adds a binary "has door" node live in JavaBayes to see how it wires into the belief-net.
+  - **Tooling glitch**
+    - adding the new node appears to overwrite the existing probability function for the node it points to rather than preserving it, forcing the group to reload the previously saved network file.
+- **JavaBayes tool assessment**
+  - **Pros**
+    - a. free
+    - b. has a GUI
+  - **Cons**
+    - a. interface is clunky
+    - b. unclear if it does learning
+  - **Underlying format**
+    - the network is stored as a plain text file listing probability tables as ordered number lists, whose layout is hard to follow; the group considers writing a small script to generate or edit these tables more easily, and flags Srini as the person to ask about it and about an XML Bayes-net format the tool may also read.
+- **Middle-layer regions plan**
+  - **Problem**
+    - adding more direct links from individual discourse cues would make the network "spider-web-ish" and hard to hand-edit as more cues are added.
+  - **Proposed fix**
+    - group observed cues into separate regions (discourse cues, syntactic info like verb/object/modifiers, context), each with its own small hidden middle layer, which then feeds into the shared task-based middle layer (tourist, doing business, in a hurry, final destination) instead of every cue pointing there directly.
+  - **Worked example**
+    - instead of a single "discussed admission fee" node, several discourse cues (admission fee, "how much to enter," opening hours) would funnel into one "entrance requirements" node inside the discourse region.
+- **SmartKom discourse model**
+  - **Role**
+    - SmartKom's discourse-history module is the system's memory of the whole dialogue — who said what, what was shown on screen — and it resolves anaphora and fills in information omitted in later turns.
+  - **Query interface**
+    - the middle layer can query the discourse model for whether a cue (like admission fee) was discussed within some configurable lookback depth, which the group agrees to bound for practicality rather than searching the entire conversation history.
+- **Plan-recognition idea**
+  - Grad D suggests treating discourse cues as evidence for an underlying task plan the person is following (classic AI plan recognition), illustrated by inferring "Track seven" just from a traveler saying "New York" at a ticket counter — a cue can support a whole multi-step plan, not just one node.
+- **Ad-hoc probabilities**
+  - the group acknowledges all current probabilities are hand-guessed rather than learned from data — with several incoming nodes at multiple values each, the table already runs to over a hundred entries, some of them (e.g. "want to enter" + "closed" + "night") nonsensical combinations — and real data is needed to fix this.
+- **Next steps**
+  - **Ask Srini**
+    - ask Srini about alternative Bayes-net packages and about the possible XML format, likely at Wednesday's meeting.
+  - **Segment regions**
+    - over the coming week, the three of them will work on segmenting the observed features into the proposed regions and sketching features/middle layers for each.
+- **Data collection plan**
+  - **Wizard**
+    - Fey has agreed to act as the wizard (and help recruit/organize subjects); a trial run is planned for Friday afternoon to check she can handle the spontaneous, creative demands of the role.
+  - **First subject**
+    - Liz volunteered to be the first test subject; the group favors an unfamiliar subject over an insider for a more realistic, less deliberately-adversarial test of the wizard.
+  - **Rationale**
+    - existing Munich data is too simple/command-line with no metaphor, so the new collection aims to elicit richer, less-constrained language while still including some clearly-labeled navigational tasks (implicit "enter" vs explicit "look/photograph") to keep the resulting corpus labelable, and to compare human-computer vs human-human pragmatics.

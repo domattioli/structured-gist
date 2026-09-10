@@ -1,0 +1,92 @@
+- **Jasper: end-to-end convolutional acoustic model**
+  - **Motivation**
+    - conventional ASR chains acoustic model, senone-to-phoneme graph, pronunciation model
+    - end-to-end systems collapse this pipeline into one network
+  - **Lineage**
+    - builds on TDNN, CNN, and CTC-loss work; inspired by wav2letter's 1D-convolution stack
+    - Liptchinsky et al. extended wav2letter to 19 layers with GLU, weight norm, dropout
+  - **Design**
+    - only 1D convolutions, batch normalization, ReLU, and dropout layers
+    - operators chosen for being highly optimized on GPUs
+  - **Scale**
+    - largest variant: 54 convolutional layers, 333M parameters
+    - smaller variant: 34 layers, 201M parameters
+    - residual connections enable this depth
+  - **Headline results**
+    - 2.95% WER on LibriSpeech test-clean with beam search + Transformer-XL LM
+    - 3.86% WER on LibriSpeech test-clean with greedy decoding, no LM
+    - competitive results on WSJ and Hub5'00
+- **Jasper architecture**
+  - a. block structure
+    - a Jasper BxR model has B blocks, each with R sub-blocks
+    - all sub-blocks in a block share the same output channel count
+  - b. sub-block operations
+    - each sub-block: 1D-convolution → batch norm → ReLU → dropout
+  - c. residual connection
+    - block input projected via 1x1 conv + batch norm, summed into the last sub-block's batch norm output before activation/dropout
+  - d. inference-time fusion
+    - each sub-block fuses into a single GPU kernel (dropout removed, batch norm folded into conv, residual becomes a bias term)
+  - e. fixed extra blocks
+    - every Jasper model adds one pre-processing and three post-processing convolutional blocks
+  - f. Dense Residual (DR) variant
+    - each block's output is added (not concatenated) into the inputs of all following blocks, unlike DenseNet/DenseRNet
+- **Normalization and activation study**
+  - a. normalization types compared
+    - batch norm, weight norm, layer norm
+  - b. ReLU variants compared
+    - ReLU, clipped ReLU, leaky ReLU
+  - c. gated unit types compared
+    - gated linear units (GLU), gated activation units (GAU)
+  - d. selection process
+    - on small Jasper5x3, layer norm + GAU performed best, followed by layer norm + ReLU and batch norm + ReLU
+    - on larger Jasper10x4, batch norm + ReLU outperformed the others, settling the final choice
+  - e. padding/masking fixes
+    - padded sequences distorted layer norm statistics, so a sequence mask excludes padding from mean/variance
+    - masking applied before convolution improved WER, but masking both convolution and batch norm together hurt it
+  - f. weight norm instability
+    - training with weight norm caused exploding activations
+
+    weight norm was dropped as too unstable for training at scale.
+- **Residual connections**
+  - a. necessity
+    - for models deeper than Jasper 5x3, residual connections are required for training to converge
+  - b. variants investigated
+    - simple residual, Dense Residual, DenseNet-style, DenseRNet-style
+    - DenseNet/DenseRNet concatenate connections; Residual/Dense Residual add them
+  - c. final choice: Dense Residual
+
+    Dense Residual and DenseRNet performed similarly, but Dense Residual was chosen because concatenation-based growth factors need retuning for deeper models while Dense Residual just repeats sub-blocks.
+- **Language model integration**
+  - a. role of the LM
+    - scores candidate sequences alongside the acoustic model during beam search decoding
+  - b. two-stage pipeline
+    - acoustic + N-gram LM generate a candidate list via beam search (width 2048)
+    - an external Transformer-XL LM rescores the final list
+  - c. training independence
+    - all LMs trained on datasets separate from the acoustic model
+
+    lower neural-LM perplexity correlated strongly with lower WER.
+- **NovoGrad optimizer**
+  - a. mechanism
+    - per-layer (not per-weight) second-moment computation, unlike Adam
+    - gradients rescaled by this second moment before computing the first-order moment
+    - optional L2 weight decay added to the rescaled gradient, as in AdamW
+  - b. benefits
+    - reduces memory consumption versus Adam
+    - more numerically stable
+  - c. measured gain
+    - dev-clean LibriSpeech WER dropped from 4.00% to 3.64% (9% relative) versus SGD with momentum, on Jasper DR 10x5
+- **Results**
+  - a. training setup
+    - dropout and weight decay used as regularization throughout
+    - speed perturbation applied (fixed ±10% for LibriSpeech, random [-10%,10%] for WSJ/Hub5'00)
+    - trained on NVIDIA DGX-1 in mixed precision using OpenSeq2Seq
+  - b. read speech (LibriSpeech, WSJ)
+    - Jasper DR 10x5 trained 400 epochs with NovoGrad achieves SOTA on test-clean and SOTA among E2E models on test-other
+    - smaller Jasper 10x3 trained 400 epochs with SGD on combined WSJ (80 hours)
+  - c. conversational speech (Hub5'00)
+    - Jasper DR 10x5 trained 50 epochs with SGD on 2000hr Fisher+Switchboard
+    - good results on Switchboard subset; Callhome subset remains harder
+- **Conclusion**
+
+  Jasper is a deep, scalable, GPU-efficient convolutional architecture built on a well-designed residual topology, effective regularization, and NovoGrad, achieving SOTA on LibriSpeech and competitive results elsewhere; the authors see it as a baseline for further work on regularization, augmentation, loss functions, LMs, and optimization, and are interested in whether it scales further.

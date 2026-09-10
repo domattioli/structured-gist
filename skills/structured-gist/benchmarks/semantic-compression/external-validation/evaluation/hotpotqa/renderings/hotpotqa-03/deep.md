@@ -1,0 +1,145 @@
+- **LDS Motion Picture Studios**
+  - **Origin**
+    - began as the BYU Motion Picture Studio in 1953
+    - led by Wetzel Whitaker
+  - **Original location**
+    - a building called the Green Barn
+      - now the site of the Ernest L. Wilkinson Center on the BYU campus
+- **Item 47**
+  - **Identity**
+    - a 2012 American direct-to-video short film
+    - features the Marvel Comics organization S.H.I.E.L.D.
+    - produced by Marvel Studios
+    - distributed by Walt Disney Studios Home Entertainment on the home media release of "Marvel's The Avengers"
+  - **Series role**
+    - a follow-up and spin-off of "The Avengers"
+    - the third film in the Marvel One-Shots short film series
+  - **Creators**
+    - directed by Louis D'Esposito
+    - screenplay by Eric Pearson
+  - **Setting**
+    - set in the Marvel Cinematic Universe, sharing continuity with the franchise's films
+  - **Cast**
+    - a. Lizzy Caplan
+    - b. Jesse Bradford
+    - c. Maximiliano Hernández — reprising his role from the film series
+    - d. Titus Welliver
+  - **Plot**
+    - two civilians come across a Chitauri gun and use it to commit crimes
+- **Phil Coulson**
+  - **Identity**
+    - Phillip "Phil" Coulson, a character portrayed by Clark Gregg
+    - a high-ranking member of the espionage agency S.H.I.E.L.D.
+  - **Film appearances**
+    - a. first appeared in "Iron Man" (2008), the first MCU film
+    - b. "Iron Man 2" (2010)
+    - c. "Thor" (2011)
+    - d. "The Avengers" (2012)
+  - **TV appearances**
+    - headlines the television series "Agents of S.H.I.E.L.D." (2013–)
+  - **Other appearances**
+    - two Marvel One-Shots (2011)
+    - various tie-in comics
+    - the digital series "" (2016)
+    - other media, including comics published by Marvel Comics
+- **Solax Studios**
+  - **Founding**
+    - American motion picture studio founded in 1910
+    - founded by executives from the Gaumont Film Company of France
+  - **Founders**
+    - a. Alice Guy-Blaché
+    - b. her husband, Herbert Blaché
+    - c. a third partner, George A. Magie
+      - together they established The Solax Company
+  - **Roles**
+    - Alice Guy-Blaché was artistic director and director for many of its films
+    - Herbert Blaché managed production for the new company
+  - **Location**
+    - took over the studio Gaumont had built in Flushing, New York, in 1908 for Chronophone sound films
+      - a venture that proved unsuccessful for Gaumont
+  - **Operation**
+    - produced silent films in Flushing from October 1910 to the summer of 1912
+  - **Growth**
+    - prospering, invested more than $100,000 in a modern production plant in 1912
+    - the plant was in Fort Lee, New Jersey, then the center of America's first motion picture industry
+- **Televisa San Ángel**
+  - **Identity**
+    - originally Estudios y Laboratorios San Ángel, S.A.
+    - a film and television studio located in Mexico City
+  - **History**
+    - originally built by Jorge Stahl as a motion picture studio
+    - sold to the Azcárraga family in the 1970s
+      - continues to be owned through the Televisa networks
+  - **Facilities housed**
+    - a. headquarters of the Centro de Educación Artística (CEA)
+    - b. the Videocine (formerly Televicine) production and distribution company
+    - c. the network's Centro de Post Produccion
+  - **Notability**
+    - the oldest movie and television production facility in Mexico
+    - the most famous telenovela studio facility in Latin America
+    - one of the four main Mexican film studios, alongside Estudios Churubusco, Estudios América, and Estudios Tepeyac
+- **Marvel One-Shots**
+  - **Identity**
+    - a series of direct-to-video short films
+    - produced by Marvel Studios, set within the Marvel Cinematic Universe
+    - released from 2011 to 2014
+  - **Distribution**
+    - included as special features in the MCU films' Blu-ray and digital distribution releases
+    - not included in DVD releases
+  - **Format**
+    - each film ranges from 4 to 15 minutes
+    - designed as a self-contained story providing backstory for characters or events
+  - **Impact**
+    - two of the shorts have been the inspiration for television series set in the MCU
+- **Nestor Film Company**
+  - **Identity**
+    - originally known as the Nestor Motion Picture Company
+    - a defunct American motion picture production company
+  - **Founding**
+    - founded in 1909 as the West Coast production unit of the Centaur Film Company, located in Bayonne, New Jersey
+  - **Milestone**
+    - on October 27, 1911, established the first permanent motion picture studio in Hollywood, California
+      - produced the first Hollywood films
+  - **Merger**
+    - merged with its distributor, the Universal Film Manufacturing Company, on May 20, 1912
+  - **Legacy**
+    - Nestor became a brand name Universal used until at least mid-1917
+- **Marvel Studios**
+  - **Identity**
+    - Marvel Studios, LLC, originally known as Marvel Films from 1993 to 1996
+    - an American motion picture studio based at The Walt Disney Studios in Burbank, California
+  - **Ownership**
+    - a subsidiary of Walt Disney Studios, itself a wholly owned division of The Walt Disney Company
+    - previously a subsidiary of Marvel Entertainment
+      - until The Walt Disney Company reorganized the companies in August 2015
+  - **Leadership**
+    - film producer Kevin Feige serves as president
+- **All Hail the King**
+  - **Identity**
+    - a 2014 American direct-to-video short film
+    - features the MCU character Trevor Slattery
+    - produced by Marvel Studios, distributed by Walt Disney Studios Home Entertainment on the home media release of "Iron Man 3"
+  - **Series role**
+    - a follow-up and spin-off of "Iron Man 3"
+    - the fifth film in the Marvel One-Shots short film series
+  - **Creator**
+    - written and directed by Drew Pearce
+  - **Setting**
+    - set in the Marvel Cinematic Universe, sharing continuity with the franchise's films
+  - **Cast**
+    - a. Ben Kingsley — reprising his role from "Iron Man 3"
+    - b. Scoot McNairy
+    - c. Lester Speight
+    - d. Sam Rockwell — reprising his role from "Iron Man 2"
+  - **Plot**
+    - a documentary filmmaker interviews the infamous fake terrorist Trevor Slattery from behind bars
+- **Charles Evans Jr.**
+  - **Identity**
+    - American film producer and documentary film director
+  - **Credits**
+    - produced Johnny Depp's first directorial effort, "The Brave"
+    - one of four producers on the 2004 Howard Hughes biopic "The Aviator"
+      - his production credit was controversial
+  - **Family**
+    - nephew of former motion picture studio executive Robert Evans
+    - son of fashion industry executive and motion picture producer Charles Evans

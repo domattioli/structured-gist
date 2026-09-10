@@ -1,0 +1,141 @@
+- **Session setup**
+  - **Mic switch**
+    - **Reason**
+      - group abandoned lapel mics for wireless headsets; lapels were neither far enough away to behave like a representative distant mic nor close enough to avoid interference — a bad compromise for a mic meant to demonstrate distant-mic recognition, even though a single-mic setup could argue lapel was reasonable precisely for sitting "in the middle"
+    - **Trade-off**
+      - headsets pick up more mouth clicks and breath noise than lapels did, but the group had strong opinions favoring dropping lapels anyway
+  - **Channel numbering**
+    - each participant's mic number is written on the unit; channel number is one less than that number
+  - **Session ID**
+    - recording is session R-19; PhD A (Sunil) is new, visiting for the summer, and is asked to talk a lot so the corpus captures his pronunciations
+
+- **Compute-farm update**
+  - **New hardware**
+    - about a dozen Sun Blade-100s ordered to build out a shared compute farm; arrival timing uncertain
+  - **Job dispatch (`run-command`)**
+    - i. built on P-make and Customs, set up by Andreas with utilities so users don't have to hand-write P-make scripts
+    - ii. `run-command <job>` finds the fastest currently available machine, exports the job (using `export` underneath), duplicates the user's environment, and runs it there — testable with a trivial `run-command ls`
+    - iii. each machine carries attributes (memory, speed, OS, its own name, "no-evict") that a job can request, letting a user target, e.g., the fastest available Linux box, or one specific machine by name
+    - iv. if the requested machine is busy, the job queues and runs when the resource frees up
+    - v. a non-"no-evict" job (which could land on someone's desktop) gets evicted and auto-restarted elsewhere the moment that machine's owner returns and starts typing — costly if it interrupts a long job partway through; it's unclear whether remote/SSH activity from home triggers eviction the same way local keyboard activity does (Andreas reportedly addressed this, unconfirmed)
+  - **Current usage split**
+    - Andreas and PhD F (Chuck) are currently the main users; the SRI recognizer already has P-make/Customs integration built in, and a training-vs-recognition job collision recently forced PhD F to back off after Andreas complained his jobs weren't running
+  - **Parallel-job etiquette**
+    - a. `run-command` doesn't coordinate across jobs, so a script that needed to run, say, a thousand sub-jobs could in principle fire them all at once and saturate the shared network — users should self-limit to roughly ten simultaneous jobs, or write custom throttling logic to cap concurrency
+    - b. P-make instead tracks the whole dependency graph (a Makefile where the final target depends on all sub-jobs) and enforces a hard concurrency cap via `-J <N>`, removing the need for manual throttling logic
+    - c. Professor C recalls a past workshop (Rutgers or Hopkins) where 25 users all fired jobs at 25 shared machines via a P-make-like tool and ended up less efficient than just using their own machines — a cautionary anecdote for over-parallelizing
+
+- **Aurora enhancement progress (Sunil)**
+  - **Starting point**
+    - after Aurora submission, worked on combining other teams' enhancement front-ends with proposal-one components, since the team's own submission lacked a speech-enhancement stage
+  - **LDA redesign**
+    - new filters trained on clean speech (instead of the narrow-band filters originally submitted) gave a slight, not major, improvement over the submitted system — appropriate since the signal is already cleaned up post-enhancement, unlike the original proposal-one training condition
+  - **On-line normalization**
+    - the submitted mean/variance update time constant doesn't suit enhanced speech; with that value, on-line normalization gave no improvement, and Sunil didn't have time to tune the update-value/time-constant further to see if it could help
+  - **Endpoint-information experiment**
+    - I. supplying speech/nonspeech endpoints to the plain Aurora baseline (no enhancement at all) improved it by 22% overall — a check on how much the upcoming endpointed-speech phase alone would shift results, independent of any enhancement work
+    - II. on one SpeechDat-Car condition (Spanish) endpoints alone gave a 50% improvement — large enough that further enhancement work barely matters there
+    - III. consequence: the qualification bar was cut from 50% to roughly 25% for well-matched, and the discussion establishes participants may use the full utterance (not just the endpointed span) for things like noise estimation — only recognition itself is constrained to the endpointed region
+    - IV. Professor C notes this should make spectral-subtraction-style methods work better generally, since mistaken silence/noise inclusion goes away — though he's skeptical endpoints should replace a shared, consistently-applied VAD standard
+  - **Signal-subspace approach**
+    - after a four-week vacation, picked up the signal-subspace method (decomposing the noisy signal into signal + noise subspaces, estimating clean speech from the signal subspace) as a third enhancement avenue beyond spectral subtraction and Wiener filtering, since the submission review showed those two already dominate; currently prototyped in Matlab to validate correctness before porting to C and checking into the group's shared code repository, once it shows positive results
+
+- **Proposal-one vs France Telecom (Dave / PhD D, with PhD A and PhD B)**
+  - **Setup**
+    - took France Telecom's provided speech samples — cepstral features extracted at the handset after France Telecom's own Wiener filter and back-end blind equalization — and ran the (near-)full proposal-one system on top, with a modification to reduce the delay of the LDA filters
+  - **Distinguishing point clarified**
+    - the underlying enhancement (Wiener filter on the handset side) is essentially the same technique; the residual difference between teams is mainly which code computes the cepstrum from the enhanced speech
+  - **Result**
+    - plugging in spectral subtraction improved results significantly, but only once the on-line normalization time constants were retuned — the submitted value did nothing whether normalization was on or off; an optimum exists but hasn't been pinned down
+  - **Other changes that helped**
+    - new LDA filters (as above) and a 64Hz cutoff, which — likely due to other changes — no longer hurts on TI-digits
+  - **Comparison to France Telecom**
+    - i. new system is consistently better on mismatch and high-mismatch conditions
+    - ii. slightly (not statistically significantly) worse on well-matched — but even a small loss still shows up as "worse" on the results spreadsheet
+    - iii. expected to matter less once frame dropping is added to the baseline system, which should lift HM/MM scores broadly for everyone and even out each team's relative contribution across well-matched/mismatch/high-mismatch
+  - **What "well-matched" means**
+    - defined operationally as a 70/30 train/test split of the same database (not calibrated by SNR like TI-digits' artificially matched noise) — natural recordings still carry some mismatch from differing noise levels and silence-frame content between splits, so it's "matched" only in the sense of coming from the same broad distribution, not guaranteed identical conditions
+    - Professor C questions whether well-matched is even realistic as a target condition, since ordinary users rarely have perfectly matched training data for their own car; the counter-argument (a company recording many drivers across many cars to approximate a population match) doesn't fully convince him
+
+- **Combining enhancement techniques**
+  - **Spectral-subtraction domain**
+    - can run on mel energies or on FFT bins; some submissions do it on FFT bins, others on mel energies; nobody in the room is sure which is better — Sunil suggests FFT bins matter more if you want to reconstruct the speech waveform, but for recognition it may not matter much since a linear weighting follows either way; PhD D notes the two give different outputs without a clear pros/cons picture
+  - **Two-stage enhancement**
+    - most other Aurora submissions run their enhancement twice (clean up, then clean up again) and see a real gain from it; PhD D plans to borrow this idea for the signal-subspace implementation; Professor C separately suggests combining Sunil's and Dave's techniques directly — e.g., running simple spectral subtraction first to raise SNR, then signal subspace second, or trying the order both ways
+  - **Signal subspace = KL transform + Wiener filter**
+    - Sunil clarifies the signal-subspace approach already has a built-in Wiener filter — conceptually a KL transform followed by a Wiener filter (a cascade)
+    - it performs poorly at low SNR and with colored noise because it depends on inverting the noise covariance matrix, which must be positive definite — reliably true for white noise but not for colored noise; colored-noise cases are handled by inverse-filtering to whiten the noise first, then re-filtering after reconstructing the speech
+    - Professor C connects this to a general principle: don't orthogonalize (e.g., via KL/PCA) when the signal is noisy — the same issue came up in his and Herve's discussions of multi-band-to-cepstral conversion; he half-jokingly suggests doing spectral subtraction, then deliberately adding noise back, which is roughly what JRASTA effectively does to counter noise
+  - **Vector Taylor Series (VTS)**
+    - a first- or second-order Taylor-series approximation of the nonlinear channel-plus-noise transformation between clean and noisy cepstra, used to remove noise and channel effects in the cepstral domain
+    - pursued by Jose Carlos Segura's group in Grenada (a contact of PhD B's) and a contact PhD D met at ICASSP working at Lucent; the technique originally traces back to CMU
+    - flagged as a fourth avenue worth trying, alongside spectral subtraction, Wiener filtering, and signal subspace, though it will require re-checking and re-optimizing everything else built around it (on-line normalization, LDA filters)
+
+- **WSJ / large-vocabulary plans**
+  - **Next stage**
+    - the group will soon tackle Wall Street Journal with artificially added noise, parallel to what was done for TI-digits; Guenter Hirsch (and possibly Roger) and TI are believed to be generating the noisy data, though it's unclear whether they're converging on HTK or Mississippi State tools
+  - **Literature caveat**
+    - most published speech-enhancement results are reported on small-vocabulary tasks; the limited literature on continuous, large-vocabulary speech suggests spectral subtraction underperforms Wiener filtering and subspace methods there, so simple spectral subtraction may need additional optimization to be competitive at scale
+  - **Prior large-vocabulary noisy-speech experience**
+    - the group's Broadcast News evaluation handled noisy large-vocabulary speech (some focus conditions were noisy) using multi-stream techniques rather than spectral subtraction, and it helped
+    - current meeting-recording data is itself noisy and reverberant (the far-field mic), with the "digits" ritual at the end of each session; most prior meeting-data work has focused on connected digits
+    - the group is now also running continuous, large-vocabulary recognition on meeting data via a Switchboard-trained recognizer (no retraining, just adaptation Andreas has been experimenting with); nobody has yet tried the distant mike with the SRI recognizer specifically — "everybody's scared," half-joked as risking visible CPU smoke — though Professor C and Dave discussed trying some of the enhancement techniques on large-vocabulary data in the not-too-distant future
+  - **Coordination**
+    - Hari's visit in roughly a week and a half is meant to help settle on a shared plan, drawing on his own ideas too; two possible strategies floated: converge quickly on one promising technique and have everyone work different aspects of it, or run two plausible approaches in parallel for a while until one proves better
+
+- **New voicing feature (PhD B)**
+  - **Feature definition**
+    - reconstructs an approximate signal spectrum by extending the mel-filterbank coefficients, compares it against the true FFT spectrum, and computes the variance of that difference as a candidate voiced/unvoiced discriminator — hypothesis: high variance correlates with noise, low variance with speech
+    - also incorporated autocorrelation-based measures (R0, R1/R0) alongside the spectral-difference variance
+  - **Preprocessing change**
+    - required lengthening the analysis window to about 62.5ms (from the standard shorter window) to capture enough information for the feature
+  - **Experiments**
+    - a. fed the new feature directly alongside the traditional cepstral parameters
+    - b. trained a neural network on the combined features to classify voiced/unvoiced/silence
+    - c. tested on Italian and Spanish (not TI-digits)
+  - **Result**
+    - the neural-net version came out roughly on par with cepstrum-only — sometimes slightly worse, sometimes slightly better, never significantly so; feeding the raw feature directly (no neural net) performed worse than cepstrum-only
+    - Professor C encourages continuing to pursue it as a promising direction, half-joking that the neural net and HMMs might discover the right combination faster than manual feature engineering would
+
+- **Discarded-information discussion (Professor C)**
+  - **Framing**
+    - any irreversible feature condensation throws information away on purpose, to suppress variability that would otherwise hurt recognition of particular phonetic units — but it's worth asking whether something useful also got discarded in the process
+  - **Trigger**
+    - PhD B's filterbank-vs-FFT difference feature prompted the thought that comparing what's kept vs. discarded by a transform can itself reveal useful structure (e.g., for voicing)
+  - **Proposal**
+    - feed the raw FFT power spectrum into a neural net the same way the mel filterbank is currently used — alone or in combination with existing features, targeting phones (not just voiced/unvoiced) — letting the network discover what the filterbank is missing, the same way KLT or added-probability variants have been explored
+  - **Skepticism and precedent**
+    - i. PhD D notes the raw power spectrum carries a lot of variability, which could make it noisy as a stand-alone feature
+    - ii. Professor C recalls a ~10-year-old conference where a simple FFT front-end beat a neighboring poster's auditory-inspired front-end — variability is real, but well-understood statistical mechanisms can often absorb it, especially in combination rather than alone
+    - iii. the same tension recurs with data-driven LDA filters: data-driven methods can capture more structure but also risk mismatch between training and test conditions, since what they learn is itself driven by variable data — part of the group's ongoing work is finding ways to combine data-driven and non-data-driven components
+  - **Existing precedent that worked**
+    - before the current VAD-based approach, the group added a binary speech/nonspeech bit to the cepstrum and trained the HMM on it; this gave a large improvement on noisy SpeechDat-Car conditions (especially Italian) but little on TI-digits, where there was less to discriminate and utterances were already short
+  - **Related literature**
+    - an ICASSP paper (title/author not recalled, possibly on "cumulants") extracted higher-order cepstral moments/cumulants (PLP-derived) for a modest improvement on noisy small-vocabulary speech; Professor C argues a neural net implicitly approximates something similar (a nonspecific analog of higher-order moments), just less explicitly targeted
+
+- **Acoustic-event project (Grad G, qualifier work)**
+  - **Goal**
+    - propose a PhD-defining project: detect a set of acoustic events (voicing, nasality, R-coloring, burst/noise, frication, etc.) with robust primary detectors inspired by multi-band techniques and Larry Saul's graphical-models work, then feed detector outputs tandem-style into a Gaussian-mixture HMM back end for recognition
+  - **Open questions**
+    - i. which specific set of acoustic events gives adequate coverage for the later recognition step
+    - ii. how to obtain labeled training data for those events once a set is chosen
+  - **Connection noted**
+    - Professor C points out the voiced/unvoiced detector overlaps directly with PhD B's variance-difference feature, and that multi-band techniques already seem to help with voiced/unvoiced discrimination specifically
+  - **Recent work**
+    - has begun exploring TRAPS applied to these same acoustic events, to see whether that's a viable detector architecture
+  - **Personal note**
+    - was recently asked to leave International House after four years there, joking about now living in a "two-bedroom cardboard box" apartment in Albany
+
+- **Formant/peak-tracking work (Grad E)**
+  - **Context**
+    - helping outside researcher Pierre Divenyi study how listeners perceive formant transitions, using synthetic vowel-to-vowel audio files; Divenyi wants a psycho-acoustic spectrum showing how energy moves over time, to compare against listener-test data
+  - **Method**
+    - given a PLP spectrum, found the roots of the PLP-derived LPC polynomial (an approach conceptually similar to line spectral pairs, suggested by Stephane) to track spectral peaks over time; with an 8th-order polynomial, gets 3–4 complex-conjugate root pairs, each yielding one peak position — each pair can also be viewed as a second-order IIR section, potentially yielding bandwidth estimates in addition to peak/center frequency
+  - **Caveat**
+    - the tracked peaks are a psycho-acoustic proxy shaped by the PLP model rather than true formants — Professor C notes that in his own past LPC-rooting work (National Semiconductor, pre-PLP) the resulting roots sometimes matched formants and sometimes didn't, especially in real (non-synthetic) speech, where extra low-energy peaks not at true formant positions can appear; because the audio here is synthetic, the true formant values could in principle be pulled directly from the synthesizer instead, though that skips the psycho-acoustic modeling that is the actual point of the exercise
+
+- **Housing note**
+  - Sunil is still looking for permanent housing; he's currently commuting back to OGI and plans to return the 31st regardless of housing status; a room may open May 30th pending a landlord's decision by Monday, Diane has more house options to send pictures of, and labmate Grad E offered a spare bedroom as a fallback if needed
+
+- **Digits wrap-up**
+  - meeting closes with the group's usual end-of-session ritual: everyone reads the digit sequence on the bottom of their forms for the corpus

@@ -1,0 +1,100 @@
+- **Meeting recap**
+  - **Prior decisions**
+    - no teletext, incorporate the company image, drop voice recognition, a flip design, an unconventional shell-like shape, and a young/business target market
+  - **Open items**
+    - rechargeable batteries, a port, and a lost-remote alarm were carried over to investigate
+
+- **Market trends**
+  - **Research method**
+    - a hundred-subject study, plus fashion consultants in Paris and Milan
+  - **Priority ranking**
+    - i. fancy look and feel
+      - most important, twice as important as the next-ranked item
+    - ii. technologically innovative
+      - twice as important as ease of use
+    - iii. easy to use
+      - the lowest-weighted of the three
+  - **Fashion themes**
+    - fruit-and-vegetable motifs trending for clothes, shoes, and furniture; a spongy material feel also trending
+
+- **Component findings**
+  - **Standard chip**
+    - the TA1183 5 chip, already used in nearly all TV remotes to send standard signals
+  - **Battery options**
+    - a. standard AA/AAA
+      - cheapest, but considered too bulky
+    - b. dynamo (wind-up)
+      - dismissed as impractical
+    - c. solar
+      - works from room light or sunlight, but needs case-mounted cells, adds cost, and is fragile if dropped
+    - d. kinetic (watch-style)
+      - favored: charges from ordinary movement, small watch-battery cell, long observed lifespan, low draw since use is brief
+  - **Circuit board**
+    - standard silicone PCB with rubber-button contacts; sizeable flexibly, so tiny tracks allow either small or large button layouts
+  - **Standby power saving**
+    - button backlighting, if used, should auto-off after five to ten seconds of inactivity
+  - **Case material**
+    - a. plastic
+      - chosen as the main case housing, allows curved shapes
+    - b. wood
+      - deemed impractical
+    - c. titanium
+      - rejected: expensive to process, limited to boxy shapes, marks easily when dropped
+    - d. rubber
+      - proposed for buttons and cover, an anti-RSI material used in stress balls, gives the trending spongy feel
+  - **Swappable rubber skin**
+    - a peel-off rubber sleeve over a plastic base gives the spongy feel and lets users cheaply change the look, like mobile-phone fascias
+  - **Interface hardware options**
+    - a. bare PCB touch contacts
+    - b. rubber buttons
+      - the anti-RSI material
+    - c. LCD touch screen
+      - thin, flat, wire-free, flexible on-screen layout, kept black-and-white to control cost
+  - **Flip-hinge circuitry**
+    - two separate circuit boards, one per half, linked by cabling across the hinge
+  - **Mirror tangent**
+    - Marketing floats a compact-mirror-style flip display, dropped as off-topic for a TV remote
+
+- **Interface design findings**
+  - **Competitor review**
+    - existing remotes look visually monotonous, mostly rectangular and black/white, with inconsistent button layouts except channel and volume
+  - **Proposed layout**
+    - a graphical, icon/touch interface on the flip-top's LCD half, with dedicated rubber buttons for volume and channel on the other half
+  - **Ergonomic tweak**
+    - PM proposes the frequently used physical buttons sit at the bottom, near the thumb, with the LCD/GUI at the top
+  - **Usability findings**
+    - cluttered buttons and inconsistent repetition are common competitor flaws; only channel and volume controls are consistent enough to standardize on
+  - **Voice recognition update**
+    - a company division has a new speech-recognition feature; needs a cost check, motivated by customer demand for a "find my remote" response
+  - **Color inspiration**
+    - take vibrant fruit colours, e.g. chilli red or tomato red, as inspiration rather than literally shaping the remote like a fruit
+
+- **Stylus debate**
+  - **Pointer idea**
+    - Marketing suggests a pull-out stylus to avoid RSI from touch-screen presses
+  - **Objections**
+    - a stylus is easily lost, and a frequent channel-switcher would find it irritating and might wear out the touchpad faster than physical buttons
+  - **Resolution**
+    - no dedicated stylus needed — users could improvise with any pen or pencil
+
+- **Final decisions**
+  - **Power**
+    - kinetic charging with a small watch-type battery, replacing the earlier port/dock idea
+  - **Display**
+    - black-and-white LCD on the flip-top's upper half, cheaper than colour and upgradeable later
+  - **Buttons**
+    - anti-RSI rubberised buttons on the lower half for frequent functions
+  - **Materials**
+    - a plastic case body with a swappable rubber cover for the spongy feel and colour variety
+  - **Colour direction**
+    - a fruit-and-vegetable colour palette on the rubber cover, not a literal fruit or vegetable shape
+  - **Locator feature**
+    - a voice-recognition "I'm here" response, pending a cost check, with a whistle-triggered keychain locator as a cheaper fallback
+  - **Branding**
+    - company logo included; PM argues visible distinctiveness plus advertising, not just branding, will make the product recognizable
+
+- **Wrap-up**
+  - **Time check**
+    - meeting wraps early, forty minutes allotted before the next session
+  - **Consensus check**
+    - the group agrees they're moving in a clear direction

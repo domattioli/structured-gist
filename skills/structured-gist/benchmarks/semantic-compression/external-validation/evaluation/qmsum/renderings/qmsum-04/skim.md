@@ -1,0 +1,40 @@
+- **Compute farm update**
+  - **New hardware**
+  - **Run command tool**
+  - **Load etiquette**
+  - **P-make vs run-command**
+  - **Eviction behavior**
+- **Aurora post-submission work**
+  - **LDA experiment**
+  - **Online normalization**
+  - **Endpoint-information test**
+  - **Signal subspace work**
+- **France Telecom comparison**
+  - **Setup**
+  - **Preliminary results**
+- **Endpoint/VAD debate**
+  - **Well-matched definition**
+  - **Consensus**
+- **Two-stage enhancement idea**
+  - nearly every submitted system uses two stages of speech enhancement rather than one, so Professor C suggests trying combinations of the group's own techniques rather than each working alone.
+- **VTS noise modeling**
+  - PhD D flags Vector Taylor Series techniques, from researchers in Granada and at Lucent (originally CMU), which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion.
+- **Subspace vs Wiener**
+  - **Relationship**
+  - **Weakness**
+  - **Professor C's aside**
+- **Large-vocab noisy plans**
+  - **Wall Street Journal task**
+  - **Meeting-recorder data**
+  - **Broadcast News precedent**
+- **New voicing feature**
+  - **Feature design**
+  - **Result**
+- **FFT neural-net idea**
+  - Professor C proposes feeding the raw FFT power spectrum straight into a neural network, the same way the filter bank is used, so the network discovers what the filter bank throws away that's actually useful.
+- **Acoustic-event qualifier project**
+  - **Core idea**
+  - **Open issues**
+  - **Connection noted**
+- **LPC peak-tracking work**
+  - Grad E, helping researcher Pierre Divenyi study vowel-to-vowel formant transitions, finds the roots of the PLP-derived LPC polynomial to track spectral peaks over time in synthetic speech.

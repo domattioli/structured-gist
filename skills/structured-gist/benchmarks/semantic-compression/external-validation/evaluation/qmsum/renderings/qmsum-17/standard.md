@@ -1,0 +1,70 @@
+- **Meeting recap**
+  - **Audience targeting**
+    - Marketing's target-audience work from last meeting was reviewed briefly.
+  - **iPod-style button idea**
+    - Raised last time but left unresolved going into this session.
+- **Components & materials**
+  - **Custom parts**
+    - a. case
+      - Hard plastic or similar, custom-designed to protect the remote and locator.
+    - b. circuit board
+      - Custom-designed each time to route button input to output, then mass-printed by the circuit supplier.
+  - **Standard parts**
+    - a. buttons and iPod-style wheel
+    - b. infrared LED
+      - Comes bundled with the circuit board.
+    - c. radio sender and receiver
+    - d. locator beeper/buzzer
+  - **Material options**
+    - a. rubber
+      - Requires rubber buttons, so incompatible with a plastic-button design.
+    - b. plastic
+    - c. wood
+    - d. titanium
+      - Ruled out: only usable in flat cases and too heavy.
+  - **Chip cost tradeoff**
+    - The iPod-style scroll wheel needs the pricier "regular" grade chip instead of the cheapest "minimal" option.
+- **Market trends**
+  - **Priority order**
+    - i. fashion and fancy look
+    - ii. technological innovation
+    - iii. ease of use
+  - **Fruit & vegetable theme**
+    - Milan/Paris fashion-watchers flag fruit-and-vegetable as the current trend; open question is whether to print the motif or shape the remote like actual produce.
+  - **Spongy feel**
+    - Trend calls for a spongy texture, left for the Industrial Designer to find a workable material.
+- **Screen debate**
+  - **Screen argument**
+    - Scrolling a wheel through up to 200 channels seemed to need some on-screen feedback to know where you are.
+  - **No-remote-screen resolution**
+    - The group settles on showing the interface (channel number, menu) on the TV itself, since a screen on the remote would need a pricier advanced chip.
+  - **Resulting form factor**
+    - a. just power and a central wheel/button, no extra buttons
+    - b. small, circular, handheld
+    - c. worked with thumb or index finger, iPod-style
+  - **DVD scope correction**
+    - The Project Manager clarifies the product won't support DVD, simplifying the interface needs.
+- **Shape & branding synthesis**
+  - **Two-material concept**
+    - A soft, stress-ball-like squishy grip paired with a harder plastic face, matching the "spongy" trend while keeping a durable shell.
+  - **Swappable fruit/veg face**
+    - The plastic face or squishy grip could be swapped for different fruit/vegetable colours or shapes, like interchangeable phone covers, to match a room's decor.
+  - **Prototype-and-test plan**
+    - Team proposes building two prototypes with different swap approaches, checking cost with the relevant department, and asking users which they prefer.
+  - **Open questions**
+    - a. branding placement
+      - Where the company's silver/yellow colours and logo fit against a fruit-themed cover.
+    - b. battery/assembly placement
+      - Batteries sit under the plastic case; the squishy part needs to snap off as one unit.
+- **Energy source**
+  - **Options considered**
+    - a. batteries
+    - b. solar power
+    - c. dynamo (kinetic, generates energy on movement)
+    - d. wind-up/kinetic winding
+  - **Decision**
+    - Batteries are chosen; solar isn't compatible with a rubber case, and there's no cost data yet for the kinetic/dynamo options.
+- **Next steps**
+  - a. Industrial Designer and User Interface move to prototyping (play-dough) for look-and-feel design.
+  - b. Marketing moves to product evaluation.
+  - c. Further instructions come from each member's personal coach.

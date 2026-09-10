@@ -1,0 +1,61 @@
+- **Compute farm update**
+  - **New hardware**
+    - about twelve new SUN Blade-100 machines were ordered to expand the group's compute farm.
+  - **Run command tool**
+    - "run-command" finds the fastest currently-available machine, exports the job there (duplicating your environment), and lets you constrain it by attributes like OS, memory, speed, or a specific machine name.
+  - **Load etiquette**
+    - users should cap themselves around ten simultaneous jobs to avoid saturating the network and delaying everyone else's work.
+  - **P-make vs run-command**
+    - P-make manages a whole batch of dependent jobs and caps how many run at once, while run-command fires off one job at a time with no awareness of other jobs you're running in parallel.
+  - **Eviction behavior**
+- **Aurora post-submission work**
+  - **LDA experiment**
+    - plugging redesigned (clean-speech-trained) LDA filters onto other teams' enhanced-speech submissions gave a slight, not dramatic, improvement.
+  - **Online normalization**
+    - adding online cepstral normalization on top didn't help with the originally submitted time constant, and Sunil didn't have time to retune it further.
+  - **Endpoint-information test**
+    - just giving the Aurora baseline the true speech/nonspeech endpoints (no enhancement at all) improved it by twenty-two percent overall, and by fifty percent on the Spanish SpeechDat-Car set — enough that the qualification threshold was lowered from fifty to twenty-five percent.
+  - **Signal subspace work**
+    - Sunil is now prototyping a signal-subspace speech-enhancement approach in Matlab, planning to port it to C once it shows promise.
+- **France Telecom comparison**
+  - **Setup**
+    - the France Telecom-based experiments start from Wiener-filtered features extracted at the handset, then run the full proposal-one system on top, versus Sunil's simpler LDA-only pipeline.
+  - **Preliminary results**
+    - the modified system beats France Telecom on mismatched and high-mismatch conditions but is slightly worse on well-matched, and the group agrees they need a results table to compare properly.
+- **Endpoint/VAD debate**
+  - **Well-matched definition**
+    - "well-matched" simply means seventy percent of the database trains and thirty percent tests, so it's matched only if the database is large and varied enough — not a guarantee.
+  - **Consensus**
+    - systems get given speech start/end points but can still use audio outside them, and adding endpoint info will shrink each system's apparent contribution on the noisier mismatch conditions much more than on well-matched.
+- **Two-stage enhancement idea**
+  - nearly every submitted system uses two stages of speech enhancement rather than one, so Professor C suggests trying combinations of the group's own techniques rather than each working alone.
+- **VTS noise modeling**
+  - PhD D flags Vector Taylor Series techniques, from researchers in Granada and at Lucent (originally CMU), which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion.
+- **Subspace vs Wiener**
+  - **Relationship**
+    - the signal-subspace method is essentially a KL transform followed by a Wiener filter.
+  - **Weakness**
+    - signal subspace performs poorly at low SNR and with colored noise, since it depends on inverting a noise covariance matrix that must be positive-definite; the fix is to whiten the noise first and re-color after reconstruction.
+  - **Professor C's aside**
+- **Large-vocab noisy plans**
+  - **Wall Street Journal task**
+    - the group's next stage moves to Wall Street Journal with artificially added noise, and spectral subtraction alone tends to underperform Wiener/subspace approaches on large-vocabulary tasks in the literature.
+  - **Meeting-recorder data**
+    - ICSI's own meeting recordings are being run through an untrained Switchboard-based large-vocabulary recognizer with some adaptation, but no one has yet tried the distant-mike condition with the SRI recognizer.
+  - **Broadcast News precedent**
+- **New voicing feature**
+  - **Feature design**
+    - PhD B compares the FFT-derived spectrum to the reconstructed spectrum from the mel filter bank and uses the variance of their difference as a new feature, requiring a longer (62.5ms) analysis window.
+  - **Result**
+    - tested on Italian and Spanish, feeding the new feature through a neural network gave roughly the same results as cepstral features alone; using it raw, without a neural network, actually hurt.
+- **FFT neural-net idea**
+  - Professor C proposes feeding the raw FFT power spectrum straight into a neural network, the same way the filter bank is used, so the network discovers what the filter bank throws away that's actually useful.
+- **Acoustic-event qualifier project**
+  - **Core idea**
+    - Grad G's qualifying-exam proposal is to build robust primary detectors for acoustic events (voicing, nasality, r-coloring, burst/noise, frication), then feed their outputs tandem-style into a Gaussian-mixture HMM back-end.
+  - **Open issues**
+    - a. which acoustic events give good coverage
+    - b. how to get labeled training data
+  - **Connection noted**
+- **LPC peak-tracking work**
+  - Grad E, helping researcher Pierre Divenyi study vowel-to-vowel formant transitions, finds the roots of the PLP-derived LPC polynomial to track spectral peaks over time in synthetic speech, though real speech gives roots that don't always align cleanly with true formants.

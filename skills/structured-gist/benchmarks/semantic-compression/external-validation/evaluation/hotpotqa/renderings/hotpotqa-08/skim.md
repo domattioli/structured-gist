@@ -1,0 +1,40 @@
+- **Clay Buchholz**
+  - **Phillies pitcher, ex-Red Sox**
+  - **No-hitter, 2nd MLB start**
+  - **6'3", 190 lbs**
+- **Terry Felton**
+  - **Ex-Twins pitcher**
+  - **0-16 career record**
+  - **Most losses, zero wins**
+- **The Stratton Story**
+  - **1949 Monty Stratton biopic**
+  - **Directed by Sam Wood**
+  - **1st Stewart/Allyson pairing**
+- **Douglas Morrow**
+  - **Screenwriter, film producer**
+  - **Oscar for Stratton Story**
+  - **Died 1994, aneurysm**
+- **Joe Erautt**
+  - **Canadian-born White Sox catcher**
+  - **32 games, 1950–51**
+  - **Elder brother of Eddie Erautt**
+- **Jonathan Pettibone**
+  - **Ex-Phillies pitcher**
+  - **Father also an MLB pitcher**
+  - **Drafted 3rd round, 2008**
+- **Tim Keefe**
+  - **19th-century dominant pitcher**
+  - **2nd pitcher to 300 wins**
+  - **Hall of Fame, 1964**
+- **Monty Stratton**
+  - **MLB pitcher, lost leg 1938**
+  - **Comeback in minors, 1946–53**
+  - **Subject of 1949 biopic**
+- **Jim Palmer**
+  - **Orioles pitcher, 19 seasons**
+  - **Most 1970s wins (186)**
+  - **Hall of Fame, 1990**
+- **Lance Niekro**
+  - **Ex-Giants player, 2003–07**
+  - **Head coach, Florida Southern**
+  - **Nephew/son of MLB Niekros**
