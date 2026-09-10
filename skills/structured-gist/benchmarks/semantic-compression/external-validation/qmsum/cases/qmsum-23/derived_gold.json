@@ -1,0 +1,214 @@
+{
+  "case_id": "qmsum-23",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "User Interface said the basic function of a remote control is to send messages to the television set.",
+      "category": "descriptive",
+      "source_quote": "the function of remote control is basically to send messages to the television set .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "User Interface identified a 'multi-function' type of remote control with many possibilities but lacking a good feel.",
+      "category": "descriptive",
+      "source_quote": "Then I found uh two different kind of remote controls , the multi-function uh remote control with many possibilities , but um the lack of the feeling I already mentioned uh in the previous uh discussion .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "User Interface identified an 'ease-of-use' type of remote control with fewer possibilities but a great feel when touching the buttons.",
+      "category": "descriptive",
+      "source_quote": "And the ease-of-use remote control with uh the less p possibilities but a great feeling in in touching the buttons .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "User Interface said her personal preference was the easy-to-use remote control because of its user-friendliness and trendier design, even though the new target audience was people under 40.",
+      "category": "decision",
+      "source_quote": "{vocalsound} Um but um {disfmarker} yeah . My personal preferences were ease of uh {disfmarker} the easy to use remote control , because uh the user-friendliness and uh {disfmarker} it can be more trendy in in user design . But um your new goal f was for uh people than {disfmarker} less than forty years old .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "User Interface suggested some multi-function elements could be combined in (minus teletext buttons, cutting about eight buttons), but concluded that the easy-to-use remote control was the best overall option.",
+      "category": "decision",
+      "source_quote": "So maybe um the multi-function can be implemented in uh in our design . But it should b I think it should be a combination , but teletext buttons are not uh in our design . So it should uh take out , well , eight buttons or so . But my {disfmarker} in {gap} my opinion , the the easy to use R_C_ is uh the best uh possi possibility for us .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "The Project Manager noted that, according to Marketing's data, people do not use all the extra features very often.",
+      "category": "descriptive",
+      "source_quote": "Well , um according to Ruud , um people do not use um all the extra features very very often .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f7",
+      "text": "Marketing noted that teletext, which the team was dropping, had been the second-most used function.",
+      "category": "descriptive",
+      "source_quote": "Well , t uh we won't support teletext which which was the third-most {disfmarker} the second-most used function .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f8",
+      "text": "Marketing said channel selection was obviously the most important/most used function.",
+      "category": "descriptive",
+      "source_quote": "Uh well {disfmarker} yeah , channel selection is obviously the most important .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f9",
+      "text": "User Interface said the design should stick to basic functions and not need to support DVD players or similar extra devices.",
+      "category": "constraint",
+      "source_quote": "Well , so it just th the basic functions . And we don't have to use it for D_V_D_ players uh and all kind of stuff .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f10",
+      "text": "The Project Manager concluded the team should go for the easier, fewer-function design.",
+      "category": "decision",
+      "source_quote": "Uh uh uh I think we should go for the easier one .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f11",
+      "text": "The Industrial Designer proposed saving costs by not implementing many functions, and using the savings for a nicer design and thinking more about the user interface.",
+      "category": "next_action",
+      "source_quote": "we should save costs uh by not implementing a lot of functions and uh the money that we can save from that we should use for uh having a nice design and uh thinking about the user interface",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f12",
+      "text": "The Industrial Designer suggested using a stick control where moving it to a position could light up an indicator, showing which button was pushed or which action (channel or volume change) had just occurred.",
+      "category": "next_action",
+      "source_quote": "Well , maybe we can use a light for that . When you move the stick to a to a position , maybe uh a light next to it can lit up . So you know I've just uh pushed the button , or I changed the channel or t uh turned up the volume . Something like that .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f13",
+      "text": "Marketing noted that using the stick for both volume control and channel selection would combine the two most important functions into a single control.",
+      "category": "descriptive",
+      "source_quote": "And if you use that stick for volume control and channel uh selection , you have the m two most important functions in one uh button .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f14",
+      "text": "User Interface proposed replacing the stick with a round button that could be pushed in four directions.",
+      "category": "next_action",
+      "source_quote": "It's just an easy uh way of of a round button what {disfmarker} which can be pushed in four directions . Instead of a stick .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f15",
+      "text": "User Interface explained the round button was preferable because a stick is vulnerable to breaking if dropped.",
+      "category": "cause_rationale",
+      "source_quote": "A stick is v vulnerab vulnerable when it's falling down",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f16",
+      "text": "The Industrial Designer said the round-button design would also look more fancy.",
+      "category": "descriptive",
+      "source_quote": "And {disfmarker} Yes , and this also looks more fancy , I think .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f17",
+      "text": "The Industrial Designer said the design would likely attract a wider public.",
+      "category": "descriptive",
+      "source_quote": "I think it it will attract uh more uh uh public , I think .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f18",
+      "text": "User Interface said he personally would not buy a remote control without the ten digit number buttons.",
+      "category": "descriptive",
+      "source_quote": "I wouldn't buy it personally . A remote control without the ten digits .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f19",
+      "text": "The Industrial Designer questioned whether the ten digits were necessary, noting that a regular TV user just watching standard Dutch networks could get by with about ten buttons.",
+      "category": "unresolved_question",
+      "source_quote": "But if you're uh a regular T_V_ user , and you just want uh to watch the the Dutch television networks , well , you can uh {disfmarker} {gap} {disfmarker} you can use uh about ten buttons . That's enough .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f20",
+      "text": "Marketing noted that younger people would like speech/voice recognition, though it might be expensive and hard to implement.",
+      "category": "descriptive",
+      "source_quote": "And um there are some numbers about uh speech recognition here that uh younger people would like it . Uh it might be expensive and uh hard to implement , but it would be a solution uh for {disfmarker}",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f21",
+      "text": "The Industrial Designer said adding voice recognition would make it very easy to change the channel.",
+      "category": "descriptive",
+      "source_quote": "So um when you add uh speech recognition to your remote control , uh it's very easy to change uh the channel . That's one thing .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f22",
+      "text": "The Industrial Designer said voice recognition would also make it easy to find the remote control if it was lost.",
+      "category": "descriptive",
+      "source_quote": "And it's very easy uh to find your remote control .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f23",
+      "text": "User Interface said the team needed to make a decision between keeping the ten digit buttons or adopting voice recognition.",
+      "category": "unresolved_question",
+      "source_quote": "we have to i to make um a decision between the ten digits or the voice recognition .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f24",
+      "text": "The Industrial Designer said voice recognition's other advantage was making it easy to implement a find-the-remote-control function.",
+      "category": "descriptive",
+      "source_quote": "Yes . Well , the voice recognition has the main adva has another advantage . It's mas it makes it very easy for us to implement the find uh find the remote control button {disfmarker} uh remote control function .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f25",
+      "text": "The Industrial Designer noted the one disadvantage of voice recognition was that power saving would be more difficult, giving the batteries a shorter life.",
+      "category": "constraint",
+      "source_quote": "There's only one disadvantage uh by implementing this . Um the power saving power saving will be a bit more difficult . So we can expect that there will be a less longer life to the batteries .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f26",
+      "text": "The Industrial Designer said there was no way to give the remote feedback about its current state because the team could not implement a user-history system, which is the design problem the light-indicator-on-the-stick idea (f12) was proposed to address.",
+      "category": "constraint",
+      "source_quote": "There's {disfmarker} no , but there's no way to do that , because we cannot implement that kind of the system .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "contrast",
+      "text": "The round four-direction button was proposed instead of a stick specifically because a stick is vulnerable to breaking if dropped.",
+      "fact_ids": ["f14", "f15"],
+      "evidence_mode": "explicit",
+      "source_quote": "A stick is v vulnerab vulnerable when it's falling down",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "r2",
+      "type": "cause_rationale",
+      "text": "The tradeoff between keeping the ten digit buttons and adopting voice recognition remained unresolved within this evidence: voice recognition's advantage (it also enables a find-the-remote function) was weighed against its drawback (reduced battery life), but no final choice between the two options was stated.",
+      "fact_ids": ["f18", "f19", "f23", "f24", "f25"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "question_fact_ids": ["f2", "f3", "f4", "f5", "f12", "f13", "f14", "f15", "f19", "f20", "f23", "f24", "f25", "f26"],
+  "corpus_defect_notes": [
+    "Coverage-audit correction: added f26, a task-critical fact for 'summarize the discussion about user interface design' that was missing — the Project Manager's question about how the remote reports its state back to the user, and the Industrial Designer's confirmation that this could not be done because a user-history system could not be implemented, which is the actual problem the light-indicator-on-the-stick idea (f12) was proposed to solve. Also fixed r2: it previously claimed the ten-digits-vs-voice-recognition tradeoff 'was resolved in favor of voice recognition,' which overstated the evidence (span:1 ends on the battery-life drawback with no final decision stated) and directly contradicted f23's own 'unresolved_question' categorization of the same exchange. Changed r2's type from 'decision_outcome' to 'cause_rationale' and reworded its text to state that the tradeoff remained unresolved, adding f23 to its fact_ids to make that explicit."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

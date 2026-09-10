@@ -1,0 +1,38 @@
+{
+  "case_id": "hotpotqa-05",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The Australian Street Stock Championship is a Dirt track racing championship held annually to determine the Australian national champion.",
+      "category": "descriptive",
+      "source_quote": "The Australian Street Stock Championship is a Dirt track racing championship held each year to determine the Australian national champion.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Australian Street Stock Championship::sent0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Dirt track racing is a type of auto racing performed on clay or dirt surfaced oval tracks.",
+      "category": "descriptive",
+      "source_quote": "Dirt track racing is a type of auto racing performed on clay or dirt surfaced oval tracks.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Dirt track racing::sent0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "coreference_bridge",
+      "text": "The \"Dirt track racing\" championship type named in the Australian Street Stock Championship description is the same activity defined as auto racing performed on clay or dirt surfaced oval tracks.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [
+        {"dataset": "hotpotqa", "native_evidence_id": "Australian Street Stock Championship::sent0"},
+        {"dataset": "hotpotqa", "native_evidence_id": "Dirt track racing::sent0"}
+      ]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

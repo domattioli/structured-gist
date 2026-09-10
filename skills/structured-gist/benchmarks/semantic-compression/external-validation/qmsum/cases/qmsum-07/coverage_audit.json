@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-07",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Professor C's full workshop anecdote (f3-f5) is completely and accurately captured, and PhD F's shared-resource advice to Grad G (f1-f2) is reasonably included as background given the reference_answer itself frames the professor's remark as 'adding to PhD F's remarks.' Quotes checked verbatim against the supplied evidence. Both relations state real connective claims rather than restating fact pairs. No issues found."
+}

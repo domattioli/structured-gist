@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-05",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both facts' source_quotes are exact and complete matches of the relevant sentences in source.md; f2 alone already states the literal reference_answer ('Dirt track racing is a type of auto racing performed on clay or dirt surfaced oval tracks'). The coreference_bridge relation correctly ties the championship's race type to that definition. No missing, redundant, unsupported, or mis-granularized units found."
+}

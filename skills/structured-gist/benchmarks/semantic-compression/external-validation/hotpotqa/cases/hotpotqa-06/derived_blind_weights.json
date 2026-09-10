@@ -1,0 +1,11 @@
+{
+  "case_id": "hotpotqa-06",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3},
+  "relation_weights": {"r1": 3},
+  "rationale": {
+    "f1": "Without this fact there is no link from Postal 2 (the question's subject) to any song at all, so the reader could not know which song's release year to look up.",
+    "f2": "This fact is the only place the release year (2003) appears, so losing it removes the literal answer even though the song title would still be known from f1.",
+    "r1": "f2's own source_quote refers to the song only as 'It' with no title given, so this relation is what a compression-only reader needs to resolve that pronoun back to 'Where Is the Love?' and connect the 2003 release date to the Postal 2 scenes in f1; without it the year in f2 is orphaned from the question's subject."
+  }
+}

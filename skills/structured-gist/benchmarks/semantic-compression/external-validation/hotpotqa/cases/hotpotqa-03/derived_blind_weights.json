@@ -1,0 +1,11 @@
+{
+  "case_id": "hotpotqa-03",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3},
+  "relation_weights": {"r1": 2},
+  "rationale": {
+    "f1": "Without this fact there is nothing tying 'the motion picture studio which produced Marvel One-Shots' (the question's subject) to any named studio, so the reader could not know which studio's naming history to check.",
+    "f2": "This fact is the only place the former name and time period (Marvel Films, 1993 to 1996) appear, so losing it removes the literal answer.",
+    "r1": "Both facts already name the same studio ('Marvel Studios') verbatim, so the coreference this relation states is recoverable by simple string-matching even if the relation itself is dropped, making it reinforcement rather than a strict requirement."
+  }
+}

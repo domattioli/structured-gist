@@ -1,0 +1,97 @@
+{
+  "case_id": "qmsum-06",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "PhD D said some people the team might work with have implemented VTS (Vector Taylor Series) techniques, used to model the transformation between clean and noisy cepstra.",
+      "category": "descriptive",
+      "source_quote": "they have implementation of VTS techniques so it 's um , Vector Taylor Series that are used to mmm , {vocalsound} uh f to model the transformation between clean cepstra and noisy cepstra .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "PhD D explained that under the standard channel-plus-noise model, the relationship is a nonlinear transformation in the cepstral domain, which can be approximated with a first- or second-order Taylor series and used to remove the noise and channel effect.",
+      "category": "descriptive",
+      "source_quote": "there is a way to approximate this using uh , first - order or second - order Taylor Series and it can be used for {vocalsound} uh , getting rid of the noise and the channel effect .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "PhD D said one person working on this in the cepstral domain is a guy in Grenada.",
+      "category": "descriptive",
+      "source_quote": "So there is one guy in Grenada ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "PhD B said the researcher in Grenada is a friend of his.",
+      "category": "descriptive",
+      "source_quote": "Yeah , in Grenada one of my friend .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "PhD B named the researcher in Grenada as Jose Carlos Segura.",
+      "category": "descriptive",
+      "source_quote": "Uh , Jose Carlos Segura .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Professor C said he did not know Jose Carlos Segura.",
+      "category": "descriptive",
+      "source_quote": "I don't know him .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "PhD D also mentioned a second person working on VTS, at Lucent, whom he had met at ICASSP.",
+      "category": "descriptive",
+      "source_quote": "and another in {pause} uh , Lucent that I met at ICASSP .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "PhD A asked whether VTS had been proposed by CMU, and PhD B confirmed that the idea originally came from CMU.",
+      "category": "descriptive",
+      "source_quote": "Yeah , yeah , yeah . Originally the idea was from CMU .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "identification",
+      "text": "The 'guy in Grenada' PhD D refers to is identified by PhD B as his friend Jose Carlos Segura.",
+      "fact_ids": ["f3", "f4", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "Uh , Jose Carlos Segura .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "contrast",
+      "text": "Although PhD B named Jose Carlos Segura as the researcher in Grenada, Professor C said he did not know him.",
+      "fact_ids": ["f5", "f6"],
+      "evidence_mode": "explicit",
+      "source_quote": "I don't know him .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r3",
+      "type": "causal",
+      "text": "The VTS technique that the Grenada and Lucent researchers work on originated as an idea from CMU.",
+      "fact_ids": ["f1", "f8"],
+      "evidence_mode": "explicit",
+      "source_quote": "Yeah , yeah , yeah . Originally the idea was from CMU .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f8"],
+  "corpus_defect_notes": [
+    "The native reference_answer states that the VTS technique the Grenada researcher (Jose Carlos Segura) developed was 'to do voice-unvoice'. The evidence span for this question does not support that purpose: it describes VTS as a technique for modeling the nonlinear transformation between clean and noisy cepstra under a channel-plus-noise model, in order to remove noise and channel effects, not for voiced/unvoiced discrimination. The voice/unvoiced discrimination topic (PhD B's separate variance-based feature) appears elsewhere in this transcript but is not part of this question's evidence span and is not attributed to VTS or to the Grenada researcher anywhere in the source."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

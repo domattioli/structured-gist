@@ -1,0 +1,232 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-13",
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass (case qmsum-13): extended f9's source_quote to cover Sarah Stone's full recommendations turn (the quote previously covered only the statutory-curriculum recommendation, while the fact's text listed several other recommendations from the same turn) so the fact is now fully supported. Added f12, f13, and f14 to address the severe coverage imbalance the audit flagged in span:2 (~72 turns, only 2 facts): f12 captures Liz Williams's point that undiagnosed additional learning needs/communication problems often lead children to be labelled 'naughty' and off-rolled; f13 captures Dr Ian Johnson's point about the lack of examined Welsh-medium EOTAS provision; f14 captures his point about the vulnerability created by delays between exclusion and entering EOTAS provision."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "PRUs: clearly, we know that they are following a set curriculum; they are inspected; they are under the control of the local authorities",
+      "text": "David Hopkins said PRUs follow a set curriculum, are inspected, and are under local authority control, so their provision was considered satisfactory, unlike home tuition or third-party commissioned EOTAS provision where quality assurance is harder to guarantee."
+    },
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "Collaboration, I think, is the answer, between the PRUs and the schools. Collaborate and have joint working to ensure that the learners have what they need.",
+      "text": "Sharon Davies said collaboration and joint working between PRUs and schools is the answer to ensuring learners have the curriculum support they need."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "I think the biggest challenge is the capacity. So, I suppose that comes down to additional funding, because I'd like a dedicated educational psychologist spending their time possibly only with our PRU youngsters and EOTAS provision, but we haven't got the capacity because of the demands on us from the wider system.",
+      "text": "Nick Williams said the biggest challenge to meeting EOTAS/PRU learners' needs was capacity, tying back to a lack of funding for a dedicated educational psychologist to work solely with PRU and EOTAS pupils."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "sometimes it takes years to build up on that expertise, and therefore, it's quite niche, and once that person has moved on, it's really difficult to start all over again.",
+      "text": "Sharon Davies said specialist expertise for EOTAS/PRU staff is niche and takes years to build up, so when a staff member with that expertise leaves or retires, it is very difficult to start again."
+    },
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "At the moment, a newly qualified teacher can't work in this type of provision",
+      "text": "Nick Williams said newly qualified teachers currently cannot work in EOTAS/PRU provision, and argued that pathways into this type of provision should be built into initial teacher training and ongoing professional development, in both directions between mainstream schools and specialist provision."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "there are very small numbers of staff working in that provision. There really isn't the capacity for them to access professional training.",
+      "text": "Dawn Bowden noted that, per Estyn evidence, very small numbers of staff work in EOTAS/PRU provision with little capacity for them to access professional training; Sharon Davies agreed the picture is improving but still limited."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f7",
+      "source_quote": "it's a capacity issue, because if we take them out of the provision, it's difficult for perhaps a supply teacher to come in and manage that class because of the demands. So, it's not an easy conundrum.",
+      "text": "Nick Williams said taking specialist staff out of EOTAS/PRU provision to share expertise or attend training is difficult because it is hard to bring in a supply teacher to cover the class given the demands on the provision."
+    },
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f8",
+      "source_quote": "there should be statutory provision regarding a whole-school approach",
+      "text": "Dr Ian Johnson said a statutory whole-school approach would ensure everyone in the school community has the knowledge and awareness of mental health and emotional well-being needed, rather than relying on individual schools' varying commitment."
+    },
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f9",
+      "source_quote": "So, this is where we set out nine recommendations in our report and I think the major message is, as I said before, that we don't have a simple answer to this one. However, there are a number of things that we need to do: we need to recognise the impact of adverse childhood experiences; we need to train teachers so that they have an understanding response and are much more confident in that; we need to learn from what works; we need to listen to the voices of young people themselves. That's terribly important, because—. I know this committee is very well aware of that, because you've done very good work listening to the direct voices of young people, but they are very often able to articulate quite a lot about what is needed. I would also add to that that we would want young people themselves to be skilled up in understanding and recognising their own emotions, because this is about putting in place that awareness, that consciousness, if you like, about being able to name and recognise feelings. There's great international evidence on the importance of that and the benefit of it, which was carried out when the new curriculum was being developed, and the health aspect of that. So, we've kind of done that work in Wales. What we would like to see is that new curriculum around health and well-being and mental health and awareness being in the curriculum, so that young people, on a statutory basis—. Otherwise, you're entrenching the differences and the inequalities between teaching across Wales, because the good will do it, and perhaps others will find it much harder. So, that's a major message as well. So, I think there's a menu, if you like, and some of it is very much about respecting the experience of teachers and of schools and working with them, because this is about working with their will to do things well.",
+      "text": "Sarah Stone said Samaritans' report set out nine recommendations, including training teachers to give a confident, understanding response, learning from what works, listening to young people's voices, and embedding health and well-being, including mental health awareness, into the new curriculum on a statutory basis."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f12",
+      "source_quote": "Yes, I think that certainly does happen. I suppose we know this anecdotally from Samaritans research, but also I have experience of working in pupil referral units and working with some really vulnerable children, and I think there is a sense sometimes that these children are labelled as naughty and disruptive. So, children who have additional learning needs or a communication problem that potentially is undiagnosed or not really properly understood. I think when children have mental health problems and additional learning needs, often they can find the school environment really difficult. I've worked with children who have told me that they just don't enjoy being in the classroom because they feel incredibly anxious. They don't feel they can contribute to the school environment, they don't feel like they're keeping up with their classmates and, as a result, they demonstrate challenging behaviour so that they can leave the classroom. I think that's very sad. As a result, these children aren't always understood and are off-rolled in some cases.",
+      "text": "Liz Williams said undiagnosed additional learning needs or communication problems often lead children to be labelled 'naughty and disruptive' rather than understood; anxious or overwhelmed children may act out specifically to leave the classroom, and as a result these children aren't always understood and are off-rolled in some cases."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f13",
+      "source_quote": "The Estyn report notes that there are generally fewer off-rollings from Welsh-medium education to EOTAS. There are a number of potential reasons for that. That can include the complete lack of EOTAS provision within a local area. It could be the socio-economic profile, because exclusions, et cetera, are substantially higher amongst those who are eligible for free school meals, and in many parts of Wales the socio-economic profile of a Welsh-medium education school is slightly different. We are not aware of any particular work that's been done to examine the needs and the provision of Welsh-medium EOTAS.",
+      "text": "Dr Ian Johnson said Estyn's data shows generally fewer off-rollings from Welsh-medium education to EOTAS, for reasons that could include local EOTAS provision gaps or differing socio-economic profiles, but no particular work has examined the needs and provision of Welsh-medium EOTAS specifically."
+    },
+    {
+      "category": "outcome",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f14",
+      "source_quote": "One of the things we have already noted is the time between being excluded and entering some kind of EOTAS provision. So, that in itself—and I've heard people talking about the capacity issues—shows what's happening to these children, at a time when they are most vulnerable because they are outside of the system.",
+      "text": "Dr Ian Johnson said the time between exclusion and entering EOTAS provision, driven partly by capacity issues, leaves children outside the system at the point when they are most vulnerable."
+    },
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f10",
+      "source_quote": "I think it should be embedded in the initial teacher's training, so that, more than anything, as well as being equipped with the skills, teachers have the confidence to deal with those really challenging situations.",
+      "text": "Liz Williams recommended that mental health and emotional well-being training be embedded in initial teacher training rather than treated as a supplementary add-on, so teachers have both skills and confidence to handle challenging situations, which would ultimately lessen the risk of exclusion."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "id": "f11",
+      "source_quote": "we need to take responsibility in exactly the same way, perhaps, as corporate parenting plays a role there.",
+      "text": "Dr Ian Johnson said responsibility for supporting excluded children lies with the local education authority, but funding was a concern, and services from other bodies dealing with these vulnerable children should be interwoven around the child, similar to a corporate parenting model."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "f10",
+    "f11",
+    "f12",
+    "f13",
+    "f14"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "inferred",
+      "fact_ids": [
+        "f3",
+        "f4",
+        "f7"
+      ],
+      "id": "r1",
+      "source_quote": "",
+      "text": "The lack of capacity for dedicated specialist staff, the difficulty replacing departing niche experts, and the difficulty releasing staff for training all stem from the same underlying capacity and funding constraints.",
+      "type": "cause_rationale"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:2"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f10",
+        "f8"
+      ],
+      "id": "r2",
+      "source_quote": "it goes back to the whole-school approach and having emotional and mental health on a statutory basis in the curriculum. It embeds emotional well-being into the culture of the school",
+      "text": "Embedding mental health and well-being training into initial teacher training is presented as dependent on making the whole-school approach statutory, so that all schools, not just the most committed, provide consistent training and support.",
+      "type": "dependency"
+    }
+  ]
+}

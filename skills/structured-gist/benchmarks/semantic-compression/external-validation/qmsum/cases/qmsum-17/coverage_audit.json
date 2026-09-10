@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-17",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["f2"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f2's text claims Marketing 'did not know the actual cost,' but f2's cited source_quote ('But we need to find cost.') only expresses a need to find the cost, not an explicit statement of not knowing it. The 'did not know' claim is true and stated moments later in the span ('Don't know the cost.', a separate Marketing turn) but is not included in f2's own citation — a minor quote-completeness gap. Otherwise this is a clean, well-scoped small case: question_fact_ids correctly excludes f1 (the Kryptonite mechanism, not its cost), all 12 turns of the span are accounted for, r1 states a genuine causal/rationale connection rather than restating facts, and no missing, redundant, or granularity issues were found."
+}

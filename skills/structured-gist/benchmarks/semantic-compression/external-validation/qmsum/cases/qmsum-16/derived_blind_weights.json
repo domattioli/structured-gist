@@ -1,0 +1,17 @@
+{
+  "case_id": "qmsum-16",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 3,
+    "f4": 1
+  },
+  "relation_weights": {},
+  "rationale": {
+    "f1": "States the core solution (team-around-the-family approach), directly matching the reference summary's opening point and the direct answer to the query.",
+    "f2": "States the whole-package-of-support content of that solution, a core part of the answer the reference summary calls out explicitly.",
+    "f3": "Describes the Oxford PRU partnership example, the concrete illustration the reference summary explicitly cites as part of the solution.",
+    "f4": "A minor caveat about whether the Oxford model persisted; doesn't change what the solution was, just its current status."
+  }
+}

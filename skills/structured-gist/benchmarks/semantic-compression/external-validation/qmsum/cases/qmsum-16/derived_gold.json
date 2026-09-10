@@ -1,0 +1,66 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-16",
+  "corpus_defect_notes": [
+    "Coverage-audit correction: f3's source_quote originally stopped at 'terms of reference', omitting the clause later in the same turn ('...so that they couldn't keep moving the children around, the learners around.') that actually supports f3's claim about shared responsibility and not offloading learners. Extended f3's source_quote to include that clause verbatim (still within span:1, same speaker turn); no change to f3's text was needed since the fuller quote now fully supports it."
+  ],
+  "facts": [
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "it's working, then, with\u2014. It comes back to that team-around-the-family approach, to ensure what is needed for that learner to go back into school, what can the school provide.",
+      "text": "Sharon Davies said reintegrating learners at key stage 4 works through a team-around-the-family approach that identifies what the learner needs to go back into school and what the school can provide."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "It's looking at the whole package of support, then, that surrounds not just the learner but the family, whether it's transport\u2014it's looking at the whole agenda, then, to ensure that everything is in place for that learner to go back to school, where it's possible.",
+      "text": "Davies said this approach looks at the whole package of support surrounding not just the learner but the family, including things like transport, to ensure everything is in place for the learner to return to school where possible."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "I believe Oxford, as a local authority\u2014they had a PRU, and they had discussions with their secondary schools, then, whether to get rid of the PRU, as such, and give the money back into schools. But they looked at a partnership within the schools, then, to say, 'Okay, you can have the money, but there's got to be terms of reference'\u2014not quite a service level agreement, but the schools worked together as a partnership, then, so that they couldn't keep moving the children around, the learners around.",
+      "text": "Davies described an Oxford local authority model in which the authority considered getting rid of its PRU and instead gave the funding back to secondary schools under a partnership agreement with terms of reference, so schools shared responsibility and could not simply move learners elsewhere."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "It started off really well, but that was a few years ago, so I don't know whether it's continued now.",
+      "text": "Davies said the Oxford model started off well but she did not know whether it had continued, since her knowledge of it dated from a few years earlier."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4"
+  ],
+  "relations": []
+}

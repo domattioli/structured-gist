@@ -1,0 +1,19 @@
+{
+  "case_id": "qmsum-09",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "Trudeau's first response to Scheer's opening Auditor General funding question completely ignores the Auditor General and pivots to an unrelated bill (the Canada emergency response benefit and a proposed debate/vote on it). This total non-answer to the very first AG question in the exchange is not represented by any fact, even though it is directly relevant to 'what was said about the Auditor General' (i.e., nothing substantive was said in reply to the first ask).",
+      "source_quote": "Mr.Chair, not only are we introducing a bill this afternoon to help Canadians with the Canada emergency response benefit and those living with disabilities, but we are also proposing to the opposition parties that we hold a debate and a vote on that. I hope the opposition parties will allow a vote and a debate in the House on this important bill."
+    },
+    {
+      "description": "Scheer separately accused the government of 'withholding funds' from and 'hampering' the Auditor General's ability to give Canadians answers, a specific framing not captured by f4 (which only covers the 'revisionist history'/volunteered-efficiencies portion of the same turn).",
+      "source_quote": "Only the government's refusal to grant that extra funding is hampering the Auditor General's ability to give Canadians the answers they deserve, and we wonder why. ... Are these the reasons the Prime Minister is so intent on withholding funds from the Auditor General?"
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "All quotes checked verbatim against the supplied evidence and are accurately attributed. The 7-fact inventory tracks the AG-specific content of each turn while correctly excluding off-topic material within the same turns (the emergency-benefit bill, infrastructure-spending allegations, the 2015-election jab) — the scoping discipline is good. The two inferred 'contrast' relations (r1, r2) characterizing Trudeau's answers as not directly addressing Scheer's specific claims are interpretive but reasonably grounded in the actual exchange, not fabricated."
+}

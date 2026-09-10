@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-05",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "All substantive content in native_evidence span:0 (Grad A's three long turns on intention parsing, the discourse-history module, anaphora/fill-in, non-rejection carry-forward, gesture/screen coordination, and the query interface) is represented, each as a genuinely distinct functional claim rather than an artificial split. Quotes checked against the supplied native_evidence text all match verbatim. Both relations state real dependency claims rather than restating fact pairs. No missing, redundant, unsupported, or granularity issues found."
+}

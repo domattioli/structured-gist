@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-06",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "The already-documented corpus_defect_notes (numeric results only in table cells not present in source.md; the SWB/CHM qualitative sentence lives outside this case's native_evidence span and was correctly excluded) account for why the inventory looks thin relative to the reference_answer. Within what the given native_evidence (para:29-30) actually supports, f1-f3 fully and correctly cover both setup paragraphs (WSJ training setup, Hub5'00 corpus/subsets, Hub5'00 training setup); quotes verified verbatim, no redundancy, and no relation is lost by leaving them unconnected since neither fact conveys a result value to connect."
+}

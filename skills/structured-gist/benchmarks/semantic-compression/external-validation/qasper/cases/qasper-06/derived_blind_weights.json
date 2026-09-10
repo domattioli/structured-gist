@@ -1,0 +1,11 @@
+{
+  "case_id": "qasper-06",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 2, "f2": 2, "f3": 2},
+  "relation_weights": {},
+  "rationale": {
+    "f1": "Identifies the model, training regime, and dataset (WSJ, 80 hours) whose results table the read-speech 'competitive results' claim would refer to; necessary context but does not itself state a result.",
+    "f2": "Identifies the conversational-speech evaluation corpus and its SWB/CHM subsets that any competitive-results claim about conversational speech must be anchored to; necessary context but not itself a result.",
+    "f3": "Describes the training data and procedure for the Hub5'00 evaluation and that comparisons were made to other models on the same data, necessary methodological grounding for interpreting any competitive claim but not itself a stated result."
+  }
+}

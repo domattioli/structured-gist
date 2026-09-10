@@ -1,0 +1,40 @@
+{
+  "case_id": "qmsum-08",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 3,
+    "f4": 3,
+    "f5": 2,
+    "f6": 1,
+    "f7": 1,
+    "f8": 1,
+    "f9": 1,
+    "f10": 1,
+    "f11": 1
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 1,
+    "r3": 1,
+    "r4": 1
+  },
+  "rationale": {
+    "f1": "Gives the headline recorded-hours total, the single most direct answer to 'what is the current state of transcriptions.'",
+    "f2": "A necessary caveat that the total includes digits recordings, needed to interpret the headline number correctly.",
+    "f3": "Establishes that non-digits make up nearly all the total, the reasoning behind the ~30-hour non-digits figure central to the state summary.",
+    "f4": "Gives the transcribed-hours figure, the second headline number that directly answers the query.",
+    "f5": "Describes the concrete next processing step (cleaning, channelizing), relevant status information about where the pipeline stands.",
+    "f6": "A specific convention detail within the cleaning work; secondary to the overall state summary.",
+    "f7": "A process-improvement suggestion, not itself a statement about the current state of transcriptions.",
+    "f8": "Confirms an existing practice; tangential to the core state-of-transcriptions numbers.",
+    "f9": "Describes tagging convention details; implementation minutiae, not core status.",
+    "f10": "A rationale for automating tag application; process detail, not a state fact.",
+    "f11": "A narrow workflow constraint (manual handling of numbers/acronyms); tangential to the headline status.",
+    "r1": "Connects the total-hours figure to the non-digits estimate, which is exactly the derived figure the reference summary reports.",
+    "r2": "Links a suggestion to an existing practice; useful color but not central to the state-of-transcriptions answer.",
+    "r3": "Explains a workflow design choice; tangential to the core status figures.",
+    "r4": "Contrasts two handling methods; tangential implementation detail, not core status."
+  }
+}

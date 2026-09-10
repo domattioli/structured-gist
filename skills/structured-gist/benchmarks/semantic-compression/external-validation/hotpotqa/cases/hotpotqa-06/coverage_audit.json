@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-06",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both facts' source_quotes are exact matches of the relevant sentences in source.md; f2's bundled details (release date, lead-single status, album name) all describe one release event and are correctly kept as a single fact rather than split. The coreference_bridge relation correctly ties the song whose video uses Postal 2 scenes to the song's June 2003 release. No missing, redundant, unsupported, or mis-granularized units found."
+}

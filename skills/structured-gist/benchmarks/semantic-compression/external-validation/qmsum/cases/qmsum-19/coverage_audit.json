@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-19",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "All content in the Industrial Designer's monologue (and the brief wood follow-up) is captured across ten facts, each with a verbatim, self-sufficient source_quote matching its text exactly (no cross-turn bundling issues, unlike several other cases in this pass). Each fact is one clause-level proposition — nothing looks artificially split or merged. r1 states a genuine dependency rather than restating a fact pair. No missing, redundant, unsupported, or granularity issues found."
+}

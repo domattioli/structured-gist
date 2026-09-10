@@ -1,0 +1,54 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qasper-06",
+  "corpus_defect_notes": [
+    "The native reference_answer cites specific numeric results (\"highest nov93 score of 16.1\", \"highest nov92 score of 13.3\", \"highest SWB of 8.3\", \"highest CHM of 19.3\") that do not appear anywhere as text in source.md. These figures apparently come from the cell values of Table TABREF29 (WSJ End-to-End Models, WER) and Table TABREF31 (Hub5'00, WER), whose captions appear in native_metadata.float_evidence_captions but whose actual table contents are not included in the provided source document. As a result, the specific numeric claims in reference_answer cannot be verified, reproduced, or supported by any source_quote from source.md; only the qualitative surrounding text (which datasets/subsets were used, and that SWB results were 'good' while CHM needs more work) is recoverable from the given source.",
+    "f4 (removed): the annotator drew a qualitative claim (\"good results for SWB, more work needed for CHM\") from paper text outside this case's designated native_evidence (global_idx 29-30) -- the statement lives at a later paragraph (global_idx 31) not included in the native evidence for this question. This corroborates the existing corpus_defect_note that this question's full answer is not entirely reconstructable from the officially annotated evidence span alone."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:29"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "We trained a smaller Jasper 10x3 model with SGD with momentum optimizer for 400 epochs on a combined WSJ dataset (80 hours): LDC93S6A (WSJ0) and LDC94S13A (WSJ1). The results are provided in Table TABREF29 .",
+      "text": "The authors trained a smaller Jasper 10x3 model with SGD-with-momentum for 400 epochs on a combined 80-hour WSJ dataset (WSJ0 and WSJ1), with results reported in Table TABREF29."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:30"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "We also evaluate the Jasper model's performance on a conversational English corpus. The Hub5 Year 2000 (Hub5'00) evaluation (LDC2002S09, LDC2005S13) is widely used in academia. It is divided into two subsets: Switchboard (SWB) and Callhome (CHM).",
+      "text": "The authors also evaluated Jasper's performance on the Hub5'00 conversational English corpus, which is divided into Switchboard (SWB) and Callhome (CHM) subsets."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:30"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "The training data for both the acoustic and language models consisted of the 2000hr Fisher+Switchboard training data (LDC2004S13, LDC2005S13, LDC97S62). Jasper DR 10x5 was trained using SGD with momentum for 50 epochs. We compare to other models trained using the same data and report Hub5'00 results in Table TABREF31 .",
+      "text": "For the Hub5'00 evaluation, training data for both acoustic and language models consisted of the 2000hr Fisher+Switchboard training data, and Jasper DR 10x5 was trained with SGD-with-momentum for 50 epochs, then compared to other models trained on the same data."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3"
+  ],
+  "relations": []
+}

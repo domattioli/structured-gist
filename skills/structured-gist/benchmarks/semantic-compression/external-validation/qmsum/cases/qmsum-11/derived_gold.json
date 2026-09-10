@@ -1,0 +1,109 @@
+{
+  "case_id": "qmsum-11",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Albas asked the Prime Minister to confirm whether federal workers had been told to ignore obvious signs of fraud in benefit applications, citing a report that 200,000 applications had been flagged as potentially fraudulent.",
+      "category": "unresolved_question",
+      "source_quote": "Today we've learned that federal workers have been told to ignore obvious signs of fraud when it comes to applying for government benefits. Can the Prime Minister confirm that 200,000 applications have been flagged as potentially fraudulent?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Trudeau said the government's approach was to distribute pandemic benefits quickly first and address fraud through retroactive cleanup and pursuit of fraudulent cases afterward, rather than delaying payments up front.",
+      "category": "cause_rationale",
+      "source_quote": "When we made the determination that we needed to move quickly to help Canadians, we knew there would be a need to clean up after the fact, to go after fraudulent cases. We will do that.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "Despite being asked directly and repeatedly whether he or his office signed off on the deputy minister's memo about handling fraud, Trudeau's answers never confirmed or denied sign-off, instead reiterating that the government's focus was on getting help to Canadians and cleaning up afterward.",
+      "category": "negation",
+      "source_quote": "Mr. Chair, we have been focused entirely on getting help to Canadians when they need it, and that has meant that yes, there will be things we will need to clean up after the fact and work to fix, but getting that help into Canadians' pockets during this pandemic was our priority.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Ste-Marie argued the large employer emergency financing facility's anti-tax-evasion condition was too narrow, since it targeted only abusive tax evasion while companies that legally use tax havens for tax avoidance, such as major banks, would still qualify for the facility.",
+      "category": "constraint",
+      "source_quote": "There are no conditions that would allow us to tighten the screws on profiteers. Companies that legally take advantage of tax havens to avoid paying their taxes will have access to the large employer emergency financing facility.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "Trudeau said the large employer facility would only be available to companies that had paid their fair share of taxes, with applications assessed case-by-case and a requirement for transparency about how funds, including international dealings, were managed.",
+      "category": "decision",
+      "source_quote": "when we announced the large employer emergency funding facility, we recognized that those who wanted to receive tax dollars had to have paid their fair share of taxes. That's why we're putting in place measures to carefully assess the tax structures of these businesses before we loan money to them.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Bergen asked whether unopened mail causing delays for Service Canada applicants was a widespread problem; Minister Hussen said he was not aware it was a widespread issue and offered to look into the specific constituent case raised.",
+      "category": "unresolved_question",
+      "source_quote": "I am not aware of unopened mail being a widespread issue. I'm happy to work with the honourable member to see what happened in this individual case.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f11",
+      "text": "Minister Hussen's first response to the mail-delay question was that the pandemic caused unprecedented volumes at Service Canada, so thousands of staff were redeployed to front-line phone service and a number of centres had to be closed for COVID-19 safety reasons.",
+      "category": "cause_rationale",
+      "source_quote": "In the context of the COVID-19 pandemic, we have had unprecedented volumes, but we have redeployed thousands of staff to front-line services by phone and by other means. We had to close a number of the centres because of COVID-19 concerns and the safety and well-being of Canadians.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f7",
+      "text": "Bergen questioned why the government was banning the Iver Johnson single-shot rifle, a farm gun used by farmers in her riding, arguing that front-line officers were concerned about gangs and smuggled weapons rather than farm rifles like this one.",
+      "category": "descriptive",
+      "source_quote": "We're hearing from front-line officers that they are concerned about gangs, drug dealers and illegal weapons being smuggled across the border. They are not concerned with these types of farm rifles that are being used by our farmers and, in some cases, hunters.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f8",
+      "text": "Minister Blair said the government identified the nine banned rifles by working with the Canadian firearms program and law enforcement, on the basis that each had originally been designed for military combat use rather than hunting or sport.",
+      "category": "cause_rationale",
+      "source_quote": "we worked very closely with the Canadian firearms program, with law enforcement and with their firearms verification to identify the makes, models and variants of nine rifles, all of which had in their earliest provenance a design for military use, for soldiers to use in combat.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f9",
+      "text": "Blair cited that the Canadian Association of Chiefs of Police and Ontario police leaders had publicly urged banning military-designed assault rifles as having no place in Canadian communities.",
+      "category": "descriptive",
+      "source_quote": "The Canadian Association of Chiefs of Police declared that military assault rifles were produced for the sole purpose of killing people in large numbers and urged the government to enact legislation to ban all military assault rifles, except for law enforcement and military purposes. The Ontario police leaders said that they support a prohibition on all military-designed rifles.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f10",
+      "text": "Blair said weapons designed for combat rather than hunting or sport have no place in Canadian society, and that any Canadian killed by gun violence is one too many given past tragedies involving such weapons.",
+      "category": "cause_rationale",
+      "source_quote": "weapons that were designed not for hunting and not for sport purposes but for soldiers to use in combat to kill other soldiers have no place in Canadian society. I would also advise the member that any Canadian killed by gun violence is one too many. We have far too many tragedies where these types of weapons have been used to kill Canadians.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "contrast",
+      "text": "Ste-Marie's criticism that the anti-tax-evasion condition was too weak directly rebuts Trudeau's claim that the facility would only serve companies paying their fair share of taxes.",
+      "fact_ids": ["f4", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "I'm delighted to hear the Prime Minister say that there's no tolerance for tax avoidance. The problem is that his remarks don't reflect reality. Tax avoidance is the legal use of tax havens.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "contrast",
+      "text": "Bergen's claim that front-line officers were not concerned about farm rifles like the Iver Johnson is directly countered by Blair's citation of police association endorsements of the ban.",
+      "fact_ids": ["f7", "f9"],
+      "evidence_mode": "explicit",
+      "source_quote": "It's a great opportunity, I think, when the member opposite says what the police are saying. Let's hear what the police are saying.",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f7", "f8", "f9", "f10", "f11"],
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass (case qmsum-11): added f11, capturing Minister Hussen's substantive operational explanation for the Service Canada mail delays (pandemic volumes, staff redeployment, centre closures), which the coverage audit found missing — only his later, more evasive follow-up ('not aware of unopened mail being a widespread issue') had been captured as f6."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

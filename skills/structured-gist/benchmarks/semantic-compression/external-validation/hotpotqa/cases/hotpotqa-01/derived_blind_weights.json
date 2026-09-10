@@ -1,0 +1,11 @@
+{
+  "case_id": "hotpotqa-01",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3},
+  "relation_weights": {"r1": 3},
+  "rationale": {
+    "f1": "Losing this fact removes the only link from the question's subject, Neo-libertarianism, to any evidence at all, so the reader could not identify which ideology's ideals to check.",
+    "f2": "This fact supplies the literal content of the answer (democracy and personal freedom), so losing it leaves no source for the two ideals even though the neo-libertarian link would remain.",
+    "r1": "The relation supplies the inferential step (believing in an idea implies having its ideals as one's foundation) that the source never states outright, and without it a compression-only reader has no stated justification for treating exceptionalism's ideals as neo-libertarianism's foundation."
+  }
+}

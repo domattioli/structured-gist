@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-04",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Two evidence paragraphs. The AddSent-vs-AddOneSent construction detail in para:31 ('each passage in AddSent contains ... while each passage in AddOneSent contains ...') and the numeric comparison results in para:33 are correctly omitted as out of scope for a 'how do they examine robustness' methodology question (the reference_answer itself stays at the same generality). f1-f3 quotes verified verbatim; r1 adds a genuine causal explanation (why misleading-sentence passages serve as a robustness test) rather than restating the pair."
+}

@@ -1,0 +1,92 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qasper-05",
+  "corpus_defect_notes": [
+    "coverage audit: f2 originally bundled the filtering and stance-annotation steps into one fact but only quoted the filtering sentence; split into f2 (filter) and f6 (annotate) so each is independently quoted and testable."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:7"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "Hence we have determined our targets as Galatasaray (namely Target-1) and Fenerbah\u00e7e (namely, Target-2) which are two of the most popular football clubs in Turkey.",
+      "text": "The study's stance-detection targets are two popular Turkish football clubs: Galatasaray (Target-1) and Fenerbah\u00e7e (Target-2)."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:8"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "We have decided to use one of these sets (corresponding to the period between August 18 and September 6, 2015) and firstly filtered the tweets using the possible names used to refer to the target clubs.",
+      "text": "Tweets were first filtered using the possible names used to refer to the target clubs."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:8"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "Within the course of this study, we have not considered those tweets in which the target is not explicitly mentioned, as our initial filtering process reveals.",
+      "text": "Tweets in which the target was not explicitly mentioned were excluded from the study, based on the initial filtering process."
+    },
+    {
+      "category": "negation",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:9"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "For the purposes of the current study, we have not annotated any tweets with the Neither class.",
+      "text": "No tweets were annotated with the Neither class in this study."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:9"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "We should also note that in a few tweets, the target of the stance was the management of the club while in some others a particular footballer of the club is praised or criticised. Still, we have considered the club as the target of the stance in all of the cases and carried out our annotations accordingly.",
+      "text": "Even when the stance target in a tweet was actually club management or an individual footballer, annotators still treated the club itself as the stance target in all such cases."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:8"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "Then, we have annotated the stance information in the tweets for these targets as Favor or Against.",
+      "text": "The stance of each filtered tweet toward its target was then annotated as Favor or Against."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6"
+  ],
+  "relations": []
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "qasper-04",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3, "f3": 2},
+  "relation_weights": {"r1": 3},
+  "rationale": {
+    "f1": "Names the two adversarial sets used specifically to evaluate robustness to noise, which is the core mechanism the question asks about.",
+    "f2": "Explains that the adversarial passages contain misleading sentences aimed at distracting the model, the 'misleading sentences' detail explicitly named in the reference answer.",
+    "f3": "Confirms the adversarial sets were actually applied to the paper's own KAR model alongside dev/test sets, reinforcing but not adding new content beyond what f1 already establishes about the evaluation method.",
+    "r1": "States the causal link that adversarial sets test robustness precisely because they contain distracting misleading sentences, which is effectively the complete answer to 'how do they examine robustness to noise'."
+  }
+}

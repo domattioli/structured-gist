@@ -1,0 +1,63 @@
+{
+  "case_id": "qmsum-22",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The Project Manager said that needing special colours for remote controls would increase the production cost.",
+      "category": "constraint",
+      "source_quote": "If you need to have special colours for remote controls it will cost more .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "The Project Manager said that speaking about multiple colour options implies an increased price.",
+      "category": "constraint",
+      "source_quote": "Yeah , but as soon as you speak about options , it means that the price increases ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "The Project Manager said the team did not want the price too high because they need to be able to produce it, so despite wanting the product to be fancy, easy to use, and powerful, packing many functions into one button is not good given that 75% of users zap a lot.",
+      "category": "constraint",
+      "source_quote": "and we don't really want the price to be too too high , because we wanna be able to produce it . So , we want something fancy , as uh previously said , Florent , something very easy to use , powerful and also as uh it's written here , seventy five percent of users , they zap lot , so maybe just having many functions in one button is not that good if you want to zap a lot .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "The Project Manager said the colour could be changed, but the image of the company has to remain recognizable in the product.",
+      "category": "constraint",
+      "source_quote": "Maybe you can change the colour , but the image of the society has to be recognised .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f5",
+      "text": "The Project Manager insisted the product has to be fashionable and truly reflect the company's image, so that people would immediately recognize it as a Real Reaction product upon seeing it.",
+      "category": "constraint",
+      "source_quote": "Yeah . It has to be a fashion and really be uh the image of the society . Just when you enter you say oh , oh , it's real reaction . Think it's a re reaction remote control , so .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f6",
+      "text": "The Project Manager said the product also has to be attractive.",
+      "category": "constraint",
+      "source_quote": "And also it has to be attractive , of course ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "contrast",
+      "text": "The Project Manager wanted the product to look attractive and fancy, but this desire was constrained by not wanting extra costs from offering multiple colour options.",
+      "fact_ids": ["f2", "f6"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f4", "f5", "f6"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

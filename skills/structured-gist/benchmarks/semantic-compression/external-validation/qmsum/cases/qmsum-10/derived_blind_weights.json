@@ -1,0 +1,52 @@
+{
+  "case_id": "qmsum-10",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 3,
+    "f4": 2,
+    "f5": 1,
+    "f6": 1,
+    "f7": 3,
+    "f8": 2,
+    "f9": 2,
+    "f10": 2,
+    "f11": 2,
+    "f12": 1,
+    "f13": 3,
+    "f14": 1,
+    "f15": 3,
+    "f16": 1,
+    "f17": 2
+  },
+  "relation_weights": {
+    "r1": 2,
+    "r2": 1,
+    "r3": 2,
+    "r4": 2
+  },
+  "rationale": {
+    "f1": "States the headline lobster-fishery COVID impact (95% Asian market loss), a must-have item for a summary covering fishing and COVID.",
+    "f2": "Describes concrete support measures for fisheries; useful but secondary detail behind the headline impact.",
+    "f3": "Directly states the family-structure eligibility gap, which the reference summary calls out explicitly as a key fishing-sector point.",
+    "f4": "Reinforces the eligibility-gap point with the minister's acknowledgment; supports but partly repeats f3.",
+    "f5": "A narrow regulatory dispute about gulf lobster quotas, not central to a broad fishing/tourism/oil-and-gas COVID summary.",
+    "f6": "Resolution of the same narrow quota dispute; similarly tangential to the broad summary.",
+    "f7": "States the headline tourism COVID impact, a must-have item matching the reference summary directly.",
+    "f8": "Describes a support response for tourism; useful supporting detail, secondary to the headline impact statement.",
+    "f9": "Highlights delayed oil-and-gas liquidity loans, a real COVID-related sector impact worth including.",
+    "f10": "Describes the government's liquidity response for the oil sector; relevant support detail for the oil-and-gas section.",
+    "f11": "Describes COVID-driven layoffs among oil-sector contractors, including indigenous-owned companies, a concrete impact detail for the oil-and-gas section.",
+    "f12": "A scale statistic about the oil sector's workforce; background color, not essential to summarizing the COVID impact itself.",
+    "f13": "States the headline oil-storage crisis risk, matching the reference summary's explicit SAGD/storage point.",
+    "f14": "A generic response about supporting workers; largely filler relative to the concrete impact and crisis facts.",
+    "f15": "States the 'two crises' framing (COVID plus price war), matching the reference summary's explicit closing point on oil and gas.",
+    "f16": "An unanswered eligibility question; a narrow procedural detail not central to the broad three-sector summary.",
+    "f17": "Provides pre-pandemic context (bills reducing investment) that compounds the sector's COVID exposure; relevant background but secondary to the direct COVID-impact facts.",
+    "r1": "Connects the fishery's COVID losses to the government's support response, useful for a coherent fishing-section summary.",
+    "r2": "Resolves a narrow regulatory side issue; minor relative to the broad three-sector COVID summary.",
+    "r3": "Captures the tension between claimed fishery support and the family-labor eligibility gap, reinforcing a key point the reference summary highlights.",
+    "r4": "Connects the delayed-loans criticism to the government's liquidity response, useful context for the oil-and-gas support narrative."
+  }
+}

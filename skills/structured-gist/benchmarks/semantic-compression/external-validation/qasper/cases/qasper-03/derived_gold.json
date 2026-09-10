@@ -1,0 +1,42 @@
+{
+  "case_id": "qasper-03",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The emotion analysis suggests both ISIS and Catholic materials used words that aim to inspire readers while avoiding fear.",
+      "category": "outcome",
+      "source_quote": "The result of our emotion analysis suggests that both corpuses used words that aim to inspire readers while avoiding fear.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:42"}]
+    },
+    {
+      "id": "f2",
+      "text": "Although the two corpora produce a similar emotional effect, the actual words that lead to that effect differ substantially between the two contexts.",
+      "category": "descriptive",
+      "source_quote": "However, the actual words that lead to these effects are very different in the two contexts.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:42"}]
+    },
+    {
+      "id": "f3",
+      "text": "The authors conclude that, using proper methods, automated analysis of large bodies of textual data can provide novel insight into extremist propaganda that can assist the counterterrorism community.",
+      "category": "outcome",
+      "source_quote": "Overall, our findings indicate that, using proper methods, automated analysis of large bodies of textual data can provide novel insight insight into extremist propaganda that can assist the counterterrorism community.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:42"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "contrast",
+      "text": "The similar inspire/avoid-fear emotional effect found in both corpora is produced by very different underlying word choices in each context.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "explicit",
+      "source_quote": "However, the actual words that lead to these effects are very different in the two contexts.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:42"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

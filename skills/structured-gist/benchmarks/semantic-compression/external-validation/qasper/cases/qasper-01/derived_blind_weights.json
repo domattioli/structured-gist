@@ -1,0 +1,15 @@
+{
+  "case_id": "qasper-01",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 2, "f3": 2, "f4": 3, "f5": 3},
+  "relation_weights": {"r1": 2, "r2": 1},
+  "rationale": {
+    "f1": "Directly answers the question by stating SR is best among the three individual pre-training tasks, which is the reference answer itself.",
+    "f2": "Names and defines the ALL variant so the reader can correctly interpret f3's claim about ALL outperforming the three tasks, without which the answer could be misread as ambiguous about which 'task' wins.",
+    "f3": "Flags that ALL beats the individual tasks under limited data, an important condition the reader needs to avoid over-generalizing 'SR is best' as unconditional, even though it does not itself change the final answer.",
+    "f4": "Gives the concrete quantitative result (highest ROUGE-2 on both datasets after more data) that is the actual evidence grounding the 'SR is best' conclusion.",
+    "f5": "Is the authors' explicit stated conclusion naming SR as most effective, which is precisely what the question asks for.",
+    "r1": "Captures the data-dependent condition under which SR vs ALL wins, which materially refines a reader's confidence in the answer without changing which single task the reference answer names.",
+    "r2": "Only restates the link between f4's evidence and f5's conclusion, both of which already independently state the needed information, so losing this relation does not impair answering the question."
+  }
+}

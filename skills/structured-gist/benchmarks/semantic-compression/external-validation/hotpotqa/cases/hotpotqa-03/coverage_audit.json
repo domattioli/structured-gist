@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-03",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both facts' source_quotes are exact substrings of source.md and support their text; f2 alone already contains the literal reference_answer ('originally known as Marvel Films from 1993 to 1996'). The coreference_bridge relation correctly links the studio that produced Marvel One-Shots to the studio formerly called Marvel Films via the shared name 'Marvel Studios'. No missing, redundant, unsupported, or mis-granularized units found."
+}

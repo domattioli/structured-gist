@@ -1,0 +1,19 @@
+{
+  "case_id": "qmsum-03",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "An entire ~7-turn exchange within native_evidence span:0 is not represented by any fact: PhD G asks for more hand-verified 'tighter boundary' ground truth for the segmentation work (noting existing ones were helpful), and PhD E explains he is planning to use the newly-completed, tighter-boundary transcriptions to create speech/nonspeech labels for training. This is directly on-topic for 'What was the status of transcription?' (it describes what the just-finished transcriptions are being used for next) and is completely absent from the 19-fact inventory.",
+      "source_quote": "Mmm , yeah . That was a thing I {disfmarker} I planned working on , is , uh , to use the {disfmarker} the transcriptions which are done by now , and to {disfmarker} to use them as , uh {disfmarker} ... Yeah . And to use them for {disfmarker} for training a {disfmarker} or for {disfmarker} fo whatever . Yeah . To {disfmarker} to create some speech - nonspeech labels out of them , and {disfmarker} Yeah , but that {disfmarker} that 's a thing w was {disfmarker} w what I 'm just looking into ."
+    },
+    {
+      "description": "PhD G raises a distinct objection to the participant-approval plan — that if Jane is still resolving clarifying questions on the transcripts, participants cannot meaningfully agree to approve a transcript before her final version exists. This is a separate rationale from f9 (Postdoc A wanting to finish final-pass editing) and from f18 (wording/slander accuracy concern), and isn't captured by either.",
+      "source_quote": "Well , i if Jane is clarifying question question , then , you know , how can they agree to it before they know her final version ?"
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["f18"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f18's text asserts that Postdoc A noted 'wording subtleties (one word transcribed instead of another) can matter for this kind of judgment,' but f18's cited source_quote only covers the later 'if the person is using the transcript...whether it was slanderous...needs to be more correct' portion — the wording-subtlety content is a true claim from a separate, earlier Postdoc A turn ('there can be subtleties where a person uses this word instead of that word') not included in f18's own quote. The 19-fact/5-relation granularity for this long, multi-topic span (staffing, pre-segmentation quality, spreadsheet tooling, approval process, DARPA milestone, editing-vs-approval debate) looks proportionate to real complexity rather than inflated — no fact looks like an artificial split of one proposition, and no relation restates a fact pair without adding a real connective claim. The case's own corpus_defect_notes already correctly document that reference_answer is mismatched to this case's question/evidence (it describes an unrelated 'SmartKom demo' never mentioned in this transcript) and that the annotation was built from the actual question/evidence instead — that handling looks appropriate and is not re-flagged here as it is outside the scope of auditing the fact/relation inventory itself."
+}

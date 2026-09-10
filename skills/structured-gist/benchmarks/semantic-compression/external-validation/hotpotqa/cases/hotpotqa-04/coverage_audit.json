@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-04",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both facts' source_quotes are exact substrings of source.md and support their text without embellishment. The name_correspondence relation correctly states the shared-name bridge (Daltoni translates to 'The Daltons'; Dalton Gang shares that name) that the question depends on. No missing, redundant, unsupported, or mis-granularized units found."
+}

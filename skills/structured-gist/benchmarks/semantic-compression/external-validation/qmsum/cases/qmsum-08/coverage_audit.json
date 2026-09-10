@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-08",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["f11", "r4", "f3"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f11 is the clearest issue: its source_quote ('But the numbers and acronyms have to be handled by hand, because, you know I mean, jus') is literally the last, truncated turn of native_evidence span:0 — the sentence is cut off before any reason is given. But f11's text supplies a specific reason anyway ('because how they were spoken cannot be inferred automatically the way it can for better-established conventions'), which is not stated anywhere in the given evidence; this is an inference smuggled in to complete an unfinished sentence, not something the source actually says. r4 repeats the same fabricated causal claim ('numbers and acronyms must be handled by hand because their spoken form cannot be inferred automatically') built on f10/f11. Separately, f3's text asserts a specific figure ('at least about thirty hours' of non-digits) that is genuinely established elsewhere in the span (Professor E: 'there's at least probably thirty hours... There's got to be more than thirty hour-' / 'Of non-digits') but not included in f3's own cited source_quote (which only covers Grad C's confirming reply) — a minor quote-completeness gap rather than a fabrication. The rest of the 11-fact/4-relation inventory (recording-hour totals, transcription progress, cleaning/markup plan, alphabetized type-token-listing technique, VOC/NONVOC/GLOSS tagging) is accurately and proportionately captured, and the corpus_defect_notes correctly flag that reference_answer's digit-extraction-timeline claim (citing a different meeting id, Bmr013) is unsupported by this case's evidence."
+}

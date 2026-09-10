@@ -1,0 +1,36 @@
+{
+  "case_id": "qmsum-11",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 3,
+    "f4": 3,
+    "f5": 3,
+    "f6": 1,
+    "f11": 1,
+    "f7": 3,
+    "f8": 3,
+    "f9": 2,
+    "f10": 3
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3
+  },
+  "rationale": {
+    "f1": "States the core fraud-handling question and the 200,000-flagged-applications claim central to the fraud portion of the query.",
+    "f2": "States the government's stated rationale for its fraud-handling approach, directly answering the fraud/supervisory theme.",
+    "f3": "Captures that the Prime Minister never actually answered the accountability/sign-off question, directly relevant to the 'supervisory' angle of the query.",
+    "f4": "States the tax-evasion criticism of the large employer facility, core to the tax-evasion portion of the query.",
+    "f5": "States the government's defense on tax-evasion conditions, the direct response needed to summarize that exchange.",
+    "f6": "A tangential Service Canada mail-delay question unrelated to fraud, tax evasion, or violence handling.",
+    "f11": "Operational detail behind the same tangential mail-delay topic; not part of the query's named themes.",
+    "f7": "States the gun-ban question and its stated rationale gap, core to the violence-handling portion of the query.",
+    "f8": "States the government's rationale for the rifle ban (military design origin), core to the violence-handling theme.",
+    "f9": "Adds supporting evidence (police endorsements) for the ban; reinforces but is secondary to the core rationale already in f8.",
+    "f10": "States the minister's closing justification (combat-designed weapons have no place, gun-violence deaths) that the reference summary points to as the explanation for the ban, directly answering the violence-handling theme.",
+    "r1": "Captures the direct clash between the tax-evasion criticism and the government's defense, the substantive tension the query's tax-evasion theme is about.",
+    "r2": "Captures the direct rebuttal dynamic in the violence-handling exchange, central to summarizing that portion of the discussion."
+  }
+}

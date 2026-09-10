@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-20",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["r2"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "r2 asserts that the Industrial Designer's agreement 'led to the decision to make at least part of the case wooden' — but this directly overstates what the given evidence shows, and contradicts this same file's own corpus_defect_notes, which correctly observe that within span:0/span:1 the team only characterizes a partly-wooden case as 'interesting' ('Mm okay, seems to be interesting, mm.') rather than stating a firm decision (a clearer confirmation appears later in source.md, outside these two spans). r2's 'decision_outcome' framing is thus internally inconsistent with the file's own documented caveat about this case. Otherwise coverage is accurate and complete: both spans are fully represented across eight facts (f1/f2 for span:0, f3-f8 for span:1), quotes match verbatim, and r1 states a genuine explicit contrast. A trailing clarifying clause in span:0 ('or you know, you can see them in the darkness') is folded implicitly into f2 rather than quoted separately, but this is a minor completion of the same point, not a missing proposition."
+}

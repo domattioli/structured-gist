@@ -1,0 +1,21 @@
+{
+  "case_id": "qmsum-18",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 3,
+    "f4": 3,
+    "f5": 3,
+    "f6": 1
+  },
+  "relation_weights": {},
+  "rationale": {
+    "f1": "States Marketing's core rationale (fancy look matters, so changeable fronts), directly matching the reference summary's opening point.",
+    "f2": "Adds a specific front concept (see-through fruit); relevant color on the changeable-fronts idea but not itself named in the reference summary.",
+    "f3": "States the colour-fronts idea and the 'five fronts to start' plan, matching the reference summary's explicit numeric detail.",
+    "f4": "Directly names the sponge shape and alternative shapes, the core answer to the query's specific 'spongy remote' framing.",
+    "f5": "States the round-shape idea, matching the reference summary's explicit closing point about a round, non-standard shape.",
+    "f6": "Shifts to a different topic (technological innovation, speech/gadget ideas) not related to shape/fronts or the sponge question."
+  }
+}
