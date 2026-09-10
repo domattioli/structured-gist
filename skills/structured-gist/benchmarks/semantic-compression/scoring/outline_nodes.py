@@ -44,6 +44,7 @@ class Node:
     depth: int
     family: str     # 'dash' | 'attr' | 'uroman' | 'ualpha' | 'lroman' | 'lalpha' | 'arrow'
     text: str       # marker-stripped, continuation-merged, surrounding ** stripped
+    parent: "int | None"  # index of the nearest preceding node with depth < this node's depth
 
 
 def extract_nodes(text: str) -> List[Node]:
@@ -78,8 +79,26 @@ def extract_nodes(text: str) -> List[Node]:
     unit = reduce(gcd, leading) if leading else 2
 
     nodes: List[Node] = []
+    depth_stack: List[int] = []  # stack of node indices, one per depth seen so far
     for line in merged_lines:
         depth, family, txt = lint_outline.parse_line(line, unit=unit)
-        if family in MARKER_FAMILIES:
-            nodes.append(Node(index=len(nodes), depth=depth, family=family, text=txt))
+        if family not in MARKER_FAMILIES:
+            continue
+        while depth_stack and nodes[depth_stack[-1]].depth >= depth:
+            depth_stack.pop()
+        parent = depth_stack[-1] if depth_stack else None
+        nodes.append(Node(index=len(nodes), depth=depth, family=family, text=txt, parent=parent))
+        depth_stack.append(nodes[-1].index)
     return nodes
+
+
+def strip_marker_prefix(text: str) -> str:
+    """If `text` (no leading indentation assumed) itself starts with a
+    ladder marker glyph, return the text with that marker stripped, same
+    as a real node's `.text` would be -- otherwise return `text` unchanged.
+    Used by findability.py to normalize judge-recorded `evidence` snippets
+    that sometimes echo a node's own marker (e.g. "IV. retry adds load")
+    as part of the quoted text, which extract_nodes() would never include
+    in a real node's `.text`."""
+    _, family, stripped = lint_outline.parse_line(text.strip(), unit=2)
+    return stripped if family in MARKER_FAMILIES else text.strip()

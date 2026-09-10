@@ -113,6 +113,26 @@ def contains_contiguous(needle_tokens: List[str], haystack_tokens: List[str]) ->
     return needle in haystack
 
 
+def find_start(needle_tokens: List[str], haystack_tokens: List[str]) -> "int | None":
+    """First-occurrence token index of needle_tokens as a contiguous run
+    inside haystack_tokens, or None if absent. "First occurrence" is a
+    documented, deterministic convention (findability.py's alignment) --
+    every gold source_quote in this corpus was verified to occur exactly
+    once in its source.md (see FINDABILITY_FINDINGS.md "Alignment"), so
+    first-occurrence and only-occurrence coincide for the current data;
+    a future duplicate would silently take the earliest position rather
+    than fail, which is why this convention is documented rather than
+    left implicit."""
+    if not needle_tokens:
+        return None
+    hay = _SEP + _SEP.join(haystack_tokens) + _SEP
+    needle = _SEP + _SEP.join(needle_tokens) + _SEP
+    idx = hay.find(needle)
+    if idx == -1:
+        return None
+    return hay[:idx].count(_SEP)
+
+
 def longest_contiguous_match_len(tokens: List[str], start: int, haystack_tokens: List[str]) -> int:
     """Longest L such that tokens[start:start+L] is a contiguous run inside
     haystack_tokens. Binary search over L is valid because containment is
