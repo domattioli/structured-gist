@@ -322,12 +322,27 @@ source-blind (that isolation is what makes retention/recoverability
 grading trustworthy). Do not restore the "no matching gold fact ⇒
 hallucination" heuristic.
 
+## Wording fidelity (measurement-only, new)
+
+A further deterministic measurement, additive to and independent of
+everything above — does not change `SKILL.md`, the grammar, the linter, or
+any existing rendering/judged/gold file, and is not combined into any
+existing or new master score.
+
+**Wording fidelity** (`scoring/wording_fidelity.py`) tests SKILL.md's own
+claim ("structure only, wording untouched") directly: after stripping
+structured-gist's marker syntax, how much of a rendering's wording is
+actually copied from `source.md`, vs. paraphrased? A lexical-provenance
+test, not a semantic one — a correct paraphrase still fails it. Full
+write-up: `WORDING_FIDELITY_FINDINGS.md`.
+
 ## Re-running
 
 ```
 python3 scoring/deterministic.py   # word counts, compression, lint gate
 python3 scoring/combine.py         # merges in judged/*.json -> results/
 python3 scoring/spr.py             # experimental: SPR + blinded weight comparison -> results/
+python3 scoring/wording_fidelity.py  # measurement-only: lexical provenance -> results/
 ```
 
 Regenerating `renderings/` or `judged/` (i.e. actually re-generating
