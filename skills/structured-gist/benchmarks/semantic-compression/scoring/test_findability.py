@@ -9,14 +9,23 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from findability import (  # noqa: E402
+    EXPLORATORY_STATUSES,
     STRICT_STATUSES,
     CaseBaseline,
+    RetainedUnit,
     Span,
+    SourceAlignment,
+    align_units_to_source,
+    assert_identical_retained_sets,
     build_case_baseline,
     build_rendering_index,
+    build_retained_units,
     finalize_view,
+    locate_all_gist_positions,
     merge_spans,
     naive_per_question_baseline_tokens,
+    rank_units,
+    score_question_unit_rank,
     score_question_view,
     split_evidence_fragments,
 )
@@ -309,3 +318,261 @@ def test_naive_per_question_baseline_is_always_fully_traversed():
         span = (last_end_in_baseline - 0) / total
         assert eac == 1.0
         assert span == 1.0
+
+
+# ---------------------------------------------------------------------------
+# THE FIX: unit-rank Evidence Access Cost over the retained-unit set R.
+#
+# R is exactly the units this specific (case, tier, level) rendering
+# retained AND could align on both sides -- never all of a case's gold
+# content. Both orderings (source, gist) are permutations of the SAME set
+# R; only their order differs. See findability.py's `build_retained_units`,
+# `rank_units`, `score_question_unit_rank` and FINDABILITY_FINDINGS.md "The
+# fix: the retained-unit baseline".
+# ---------------------------------------------------------------------------
+
+def _ru(uid, kind, s_start, s_end, g_start, g_end):
+    return RetainedUnit(uid=uid, kind=kind, source_span=Span(s_start, s_end), gist_span=Span(g_start, g_end))
+
+
+def test_identical_retained_set_on_both_sides():
+    retained = {
+        "f1": _ru("f1", "fact", 0, 1, 4, 5),
+        "f2": _ru("f2", "fact", 1, 2, 0, 1),
+        "f3": _ru("f3", "fact", 2, 3, 2, 3),
+    }
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    assert set(source_ranks) == set(retained) == set(gist_ranks)
+    assert_identical_retained_sets(retained, source_ranks, gist_ranks)  # must not raise
+
+
+def test_assert_identical_retained_sets_catches_a_real_mismatch():
+    retained = {"f1": _ru("f1", "fact", 0, 1, 0, 1)}
+    good = {"f1": 1}
+    bad = {"f1": 1, "f2": 2}  # an extra id that is NOT in the retained set
+    assert_identical_retained_sets(retained, good, good)  # sanity: no raise
+    try:
+        assert_identical_retained_sets(retained, bad, good)
+        assert False, "expected AssertionError for a ranking that does not match the retained set"
+    except AssertionError:
+        pass
+
+
+def test_deleted_unit_absent_from_both_orderings():
+    # f2 is NOT retained (status is "omitted") -- it must not appear in
+    # build_retained_units' output, and therefore cannot appear in either
+    # ranking, regardless of whether it happens to align on one side.
+    gold = _gold([_fact("f1", "alpha beta"), _fact("f2", "gamma delta")])
+    source_tokens = tokenize("alpha beta gamma delta")
+    alignment = align_units_to_source(gold, source_tokens)
+    judged = _judged_level({"f1": ("retained", "alpha beta"), "f2": ("omitted", "")})
+    gist_pos = {"f1": Span(0, 2), "f2": Span(2, 4)}  # f2 WOULD align if it were eligible
+    retained, excluded = build_retained_units(gold, judged, alignment, gist_pos, STRICT_STATUSES)
+    assert set(retained) == {"f1"}
+    assert "status=omitted" in excluded["f2"]
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    assert "f2" not in source_ranks
+    assert "f2" not in gist_ranks
+
+
+def test_single_required_unit_moved_earlier_in_gist_improves_eac():
+    # Source order: fA(1), fB(2), fC(3) of 3 -- EAC_source for fB = 2/3.
+    # Gist order moves fB to the FRONT: fB(1), fA(2), fC(3) -- EAC_gist for
+    # fB = 1/3. Moved earlier -> negative delta (improvement).
+    retained = {
+        "fA": _ru("fA", "fact", 0, 1, 1, 2),
+        "fB": _ru("fB", "fact", 1, 2, 0, 1),
+        "fC": _ru("fC", "fact", 2, 3, 2, 3),
+    }
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    view = score_question_unit_rank(["fB"], retained, {}, source_ranks, gist_ranks)
+    assert view["eligible"] is True
+    assert view["source_eac"] == round(2 / 3, 4)
+    assert view["gist_eac"] == round(1 / 3, 4)
+    assert view["delta_eac"] < 0
+
+
+def test_single_required_unit_moved_later_in_gist_regresses_eac():
+    # Source order: fA(1), fB(2), fC(3) -- EAC_source for fB = 2/3. Gist
+    # order moves fB to the BACK: fA(1), fC(2), fB(3) -- EAC_gist for fB =
+    # 3/3 = 1.0. Moved later -> positive delta (regression).
+    retained = {
+        "fA": _ru("fA", "fact", 0, 1, 0, 1),
+        "fB": _ru("fB", "fact", 1, 2, 2, 3),
+        "fC": _ru("fC", "fact", 2, 3, 1, 2),
+    }
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    view = score_question_unit_rank(["fB"], retained, {}, source_ranks, gist_ranks)
+    assert view["source_eac"] == round(2 / 3, 4)
+    assert view["gist_eac"] == 1.0
+    assert view["delta_eac"] > 0
+
+
+def test_two_required_units_clustered_closer_in_gist_improves_locality_span():
+    # 4 retained units. Source order fA,fB,fC,fD (ranks 1..4). Required
+    # fA+fD are the FIRST and LAST in source -> Span_source = (4-1+1)/4 = 1.0
+    # (maximally spread). Gist clusters them adjacent at the end:
+    # fB,fC,fA,fD -> fA=3, fD=4 -> Span_gist = (4-3+1)/4 = 0.5.
+    retained = {
+        "fA": _ru("fA", "fact", 0, 1, 2, 3),
+        "fB": _ru("fB", "fact", 1, 2, 0, 1),
+        "fC": _ru("fC", "fact", 2, 3, 1, 2),
+        "fD": _ru("fD", "fact", 3, 4, 3, 4),
+    }
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    view = score_question_unit_rank(["fA", "fD"], retained, {}, source_ranks, gist_ranks)
+    assert view["source_locality_span"] == 1.0
+    assert view["gist_locality_span"] == 0.5
+    assert view["delta_locality_span"] < 0
+
+
+def test_two_required_units_spread_farther_in_gist_regresses_locality_span():
+    # Required fA+fB are ADJACENT in source (ranks 1,2 of 4) -> Span_source
+    # = (2-1+1)/4 = 0.5. Gist interposes fC and fD between them: fA,fC,fD,fB
+    # -> fA=1, fB=4 -> Span_gist = (4-1+1)/4 = 1.0.
+    retained = {
+        "fA": _ru("fA", "fact", 0, 1, 0, 1),
+        "fB": _ru("fB", "fact", 1, 2, 3, 4),
+        "fC": _ru("fC", "fact", 2, 3, 1, 2),
+        "fD": _ru("fD", "fact", 3, 4, 2, 3),
+    }
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    view = score_question_unit_rank(["fA", "fB"], retained, {}, source_ranks, gist_ranks)
+    assert view["source_locality_span"] == 0.5
+    assert view["gist_locality_span"] == 1.0
+    assert view["delta_locality_span"] > 0
+
+
+def test_ties_at_same_source_position_break_by_unit_id():
+    # f1 and f2 align to the IDENTICAL source span -- must not depend on
+    # dict/JSON insertion order. Sorted by (start, end, uid): f0 < f1 < f2 < f3.
+    retained = {
+        "f2": _ru("f2", "fact", 2, 4, 20, 21),
+        "f0": _ru("f0", "fact", 0, 1, 30, 31),
+        "f3": _ru("f3", "fact", 5, 6, 40, 41),
+        "f1": _ru("f1", "fact", 2, 4, 10, 11),  # same source span as f2
+    }
+    source_ranks = rank_units(retained, "source")
+    assert source_ranks == {"f0": 1, "f1": 2, "f2": 3, "f3": 4}
+
+
+def test_ties_at_same_gist_position_break_by_unit_id():
+    retained = {
+        "f2": _ru("f2", "fact", 20, 21, 2, 4),
+        "f0": _ru("f0", "fact", 30, 31, 0, 1),
+        "f3": _ru("f3", "fact", 40, 41, 5, 6),
+        "f1": _ru("f1", "fact", 10, 11, 2, 4),  # same gist span as f2
+    }
+    gist_ranks = rank_units(retained, "gist")
+    assert gist_ranks == {"f0": 1, "f1": 2, "f2": 3, "f3": 4}
+
+
+def test_relation_and_fact_sharing_source_span_remain_separate_units():
+    # A fact and a relation whose source_quote spans fully overlap (common
+    # in this corpus -- see FINDABILITY_FINDINGS.md "Duplicate / relation
+    # overlap handling") are NEVER collapsed into one unit for this metric:
+    # each keeps its own rank, tie-broken by unit id ("f1" < "r1").
+    gold = _gold(
+        facts=[_fact("f1", "dropped the index")],
+        relations=[{"id": "r1", "source_quote": "dropped the index"}],
+    )
+    source_tokens = tokenize("the migration dropped the index today")
+    alignment = align_units_to_source(gold, source_tokens)
+    assert alignment.unit_span["f1"] == alignment.unit_span["r1"]  # identical span, NOT merged into one unit
+    judged = _judged_level(
+        {"f1": ("retained", "dropped the index")},
+        {"r1": ("retained", "dropped the index")},
+    )
+    gist_pos = {"f1": Span(0, 3), "r1": Span(0, 3)}
+    retained, excluded = build_retained_units(gold, judged, alignment, gist_pos, STRICT_STATUSES)
+    assert set(retained) == {"f1", "r1"}
+    source_ranks = rank_units(retained, "source")
+    assert source_ranks == {"f1": 1, "r1": 2}  # "f1" < "r1" -- deterministic, not incidental
+
+
+def test_omitted_required_unit_makes_unit_rank_question_ineligible():
+    retained = {}
+    excluded = {"f1": ["status=omitted", "unaligned_in_rendering"]}
+    view = score_question_unit_rank(["f1"], retained, excluded, {}, {})
+    assert view["eligible"] is False
+    assert any("status=omitted" in r for r in view["reasons"])
+
+
+def test_partial_required_unit_makes_strict_view_ineligible_but_not_exploratory():
+    source = "alpha beta gamma delta"
+    gold = _gold([_fact("f1", "alpha beta"), _fact("f2", "gamma delta")])
+    source_tokens = tokenize(source)
+    alignment = align_units_to_source(gold, source_tokens)
+    judged = _judged_level({"f1": ("retained", "alpha beta"), "f2": ("partial", "gamma delta")})
+    rendering = _fence("- alpha beta", "- gamma delta")
+    idx = build_rendering_index(rendering)
+    gist_pos = locate_all_gist_positions(gold, judged, idx.tokens)
+
+    retained_strict, excluded_strict = build_retained_units(gold, judged, alignment, gist_pos, STRICT_STATUSES)
+    assert set(retained_strict) == {"f1"}
+    assert excluded_strict["f2"] == ["status=partial"]
+    strict_ranks_s = rank_units(retained_strict, "source")
+    strict_ranks_g = rank_units(retained_strict, "gist")
+    strict_view = score_question_unit_rank(["f2"], retained_strict, excluded_strict, strict_ranks_s, strict_ranks_g)
+    assert strict_view["eligible"] is False
+    assert any("status=partial" in r for r in strict_view["reasons"])
+
+    retained_explore, excluded_explore = build_retained_units(gold, judged, alignment, gist_pos, EXPLORATORY_STATUSES)
+    assert set(retained_explore) == {"f1", "f2"}
+    explore_ranks_s = rank_units(retained_explore, "source")
+    explore_ranks_g = rank_units(retained_explore, "gist")
+    explore_view = score_question_unit_rank(
+        ["f2"], retained_explore, excluded_explore, explore_ranks_s, explore_ranks_g
+    )
+    assert explore_view["eligible"] is True
+
+
+def test_zero_retained_units_is_ineligible_not_a_crash():
+    retained = {}
+    excluded = {"f1": ["unaligned_in_source"]}
+    view = score_question_unit_rank(["f1"], retained, excluded, {}, {})
+    assert view["eligible"] is False
+
+
+def test_one_retained_unit_has_eac_and_span_of_one():
+    retained = {"f1": _ru("f1", "fact", 0, 1, 5, 6)}
+    source_ranks = rank_units(retained, "source")
+    gist_ranks = rank_units(retained, "gist")
+    view = score_question_unit_rank(["f1"], retained, {}, source_ranks, gist_ranks)
+    assert view["eligible"] is True
+    assert view["retained_set_size"] == 1
+    assert view["source_eac"] == 1.0
+    assert view["gist_eac"] == 1.0
+    assert view["source_locality_span"] == 1.0
+    assert view["gist_locality_span"] == 1.0
+    assert view["delta_eac"] == 0.0
+
+
+def test_rank_normalization_first_and_last_of_ten():
+    # 1-indexed cumulative traversal: first of 10 retained units -> 0.1,
+    # tenth (last) of 10 -> 1.0.
+    retained = {f"u{i}": _ru(f"u{i}", "fact", i, i + 1, i, i + 1) for i in range(10)}
+    source_ranks = rank_units(retained, "source")
+    first_view = score_question_unit_rank(["u0"], retained, {}, source_ranks, source_ranks)
+    last_view = score_question_unit_rank(["u9"], retained, {}, source_ranks, source_ranks)
+    assert first_view["source_eac"] == 0.1
+    assert last_view["source_eac"] == 1.0
+
+
+def test_deterministic_ordering_regardless_of_dict_insertion_order():
+    units = [
+        _ru("f3", "fact", 3, 4, 3, 4),
+        _ru("f1", "fact", 1, 2, 1, 2),
+        _ru("f2", "fact", 2, 3, 2, 3),
+        _ru("f0", "fact", 0, 1, 0, 1),
+    ]
+    retained_order_a = {u.uid: u for u in units}
+    retained_order_b = {u.uid: u for u in reversed(units)}
+    assert rank_units(retained_order_a, "source") == rank_units(retained_order_b, "source")
+    assert rank_units(retained_order_a, "gist") == rank_units(retained_order_b, "gist")
