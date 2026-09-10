@@ -1,0 +1,9 @@
+# Fetched upstream data (QMSum/Qasper/HotpotQA raw files + per-dataset
+# raw_manifest.json). Populated by scripts/fetch_sources.py, never
+# committed -- see README.md "Do not duplicate large upstream datasets in
+# git." The frozen corpus under qmsum/, qasper/, hotpotqa/ is self-contained
+# without this directory.
+.raw-cache/
+
+__pycache__/
+*.pyc
