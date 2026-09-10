@@ -1,0 +1,127 @@
+{
+  "case_id": "qmsum-10",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 122,
+      "span_index": 0,
+      "start_idx": 109,
+      "turns": [
+        {
+          "content": "We'll now go on to the next question from Mr. d'Entremont.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you very much, Mr. Chair. Ten weeks ago the Minister of Fisheries, in responding to my question in question period, acknowledged that the lobster fishery was being negatively affected by the COVID-19 pandemic and was facing losses of up to 95% of its Asian markets. Mr. Chair, on April 28 I asked the minister what she was doing to support harvesters who were left out of the $62.5 million aid package. She mentioned that she was looking at sector-specific areas to make sure that the issues were addressed. Can the minister tell us what the government's plan is to directly support seafood harvesters?",
+          "speaker": "Mr. Chris d'Entremont (West Nova, CPC)"
+        },
+        {
+          "content": "The honourable minister.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you, Mr. Chair. I thank my colleague for that very good question. We know that the fish and seafood sector has been extremely adversely affected because of COVID-19. We've started to put measures in place to address the issue with the $62.5 million for processors, as well as to make sure that the CERB is available for seasonal workers as well as people who have run out of their fishery EI, but we know that more needs to be done. The fishery enterprises are uniquely structured, which is why we're looking at measures to address the concerns they have. I'm working with my provincial colleagues, as well as my caucus colleagues.",
+          "speaker": "Hon. Bernadette Jordan (Minister of Fisheries, Oceans and the Canadian Coast Guard)"
+        },
+        {
+          "content": "Mr. Chair, most fishermen are not eligible for the wage subsidy program due to the stipulation that it cannot be used for employees who are related to their employer. Most fishing enterprises, like farm enterprises, are family oriented. Many fishermen have their wives, their sons, their uncles or their fathers working for them, and sometimes it's the whole family on the boat. Can the minister explain what the government's plan is to support fishermen who do not fit into any actual program and who desperately need direct financial help from the federal government to survive?",
+          "speaker": "Mr. Chris d'Entremont"
+        },
+        {
+          "content": "Mr. Chair, we know that, because of the unique structure of fishing enterprises, they are not eligible for many of the supports we have put in place. We have made changes to the CERB to make sure that people who run out of the fishers EI are eligible as well as seasonable workers. We know that more needs to be done for the harvesters directly. We are working on direct supports. We have put in place measures to address processors' concerns so that harvesters continue to have a place to sell their product. We know that more has to be done. I am working with my cabinet colleagues to find solutions, and I hope I will have more to say about that very soon.",
+          "speaker": "Hon. Bernadette Jordan"
+        },
+        {
+          "content": "In recent weeks, lobster fishermen in the gulf region of the Maritimes were shocked to read an additional subsection of regulations that was added to their fishing conditions for the 2021 fishing season. This addition was for a catch limitation or quota to which none of the harvesters or advisory members were privy. This created quite a chill within the lobster fishery, for sure. Can the minister tell us how these detailed regulations managed to get added without her authorization, and can licence-holders expect to see these same regulations in their conditions when their season gets going in the future?",
+          "speaker": "Mr. Chris d'Entremont"
+        },
+        {
+          "content": "Mr. Chair, I want to thank the people who brought to my attention the conditions that were put on licences in the gulf. Those were not done under my authorization. They were removed right away from the condition of licence, and they will not happen.",
+          "speaker": "Hon. Bernadette Jordan"
+        },
+        {
+          "content": "My next question is for the Minister of Health. Mr. Chair, on Wednesday, February 26, after the death of 23-year-old Chantelle Lindsay from Nova Scotia due to complications from cystic fibrosis, I asked the Prime Minister whether the government was going to make Trikafta, which might have saved Chantelle's life, available to Canadians. Now that almost 12 weeks have passed, we understand that Vertex Pharmaceuticals has not yet applied to Health Canada for study. Many of my Conservative colleagues and I have recently sent a letter to the minister asking for an update on how we support those negotiations with Vertex. Can the Minister of Health tell us when this drug will be available to CF patients in Canada?",
+          "speaker": "Mr. Chris d'Entremont"
+        },
+        {
+          "content": "Honourable minister, the floor is yours.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you very much, Mr. Chair. My heart goes out to the family of Chantelle, who are obviously suffering an unbearable loss. I agree with the member that we want to make sure that effective drugs are available in Canada. As the member has pointed out, Vertex has not applied to sell Trikafta in Canada. However, there is the special access program that makes drugs like Trikafta available. In fact, the majority of people who have applied through the special access program to get access to the drug have received access. I would encourage the member to continue his correspondence with the manufacturer, as will we.",
+          "speaker": "Hon. Patty Hajdu (Minister of Health)"
+        },
+        {
+          "content": "Mr. d'Entremont, you have 36 seconds.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Mr.Chair, the tourism season is already deeply affected by COVID-19. A number of industries, businesses and festivals are having to deal with considerable losses of income. In my constituency, tens of thousands of tourists use the ferry between Bar Harbor, Maine, and Yarmouth, Nova Scotia. What is the government planning to do to help the ferry to survive and to resume service next season, if the borders remain closed this summer?",
+          "speaker": "Mr. Chris d'Entremont"
+        },
+        {
+          "content": "I have had the opportunity to speak to my colleague Mr.d'Entremont about solutions to assist people in the tourism sector all over the country, and particularly in the Atlantic region. In light of the new funding for the Atlantic Canada Opportunities Agency, ACOA, I will be happy to work with him and with the leaders of the tourism sector.",
+          "speaker": "Hon. Mlanie Joly (Minister of Economic Development and Official Languages)"
+        }
+      ]
+    },
+    {
+      "end_idx": 221,
+      "span_index": 1,
+      "start_idx": 213,
+      "turns": [
+        {
+          "content": "We'll continue. The next question will go to Mr. Yurdiga.",
+          "speaker": "The Acting Chair (Mr. Bruce Stanton)"
+        },
+        {
+          "content": "Thank you, Mr. Chair. Before I start my questions, I would like to thank the various ministers, parliamentary secretaries and the Speaker of the House for reaching out to me during the severe flooding in Fort McMurray. Your support during these trying times is much appreciated. The oil and gas industry is under severe strain. Over the past number of years, we have seen tremendous pressure on the federal government from anti-oil and gas lobby groups demanding that the oil sands be shut down. The federal Liberal government's response to the anti-oil lobby was the introduction of the no more pipelines bill, Bill C-69, which will prevent any major oil and gas projects from being developed in Canada; and the oil shipping ban, Bill C-48, for the northern coast of British Columbia, which also had a negative effect on the oil industry. These two bills alone pushed over $200 billion of investment out of Canada, causing the Alberta economy to retract to recession levels. To compound Alberta's economic problems, we have an international oil price war and the COVID-19 pandemic, which caused a huge drop in demand for oil. Mr. Chair, 48 days after the finance minister promised liquidity loans to oil producers and service companies, there are still no applications open for these loans. Can the honourable Minister of Natural Resources tell us when the Liberals will act on their promise?",
+          "speaker": "Mr. David Yurdiga (Fort McMurrayCold Lake, CPC)"
+        },
+        {
+          "content": "Mr. Chair, I'm happy that we were able to announce today some liquidity measures for large cap corporations in the oil and gas sector. These measures will provide them with the liquidity that they needed, and this is also the liquidity that they asked for. It was on April 17 that we started liquidity measures for small and medium-sized businesses in the oil and gas industry, and those are the ones in which 85% of workers are affected. Today's measures will complete that. I'm very happy that we've had such people as the Canadian Association of Petroleum Producers come out and say that this is what they asked for and this is what they need, and we have produced what they need in order to ensure the future competitiveness of Canada's oil and gas sector.",
+          "speaker": "Hon. Seamus O'Regan (Minister of Natural Resources)"
+        },
+        {
+          "content": "Mr. Chair, we have seen junior oil companies close their doors. The larger companies have sent contractors home and laid off employees. Many of these contractors are indigenous companies, and they are having a difficult time qualifying for programs to save their businesses. Can the honourable Minister of Crown-Indigenous Relations inform us of the measures the government is taking to ensure there are no gaps in the current programs, and commit to review the eligibility criteria for owners of aboriginal businesses struggling to qualify for financial help?",
+          "speaker": "Mr. David Yurdiga"
+        },
+        {
+          "content": "Mr. Chair, Canada's oil sector provides jobs for more than 576,000 people, including 11,000 indigenous people, in every part of Canada. It is essential that we support those businesses. It is essential that we support the many indigenous people who work in our oil and gas sector, particularly in Alberta and Saskatchewan. We have provided supports for those businesses, and we will continue to do so, also keeping in mind that in many of these communities the importance of public health and safety is foremost in our minds.",
+          "speaker": "Hon. Seamus O'Regan"
+        },
+        {
+          "content": "Mr. Chair, western Canada oil storage is under extreme pressure. If thermal projects such as SAGD are shut down, those facilities could be lost forever. If the global oil markets remain oversupplied into the summer and industry must shut down production, what is the government's plan to ensure Canada's energy security and the economic future of the oil sands with the potential shutdown of oil production?",
+          "speaker": "Mr. David Yurdiga"
+        },
+        {
+          "content": "Mr. Chair, we have worked with industry and with provinces on every front to ensure the stability of the oil and gas sector of our country. We have concentrated on workers. We need the workers in our oil and gas sector in order to lower emissions and achieve a greener economy. We need their determination and their ingenuity. We need to make sure that their jobs are held whole. Therefore, we are looking after workers and we are looking out for companies that hold onto those jobs for those workers.",
+          "speaker": "Hon. Seamus O'Regan"
+        },
+        {
+          "content": "Mr. Chair, the government's assistance package for the Canadian oil and gas industry provides some hope to the industry. The lack of detail and action has led to some challenges. Can the minister clarify? On a medium-sized energy company's eligibility, if the company is in default to financial institutions, does it still qualify for the business credit availability program?",
+          "speaker": "Mr. David Yurdiga"
+        },
+        {
+          "content": "Mr. Chair, we know that our oil and gas sector is suffering through two crises. We have the impacts of COVID and the effects of a global price war, and we have been tackling both of these on each front. On April 17, we announced liquidity measures to support the small and medium-sized players. That made up 85% of the jobs in this sector. We have announced liquidity will be further made available to larger players. As well, through the BCAP, we are making sure that more companies are eligible so that they can remain whole and so they can hold onto the jobs that we need.",
+          "speaker": "Hon. Seamus O'Regan"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Committee",
+    "n_spans": 2,
+    "n_turns": 276,
+    "native_meeting_id": "covid_4",
+    "source_word_count": 16180
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Summarize the discussion about things including fishing and tourism, oil and gas affected by the Covid-19.",
+  "reference_answer": "During the pandemic, the lobster fishery was being negatively affected and was facing losses of up to 95% of its Asian markets. Many fishermen had their wives, their sons, their uncles or their fathers working for them, and sometimes it was the whole family on the boat. Moreover, the tourism season is already deeply affected by COVID-19. A number of industries, businesses and festivals were having to deal with considerable losses of income. As for oil and gas, western Canada oil storage is under extreme pressure. If thermal projects such as SAGD are shut down, those facilities could be lost forever. The oil and gas sector was suffering through two crises --COVID and the effects of a global price war."
+}

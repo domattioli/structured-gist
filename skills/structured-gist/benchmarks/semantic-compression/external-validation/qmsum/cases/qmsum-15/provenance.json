@@ -1,0 +1,19 @@
+{
+  "dataset": "qmsum",
+  "deviations": [
+    "QMSum's published jsonl splits carry no per-meeting ID field; native_meeting_id was recovered by exact content match against data/Committee/all/covid_4.json in the same pinned commit."
+  ],
+  "license": "MIT",
+  "license_source": "https://raw.githubusercontent.com/Yale-LILY/QMSum/83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e/LICENSE",
+  "retrieval_date": "2026-09-10T04:14:13Z",
+  "source_sha256": "b20a5db3e63d2133d1c1975857a2c8ae83a31de03ac8aa2300de814dbd39ad54",
+  "transformation_script_version": "1.0.0",
+  "transformed_case_sha256": "dca3eca3a258c8daf3f25ffb1bf6741eeb51465ab84cbfa02331364b27071c0e",
+  "upstream_case_id": "Committee:covid_4:sq6",
+  "upstream_document_id": "covid_4",
+  "upstream_domain": "Committee",
+  "upstream_question_id": "sq6",
+  "upstream_revision": "83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e",
+  "upstream_source_repository": "https://github.com/Yale-LILY/QMSum",
+  "upstream_split": "test"
+}

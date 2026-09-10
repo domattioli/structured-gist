@@ -1,0 +1,53 @@
+{
+  "case_id": "qasper-05",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 7,
+      "para_idx": 0,
+      "section_idx": 1,
+      "section_name": "A Stance Detection Data Set",
+      "text": "We have decided to consider tweets about popular sports clubs as our domain for stance detection. Considerable amounts of tweets are being published for sports-related events at every instant. Hence we have determined our targets as Galatasaray (namely Target-1) and Fenerbahçe (namely, Target-2) which are two of the most popular football clubs in Turkey. As is the case for the sentiment analysis tools, the outputs of the stance detection systems on a stream of tweets about these clubs can facilitate the use of the opinions of the football followers by these clubs."
+    },
+    {
+      "global_idx": 8,
+      "para_idx": 1,
+      "section_idx": 1,
+      "section_name": "A Stance Detection Data Set",
+      "text": "In a previous study on the identification of public health-related tweets, two tweet data sets in Turkish (each set containing 1 million random tweets) have been compiled where these sets belong to two different periods of 20 consecutive days BIBREF11 . We have decided to use one of these sets (corresponding to the period between August 18 and September 6, 2015) and firstly filtered the tweets using the possible names used to refer to the target clubs. Then, we have annotated the stance information in the tweets for these targets as Favor or Against. Within the course of this study, we have not considered those tweets in which the target is not explicitly mentioned, as our initial filtering process reveals."
+    },
+    {
+      "global_idx": 9,
+      "para_idx": 2,
+      "section_idx": 1,
+      "section_name": "A Stance Detection Data Set",
+      "text": "For the purposes of the current study, we have not annotated any tweets with the Neither class. This stance class and even finer-grained classes can be considered in further annotation studies. We should also note that in a few tweets, the target of the stance was the management of the club while in some others a particular footballer of the club is praised or criticised. Still, we have considered the club as the target of the stance in all of the cases and carried out our annotations accordingly."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "free_form",
+    "arxiv_id": "1706.06894",
+    "cardinality": "multi",
+    "distance_bucket": "nearby",
+    "evidence_distance": 2,
+    "evidence_raw": [
+      "We have decided to consider tweets about popular sports clubs as our domain for stance detection. Considerable amounts of tweets are being published for sports-related events at every instant. Hence we have determined our targets as Galatasaray (namely Target-1) and Fenerbahçe (namely, Target-2) which are two of the most popular football clubs in Turkey. As is the case for the sentiment analysis tools, the outputs of the stance detection systems on a stream of tweets about these clubs can facilitate the use of the opinions of the football followers by these clubs.",
+      "In a previous study on the identification of public health-related tweets, two tweet data sets in Turkish (each set containing 1 million random tweets) have been compiled where these sets belong to two different periods of 20 consecutive days BIBREF11 . We have decided to use one of these sets (corresponding to the period between August 18 and September 6, 2015) and firstly filtered the tweets using the possible names used to refer to the target clubs. Then, we have annotated the stance information in the tweets for these targets as Favor or Against. Within the course of this study, we have not considered those tweets in which the target is not explicitly mentioned, as our initial filtering process reveals.",
+      "For the purposes of the current study, we have not annotated any tweets with the Neither class. This stance class and even finer-grained classes can be considered in further annotation studies. We should also note that in a few tweets, the target of the stance was the management of the club while in some others a particular footballer of the club is praised or criticised. Still, we have considered the club as the target of the stance in all of the cases and carried out our annotations accordingly."
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 3,
+    "nlp_background": "",
+    "paper_title": "Stance Detection in Turkish Tweets",
+    "source_word_count": 2375,
+    "topic_background": ""
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "How were the tweets annotated?",
+  "reference_answer": "tweets are annotated with only Favor or Against for two targets - Galatasaray and Fenerbahçe"
+}

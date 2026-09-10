@@ -1,0 +1,851 @@
+{
+  "availability": {
+    "multi": {
+      "Academic": 0,
+      "Committee": 7,
+      "Product": 31
+    }
+  },
+  "cardinality_totals": {
+    "multi": 12,
+    "single": 12
+  },
+  "dataset": "qmsum",
+  "domain_quota": 8,
+  "domain_totals": {
+    "Academic": 8,
+    "Committee": 8,
+    "Product": 8
+  },
+  "eligibility_stats": {
+    "eligible_by_domain": {
+      "Academic": 49,
+      "Committee": 66,
+      "Product": 129
+    },
+    "eligible_cardinality_by_domain": {
+      "Academic": {
+        "multi": 0,
+        "single": 49
+      },
+      "Committee": {
+        "multi": 7,
+        "single": 59
+      },
+      "Product": {
+        "multi": 31,
+        "single": 98
+      }
+    },
+    "eligible_pool_size": 244,
+    "general_queries_seen": 37,
+    "rejections": {}
+  },
+  "global_multi_target": 12,
+  "scarcity_domain_order": [
+    "Academic",
+    "Committee",
+    "Product"
+  ],
+  "selected_candidates": [
+    {
+      "answer": "The talk will present the work that is currently being done at ICSI including examples of inference of user intentions and of the recordings of the on-going data collection. The talk will also outline the theoretical (X-schemas, image schemas, Bayes-nets) and neural background.",
+      "candidate_id": "Academic:Bed016:sq1",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 724,
+      "native_meeting_id": "Bed016",
+      "query": "What was said about EML talk?",
+      "query_index": 1,
+      "relevant_text_span": [
+        [
+          "176",
+          "210"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          176,
+          210
+        ]
+      ],
+      "sort_key": "02cad5f3e66439537047f9d14d107e87a841ef3a2e42acb17a5bda24da8d11ac",
+      "source_word_count": 8844,
+      "test_line_index": 6
+    },
+    {
+      "answer": "It is necessary for the belief-net to have at least one layer of nodes between the features and the final output. This makes the structure more flexible in terms of coding feature-layer probabilities.",
+      "candidate_id": "Academic:Bed003:sq0",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 1029,
+      "native_meeting_id": "Bed003",
+      "query": "What did Grad B say about the structure of the belief net?",
+      "query_index": 0,
+      "relevant_text_span": [
+        [
+          "137",
+          "150"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          137,
+          150
+        ]
+      ],
+      "sort_key": "040ea142a775892af039327678732bc1c3cf3899d7388ecc4184e42b0fc17545",
+      "source_word_count": 14060,
+      "test_line_index": 3
+    },
+    {
+      "answer": "The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised.",
+      "candidate_id": "Academic:Bmr023:sq2",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 745,
+      "native_meeting_id": "Bmr023",
+      "query": "What was the status of transcription?",
+      "query_index": 2,
+      "relevant_text_span": [
+        [
+          "229",
+          "323"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          229,
+          323
+        ]
+      ],
+      "sort_key": "067bb1d4f8c35570d9f3fd655a42c67bc954f97c512e0594305092383a47adef",
+      "source_word_count": 13457,
+      "test_line_index": 7
+    },
+    {
+      "answer": "The team was doing spectral subtraction with both scaling and GGT bins. There were pros and cons to both approaches. The professor suggested a simple spectral subtraction followed by a KL transformation. He also suggested using JRASTRA's technique which relied on adding some noise to get rid of noise. The team also suggested VTS techniques.",
+      "candidate_id": "Academic:Bro019:sq3",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 804,
+      "native_meeting_id": "Bro019",
+      "query": "Summarize the discussion about spectral subtraction",
+      "query_index": 3,
+      "relevant_text_span": [
+        [
+          "358",
+          "448"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          358,
+          448
+        ]
+      ],
+      "sort_key": "2700cbe5300a44bee1cc8abd47e6e3631953353f6bebe31ad9db3846dad3364b",
+      "source_word_count": 13945,
+      "test_line_index": 0
+    },
+    {
+      "answer": "SmartKom, although it does not code for intentions as specified in this task, provides a model of the discourse, which can be useful for the detection of features through querying and anaphora resolution.",
+      "candidate_id": "Academic:Bed003:sq4",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 1029,
+      "native_meeting_id": "Bed003",
+      "query": "What was the importance of SmartKom?",
+      "query_index": 4,
+      "relevant_text_span": [
+        [
+          "782",
+          "796"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          782,
+          796
+        ]
+      ],
+      "sort_key": "2873db1ac5f64fc1bb1701069935eb59ad9b5af9413306e4a2b147382e2ff3a9",
+      "source_word_count": 14060,
+      "test_line_index": 3
+    },
+    {
+      "answer": "PhD D brought up a VTS technique to do voice-unvoice which was developed by Jose Carlos Segura, who is a person from Grenada. The professor did not know him, but the inspiration for the VTS had come from CMU.",
+      "candidate_id": "Academic:Bro019:sq4",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 804,
+      "native_meeting_id": "Bro019",
+      "query": "What did the team say about the person in Grenada?",
+      "query_index": 4,
+      "relevant_text_span": [
+        [
+          "447",
+          "463"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          447,
+          463
+        ]
+      ],
+      "sort_key": "30189dbb90cdc4ee37e3f9d3a3cf6df45b0aa1f49c7bc223571abfdb6a214157",
+      "source_word_count": 13945,
+      "test_line_index": 0
+    },
+    {
+      "answer": "The professor recalled that at a workshop at Hopkins or Rutgers, twenty-five participants were running their tasks on twenty-five machines. Things would have been better if they ran tasks on their own machine. He was adding to PhD F's remarks on students in the team doing a similar thing.",
+      "candidate_id": "Academic:Bro019:sq2",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 804,
+      "native_meeting_id": "Bro019",
+      "query": "What did the professor say about the workshop?",
+      "query_index": 2,
+      "relevant_text_span": [
+        [
+          "53",
+          "75"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          53,
+          75
+        ]
+      ],
+      "sort_key": "31b896288dec4dc13423d03fd55dd6e4c9cc8271669997cc5a685c27ab0b107f",
+      "source_word_count": 13945,
+      "test_line_index": 0
+    },
+    {
+      "answer": "Approximately 32-35 hours of meeting data have been recorded, roughly 30 hours of which comprise non-digits recordings. The transcribers have begun performing digit extraction (see abstract for Bmr013) and should be finished within a few days. Approximately 11 hours of speech have been transcribed.",
+      "candidate_id": "Academic:Bmr014:sq2",
+      "cardinality": "single",
+      "domain": "Academic",
+      "n_spans": 1,
+      "n_turns": 726,
+      "native_meeting_id": "Bmr014",
+      "query": "What’s the current state of transcriptions?",
+      "query_index": 2,
+      "relevant_text_span": [
+        [
+          "201",
+          "248"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          201,
+          248
+        ]
+      ],
+      "sort_key": "35b6f87844c6fb5025e1dcbee3538d661bde9a7d53524b59ec90df71697254e7",
+      "source_word_count": 12565,
+      "test_line_index": 1
+    },
+    {
+      "answer": "The Prime Minister was quizzed on why he wasn't providing the money to allow the Auditor general to conduct audits on the Government's spending. The Prime Minister responded as to having increased the budget of the Auditor General's budget the previous year. The response was deemed unsatisfactory by the questioning party.",
+      "candidate_id": "Committee:covid_9:sq3",
+      "cardinality": "single",
+      "domain": "Committee",
+      "n_spans": 1,
+      "n_turns": 321,
+      "native_meeting_id": "covid_9",
+      "query": "What was said about the Auditor General?",
+      "query_index": 3,
+      "relevant_text_span": [
+        [
+          "49",
+          "55"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          49,
+          55
+        ]
+      ],
+      "sort_key": "079160a2e3982565529d9c235ae0718d1f867a02405bca7232482857b3f4c3f5",
+      "source_word_count": 19894,
+      "test_line_index": 1
+    },
+    {
+      "answer": "During the pandemic, the lobster fishery was being negatively affected and was facing losses of up to 95% of its Asian markets. Many fishermen had their wives, their sons, their uncles or their fathers working for them, and sometimes it was the whole family on the boat. Moreover, the tourism season is already deeply affected by COVID-19. A number of industries, businesses and festivals were having to deal with considerable losses of income. As for oil and gas, western Canada oil storage is under extreme pressure. If thermal projects such as SAGD are shut down, those facilities could be lost forever. The oil and gas sector was suffering through two crises --COVID and the effects of a global price war.",
+      "candidate_id": "Committee:covid_4:sq9",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 2,
+      "n_turns": 276,
+      "native_meeting_id": "covid_4",
+      "query": "Summarize the discussion about things including fishing and tourism, oil and gas affected by the Covid-19.",
+      "query_index": 9,
+      "relevant_text_span": [
+        [
+          "109",
+          "122"
+        ],
+        [
+          "213",
+          "221"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          109,
+          122
+        ],
+        [
+          213,
+          221
+        ]
+      ],
+      "sort_key": "4bfa7f3480b4d536f4eb3d98e9a1ddf2923ec5c6caef942f392cd28f994ba72a",
+      "source_word_count": 16180,
+      "test_line_index": 3
+    },
+    {
+      "answer": "Mr. Dan Albas asked about the handling of fraudulence by the Canadian government but Right Hon. Justin Trudeau, the Prime Minister, was saying that the government put giving support and help to Canadians in the first place. Then Mr. Gabriel Ste-Marie questioned the reason why the government supported the profiteers for tax evasion when implementing the large employer emergency financing facility. However, Right Hon. Justin Trudeau thought they were making plans to help workers to survive this pandemic and was always their priority to overcome. Hon. Candice Bergen required that how they were dealing with unopened mail at Service Canada and put out a violence case that why the Liberals were making this gun illegal and What the purpose of banning this particular farm rifle was. It was demonstrated by Hon. Bill Blair that many Canadians were murdered by these guns which was their explanation of banning guns.",
+      "candidate_id": "Committee:covid_4:sq0",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 2,
+      "n_turns": 276,
+      "native_meeting_id": "covid_4",
+      "query": "Summarize the discussion about petitions fraudulence, tax evasion, violence handling and their supervisory.",
+      "query_index": 0,
+      "relevant_text_span": [
+        [
+          "11",
+          "38"
+        ],
+        [
+          "50",
+          "64"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          11,
+          38
+        ],
+        [
+          50,
+          64
+        ]
+      ],
+      "sort_key": "5acfce92f25383698bb80d4853b1e5178ebcd767b8eb53ad29688c00caeb6dc4",
+      "source_word_count": 16180,
+      "test_line_index": 3
+    },
+    {
+      "answer": "The committee admitted that the funding issues brought more pressure on schools, especially after the new Act, for they would have to spend more in the light of it. It was pointed out that the government had not noticed the staff in the PRU, who required training. The committee was trying to communicate with Estyn and the Welsh Government for a broader range of measures to provide opportunities for schools and local authorities.",
+      "candidate_id": "Committee:education_4:sq0",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 2,
+      "n_turns": 229,
+      "native_meeting_id": "education_4",
+      "query": "What did the meeting discuss about the funding issues?",
+      "query_index": 0,
+      "relevant_text_span": [
+        [
+          "20",
+          "38"
+        ],
+        [
+          "177",
+          "179"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          20,
+          38
+        ],
+        [
+          177,
+          179
+        ]
+      ],
+      "sort_key": "92ade41501d1f9f98f18aa33eeb76c16eb1f945bae364b2ed5a41dd18aac3f3a",
+      "source_word_count": 14631,
+      "test_line_index": 0
+    },
+    {
+      "answer": "PRU was supposed to collaborate with schools to arrange special curriculums to meet the students' special needs. This not only had something to do with finance but was also related to the recruitment of professional staff. The training for special education ought to be included in the professional training system.",
+      "candidate_id": "Committee:education_4:sq9",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 3,
+      "n_turns": 229,
+      "native_meeting_id": "education_4",
+      "query": "What did the meeting discuss about issues on the special education and recruitment of professional staff?",
+      "query_index": 9,
+      "relevant_text_span": [
+        [
+          "95",
+          "157"
+        ],
+        [
+          "173",
+          "176"
+        ],
+        [
+          "189",
+          "223"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          95,
+          157
+        ],
+        [
+          173,
+          176
+        ],
+        [
+          189,
+          223
+        ]
+      ],
+      "sort_key": "a5db2a262aeac42d631445b59be80c95f0408f9654d334fc691ee946cdf766ae",
+      "source_word_count": 14631,
+      "test_line_index": 0
+    },
+    {
+      "answer": "During the pandemic of Covid-19, the government should fix this gap so that the single parents and their children could get the support they need. Also, matching funds and adequate housing should be given to support the affected in Canada. In addition, the elderly, one of the highest risk populations, had obtained extra funding from the government. Besides, vulnerable people like the disabled could gain more funding support and workers affected by the pandemic could also gain support.",
+      "candidate_id": "Committee:covid_4:sq3",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 3,
+      "n_turns": 276,
+      "native_meeting_id": "covid_4",
+      "query": "Summarize the discussion about Government support for the elderly and for vulnerable people.",
+      "query_index": 3,
+      "relevant_text_span": [
+        [
+          "39",
+          "49"
+        ],
+        [
+          "127",
+          "134"
+        ],
+        [
+          "176",
+          "195"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          39,
+          49
+        ],
+        [
+          127,
+          134
+        ],
+        [
+          176,
+          195
+        ]
+      ],
+      "sort_key": "bea20d02e5c7a91672a0cb8d115807bb49a5cd0e01c7c0ca33be325f6e724e1e",
+      "source_word_count": 16180,
+      "test_line_index": 3
+    },
+    {
+      "answer": "Since Quebec was Canada's biggest producer of hydroelectricity, renewable energy sharing through an energy corridor was very essential for different areas in Canada. And as a hard-hit sector, tourism needed much support from the Canadian government. The government was going to protect the tourism-based economy by investing in tourism infrastructure and upgrades to ensure Canada's tourist regions would be ready when the economy reopened. When it came to the green economy, the government now gave priority to the virus and making through this disaster. Also, they paid much attention to the small businesses and carried out measures to help them out.",
+      "candidate_id": "Committee:covid_4:sq6",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 2,
+      "n_turns": 276,
+      "native_meeting_id": "covid_4",
+      "query": "Summarize the discussion about Government support for energy resources and tourism and funding in green economy and small businesses.",
+      "query_index": 6,
+      "relevant_text_span": [
+        [
+          "163",
+          "175"
+        ],
+        [
+          "241",
+          "274"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          163,
+          175
+        ],
+        [
+          241,
+          274
+        ]
+      ],
+      "sort_key": "c2221fcdafb5859df4acd90022f33f8745ad1b173869bb8a08a4f5ed1750a6be",
+      "source_word_count": 16180,
+      "test_line_index": 3
+    },
+    {
+      "answer": "Sharon Davies recommended the team-around-the-family approach to ensure what was needed for learners to go back into school, as well as what the school could provide. She pointed out the importance of the whole package of support, which not only surrounded the learners but also their families. In addition, she gave an example of the PRU in Oxford who built the partnership between the school and the PRU student to demonstrate the responsibility of schools and the significance of school participation.",
+      "candidate_id": "Committee:education_4:sq5",
+      "cardinality": "multi",
+      "domain": "Committee",
+      "n_spans": 2,
+      "n_turns": 229,
+      "native_meeting_id": "education_4",
+      "query": "What was the solution to the major challenge for the transition of the excluded students?",
+      "query_index": 5,
+      "relevant_text_span": [
+        [
+          "47",
+          "47"
+        ],
+        [
+          "53",
+          "53"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          47,
+          47
+        ],
+        [
+          53,
+          53
+        ]
+      ],
+      "sort_key": "db0805aa23dda2362ddfbbe95102d2f50354185665dcf4e428ba33a6a80ef731",
+      "source_word_count": 14631,
+      "test_line_index": 0
+    },
+    {
+      "answer": "The website did not give an actual cost, but most of the stuff was cheap. The chip would be the most expensive part anyway, so the group should not worry about the cost of the Kryptonite too much.",
+      "candidate_id": "Product:ES2011c:sq5",
+      "cardinality": "single",
+      "domain": "Product",
+      "n_spans": 1,
+      "n_turns": 525,
+      "native_meeting_id": "ES2011c",
+      "query": "What was the cost of the Kryptonite when discussing potential options of energy?",
+      "query_index": 5,
+      "relevant_text_span": [
+        [
+          "489",
+          "500"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          489,
+          500
+        ]
+      ],
+      "sort_key": "00d6e298196d63a8629f8aefbf66879c5c74a7562e082c03063faae45519746e",
+      "source_word_count": 5883,
+      "test_line_index": 7
+    },
+    {
+      "answer": "When User Interface asked the group how to make the spongy remote, Marketing thought about changeable fronts and some basic colour fronts because a fancy look was the most important thing for remote control. So they could make five different fronts to start with. Marketing also mentioned that it could be round, different from a normal remote control.",
+      "candidate_id": "Product:TS3004c:sq1",
+      "cardinality": "single",
+      "domain": "Product",
+      "n_spans": 1,
+      "n_turns": 839,
+      "native_meeting_id": "TS3004c",
+      "query": "What did Marketing think of making spongy remote when presenting the market trend?",
+      "query_index": 1,
+      "relevant_text_span": [
+        [
+          "79",
+          "93"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          79,
+          93
+        ]
+      ],
+      "sort_key": "04510d84d2fda724724accfdfa0d42ae8a394db21f14cb287cf11dae97186601",
+      "source_word_count": 8622,
+      "test_line_index": 12
+    },
+    {
+      "answer": "Industrial Designer thought some parts needed custom design, and other parts should just use standard. For example, the case needed custom design to protect the remote and the locator, and the circuit board needed custom design as well, while the buttons and the wheels, radio sender and receiver were all standard parts. In addition, beeper or other noise things were needed as well for locating the remote. Rubber, plastic, wood and titanium were options of materials, but better not titanium. Regular chips were required if the iPod-style wheel button was used.",
+      "candidate_id": "Product:ES2011c:sq1",
+      "cardinality": "single",
+      "domain": "Product",
+      "n_spans": 1,
+      "n_turns": 525,
+      "native_meeting_id": "ES2011c",
+      "query": "What did the Industrial Designer say about component design?",
+      "query_index": 1,
+      "relevant_text_span": [
+        [
+          "10",
+          "22"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          10,
+          22
+        ]
+      ],
+      "sort_key": "058026567638fa6884d08e94ba9f97141689a522bcbd15728a7e841e4d352aef",
+      "source_word_count": 5883,
+      "test_line_index": 7
+    },
+    {
+      "answer": "The group decided to use wood partly instead of plastic because they wanted to put fashion in electronics and wood was a good option. By contrast, the plastic material was more common, impersonal, and not so high class as wood.",
+      "candidate_id": "Product:IS1003c:sq5",
+      "cardinality": "multi",
+      "domain": "Product",
+      "n_spans": 2,
+      "n_turns": 607,
+      "native_meeting_id": "IS1003c",
+      "query": "What was the decision of discussion about the material when talking about industrial design?",
+      "query_index": 5,
+      "relevant_text_span": [
+        [
+          "386",
+          "395"
+        ],
+        [
+          "415",
+          "429"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          386,
+          395
+        ],
+        [
+          415,
+          429
+        ]
+      ],
+      "sort_key": "064dc60548a27aca30006d92330dba974dd7a810f9670e07815ab4b68a6828df",
+      "source_word_count": 6156,
+      "test_line_index": 10
+    },
+    {
+      "answer": "That year everything from clothes to shoes and furniture was inspired by fruits and vegetables so the marketing suggested taking that into account. The marketing also mentioned that people wanted a spongy touch which meant the product might be partly wooden and partly rubber-made.",
+      "candidate_id": "Product:IS1003c:sq7",
+      "cardinality": "multi",
+      "domain": "Product",
+      "n_spans": 2,
+      "n_turns": 607,
+      "native_meeting_id": "IS1003c",
+      "query": "What did the marketing recommend to do when discussing the problem of fashion?",
+      "query_index": 7,
+      "relevant_text_span": [
+        [
+          "464",
+          "485"
+        ],
+        [
+          "500",
+          "529"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          464,
+          485
+        ],
+        [
+          500,
+          529
+        ]
+      ],
+      "sort_key": "11be03ba76d1ad80faf72ff7ba1dd51e28217c50f38a27e633b2b851f7217f14",
+      "source_word_count": 6156,
+      "test_line_index": 10
+    },
+    {
+      "answer": "The project manager agreed that the product should be good-looking but having many colours wasn't a good idea because it would increase the product cost. Also, the project manager thought the remote control should be marked with the image of the society so that one can recognize it at a glance.",
+      "candidate_id": "Product:IS1003b:sq8",
+      "cardinality": "multi",
+      "domain": "Product",
+      "n_spans": 2,
+      "n_turns": 407,
+      "native_meeting_id": "IS1003b",
+      "query": "Summarize the project manager's opinions towards product appearance.",
+      "query_index": 8,
+      "relevant_text_span": [
+        [
+          "264",
+          "283"
+        ],
+        [
+          "368",
+          "379"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          264,
+          283
+        ],
+        [
+          368,
+          379
+        ]
+      ],
+      "sort_key": "1a0f01221c59cde4c347a63edc5918a35ef046c3fedfa5c8e06707a9cdc62164",
+      "source_word_count": 4624,
+      "test_line_index": 17
+    },
+    {
+      "answer": "User Interface introduced a remote control easy to use and a multi-functional one and preferred the former as it was more user-friendly. Industrial Designer agreed and proposed that a stick or round button for volume control and channel selection could be used and also suggested that the ten digits could be substituted by voice recognition.",
+      "candidate_id": "Product:TS3011b:sq0",
+      "cardinality": "multi",
+      "domain": "Product",
+      "n_spans": 2,
+      "n_turns": 607,
+      "native_meeting_id": "TS3011b",
+      "query": "Summarize the discussion about user interface design of remote control.",
+      "query_index": 0,
+      "relevant_text_span": [
+        [
+          "57",
+          "84"
+        ],
+        [
+          "272",
+          "481"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          57,
+          84
+        ],
+        [
+          272,
+          481
+        ]
+      ],
+      "sort_key": "1d83989f1f454d0fb9b14de9be9ffb846473d840efd37f2330212ab7a5787fad",
+      "source_word_count": 7279,
+      "test_line_index": 14
+    },
+    {
+      "answer": "Standard AA and AAA are bulky but the cheapest. Dynamo and dual charging with normal batteries and solar charging take up too much space. Solar charging is the second cheapest but not resistant to dropping. Also, Project Manager believed it would limit the market. Kinetic charging is small and portable but market research should be done first. No rechargeable battery options were available. The remote could have a standby mode and the lights behind the buttons would be switched off after five or ten seconds when not in use.",
+      "candidate_id": "Product:ES2004c:sq3",
+      "cardinality": "multi",
+      "domain": "Product",
+      "n_spans": 2,
+      "n_turns": 604,
+      "native_meeting_id": "ES2004c",
+      "query": "What are the benefits and drawbacks for each battery option mentioned and what did Industrial Manager suggest to conserve battery life when discussing the design and availability of actual components?",
+      "query_index": 3,
+      "relevant_text_span": [
+        [
+          "66",
+          "193"
+        ],
+        [
+          "203",
+          "207"
+        ]
+      ],
+      "resolved_spans": [
+        [
+          66,
+          193
+        ],
+        [
+          203,
+          207
+        ]
+      ],
+      "sort_key": "28aa889acaa993006128fe71a3c82ca1452135c803d6cfac624024a16ce43dbb",
+      "source_word_count": 8103,
+      "test_line_index": 2
+    }
+  ],
+  "selected_count": 24,
+  "selection_trace": {
+    "Academic": {
+      "multi_available": 0,
+      "multi_quota": 0,
+      "picked_multi_ids": [],
+      "picked_single_ids": [
+        "Academic:Bed016:sq1",
+        "Academic:Bed003:sq0",
+        "Academic:Bmr023:sq2",
+        "Academic:Bro019:sq3",
+        "Academic:Bed003:sq4",
+        "Academic:Bro019:sq4",
+        "Academic:Bro019:sq2",
+        "Academic:Bmr014:sq2"
+      ],
+      "single_available": 49,
+      "single_quota": 8
+    },
+    "Committee": {
+      "multi_available": 7,
+      "multi_quota": 7,
+      "picked_multi_ids": [
+        "Committee:covid_4:sq9",
+        "Committee:covid_4:sq0",
+        "Committee:education_4:sq0",
+        "Committee:education_4:sq9",
+        "Committee:covid_4:sq3",
+        "Committee:covid_4:sq6",
+        "Committee:education_4:sq5"
+      ],
+      "picked_single_ids": [
+        "Committee:covid_9:sq3"
+      ],
+      "single_available": 59,
+      "single_quota": 1
+    },
+    "Product": {
+      "multi_available": 31,
+      "multi_quota": 5,
+      "picked_multi_ids": [
+        "Product:IS1003c:sq5",
+        "Product:IS1003c:sq7",
+        "Product:IS1003b:sq8",
+        "Product:TS3011b:sq0",
+        "Product:ES2004c:sq3"
+      ],
+      "picked_single_ids": [
+        "Product:ES2011c:sq5",
+        "Product:TS3004c:sq1",
+        "Product:ES2011c:sq1"
+      ],
+      "single_available": 98,
+      "single_quota": 3
+    }
+  },
+  "source_word_count_distribution": {
+    "max": 19894,
+    "median": 13945,
+    "min": 4624,
+    "p25": 7279,
+    "p75": 14631
+  }
+}

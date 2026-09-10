@@ -1,0 +1,223 @@
+{
+  "case_id": "qmsum-15",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 175,
+      "span_index": 0,
+      "start_idx": 163,
+      "turns": [
+        {
+          "content": "Next, we have Jacques Gourde.",
+          "speaker": "Mr. Bruce Stanton"
+        },
+        {
+          "content": "Thank you, Mr.Chair. Quebec is Canada's biggest producer of hydroelectricity, a renewable energy that is the pride of the Quebec nation. The only problem is that it seems to be a tough sell west of Quebec, in Ontario, for instance. This competitively priced power could help us reduce our environmental footprint and further cut greenhouse gas emissions. Will the government show leadership and allow Canada's provinces to share renewable energy through an energy corridor, as we proposed?",
+          "speaker": "Mr. Jacques Gourde (LvisLotbinire, CPC)"
+        },
+        {
+          "content": "Mr.Chair, we are continuing to work towards that end. It is always very important to protect Canadians, and we are going to stick to that approach.",
+          "speaker": "Hon. Bill Morneau"
+        },
+        {
+          "content": "Mr.Chair, Canada's dairy processors have been hit hard by the COVID-19 crisis and the new CanadaU.S.Mexico Agreement, or CUSMA. Some of them have incurred losses ranging from 10% to 50%, depending on the processed product. Will the government commit to granting import permits under CUSMA to Canada's dairy processors, not retailers directly?",
+          "speaker": "Mr. Jacques Gourde"
+        },
+        {
+          "content": "Mr.Chair, I can assure you that dairy producers will receive fair compensation. I should also point out that we preserved supply management when negotiating the new NAFTA. That is important to Canada and Quebec, and I'm very pleased that we were able to do that.",
+          "speaker": "Hon. Chrystia Freeland"
+        },
+        {
+          "content": "Mr.Chair, the minister seems to be missing the issue in hand. Canada's dairy processors invest hundreds of millions of dollars a year to bring high-quality products to consumers, while contributing $19billion to GDP. Now those very processors are being asked to try to export Canadian value-added products. Will the minister commit to giving Canada's dairy processors import permits, instead of encouraging American multinationals?",
+          "speaker": "Mr. Jacques Gourde"
+        },
+        {
+          "content": "Mr.Chair, I'd like to thank the member for his question. I fully understand, as we all do, the important role processors play in our system and our country. I can assure the members of the House that we will continue to work with Canadian processors as the agreement comes into force.",
+          "speaker": "Hon. Chrystia Freeland"
+        },
+        {
+          "content": "Mr.Chair, when it comes to the COVID-19 crisis, what Canadians will remember is that those with access to reliable high-speed Internet will have fared better, feeling less financial strain, than those who are cut off from the rest of the world. Is the government ready to invest in making high-speed Internet available to all Canadians, no matter where they live in the country?",
+          "speaker": "Mr. Jacques Gourde"
+        },
+        {
+          "content": "Yes, we are, Mr. Chair.",
+          "speaker": "Hon. Maryam Monsef"
+        },
+        {
+          "content": "Mr.Chair, the current economic situation could lead to the disappearance of Canada's tourism industry. The pain will be felt by thousands of Canadians, who will have to find new jobs in order to survive. Is the government going to protect the tourism-based economy by investing in tourism infrastructure and upgrades to ensure Canada's tourist regions are ready when the economy reopens?",
+          "speaker": "Mr. Jacques Gourde"
+        },
+        {
+          "content": "Yes.",
+          "speaker": "Hon. Mlanie Joly"
+        },
+        {
+          "content": "Ms. Joly, you have to switch to the French channel and turn on your microphone.",
+          "speaker": "Mr. Bruce Stanton"
+        },
+        {
+          "content": "Yes, I look forward to working with my fellow member on this issue. I know the tourism sector is important to him and, especially, his constituents. Let's work together to find ways to get this hard-hit sector moving again. Many people have lost their jobs and need assistance from the government. That is why we're here, providing a helping hand at this difficult time so they can come out the other side.",
+          "speaker": "Hon. Mlanie Joly"
+        }
+      ]
+    },
+    {
+      "end_idx": 274,
+      "span_index": 1,
+      "start_idx": 241,
+      "turns": [
+        {
+          "content": "It is now over to Mr.Simard.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you, Mr.Chair. A few weeks ago, the Prime Minister made a big announcement expressing his desire to launch an economic recovery plan that fast-tracks the transition to a green economy. MinisterGuilbeault, MinisterMcKenna and MinisterWilkinson were appointed to a group tasked with doing just that. Today, I worry that the group is nothing but an empty shell, a convenient post-crisis political pitch. On the natural resources front, the government's two main announcements primarily involve fossil fuels. We need only think of the $1.7billion being invested to clean up orphan wells. Perhaps there is an environmental component, but I'm having trouble wrapping my head around yesterday's announcement by Export and Development Canada. It's going to lend TC Energy $500million to build its Coastal GasLink pipeline. That's $500million for a pipeline project that will eventually produce 8.6million tonnes of greenhouse gases annually. How does the government reconcile that with its desire to transition to a green economy?",
+          "speaker": "Mr. Mario Simard (Jonquire, BQ)"
+        },
+        {
+          "content": "The honourable minister has the floor.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you, Mr. Chair. Thank you very much for the question. Certainly at this time, Canadians are most particularly focused on ensuring that support is provided so that they can put food on the table and pay their rent. We are starting to focus on the relaxation measures in many provinces and territories in Canada. That is the primary focus of the government, as it is of Canadians. Certainly as we move forward, we need to be thinking about the kind of society and economy that we want to create for the future. In that context, we need to learn lessons coming out of this experience, and certainly we need to ensure that we are addressing challenges that are on the horizon, including the challenge of climate change. Those are conversations that will need to be had as we move beyond this phase of the crisis, but at the current time, the focus is clearly on combatting the virus.",
+          "speaker": "Hon. Jonathan Wilkinson (North Vancouver, Lib.)"
+        },
+        {
+          "content": "Ms.Pauz has a point of order.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "There was absolutely no interpretation while the minister was speaking.",
+          "speaker": "Ms. Monique Pauz (Repentigny, BQ)"
+        },
+        {
+          "content": "Since so many are having issues with the interpretation, let's take a quick break while I try to fix the problem on my end. I'm going to ask the minister to repeat his answer, and we'll see whether the interpretation comes through this time. If not, please let me know, Ms.Pauz and anyone else who doesn't hear it.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Of course, the issues of the future are very important. That means not just climate change, but also other challenges that we saw during the coronavirus crisis, challenges we need to take into account. Now, I think Canadians want us to take the time to focus on what is currently going on. We have put rules in place to protect Canadians. We really need to think about this. We need a plan. Of course, we need to think about the future, but I want Canadians",
+          "speaker": "Hon. Jonathan Wilkinson"
+        },
+        {
+          "content": "Mr.Simard has the floor.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you, Mr.Chair. I want to tell you that, of all industries, the one best positioned to make the energy transition is probably the forestry industry. Unfortunately, in Canadaa petro statethere always seem to be two sets of rules when it comes to helping key industries, including providing liquidity support. Yesterday's announcement suggests that the $500million being provided by EDC is for a single project: Coastal GasLink. In 2017, under the softwood lumber action plan, EDC's entire budget for the forestry industry was exactly $500million. Now, EDC is shelling out $500million for just one project, Coastal GasLink, even though the whole of the forestry industry also received $500million when it needed EDC's support under a 2017 action plan to deal with tariffs. The industry accounts for 58,000jobs in Quebec and $6billion of Quebec's GDP. As I see it, there is a fundamental inequity. My question is for the natural resources minister. Does he think this situation is fair? Will he commit to providing the forestry industry with the same amount of liquidity being made available to the fossil fuel sector?",
+          "speaker": "Mr. Mario Simard"
+        },
+        {
+          "content": "Mr.Chair, since 2017, our government has invested billions of dollars.  I'll answer the question in English.  Sorry. We launched our softwood lumber action plan to support workers in communities. We introduced funding through the strategic innovation fund specifically for forestry. Building on our work today, we have included traditional investments to make sure this sector innovates, diversifies and grows. Over these past two and a half months, I have spent an inordinate amount of time with CEOs, with heads of the forestry sectors from coast to coast to coast. A few days ago, I convened a meeting of CEOs from all parts of this country, from Quebec to British Columbia, to talk to them about solutions, about answers. The liquidity measures that were announced yesterday will help some of them. We will continue to work closely with industry to make sure we are there for them and that we stand by them through the COVID crisis, so we make sure that",
+          "speaker": "Hon. Seamus O'Regan"
+        },
+        {
+          "content": "The next question will go to Mr. Dalton.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Thank you, Mr. Chair. I'm hearing from small business owners like Joel, who runs a fitness club here in Pitt MeadowsMaple Ridge, and is very concerned that their landlords refuse to participate in the rent assistance program. These businesses have seen revenue drops between 50% and 100% and are asking for just 25% off their rent. When will the government help small businesses whose landlords refuse to be team players during this pandemic?",
+          "speaker": "Mr. Marc Dalton (Pitt MeadowsMaple Ridge, CPC)"
+        },
+        {
+          "content": "Mr. Chair, first of all, we share the member's concern that small businesses be supported. That's why we've moved forward with a number of measures that are designed to be of assistance. With respect to rent support, we are encouraging landlords to support this measure. Obviously, rent and landlord-tenant relations are under provincial jurisdiction. At every opportunity I talk to the provincial finance ministers to encourage them to get engaged there. We will continue to support small businesses. We believe this program has significant merit. It allows for small businesses to significantly reduce their rent and for landlords to be protected with up to 75% of the rent. We think it is an excellent program. It will require the provinces to step forward and enforce it.",
+          "speaker": "Hon. Bill Morneau"
+        },
+        {
+          "content": "Mr. Chair, here in B.C., businesses are preparing for phased reopening. A number of my constituents, including Kathy, who owns a beauty salon, are concerned about meeting the PPE requirements. What is the federal government doing to ensure businesses in my riding can get access to the PPE they need to keep their employees and customers safe when they reopen?",
+          "speaker": "Mr. Marc Dalton"
+        },
+        {
+          "content": "Mr. Chair, as a federal government, we are aggressively buying life-saving equipment and supplies. Our first priority is to provide PPE to our front-line health care workers. However, we are actively involved in trying to ascertain how the federal government can work with the provinces and territories to provide essential services and other businesses with PPE.",
+          "speaker": "Hon. Anita Anand"
+        },
+        {
+          "content": "Mr. Chair, Craig and Matt are co-owners of Wanstalls, a firearms retail outlet in downtown Maple Ridge that employs eight people and serves thousands of law-abiding firearm owners in my riding, people who are now made to feel like criminals by the Liberal government. Further, they are now stuck with tens of thousands of dollars of inventory that they can no longer sell. What are they supposed to do to keep open in this already tumultuous COVID environment?",
+          "speaker": "Mr. Marc Dalton"
+        },
+        {
+          "content": "It's important to understand that none of the restrictions that we have put in place, the new prohibitions, in any way impact weapons that are used for the lawful purposes in Canada of hunting and sport shooting, so those weapons remain available to Canadians engaged in those lawful activities. We have prohibited weapons that were not intended for the legal purposes of hunting and sport shooting and for which firearms are available to Canadians. What we prohibited were weapons designed for another purpose, an unacceptable purpose.",
+          "speaker": "Hon. Bill Blair"
+        },
+        {
+          "content": "Mr. Chair, according to the CERB website, if a recipient earns over $1,000 in a reporting period, their entire $2,000 benefit must be repaid. I have constituents who are working part time and casually. They're worried that if they take an extra shift, they will lose their CERB, but if they refuse a shift, they will also lose their CERB. It's a classic Liberal catch-22. A worker may unknowingly make over the $1,000 by a couple of dollars. Does the government intend to make them repay all their CERB if they barely go over the threshold?",
+          "speaker": "Mr. Marc Dalton"
+        },
+        {
+          "content": "Mr. Chair, that is why we're working with individual eligible CERB recipients to make sure they are not put in positions of undue hardship. At the beginning, the registration restricted it to basically not working, and then we relaxed the condition to earning up to $1,000. I can assure the member that we will work with individuals. Service Canada is reaching out to people so that nobody is in the difficult position he is talking about.",
+          "speaker": "Hon. Carla Qualtrough"
+        },
+        {
+          "content": "I have a point of order, Mr.Chair.",
+          "speaker": "Mr. Alexis Brunelle-Duceppe (Lac-Saint-Jean, BQ)"
+        },
+        {
+          "content": "There's a point of order.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "There were some technical issues earlier during my fellow member Mario Simard's turn. Normally, each person gets five minutes. According to our calculations, he had about 45seconds left. This is a serious point of order. We shouldn't get the short end of the stick because we speak French in the House. Thank you, Mr.Chair.",
+          "speaker": "Mr. Alexis Brunelle-Duceppe"
+        },
+        {
+          "content": "All right. We'll check what happened, but I had stopped the clock.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "I assure you he lost some time.",
+          "speaker": "Mr. Alexis Brunelle-Duceppe"
+        },
+        {
+          "content": "The minister had to repeat his answer. We'll check and make sure it doesn't happen again. The good thing is that this is all being filmed, so we can watch the video back to see what happened.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Mr.Chair, because the ministers chose to answer in French owing to a technical issue, their answers were unduly drawn out, which cost my fellow member speaking time. I think he should be given a chance to ask one last question, to be fair. Otherwise, French speakers are going to be at a major disadvantage.",
+          "speaker": "Mr. Alexis Brunelle-Duceppe"
+        },
+        {
+          "content": "As I said, I'll check what happened and we'll have a solution for next time.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "I have a point of order, Mr.Chair.",
+          "speaker": "Hon. Steven Guilbeault"
+        },
+        {
+          "content": "We have another point of order. Mr.Guilbeault now has the floor.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "I hope the member isn't suggesting that, because some members of the House are making an effort to speak French, they are unduly dragging out the time, as he seems to have said. Good for them, I say, for trying to speak a language they aren't necessarily comfortable in for the benefit of other members.",
+          "speaker": "Hon. Steven Guilbeault"
+        },
+        {
+          "content": "I think a debate is brewing, but I'm sure that's not what people want, so I don't want an argument to break out over the fact that different languages are being spoken. We'll look into what happened and fix the problem so it doesn't happen again. We will go back to Mr. Dalton. You have about 30 seconds for a question. Thank you. Mr.Chair, many farmers in my riding and elsewhere are afraid they won't have enough workers this summer and fall. What is the government going to do to make sure those receiving the CERB and CESB have the right information and know about the job opportunities in the agri-food sector in our communities?",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "The honourable minister has 15seconds to answer.",
+          "speaker": "The Chair"
+        },
+        {
+          "content": "Mr. Chair, I can assure the member that while we are supporting Canadians through both the CERB and the CESB, we are creating tens of thousands of jobs, including in the agriculture sector, to make sure there is labour available in this important and essential sector.",
+          "speaker": "Hon. Carla Qualtrough"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Committee",
+    "n_spans": 2,
+    "n_turns": 276,
+    "native_meeting_id": "covid_4",
+    "source_word_count": 16180
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Summarize the discussion about Government support for energy resources and tourism and funding in green economy and small businesses.",
+  "reference_answer": "Since Quebec was Canada's biggest producer of hydroelectricity, renewable energy sharing through an energy corridor was very essential for different areas in Canada. And as a hard-hit sector, tourism needed much support from the Canadian government. The government was going to protect the tourism-based economy by investing in tourism infrastructure and upgrades to ensure Canada's tourist regions would be ready when the economy reopened. When it came to the green economy, the government now gave priority to the virus and making through this disaster. Also, they paid much attention to the small businesses and carried out measures to help them out."
+}

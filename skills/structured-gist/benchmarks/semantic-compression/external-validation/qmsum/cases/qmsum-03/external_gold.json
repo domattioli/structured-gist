@@ -1,0 +1,408 @@
+{
+  "case_id": "qmsum-03",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 323,
+      "span_index": 0,
+      "start_idx": 229,
+      "turns": [
+        {
+          "content": "Yeah . An - and the other thing is , I mean , in the unlikely event {disfmarker} and since we 're so far from this , it 's a little hard to plan this way {disfmarker} in the unlikely event that we actually find {vocalsound} that we have , uh , transcribers on staff who are twiddling their thumbs because , you know , there 's , you know , {vocalsound} all the stuff that {disfmarker} that was sitting there has been transcribed and they 're {disfmarker} and they 're faster {disfmarker} the {disfmarker} the pipeline is faster than {disfmarker} {vocalsound} uh , than the generation , um , eh , i in {disfmarker} in the day {disfmarker} e event that that day actually dawns , uh , I {disfmarker} I bet we could find some other stuff for them to do .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Oh , yes .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "So I {disfmarker} I think {vocalsound} that , eh , eh , a as we were talking , if we {disfmarker} if we hire twelve , then we could , you know , run into a problem later . I mean , we also just couldn't sustain that forever . But {disfmarker} but , um {disfmarker} for all sorts of reasons {disfmarker} but if we hire f you know , f we have five on staff {disfmarker} five or six on staff at any given time , then {vocalsound} it 's a small enough number so we can be flexible either way .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Good . OK .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Good .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "It 'd be great , too , if , um , we can {disfmarker} we might need some help again getting the tighter boundaries or some hand {disfmarker} to experiment with , um {disfmarker} {vocalsound} you know , to have a ground truth for this segmentation work , which {disfmarker} I guess you have some already that was really helpful , and we could probably use more .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Mmm , yeah . That was a thing I {disfmarker} I planned working on , is , uh , to use the {disfmarker} the transcriptions which are done by now , and to {disfmarker} to use them as , uh {disfmarker}",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "Oh . Oh , the new ones",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "with the tighter boundaries . Yeah .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah . And to use them for {disfmarker} for training a {disfmarker} or for {disfmarker} fo whatever . Yeah . To {disfmarker} to create some speech - nonspeech labels out of them , and {disfmarker} Yeah , but that {disfmarker} that 's a thing w was {disfmarker} w what I 'm just looking into .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "OK .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "The {disfmarker} the {disfmarker} the pre - segmentations are so much {disfmarker} are s so extremely helpful . Now there was , uh , I g guess {disfmarker} So , a couple weeks ago I needed some new ones and it happened to be during the time that he was on vacation {disfmarker} f for just very few days you were away . But it happened to be during that time I needed one ,",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "so I {disfmarker} {vocalsound} so I started them on the non - pre - segmented and then switched them over to yours and , um , they , um {disfmarker} you know , they always appreciate that when they have that available . And he 's , uh , usually , eh , uh , um {disfmarker} Um . So they really appreciate it . But I was gonna say that they do adjust it once in a while . You know , once in a while there 's something like ,",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah , sure .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "um , and e Actually you talked to them . Didn't you ? Did you ? Have you {disfmarker} ?",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah . I talked to Helen .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "And {disfmarker} and {disfmarker} and she was {disfmarker} And so , I asked her {disfmarker} I mean , They 're very perceptive . I really want to have this meeting of the transcribers . I haven't done it yet , but I wanna do that and she 's out of town , um , for a couple of weeks , but I wanna do that when she returns . Um , cuz she was saying , you know , in a {disfmarker} in a span of very short period {disfmarker} we asked {disfmarker} It seems like the ones that need to be adjusted are these {disfmarker} these {disfmarker} these things , and she was saying the short utterances , uh , the , um {disfmarker}",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Hmm .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Mmm . Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "you know , I mean , you 're {disfmarker} You 're aware of this . But {disfmarker} but actually i it 's so correct for so much of the time , that it 's an enormous time saver",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "and it just gets tweaked a little around the boundaries . So .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "That 's great .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Um . Yeah . I think it 'd be interesting to combine these .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "Is there actually a record of where they change ? I mean , you can compare , do a diff on the {disfmarker} just so that we {vocalsound} knew {disfmarker}",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "You could do it . It 's {disfmarker} it 's complicated in that {vocalsound} um , {vocalsound} hhh , i hhh , i",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah . Actually , when {disfmarker} when they create new {disfmarker} yeah , new segments or something , it will be , uh , not that easy but {disfmarker} hmm . I think {pause} one could do that .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "I mean , if we keep a old copy of the old time marks",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "just so that if we run it we know whether we 're {disfmarker} which ones were cheating",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah . Yeah . That would be great , yeah , to know that .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "and",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "There is a {disfmarker} there is one problem with that and that is when they start part way through then what I do is I merge what they 've done with the pre - segmented version .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "which one would be good .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "So it 's not a pure {disfmarker} it 's not a pure condition . Wha - what you 'd really like is that they started with pre - segmented and were pre - segmented all the way through .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "And , um {disfmarker} @ @ {comment} {disfmarker} I , uh {disfmarker} the {disfmarker} it wasn't possible for about four of the recent ones . But , it will be possible in the future",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "because we {disfmarker} we 're , um .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "It would .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "Mmm , that 's great .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "Yeah . As long as we have a record , I guess , of the original {pause} automatic one , we can always find out how well {pause} we would do fr from the recognition side by using those boundaries .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah . Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "Um .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "You know , a completely non - cheating version .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "PhD E"
+        },
+        {
+          "content": "Also if you need someone to record this meeting , I mean , I 'm happy to {disfmarker} for the transcribers {disfmarker} I could do it , or Chuck or Adam .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Thank you .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "OK . So , uh , u you were saying something about organizing the meeting info ?",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Yeah . So , um , uh , Jane and Adam and I had a meeting where we talked about the reorganization of the {pause} directory structure for all of the meeting {disfmarker}",
+          "speaker": "PhD D"
+        },
+        {
+          "content": "Did you record it ?",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "No . For all the Meeting Recorder data . We should have . Um . And so we 've got a plan for what we 're gonna do there . And then , Jane also s prepared a {disfmarker} um , started getting all of the {disfmarker} the meetings organized , so she prepared a {disfmarker} {vocalsound} a spreadsheet , which I spent the last couple of days adding to . So I went through all of the data that we have collected so far , and have been putting it into , uh , a spreadsheet {vocalsound} with start time , the date , the old meeting name , the new meeting name , the number of speakers , the duration of the meeting , comments , you know , what its transcription status is , all that kind of stuff . And so , the idea is that we can take this and then export it as HTML and put it on the Meeting Recorder web page so we can keep people updated about what 's going on .",
+          "speaker": "PhD D"
+        },
+        {
+          "content": "Oh , great .",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "Um , I 've gotta get some more information from Jane cuz I have some {disfmarker} some gaps here that I need to get her to fill in , but {vocalsound} so far , um , {vocalsound} as of Monday , the fourteenth , um , we 've had a total number of meeting sixty - two hours of meetings that we have collected . And , um {disfmarker} Uh , some other interesting things , average number of speakers per meeting is six . Um , and I 'm gonna have on here the total amount that 's been transcribed so far , but I 've got a bunch of {disfmarker} uh , that 's what I have to talk to Jane about , figuring out exactly which ones have {disfmarker} have been completed and so forth . But , um , {vocalsound} this 'll be a nice thing that we can put up on the {disfmarker} the web site and people can {vocalsound} be informed of the status of various different ones . And {vocalsound} it 'll also list , uh , like under the status , if it 's at IBM or if it 's at ICSI , uh , or if it 's completed or which ones we 're excluding and {disfmarker} and there 's a place for comments , so we can , {vocalsound} um , say why we 're excluding things and so forth . So .",
+          "speaker": "PhD D"
+        },
+        {
+          "content": "Now would the ones that , um , are already transcribed {disfmarker} we h we have enough there that c you know , we 've already done some studies and so forth and {disfmarker} um , shouldn't we go through and do the business - es u of {disfmarker} of having the , um , uh , participants approve it , uh , for {disfmarker} approve the transcriptions for distribution and so forth ?",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Um , interesting idea . In principle , I {disfmarker} I would say yes , although I still am doing some {disfmarker} the final - pass editing , trying to convert it over to the master file as the {disfmarker} being the channelized version and it 's {disfmarker} Yeah , it seems like I get into that a certain way and then something else intervenes {comment} and I have to stop . Cleaning up the things like the , uh , uh , places where the transcriber was uncertain , and {disfmarker} and doing spot - checking here and there . So , um , uh , I guess it would make sense to wait until th that 's done , um , but {disfmarker} but {disfmarker}",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Well , le let me put in another sort of a milestone kind of {disfmarker} as {disfmarker} as I did with the , uh , uh {disfmarker} the {disfmarker} the pipeline .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Um , we are gonna have this DARPA {pause} meeting in the middle of July ,",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Yes .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "and I think it w it 'd be {disfmarker} given that we 've been {disfmarker} we 've given a couple public talks about it already , spaced by months and months , I think it 'd be pretty bad if we continued to say none of this is available . Um .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "It 'll certainly be done by then . Yeah .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Right . So we can s we {disfmarker} we wanna be able to say \" here is a subset that is available right now \"",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Mm - hmm . That 's right .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "and that 's has been through the legal issues and so forth .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "That 's right .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "So .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Yeah . That 's right . So that {disfmarker}",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "OK ?",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "OK .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "So , by {disfmarker} before July .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "And they don't have to approve , you know , th an edited version , they can just give their approval to whatever version",
+          "speaker": "PhD C"
+        },
+        {
+          "content": "Well , maybe {disfmarker}",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Well , in principle , yes . But , I mean , i if {disfmarker} if {disfmarker} if somebody actually did get into some legal issue with it then we",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Bu Yeah . But th I mean , the editing will continue . Presumably if {disfmarker} if s errors are found , they will be fixed , but they won't change the {disfmarker} the content of the meetings .",
+          "speaker": "PhD C"
+        },
+        {
+          "content": "Content , really .",
+          "speaker": "PhD D"
+        },
+        {
+          "content": "Well , see , this is the {disfmarker} this is the issue . Subtleties .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "So .",
+          "speaker": "PhD C"
+        },
+        {
+          "content": "Well , i if Jane is clarifying question question , then , you know , how can they agree to it before they know her final version ?",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "The other thing , too , is there can be subtleties where a person uses this word instead of that word , which @ @ {comment} could 've been transcribed in the other way .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Thing {disfmarker}",
+          "speaker": "PhD G"
+        },
+        {
+          "content": "And no and they wouldn't have {vocalsound} been slanderous if it had been this other word . You know ?",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "I it {disfmarker} you know , there there is a point at which I agree it becomes ridiculous because , you know , you could do this final thing and then a year from now somebody could say , you know , that should be a period and not a question mark . Right ? And you don't {disfmarker} you {disfmarker} there 's no way that we 're gonna go back and ask everybody \" do you approve this , uh , you know {disfmarker} this document now ? \" So {disfmarker} So I think what it is is that the {disfmarker} the {disfmarker} the {disfmarker} the thing that they sign {disfmarker} I {disfmarker} I haven't looked at it in a while , but it has to be open enough that it sort of says \" OK , from now on {disfmarker} you know , now that I 've read this , you can use {disfmarker} do anything you want with these data . \"",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Mm - hmm .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "And , uh {disfmarker} But , i I think we wanna {disfmarker} So , assuming that it 's in that kind of wording , which I don't remember , {vocalsound} um , I think i we just wanna have enough confidence ourselves that it 's so close to the final form it 's gonna be in , a year from now that they 're {disfmarker}",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Mm - hmm . I agree . Mmm . I totally agree . It 's just , uh , a question of , {vocalsound} uh , if {disfmarker} if the person is using the transcript as the way of them judging what they said and whether it was slanderous , {vocalsound} then it seems like it 's {disfmarker} it 's {disfmarker} i it needs to be more correct than if we could count on them re - listening to the meeting .",
+          "speaker": "Postdoc A"
+        },
+        {
+          "content": "Uh .",
+          "speaker": "Professor F"
+        },
+        {
+          "content": "Because it becomes , eh , in a way a {disfmarker} a f uh , a legal document i if they 've agreed to that .",
+          "speaker": "Postdoc A"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Academic",
+    "n_spans": 1,
+    "n_turns": 745,
+    "native_meeting_id": "Bmr023",
+    "source_word_count": 13457
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What was the status of transcription?",
+  "reference_answer": "The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised."
+}
