@@ -1,0 +1,120 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Sibling headers 'Custom parts' / 'Standard parts' under Components design imply the split, but no content stated."},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": "'Chip cost' header present but no content."}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Component design covered custom parts, standard parts, material options, and chip cost as topics, but no specific content is given for any of them.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Custom parts: a. case, b. circuit board / Standard parts: a. buttons and iPod-style wheel, b. infrared LED, c. radio sender and receiver, d. beeper or buzzer"},
+      "f2": {"status": "partial", "evidence": "'a. case' listed under Custom parts with no material or protective-purpose detail."},
+      "f3": {"status": "partial", "evidence": "'b. circuit board' listed under Custom parts with no stated rationale."},
+      "f4": {"status": "partial", "evidence": "'a. buttons and iPod-style wheel', 'b. infrared LED', 'c. radio sender and receiver' all listed, but missing the detail that the LED is included in the circuit board."},
+      "f5": {"status": "partial", "evidence": "'d. beeper or buzzer' listed but purpose (locating the remote) not stated at this level."},
+      "f6": {"status": "retained", "evidence": "Material options: a. rubber, b. plastic, c. wood, d. titanium"},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "retained", "evidence": "\"the iPod-style wheel needs the mid-tier 'regular' chip instead of the cheapest 'minimal' chip, a modest cost increase\""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Chip cost bullet directly ties the iPod-style wheel choice to needing the regular (not minimal) chip."}
+    },
+    "hallucinations": [
+      {"text": "Marketing progress: target audience identified in the prior session", "source_supported": true},
+      {"text": "Design options: iPod-style button/wheel system proposed, not yet decided", "source_supported": true},
+      {"text": "Trend priorities: fashion/look-and-feel, technological innovation, ease of use", "source_supported": true},
+      {"text": "Fruit-and-vegetable theme flagged by Milan/Paris fashion-watchers as an electronics trend", "source_supported": true},
+      {"text": "Spongy feel wanted (stress-ball-like texture), material approach left to Industrial Designer", "source_supported": true},
+      {"text": "Open question of whether fruit/veg motif is printed on casing or remote is molded into that shape", "source_supported": true},
+      {"text": "Case-for-a-screen reasons: song/channel selection, many-channel navigation, settings menu, avoids cryptic codes", "source_supported": true},
+      {"text": "Case against a screen: requires the priciest 'advanced' chip", "source_supported": true},
+      {"text": "Product will not support DVD, only TV", "source_supported": true},
+      {"text": "Group resolves to route menu/output to the TV screen, keeping remote a simple wheel device", "source_supported": true},
+      {"text": "Wheel interaction modes: scroll, tap, central/menu button", "source_supported": true},
+      {"text": "Size/shape: smaller than existing remotes, roughly circular, handheld, thumb/index finger operated", "source_supported": true},
+      {"text": "Two-part construction: squishy inner part, hard plastic outer face", "source_supported": true},
+      {"text": "Swappable fruit/veg covers let users change the look", "source_supported": true},
+      {"text": "Company colors (silver/yellow) don't map to fruit/veg colors; banana variant floated as compromise", "source_supported": true},
+      {"text": "Batteries sit under the plastic case as a single snap-off unit", "source_supported": true},
+      {"text": "Prototype plan: build two prototypes, test with users, check cost", "source_supported": true},
+      {"text": "Power options considered: batteries, solar, dynamo, kinetic wind-up", "source_supported": true},
+      {"text": "Batteries chosen as simplest option; motion-charged power unnecessary for a living-room remote", "source_supported": true},
+      {"text": "No absolute prices found, only relative chip-tier costs; chip likely most expensive component", "source_supported": true},
+      {"text": "Chip-on-print clarified: remote chips are mass-stamped, not reprogrammable", "source_supported": true},
+      {"text": "Term clarifications for 'case' and 'chip on print'", "source_supported": true},
+      {"text": "Assignments: Industrial Designer/User Interface vs. Marketing", "source_supported": true},
+      {"text": "Meeting ends slightly early, no stated impact", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Some parts need custom design (case, circuit board) and others are standard (buttons/wheel, infrared LED, radio sender/receiver, beeper/buzzer). Material options are rubber, plastic, wood, titanium (no rationale given here). Using the iPod-style wheel requires the pricier 'regular' chip instead of the minimal chip.", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Custom parts (case, circuit board) vs. Standard parts (buttons/wheel, infrared LED, radio sender/receiver, beeper/buzzer) fully elaborated as separate groups."},
+      "f2": {"status": "retained", "evidence": "\"custom hard-plastic or alternative-material housing that protects the remote and its locator\""},
+      "f3": {"status": "retained", "evidence": "\"must be custom-designed each time to route button input to output, then mass-printed by the circuit vendor\""},
+      "f4": {"status": "retained", "evidence": "buttons and iPod-style wheel; infrared LED 'comes bundled with the circuit board'; radio sender and receiver"},
+      "f5": {"status": "retained", "evidence": "\"beeper or buzzer - lets a user locate a misplaced remote\""},
+      "f6": {"status": "retained", "evidence": "rubber, plastic, wood, titanium all listed"},
+      "f7": {"status": "retained", "evidence": "\"titanium - discouraged — heavy, and usable only in flat cases\""},
+      "f8": {"status": "retained", "evidence": "\"rubber - requires rubber buttons, incompatible with a plastic-button design\""},
+      "f9": {"status": "retained", "evidence": "\"wood - viable, though no strong reason favors it\""},
+      "f10": {"status": "retained", "evidence": "\"the iPod-style wheel needs the mid-tier 'regular' chip instead of the cheapest 'minimal' chip, a modest cost increase\""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Chip cost bullet ties the iPod-style wheel choice directly to the regular-chip requirement."}
+    },
+    "hallucinations": [
+      {"text": "Marketing progress: target audience identified in the prior session", "source_supported": true},
+      {"text": "Design options: iPod-style button/wheel system proposed, not yet decided", "source_supported": true},
+      {"text": "Circuit board is mass-printed by the circuit vendor after design", "source_supported": true},
+      {"text": "Trend priorities: fashion/look-and-feel, technological innovation, ease of use", "source_supported": true},
+      {"text": "Fruit-and-vegetable theme flagged by Milan/Paris fashion-watchers", "source_supported": true},
+      {"text": "Spongy feel wanted; material approach left to Industrial Designer", "source_supported": true},
+      {"text": "Open question of print-on-casing vs. remote molded into fruit/veg shape", "source_supported": true},
+      {"text": "Case-for-a-screen: wheel alone can't show song/channel selection without a display", "source_supported": true},
+      {"text": "With 200-plus satellite channels, reaching a specific one needs an on-screen number, not blind scrolling", "source_supported": true},
+      {"text": "Settings menu (brightness, timer, etc.) easier on a screen", "source_supported": true},
+      {"text": "A screen avoids cryptic button-abbreviation codes", "source_supported": true},
+      {"text": "Case against a screen: requires the priciest 'advanced' chip, above regular/minimal", "source_supported": true},
+      {"text": "Product will not support DVD, only TV", "source_supported": true},
+      {"text": "Group resolves to route menu/output to the TV screen, keeping remote a simple wheel device", "source_supported": true},
+      {"text": "Wheel modes: scroll (continuous through a range), tap (small increment, e.g. channel five to six), central/menu button (brings up TV's on-screen menu)", "source_supported": true},
+      {"text": "Size/shape: smaller than existing remotes, roughly circular, handheld, thumb/index finger operated", "source_supported": true},
+      {"text": "Two-part construction: stress-ball-style squishy inner part for grip; hard plastic outer face carries wheel/button area and color/pattern", "source_supported": true},
+      {"text": "Swappable covers echo fruit-named product-color branding precedent (e.g. computers with fruit-named colors)", "source_supported": true},
+      {"text": "Company colors (silver/yellow) don't map to fruit/veg colors; banana variant floated as compromise", "source_supported": true},
+      {"text": "Batteries sit under the plastic case as a single snap-off unit, especially since the squishy part is swappable", "source_supported": true},
+      {"text": "Prototype plan: two prototypes (cover-based, hard-shell-swap), test with users, check manufacturing cost", "source_supported": true},
+      {"text": "Power options: batteries, solar (not compatible with rubber case), dynamo (bicycle-mechanism, motion-charged), kinetic wind-up (hand-powered)", "source_supported": true},
+      {"text": "Batteries chosen as simplest; motion-charged power unnecessary for a living-room remote", "source_supported": true},
+      {"text": "No absolute prices found; bulk-bought parts assumed cheap; chip likely most expensive component", "source_supported": true},
+      {"text": "Chip-on-print: chips mass-stamped, not reprogrammable, keeping unit cost low", "source_supported": true},
+      {"text": "Term clarification: 'case' refers to the casing-material discussion, not a syntactic/programming sense", "source_supported": true},
+      {"text": "Term clarification: 'chip on print' means mass-stamped for cheap production, not user-reprogrammable", "source_supported": true},
+      {"text": "Assignments: Industrial Designer/User Interface prototype look-and-feel with play-dough; Marketing handles product evaluation", "source_supported": true},
+      {"text": "Meeting ends slightly early, with no stated impact", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The case (custom hard plastic or other material, protecting the remote and locator) and the circuit board (custom each time to route button input to output) need custom design. Standard parts are the buttons/iPod-style wheel, infrared LED (bundled with the circuit board), radio sender/receiver, and a beeper/buzzer for locating the remote. Material options are rubber (needs rubber buttons, incompatible with plastic buttons), plastic, wood (viable but no strong reason to choose it), and titanium (discouraged - heavy, only usable in flat cases). Choosing the iPod-style wheel requires the pricier 'regular' chip instead of the minimal chip.", "verdict": "correct"}
+    }
+  }
+}

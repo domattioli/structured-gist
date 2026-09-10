@@ -1,0 +1,90 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Nothing usable — skim.md is a bare topic list with no sentences under any heading, so nothing about the hydro energy corridor, tourism investment, green-economy deferral, or small-business rent/PPE support can actually be stated.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Gourde's proposal to export Quebec hydropower to Ontario gets only a general 'continuing to work towards that' from Morneau."},
+      "f2": {"status": "retained", "evidence": "gets only a general 'continuing to work towards that' from Morneau."},
+      "f3": {"status": "partial", "evidence": "d'Entremont and Gourde raise the Bar Harbor-Yarmouth ferry and tourism sector broadly; Joly commits to work through ACOA funding. (drops the 'tourism infrastructure and upgrades' ask and the 'risk of the industry's disappearance' framing; conflates Gourde with d'Entremont's separate ferry question)"},
+      "f4": {"status": "partial", "evidence": "Simard contrasts a $500M EDC loan to the Coastal GasLink pipeline with the government's green-transition promise; Wilkinson defers to post-crisis planning. (omits the '8.6 million tonnes of greenhouse gases annually' figure and the 'empty shell' characterization)"},
+      "f5": {"status": "retained", "evidence": "Wilkinson defers to post-crisis planning."},
+      "f6": {"status": "partial", "evidence": "Simard notes the same $500M went to one pipeline project as the entire forestry sector received in 2017. (omits the '58,000 jobs in Quebec and $6 billion of Quebec's GDP' figures)"},
+      "f7": {"status": "retained", "evidence": "O'Regan cites broader multi-year forestry investment."},
+      "f8": {"status": "partial", "evidence": "Dalton raises landlords refusing to join the rent-assistance program despite tenants losing 50-100% of revenue. (omits the fitness-club example and the specific '25% rent reduction' request)"},
+      "f9": {"status": "retained", "evidence": "Morneau notes rent relief is provincial jurisdiction and offers landlords up to 75% coverage."},
+      "f10": {"status": "retained", "evidence": "Anand says PPE work beyond front-line health care is still being scoped with the provinces."},
+      "f11": {"status": "omitted", "evidence": "The bullet's 'Joly commits to work through ACOA funding' is actually Joly's separate reply to d'Entremont about the ferry, not her reply to Gourde about the hard-hit sector and people who lost jobs."}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "f4 (c.) and f6 (d.) appear as adjacent sibling bullets sharing the same '$500M' figure, but no explicit language states that the forestry comparison extends/evidences the broader fossil-fuel-favoritism claim."},
+      "r2": {"status": "lost", "evidence": "f8 and f9 appear in the same bullet (landlords refusing / 75% coverage under provincial jurisdiction) but no explicit dependency language ('this is part of why landlords refuse') is stated."}
+    },
+    "hallucinations": [
+      {"text": "Yurdiga presses on delayed liquidity loans; O'Regan confirms measures now cover large-cap producers after small/medium producers (85% of sector jobs) were addressed, with indigenous contractor access and storage-capacity risk still open concerns", "source_supported": true},
+      {"text": "Blois and Gourde ask about dairy and horticulture; Bibeau cites a $77.5M emergency processing fund, $50M surplus-food program, $125M AgriRecovery, and a proposed dairy loan-cap increase to $500M", "source_supported": true},
+      {"text": "Gourde wants import permits granted directly to processors, not multinationals; Freeland points to preserved supply management without directly answering", "source_supported": true},
+      {"text": "d'Entremont raises the Bar Harbor-Yarmouth ferry's survival if the border stays closed", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Gourde proposed an interprovincial corridor to export Quebec hydropower, but Morneau only said the government was 'continuing to work towards that.' On tourism, Gourde and d'Entremont raised the sector broadly, with Joly committing to work through ACOA funding. Simard contrasted a $500M EDC loan to the Coastal GasLink pipeline against the government's green-transition promise, and against the $500M the whole forestry sector got in 2017; Wilkinson said the government's focus was on combating the virus now, with climate conversations deferred, and O'Regan pointed to broader multi-year forestry investment rather than matching figures. On small business, landlords were refusing to join the rent-assistance program despite 50-100% revenue drops; Morneau noted rent relief is a provincial matter but offers landlords up to 75% coverage, and Anand said PPE support beyond front-line health care is still being worked out with the provinces.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Gourde (CPC) proposes an interprovincial corridor to sell Quebec hydropower into Ontario as a low-carbon, cost-competitive option."},
+      "f2": {"status": "retained", "evidence": "Morneau offers only a general 'continuing to work towards that.'"},
+      "f3": {"status": "partial", "evidence": "Gourde raises tourism infrastructure broadly. (drops the 'risk of the industry's disappearance' framing; reply is conflated with d'Entremont's ACOA answer)"},
+      "f4": {"status": "retained", "evidence": "Simard (BQ) contrasts a $1.7B orphan-well cleanup and a $500M EDC loan to TC Energy's Coastal GasLink pipeline (8.6Mt CO2/year) against the Prime Minister's green-recovery task force; Wilkinson defers climate questions to 'beyond this phase of the crisis.'"},
+      "f5": {"status": "retained", "evidence": "Wilkinson defers climate questions to 'beyond this phase of the crisis.'"},
+      "f6": {"status": "retained", "evidence": "Simard notes the same $500M went to one pipeline project as EDC's entire 2017 softwood-lumber-tariff support for the whole forestry sector (58,000 Quebec jobs, $6B GDP)."},
+      "f7": {"status": "retained", "evidence": "O'Regan cites the 2017 softwood action plan and strategic innovation fund rather than matching the liquidity figure."},
+      "f8": {"status": "partial", "evidence": "Dalton (CPC) raises landlords refusing to join the rent-assistance program despite tenants losing 50-100% of revenue. (omits the fitness-club example and specific '25% rent reduction' request)"},
+      "f9": {"status": "retained", "evidence": "Morneau notes rent relief is provincial jurisdiction and offers landlords up to 75% coverage."},
+      "f10": {"status": "retained", "evidence": "Anand says PPE work beyond front-line health care is still being scoped with the provinces."},
+      "f11": {"status": "omitted", "evidence": "The bullet's 'Joly commits to work with the sector via new Atlantic Canada Opportunities Agency (ACOA) funding' is Joly's reply to d'Entremont about the ferry, not her separate reply to Gourde about the hard-hit sector and people who lost jobs."}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "f4 (c.) and f6 (d.) appear as adjacent sibling bullets, both about Simard and the same $500M figure, but no explicit language states one extends/evidences the other's broader claim."},
+      "r2": {"status": "lost", "evidence": "f8 and f9 appear in the same bullet but no explicit dependency language ('this is part of why landlords refuse') is stated."}
+    },
+    "hallucinations": [
+      {"text": "Yurdiga (CPC) presses on a 48-day gap between the finance minister's promised liquidity loans and open applications, plus indigenous oil-and-gas contractors struggling to qualify and western storage capacity risk if SAGD thermal projects are shut down; O'Regan confirms large-cap liquidity measures now complete what began April 17 for small/medium producers (85% of sector jobs, 576,000 total jobs including 11,000 indigenous workers), while storage and BCAP-eligibility details remain in progress", "source_supported": true},
+      {"text": "Blois highlights Kings-Hants' dairy and horticulture sectors; Bibeau cites a $77.5M emergency processing fund, $50M surplus-food program, $125M AgriRecovery for beef and pork producers, and a dairy-sector loan-capacity increase from $300M to $500M pending all-party support", "source_supported": true},
+      {"text": "Gourde (CPC) wants CUSMA import permits granted directly to Canadian dairy processors ($19B GDP contribution) instead of American multinationals; Freeland reiterates that supply management was preserved in the new NAFTA without directly answering the permit-allocation question", "source_supported": true},
+      {"text": "d'Entremont raises the Bar Harbor-Yarmouth ferry's survival if the border stays closed", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Gourde proposed an interprovincial corridor to sell Quebec hydropower into Ontario as a low-carbon option, but Morneau only offered a general 'continuing to work towards that.' Gourde raised tourism infrastructure broadly; Joly's ACOA-funding commitment (given to d'Entremont for the Bar Harbor-Yarmouth ferry) is the closest reply captured. On green economy, Simard contrasted a $1.7B orphan-well cleanup and a $500M EDC loan to the Coastal GasLink pipeline (8.6Mt CO2/year) against the PM's green-recovery task force and against the $500M the whole forestry sector received in 2017 (58,000 Quebec jobs, $6B GDP); Wilkinson deferred climate questions to 'beyond this phase of the crisis,' and O'Regan cited the 2017 softwood action plan rather than matching the liquidity figure. On small business, landlords were refusing to join the rent-assistance program despite 50-100% revenue drops; Morneau said rent relief is provincial jurisdiction but offers landlords up to 75% coverage, and Anand said PPE support beyond front-line health care is still being scoped with the provinces.",
+        "verdict": "correct"
+      }
+    }
+  }
+}

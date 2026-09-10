@@ -1,0 +1,60 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Nothing usable — skim.md is a bare topic tree (e.g. 'Reintegration & transition', 'Collaborative models', 'Family engagement') with no sentences under any heading, so no actual solution content — team-around-the-family, whole-package support, or the Oxford PRU model — can be stated.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": "The 'Reintegration & transition' bullet only covers part-time timetables and key-stage-4 difficulty; the separate 'Family engagement' bullet describes a team-around-the-family approach only generically (ACEs/multi-agency), never tied to identifying what a returning learner needs or what the school can provide."},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "Oxfordshire model: Schools took over PRU funding under a partnership agreement so pupils couldn't be moved elsewhere; long-term outcomes are unclear."},
+      "f4": {"status": "partial", "evidence": "long-term outcomes are unclear. (omits that it 'started off really well' and that her knowledge was dated from a few years earlier)"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "A team-around-the-family, multi-agency approach with health and social care is now common practice across most authorities", "source_supported": true},
+      {"text": "Part-time timetables with a managed reduction in support ease reintegration, but this gets far harder once learners reach key stage 4", "source_supported": true},
+      {"text": "Swansea devolved funding: secondary schools get extra money against a monitored action plan to manage behaviour themselves", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The rendering points to a team-around-the-family, multi-agency approach as now common practice, part-time timetables with managed support reduction to ease reintegration (harder at key stage 4), and an Oxfordshire model where schools took over PRU funding under a partnership agreement so pupils couldn't be moved elsewhere, though long-term outcomes there are unclear. It does not explicitly connect the family approach to identifying what a returning learner/school needs, nor mention the 'whole package of support including transport' detail.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": "Reintegration & transition (staged reintegration, harder at KS4, managed moves) and Family engagement (team-around-the-family, generic) remain separate, unconnected bullets; nothing ties team-around-the-family specifically to KS4 reintegration or to identifying learner/school needs."},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "Oxfordshire model: A local authority handed PRU money to secondary schools under a partnership agreement so they couldn't keep moving learners between schools."},
+      "f4": {"status": "retained", "evidence": "it started well, though long-term outcomes are unknown."}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "Team-around-the-family approach brings health, social care, and education together, on the premise that in-school behaviour usually reflects a harder home situation", "source_supported": true},
+      {"text": "a. staged reintegration - Part-time timetables ease learners back into school, with support continuing (and only gradually reduced) after full return", "source_supported": true},
+      {"text": "b. harder at key stage 4 - The most challenging, oldest learners are far harder to reintegrate into mainstream; focus shifts instead to further education and colleges", "source_supported": true},
+      {"text": "c. managed moves - A 'second chance' move to a new school, with a cooling-off period and learner voice built in, since it doesn't always work out", "source_supported": true},
+      {"text": "a. PRU/EOTAS networking - National and regional networks, conferences, and joint visits have improved practice-sharing between PRU and mainstream staff", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The rendering describes a team-around-the-family approach (generic, health/social care/education together), staged reintegration via part-time timetables with gradually reduced support (far harder at key stage 4, with managed moves as a second-chance option), and an Oxfordshire model in which a local authority handed PRU funding to secondary schools under a partnership agreement so they couldn't keep moving learners between schools — it started well, though long-term outcomes are unknown. It does not explicitly connect the family approach to identifying learner/school needs, nor mention the 'whole package of support including transport' detail.",
+        "verdict": "partial"
+      }
+    }
+  }
+}

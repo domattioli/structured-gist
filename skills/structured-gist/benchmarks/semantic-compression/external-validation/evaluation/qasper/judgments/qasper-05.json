@@ -1,0 +1,86 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "the first Turkish and first sports-domain stance-annotated tweet data set, released publicly with SVM baseline results intended as reference points for future work", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "two popular Turkish football clubs, Galatasaray and Fenerbahçe, chosen since large tweet volumes already exist about them"},
+      "f2": {"status": "retained", "evidence": "filtered by club name from an existing 1M-tweet Turkish corpus, then manually annotated Favor/Against"},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "retained", "evidence": "(no Neither class used)"},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "retained", "evidence": "then manually annotated Favor/Against"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "stance detection classifies a text-target pair as Favor/Against/Neither, distinct from sentiment analysis, which scores the author's general sentiment rather than their stance toward a specific target", "source_supported": true},
+      {"text": "no prior stance detection data set exists for Turkish", "source_supported": true},
+      {"text": "sentiment plus arguing-lexicon features for stance classification", "source_supported": true},
+      {"text": "dialogue-structure features improving stance detection in on-line debates", "source_supported": true},
+      {"text": "sequence models (HMMs) outperforming non-sequence models (Naive Bayes)", "source_supported": true},
+      {"text": "bidirectional conditional encoding for unseen-target stance detection", "source_supported": true},
+      {"text": "the shared task that established the standard Favor/Against/Neither Twitter stance benchmark and its baselines, later compared against in this paper's results", "source_supported": true},
+      {"text": "chosen since large tweet volumes already exist about them", "source_supported": true},
+      {"text": "700 tweets total, perfectly balanced: 175 Favor / 175 Against per target", "source_supported": true},
+      {"text": "published publicly as a CSV of tweet id, target, and stance label — the first publicly available Turkish stance data set", "source_supported": true},
+      {"text": "one SVM (Weka, SMO, linear kernel) per target, 10-fold cross-validated, after stopword removal", "source_supported": true},
+      {"text": "unigrams — strong, favorable results", "source_supported": true},
+      {"text": "bigrams alone — poor results, likely due to the small data set size", "source_supported": true},
+      {"text": "unigrams plus hashtag existence — mixed: a slight drop for one target, a gain for the other", "source_supported": true},
+      {"text": "both targets classify the Favor class more accurately than Against — the opposite pattern from the SemEval 2016 baselines, but consistent with typical sentiment-analysis systems that favor the Positive class", "source_supported": true},
+      {"text": "released publicly with SVM baseline results (unigram, bigram, hashtag features) intended as reference points for future stance detection work on Turkish text", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Tweets about Galatasaray and Fenerbahçe were filtered by club name and manually annotated as Favor or Against (no Neither class)", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "two of the most popular football clubs in Turkey, Galatasaray (Target-1) and Fenerbahçe (Target-2)"},
+      "f2": {"status": "retained", "evidence": "filtered by club name from one of two existing 1-million-tweet Turkish corpora (the August 18–September 6, 2015 period)"},
+      "f3": {"status": "retained", "evidence": "tweets not explicitly mentioning the target club were excluded during filtering"},
+      "f4": {"status": "retained", "evidence": "only Favor/Against labels were annotated (no Neither class, left to future finer-grained annotation)"},
+      "f5": {"status": "retained", "evidence": "in a few tweets the actual target was a club's management or an individual footballer, but the club itself was still treated as the stance target throughout"},
+      "f6": {"status": "retained", "evidence": "only Favor/Against labels were annotated"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "stance detection classifies a text-target pair as Favor/Against/Neither, distinct from sentiment analysis, which scores only the author's general sentiment (Positive/Negative/Neutral) rather than their stance toward a specific, possibly implicit, target", "source_supported": true},
+      {"text": "to the authors' knowledge, no stance detection data set previously existed for Turkish, despite stance detection's value for information retrieval and broader social media analysis", "source_supported": true},
+      {"text": "a stance classifier built on sentiment and arguing features plus an automatically compiled arguing lexicon, beating distribution- and unigram-based baselines", "source_supported": true},
+      {"text": "dialogue structure shown to improve stance detection in on-line debates", "source_supported": true},
+      {"text": "Hasan and Ng's experiments across learning algorithms, training sets, features, and inter-post constraints, finding sequence models (HMMs) outperform non-sequence models (Naive Bayes) for stance detection", "source_supported": true},
+      {"text": "topic-independent features (agreement, cue words, denial, hedges, duration, polarity, punctuation) shown useful for disagreement detection in on-line dialogues", "source_supported": true},
+      {"text": "linguistically-motivated features with multivalued Naive Bayes and SVM outperforming two baselines on stance detection in student essays", "source_supported": true},
+      {"text": "Wikipedia used to determine stances on controversial topics, building on prior work on controversy extraction from the Web", "source_supported": true},
+      {"text": "bidirectional conditional encoding achieving state-of-the-art performance on stance detection for unseen targets; SCIFNET automatically building stance-coherent networks of people from document collections", "source_supported": true},
+      {"text": "the shared task that established the standard Favor/Against/Neither Twitter stance detection benchmark across two subtasks (with and without training data), evaluating 19 participating systems and providing the baselines this paper's results are later compared against; a separate crowdsourced tweet data set annotated with both stance and sentiment (for six predefined targets) also exists, aimed at revealing associations between the two", "source_supported": true},
+      {"text": "chosen because considerable tweet volume already exists for sports-related events, and stance-system output on such a stream could be useful to the clubs themselves", "source_supported": true},
+      {"text": "700 tweets total, perfectly balanced: 175 Favor and 175 Against for each of the two targets", "source_supported": true},
+      {"text": "published publicly as a three-column CSV (tweet id, target name, Favor/Against label) — to the authors' knowledge the first publicly available Turkish stance-annotated data set, and also the first stance-annotated data set on a sports-related (rather than political/ethical) domain", "source_supported": true},
+      {"text": "one SVM per target (SMO algorithm, linear kernel, via Weka), 10-fold cross-validated on the full 700-tweet data set, after automated stopword removal (using an extended version of an existing Turkish stopword list) prior to unigram extraction", "source_supported": true},
+      {"text": "unigrams alone — favorable results for both targets, notably higher for Target-1, taken as a reference baseline given unigram-based methods' established reliability for stance detection", "source_supported": true},
+      {"text": "bigrams alone — markedly poorer results, plausibly because of the data set's relatively limited size, despite ngram-based classifiers generally being reported to perform well for stance detection", "source_supported": true},
+      {"text": "unigrams plus hashtag existence — a slight F-Measure decrease (0.5%) for Target-1 but a 1.8% F-Measure increase for Target-2, encouraging evidence for hashtags' utility though not a fully conclusive result given the data set size", "source_supported": true},
+      {"text": "for both targets, the Favor class is classified more accurately than Against, plausibly due to common terms used when expressing positive stance toward sports clubs in Turkish tweets; this is the opposite pattern from the SemEval 2016 baseline systems (which favored Against), but matches the pattern typically seen in SVM-based sentiment analysis systems, which tend to favor the Positive class", "source_supported": true},
+      {"text": "this study presents the first Turkish and first sports-domain stance-annotated tweet data set, publicly released with SVM baseline results (unigram, bigram, and hashtag-existence features, 10-fold cross-validated) intended to serve as reference points for future stance detection research on Turkish social media text", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Tweets about Galatasaray and Fenerbahçe were filtered by club name from an existing 1M-tweet Turkish corpus (excluding tweets that didn't explicitly mention the target), then manually annotated as Favor or Against only (no Neither class), treating the club itself as the target even when management or a specific player was praised/criticised", "verdict": "correct"}
+    }
+  }
+}

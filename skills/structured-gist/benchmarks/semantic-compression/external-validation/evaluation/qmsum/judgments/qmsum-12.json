@@ -1,0 +1,62 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "\"A. new ALN Act adds system-wide pressure\" — captures the Act's pressure but not that Torfaen schools are specifically already behind on funding and facing hard choices across every aspect of provision"},
+      "f2": {"status": "partial", "evidence": "\"PRU staff training often an afterthought vs. school staff\" (A) — captures the core claim but drops that the gap had since been partly addressed after local authorities pushed back"},
+      "f3": {"status": "retained", "evidence": "\"C. delegation levels to schools are already high — not seen as the real driver of exclusions\""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "retained", "evidence": "\"B. funding follows the pupil only annually, creating mid-year gaps when learners move\""},
+      "f7": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Funding pressures were raised: the new ALN Act adds system-wide pressure; PRU staff training funding is often treated as an afterthought versus mainstream school staff; funding follows a pupil only annually, creating mid-year gaps when learners move; and delegation levels to schools are already high and not seen as the real driver of exclusions.", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"the new Additional Learning Needs Act is expected to add system-wide pressure; schools already making 'hard choices' under funding strain\""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "\"WLGA (Hopkins): delegation levels to schools are already high, so that's not really the exclusion driver\""},
+      "f8": {"status": "retained", "evidence": "\"the narrow key-stage-4 attainment measure and rising ALN costs (with tribunal pressure, per English precedent) are bigger factors\""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "retained", "evidence": "\"Liz Williams: Samaritans' round-table participants... estimated up to 50% of a classroom could have an additional learning need — but diagnosis alone is of limited value without the support/understanding to back it up\""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "retained", "evidence": "\"funding 'follows the learner' only once a year, so mid-year moves between school and EOTAS create funding lag\""},
+      "f7": {"status": "partial", "evidence": "the section heading \"Diagnosis vs. support funding balance\" signals the framing, and \"diagnosis alone is of limited value without the support/understanding to back it up\" is present, but the specific claim that funding tends to go toward diagnosis rather than ongoing support is not explicitly restated in the bullet body"}
+    },
+    "relations": {},
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "The new ALN Act adds funding pressure system-wide, with schools already making hard choices; delegation levels to schools are already high so that isn't the real exclusion driver — the narrow key-stage-4 attainment measure and rising ALN costs (with tribunal pressure, per English precedent) are bigger factors; funding follows the learner only annually, creating mid-year lag when learners move between school and EOTAS; and on diagnosis vs. support, diagnosis alone has limited value without the support behind it.", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Davies: the incoming Additional Learning Needs (ALN) Act will add pressure to an already-stretched system; some Torfaen schools are behind on funding and forced into 'hard choices' across every aspect of provision for learners\""},
+      "f2": {"status": "retained", "evidence": "\"Williams: government funding announcements sometimes overlook PRU staff specifically, who may need even more training than mainstream school staff — government has since 'addressed that' after being pushed, but it remains 'a little bit of an afterthought'\""},
+      "f3": {"status": "retained", "evidence": "\"delegation levels are 'already very high' in most authorities, with agreements in place with government to devolve as much funding to schools as possible — he doesn't see delegation itself as a direct driver of exclusions\""},
+      "f8": {"status": "retained", "evidence": "\"he points to the narrow key-stage-4 end-point attainment measure as pressuring some headteachers toward exclusion or moving pupils to another school...and separately flags that ALN funding is coming under increasing pressure — citing England's parallel legislative experience, where ALN-related tribunals became so burdensome...\""},
+      "f9": {"status": "retained", "evidence": "\"he hopes the new curriculum, alongside efforts with Estyn and Welsh Government to broaden accountability measures beyond narrow metrics, will let schools approach this more constructively\""},
+      "f10": {"status": "retained", "evidence": "\"one participant estimated up to 50% of a classroom could have an additional learning need, meaning diagnosis without adequate support doesn't actually benefit the child; the deeper takeaway participants emphasized was the importance of genuinely inclusive schools giving every learner proper opportunity to progress, diagnosed or not\""},
+      "f4": {"status": "retained", "evidence": "\"separately flags that ALN legislation extends support obligations up to age 25, adding pressure across the post-16 sector too\""},
+      "f5": {"status": "retained", "evidence": "\"Davies: variable, unpredictable provision needs (changing term to term, even week to week, as learners move in and out) make planning difficult and strain budgets that weren't allocated for unplanned arrivals\""},
+      "f6": {"status": "retained", "evidence": "\"Williams: PRUs have worked to ensure funding 'follows' a child who moves out of mainstream school, since funding is only allocated annually, creating a lag risk when a school no longer educates a child but still holds that year's funding\""},
+      "f7": {"status": "partial", "evidence": "heading \"Diagnosis vs. support funding balance\" plus \"diagnosis alone has limited value without proper understanding and support behind it\" convey the imbalance, but the explicit claim that funding trends toward diagnosis over ongoing support is not restated in the bullet body itself"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "Davies isn't sure ALN specifically is \"worse affected\" than other areas, but agrees more spending will likely be needed in light of the new Act; Williams agrees", "source_supported": true},
+      {"text": "Hopkins on whether new-Act pressures could mean more exclusions: \"it shouldn't, but it could,\" depending on how headteachers/governing bodies react to financial and performance pressure", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The incoming ALN Act adds pressure to an already-stretched system; Torfaen schools are already behind on funding and making hard choices. PRU staff training funding is often overlooked relative to mainstream school staff, though government partly addressed this after being pushed. Delegation levels to schools are already very high and not the real exclusion driver — instead the narrow key-stage-4 attainment measure and rising ALN costs (with tribunal pressure seen in England) are bigger factors; local authorities are working with Estyn and the Welsh Government toward a broader range of measures to address this more constructively. ALN legislation also extends obligations up to age 25, adding pressure on the post-16 sector. Term-to-term and week-to-week variation in provision needs makes budgets hard to plan for, and funding only follows a child annually, creating a lag when learners move between school and EOTAS. Separately, on diagnosis vs. support, diagnosis alone has limited value without proper support behind it — up to 50% of a classroom could have an additional learning need, and what matters most is an inclusive school for every learner, diagnosed or not.", "verdict": "correct"}
+    }
+  }
+}

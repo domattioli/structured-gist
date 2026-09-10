@@ -1,0 +1,2870 @@
+{
+  "qasper-01": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 5,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:unaligned_in_rendering",
+                  "f3:unaligned_in_rendering",
+                  "f4:unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=partial,unaligned_in_rendering",
+                  "f3:status=partial,unaligned_in_rendering",
+                  "f4:status=partial,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f2",
+              "r1"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=partial",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=partial",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=partial",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f2",
+              "r1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 7,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 25,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.2,
+        "recoverability": 1.0,
+        "relation_retention": 0.5,
+        "task_weighted_fact_retention": 0.4615,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.5,
+        "weighted_retention": 0.4615
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.4615,
+        "critical_units_lost": 1,
+        "critical_units_partial": 2,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.5,
+        "task_weighted_relation_recall": 0.6667
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 5,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 7,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 1,
+        "mutation_rate": 0.0,
+        "omission_rate": 1.0,
+        "recoverability": 0.0,
+        "relation_retention": 0.0,
+        "task_weighted_fact_retention": 0.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.0,
+        "weighted_retention": 0.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.0,
+        "critical_units_lost": 3,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.0,
+        "task_weighted_relation_recall": 0.0
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 5,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=partial,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=partial",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 7,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 17,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.8,
+        "recoverability": 1.0,
+        "relation_retention": 0.0,
+        "task_weighted_fact_retention": 0.1154,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.1,
+        "weighted_retention": 0.1154
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.1154,
+        "critical_units_lost": 2,
+        "critical_units_partial": 1,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.0938,
+        "task_weighted_relation_recall": 0.0
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-02": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f3"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f3"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 3,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 23,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 1,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 3,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 1,
+        "mutation_rate": 0.0,
+        "omission_rate": 1.0,
+        "recoverability": 0.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.0,
+        "weighted_retention": 0.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.0,
+        "critical_units_lost": 1,
+        "critical_units_partial": 0,
+        "critical_units_total": 1,
+        "semantic_preservation_recall": 0.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering",
+                  "f3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering",
+                  "f3:status=partial,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=partial",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 3,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 23,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.8571,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 1,
+        "unweighted_retention": 0.8333,
+        "weighted_retention": 0.8571
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.8571,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 1,
+        "semantic_preservation_recall": 0.8571,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-03": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 1,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                36,
+                36,
+                38
+              ]
+            },
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "r1"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "r1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 16,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 1,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "r1"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "r1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 1,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.3333,
+        "recoverability": 0.5,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 0.6667,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.6667,
+        "weighted_retention": 0.6667
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.6667,
+        "critical_units_lost": 1,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.7273,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 1,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                36,
+                36,
+                38
+              ]
+            },
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "r1"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "r1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 17,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-04": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 4,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                36,
+                36,
+                41
+              ]
+            },
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "r1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "r1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 23,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 1,
+        "mutation_rate": 0.0,
+        "omission_rate": 1.0,
+        "recoverability": 0.0,
+        "relation_retention": 0.0,
+        "task_weighted_fact_retention": 0.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.0,
+        "weighted_retention": 0.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.0,
+        "critical_units_lost": 3,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.0,
+        "task_weighted_relation_recall": 0.0
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 4,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                36,
+                36,
+                41
+              ]
+            },
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "r1"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "r1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 20,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-05": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 1,
+              "lca_depth": 0,
+              "lca_node_index": 16,
+              "support_node_indices": [
+                18,
+                20,
+                20,
+                20,
+                20,
+                20
+              ]
+            },
+            "support_unit_count": 6,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 6,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 6,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 6,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 6,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 6,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 19,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 6,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering",
+                  "f6:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering",
+                  "f6:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f6": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f6": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 6,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 1,
+        "mutation_rate": 0.0,
+        "omission_rate": 1.0,
+        "recoverability": 0.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.0,
+        "weighted_retention": 0.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.0,
+        "critical_units_lost": 3,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 6,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f5:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f4",
+              "f6"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f5": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f4",
+              "f6"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 6,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 16,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.3333,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.7143,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.6667,
+        "weighted_retention": 0.7143
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.7143,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.7143,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-06": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 2,
+              "lca_depth": 0,
+              "lca_node_index": 75,
+              "support_node_indices": [
+                84,
+                86,
+                87
+              ]
+            },
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 3,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 6,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 0.5,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 0,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 3,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 1.0,
+        "recoverability": 0.5,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.0,
+        "weighted_retention": 0.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 0,
+        "semantic_preservation_recall": 0.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=partial",
+                  "f3:status=partial"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 3,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=partial"
+              ],
+              "f3": [
+                "status=partial"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f2"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 3,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 5,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 0.5,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.6667,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.6667,
+        "weighted_retention": 0.6667
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.6667,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 0,
+        "semantic_preservation_recall": 0.6667,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-07": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 10,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                38,
+                49
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 2,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 2,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f2"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f2"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 2,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 2,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 2,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 3,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 2,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 14,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                39,
+                54
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 2,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 2,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f2"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f2"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 2,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 2,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-08": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f3"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f1",
+              "f3"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 0.5,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 1,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=omitted,unaligned_in_rendering",
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 0,
+            "unit_ids": []
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 2,
+        "mutation_rate": 0.0,
+        "omission_rate": 1.0,
+        "recoverability": 0.0,
+        "relation_retention": 0.0,
+        "task_weighted_fact_retention": 0.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.0,
+        "weighted_retention": 0.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.0,
+        "critical_units_lost": 1,
+        "critical_units_partial": 0,
+        "critical_units_total": 1,
+        "semantic_preservation_recall": 0.0,
+        "task_weighted_relation_recall": 0.0
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering",
+                  "f3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:unaligned_in_rendering",
+                  "f3:unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f2": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 0.5,
+        "relation_retention": 1.0,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 1,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-09": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f3:unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f2",
+              "f4"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 2,
+            "unit_ids": [
+              "f2",
+              "f4"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering",
+                  "f4:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f1"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 3,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.75,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.1,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.25,
+        "weighted_retention": 0.1
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.1,
+        "critical_units_lost": 3,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 0.1,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 0,
+              "lca_depth": 2,
+              "lca_node_index": 53,
+              "support_node_indices": [
+                53,
+                53,
+                53
+              ]
+            },
+            "support_unit_count": 3,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 1.0,
+                "retained_set_size": 3,
+                "source_eac": 1.0,
+                "source_locality_span": 1.0
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 3,
+            "unit_ids": [
+              "f2",
+              "f3",
+              "f4"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 3,
+            "unit_ids": [
+              "f2",
+              "f3",
+              "f4"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 4,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 3,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    }
+  },
+  "qasper-10": {
+    "deep": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 0,
+              "lca_depth": 1,
+              "lca_node_index": 45,
+              "support_node_indices": [
+                45,
+                45
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6,
+                "gist_locality_span": 0.6,
+                "retained_set_size": 5,
+                "source_eac": 0.6,
+                "source_locality_span": 0.6
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6,
+                "gist_locality_span": 0.6,
+                "retained_set_size": 5,
+                "source_eac": 0.6,
+                "source_locality_span": 0.6
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 5,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 5,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 5,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 2,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "skim": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_locality_span": 0.5,
+                "retained_set_size": 4,
+                "source_eac": 0.5,
+                "source_locality_span": 0.5
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=partial",
+                  "f3:status=partial"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 4,
+            "unit_ids": [
+              "f1",
+              "f3",
+              "f4",
+              "f5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=partial"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=partial"
+              ],
+              "f4": [
+                "status=partial"
+              ]
+            },
+            "size": 1,
+            "unit_ids": [
+              "f5"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 5,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 3,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.2,
+        "recoverability": 0.5,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 0.5,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.5,
+        "weighted_retention": 0.5
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 0.5,
+        "critical_units_lost": 0,
+        "critical_units_partial": 2,
+        "critical_units_total": 2,
+        "semantic_preservation_recall": 0.5,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    },
+    "standard": {
+      "findability": {
+        "questions": {
+          "q1": {
+            "structural_diagnostic": {
+              "intervening_node_count": 0,
+              "lca_depth": 2,
+              "lca_node_index": 38,
+              "support_node_indices": [
+                38,
+                38
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6,
+                "gist_locality_span": 0.6,
+                "retained_set_size": 5,
+                "source_eac": 0.6,
+                "source_locality_span": 0.6
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6,
+                "gist_locality_span": 0.6,
+                "retained_set_size": 5,
+                "source_eac": 0.6,
+                "source_locality_span": 0.6
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {},
+            "size": 5,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5"
+            ]
+          },
+          "strict": {
+            "excluded": {},
+            "size": 5,
+            "unit_ids": [
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5"
+            ]
+          }
+        },
+        "source_integrity": {
+          "units_ambiguous_in_source": [],
+          "units_total": 5,
+          "units_unaligned_in_source": []
+        }
+      },
+      "semantic": {
+        "flagged_vs_gold_count": 4,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "recoverability": 1.0,
+        "relation_retention": null,
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "spr": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 2,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": null
+      },
+      "status": "scored"
+    }
+  }
+}

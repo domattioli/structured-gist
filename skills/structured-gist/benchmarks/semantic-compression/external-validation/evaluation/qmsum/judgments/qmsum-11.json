@@ -1,0 +1,80 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Albas presses Trudeau on reports staff were told to ignore ~200,000 flagged fraud cases; no direct yes/no given\""},
+      "f2": {"status": "retained", "evidence": "\"C. Trudeau's line: help fast now, audit/recover fraud later\""},
+      "f3": {"status": "partial", "evidence": "\"no direct yes/no given\" (A) — captures that Trudeau never answered, but not the specific repeated \"did you/your office sign off on the memo\" question"},
+      "f4": {"status": "retained", "evidence": "\"A. Ste-Marie presses on tax-haven loopholes still allowing large-employer loan access\""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "\"Bergen and Dalton challenge banning farm/hunting rifles (Iver Johnson)\" (A) — the challenge itself is present but not the \"front-line officers concerned about gangs, not farm rifles\" reasoning"},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "retained", "evidence": "\"Blair cites police-association support for banning military-design weapons\""},
+      "f10": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "partial", "evidence": "\"Bergen and Dalton challenge banning farm/hunting rifles...; Blair cites police-association support for banning military-design weapons\" — the two claims are juxtaposed in one bullet, implying opposition, but no explicit \"countered by\" framing"}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Albas pressed Trudeau on reports that staff were told to ignore ~200,000 flagged fraud cases; Trudeau's line was to help fast now and audit/recover fraud later, without a direct yes/no. Ste-Marie pressed on tax-haven loopholes still allowing large-employer loan access. On firearms, Bergen and Dalton challenged the banning of farm/hunting rifles like the Iver Johnson, while Blair cited police-association support for banning military-design weapons.", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"presses Trudeau to confirm reports that federal staff were told to ignore ~200,000 applications flagged as potentially fraudulent\""},
+      "f2": {"status": "retained", "evidence": "\"asks whether every individual fraud case will be investigated; Trudeau commits only in general terms to 'clean up after the fact'\""},
+      "f3": {"status": "retained", "evidence": "\"asks repeatedly (6+ times) whether the PM or his office signed off on the deputy-minister memo; Trudeau never answers directly, repeating that speed to help Canadians was the priority and cleanup/audits would follow\""},
+      "f4": {"status": "retained", "evidence": "\"notes it targets only abusive/illegal evasion, not legal tax-haven avoidance used by banks and multinationals; asks why 'profiteers' using legal avoidance still qualify\""},
+      "f5": {"status": "retained", "evidence": "\"asks whether a bank relocating its most profitable Canadian activities to a subsidiary in a tax haven counts as paying its fair share; Trudeau says applications will be assessed case-by-case for transparency, and that big banks aren't expected to need the funds\""},
+      "f6": {"status": "retained", "evidence": "\"cites a constituent whose documents (including a doctor's note) sent March 12 were never opened, forcing a resend; Hussen says he's not aware this is widespread, offers to look into the specific case\""},
+      "f11": {"status": "retained", "evidence": "\"cites redeployed staff and pandemic-driven office closures\""},
+      "f7": {"status": "retained", "evidence": "\"challenges banning the Iver Johnson single-shot rifle, a common inherited farm gun, arguing front-line officers are focused on gangs/smuggling, not farmers/hunters\""},
+      "f8": {"status": "partial", "evidence": "\"Blair cites the...police leaders' public support for banning 'military-design' rifles as the basis for the list\" — names \"military-design\" as the basis but omits that Blair worked with the Canadian firearms program/law enforcement to identify the nine specific rifles"},
+      "f9": {"status": "retained", "evidence": "\"Blair cites the Canadian Association of Chiefs of Police and Ontario police leaders' public support for banning 'military-design' rifles\""},
+      "f10": {"status": "retained", "evidence": "\"notes any gun-violence death is 'one too many'\""}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "Ste-Marie's criticism (bullet i) and Trudeau's case-by-case/fair-share response (bullet ii) appear sequentially without an explicit \"rebuts\" connector"},
+      "r2": {"status": "retained", "evidence": "\"challenges banning the Iver Johnson...arguing front-line officers are focused on gangs/smuggling, not farmers/hunters; Blair cites the...police leaders' public support for banning 'military-design' rifles...; Bergen counters by invoking the...long-gun registry precedent\" — presented as a direct claim/counter-evidence/pushback sequence"}
+    },
+    "hallucinations": [
+      {"text": "Rayes's parallel line (CRA specifically): asks the Minister of National Revenue whether a CRA memo told employees to ignore detected fraud; Lebouthillier answers \"no\"; separately presses for CERB repayment mechanics ($500/week vs. the full $2,000); asks whether an employee can refuse to return to work and keep CERB", "source_supported": true},
+      {"text": "Ste-Marie separately raises interchange (credit-card) fees at 2.5-3%, nearly 10x Europe/Australia's, hurting merchants; asks Trudeau to cap them at 0.3%; Trudeau deflects to consumer-support measures generally", "source_supported": true},
+      {"text": "Savard-Tremblay's (BQ) push for an executive-compensation cap, citing a CCPA report and Quebec/Bombardier precedent; Morneau confirms conditions (no dividends/buybacks, tax-transparency checks) without a hard cap figure", "source_supported": true},
+      {"text": "Bergen counters by invoking the costly, ineffective long-gun registry precedent", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Albas pressed Trudeau to confirm whether staff were told to ignore ~200,000 flagged fraud cases and whether he/his office signed off on the memo; Trudeau never answered directly, repeating a help-first/clean-up-later framing. Ste-Marie argued the large-employer facility's anti-tax-evasion condition was too narrow, letting banks using legal tax havens still qualify; Trudeau said applications would be assessed case-by-case with a fair-share/transparency requirement. Bergen asked whether unopened mail was a widespread Service Canada problem (Hussen: not aware, offered to look into it, cited pandemic volumes/staff redeployment) and challenged the ban on the Iver Johnson farm rifle, arguing front-line officers focus on gangs, not farmers; Blair defended the ban by citing police-association support for banning military-designed weapons and said any gun death is \"one too many.\"", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"opens by citing a media report that federal workers were told to ignore 'obvious signs of fraud'...and asks Trudeau to confirm ~200,000 applications were flagged as potentially fraudulent\""},
+      "f2": {"status": "retained", "evidence": "\"asks Trudeau to confirm audits will happen; Trudeau confirms only in general terms that 'we will do that' (go after fraudulent cases) as part of cleanup\""},
+      "f3": {"status": "retained", "evidence": "\"Albas repeats the same yes/no question three more times across the exchange...Trudeau never answers directly, each time returning to the 'help first, clean up after' framing\""},
+      "f4": {"status": "retained", "evidence": "\"before noting it targets only 'abusive' evasion/avoidance (i.e., fraud), not the legal use of tax havens by profitable companies; calls those companies 'profiteers'\""},
+      "f5": {"status": "retained", "evidence": "\"Trudeau says applying for the facility requires having 'paid your fair share,' with tax structures 'carefully assessed' case by case...notes big banks aren't expected to need the facility, and commits to requiring transparency about 'how the money is being managed, including internationally'\""},
+      "f6": {"status": "retained", "evidence": "\"cites a specific constituent whose documents, including a doctor's note, were mailed March 12 and are now...being reported as never opened...says he's not personally aware unopened mail is widespread and offers to look into the specific case directly with Bergen\""},
+      "f11": {"status": "retained", "evidence": "\"Hussen cites unprecedented volumes, redeployment of 'thousands of staff' to phone-based front-line service, and pandemic-driven office closures for safety\""},
+      "f7": {"status": "retained", "evidence": "\"Bergen challenges whether front-line officers were actually consulted, saying front-line concerns center on gangs/drug dealers/smuggled illegal weapons, not registered farm rifles used for hunting\""},
+      "f8": {"status": "retained", "evidence": "\"Blair explains the government worked with the Canadian firearms program, law enforcement, and firearms verification specialists to identify nine rifle makes/models/variants whose 'earliest provenance' traces to military combat design\""},
+      "f9": {"status": "retained", "evidence": "\"Blair cites specific police-association statements: the Canadian Association of Chiefs of Police calling military assault rifles designed 'for the sole purpose of killing people in large numbers'...; Ontario police leaders' statement that such weapons 'have no place in our communities'\""},
+      "f10": {"status": "retained", "evidence": "\"Blair clarifies the criterion is design intent (for soldiers to kill other soldiers), not the specific term 'assault rifle,' and reiterates that any Canadian gun death is 'one too many'\""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "sequential bullets i-iv show Ste-Marie's \"profiteers\" criticism, Trudeau's fair-share claim, Ste-Marie's concrete bank example, and Trudeau's case-by-case response in direct back-and-forth"},
+      "r2": {"status": "retained", "evidence": "bullet iii (Bergen: front-line officers focus on gangs, not farm rifles) is directly followed by bullet iv (\"Blair cites specific police-association statements\") as the response"}
+    },
+    "hallucinations": [
+      {"text": "Rayes's (CPC) parallel line (CRA specifically), i-viii: asks Minister of National Revenue whether CRA memo told employees to ignore detected fraud (Lebouthillier eventually answers \"no\"); presses CERB repayment mechanics ($500/week vs. full $2,000, Qualtrough never gives a number); asks whether an employee can refuse to return to work and keep CERB", "source_supported": true},
+      {"text": "Savard-Tremblay's (BQ) push for an executive-compensation cap: cites a Canadian Centre for Policy Alternatives report and Quebec/Bombardier precedent; Morneau confirms conditions (no dividends/buybacks, executive-compensation limits, tax-structure review) but gives no specific cap figure", "source_supported": true},
+      {"text": "Ste-Marie separately raises credit-card interchange fees (2.5-3%, ~10x Europe/Australia), asks Trudeau to cap at 0.3%; Trudeau deflects to consumer-cost measures generally, no commitment", "source_supported": true},
+      {"text": "Bergen invokes the costly, ineffective long-gun registry as historical precedent for skepticism, and asks directly whether the minister is calling the Iver Johnson an \"assault rifle\"", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Albas repeatedly pressed Trudeau on ~200,000 flagged fraud cases and whether he/his office signed off on a deputy-minister memo instructing staff to ignore fraud signs; Trudeau never confirmed or denied sign-off, repeating a help-first/clean-up-and-audit-later framing (Rayes ran a parallel line with the Minister of National Revenue, who flatly said \"no\" to a similar CRA-memo claim). Ste-Marie argued the large-employer facility's anti-tax-evasion condition only targets illegal evasion, letting banks using legal tax havens (e.g., relocating profits to Bahamas/Barbados subsidiaries) still qualify; Trudeau said applications are assessed case-by-case with a fair-share/transparency requirement, without directly answering the bank example. Bergen asked whether unopened mail was a widespread Service Canada problem (Hussen: not aware, cited pandemic volumes and staff redeployment, offered to look into the specific case) and challenged the ban on the Iver Johnson farm rifle, arguing front-line officers focus on gangs/smuggling, not farm rifles; Blair defended the ban by explaining the nine banned rifles were identified via the Canadian firearms program based on military-combat design, cited police-association (CACP, Ontario police leaders) support for the ban, and said weapons designed for combat have no place in Canadian society, and any Canadian killed by gun violence is \"one too many.\"", "verdict": "correct"}
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "III. data and rephrasing problem (heading only; no mention of 'how we solved it' or preliminary observations)"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "retained", "evidence": "IV. NTL big picture"},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "partial", "evidence": "V. constructions and Bayes-net (label only; captures the two topics but not the 'after X-schema material' sequencing)"},
+      "f10": {"status": "partial", "evidence": "VI. optional FMRI aside (captures the uncertain/'optional' nature but not the 'Future activities' framing or content)"},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "a search of the full Heidelberg database for metonymy and polysemy cases found almost none.", "source_supported": true},
+      {"text": "the group will send feedback electronically; good trip wished before the Wahlster meeting.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Based only on the outline headings (tourist-scenario motivator, SmartKom progress recap, data and rephrasing problem, NTL big picture, constructions and Bayes-net, optional FMRI aside), the talk will cover the group's current NTL/tourism-domain work, including data/rephrasing issues, the NTL big picture, constructions, and Bayes-nets, with FMRI possibly mentioned.", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "presents preliminary data and the rephrasing problem, noting that human-computer telephone prosody mirrors but differs from human-human telephone conversation. (captures the rephrasing problem and preliminary observations, but omits 'how we solved it')"},
+      "f2": {"status": "partial", "evidence": "same passage: 'noting that human-computer telephone prosody mirrors but differs from human-human telephone conversation' -- reframes gold's general same/different data observation narrowly around 'prosody', a degraded/confused version of the point"},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "retained", "evidence": "IV. NTL big picture -- sketches the embodied/simulation approach to language understanding..."},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "retained", "evidence": "opens with mirror-neuron work in monkeys as a prelude"},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "retained", "evidence": "borrows an X-schema slide from a colleague"},
+      "f9": {"status": "retained", "evidence": "V. constructions and Bayes-net -- covers the construction mechanism, then closes with the Bayes-net work."},
+      "f10": {"status": "partial", "evidence": "VI. optional FMRI aside (heading only; no elaboration of the 'Future activities' framing or Grad C's uncertainty)"},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Professor E has everyone read their digits at once on separate microphone channels, to save time before the recording begins.", "source_supported": true},
+      {"text": "construal is proposed as a probabilistic relational model that uses ontology, situation, user, and discourse knowledge together to instantiate classes and infer what a tourism-domain utterance is actually construing.", "source_supported": true},
+      {"text": "group has not yet read the current draft closely", "source_supported": true},
+      {"text": "Grad D read about half, missing the newest castle addition", "source_supported": true},
+      {"text": "minor spelling errata found (Jackendorf, interesting)", "source_supported": true},
+      {"text": "any comment on spelling, syntax, or readability should go by email and will be incorporated into revisions made on upcoming flights and trains.", "source_supported": true},
+      {"text": "comments are due before the 29th, since Grad C meets Wolfgang Wahlster that day to pitch the proposal.", "source_supported": true},
+      {"text": "Professor E asks the group to send comments electronically rather than in person, since Grad C will be traveling.", "source_supported": true},
+      {"text": "opens with an everyday example (the Cave Forty-Five discotheque, or the Bavaria case) showing that a 'where' question can mean location or instructions depending on context.", "source_supported": true},
+      {"text": "tablet parser and generation (done)", "source_supported": true},
+      {"text": "speech synthesis (in progress, by Fey)", "source_supported": true},
+      {"text": "the constructions Nancy, Keith, and colleagues are building are general but cover only base, literal cases; a construal mechanism is needed to extend them to metaphorical and metonymic uses.", "source_supported": true},
+      {"text": "done right, a newly introduced base construction should automatically interact with every existing metaphor and metonymy, and vice versa -- a significant advance over any existing system if it holds.", "source_supported": true},
+      {"text": "Grad C argues the tourism/HCI domain favors metonymy and polysemy examples over metaphor, since users interacting with the system tend to be literal rather than lyrical.", "source_supported": true},
+      {"text": "Grad C and a student searched the full Heidelberg database for metonymy and polysemy cases and found almost none, even in item descriptions.", "source_supported": true},
+      {"text": "Professor E proposes the group send Grad C feedback electronically and wishes him a good trip before the Wahlster meeting.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The talk will open with a tourist-scenario 'where' example, recap SmartKom progress (parser/generation done, synthesis in progress), present preliminary data and the rephrasing problem, sketch the NTL big picture (embodied/simulation approach, X-schema slide, mirror-neuron prelude), cover constructions and end with Bayes-net work, and possibly add an FMRI aside.", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "presents preliminary data and the rephrasing problem, noting that human-computer telephone prosody mirrors but differs from human-human telephone conversation. (omits 'how we solved it')"},
+      "f2": {"status": "partial", "evidence": "same passage; reframes gold's general same/different observation narrowly around 'prosody'"},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "retained", "evidence": "IV. NTL big picture -- sketches the embodied/simulation approach to language understanding..."},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "retained", "evidence": "opens with mirror-neuron work in monkeys as a prelude"},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "retained", "evidence": "borrows an X-schema slide from a colleague"},
+      "f9": {"status": "retained", "evidence": "V. constructions and Bayes-net -- covers the construction mechanism, then closes with the Bayes-net work."},
+      "f10": {"status": "partial", "evidence": "Professor E suggests folding in the new FMRI/mirror-neuron follow-up work as a brief 'future activities' mention (captures the FMRI/'future activities' content, but reframes it as a settled suggestion rather than Grad C's stated uncertainty)"},
+      "f11": {"status": "retained", "evidence": "timed to when mirror neurons come up in the talk"},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Professor E suggests folding in the new FMRI/mirror-neuron follow-up work as a brief 'future activities' mention, timed to when mirror neurons come up in the talk."}
+    },
+    "hallucinations": [
+      {"text": "Professor E has everyone read their assigned digits at once, since each person has a separate close-talking microphone channel -- mostly to save time before the actual recording begins.", "source_supported": true},
+      {"text": "Grad D jokingly reminds the group that they are already being recorded, right after Grad F calls the prior meeting 'frustrating.'", "source_supported": true},
+      {"text": "construal is proposed as a probabilistic relational model that uses ontology, situation, user, and discourse knowledge together to instantiate classes and infer what a tourism-domain utterance is actually construing.", "source_supported": true},
+      {"text": "group has not yet read the current draft closely", "source_supported": true},
+      {"text": "Grad D read about half, missing the newest castle addition", "source_supported": true},
+      {"text": "minor spelling errata found (Jackendorf, interesting)", "source_supported": true},
+      {"text": "any comment on spelling, syntax, or readability should go by email and will be incorporated into revisions made on upcoming flights and trains.", "source_supported": true},
+      {"text": "comments are due before the 29th, since Grad C meets Wolfgang Wahlster that day to pitch the proposal.", "source_supported": true},
+      {"text": "Professor E asks the group to send comments electronically rather than in person, since Grad C will be traveling.", "source_supported": true},
+      {"text": "opens with an everyday example (the Cave Forty-Five discotheque, or the Bavaria case) showing that a 'where' question can mean location or instructions depending on context.", "source_supported": true},
+      {"text": "tablet parser and generation (done)", "source_supported": true},
+      {"text": "speech synthesis (in progress, by Fey)", "source_supported": true},
+      {"text": "the constructions Nancy, Keith, and colleagues are building are general but cover only base, literal cases; a construal mechanism is needed to extend them to metaphorical and metonymic uses.", "source_supported": true},
+      {"text": "done right, a newly introduced base construction should automatically interact with every existing metaphor and metonymy, and vice versa -- a significant advance over any existing system if it holds.", "source_supported": true},
+      {"text": "'walked into the cafe' construes the cafe as a container when followed by 'ordered a drink,' or as an obstacle when followed by 'broke his nose,' with the construction-construal interaction (the 'double arrow') resolving which reading applies.", "source_supported": true},
+      {"text": "Professor E notes the current proposal text references construal but never states this orthogonality punch line clearly, weakening the pitch to Wahlster.", "source_supported": true},
+      {"text": "a transportation-schema metaphor ('in/on the bus'), rejected as not something a tourist would plausibly say.", "source_supported": true},
+      {"text": "the resource-depletion sense of 'out of,' judged too complicated to formalize cleanly with no clean prior analysis to build on."},
+      {"text": "'Where is the castle, how old is it, how much does it cost?' -- a metonymy/ellipsis case parallel to 'Plato's on the top shelf,' favored as the strongest candidate.", "source_supported": true},
+      {"text": "locational 'where' reused for temporal reference, e.g. 'where was Heidelberg in the Thirty Years' War' -- plausible but rarer in the data.", "source_supported": true},
+      {"text": "idioms like 'I'm in a hurry,' 'in overload,' 'out of sorts' -- set aside as idiomatic rather than genuinely construal-illustrating.", "source_supported": true},
+      {"text": "building vs. institution vs. exhibit-holder senses -- already present in Grad C's existing data.", "source_supported": true},
+      {"text": "Grad C argues the tourism/HCI domain favors metonymy and polysemy examples over metaphor, since users interacting with the system tend to be literal rather than lyrical.", "source_supported": true},
+      {"text": "Grad C and a student searched the full Heidelberg database for metonymy and polysemy cases and found almost none, even in item descriptions.", "source_supported": true},
+      {"text": "Professor E proposes the group send Grad C feedback electronically and wishes him a good trip before the Wahlster meeting.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The talk will open with a tourist-scenario 'where' example, recap SmartKom progress, present preliminary data and the rephrasing problem, sketch the NTL big picture (embodied/simulation approach, X-schema slide, mirror-neuron prelude), cover constructions and end with Bayes-net work, and fold in an FMRI/mirror-neuron follow-up as a brief 'future activities' mention timed to the mirror-neuron discussion.", "verdict": "partial"}
+    }
+  }
+}

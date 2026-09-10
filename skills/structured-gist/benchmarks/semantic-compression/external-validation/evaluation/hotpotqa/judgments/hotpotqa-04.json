@@ -1,0 +1,71 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Daltoni - Serbian/Yugoslav rock band from Niš, a pioneer of the scene. The band's identity is retained but the translation 'The Daltons' — the piece that grounds the name-correspondence with the Dalton Gang — is entirely dropped."},
+      "f2": {"status": "retained", "evidence": "Dalton Gang - American Old West outlaw gang (1890–1892), specialized in bank/train robberies"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "Without the stated translation, the rendering gives no explicit textual basis for the name correspondence; a reader could only notice the surface similarity between 'Daltoni' and 'Dalton Gang' as bare strings, which is suggestive but not asserted or confirmed by the rendering."}
+    },
+    "hallucinations": [
+      {"text": "Bajaga i Instruktori: popular Serbian/Yugoslav rock band, founded 1984 by Momčilo Bajagić", "source_supported": true},
+      {"text": "Sanjalice: former Yugoslav rock band, one of the first all-female bands in the scene", "source_supported": true},
+      {"text": "Riblja Čorba: Serbian/Yugoslav rock band, among the most influential of the scene", "source_supported": true},
+      {"text": "Iskre: former Yugoslav rock band, a pioneer of the scene", "source_supported": true},
+      {"text": "S Vremena Na Vreme: Serbian/Yugoslav band, pioneer of Serbian acoustic and folk-rock fusion", "source_supported": true},
+      {"text": "Bele Višnje: Serbian/Yugoslav rock band, a pioneer of the scene", "source_supported": true},
+      {"text": "Smak: Serbian/Yugoslav rock band from Kragujevac, peaked in the 1970s", "source_supported": true},
+      {"text": "Korni Grupa: Yugoslav rock band, formed 1968, the first Yugoslav supergroup", "source_supported": true},
+      {"text": "Dalton Gang: specialized in bank/train robberies (beyond the outlaws-in-1890–1892 identity in f2)", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Dalton Gang (inferred only from the 'Daltoni' / 'Dalton Gang' surface name similarity, since no translation is stated)", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Daltoni - Identity - Serbian and former Yugoslav rock band from Niš ('The Daltons')"},
+      "f2": {"status": "retained", "evidence": "Dalton Gang - Identity - group of outlaws in the American Old West, 1890–1892, also known as The Dalton Brothers"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Daltoni's entry explicitly gives the translation '(\"The Daltons\")', and the Dalton Gang entry states it is 'also known as The Dalton Brothers' — the shared root 'Dalton(s)' between the explicit translation and the gang's name/alias is directly stated in both entries, giving the reader the name correspondence without extra inference."}
+    },
+    "hallucinations": [
+      {"text": "Bajaga i Instruktori: identity, founding (Belgrade 1984, Momčilo Bajagić), notability alongside Bijelo Dugme and Riblja Čorba", "source_supported": true},
+      {"text": "Sanjalice: identity, notability as first all-female band and pioneer", "source_supported": true},
+      {"text": "Riblja Čorba: identity, notability as most popular/influential", "source_supported": true},
+      {"text": "Iskre: identity, notability as pioneer", "source_supported": true},
+      {"text": "S Vremena Na Vreme: identity, notability (acoustic and folk-rock pioneers)", "source_supported": true},
+      {"text": "Bele Višnje: identity, notability as pioneer", "source_supported": true},
+      {"text": "Smak: identity, peak popularity in the 1970s, leader Radomir Mihailović ('Točak')", "source_supported": true},
+      {"text": "Korni Grupa: identity, founding 1968, notability as first Yugoslav supergroup", "source_supported": true},
+      {"text": "Dalton Gang: specialty (bank/train robberies), downfall (Coffeyville, Kansas 1892), aftermath (Emmett survived, captured, paroled after 14 years)", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Dalton Gang", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Daltoni - Identity - translates as 'The Daltons' - a Serbian and former Yugoslav rock band from Niš"},
+      "f2": {"status": "retained", "evidence": "Dalton Gang - Identity - a group of outlaws in the American Old West during 1890–1892 - also known as The Dalton Brothers, because three of its members were brothers"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Same explicit name correspondence as standard: Daltoni's translation 'The Daltons' directly parallels the Dalton Gang / Dalton Brothers naming, stated in both entries."}
+    },
+    "hallucinations": [
+      {"text": "Bajaga i Instruktori: identity, founding, notability", "source_supported": true},
+      {"text": "Sanjalice: identity, notability", "source_supported": true},
+      {"text": "Riblja Čorba: identity (translation 'Fish Stew'), notability", "source_supported": true},
+      {"text": "Iskre: identity (translation 'The Sparks'), notability", "source_supported": true},
+      {"text": "S Vremena Na Vreme: identity (translation 'From Time To Time'), notability", "source_supported": true},
+      {"text": "Bele Višnje: identity (translation 'White Sour Cherries'), notability", "source_supported": true},
+      {"text": "Smak: identity (translation 'The end time'), peak, leader Radomir Mihailović", "source_supported": true},
+      {"text": "Korni Grupa: identity (translation, Kornelyans alias), founding, notability", "source_supported": true},
+      {"text": "Dalton Gang: specialty, downfall, aftermath", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Dalton Gang", "verdict": "correct"}
+    }
+  }
+}

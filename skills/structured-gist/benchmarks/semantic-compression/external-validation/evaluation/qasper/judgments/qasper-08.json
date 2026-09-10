@@ -1,0 +1,66 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "tuned model preferred most often for coherence/readability (human evaluation)", "source_supported": true},
+      {"text": "prior domain transfer work stayed news-to-news only", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The skim gives no information specifically about H4 (template model vs. word replacement) or about 'realism.' It only states generally that 'tuning and synthesis both help; combining them helps most' in Results, which is too indirect to answer this specific question.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "H4: the template synthesis model beats simple word replacement"},
+      "f2": {"status": "retained", "evidence": "v. H4 support - the template synthesis model beats the WordNet baseline in training (rows 7–8, 19–20, except Stat2016) and in tuning (rows 10–11, 22–23) across all courses"},
+      "f3": {"status": "retained", "evidence": "baseline synthetic data isn't always helpful, but template-model synthetic data helps both training and tuning"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "v. H4 support - the template synthesis model beats the WordNet baseline in training ... and in tuning ... across all courses"}
+    },
+    "hallucinations": [
+      {"text": "the tuned model's summaries were preferred most often: 49% (CS) and 41% (Stat2015)", "source_supported": true},
+      {"text": "BIBREF1 found domain-transfer training outperformed out-of-domain-only training but could not beat in-domain-only training", "source_supported": true},
+      {"text": "templates clustered into 8 clusters", "source_supported": true},
+      {"text": "scoring LM is a single-layer LSTM trained on 36K Wikipedia sentences", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The rendering never uses the word 'realistic,' but it does report that H4 (the template model outperforms simple word replacement) is supported: the template synthesis model beats the WordNet baseline in both training and tuning across nearly all courses. The closest available answer is 'Yes, the results support the template model over the simpler baseline.'",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "H4: the proposed template-based synthesis model outperforms a simple word replacement model"},
+      "f2": {"status": "retained", "evidence": "v. H4 support - the template synthesis model beats the WordNet baseline in training (rows 7–8, 19–20, except Stat2016) and in tuning (rows 10–11, 22–23) across all courses"},
+      "f3": {"status": "retained", "evidence": "baseline synthetic data isn't always helpful, but template-model synthetic data helps both training and tuning"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "v. H4 support ... the template synthesis model beats the WordNet baseline in training and tuning across all courses"}
+    },
+    "hallucinations": [
+      {"text": "the tuned model's summaries were preferred most often: 49% (CS) and 41% (Stat2015), versus 31%/30.9% for CNN/DM-only and 19.7%/28.5% for reflections-only", "source_supported": true},
+      {"text": "top 3 scored candidates are kept per human summary, effectively tripling the size of the original reflection training data", "source_supported": true},
+      {"text": "the research was supported by Grant R305A180477 to the University of Pittsburgh", "source_supported": true},
+      {"text": "H6 template-based summarization is never the best result but comes close to the best tuning-based results", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The rendering doesn't address 'realistic' directly, but it explicitly labels the ROUGE results as 'H4 support': the template synthesis model beats the WordNet word-replacement baseline in training and tuning across nearly all courses. The closest available answer is 'Yes, the template model is supported over the simpler baseline.'",
+        "verdict": "partial"
+      }
+    }
+  }
+}

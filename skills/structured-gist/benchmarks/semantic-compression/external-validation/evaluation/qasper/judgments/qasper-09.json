@@ -1,0 +1,64 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "a. three datasets: CSAT, 20 newsgroups, Fisher"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "SOTA on Fisher topic classification", "source_supported": true},
+      {"text": "significant gain on CSAT over CNN baseline", "source_supported": true},
+      {"text": "position embeddings help only CSAT", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "CSAT, 20 newsgroups, Fisher.",
+        "verdict": "correct"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "a. three datasets - CSAT (spoken transcripts, ASR-generated) for satisfaction prediction; 20 newsgroups (written text) for topic identification; Fisher Phase 1 (spoken transcripts, manual) for topic identification"},
+      "f2": {"status": "retained", "evidence": "CSAT (spoken transcripts, ASR-generated) for satisfaction prediction"},
+      "f3": {"status": "retained", "evidence": "20 newsgroups (written text) for topic identification"},
+      "f4": {"status": "retained", "evidence": "Fisher Phase 1 (spoken transcripts, manual) for topic identification"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "4331 calls split into 2866 train / 362 validation / 1103 test", "source_supported": true},
+      {"text": "word error rates of 9.2% (Switchboard) and 17.3% (CallHome) on Eval2000", "source_supported": true},
+      {"text": "ToBERT outperforms RoBERT by 13.63% on Fisher and 0.81% on 20newsgroups", "source_supported": true},
+      {"text": "the 20 newsgroups result is 0.6% below the prior state of the art", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "CSAT (spoken transcripts, ASR-generated) for satisfaction prediction; 20 newsgroups (written text) for topic identification; Fisher Phase 1 (manually transcribed spoken conversations) for topic identification.",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "a. three datasets evaluated - i. CSAT ii. 20 newsgroups iii. Fisher"},
+      "f2": {"status": "retained", "evidence": "CSAT dataset for CSAT prediction, consisting of spoken transcripts obtained via ASR"},
+      "f3": {"status": "retained", "evidence": "used for a topic identification task, consisting of written text (20 newsgroups)"},
+      "f4": {"status": "retained", "evidence": "Fisher Phase 1 corpus, used for a topic identification task, consisting of manually transcribed spoken conversations"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "4331 calls split into 2866 train / 362 validation / 1103 test", "source_supported": true},
+      {"text": "BERT-Base has 110M parameters and BERT-Large has 340M", "source_supported": true},
+      {"text": "ToBERT outperforms RoBERT on Fisher (by 13.63%) and 20newsgroups (by 0.81%)", "source_supported": true},
+      {"text": "position embeddings help slightly for CSAT (an absolute 0.64% F1-score improvement)", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "CSAT dataset (ASR spoken transcripts, satisfaction prediction), 20 newsgroups (written text, topic identification), and Fisher Phase 1 corpus (manually transcribed spoken conversations, topic identification).",
+        "verdict": "correct"
+      }
+    }
+  }
+}
