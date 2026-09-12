@@ -1,0 +1,89 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {
+        "status": "partial",
+        "evidence": "\"ASIS International's monthly magazine\" — captures the core claim but drops the \"(formerly the American Society for Industrial Security)\" detail entirely."
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "\"Aka cyber/IT security\" / \"Protects against theft, damage\" / \"Protects against service disruption\" — terse but faithfully preserves the definition's meaning."
+      }
+    },
+    "hallucinations": [
+      {"text": "Lawrence A. Gordon is an EY Professor at the University of Maryland who co-created the Gordon-Loeb Model, cited 6,400+ times on Google Scholar.", "source_supported": true},
+      {"text": "Security Management covers terrorism and corporate espionage and is based in Alexandria, VA.", "source_supported": true},
+      {"text": "Dancing pigs is a term for security apathy where users ignore warnings, used by tech experts.", "source_supported": true},
+      {"text": "International Computer Security Association was formerly NCSA, with a mission of security awareness and education.", "source_supported": true},
+      {"text": "Ryan Lackey co-founded HavenCo (the first data haven), speaks at DEF CON/RSA, and ran BlueIraq in Iraq/Afghanistan.", "source_supported": true},
+      {"text": "Proceedings is the US Naval Institute's magazine, launched in 1874, the oldest US magazine, with active/retired/civilian authors.", "source_supported": true},
+      {"text": "IX (magazine) is a German IT magazine published since 1988 by Heise Verlag, covering programming through security.", "source_supported": true},
+      {"text": "Physical Security Professional is an ASIS board certification lasting three years, requiring 60 CPE credits.", "source_supported": true},
+      {"text": "Rainbow Series is a set of US government security standards published in the 1980s–1990s, also known as the Rainbow Books.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Security Management",
+        "verdict": "correct"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "\"Publisher: Monthly magazine of ASIS International, formerly the American Society for Industrial Security.\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "\"Definition: Also known as cyber security or IT security.\" + \"Scope: Protects computer systems from theft or damage to hardware, software, or information, and from disruption or misdirection of the services they provide.\""
+      }
+    },
+    "hallucinations": [
+      {"text": "Lawrence A. Gordon's full profile: position, education, research focus, publications, Gordon-Loeb Model, books, editorial roles, and citation count.", "source_supported": true},
+      {"text": "Security Management's content covers terrorism and corporate espionage plus staff-written departments on news, homeland security, IT security, and legal developments; based in Alexandria, Virginia.", "source_supported": true},
+      {"text": "Dancing pigs: a computer-security term describing users prioritizing desired features over security warnings, used by tech experts.", "source_supported": true},
+      {"text": "International Computer Security Association: ICSA Labs began as NCSA, with a mission to raise security awareness and educate on products/technologies.", "source_supported": true},
+      {"text": "Ryan Lackey's full profile: identity, HavenCo co-founding, conference/media presence, and BlueIraq operations in Iraq/Afghanistan.", "source_supported": true},
+      {"text": "Proceedings (magazine)'s full profile: 96-page US Naval Institute monthly, launched 1874, content mix, authorship split, notable contributors.", "source_supported": true},
+      {"text": "IX (magazine)'s full profile: German monthly since 1988 by Heise Verlag, professional-IT focus, coverage areas.", "source_supported": true},
+      {"text": "Physical Security Professional's full profile: ASIS board certification, three-year term, 60 CPE recertification credits.", "source_supported": true},
+      {"text": "Rainbow Series's full profile: 1980s–1990s US government computer security standards, originally DoD Computer Security Center then National Computer Security Center.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Security Management",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "\"Publisher: Monthly magazine of ASIS International, formerly the American Society for Industrial Security.\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "\"Definition: Also known as cyber security or IT security.\" + \"Scope: protection of computer systems from theft or damage to their hardware, software, or information; protection from disruption or misdirection of the services they provide.\""
+      }
+    },
+    "hallucinations": [
+      {"text": "Lawrence A. Gordon's full profile, including current-research emphasis and Gordon-Loeb Model explainer video link, beyond the standard-level detail.", "source_supported": true},
+      {"text": "Security Management's content covers terrorism and corporate espionage combined with staff-written departments on news, homeland security, IT security, and legal developments; based in Alexandria, Virginia.", "source_supported": true},
+      {"text": "Dancing pigs: a computer-security term describing users prioritizing desired features over security warnings, used by tech experts.", "source_supported": true},
+      {"text": "International Computer Security Association: ICSA Labs began as NCSA, with a mission to raise security awareness and educate on products/technologies.", "source_supported": true},
+      {"text": "Ryan Lackey's full profile: identity, HavenCo co-founding, conference/media presence, and BlueIraq operations in Iraq/Afghanistan.", "source_supported": true},
+      {"text": "Proceedings (magazine)'s full profile: 96-page US Naval Institute monthly, launched 1874, content mix, authorship split, notable contributors.", "source_supported": true},
+      {"text": "IX (magazine)'s full profile: German monthly since 1988 by Heise Verlag, professional-IT focus, coverage areas.", "source_supported": true},
+      {"text": "Physical Security Professional's full profile: ASIS board certification, three-year term, 60 CPE recertification credits.", "source_supported": true},
+      {"text": "Rainbow Series's full profile: 1980s–1990s US government computer security standards, originally DoD Computer Security Center then National Computer Security Center.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Security Management",
+        "verdict": "correct"
+      }
+    }
+  }
+}

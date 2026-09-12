@@ -1,0 +1,103 @@
+- **Minutes recap**
+  - **Requirements**
+    - a. nice look
+    - b. strong usability
+      - People don't want to spend money on something similar to cheaper alternatives.
+    - c. basic, not too many buttons
+    - d. lights up when a button is used
+    - e. text TV still supported
+    - f. easy to learn
+  - **Functions**
+    - a. volume
+    - b. channel selection
+    - c. on-off
+    - d. mute
+    - e. text TV
+- **Marketing trends**
+  - **Priority order**
+    - i. fancy look-and-feel
+      - Twice as important as the next factor, per market research done in Italy and another European country; stands for an original case and interface, not the current functional look.
+    - ii. technological innovation
+      - New technical features not found on current remote controls; flagged as a point of discussion since the team had already ruled out LCD and speech recognition earlier.
+    - iii. ease of use
+      - Already covered as an overall requirement in the earlier minutes.
+  - **Target audience**
+    - Young and trendy, per fashion-watcher research out of Paris and Italy; Marketing notes some of the clothing/shoe trend data may not be directly relevant.
+  - **Spongy material trend**
+    - a. definition clarified
+      - The team works out "spongy" means soft, rubber-like, stress-ball material, in contrast to last year's trend.
+    - b. practical upside
+      - Also flagged as useful since remotes get dropped often and would benefit from being flexible.
+  - **Changeable fronts idea**
+    - Interchangeable front covers proposed: a see-through fruit-themed option (since fruit motifs are "hot"), plus basic solid colours, with roughly five fronts to start and possibly an unconventional (e.g. rounded/sponge-like) overall shape.
+  - **Budget constraint**
+    - Only about €12.50 can be spent per remote control, which the Project Manager flags as a hard limit on how much "innovative" technology (e.g. speech) is realistic to include.
+- **UI design concept**
+  - **Modern iPod-style look**
+    - Move away from the old two-handed, wide box shape (reach-both-sides remotes) toward a smaller, single-hand iPod/MP3-player/mobile-phone-inspired form, based on internet research into old and current remote designs.
+  - **Changeable fronts**
+    - Endorsed again by User Interface as the single most important design element.
+  - **Button layout debate**
+    - a. focus areas lit up
+      - Light up the number-pad and scroll/wheel areas more than the rest, so visual focus lands on the two most-used parts rather than every button.
+    - b. frequent buttons on top
+      - After going back and forth, the team agrees volume and channel-switching ("zapping") buttons belong where the thumb naturally reaches, on top; less-used buttons like text TV move to the bottom, since you can't easily hold the remote and reach top buttons with the same hand otherwise.
+    - c. colour buttons dropped
+      - Neither User Interface nor Marketing find coloured function buttons usable or a fit with the modern theme, so they're cut.
+    - d. numbers-vs-switch-channel placement
+      - Debated whether number buttons or the channel up/down switch sit in the middle versus the bottom; settled on numbers at the bottom and channel-switch in the middle, with a side discussion on whether up/down should stack vertically (Industrial Designer's preference, on the logic that top-down usually maps to channel changing) or sit side by side (Project Manager's view, since it already differs from remote to remote and shouldn't cause errors either way).
+  - **Volume/channel scroll idea**
+    - A side scroll wheel works for volume, but User Interface argues it's not handy for channel selection because it's too easy to scroll past the target too fast; direct zapping buttons are judged the highest priority to place well since zapping (single-channel stepping) is used more often than jumping to specific numbers.
+  - **Speech recognition raised**
+    - User Interface reports the technology department's own research recommends speech recognition and claims more possibilities now exist for it; both a display and speech recognition are flagged as likely needing the pricier "advanced" chip, with User Interface noting that if speech is added, it would make sense to also add a display, given the extra configuration speech needs.
+- **Components design**
+  - **Materials & shape guidance**
+    - a. soft materials, primary flashy colours
+      - Based on web research and general knowledge: green, blue, red — "flashy" colours aimed at a young audience.
+    - b. curved, rounded shapes, no square corners
+      - Modelled loosely on the iPod's rounded-corner look rather than the old boxy remote shape.
+    - c. sports/gaming-device styling
+      - Industrial Designer isn't fully sure what this implies technically but reads it as aiming for a popular, youth-oriented look.
+  - **Case options**
+    - a. transparent case
+      - Already informally agreed; needed so the backlight LEDs are visible.
+    - b. interchangeable coloured fronts
+      - Could be blue-and-transparent or similar, letting the case still be seen through while varying in colour, akin to swappable mobile-phone covers.
+    - c. hard plastic buttons on one flush level
+      - Modelled on the iPod/mobile-phone style where buttons sit flush rather than protruding; Marketing specifically flags that modern remotes treat the buttons as part of a single continuous surface rather than raised separate pieces, and the team agrees to keep everything on one level.
+  - **LED & lighting**
+    - Standard infrared LED plus multi-colour backlight LEDs (blue, red, green, etc., possibly user-changeable like on some mobile phones); the case needs to be transparent, or at least partly, for the backlight to show through around the buttons; cost of multi-colour LEDs is uncertain but assumed manageable.
+  - **Circuit board & battery**
+    - a. circuit board
+      - Standard chip-board components (transistors, resonators, etc.) described as nearly identical across most remote controls, so the team doesn't dwell on the specifics.
+    - b. battery
+      - Rechargeable batteries chosen over a separate detachable accumulator unit, paired with a home docking/recharging station rather than swap-out disposables.
+  - **Case curvature constraint**
+    - Options are flat, two-D curved (front-to-back), or three-D curved (also in depth); three-D curved would force rubber buttons instead of hard plastic, so the team picks two-D curved specifically to keep the hard, flush-button look.
+  - **Scroll wheel**
+    - Used for volume only; Industrial Designer notes multiple scroll wheels are technically possible but judges one (for volume) sufficient, and User Interface confirms a wheel isn't handy for channel selection because of overscrolling; later, Industrial Designer suggests a stiffer plastic action so accidental drops don't shift the volume, only deliberate finger use.
+  - **Chip tier decision**
+    - a. simple / regular / advanced tiers
+      - Three chip grades exist; a display (LCD) requires the most expensive "advanced" chip.
+    - b. LCD dropped
+      - The Project Manager rules out LCD as not worth pursuing given time constraints.
+    - c. regular chip selected
+      - Because the design uses a scroll wheel (not a display), the mid-tier "regular" chip is chosen over "simple."
+- **Final decisions & branding**
+  - **Recharger/docking station**
+    - The remote slides bottom-first into a docking station with electrical contacts on both the remote and the station; shape (square packet vs. rounded) is left open, referencing an example the team had seen.
+  - **Five interchangeable fronts**
+    - Sold as a set of five (or bought separately), each carrying the "Real Reaction" logo, with room for it below the button area in the chosen layout.
+  - **Brand colours**
+    - Debate over black-and-yellow "Real Reaction" branding placement (yellow sides with a black front, or vice versa); User Interface isn't convinced the two colours work well together, but it's ultimately treated as a matter of taste to be resolved by whoever draws the prototype; the scroll wheel itself may also be coloured yellow to match the brand, though User Interface expects it to stay small so it won't protrude much.
+  - **Speech recognition reversal**
+    - Despite no clear cost data and only a vague vendor description (a small "programmable sample speaker unit" that plays a canned answer after recognising a recorded question), and despite Industrial Designer not having received any information on it directly, the Project Manager decides to include speech recognition anyway, calling it a good feature worth the unresolved advanced-chip cost.
+  - **Confirmed spec recap**
+    - a. energy
+      - Rechargeable batteries (not kinetic, not solar — both ruled out as impractical for a device usually left sitting still, indoors).
+    - b. chip
+      - Regular grade by default, bumped to advanced if speech recognition is kept in.
+    - c. case
+      - Two-D curved hard plastic, transparent or part-transparent, with interchangeable fronts, a volume scroll wheel, and backlight.
+- **Next steps**
+  - Industrial Designer and User Interface will do prototype drawing together on the smart board, treated as work for the next meeting/session, with the Project Manager confirming further specific instructions will follow.

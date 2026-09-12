@@ -1,0 +1,20 @@
+- **O-Acetylpsilocin**
+  - synthetic psychoactive drug, acetylated form of psilocin (aka 4-AcO-DMT)
+- **Baeocystin**
+  - minor psilocybin mushroom alkaloid, an analog of psilocybin
+- **Psilocybin**
+  - naturally occurring psychedelic prodrug compound, converted by the body to psilocin
+- **Psilocybe cubensis**
+  - the best-known psilocybin mushroom species, commonly called shrooms
+- **Psilocybe azurescens**
+  - among the most potent psilocybin-containing mushrooms
+- **Psilocybin mushroom**
+  - polyphyletic group of mushrooms containing psilocybin, psilocin, and baeocystin
+- **Psilocybe makarorae**
+  - psilocybin mushroom species known only from New Zealand
+- **Psilocybe**
+  - genus of gilled mushrooms best known for its psychedelic species
+- **Psilocybe medullosa**
+  - rare, widespread European psychoactive mushroom species
+- **Psilocybe meridionalis**
+  - psychedelic mushroom species known only from Jalisco, Mexico

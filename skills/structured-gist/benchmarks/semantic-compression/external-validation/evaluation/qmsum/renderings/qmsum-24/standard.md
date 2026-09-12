@@ -1,0 +1,85 @@
+- **Meeting recap**
+  - **Prior decisions**
+    - no teletext, incorporate the company image, drop voice recognition, a flip design, an unconventional shell-like shape, and a young/business target market
+  - **Open items**
+    - rechargeable batteries, a port, and a lost-remote alarm were carried over to investigate
+
+- **Market trends**
+  - **Research method**
+    - a hundred-subject study, plus fashion consultants in Paris and Milan
+  - **Priority ranking**
+    - i. fancy look and feel
+    - ii. technologically innovative
+    - iii. easy to use
+  - **Fashion themes**
+    - fruit-and-vegetable motifs trending for clothes, shoes, and furniture; a spongy material feel also trending
+
+- **Component findings**
+  - **Standard chip**
+    - the TA1183 5 chip, already used in nearly all TV remotes
+  - **Battery options**
+    - a. standard AA/AAA
+    - b. dynamo (wind-up)
+    - c. solar
+    - d. kinetic (watch-style)
+  - **Circuit board**
+    - standard silicone PCB with rubber-button contacts, sizeable flexibly
+  - **Standby power saving**
+    - button backlighting, if used, should auto-off after five to ten seconds
+  - **Case material**
+    - a. plastic
+    - b. wood
+    - c. titanium
+    - d. rubber
+  - **Swappable rubber skin**
+    - a peel-off rubber sleeve over a plastic base gives the spongy feel and lets users cheaply change the look
+  - **Interface hardware options**
+    - a. bare PCB touch contacts
+    - b. rubber buttons
+    - c. LCD touch screen
+  - **Flip-hinge circuitry**
+    - two separate circuit boards, one per half, linked by cabling across the hinge
+
+- **Interface design findings**
+  - **Competitor review**
+    - existing remotes look visually monotonous, with inconsistent button layouts except channel and volume
+  - **Proposed layout**
+    - a graphical, icon/touch interface on the flip-top's LCD half, with dedicated rubber buttons on the other half
+  - **Ergonomic tweak**
+    - frequently used physical buttons at the bottom, near the thumb, with the LCD/GUI at the top
+  - **Usability findings**
+    - cluttered, inconsistent buttons across competitors; only channel and volume are standard enough to keep
+  - **Voice recognition update**
+    - a new company speech-recognition feature needs a cost check, for a "find my remote" response
+  - **Color inspiration**
+    - take vibrant fruit colours as inspiration, not a literal fruit or vegetable shape
+
+- **Stylus debate**
+  - **Pointer idea**
+    - a pull-out stylus, to avoid RSI from touch-screen presses
+  - **Objections**
+    - easily lost, and irritating for frequent channel-switchers
+  - **Resolution**
+    - no dedicated stylus needed — users could improvise with any pen or pencil
+
+- **Final decisions**
+  - **Power**
+    - kinetic charging with a small watch-type battery
+  - **Display**
+    - black-and-white LCD on the flip-top's upper half
+  - **Buttons**
+    - anti-RSI rubberised buttons on the lower half
+  - **Materials**
+    - a plastic case body with a swappable rubber cover
+  - **Colour direction**
+    - a fruit-and-vegetable colour palette on the rubber cover
+  - **Locator feature**
+    - a voice-recognition response, pending cost, with a whistle keychain as fallback
+  - **Branding**
+    - company logo included, backed by advertising for recognizability
+
+- **Wrap-up**
+  - **Time check**
+    - meeting wraps early, forty minutes allotted before the next session
+  - **Consensus check**
+    - the group agrees they're moving in a clear direction

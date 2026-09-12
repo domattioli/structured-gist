@@ -1,0 +1,60 @@
+- **Meeting opening**
+  - **Mic check ritual**
+    - Professor E has everyone read their assigned digits at once, since each person has a separate close-talking microphone channel — mostly to save time before the actual recording begins.
+  - **Recording reminder**
+    - Grad D jokingly reminds the group that they are already being recorded, right after Grad F calls the prior meeting "frustrating."
+- **Thesis proposal review**
+  - **Core claim**
+    - construal is proposed as a probabilistic relational model that uses ontology, situation, user, and discourse knowledge together to instantiate classes and infer what a tourism-domain utterance is actually construing.
+  - **Draft status**
+    - a. group has not yet read the current draft closely
+    - b. Grad D read about half, missing the newest castle addition
+    - c. minor spelling errata found (Jackendorf, interesting)
+  - **Comment process**
+    - any comment on spelling, syntax, or readability should go by email and will be incorporated into revisions made on upcoming flights and trains.
+- **Feedback deadline**
+  - **Cutoff**
+    - comments are due before the 29th, since Grad C meets Wolfgang Wahlster that day to pitch the proposal.
+  - **Delivery mode**
+    - Professor E asks the group to send comments electronically rather than in person, since Grad C will be traveling.
+- **EML talk plan**
+  - I. tourist-scenario motivator
+    - opens with an everyday example (the Cave Forty-Five discotheque, or the Bavaria case) showing that a "where" question can mean location or instructions depending on context.
+  - II. SmartKom progress recap
+    - a. tablet parser and generation (done)
+    - b. speech synthesis (in progress, by Fey)
+  - III. data and rephrasing problem
+    - presents preliminary data and the rephrasing problem, noting that human-computer telephone prosody mirrors but differs from human-human telephone conversation.
+  - IV. NTL big picture
+    - sketches the embodied/simulation approach to language understanding, borrows an X-schema slide from a colleague, and opens with mirror-neuron work in monkeys as a prelude.
+  - V. constructions and Bayes-net
+    - covers the construction mechanism, then closes with the Bayes-net work.
+  - VI. optional FMRI aside
+    - Professor E suggests folding in the new FMRI/mirror-neuron follow-up work as a brief "future activities" mention, timed to when mirror neurons come up in the talk.
+- **Construal punch line**
+  - **Claim**
+    - the constructions Nancy, Keith, and colleagues are building are general but cover only base, literal cases; a construal mechanism is needed to extend them to metaphorical and metonymic uses.
+  - **Orthogonality prediction**
+    - done right, a newly introduced base construction should automatically interact with every existing metaphor and metonymy, and vice versa — a significant advance over any existing system if it holds.
+  - **Worked example**
+    - "walked into the cafe" construes the cafe as a container when followed by "ordered a drink," or as an obstacle when followed by "broke his nose," with the construction-construal interaction (the "double arrow") resolving which reading applies.
+  - **Draft gap**
+    - Professor E notes the current proposal text references construal but never states this orthogonality punch line clearly, weakening the pitch to Wahlster.
+- **Domain example search**
+  - A. "in/on the bus"
+    - a transportation-schema metaphor, rejected as not something a tourist would plausibly say.
+  - B. "out of film"
+    - the resource-depletion sense of "out of," judged too complicated to formalize cleanly with no clean prior analysis to build on.
+  - C. castle admission-fee case
+    - "Where is the castle, how old is it, how much does it cost?" — a metonymy/ellipsis case parallel to "Plato's on the top shelf," favored as the strongest candidate.
+  - D. metaphorical "where"
+    - locational "where" reused for temporal reference, e.g. "where was Heidelberg in the Thirty Years' War" — plausible but rarer in the data.
+  - E. fixed expressions
+    - idioms like "I'm in a hurry," "in overload," "out of sorts" — set aside as idiomatic rather than genuinely construal-illustrating.
+  - F. building/museum polysemy
+    - building vs. institution vs. exhibit-holder senses — already present in Grad C's existing data.
+  - overall, Grad C argues the tourism/HCI domain favors metonymy and polysemy examples over metaphor, since users interacting with the system tend to be literal rather than lyrical.
+- **Corpus metonymy check**
+  - Grad C and a student searched the full Heidelberg database for metonymy and polysemy cases and found almost none, even in item descriptions.
+- **Meeting wrap-up**
+  - Professor E proposes the group send Grad C feedback electronically and wishes him a good trip before the Wahlster meeting.

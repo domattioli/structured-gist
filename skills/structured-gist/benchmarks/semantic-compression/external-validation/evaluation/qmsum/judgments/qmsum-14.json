@@ -1,0 +1,89 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Nothing usable — skim.md is a bare topic list (Petitions presented A-G; Ministerial Q&A: Benefit-integrity & fraud, Corporate aid conditions, Vulnerable populations, Long-term care & pharmacare, Firearms control, Indigenous relations, Sector-specific COVID relief, Border/trade/consumer costs, Governance & transparency, Vaccine & science policy) with no sentences under any heading, so nothing about the elderly, CERB gaps, homelessness, or disability support can actually be stated.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Kwan raises a single parent taxed on spousal income but CERB-ineligible. (drops 'four school-age children' and the explicit cause — lost spousal/child support due to COVID-19)"},
+      "f2": {"status": "partial", "evidence": "Trudeau acknowledges 'gaps' without a fix timeline. (reframes Trudeau's stated commitment to 'work diligently to fill those gaps' as an absence of a timeline, a different emphasis)"},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "Trudeau cites a 50%-reduction national housing strategy target. (omits the 'hundreds of millions of dollars sent to shelters' claim)"},
+      "f6": {"status": "partial", "evidence": "flags a low share of urban-indigenous housing funds for Vancouver East. (omits 'third-largest urban indigenous population' and 'overrepresented among the homeless population')"},
+      "f7": {"status": "partial", "evidence": "Kusie, Sgro, and May press on one-time $300-500 OAS/GIS payments as delayed and insufficient... (the $500 figure survives but the $300 OAS / $200 GIS breakdown and the $20 million New Horizons for Seniors program are both omitted)"},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "retained", "evidence": "Tochor asks how $2,000 was set; Qualtrough says ESDC and Finance set it jointly based on typical lost employment income."},
+      "f10": {"status": "retained", "evidence": "Hussen cites $350M in separate charity-sector funding rather than confirming a program fix."}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "f4 (Kwan's specific description of the homelessness crisis) is omitted, so no contrast between that description and Trudeau's defense is stated; only a generic 'insufficient... vs target' juxtaposition of unrelated sub-facts appears."},
+      "r2": {"status": "lost", "evidence": "No mention of 'three weeks' or the gap remaining unresolved despite time passing — only that Trudeau 'acknowledges gaps without a fix timeline,' with no stated link to Kwan's earlier point."},
+      "r3": {"status": "lost", "evidence": "f3 (the Canada child benefit increase) is entirely omitted, so no rebuttal relation to f1 can be stated."}
+    },
+    "hallucinations": [
+      {"text": "Kusie, Sgro, and May press on one-time $300-500 OAS/GIS payments as delayed and insufficient", "source_supported": true},
+      {"text": "Funding gap for not-for-profit seniors homes with rising costs but no revenue loss", "source_supported": true},
+      {"text": "Service Canada mail backlog: Bergen cites a constituent's unopened mail from March; Hussen says he's unaware of a widespread issue and offers to investigate the individual case", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The discussion covered a CERB eligibility gap for a single parent taxed on spousal income (Trudeau acknowledged 'gaps' without giving a fix timeline), federal shelter funding criticized as insufficient against a 50%-homelessness-reduction target and a low share of indigenous housing funds for Vancouver East, one-time $300-500 OAS/GIS payments for seniors called delayed/insufficient alongside an unaddressed funding gap for not-for-profit seniors homes, and separately the $2,000 CERB amount (set jointly by ESDC/Finance based on lost employment income) and $350 million in charity-sector funding.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Kwan raises a single parent of four taxed on spousal/child support income but ineligible for CERB, unaddressed three weeks after the Employment Minister said she was 'looking into it'."},
+      "f2": {"status": "partial", "evidence": "Trudeau acknowledges 'gaps' from moving quickly but gives no fix timeline. (reframes Trudeau's stated commitment to fill the gaps as an absence of a timeline)"},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "partial", "evidence": "Kwan calls federal shelter funding 'deficient'... (omits the specific description of no bathroom/hygiene access and inability to social distance, and the explicit request for matching funds for permanent housing)"},
+      "f5": {"status": "retained", "evidence": "Trudeau cites hundreds of millions already sent to shelters and defends the housing strategy as ambitious ... criticizes the 50%-chronic-homelessness-reduction target as too modest."},
+      "f6": {"status": "partial", "evidence": "flags that Vancouver East's large urban-indigenous population received under 2% of pandemic urban-indigenous housing funds. (omits 'third-largest' ranking and 'overrepresented among the homeless population')"},
+      "f7": {"status": "retained", "evidence": "Kusie...calls the one-time up-to-$500 OAS/GIS payment...an 'afterthought'... Schulte cites a $20M New Horizons for Seniors expansion for services like grocery delivery."},
+      "f8": {"status": "retained", "evidence": "Tochor asks who set the CERB at $2,000 versus lower senior ($1,200) and disability ($1,600) payments."},
+      "f9": {"status": "retained", "evidence": "Qualtrough says ESDC and Finance set it jointly based on typical lost employment income."},
+      "f10": {"status": "retained", "evidence": "Hussen cites $350M in separate charity-sector funding rather than confirming a program fix."}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Kwan calls federal shelter funding 'deficient'... Trudeau cites hundreds of millions already sent to shelters and defends the housing strategy as ambitious — an explicit contrast between Kwan's criticism and Trudeau's defense."},
+      "r2": {"status": "retained", "evidence": "unaddressed three weeks after the Employment Minister said she was 'looking into it'; Trudeau acknowledges 'gaps' from moving quickly but gives no fix timeline — captures the unresolved-despite-time-passing argument."},
+      "r3": {"status": "lost", "evidence": "f3 (the Canada child benefit increase) is entirely omitted, so no rebuttal relation to f1 can be stated."}
+    },
+    "hallucinations": [
+      {"text": "Kusie calls the one-time up-to-$500 OAS/GIS payment, announced three months into the pandemic, evidence seniors treated as an 'afterthought'; Schulte cites an earlier ~$375-500 GST top-up as already delivered support", "source_supported": true},
+      {"text": "Sgro and Blois thank Schulte for the day's announcement and press for continued advocacy", "source_supported": true},
+      {"text": "May flags well-run non-profit seniors homes with no revenue loss but rising wage and PPE costs and 'nowhere to look for help'; Hajdu points to provincial health-transfer funding rather than a dedicated program", "source_supported": true},
+      {"text": "Bergen cites a constituent whose March 12 documents, including a doctor's note, sat unopened for two months; Hussen says he is not aware of a widespread issue but offers to investigate the individual case, citing redeployed front-line phone staff and pandemic-driven office closures", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Kwan raised a single parent of four taxed on spousal/child support income but ineligible for CERB, unresolved three weeks after the Employment Minister said she was looking into it; Trudeau acknowledged gaps from moving quickly but gave no fix timeline. Kwan called federal shelter funding 'deficient' and flagged that Vancouver East's large urban-indigenous population got under 2% of pandemic indigenous housing funds; Trudeau pointed to hundreds of millions already sent to shelters and defended the 50%-homelessness-reduction housing strategy as ambitious. On seniors, Kusie called the up-to-$500 OAS/GIS payment an 'afterthought' delivered three months in; Schulte cited a $20M New Horizons for Seniors expansion for services like grocery delivery, and May flagged an unaddressed funding gap for non-profit seniors homes with rising costs. Separately, Tochor asked how CERB's $2,000 compared with seniors' $1,200 and disability's $1,600 payments; Qualtrough said ESDC/Finance set it based on typical lost employment income, and Hussen cited $350 million in charity-sector funding.",
+        "verdict": "correct"
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+- **Meeting recap**
+  - **Audience targeting**
+    - Marketing's target-audience work from last meeting was reviewed briefly at the top of the session.
+  - **iPod-style button idea**
+    - Raised last time as a design direction but left unconcluded going into this session.
+- **Components & materials**
+  - **Custom parts**
+    - a. case
+      - Hard plastic or similar, custom-designed to protect the remote and the locator function.
+    - b. circuit board
+      - Custom-designed each time to route button input to output; once finalized, the design is sent to the circuit supplier to print.
+  - **Standard parts**
+    - a. buttons and iPod-style scroll wheel
+    - b. infrared LED
+      - Comes bundled with the circuit board rather than sourced separately.
+    - c. radio sender and receiver
+    - d. locator beeper/buzzer
+      - For finding a misplaced remote.
+  - **Material options**
+    - a. rubber
+      - Requires rubber buttons, so it's incompatible with a plastic-button design.
+    - b. plastic
+    - c. wood
+      - Available but nobody has a strong reason to want it.
+    - d. titanium
+      - Ruled out by the Industrial Designer: usable only in flat cases and too heavy for a handheld remote.
+  - **Chip cost tradeoff**
+    - The iPod-style scroll wheel needs the next-tier "regular" grade chip instead of the cheapest "minimal" option; the Industrial Designer notes the cost difference isn't large.
+- **Market trends**
+  - **Priority order**
+    - i. fashion and fancy look and feel
+      - Goes beyond pure functionality, per Marketing's web and fashion-watcher research.
+    - ii. technological innovation
+    - iii. ease of use
+      - Marketing frames this as partly folded into the "look and feel" factor.
+  - **Fruit & vegetable theme**
+    - a. sourced from fashion-watchers
+      - Milan and Paris fashion-watchers identify fruit-and-vegetable as the current trend feeding into electronics design.
+    - b. open design question
+      - Whether the motif should be printed onto the remote or the remote itself shaped like produce; Marketing personally prefers fruit over vegetables.
+  - **Spongy feel**
+    - Trend calls for a spongy texture; Marketing defers the technical "how spongy" question to the Industrial Designer, who later confirms a stress-ball-type rubber material fits.
+- **Screen debate**
+  - **Screen argument**
+    - Scrolling a wheel through up to roughly 200 satellite channels, or searching for a specific song, seemed to need some visual feedback to know where you are; a colleague's own wheel-based remote showed this feedback on the TV, not the remote itself.
+  - **No-remote-screen resolution**
+    - The group settles on surfacing the interface (current channel number, settings menu) on the TV screen itself rather than adding a screen to the remote, since a remote-mounted screen would require the pricier advanced chip (one tier above "regular").
+  - **Resulting form factor**
+    - a. minimal buttons
+      - Just a power function (achievable via a long-press on the central button) plus the central wheel/button; no extra buttons needed if the TV screen carries the menu.
+    - b. small, circular, handheld
+      - Smaller than typical remote controls shown earlier, closer to a small circular handheld object.
+    - c. thumb or index-finger control
+      - Modeled on how people naturally operate an iPod's click wheel.
+    - d. rejected slide-cover idea
+      - A Project Manager suggestion to hide rarely-used buttons under a sliding panel is dropped once the TV-menu approach removes the need for extra physical buttons.
+  - **DVD scope correction**
+    - The Project Manager clarifies the product won't support DVD, which the User Interface designer had been assuming, simplifying the interface's mode-switching needs.
+- **Shape & branding synthesis**
+  - **Two-material concept**
+    - A soft, stress-ball-like squishy grip section paired with a harder plastic face/frame, matching the "spongy" trend on the part you hold while keeping a durable outer shell around the electronics.
+  - **Swappable fruit/veg face**
+    - a. cover-swap idea
+      - The hard plastic face, or potentially the squishy grip itself, could be swapped for different fruit/vegetable colours or shapes, similar to interchangeable mobile-phone covers, echoing how some computers name colour options after fruit.
+    - b. room-matching pitch
+      - Marketing frames this as letting the remote's colour match a room's decor (e.g. strawberry-red for a red sitting room).
+  - **Prototype-and-test plan**
+    - Team proposes building two prototypes reflecting different swap approaches (changeable hard face vs. changeable squishy cover), checking swap cost with the relevant department, and user-testing both to see which people prefer.
+  - **Open questions**
+    - a. branding placement
+      - How the company's silver/yellow colour scheme and logo sit against a fruit-themed cover, since "they don't have silver fruits and vegetables."
+    - b. battery/assembly placement
+      - Batteries are expected to sit right under the plastic case; if the squishy part is swappable, the rest of the unit needs to be a single piece that snaps off cleanly.
+- **Energy source**
+  - **Options considered**
+    - a. batteries
+    - b. solar power
+      - Noted as incompatible with a rubber case option.
+    - c. dynamo
+      - Explained by Marketing as a bicycle-style mechanism that stores energy from movement.
+    - d. wind-up/kinetic winding
+      - Requires the user to manually wind the device.
+  - **Decision**
+    - The Industrial Designer picks batteries as the practical default; solar is ruled out for a rubber case, and no cost data exists yet to properly evaluate the dynamo/kinetic options, though they're noted as an interesting future possibility.
+- **Chip-on-print & case notes**
+  - "Chip on print" means the control chip is mass-stamped rather than reprogrammable, similar to calculators, keeping per-unit costs low when produced in bulk; the case design is treated as the same "casing" discussion already covered under components.
+- **Next steps**
+  - a. Industrial Designer and User Interface move to prototyping with play-dough, focused on look-and-feel and user-interface design.
+  - b. Marketing moves to product evaluation.
+  - c. Further task instructions will come from each member's personal coach.

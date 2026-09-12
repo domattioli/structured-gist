@@ -1,0 +1,36 @@
+- **Motivation**
+  - **Task**
+    - stance detection classifies a text-target pair as Favor/Against/Neither, distinct from sentiment analysis, which scores only the author's general sentiment (Positive/Negative/Neutral) rather than their stance toward a specific, possibly implicit, target
+  - **Gap**
+    - to the authors' knowledge, no stance detection data set previously existed for Turkish, despite stance detection's value for information retrieval and broader social media analysis
+- **Related work**
+  - **Prior approaches**
+    - a. a stance classifier built on sentiment and arguing features plus an automatically compiled arguing lexicon, beating distribution- and unigram-based baselines
+    - b. dialogue structure shown to improve stance detection in on-line debates
+    - c. Hasan and Ng's experiments across learning algorithms, training sets, features, and inter-post constraints, finding sequence models (HMMs) outperform non-sequence models (Naive Bayes) for stance detection
+    - d. topic-independent features (agreement, cue words, denial, hedges, duration, polarity, punctuation) shown useful for disagreement detection in on-line dialogues
+    - e. linguistically-motivated features with multivalued Naive Bayes and SVM outperforming two baselines on stance detection in student essays
+    - f. Wikipedia used to determine stances on controversial topics, building on prior work on controversy extraction from the Web
+    - g. bidirectional conditional encoding achieving state-of-the-art performance on stance detection for unseen targets; SCIFNET automatically building stance-coherent networks of people from document collections
+  - **SemEval 2016**
+    - the shared task that established the standard Favor/Against/Neither Twitter stance detection benchmark across two subtasks (with and without training data), evaluating 19 participating systems and providing the baselines this paper's results are later compared against; a separate crowdsourced tweet data set annotated with both stance and sentiment (for six predefined targets) also exists, aimed at revealing associations between the two
+- **Data set**
+  - **Targets**
+    - two of the most popular football clubs in Turkey, Galatasaray (Target-1) and Fenerbahçe (Target-2), chosen because considerable tweet volume already exists for sports-related events, and stance-system output on such a stream could be useful to the clubs themselves
+  - **Construction**
+    - filtered by club name from one of two existing 1-million-tweet Turkish corpora (the August 18–September 6, 2015 period) originally compiled for public-health tweet identification; tweets not explicitly mentioning the target club were excluded during filtering; only Favor/Against labels were annotated (no Neither class, left to future finer-grained annotation); in a few tweets the actual target was a club's management or an individual footballer, but the club itself was still treated as the stance target throughout
+  - **Composition**
+    - 700 tweets total, perfectly balanced: 175 Favor and 175 Against for each of the two targets
+  - **Release**
+    - published publicly as a three-column CSV (tweet id, target name, Favor/Against label) — to the authors' knowledge the first publicly available Turkish stance-annotated data set, and also the first stance-annotated data set on a sports-related (rather than political/ethical) domain
+- **Experiments**
+  - **Classifiers**
+    - one SVM per target (SMO algorithm, linear kernel, via Weka), 10-fold cross-validated on the full 700-tweet data set, after automated stopword removal (using an extended version of an existing Turkish stopword list) prior to unigram extraction
+  - **Feature comparison**
+    - a. unigrams alone — favorable results for both targets, notably higher for Target-1, taken as a reference baseline given unigram-based methods' established reliability for stance detection
+    - b. bigrams alone — markedly poorer results, plausibly because of the data set's relatively limited size, despite ngram-based classifiers generally being reported to perform well for stance detection
+    - c. unigrams plus hashtag existence — a slight F-Measure decrease (0.5%) for Target-1 but a 1.8% F-Measure increase for Target-2, encouraging evidence for hashtags' utility though not a fully conclusive result given the data set size
+  - **Observed pattern**
+    - for both targets, the Favor class is classified more accurately than Against, plausibly due to common terms used when expressing positive stance toward sports clubs in Turkish tweets; this is the opposite pattern from the SemEval 2016 baseline systems (which favored Against), but matches the pattern typically seen in SVM-based sentiment analysis systems, which tend to favor the Positive class
+- **Conclusion**
+  - this study presents the first Turkish and first sports-domain stance-annotated tweet data set, publicly released with SVM baseline results (unigram, bigram, and hashtag-existence features, 10-fold cross-validated) intended to serve as reference points for future stance detection research on Turkish social media text

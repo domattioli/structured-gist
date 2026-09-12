@@ -1,0 +1,75 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Nothing usable — skim.md's 'Marketing trends' entry lists only bare sub-headers ('Priority order', 'Target audience', 'Spongy material trend', 'Changeable fronts idea', 'Budget constraint') with no sentences under any of them, so nothing about Marketing's spongy-remote thinking can be stated.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "'Changeable fronts idea' is presented as a bullet following the 'Priority order' bullet establishing fancy look-and-feel as top priority, but no sentence explicitly states Marketing's own causal reasoning ('because a fancy look is most important, I think about changeable fronts')."},
+      "f2": {"status": "partial", "evidence": "Changeable fronts idea: 'including a see-through fruit-themed option' — the see-through/fruit content is present but the explicit 'because it's hot' trendiness rationale is not restated in this bullet."},
+      "f3": {"status": "retained", "evidence": "Changeable fronts idea: '...and basic colours, roughly five to start.'"},
+      "f4": {"status": "omitted", "evidence": "No mention of an extraordinary/sponge-like shape or a shape different from a normal remote control; the separate 'Spongy material trend' bullet is about texture/material, not Marketing's shape proposal."},
+      "f5": {"status": "omitted", "evidence": "No mention of a tentative round-shape suggestion or that it needed further group discussion."},
+      "f6": {"status": "omitted", "evidence": "The 'Speech recognition raised' bullet attributes speech recognition to the technology department's recommendation and User Interface's chip-tier note — a different, later exchange — not Marketing's tentative wondering about technological innovation ('how do we do that? Maybe speech? must have some kind of gadget')."}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "Priority order: fancy look-and-feel is twice as important as the next factor, per market research from Italy and another European country", "source_supported": true},
+      {"text": "Target audience: young and trendy, per fashion-watcher research from Paris and Italy", "source_supported": true},
+      {"text": "Budget constraint: only about €12.50 can be spent per remote, limiting how much 'innovative' technology is realistic", "source_supported": true},
+      {"text": "Modern iPod-style look: move away from the old two-handed box shape toward a smaller, single-hand iPod/MP3-player/mobile-phone-inspired form", "source_supported": true},
+      {"text": "Case curvature constraint: two-D curved keeps hard plastic buttons; three-D curved would force rubber buttons instead, so 2D curved is chosen", "source_supported": true},
+      {"text": "Chip tier decision: an LCD display needs the priciest 'advanced' chip and is dropped for time; the scroll wheel needs the 'regular' mid-tier chip instead of 'simple'", "source_supported": true},
+      {"text": "Speech recognition reversal: despite unclear cost and only a vague description, the team ultimately decides to include it as a good feature", "source_supported": true},
+      {"text": "Confirmed spec recap: rechargeable batteries; regular-grade chip (advanced if speech recognition stays in); 2D-curved hard plastic case with scroll wheel and backlight", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The rendering shows Marketing proposed a 'changeable fronts idea': a see-through fruit-themed option plus basic colours, roughly five to start. It does not explicitly connect this to a 'fancy look is most important' rationale in the same bullet, and it does not mention Marketing's suggestion of an extraordinary or round shape different from a normal remote control.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "'Changeable fronts idea' is presented right after the 'Priority order' bullet establishing fancy look-and-feel as the top priority, but no sentence explicitly states Marketing's own causal reasoning linking the two."},
+      "f2": {"status": "retained", "evidence": "Changeable fronts idea: 'a see-through fruit-themed option (since fruit motifs are \"hot\")'."},
+      "f3": {"status": "retained", "evidence": "Changeable fronts idea: '...plus basic solid colours, with roughly five fronts to start...'."},
+      "f4": {"status": "retained", "evidence": "Changeable fronts idea: '...and possibly an unconventional (e.g. rounded/sponge-like) overall shape.'"},
+      "f5": {"status": "partial", "evidence": "'possibly an unconventional (e.g. rounded/sponge-like) overall shape' conveys tentativeness via 'possibly' and mentions 'rounded,' but does not state that Marketing was unsure and said it needed further group discussion."},
+      "f6": {"status": "omitted", "evidence": "'Speech recognition raised' attributes it to User Interface reporting the technology department's own research — a different, later exchange — not Marketing's tentative wondering about technological innovation and whether speech or a gadget could achieve it."}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "Requirements: strong usability — people don't want to spend money on something similar to cheaper alternatives", "source_supported": true},
+      {"text": "Priority order: technological innovation is flagged as a point of discussion since the team had already ruled out LCD and speech recognition earlier", "source_supported": true},
+      {"text": "Target audience: Marketing notes some of the clothing/shoe trend data may not be directly relevant", "source_supported": true},
+      {"text": "Spongy material trend: the team works out 'spongy' means soft, rubber-like, stress-ball material, in contrast to last year's trend", "source_supported": true},
+      {"text": "Case options: hard plastic buttons on one flush level — Marketing flags that modern remotes treat buttons as part of a single continuous surface, and the team agrees to keep everything on one level", "source_supported": true},
+      {"text": "Circuit board & battery: rechargeable batteries chosen over a separate detachable accumulator unit, paired with a home docking/recharging station", "source_supported": true},
+      {"text": "Scroll wheel: Industrial Designer later suggests a stiffer plastic action so accidental drops don't shift the volume, only deliberate finger use", "source_supported": true},
+      {"text": "Speech recognition reversal: vague vendor description (a small 'programmable sample speaker unit' that plays a canned answer after recognising a recorded question); Industrial Designer had not received information on it directly; Project Manager decides to include it anyway", "source_supported": true},
+      {"text": "Confirmed spec recap: rechargeable batteries — not kinetic, not solar, both ruled out as impractical for a device usually left sitting still, indoors", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The rendering shows Marketing proposed a 'changeable fronts idea': a see-through fruit-themed option (since fruit motifs are 'hot'), plus basic solid colours, roughly five fronts to start, and possibly an unconventional rounded/sponge-like overall shape. This directly follows the priority-order bullet establishing fancy look-and-feel as the top market-research priority, though no single sentence explicitly states Marketing's own 'because fancy look is most important' reasoning, and the tentative, needs-more-discussion framing of the round-shape idea is not preserved.",
+        "verdict": "correct"
+      }
+    }
+  }
+}

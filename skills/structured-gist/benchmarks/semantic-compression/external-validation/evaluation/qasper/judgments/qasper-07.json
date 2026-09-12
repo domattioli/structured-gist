@@ -1,0 +1,58 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "b. RWTH manual alignments as gold standard"},
+      "f2": {"status": "retained", "evidence": "a. WMT15 German-to-English data (Experimental setup)"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "input-feeding beats non-recurrent on BLEU and AER", "source_supported": true},
+      {"text": "nouns: attention closely tracks alignment; verbs: attention diverges from alignment yet translates better", "source_supported": true},
+      {"text": "less than half of attention mass lands on aligned words", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "WMT15 German-to-English data; RWTH manual alignments used as the gold standard.",
+        "verdict": "correct"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "hard manual alignments (RWTH German-English dataset) are converted to soft alignments; unaligned words are treated as aligned to all source words before conversion"},
+      "f2": {"status": "retained", "evidence": "both systems trained on WMT15 De-En; BLEU reported across multiple test sets"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "input-feeding achieves both higher BLEU and attentions closer to human alignments than non-recurrent", "source_supported": true},
+      {"text": "NOUN has the lowest attention loss; VERB's average loss is almost double NOUN's", "source_supported": true},
+      {"text": "nouns and verbs are aligned on average to 1.1 and 1.2 source words respectively", "source_supported": true},
+      {"text": "training used 1,000-dim, batch size 80, 20 epochs, 30K vocab each side, learning rate 1, max gradient norm 5, dropout 0.3", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "WMT15 German-to-English (training data for both systems); RWTH German-English dataset (source of manual/hard alignments).",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "manual (hard) alignments come from the RWTH German-English dataset; statistics are given in Table TABREF8"},
+      "f2": {"status": "retained", "evidence": "both systems trained on WMT15 German-to-English training data (statistics in Table TABREF18)"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "GIZA++ is also run (in both directions, symmetrized with the grow-diag-final-and heuristic)", "source_supported": true},
+      {"text": "nouns and verbs are aligned on average to 1.1 and 1.2 source words respectively", "source_supported": true},
+      {"text": "research funded in part by NWO under project numbers 639.022.213 and 612.001.218", "source_supported": true},
+      {"text": "NOUN attention is closest to alignments on average; the average attention loss for VERB is almost twice that of NOUN", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "WMT15 German-to-English (training data for both attention systems); RWTH German-English dataset (manual/hard word alignments).",
+        "verdict": "correct"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+- **Improving abstractive summarization on low-resource student reflections**
+  - **Problem**
+    - neural seq2seq abstractive summarization needs large training data
+    - news datasets (CNN/DM, NYT) run to hundreds of thousands of documents; student reflection datasets run to only tens or hundreds
+    - hypothesis: complex neural models trained on such small in-domain data alone will underperform
+  - **Three directions explored**
+    - a. domain transfer: pretrain on dissimilar out-of-domain (news) data, tune on small in-domain (reflection) data
+    - b. template-based synthesis: generate new synthetic training summaries
+    - c. combination of both
+  - **Headline result**
+    - tuned model outperforms models trained on reflections-only or news-only, on ROUGE and coherence
+    - synthesized data further boosts ROUGE when added to training
+    - combining domain transfer with synthesis beats either approach alone
+- **Related work**
+  - a. abstractive summarization models
+    - seq2seq + attention became dominant; pointer networks address out-of-vocabulary words; coverage mechanism addresses repetition; some use reinforcement learning end-to-end
+  - b. prior domain transfer work
+    - BIBREF4 trains on CNN/DM and evaluates on DUC without tuning; BIBREF1 transfers between CNN/DM and NYT — both prior efforts stay within the news domain
+    - this paper differs: transfers between entirely different domains (news vs. reflections, which lack global structure and contain fragments/grammatical errors), uses two-phase pretrain-then-finetune training (vs. partial retraining or no tuning), and unlike BIBREF1 (comparable-sized domains), finds tuning does beat in-domain-only training because in-domain data here is scarce
+  - c. template-based prior work
+    - BIBREF11 builds a soft-template model for retrieval, reranking, and rewriting; this paper's template model differs in both structure and purpose
+  - d. data synthesis prior work
+    - mostly explored for machine translation and text normalization, not summarization
+    - BIBREF12's WordNet/vector-similarity word replacement is used here as a synthesis baseline
+    - BIBREF14 uses back-translation and language-model word replacement; BIBREF15 is concurrent and close in spirit, but back-generating reflections from an abstractive summary is judged likely infeasible
+- **Reflection summarization dataset**
+  - a. source
+    - student comments collected after each lecture, in response to instructor prompts, across a semester
+  - b. two prompts
+    - Point of Interest (POI): most interesting content
+    - Muddiest Point (MP): most confusing content
+  - c. four course corpora
+    - ENGR (Materials Science), Stat2015, Stat2016 (Statistics for Industrial Engineers), CS (Data Structures)
+  - d. annotation
+    - at least one human (TA or domain expert) writes a reference summary per reflection document
+- **Proposed template-based synthesis model**
+  - a. motivation
+    - seq2seq synthesis tends to generate irrelevant/repeated words; templates yield more coherent, concise output and can be extracted with little or no training
+  - b. four modules
+    - i. template extraction: RAKE removes keywords from human summaries, leaving templates
+    - ii. template clustering: templates embedded via pretrained BERT (average-pooled word embeddings), then clustered with k-medoid into N clusters
+    - iii. summary rewriting: an encoder-attention-decoder with pointer network injects keywords into a template to produce candidate summaries
+    - iv. summary selection: candidates scored by a hybrid metric combining a language-model coherence score and ROUGE similarity to the human summary, with equal weighting (α=β=1); top N candidates kept
+  - c. training the rewriting/scoring modules
+    - trained on a separate dataset of text snippets: keywords extracted and removed via RAKE, then the model learns to reconstruct the original sample from the keyword-stripped template
+  - d. generation pipeline
+    - human summaries pass through template extraction, then clustering; each summary's cluster-mates plus its keywords feed the rewriting module to produce candidates; selection module picks the top N as synthetic data
+- **Experiments**
+  - a. six hypotheses
+    - H1: complex abstractive models with limited in-domain or ample out-of-domain data alone won't beat extractive baselines
+    - H2: domain transfer helps even with very dissimilar domains and very little in-domain data
+    - H3: synthetic data enrichment helps overcome in-domain scarcity
+    - H4: the template synthesis model beats simple word replacement
+    - H5: combining domain transfer with synthesis beats using either alone
+    - H6: the synthesis model can be adapted to perform summarization directly
+  - b. extractive baselines (for H1)
+    - random N=5 reflection selection (averaged over 100 runs), MEAD, a prior extractive phrase-based model, and the extractive half of Fast-RL
+  - c. domain transfer setup (for H2, H5)
+    - three PG-net variants compared: trained on CNN/DM only, trained on reflections only, and CNN/DM-pretrained then reflection-tuned
+    - leave-one-course-out training/testing; combined CNN/DM+reflection dictionary used when tuning; validation via a random 50% split to pick steps/learning rate
+    - implemented in OpenNMT; out-of-domain model trained 100k steps; tuning lowers LR from 0.15 to 0.1 for 500 more steps; in-domain-only model trained 20k steps with adagrad, LR 0.15
+  - d. synthesis baseline (for H3, H4)
+    - WordNet-based word replacement: for each word with N synonyms, generate N new summary/reflection versions
+  - e. template synthesis model application (for H4, H5)
+    - leave-one-course-out; rewriting module and scoring LM trained on the other three courses (optionally plus CNN/DM summaries); templates clustered into 8 clusters (chosen to keep POI/MP separate while allowing some within-cluster diversity)
+    - rewriting model is another PG-net with identical parameters; scoring LM is a single-layer LSTM trained on 36K Wikipedia sentences, fine-tuned on reflections
+    - top 3 scored candidates kept as synthetic data, tripling the effective training data size
+  - f. template-based summarization (for H6)
+    - adapted from the synthesis model: keyword extraction runs over the raw reflections instead of a summary; an added logistic regression classifier predicts a template cluster from the reflections; since no reference summary exists at inference, only the language-model score picks the best candidate
+- **Results**
+  - a. ROUGE evaluation
+    - supports H1: most PG-net configurations that beat all extractive baselines involve tuning and/or synthetic data
+    - supports H2: tuning improves R-1/R-2/R-L over both CNN/DM-only and reflections-only training across nearly all courses, and qualitatively yields more coherent summaries; tuned PG-net beats the best baseline for every course except one R-2 case (Stat2016)
+    - supports H4: the template synthesis model outperforms the WordNet baseline in both training and tuning settings (with one exception)
+    - supports H3: training with reflections plus synthetic data yields similar gains to tuning with synthetic data across courses (mixed per-metric effects, but net positive)
+    - supports H5: best results overall come from using synthetic data in both training and tuning
+    - supports H6: template-based summarization (without domain transfer) is surprisingly competitive, close to but never beating the best tuned results, despite the model's few trainable parameters
+  - b. human evaluation
+    - 20 evaluators, 20 annotations each, comparing CNN/DM-only, reflections-only, and tuned PG-net summaries in random order for readability/coherence, without seeing source reflections or references
+    - the tuned model was preferred most often (49% CS, 41% Stat2015) versus CNN/DM-only (31% CS, 30.9% Stat2015) and reflections-only (19.7% CS, 28.5% Stat2015)
+- **Conclusions and future work**
+
+  Domain transfer (pretrain on CNN/DM, tune on reflections) improves both ROUGE and readability; the proposed template-based synthesis model further improves ROUGE when added to training and outperforms a word-replacement synthesis baseline; combining domain transfer and synthesis gives the best results. Future work: domain adaptation, richer synthesis models, further template-based exploration, and extending to other data types like reviews and opinions.

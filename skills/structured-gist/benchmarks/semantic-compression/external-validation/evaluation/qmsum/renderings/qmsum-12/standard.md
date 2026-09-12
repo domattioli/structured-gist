@@ -1,0 +1,77 @@
+- **Session 1: local-authority panel (Davies, Williams, Hopkins)**
+  - **Drivers of rising exclusions**
+    - i. more prevalent, very challenging behaviour, often tied to ASD/additional learning needs (Swansea's ASD numbers up roughly fourfold in five-six years) that the system struggles to resource in time
+    - ii. Torfaen reports the same pattern
+  - **Reintegration strategies**
+    - i. tiered/staged behaviour-and-well-being strategies now common, with a national EOTAS network sharing practice — though implementation still lags behind the newest local authorities
+    - ii. team-around-the-family, multi-agency work (social care, health) is now "quite common practice" across most authorities
+    - iii. training on adverse childhood experiences and trauma-informed practice has changed how staff read "difficult" behaviour
+  - **Accountability measures**
+    - i. school performance pressure plays into exclusion culture; the shift to the capped-9 measure is expected to help but "there's going to be a lag" before effects show
+    - ii. messaging to schools now emphasizes learner progression over simply hitting benchmarks, and Estyn itself has shifted its framing accordingly
+  - **Funding pressures**
+    - i. the new Additional Learning Needs Act is expected to add system-wide pressure; schools already making "hard choices" under funding strain
+    - ii. WLGA (Hopkins): delegation levels to schools are already high, so that's not really the exclusion driver — the narrow key-stage-4 attainment measure and rising ALN costs (with tribunal pressure, per English precedent) are bigger factors
+    - iii. funding "follows the learner" only once a year, so mid-year moves between school and EOTAS create funding lag
+  - **Collaborative working and transitions**
+    - i. PRU sector networks nationally and regionally (EOTAS group), sharing practice via conferences and joint visits
+    - ii. Swansea: new purpose-built PRU opening January 2021; managed part-time-timetable reintegration with continued, gradually reduced support once back in school — "proven very successful," though far harder for key-stage-4 learners
+    - iii. Torfaen: similar team-around-the-family reintegration approach, considering transport and the whole family's needs
+    - iv. Oxfordshire model cited (Hopkins, later named by Davies): local authority devolved PRU funding directly to secondary schools under a partnership agreement so schools couldn't offload learners elsewhere — promising early results, long-term outcome unknown; Swansea runs something similar, devolving funds to secondary schools against a monitored action plan
+  - **Delays and commissioning**
+    - i. capacity (not enough spaces) is the main cause of EOTAS access delays; part-time timetables sometimes bridge the gap
+    - ii. managed-move programs give learners a "second chance," with a cooling-off period if it doesn't work out
+    - iii. commissioning frameworks/approved-provider status exist but must balance safeguarding rigor against discouraging providers from coming forward at all
+  - **Quality assurance and safeguarding**
+    - i. local authorities know EOTAS locations because schools must report them, and challenge advisers monitor via school visits
+    - ii. home tuition uses local-authority-employed staff, not agency staff, in both Swansea and Torfaen — but local authorities are legally "restricted" in accessing the home itself, making quality assurance of home tuition difficult without family invitation
+    - iii. Hopkins: PRUs are well-regulated/inspected/quality-assured; local-authority-commissioned home tuition should be too; third-party-commissioned provision is "more difficult" to vouch for and is a genuine concern
+    - iv. Torfaen's curriculum panel (TCP) reviews alternative-provision quality and whether it still fits changing learner needs
+  - **Capacity, staffing, ALN support**
+    - i. ALN support is harder to guarantee once learners leave the tightly regulated PRU/commissioned-tuition system
+    - ii. specialist expertise (e.g., educational psychologists dedicated to EOTAS/PRU) is scarce and slow to rebuild once staff move on or retire — "quite niche" expertise
+    - iii. newly qualified teachers currently can't work directly in EOTAS provision; panel suggests building EOTAS exposure into initial teacher training and ongoing professional development, with two-way staff exchange between schools and EOTAS settings
+  - **Mental health access**
+    - i. support varies by health board (three cover Swansea's region alone); each health board is now required to have a Designated Education Clinical Lead Officer (DECLO), seen as a positive step
+    - ii. a general shortage of CAMHS capacity is suspected to push more learners toward EOTAS, though panel has no hard evidence
+  - **Rural transport**
+    - i. Powys learners can face huge travel distances between the county's north and south PRU provision; more compact authorities like Torfaen face less of an issue
+    - ii. WLGA hasn't specifically investigated the transport question
+
+- **Session 2: Samaritans / Mind Cymru panel (Stone, Williams, Johnson)**
+  - **Drivers of rising exclusions**
+    - i. exclusion-reason data (e.g. "persistent disruptive behaviour") is reductionist — the underlying causal story doesn't reach the statistical level, despite schools keeping detailed paper trails before any exclusion
+    - ii. rising exclusions among younger children specifically is "very concerning," though evidence is largely anecdotal and not yet well explained
+    - iii. Samaritans' original report grew out of anecdotal reports of individual distress among excluded children, including primary-age children
+  - **Accountability and off-rolling**
+    - i. Estyn's pupil-registration-practices report (Oct. prior year): ~4% of pupils off-rolled between year 10 and 11; a steadier 1.5-2% off-rolled in earlier years (~500-600 children per cohort annually) — a pattern Johnson calls concerningly "normalised" and under-investigated qualitatively
+    - ii. Liz Williams: schools are measured on academic outcomes, not the "journey travelled" or effort to nurture vulnerable pupils' well-being — creating a perverse incentive to lose challenging or low-attaining pupils
+    - iii. Sarah Stone: the Welsh Government's loneliness-and-isolation strategy already commits to using accountability measures to reward inclusive schools and reduce incentives to remove pupils — a "really important commitment" still to be made real
+  - **Support for at-risk learners**
+    - i. Samaritans' report calls for a compassionate, whole-school response to distress (which may not look like obvious distress), recognizing school may be a young person's "only safe place"; cites inspiring restorative-justice approaches used in some Cardiff schools
+    - ii. Johnson: both individual-level and "macro," statutory whole-school approaches are needed, echoing the committee's prior 'Mind over matter' work, so prevention and support run through the whole school community from primary to secondary
+  - **Nine Samaritans recommendations**
+    - recognize ACEs impact; train teachers for confident, informed responses; learn from what works; listen to young people's voices; build learners' own emotional-literacy skills; make health/well-being and mental-health content statutory in the new curriculum (to avoid entrenching inequality between schools that "do it well" and those that don't)
+  - **Diagnosis vs. support funding balance**
+    - i. Liz Williams: Samaritans' round-table participants worried under-diagnosed conditions (ADD/ADHD) are common among excluded pupils, and estimated up to 50% of a classroom could have an additional learning need — but diagnosis alone is of limited value without the support/understanding to back it up
+    - ii. the real fix is a genuinely inclusive school culture for every learner, diagnosed or not
+  - **Early trauma, loneliness, and suicide risk**
+    - i. Johnson: schools' ACE-awareness work is progressing regionally but needs to connect explicitly to the incoming curriculum's health-and-well-being area, especially given ambiguous ministerial signals about "disallowing" curriculum areas per individual learner
+    - ii. Stone: loneliness/isolation strongly drives distress and suicidal ideation; Samaritans' forthcoming research on middle-aged men links early-life exclusion/isolation to elevated later-life suicide risk, alongside higher exclusion rates and suicide rates among boys generally
+    - iii. Liz Williams: the same forthcoming research shows repeated "falling through the net" in childhood as a recurring theme among these men — challenging behaviour is often "the first sign of distress," making this a preventative-agenda issue
+  - **Off-rolling and "naughty" labelling**
+    - i. Liz Williams (drawing on PRU work experience): undiagnosed communication/learning difficulties are often mislabelled as naughtiness; anxious, struggling children act out to escape the classroom, and are off-rolled rather than supported — though she also cites good practice (a PRU noticing Friday-afternoon distress tied to unsafe home weekends, and responding with compassion rather than discipline)
+    - ii. Johnson: a Mind Cymru focus-group example — a boy avoided disclosing problems to a teacher who held both pastoral and behavioural-discipline roles, fearing disbelief; formal diagnosis, per Williams, tends to open the door to more school support
+  - **Welsh-medium and data gaps**
+    - i. Estyn notes fewer off-rollings from Welsh-medium education to EOTAS, possibly reflecting local EOTAS-provision gaps or a different socio-economic profile (exclusions correlate with free-school-meal eligibility) rather than better outcomes; Welsh-medium EOTAS needs and provision remain essentially unstudied, likely handled inconsistently by local authority
+    - ii. no central data exists on how many children are home-schooled, leaving this population largely invisible and at risk
+  - **Delays entering EOTAS and post-exclusion support**
+    - i. delay before entering provision compounds pre-existing inequality/vulnerability; Stone cites a recent Public Health Wales/Swansea University child-death review of 33 youth suicides finding many victims had not been "held" in education, training, or employment; also cites rising concern (from the youth justice board and police) about county-lines exploitation of excluded young people
+    - ii. Johnson: responsibility for post-exclusion support formally sits with the local education authority, but these learners often touch multiple services, so coordination ("something like corporate parenting") is needed; funding adequacy is a live concern
+    - iii. Liz Williams: parents also carry responsibility but often lack clear information about their child's educational rights and where to seek support
+  - **Individual/home tuition concerns**
+    - Liz Williams: no direct evidence on home-schooling's well-being impact, but the total absence of central data on numbers of home-schooled children is itself concerning; home tuition may serve academic needs while leaving peer-isolation/loneliness risks unaddressed — echoing the men's-research finding that limited peer interaction in youth correlates with later-life difficulty
+  - **Closing recommendations**
+    - i. Liz Williams: embed mental-health/inclusion awareness into initial teacher training rather than treating it as supplementary, so teachers have both skills and confidence
+    - ii. Johnson: make the whole-school approach statutory so awareness and signposting become consistent school-wide, "the key to improving the well-being of our future generations"
+    - iii. Stone: recognize the link between inequality, ACEs, and the opportunity to intervene before a young person falls "out of school, and out of anything, and out of sight"

@@ -1,0 +1,91 @@
+- **Meeting setup**
+  - **Agenda**
+    - three presentations (Industrial Design, User Interface, Marketing), then new requirements, function decisions, and close
+  - **Roles**
+    - PM acts as secretary; presenters confirmed as User Interface, Industrial Designer, Marketing
+
+- **Controller concept**
+  - **Problem framing**
+    - existing remotes pack twenty-plus sophisticated functions, which makes usability hard
+  - **Google-style goal**
+    - combine sophisticated functions with an elegant, easy-to-use interface, modeled on Google's simplicity
+  - **Open challenge**
+    - merging powerful functionality with simplicity remains unsolved, acknowledged as the hard part of the job
+
+- **Standardization idea**
+  - **International pictograms**
+    - using familiar universal symbols, e.g. power or escape, could shorten the learning curve across markets
+
+- **Component design**
+  - **Signal technology**
+    - a. infrared
+      - recommended: cheaper and simpler than laser, fits the low target cost
+    - b. laser
+      - rejected as more expensive
+  - **Core components**
+    - just a light bulb and an infrared bulb inside, plus minor supporting electronics
+  - **Power connection**
+    - a. wireless
+      - Industrial Designer's preference: more practical despite battery tradeoffs
+    - b. wired
+      - cheaper, but seen as impractical and unlikely to appeal to users
+  - **Estimated cost**
+    - around eight euros for this technology
+
+- **Wireless debate**
+  - **Ownership question**
+    - PM frames wireless-versus-wired as more a User Interface/usability question than an Industrial Design one
+  - **Risk noted**
+    - PM raises the risk of losing a wireless remote as a usability downside
+
+- **Marketing research**
+  - **Study method**
+    - one hundred subjects observed using remotes in a lab, then a questionnaire
+  - **Key findings**
+    - a. 75% call remotes ugly
+    - b. 80% would pay more
+      - for a better-looking remote control
+    - c. only ~10% of buttons get used
+    - d. remotes often get lost in the room
+    - e. 35% find remotes slow to learn
+    - f. 26% report RSI-type strain
+      - repeating the same button motion causes injury for these users
+  - **Recommendations**
+    - prioritize a fancy look and fewer buttons, same functionality, to outsell competitors
+
+- **Button-reduction discussion**
+  - **Mode-switch proposal**
+    - UI proposes grouping functions into categories with a switch button, e.g. TV mode versus recorder mode, to cut button count
+  - **Fancy is subjective**
+    - colorful versus simple/uniform reads as "fancy" differently across users, complicating the design goal
+  - **Color customization cost**
+    - offering multiple color options would raise production cost against the twelve-euro target
+  - **Zapping priority**
+    - since users zap channels constantly, packing many functions onto few buttons risks slowing the most common action
+
+- **New product requirements**
+  - **Drop teletext**
+    - no longer needed now that most homes have internet
+  - **TV-only scope**
+    - the remote controls only the television, not recorder, camcorder, or garage door, to limit complexity and cost
+  - **Brand recognizability**
+    - must use the company's colour and imagery so it reads instantly as their product
+  - **Fashion positioning**
+    - reaffirms "fashion in electronics" — fancy, fashionable, powerful, easy to use, and low-cost all at once
+
+- **Colour debate**
+  - **Yellow proposal**
+    - PM proposes yellow to match the brand; Industrial Designer questions whether users actually like yellow
+  - **Compromise**
+    - doesn't need to be fully yellow, just carry a recognizable brand accent such as a yellow ribbon or logo
+
+- **Wrap-up**
+  - **Assignments**
+    - a. Industrial Designer
+      - continues component design
+    - b. User Interface Designer
+      - works on the user interface concept
+    - c. Marketing
+      - continues own subject
+  - **Logistics**
+    - lunch break, thirty minutes of individual work, then coach-sent specific instructions; presenter reminded to save files in his own folder

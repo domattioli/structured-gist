@@ -1,0 +1,30 @@
+- **Minutes recap**
+  - **Requirements**
+  - **Functions**
+- **Marketing trends**
+  - **Priority order**
+  - **Target audience**
+  - **Spongy material trend**
+  - **Changeable fronts idea**
+  - **Budget constraint**
+- **UI design concept**
+  - **Modern iPod-style look**
+  - **Changeable fronts**
+  - **Button layout debate**
+  - **Volume/channel scroll idea**
+  - **Speech recognition raised**
+- **Components design**
+  - **Materials & shape guidance**
+  - **Case options**
+  - **LED & lighting**
+  - **Circuit board & battery**
+  - **Case curvature constraint**
+  - **Scroll wheel**
+  - **Chip tier decision**
+- **Final decisions & branding**
+  - **Recharger/docking station**
+  - **Five interchangeable fronts**
+  - **Brand colours**
+  - **Speech recognition reversal**
+  - **Confirmed spec recap**
+- **Next steps**

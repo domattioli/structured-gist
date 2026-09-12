@@ -1,0 +1,51 @@
+- **Motivation**
+  - **Problem**
+    - SRL needs labeled data, which is scarce for most languages, motivating unsupervised approaches
+  - **Idea**
+    - a word-aligned parallel corpus may let a resource-poor language borrow role information from a resource-rich one
+- **Model**
+  - **Monolingual base**
+    - the Bayesian model of garg2012unsupervised, splitting each predicate's roles into ordering-governing Primary Roles and context-governed Secondary Roles
+  - **Crosslingual coupling**
+    - crosslingual latent variables (CLVs) link aligned-argument role variables across per-language copies of the monolingual model, with the CLV count per predicate-pair induced via a Chinese Restaurant Process
+  - **Approximation**
+    - true joint conditioning on CLVs breaks Dirichlet-multinomial conjugacy, so aligned roles are treated as generated twice, once monolingually and once by the CLV
+  - **Advantages over titovcrosslingual**
+    - a. scales naturally to more than two languages
+    - b. supports semi-supervised settings by clamping annotated variables
+    - c. avoids hard argument-key clustering and adds a global role-ordering probability
+- **Inference & evaluation**
+  - **Inference**
+    - collapsed Gibbs sampling draws role labels and CLVs with parameters integrated out; only the monolingual parameters are used at test time, so crosslingual information acts as a training-time regularizer
+  - **Metric**
+    - Purity, Collocation, and their harmonic mean F1 against gold roles, weighted by argument count
+  - **Baseline**
+    - assigns a role from syntactic function/dependency relation alone
+- **Data**
+  - **Corpora**
+    - a. CoNLL 2009 — ~40k EN / ~36k DE sentences
+    - b. Europarl EN-DE — ~1.5M parallel sentences
+  - **Processing**
+    - MaltParser (EN) and LTH parser (DE) parses; GIZA++ intersected alignments define aligned arguments — only 8% of EN and 17% of DE arguments end up aligned
+- **Related work**
+  - **Crosslingual latent variables**
+    - naseem2009 used superlingual latent variables for multilingual POS tagging; this paper applies the idea inside a Bayesian SRL model
+  - **Semi-supervised transfer**
+    - pado2009 used graph-based English→German role transfer; furstenau2009 used graph alignment to relate known and unknown verbs' arguments
+  - **Monolingual unsupervised SRL**
+    - swier2004 gave the first domain-general approach; garg2012unsupervised (this paper's base) and titov2012bayesian gave Bayesian models; grenager2006 needed hand-built rules to constrain its parameter space
+- **Results**
+  - **Monolingual training**
+    - significantly beats the syntactic-function baseline in both languages, and beats titovcrosslingual's reported German F1
+  - **Adding Europarl (monolingual only)**
+    - no change in English but a significant gain in German, whose small CoNLL set benefits from more data
+  - **Multilingual (adding alignments)**
+    - only small, non-significant gains over monolingual+Europarl, likely limited by how few arguments are aligned
+  - **Train/test-split setting**
+    - training on Europarl and testing on CoNLL reproduces the same small multilingual improvement
+  - **Labeled-data transfer**
+    - clamping source-language labels and propagating through alignments gives small target-language improvements
+  - **Semi-supervised comparison**
+    - manually labeling about 10% of sentences matches or beats what 1.5M unlabeled parallel sentences buy
+- **Conclusion**
+  - crosslingual latent variables give only small gains because too few arguments are aligned; small amounts of direct annotation are more cost-effective than scaling parallel data; future work targets more language pairs and better alignment models

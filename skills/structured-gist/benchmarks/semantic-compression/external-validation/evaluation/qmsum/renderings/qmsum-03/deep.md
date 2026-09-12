@@ -1,0 +1,78 @@
+- **DARPA demo status**
+  - **Timeline pressure**
+    - it's late May with the DARPA meeting in mid-July, leaving about a month, and nobody fully recalls the two planned demo pieces.
+  - **Two demo pieces**
+    - a. transcriber interface
+    - b. pre-stored question-answering mock-up
+  - **Action**
+    - Professor F asks the group to sort out who's driving the second piece since time is short.
+- **Automatic segmentation shift**
+  - **Current cheat**
+    - all prior meeting-recognition experiments used hand segmentations as the recognition basis, which the group now considers cheating.
+  - **Motivation**
+    - with Thilo's automatic segmenter now working well, the group agrees to move recognition onto automatic segmentations instead.
+  - **Follow-on ideas**
+    - a. retrain background-noise models
+    - b. use continuous posteriors (not discrete)
+    - c. train transient noise models
+- **IBM digit-beep chunking**
+  - **Design**
+    - per IBM's transcriber feedback, each chunk now gets a beep, then a spoken digit, then a beep at the start, replacing the old single end-of-utterance beep, to help transcribers keep their place.
+  - **Recording**
+    - Adam recorded the digits one through ten at three speeds and spliced in the fastest-sounding set between the beeps.
+  - **Rollout plan**
+    - one more sample meeting will be chunked with Thilo's segmentation and sent to Brian at IBM to test, to see if it fixes the "too many beeps" problem from the last round.
+  - **Turnaround estimate**
+    - ICSI's side is quick, but the IBM side alone took roughly two to three weeks last time; Professor F wants this resolved soon since Jane is actively hiring transcribers who need to know what workflow to expect.
+- **Transcription pipeline status**
+  - **Progress**
+    - five meetings in "set one" are done and now being edited.
+  - **Staffing**
+    - attrition (a baby, a planned end date) took the team down to two solid transcribers; two more were hired today with a third planned this week, but staffing is deliberately kept lean in case the IBM pipeline speeds things up and layoffs become necessary.
+  - **Target headcount**
+    - Professor F suggests five or six transcribers on staff at a time as a flexible middle ground between too few and an unsustainable twelve.
+- **Segmentation ground truth**
+  - **Approach**
+    - new tighter-boundary transcriptions are being used to derive speech/nonspeech labels for training and evaluating the segmenter.
+  - **Pre-segmentation value**
+    - transcribers start from Thilo's automatic pre-segmentation rather than blank audio, which saves enormous time even though they still hand-adjust boundaries here and there, especially around short utterances.
+  - **Diff tracking**
+    - keeping the original automatic time marks alongside the edited ones would let the group measure recognition performance on a genuinely non-cheating, fully-automatic segmentation — though this is complicated when a transcriber's work is merged partway through with the pre-segmented version.
+- **Transcript consent policy**
+  - **Milestone**
+    - Professor F sets a goal of having a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting, rather than continuing to say nothing is available.
+  - **Open question**
+    - whether participants should approve the final edited transcript, an as-is early version, or just the audio, given that subtle wording changes could matter legally (e.g. potentially slanderous misquotes) even though the signed consent form only mentions "transcripts."
+  - **Resolution**
+    - rather than resolve it in the meeting, Professor F asks Jane and the others to settle it offline before July.
+- **Prosody classifier project**
+  - **Data limits**
+    - only eight usable (non-non-native) meetings are available so far, likely below threshold for reliably modeling noisy prosodic features; twenty or so meetings should help.
+  - **Findings so far**
+    - boundary-to-pitch-peak distance and local pitch-range effects show up as useful classifier features alongside some "cheating" true-word features like word frequency and backchannel status.
+  - **Interruption sub-study**
+    - prosodic features (not just word features) predict where a speaker is about to be interrupted, and results generalize across speakers rather than just modeling one person once speaker identity is anonymized.
+  - **Pitch quality note**
+    - the close-talking mikes give much cleaner pitch tracks than Switchboard's telephone-bandwidth data, with far fewer dropout regions where the tracker couldn't get a confident voicing estimate.
+  - **Next steps**
+    - Don will continue this over the summer with Andreas's and Thilo's help, aiming toward a non-cheating (recognizer-based, not hand-transcript-based) version.
+- **Front-end recognizer tuning**
+  - **PLP vs MFCC**
+    - PLP performance is now matching or beating MFCC.
+  - **VTLN success**
+    - applying warp factors computed for the SRI system (with the reciprocal taken to match convention) to the ICSI front-end improved word error by about one percent even without retraining.
+  - **Gaussian mixture size**
+    - the tandem system still reuses the standard system's sixty-four-Gaussian-per-mixture setting, versus CMU's ten, and Chuck and PhD C plan to tune this since fast (under 24-hour) training on the small male-only set allows brute-force experimentation.
+  - **Cumulative gains**
+    - VTLN plus earlier front-end fixes (bark-to-mel change, DC-offset high-pass fix) add up to roughly three to five percent, though Professor F notes only a couple of those percentage points are genuinely front-end-specific rather than VTLN or rescoring/N-best-weight optimization.
+- **DC offset bug**
+  - an old PLP bug meant a DC offset in recordings was never filtered, badly hurting error rate, until a high-pass filter was added — but it was hard-coded for the wrong sampling rate until Dan made the cutoff a parameter.
+- **Tandem next steps**
+  - **Debugging status**
+    - the coupling procedure between the neural net and the SRI system is believed correct (matching the working PLP setup), but possible bug sources remain: how the KLT transform is generated and how the net inputs are normalized.
+  - **Feature dimensionality idea**
+    - PhD D proposes taking only the first thirteen principal components of the 56-dimensional KLT output and computing deltas/double-deltas on those, similar to standard features, to test against using the full fifty-six.
+  - **Word-error optimization idea**
+    - since the net is trained for phone discrimination rather than the final word-error metric, redoing SRI forced alignments using the tandem features and retraining the net on those would make the whole pipeline more directly discriminative for word error.
+  - **Stephane's concatenation trick**
+    - concatenating the neural-net outputs with the regular PLP features (then KLT-transforming the combination) already helped a lot and is the current best Aurora system, though the resulting feature vector is large and the best way to apply the KLT (combined vs. separate) is still unresolved.

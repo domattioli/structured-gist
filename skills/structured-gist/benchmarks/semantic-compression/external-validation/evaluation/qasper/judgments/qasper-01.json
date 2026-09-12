@@ -1,0 +1,99 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "jointly pre-training the encoder and decoder with sentence reordering, next sentence generation, and masked document generation improves abstractive summarization over strong pre-trained baselines", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Sentence Reordering is the strongest single task; STEP beats UniLM despite far less pre-training data (drops the 'slightly better' magnitude and explicit NSG/MDG naming)"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "prior seq2seq summarization models (e.g. BERT-initialized) pre-train only the encoder, leaving the decoder randomly initialized and limiting generation quality", "source_supported": true},
+      {"text": "pre-train both the encoder and the decoder of a seq2seq Transformer, then fine-tune it on labeled summarization pairs", "source_supported": true},
+      {"text": "ranks sentences via a binary classifier (LSTMs/CNNs, more recently pre-trained Transformers); limited by redundancy and length, and human summaries are naturally abstractive anyway", "source_supported": true},
+      {"text": "prior seq2seq LSTM models barely beat a Lead-3 baseline; Liu et al. improved on this by pre-training only the encoder with BERT — this paper extends that by pre-training the decoder as well", "source_supported": true},
+      {"text": "BERT, XLNet, and RoBERTa pre-train encoders only; UniLM and MASS pre-train a full seq2seq model, but share encoder/decoder parameters or target sentence-level rather than document-level tasks", "source_supported": true},
+      {"text": "encoder — RoBERTa-Large-initialized, 24 layers", "source_supported": true},
+      {"text": "decoder — shallower, 6 layers, randomly initialized", "source_supported": true},
+      {"text": "continues training the pre-trained model directly on labeled document-summary pairs, decoding with beam search", "source_supported": true},
+      {"text": "CNN/DailyMail — 287,226 training pairs", "source_supported": true},
+      {"text": "New York Times — 96,834 training pairs", "source_supported": true},
+      {"text": "GIGA-CM — 6.5M unlabeled documents, used only for pre-training", "source_supported": true},
+      {"text": "automatic ROUGE-1/2/L scoring plus human ranking of informativeness, fluency, and succinctness on 20 sampled CNN/DailyMail documents", "source_supported": true},
+      {"text": "all three pre-training tasks significantly improve over the RoBERTa-S2S baseline", "source_supported": true},
+      {"text": "Sentence Reordering is the strongest single task; STEP beats UniLM despite far less pre-training data", "source_supported": true},
+      {"text": "the best STEP configuration beats the prior best published abstractive model by 0.8 ROUGE-2 on CNN/DailyMail and 2.4 ROUGE-2 on NYT", "source_supported": true},
+      {"text": "STEP is ranked best in 25% of sampled cases and rated significantly better than all compared systems except the human-written reference summaries", "source_supported": true},
+      {"text": "future work targets additional pre-training tasks and unsupervised summarization", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "SR", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Sentence Reordering is the strongest single task; even pre-trained on only 230M in-domain words, STEP outperforms UniLM despite UniLM's 3,000M-word pre-training corpus (drops the 'slightly better' magnitude and explicit NSG/MDG naming)"},
+      "f2": {"status": "retained", "evidence": "all three tasks can also be mixed, randomly selecting one per training batch with 1/3 probability each (denoted ALL)"},
+      "f3": {"status": "partial", "evidence": "randomly mixing all three tasks (ALL) tends to outperform any single task in the smaller in-domain setting, but Sentence Reordering alone wins once GIGA-CM is used (outcome present, but omits the authors' attribution to limited number of unlabeled documents)"},
+      "f4": {"status": "partial", "evidence": "Sentence Reordering alone wins once GIGA-CM is used (core claim present, but not stated as 'consistently achieves highest ROUGE-2 on both CNNDM and NYT')"},
+      "f5": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "randomly mixing all three tasks (ALL) tends to outperform any single task in the smaller in-domain setting, but Sentence Reordering alone wins once GIGA-CM is used"},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "prior seq2seq summarization models (e.g. BERT-initialized) pre-train only the encoder, leaving the decoder randomly initialized and limiting generation quality", "source_supported": true},
+      {"text": "pre-train both the encoder and the decoder of a seq2seq Transformer, then fine-tune it on labeled summarization pairs", "source_supported": true},
+      {"text": "ranks sentences via a binary classifier (LSTMs/CNNs, more recently pre-trained Transformers); limited by redundancy and length, and human summaries are naturally abstractive anyway", "source_supported": true},
+      {"text": "prior seq2seq LSTM models (with copy mechanism, coverage, or reinforcement learning) barely beat a Lead-3 baseline, likely because LSTMs without pre-training are not powerful enough", "source_supported": true},
+      {"text": "Liu et al. improved on this by initializing only the encoder with a pre-trained BERT — this paper extends that by pre-training the decoder as well", "source_supported": true},
+      {"text": "BERT, XLNet, and RoBERTa pre-train Transformer encoders only, using masked, permutation, or improved masked language modeling objectives", "source_supported": true},
+      {"text": "UniLM pre-trains a full seq2seq model but shares encoder/decoder parameters, unlike this paper's separate-parameter design", "source_supported": true},
+      {"text": "MASS masks a text span and predicts the original text including masked positions, targets sentence-level tasks (translation, compression); this paper's Masked Document Generation instead predicts text without masked tokens and targets document-level summarization", "source_supported": true},
+      {"text": "encoder — 24-layer Transformer, RoBERTa-Large-initialized, 16 attention heads, hidden size 1,024, feed-forward size 4,096", "source_supported": true},
+      {"text": "decoder — shallower, 6-layer, randomly initialized, same hidden size and head count as the encoder but a smaller 2,048 feed-forward size to reduce compute/memory cost", "source_supported": true},
+      {"text": "Sentence Reordering shuffles a document's sentences and trains the model to recover the original order — teaches multi-sentence coherence, content reordering (40% of training summaries reorder source content), and token copying", "source_supported": true},
+      {"text": "Next Sentence Generation splits a document into two segments and predicts the second from the first, using an arbitrary split point rather than only sentence boundaries — mismatches skip-thought vectors and BERT's next-sentence-prediction, better matches summarization's truncated inputs", "source_supported": true},
+      {"text": "Masked Document Generation recovers a randomly sized, randomly positioned masked span using BERT-style 80/10/10 mask/random-token/unchanged substitution, rather than replacing the entire span with [MASK]", "source_supported": true},
+      {"text": "continues training the pre-trained model directly on labeled document-summary pairs, decoding with beam search", "source_supported": true},
+      {"text": "CNN/DailyMail — 287,226 training / 13,368 validation / 11,490 test pairs, non-anonymized version", "source_supported": true},
+      {"text": "New York Times — 96,834 training / 4,000 validation / 3,452 test examples (test = articles from Jan 1, 2017 onward with summaries of 50+ words)", "source_supported": true},
+      {"text": "GIGA-CM — 6.5M unlabeled documents (Gigaword + CNN/DailyMail training documents), used only for pre-training; NYT test set explicitly excluded to avoid leakage", "source_supported": true},
+      {"text": "Stanford CoreNLP tokenization, GPT-2's UTF8 BPE for vocabulary reduction; documents truncated to 512 tokens and summaries to 256; pre-training spans masked/predicted at up to 256 tokens", "source_supported": true},
+      {"text": "separate Adam optimizers for encoder (lr 2e-5) and decoder (lr 1e-4) during pre-training, both at 2e-5 during fine-tuning; batch sizes scaled to dataset size; beam search of size 5 with trigram-repeat blocking at inference", "source_supported": true},
+      {"text": "automatic full-length F1 ROUGE-1/2/L on CNN/DailyMail, limited-length recall ROUGE on NYT; human evaluation asked participants to rank 20 sampled CNN/DailyMail outputs by informativeness, fluency, and succinctness", "source_supported": true},
+      {"text": "all three pre-training tasks significantly improve over the RoBERTa-S2S baseline, whether pre-trained in-domain (CNN/DailyMail only) or on the larger GIGA-CM", "source_supported": true},
+      {"text": "even pre-trained on only 230M in-domain words, STEP outperforms UniLM despite UniLM's 3,000M-word pre-training corpus", "source_supported": true},
+      {"text": "the best STEP configuration beats the prior best published abstractive model by 0.8 ROUGE-2 on CNN/DailyMail and 2.4 ROUGE-2 on NYT, with differences of ±0.22 ROUGE treated as significant at p<0.05", "source_supported": true},
+      {"text": "STEP (GIGA-CM pre-trained with SR) is ranked best in 25% of sampled cases and obtains the lowest mean rank of any system except human-written gold summaries; a paired t-test on converted ratings shows STEP significantly better than all compared systems (p<0.05), though it still lags behind human quality — plausibly because it, like the other systems, only sees the first 512 tokens of long documents", "source_supported": true},
+      {"text": "adding large-scale unlabeled pre-training data (GIGA-CM) further improves results; future work targets additional pre-training tasks and unsupervised abstractive summarization", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "SR", "verdict": "correct"}
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "SOTA WER on LibriSpeech among E2E models, no external training data", "source_supported": true},
+      {"text": "deepest variant uses 54 convolutional layers", "source_supported": true},
+      {"text": "NovoGrad gives WER improvement over SGD with momentum", "source_supported": true},
+      {"text": "on larger Jasper10x4, batch norm + ReLU outperformed the other normalization/activation choices", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Only a general claim survives: Jasper reaches SOTA WER on LibriSpeech among end-to-end models, and the conclusion states it 'reaches SOTA/competitive results across benchmarks.' No specific numbers or results for WSJ or Hub5'00 are given in the skim.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "smaller Jasper 10x3 trained 400 epochs with SGD on combined WSJ (80 hours)"},
+      "f2": {"status": "retained", "evidence": "conversational speech (Hub5'00) ... good results on Switchboard subset; Callhome subset remains harder"},
+      "f3": {"status": "partial", "evidence": "Jasper DR 10x5 trained 50 epochs with SGD on 2000hr Fisher+Switchboard"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "2.95% WER on LibriSpeech test-clean with beam search + Transformer-XL LM", "source_supported": true},
+      {"text": "3.86% WER on LibriSpeech test-clean with greedy decoding, no LM", "source_supported": true},
+      {"text": "largest variant: 54 convolutional layers, 333M parameters", "source_supported": true},
+      {"text": "dev-clean LibriSpeech WER dropped from 4.00% to 3.64% (9% relative) versus SGD with momentum, on Jasper DR 10x5", "source_supported": true},
+      {"text": "Dense Residual and DenseRNet performed similarly, but Dense Residual was chosen because concatenation-based growth factors need retuning for deeper models", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "2.95% WER on LibriSpeech test-clean with beam search + Transformer-XL LM (new SOTA), 3.86% WER with greedy decoding; competitive results on WSJ and Hub5'00, with good results on Switchboard but Callhome remaining harder.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "a smaller Jasper 10x3 model was trained with SGD with momentum for 400 epochs on a combined 80-hour WSJ dataset (LDC93S6A / WSJ0 and LDC94S13A / WSJ1)"},
+      "f2": {"status": "retained", "evidence": "evaluated on the Hub5 Year 2000 (Hub5'00) evaluation (LDC2002S09, LDC2005S13), split into Switchboard (SWB) and Callhome (CHM) subsets"},
+      "f3": {"status": "retained", "evidence": "acoustic and language models were trained on the 2000hr Fisher+Switchboard training data (LDC2004S13, LDC2005S13, LDC97S62)... Jasper DR 10x5 was trained with SGD with momentum for 50 epochs, compared against other models trained on the same data"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "new SOTA of 2.95% WER on LibriSpeech test-clean with a Transformer-XL LM", "source_supported": true},
+      {"text": "largest Jasper uses 54 convolutional layers and 333M parameters", "source_supported": true},
+      {"text": "Jasper uses mel-filterbank features calculated from 20ms windows with 10ms overlap", "source_supported": true},
+      {"text": "switching from SGD with momentum to NovoGrad decreased WER on dev-clean LibriSpeech from 4.00% to 3.64% (a 9% relative improvement)", "source_supported": true},
+      {"text": "beam search decoding uses width 2048", "source_supported": true},
+      {"text": "the paper states it makes a set of contributions, but the itemized list is not present in the given source text", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "New SOTA of 2.95% WER on LibriSpeech test-clean with LM; SOTA among E2E models on test-other; 3.86% WER greedy without LM; competitive results on WSJ and 2000hr Fisher+Switchboard; good results on Switchboard, with Callhome remaining a harder subset.",
+        "verdict": "partial"
+      }
+    }
+  }
+}

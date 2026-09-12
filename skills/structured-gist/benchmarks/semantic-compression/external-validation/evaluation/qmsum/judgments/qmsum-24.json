@@ -1,0 +1,137 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "omitted", "evidence": ""},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "omitted", "evidence": ""},
+      "f21": {"status": "omitted", "evidence": ""},
+      "f22": {"status": "omitted", "evidence": ""},
+      "f23": {"status": "omitted", "evidence": ""},
+      "f24": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Headers show 'Battery options' and 'Standby power saving' as topics under Component findings, but no content is given for either.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": "\"a. standard AA/AAA\" listed with no elaboration"},
+      "f3": {"status": "omitted", "evidence": "\"b. dynamo (wind-up)\" listed with no elaboration"},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": "\"d. kinetic (watch-style)\" listed with no elaboration"},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": "\"c. solar\" listed with no elaboration"},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "omitted", "evidence": ""},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "partial", "evidence": "Section titled \"Standby power saving\" implies the concept, but the text only covers backlight auto-off, not an explicit 'remote should be in standby mode' statement"},
+      "f21": {"status": "retained", "evidence": "\"button backlighting, if used, should auto-off after five to ten seconds\""},
+      "f22": {"status": "omitted", "evidence": ""},
+      "f23": {"status": "omitted", "evidence": ""},
+      "f24": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Battery options list is bare; neither the kinetic-sufficiency doubt nor the brief-power-draw reasoning appears."},
+      "r2": {"status": "lost", "evidence": "Battery options list is bare (a-d with no elaboration); no cost or durability comparison stated at all."}
+    },
+    "hallucinations": [
+      {"text": "Meeting recap: prior decisions (no teletext, company image, drop voice recognition, flip design, unconventional shape, young/business market) and open items (rechargeable batteries, port, lost-remote alarm carried over)", "source_supported": true},
+      {"text": "Market trends: hundred-subject study plus Paris/Milan fashion consultants; priority ranking (fancy look/feel, tech innovation, ease of use); fruit-and-vegetable and spongy-feel fashion themes", "source_supported": true},
+      {"text": "Standard chip: TA1183 5, used in nearly all TV remotes", "source_supported": true},
+      {"text": "Circuit board: standard silicone PCB with rubber-button contacts, sizeable flexibly", "source_supported": true},
+      {"text": "Case material: plastic (housing), wood, titanium, rubber options", "source_supported": true},
+      {"text": "Swappable rubber skin: peel-off rubber sleeve over a plastic base for spongy feel and cheap look changes", "source_supported": true},
+      {"text": "Interface hardware options: bare PCB touch contacts, rubber buttons, LCD touch screen", "source_supported": true},
+      {"text": "Flip-hinge circuitry: two circuit boards linked by cabling across the hinge", "source_supported": true},
+      {"text": "Interface design findings: competitor review (monotonous, inconsistent layouts), proposed GUI layout, ergonomic tweak (frequent buttons at bottom), usability findings, voice-recognition cost check for a find-my-remote feature, color inspiration from fruit colours (not literal shape)", "source_supported": true},
+      {"text": "Stylus debate: pull-out stylus proposed to avoid RSI, objected to as easily lost and irritating, resolved as unnecessary (any pen/pencil works)", "source_supported": true},
+      {"text": "Final decisions: black-and-white LCD display, anti-RSI rubberised buttons, plastic body with swappable rubber cover, fruit/vegetable colour palette, voice-recognition locator pending cost with a whistle keychain fallback, company logo plus advertising for brand recognizability", "source_supported": true},
+      {"text": "Wrap-up: meeting wraps early with forty minutes allotted before the next session; group agrees they're moving in a clear direction", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The rendering gives no benefits/drawbacks for any battery option (the list is a bare a-d with no elaboration). On conserving battery life, it only notes that button backlighting, if used, should auto-off after five to ten seconds.", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": "No explicit statement that no rechargeable option was available; only weakly implied by its absence from the a-d battery list"},
+      "f2": {"status": "retained", "evidence": "\"a. standard AA/AAA - cheapest, but considered too bulky\""},
+      "f3": {"status": "partial", "evidence": "\"b. dynamo (wind-up) - dismissed as impractical\" — negative judgment present, but not the specific 'silly'/unnecessary reasoning"},
+      "f4": {"status": "omitted", "evidence": "Solar bullet doesn't state the 'people already have the light on while watching TV' rationale"},
+      "f5": {"status": "mutated", "evidence": "\"c. solar - works from room light or sunlight...\" — this contradicts the source, where the group explicitly concludes electric/artificial light does NOT count and it 'has to be solar' (from the sun)"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "partial", "evidence": "\"d. kinetic (watch-style) - favored: charges from ordinary movement...\" — mechanism captured, but not the 'without needing to notice or shake it' detail"},
+      "f9": {"status": "partial", "evidence": "\"long observed lifespan\" — captures the conclusion (never seen one run out) but drops the specific watch analogy reasoning"},
+      "f10": {"status": "retained", "evidence": "\"low draw since use is brief\""},
+      "f11": {"status": "partial", "evidence": "\"needs case-mounted cells\" — captures placement on the case, omits the 'bulky and uniform like a calculator' detail"},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "retained", "evidence": "\"adds cost\" (solar)"},
+      "f14": {"status": "partial", "evidence": "\"a. standard AA/AAA - cheapest\" confirmed; solar's 'next-cheapest' ranking not explicitly stated (only 'adds cost')"},
+      "f15": {"status": "retained", "evidence": "\"...and is fragile if dropped\" (solar)"},
+      "f16": {"status": "omitted", "evidence": "No mention of remotes being especially prone to dropping/being thrown, unlike a calculator"},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "omitted", "evidence": ""},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "partial", "evidence": "Section titled \"Standby power saving\" implies the concept; text only covers the backlight auto-off behavior"},
+      "f21": {"status": "retained", "evidence": "\"button backlighting, if used, should auto-off after five to ten seconds of inactivity\""},
+      "f22": {"status": "omitted", "evidence": "\"dismissed as impractical\" replaces the specific space/physical-handle reasoning"},
+      "f23": {"status": "retained", "evidence": "\"small watch-battery cell\" (also repeated in Final decisions > Power)"},
+      "f24": {"status": "partial", "evidence": "\"long observed lifespan\" — presents confidently, dropping the Industrial Designer's stated uncertainty ('not entirely sure how long it would last')"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "\"low draw since use is brief\" is present as a standalone kinetic-option fact, but it isn't framed as resolving a raised doubt about charge sufficiency."},
+      "r2": {"status": "partial", "evidence": "AA/AAA ('cheapest, but...too bulky') and solar ('adds cost'...'fragile if dropped') sit as parallel bullets in the same list, implying the contrast, but no explicit connecting/comparative language ties them together."}
+    },
+    "hallucinations": [
+      {"text": "Meeting recap: prior decisions and open items (rechargeable batteries, port, lost-remote alarm carried over)", "source_supported": true},
+      {"text": "Market trends: hundred-subject study plus Paris/Milan fashion consultants; priority ranking with relative weights (fancy look/feel twice as important as tech innovation, which is twice as important as ease of use); fruit-and-vegetable and spongy-feel themes", "source_supported": true},
+      {"text": "Standard chip: TA1183 5, used in nearly all TV remotes to send standard signals", "source_supported": true},
+      {"text": "Circuit board: standard silicone PCB with rubber-button contacts; tiny tracks allow small or large button layouts", "source_supported": true},
+      {"text": "Case material: plastic (curved shapes), wood (impractical), titanium (expensive, boxy, marks easily when dropped), rubber (anti-RSI, stress-ball material, spongy feel)", "source_supported": true},
+      {"text": "Swappable rubber skin: peel-off sleeve over plastic base, like mobile-phone fascias", "source_supported": true},
+      {"text": "Interface hardware options: bare PCB touch contacts, rubber buttons, LCD touch screen (thin, flat, wire-free, kept black-and-white for cost)", "source_supported": true},
+      {"text": "Flip-hinge circuitry: two circuit boards linked by cabling", "source_supported": true},
+      {"text": "Mirror tangent: Marketing's compact-mirror-style flip display idea, dropped as off-topic", "source_supported": true},
+      {"text": "Interface design findings: competitor review, proposed GUI layout, ergonomic tweak (PM proposes frequent buttons at bottom near the thumb), usability findings, voice-recognition cost check for a find-my-remote feature, color inspiration from fruit colours (e.g. chilli/tomato red), not a literal fruit shape", "source_supported": true},
+      {"text": "Stylus debate: Marketing's pull-out stylus proposal, objections (easily lost, irritating for frequent switchers, wears the touchpad faster), resolution that any pen/pencil suffices", "source_supported": true},
+      {"text": "Final decisions: kinetic power replacing the earlier port/dock idea, black-and-white LCD (cheaper, upgradeable later), anti-RSI rubberised buttons, plastic body with swappable rubber cover, fruit/vegetable colour palette, voice-recognition 'I'm here' locator pending cost with a whistle-keychain fallback, company logo plus advertising for recognizability", "source_supported": true},
+      {"text": "Wrap-up: meeting wraps early with forty minutes allotted; group agrees on a clear direction", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Standard AA/AAA batteries are cheapest but too bulky. Dynamo charging is dismissed as impractical. Solar charging adds cost and is fragile if dropped (the rendering also incorrectly states it works from ordinary room light, not just sunlight). Kinetic charging (favored) charges from everyday movement into a small watch-battery-sized cell with a long observed lifespan and low power draw since each use is brief. To conserve battery life, button backlighting (if used) should auto-off after five to ten seconds of inactivity.", "verdict": "partial"}
+    }
+  }
+}

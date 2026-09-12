@@ -1,0 +1,67 @@
+- **Meeting setup**
+  - **Agenda**
+    - three presentations, then decide on the remote control concept and close
+  - **Presentation order**
+    - User Interface presents first
+
+- **Controller concepts**
+  - **Google controller**
+    - easy to use combined with sophisticated functions
+  - **Fancy controller**
+    - attractive, cute design meant to stand out among competitors
+  - **Intelligent controller**
+    - a smart controller using speech and gesture recognition, via cooperation with an outside research institute
+
+- **Intelligent-controller debate**
+  - **Concerns raised**
+    - a. repetitive-strain risk
+    - b. multi-user reliability
+    - c. cost and R&D
+    - d. language and internationalization
+    - e. microphone placement
+  - **Defense**
+    - UI argues limited-vocabulary recognition is reliable and users can still fall back to manual buttons
+  - **Reliability vs differentiation trade-off**
+    - Marketing and PM want something that works every time; UI counters a distinguishing feature still drives purchase
+  - **Outcome**
+    - the group leans against a full intelligent/gesture controller, favoring the Google and fancy concepts instead
+
+- **Component design**
+  - **Case material**
+    - a. wood
+    - b. plastic
+  - **Button type**
+    - a. classic pushbutton
+    - b. LCD / lit buttons
+    - c. touch screen
+  - **Power source**
+    - recommend combining solar and regular battery for ecological appeal, at modest added cost
+  - **Chip level**
+    - low-level, cheap chips recommended, fits the twelve-euro price target
+
+- **Market trend research**
+  - **Priority ranking**
+    - i. fancy look and feel
+    - ii. technologically innovative
+    - iii. easy to use
+  - **Fruit-and-vegetable motif**
+    - a broader fashion trend across clothes, shoes, and furniture that should carry into the remote's design
+  - **Spongy touch**
+    - users want a soft, rubber-like feel, in some tension with a wooden case
+
+- **Final concept decision**
+  - **Interface concept**
+    - merge the Google and fancy controllers rather than pursue the intelligent/gesture controller
+  - **Materials**
+    - wood body for a natural, fashionable feel, with a spongy rubber touch on the buttons
+  - **Energy**
+    - solar plus battery, and a low-level chip to hit the price target
+  - **Voice-command supplement**
+    - add a small set of simple voice commands as an optional module, not a full gesture/voice system
+
+- **Next steps**
+  - **Assignments**
+    - a. Industrial Designer and User Interface
+    - b. Marketing
+  - **Timing**
+    - next meeting starts in thirty minutes; coaches will send specific instructions

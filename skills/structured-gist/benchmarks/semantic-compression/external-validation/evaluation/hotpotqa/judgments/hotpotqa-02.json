@@ -1,0 +1,71 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": "The Psilocybe entry ('genus of gilled mushrooms best known for its psychedelic species') never names the three compounds; the trio (psilocybin, psilocin, baeocystin) is only listed under the separate 'Psilocybin mushroom' entry, tied to the polyphyletic mushroom group rather than the genus Psilocybe as gold states."},
+      "f2": {"status": "retained", "evidence": "Psilocybin - naturally occurring psychedelic prodrug compound, converted by the body to psilocin"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "The Psilocybin entry unambiguously states psilocybin (not psilocin or baeocystin) converts to psilocin, but the specific gold framing ('among the three compounds named for genus Psilocybe') isn't available since f1 is omitted; the trio is only named elsewhere (Psilocybin mushroom entry), under a different grouping."}
+    },
+    "hallucinations": [
+      {"text": "O-Acetylpsilocin: synthetic psychoactive drug, acetylated form of psilocin (aka 4-AcO-DMT)", "source_supported": true},
+      {"text": "Baeocystin: minor psilocybin mushroom alkaloid, an analog of psilocybin", "source_supported": true},
+      {"text": "Psilocybe cubensis: the best-known psilocybin mushroom species, commonly called shrooms", "source_supported": true},
+      {"text": "Psilocybe azurescens: among the most potent psilocybin-containing mushrooms", "source_supported": true},
+      {"text": "Psilocybin mushroom: polyphyletic group of mushrooms containing psilocybin, psilocin, and baeocystin", "source_supported": true},
+      {"text": "Psilocybe makarorae: psilocybin mushroom species known only from New Zealand", "source_supported": true},
+      {"text": "Psilocybe: genus of gilled mushrooms best known for its psychedelic species (beyond the specific compound-attribution claim in f1)", "source_supported": true},
+      {"text": "Psilocybe medullosa: rare, widespread European psychoactive mushroom species", "source_supported": true},
+      {"text": "Psilocybe meridionalis: psychedelic mushroom species known only from Jalisco, Mexico", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "psilocybin", "verdict": "correct", "note": "Judged against the evidence-supported reading of the question per the documented corpus defect (native reference_answer 'psilocin' is inconsistent with the evidence, which states psilocybin converts to psilocin). The rendering directly and unambiguously supports 'psilocybin' as the compound converted to psilocin."}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Psilocybe - Active compounds - psilocybin, psilocin, and baeocystin, responsible for the psychoactive effects of many species in the genus"},
+      "f2": {"status": "retained", "evidence": "Psilocybin - Mechanism - quickly converted by the body to psilocin, which has mind-altering effects similar in some aspects to LSD, mescaline, and DMT"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "The Psilocybe entry names the trio (psilocybin, psilocin, baeocystin) as the genus's psychoactive compounds, and the separately-titled 'Psilocybin' entry — sharing that exact compound name — explicitly states it (not psilocin or baeocystin) is the one converted to psilocin. The identification is unambiguous via the shared compound name as entry title."}
+    },
+    "hallucinations": [
+      {"text": "Psilocybin: produced by more than 200 species of mushrooms; most potent sources in genus Psilocybe and about a dozen other genera; effects (euphoria, hallucinations, altered perception, distorted time sense, spiritual experiences, possible nausea/panic attacks)", "source_supported": true},
+      {"text": "O-Acetylpsilocin: identity/names, proposed use as alternative to psilocybin for pharmacological studies, caveat on differing subjective effects, chemistry", "source_supported": true},
+      {"text": "Baeocystin: identity, occurrence alongside psilocybin/norbaeocystin/psilocin, chemistry (N-demethylated derivative, phosphorylated derivative of 4-HO-NMT)", "source_supported": true},
+      {"text": "Psilocybe cubensis: identity, common names, taxonomy, notability as most well-known psilocybin mushroom", "source_supported": true},
+      {"text": "Psilocybe azurescens: identity, potency percentages, taxonomy", "source_supported": true},
+      {"text": "Psilocybin mushroom: identity, use, effects, genera containing them", "source_supported": true},
+      {"text": "Psilocybe makarorae: identity, distribution, appearance, distinguishing features, chemistry", "source_supported": true},
+      {"text": "Psilocybe medullosa: identity, taxonomic history, distribution, chemistry, related species", "source_supported": true},
+      {"text": "Psilocybe meridionalis: identity, related species, distribution", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "psilocybin", "verdict": "correct", "note": "Same corpus-defect basis as skim: judged against the question and evidence, not the flawed native reference_answer. The rendering states unambiguously that psilocybin is converted to psilocin."}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Psilocybe - Active compounds - psilocybin, psilocin, and baeocystin - the main psychedelic compounds responsible for the psychoactive effects of many species in the genus"},
+      "f2": {"status": "retained", "evidence": "Psilocybin - Mechanism - as a prodrug, quickly converted by the body to psilocin - psilocin's mind-altering effects are similar, in some aspects, to those of LSD, mescaline, and DMT"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Same as standard: the Psilocybe entry names all three compounds, and the separate Psilocybin entry (sharing the exact compound name) explicitly and unambiguously states psilocybin is converted to psilocin."}
+    },
+    "hallucinations": [
+      {"text": "Psilocybin: identity/production by 200+ mushroom species, most potent sources, effects list, possible adverse reactions", "source_supported": true},
+      {"text": "O-Acetylpsilocin: names, type, proposed use, caveat, chemistry", "source_supported": true},
+      {"text": "Baeocystin: identity, occurrence, chemistry, structure (zwitterionic form)", "source_supported": true},
+      {"text": "Psilocybe cubensis: identity, common names, taxonomy, notability", "source_supported": true},
+      {"text": "Psilocybe azurescens: identity, potency detail, taxonomy", "source_supported": true},
+      {"text": "Psilocybin mushroom: identity, common names, use, effects, genera, species count", "source_supported": true},
+      {"text": "Psilocybe makarorae: identity, distribution, appearance, distinguishing features, chemistry", "source_supported": true},
+      {"text": "Psilocybe medullosa: identity, taxonomic history, distribution, chemistry, related species", "source_supported": true},
+      {"text": "Psilocybe meridionalis: identity, related species, distribution", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "psilocybin", "verdict": "correct", "note": "Same corpus-defect basis as skim/standard."}
+    }
+  }
+}

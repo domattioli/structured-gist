@@ -1,0 +1,38 @@
+- **Motivation**
+  - **Gap**
+    - prior seq2seq summarization models (e.g. BERT-initialized) pre-train only the encoder, leaving the decoder randomly initialized and limiting generation quality
+  - **Goal**
+    - pre-train both the encoder and the decoder of a seq2seq Transformer, then fine-tune it on labeled summarization pairs
+- **Related work**
+  - **Extractive summarization**
+    - ranks sentences via a binary classifier (LSTMs/CNNs, more recently pre-trained Transformers); limited by redundancy and length, and human summaries are naturally abstractive anyway
+  - **Abstractive summarization**
+    - prior seq2seq LSTM models barely beat a Lead-3 baseline; Liu et al. improved on this by pre-training only the encoder with BERT — this paper extends that by pre-training the decoder as well
+  - **Pre-training**
+    - BERT, XLNet, and RoBERTa pre-train encoders only; UniLM and MASS pre-train a full seq2seq model, but share encoder/decoder parameters or target sentence-level rather than document-level tasks
+- **STEP model**
+  - **Architecture**
+    - a. encoder — RoBERTa-Large-initialized, 24 layers
+    - b. decoder — shallower, 6 layers, randomly initialized
+  - **Pre-training tasks**
+    - a. Sentence Reordering (SR)
+    - b. Next Sentence Generation (NSG)
+    - c. Masked Document Generation (MDG)
+  - **Fine-tuning**
+    - continues training the pre-trained model directly on labeled document-summary pairs, decoding with beam search
+- **Experimental setup**
+  - **Datasets**
+    - a. CNN/DailyMail — 287,226 training pairs
+    - b. New York Times — 96,834 training pairs
+    - c. GIGA-CM — 6.5M unlabeled documents, used only for pre-training
+  - **Evaluation**
+    - automatic ROUGE-1/2/L scoring plus human ranking of informativeness, fluency, and succinctness on 20 sampled CNN/DailyMail documents
+- **Results**
+  - **Automatic evaluation**
+    - a. all three pre-training tasks significantly improve over the RoBERTa-S2S baseline
+    - b. Sentence Reordering is the strongest single task; STEP beats UniLM despite far less pre-training data
+    - c. the best STEP configuration beats the prior best published abstractive model by 0.8 ROUGE-2 on CNN/DailyMail and 2.4 ROUGE-2 on NYT
+  - **Human evaluation**
+    - STEP is ranked best in 25% of sampled cases and rated significantly better than all compared systems except the human-written reference summaries
+- **Conclusion**
+  - jointly pre-training the encoder and decoder with sentence reordering, next sentence generation, and masked document generation improves abstractive summarization over strong pre-trained baselines; future work targets additional pre-training tasks and unsupervised summarization

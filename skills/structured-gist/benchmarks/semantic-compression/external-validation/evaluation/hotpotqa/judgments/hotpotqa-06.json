@@ -1,0 +1,112 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {
+        "status": "partial",
+        "evidence": "Postal 2 section: \"Featured in BEP video\" — confirms scenes appear in a Black Eyed Peas video but never names \"Where Is the Love?\" specifically in this section."
+      },
+      "f2": {
+        "status": "partial",
+        "evidence": "Where Is the Love? section: \"Black Eyed Peas 2003 single\" / \"Lead single from Elephunk\" — year and album/lead-single status present, but the month (\"June\") and \"third album\" qualifier are dropped."
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "partial",
+        "evidence": "Postal 2's \"Featured in BEP video\" and the adjacent \"Where Is the Love?\" section are never explicitly tied together by name; the link relies on \"Where Is the Love?\" being the only Black Eyed Peas entity in the document, not on any stated connection."
+      }
+    },
+    "hallucinations": [
+      {"text": "2NE1 is a YG Entertainment girl group with a 2009 debut EP hit and awards running through its 2017 disbandment.", "source_supported": true},
+      {"text": "Greatest Time of Year is an Aly & AJ Christmas single whose video aired on Disney in 2006 and charted at Billboard Hot 100 #96.", "source_supported": true},
+      {"text": "In the Air Tonite is a Collins/Lil' Kim duet remix from a 2001 tribute-album promo, Platinum certified in Germany.", "source_supported": true},
+      {"text": "Postal (video game) is a 1997 isometric shooter with sequel Postal 2 (2003) and source code released in 2016.", "source_supported": true},
+      {"text": "Suraiya was a Bollywood actress-singer active from the 1940s–60s, singing superstar 1948–1951, with 338 film songs across 67 films.", "source_supported": true},
+      {"text": "Stray Cat Strut is a 1981 Stray Cats track, a US hit reaching No. 3 on the Hot 100, with early MTV airplay.", "source_supported": true},
+      {"text": "Wonderful (Gary Go song) is Gary Go's 2009 debut single, used as a German film's title song and widely used across other media.", "source_supported": true},
+      {"text": "Stricken (song) is Disturbed's 2005 single, gold-certified in the US in 2008, and served as a WWE PPV theme in 2006.", "source_supported": true},
+      {"text": "Postal 2 is the sequel to Postal (1997), a first-person game built on the Unreal Engine 2.", "source_supported": true},
+      {"text": "\"Where Is the Love?\" was the first Black Eyed Peas song to credit Fergie.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "2003 (inferred by elimination: the only Black Eyed Peas entity in the document is \"Where Is the Love?,\" labeled a \"2003 single\")",
+        "verdict": "correct"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "Postal 2 — \"Media use: Scenes appear in The Black Eyed Peas' 'Where Is the Love?' music video.\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "Where Is the Love? — \"Release: Lead single from The Black Eyed Peas' third album 'Elephunk,' released June 2003.\""
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "retained",
+        "evidence": "Postal 2's Media-use bullet names \"Where Is the Love?\" explicitly, and the Where Is the Love? section separately gives its release details — the same song title is used consistently across both entries, establishing the coreference."
+      }
+    },
+    "hallucinations": [
+      {"text": "2NE1's full award/discography history (debut EP, 2010 album, 2011 EP, 2012–2013 singles, 2014 album, 2017 farewell song).", "source_supported": true},
+      {"text": "Greatest Time of Year's full details (Aly & AJ Christmas album, film tie-in, 2006 Disney video premiere, Hot 100 #96 debut).", "source_supported": true},
+      {"text": "In the Air Tonite's full details (2001 remix for Urban Renewal tribute album, Collins/Lil' Kim duet, spliced video, German Platinum certification).", "source_supported": true},
+      {"text": "Postal (video game)'s full details (1997 isometric shooter, Postal 2 sequel, Uwe Boll film rights, 2001 Postal Plus re-release, 2016 Postal Redux remaster and source code release).", "source_supported": true},
+      {"text": "Suraiya's biographical/career details: identity, personal life, early career, peak stardom (1948–1951), earnings, and training.", "source_supported": true},
+      {"text": "Suraiya's stylistic recognition: acting style ('adakari'), honorific titles, and career song/film output counts.", "source_supported": true},
+      {"text": "Stray Cat Strut's full details (1981 UK album track, US Dance/Disco and Hot 100 chart performance, MTV video with Bad Luck Blackie cartoon scenes).", "source_supported": true},
+      {"text": "Wonderful (Gary Go song)'s full details (2009 release/charts, iTunes recognition, German film use, and other media uses — Oceans trailer, Portuguese novella, American Idol, Eurovision, Sky Sports).", "source_supported": true},
+      {"text": "Stricken (song)'s full details (2005 Disturbed release, 2008 gold certification, guitar solo note, video-game appearances, Nightmare on Elm Street video, WWE PPV theme use).", "source_supported": true},
+      {"text": "Postal 2's origin, reputation for controversy, and Unreal Engine 2 detail (beyond the media-use fact).", "source_supported": true},
+      {"text": "Where Is the Love?'s writer credits, Justin Timberlake's uncredited vocals, and the Fergie milestone (beyond the release fact).", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "June 2003",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "Postal 2 — \"Media use: Scenes of the game appear in the music video of The Black Eyed Peas' single 'Where Is the Love?'\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "Where Is the Love? — \"Release: A song by American hip hop group The Black Eyed Peas, released in June 2003 as the lead single from their third album, 'Elephunk.'\""
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "retained",
+        "evidence": "Postal 2's Media-use bullet names \"Where Is the Love?\" explicitly and the Where Is the Love? section gives matching release details under the identical title — same coreference as standard, with the added detail (\"stylized as POSTAL\") not affecting the link."
+      }
+    },
+    "hallucinations": [
+      {"text": "2NE1's full award/discography history (debut EP, 2010 album, 2011 EP, 2012–2013 singles, 2014 album, 2017 farewell song).", "source_supported": true},
+      {"text": "Greatest Time of Year's full details (Aly & AJ Christmas album, film tie-in, 2006 Disney video premiere, Hot 100 #96 debut).", "source_supported": true},
+      {"text": "In the Air Tonite's full details (2001 remix for Urban Renewal tribute album, Collins/Lil' Kim duet, spliced video, German Platinum certification).", "source_supported": true},
+      {"text": "Postal (video game)'s full details (1997 isometric shooter, Postal 2 sequel, Uwe Boll film rights, 2001 Postal Plus re-release, 2016 Postal Redux remaster and source code release).", "source_supported": true},
+      {"text": "Suraiya's biographical/career details: identity, reputation, personal life, talent, training, and early/acting career phases.", "source_supported": true},
+      {"text": "Suraiya's peak stardom, earnings, acting style ('adakari'), honorific titles, song output, and detailed filmography exclusions.", "source_supported": true},
+      {"text": "Stray Cat Strut's full details (1981 UK album track, US Dance/Disco and Hot 100 chart performance, MTV video with Bad Luck Blackie cartoon scenes).", "source_supported": true},
+      {"text": "Wonderful (Gary Go song)'s full details (2009 release/charts, iTunes recognition, German film use, and other media uses).", "source_supported": true},
+      {"text": "Stricken (song)'s full details (2005 Disturbed release, 2008 gold certification, guitar solo note, video-game appearances, Nightmare on Elm Street video, WWE PPV theme use).", "source_supported": true},
+      {"text": "Postal 2's origin, controversy reputation, and Unreal Engine 2 detail (beyond the media-use fact).", "source_supported": true},
+      {"text": "Where Is the Love?'s writer credits, Justin Timberlake's uncredited vocals, and the Fergie milestone (beyond the release fact).", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "June 2003",
+        "verdict": "correct"
+      }
+    }
+  }
+}

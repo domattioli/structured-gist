@@ -1,0 +1,62 @@
+- **Bajaga i Instruktori**
+  - **Identity**
+    - highly popular Serbian and former Yugoslav rock band
+  - **Founding**
+    - founded in Belgrade in 1984 by composer, lyricist, and guitarist Momčilo Bajagić "Bajaga"
+  - **Notability**
+    - rich discography and hit songs that placed them at the top of the Yugoslav rock scene, alongside Bijelo Dugme and Riblja Čorba
+- **Sanjalice**
+  - **Identity**
+    - former Yugoslav rock band from Belgrade
+  - **Notability**
+    - a. one of the first former Yugoslav all-female bands
+    - b. one of the pioneers of the former Yugoslav rock scene
+- **Riblja Čorba**
+  - **Identity**
+    - Serbian and Yugoslav rock band from Belgrade ("Fish Stew")
+  - **Notability**
+    - one of the most popular and most influential acts of the Yugoslav rock scene
+- **Iskre**
+  - **Identity**
+    - former Yugoslav rock band ("The Sparks")
+  - **Notability**
+    - one of the pioneers of the former Yugoslav rock scene
+- **S Vremena Na Vreme**
+  - **Identity**
+    - Serbian and former Yugoslav rock band from Belgrade ("From Time To Time")
+  - **Notability**
+    - a. pioneers of the Serbian acoustic rock scene
+    - b. pioneers of incorporating folk music elements into rock on the former Yugoslav rock scene
+- **Bele Višnje**
+  - **Identity**
+    - Serbian and former Yugoslav rock band ("White Sour Cherries")
+  - **Notability**
+    - one of the pioneers of the former Yugoslav rock scene
+- **Smak**
+  - **Identity**
+    - Serbian and former Yugoslav rock band from Kragujevac ("The end time")
+  - **Peak**
+    - reached peak popularity in the 1970s, one of the most notable acts of the former Yugoslav rock scene
+  - **Leader**
+    - guitarist Radomir Mihailović, nicknamed Točak ("The Wheel"), considered one of the most influential guitarists on the scene
+- **Korni Grupa**
+  - **Identity**
+    - Yugoslav rock band from Belgrade ("Korni Group"), also known as the Kornelyans during an international market foray
+  - **Founding**
+    - formed in 1968
+  - **Notability**
+    - one of the first Yugoslav bands to achieve major mainstream popularity, the first Yugoslav supergroup, and one of the most prominent and influential bands in Yugoslav rock history
+- **Daltoni**
+  - **Identity**
+    - Serbian and former Yugoslav rock band from Niš ("The Daltons")
+  - **Notability**
+    - one of the pioneers of the former Yugoslav rock scene
+- **Dalton Gang**
+  - **Identity**
+    - group of outlaws in the American Old West, 1890–1892, also known as The Dalton Brothers (three members were brothers)
+  - **Specialty**
+    - bank and train robberies
+  - **Downfall**
+    - during an attempted bank robbery in Coffeyville, Kansas in 1892, two brothers and two other gang members were killed
+  - **Aftermath**
+    - Emmett survived, was captured, tried, and convicted, and was paroled after serving 14 years in prison

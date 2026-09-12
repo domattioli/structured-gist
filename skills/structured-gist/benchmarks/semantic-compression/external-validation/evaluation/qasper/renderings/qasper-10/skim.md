@@ -1,0 +1,44 @@
+- **Fast-prototyped dialogue comprehension for nurse-patient calls**
+  - **Problem**: extract clinical symptom info from nurse-patient phone conversations
+  - **Gap**: almost no annotated human-human healthcare dialogue data exists
+  - **Approach**: build a simulated dialogue dataset, train a QA model on it
+  - **Result**: over 80% F1 on held-out real-world nurse-patient conversations
+- **Human-human spoken conversation challenges**
+  - a. frequent zero anaphora / omitted references
+  - b. thinking aloud leading to self-contradiction
+  - c. topic drift, hard to detect without written-text cues
+- **Dialogue comprehension task**
+  - a. input: multi-turn dialogue + symptom/attribute query
+  - b. output: extracted answer span or "No Answer"
+  - c. five clinical attributes (time, trigger, severity, frequency, location)
+- **Related work**
+  - a. reading comprehension datasets and models (SQuAD, HotpotQA, CoQA, QuAC)
+  - b. dialogue language understanding vs. scarce dialogue comprehension work
+  - c. healthcare NLP, mostly social media/EHR-focused, rarely human-human dialogue
+- **Data preparation**
+  - a. 353 real nurse-patient-caregiver telemonitoring conversations, 41 hours
+  - b. verbatim transcription, anonymization, clinical annotation
+- **Linguistic characterization on seed data**
+  - a. 1,200 sampled turns manually categorized
+  - b. inquiry types and response types identified (open-ended, reconfirmation, revision, topic drift, etc.)
+- **Simulated dataset construction**
+  - a. template construction from categorized seed utterances
+  - b. five-step generation framework: topic selection, template selection, expression enrichment, dialogue-state tracking, sample annotation
+- **Model design**
+  - a. bi-directional attention pointer network
+  - b. answerable classifier with a "[SEQ]" no-answer tag
+- **Implementation details**
+  - a. Adam optimizer, GloVe embeddings, dropout/L2 regularization
+- **Evaluation setup**
+  - a. Base Set, Augmented Set (with unseen symptoms), Real-World Set
+- **Results**
+  - a. 100k training samples optimal
+  - b. generalizes to out-of-distribution symptoms
+  - c. 78.23 EM / 80.18 F1 on Real-World Set
+  - d. error sources: expression sparsity, chit-chat, causal-relation elaboration
+- **Ablation analysis**
+  - a. removing bi-attention hurts performance
+  - b. removing pretrained GloVe embeddings hurts performance
+- **Conclusion**
+
+  A linguistically-informed simulated dialogue dataset lets a QA-style comprehension model generalize to real nurse-patient conversations despite minimal real annotated data; future work targets complex reasoning, summarization, and virtual nurse applications.

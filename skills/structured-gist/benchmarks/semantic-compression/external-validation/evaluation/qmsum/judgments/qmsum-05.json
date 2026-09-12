@@ -1,0 +1,81 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Grad D suggests treating discourse cues as evidence for an underlying task plan, illustrated by inferring \"Track seven\" just from a traveler saying \"New York\" at a ticket counter.", "source_supported": false},
+      {"text": "the group acknowledges all current probabilities are hand-guessed rather than learned from data, with some combinations nonsensical; real data is needed to fix this.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Skim gives only bare headers under 'SmartKom discourse model' (Role, Query interface) with no elaborating content, so no actual answer to 'What was the importance of SmartKom?' can be constructed from skim alone.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "partial", "evidence": "SmartKom's discourse-history module is the system's memory of the whole dialogue -- who said what, what was shown on screen (captures the memory function, but omits the hand-off from the parser and the 'one of the most elaborate modules' framing)"},
+      "f3": {"status": "retained", "evidence": "it resolves anaphora and fills in information omitted in later turns."},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "what was shown on screen (captures the screen aspect generally, but not the gesture-coordination or storing-location-on-screen specifics)"},
+      "f6": {"status": "retained", "evidence": "the middle layer can query the discourse model for whether a cue was discussed within some configurable lookback depth, which the group agrees to bound for practicality."}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "partial", "evidence": "the Role bullet links memory ('is the system's memory...') to anaphora/gap-filling ('and it resolves anaphora and fills in...') explicitly, but the Query interface bullet (f6) sits in a separate bullet with no explicit causal language tying the query capability back to the memory function"}
+    },
+    "hallucinations": [
+      {"text": "Feature slide recap: features listed (prosody, discourse, verb choice, landmark-iness, nice walls, context, time of day) and landmark-iness vs saliency discussion.", "source_supported": true},
+      {"text": "Belief-net rationale: flat structure rejected (pain to hand-set, exponential in N, unworkable for learning), middle layer added (hidden concepts: tourist/errand/hurry/final destination/closed), output modes (Vista, Tango, Enter).", "source_supported": true},
+      {"text": "JavaBayes demo: evidence set (admission fee false, nice walls true, night), query result (slightly biased toward Tango), earlier failure (previous day's demo stuck on Tango, attributed to hand-tuned probabilities).", "source_supported": true},
+      {"text": "Enterable node test: statue vs celebrity's house motivating case, binary 'has door' node added live in JavaBayes.", "source_supported": true},
+      {"text": "JavaBayes tool assessment: pros (free, has a GUI), cons (clunky interface, unclear if it does learning), underlying format (text file of ordered number lists, considering a script, Srini as contact, possible XML format).", "source_supported": true},
+      {"text": "Middle-layer regions plan: adding more direct links would make the network 'spider-web-ish'; proposed fix is separate regions (discourse cues, syntactic info, context) each with its own small hidden middle layer feeding into the shared task-based middle layer.", "source_supported": true},
+      {"text": "Grad D suggests treating discourse cues as evidence for an underlying task plan the person is following, illustrated by inferring \"Track seven\" just from a traveler saying \"New York\" at a ticket counter -- a cue can support a whole multi-step plan, not just one node.", "source_supported": false},
+      {"text": "Ad-hoc probabilities: the group acknowledges all current probabilities are hand-guessed rather than learned from data, with the table already running to over a hundred entries and some combinations nonsensical; real data is needed to fix this.", "source_supported": true},
+      {"text": "Next steps: ask Srini about alternative Bayes-net packages and the possible XML format, likely at Wednesday's meeting; over the coming week the three of them will segment the observed features into the proposed regions.", "source_supported": true},
+      {"text": "Data collection plan: Fey has agreed to act as the wizard; a trial run is planned for Friday afternoon; Liz volunteered to be the first test subject; existing Munich data is too simple with no metaphor, so the new collection aims to elicit richer language.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "SmartKom's importance, per standard, is that its discourse-history module serves as the system's memory of the whole dialogue (who said what, what was shown on screen), resolving anaphora and filling in information omitted from later turns, and it can be queried for whether a cue was discussed within a configurable lookback depth. This matches the reference answer's core point (a discourse model useful for querying and anaphora resolution) but omits the reference's caveat that SmartKom 'does not code for intentions as specified in this task.'", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "partial", "evidence": "SmartKom's discourse-history module is the system's memory of the whole dialogue -- who said what, what was shown on screen (same as standard; omits the parser hand-off and 'most elaborate modules' framing)"},
+      "f3": {"status": "retained", "evidence": "it resolves anaphora and fills in information omitted in later turns."},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "what was shown on screen (same as standard; no gesture-coordination or on-screen-location-storage specifics)"},
+      "f6": {"status": "retained", "evidence": "the middle layer can query the discourse model for whether a cue (like admission fee) was discussed within some configurable lookback depth, which the group agrees to bound for practicality rather than searching the entire conversation history."}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "partial", "evidence": "same as standard -- memory and anaphora/gap-filling are linked explicitly in one sentence, but the query-interface bullet is not explicitly tied back to the memory function by causal language"}
+    },
+    "hallucinations": [
+      {"text": "Feature slide recap: features listed and landmark-iness vs saliency discussion (an object can be salient without being a landmark; landmark-iness means touristic, not navigational, status).", "source_supported": true},
+      {"text": "Belief-net rationale: flat structure rejected, middle layer added, output modes (Vista, Tango, Enter).", "source_supported": true},
+      {"text": "JavaBayes demo: evidence set, query result, earlier failure attributed to hand-tuned probabilities.", "source_supported": true},
+      {"text": "Enterable node test: statue vs Tom Cruise's house motivating case; binary 'has door' node added live; tooling glitch where adding the node overwrote an existing probability function, forcing a reload of the saved network file.", "source_supported": true},
+      {"text": "JavaBayes tool assessment: pros, cons, and underlying format (text file, script idea, Srini as contact, possible XML format).", "source_supported": true},
+      {"text": "Middle-layer regions plan: 'spider-web-ish' problem, proposed fix of separate regions each with its own hidden middle layer, and a worked example (several discourse cues funneling into one 'entrance requirements' node).", "source_supported": true},
+      {"text": "Grad D suggests treating discourse cues as evidence for an underlying task plan the person is following (classic AI plan recognition), illustrated by inferring \"Track seven\" just from a traveler saying \"New York\" at a ticket counter -- a cue can support a whole multi-step plan, not just one node.", "source_supported": false},
+      {"text": "Ad-hoc probabilities: hand-guessed probabilities, table running to over a hundred entries, some nonsensical combinations; real data needed.", "source_supported": true},
+      {"text": "Next steps: ask Srini about alternative packages/XML format at Wednesday's meeting; segment regions over the coming week.", "source_supported": true},
+      {"text": "Data collection plan: Fey as wizard with a Friday trial run; Liz as first subject; rationale that existing Munich data is too simple/command-line with no metaphor, so the new collection aims for richer language and to compare human-computer vs human-human pragmatics.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Deep gives the same account as standard: SmartKom's discourse-history module is the system's memory of the whole dialogue, resolving anaphora and filling in omitted information, and can be queried for whether a specific cue (e.g. admission fee) was discussed within a configurable lookback depth. This matches the reference answer's core claim (discourse model useful for querying and anaphora resolution) but, like standard, omits the reference's caveat that SmartKom 'does not code for intentions as specified in this task.'", "verdict": "partial"}
+    }
+  }
+}
