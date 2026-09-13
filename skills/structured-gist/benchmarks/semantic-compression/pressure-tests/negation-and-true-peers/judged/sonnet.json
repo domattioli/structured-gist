@@ -420,6 +420,55 @@
         "evidence": "genuinely independent of each other: none is a sub-part of another, none depends on another finishing first, and they share no theme beyond the quarter",
         "status": "retained"
       }
+    },
+    "node_paths": {
+      "facts": {
+        "f1": {"located": [["Four workstreams", "Independence"]]},
+        "f2": {"located": [["Four workstreams", "Independence"]]},
+        "f3": {"located": [["Four workstreams", "Independence"]]},
+        "f4": {"located": [["Security audit", "Scope"]]},
+        "f5": {"located": [["Security audit", "Exclusion"]]},
+        "f6": {"located": [["Security audit", "Exclusion"]]},
+        "f7": {"located": [["Security audit", "Findings"]]},
+        "f8": {"located": [["Docs overhaul", "Scope"]]},
+        "f9": {"located": [["Docs overhaul", "Cause"]]},
+        "f10": {"located": [["Docs overhaul", "Relation to audit"]]},
+        "f11": {"located": [["Docs overhaul", "Relation to audit"]]},
+        "f12": {"located": [["Performance investigation", "Symptom"]]},
+        "f13": {"located": [["Performance investigation", "Database"]]},
+        "f14": {"located": [["Performance investigation", "Database"]]},
+        "f15": {"located": [["Performance investigation", "Database"]]},
+        "f16": {"located": [["Performance investigation", "Root cause"]]},
+        "f17": {"located": [["Hiring push", "Reality"]]},
+        "f18": {"located": [["Hiring push", "Reality"]]},
+        "f19": {"located": [["Hiring push", "Relation to workstreams"]]},
+        "f20": {"located": [["Hiring push", "Relation to workstreams"]]}
+      },
+      "relations": {
+        "r1": {
+          "f13": {"located": [["Performance investigation", "Database"]]},
+          "f14": {"located": [["Performance investigation", "Database"]]},
+          "f15": {"located": [["Performance investigation", "Database"]]},
+          "f16": {"located": [["Performance investigation", "Root cause"]]}
+        },
+        "r2": {
+          "f8": {"located": [["Docs overhaul", "Scope"]]},
+          "f4": {"located": [["Security audit", "Scope"]]},
+          "f10": {"located": [["Docs overhaul", "Relation to audit"]]},
+          "f11": {"located": [["Docs overhaul", "Relation to audit"]]}
+        },
+        "r3": {
+          "f17": {"located": [["Hiring push", "Reality"]]},
+          "f18": {"located": [["Hiring push", "Reality"]]},
+          "f19": {"located": [["Hiring push", "Relation to workstreams"]]},
+          "f20": {"located": [["Hiring push", "Relation to workstreams"]]}
+        },
+        "r4": {
+          "f1": {"located": [["Four workstreams", "Independence"]]},
+          "f2": {"located": [["Four workstreams", "Independence"]]},
+          "f3": {"located": [["Four workstreams", "Independence"]]}
+        }
+      }
     }
   }
 }

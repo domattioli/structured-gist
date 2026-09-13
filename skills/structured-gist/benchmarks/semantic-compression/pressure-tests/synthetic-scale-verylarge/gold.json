@@ -386,6 +386,7 @@
     {
       "id": "r1",
       "type": "causal",
+      "ordered": true,
       "text": "the specific stale-state timing bug in the retry check (f6) caused the duplicate charges (f5)",
       "fact_ids": [
         "f6",
@@ -396,6 +397,7 @@
     {
       "id": "r2",
       "type": "contrast_supersession",
+      "ordered": false,
       "text": "unlike the other five checkout alerts, alert 4's normal-looking error rate and latency metrics meant monitoring did not catch it (f7) \u2014 the failure mode was invisible to the exact signals the team relies on for the other five",
       "fact_ids": [
         "f7",
@@ -410,6 +412,7 @@
     {
       "id": "r3",
       "type": "comparative_outcome",
+      "ordered": false,
       "text": "of the six checkout-service alerts (f2, f3, f4, f5, f14, f15), only the buried fourth one (f5) carried real financial impact, remained unresolved in code, and evaded monitoring (f16, f17, f18) \u2014 the other five were routine and fully resolved",
       "fact_ids": [
         "f2",
@@ -428,6 +431,7 @@
     {
       "id": "r4",
       "type": "causal",
+      "ordered": true,
       "text": "the support ticket that surfaced the duplicate charge (f8) led directly to confirming the blast radius and issuing refunds the same day (f9)",
       "fact_ids": [
         "f8",
@@ -438,6 +442,7 @@
     {
       "id": "r5",
       "type": "causal",
+      "ordered": false,
       "text": "identifying the missing idempotency check as root cause (f10) led to a fix being designed but not yet shipped (f11), which is why it remains the team's top-priority open item (f12) specifically because the race condition is still live (f13)",
       "fact_ids": [
         "f10",
@@ -450,6 +455,7 @@
     {
       "id": "r6",
       "type": "dependency",
+      "ordered": false,
       "text": "v3.14.3 (f24, f25) depends on v3.14.1 (f22) \u2014 it exists only as a follow-up correction to v3.14.1's own change, unlike v3.14.2 and v3.14.4 which stand alone",
       "fact_ids": [
         "f22",
@@ -462,6 +468,7 @@
     {
       "id": "r7",
       "type": "dependency",
+      "ordered": false,
       "text": "v3.14.2 and v3.14.4 (f23, f27) are independent of v3.14.1/v3.14.3 and of each other, unlike the v3.14.1-to-v3.14.3 dependency",
       "fact_ids": [
         "f23",
@@ -473,6 +480,7 @@
     {
       "id": "r8",
       "type": "comparative_outcome",
+      "ordered": false,
       "text": "the five connector breakages (f30-f34) are near-identical instances of the same schema-drift failure class (f29), differing only in which connector, which day, and which column changed",
       "fact_ids": [
         "f29",
@@ -487,6 +495,7 @@
     {
       "id": "r9",
       "type": "causal",
+      "ordered": false,
       "text": "the same failure class recurring five times in five days across connectors (f30-f34) caused a follow-up detection-tooling item to be opened (f35), which has not started (f36)",
       "fact_ids": [
         "f30",
@@ -502,6 +511,7 @@
     {
       "id": "r10",
       "type": "causal",
+      "ordered": false,
       "text": "the runbook's stale table of contents (f40) is why several sections were effectively unreachable, which the reorganization (f41, f42) addressed",
       "fact_ids": [
         "f40",
@@ -513,6 +523,7 @@
     {
       "id": "r11",
       "type": "causal",
+      "ordered": false,
       "text": "a new hire's difficulty finding the right section under pressure (f44) caused the runbook reorganization (f38, f41), not any actual mishandled-alert incident (f45)",
       "fact_ids": [
         "f44",
@@ -524,6 +535,7 @@
     {
       "id": "r12",
       "type": "contrast_supersession",
+      "ordered": false,
       "text": "the reorganization changed only file layout and indexing (f41, f42); it explicitly did not change any alert-handling guidance content (f43)",
       "fact_ids": [
         "f41",

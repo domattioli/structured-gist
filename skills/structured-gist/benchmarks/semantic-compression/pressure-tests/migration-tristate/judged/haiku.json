@@ -367,6 +367,332 @@
       }
     },
     "hallucinations": [],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Platform migration status",
+            "billing-service \u2014 fully migrated",
+            "Status details",
+            "cutover completed last month"
+          ]
+        },
+        "f10": {
+          "omitted": true
+        },
+        "f11": {
+          "located": [
+            "Platform migration status",
+            "search-service \u2014 attempted then reverted"
+          ]
+        },
+        "f12": {
+          "multi_node": [
+            [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted",
+              "Attempt timeline",
+              "attempted two months ago"
+            ],
+            [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted",
+              "Attempt timeline",
+              "ran for three weeks"
+            ]
+          ]
+        },
+        "f13": {
+          "located": [
+            "Platform migration status",
+            "search-service \u2014 attempted then reverted",
+            "Failure reason",
+            "users encountered data-consistency bugs; search results lagged behind database"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Platform migration status",
+            "search-service \u2014 attempted then reverted"
+          ]
+        },
+        "f15": {
+          "omitted": true
+        },
+        "f16": {
+          "located": [
+            "Platform migration status",
+            "reporting-service \u2014 in-progress"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Platform migration status",
+            "reporting-service \u2014 in-progress",
+            "Hybrid state",
+            "some endpoints already cutover"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Platform migration status",
+            "reporting-service \u2014 in-progress",
+            "Hybrid state",
+            "rest still on old infrastructure"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Platform migration status",
+            "reporting-service \u2014 in-progress",
+            "Hybrid state",
+            "running both simultaneously"
+          ]
+        },
+        "f2": {
+          "multi_node": [
+            [
+              "Platform migration status",
+              "billing-service \u2014 fully migrated",
+              "Status details",
+              "old infrastructure decommissioned"
+            ],
+            [
+              "Platform migration status",
+              "billing-service \u2014 fully migrated",
+              "Status details",
+              "no fallback path available"
+            ]
+          ]
+        },
+        "f3": {
+          "located": [
+            "Platform migration status",
+            "notifications-service \u2014 scheduled for next quarter"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Platform migration status",
+            "notifications-service \u2014 scheduled for next quarter"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Platform migration status",
+            "notifications-service \u2014 scheduled for next quarter",
+            "Timing constraint",
+            "will start after billing lessons are folded into the migration runbook"
+          ]
+        },
+        "f6": {
+          "omitted": true
+        },
+        "f7": {
+          "located": [
+            "Platform migration status",
+            "auth-service \u2014 explicitly not migrating"
+          ]
+        },
+        "f8": {
+          "multi_node": [
+            [
+              "Platform migration status",
+              "auth-service \u2014 explicitly not migrating",
+              "Rationale",
+              "contains bespoke compliance logic"
+            ],
+            [
+              "Platform migration status",
+              "auth-service \u2014 explicitly not migrating",
+              "Rationale",
+              "expensive and risky to port"
+            ]
+          ]
+        },
+        "f9": {
+          "located": [
+            "Platform migration status",
+            "auth-service \u2014 explicitly not migrating",
+            "Rationale",
+            "risk not justified by benefit"
+          ]
+        }
+      },
+      "relations": {
+        "r1": {
+          "f1": {
+            "located": [
+              "Platform migration status",
+              "billing-service \u2014 fully migrated",
+              "Status details",
+              "cutover completed last month"
+            ]
+          },
+          "f4": {
+            "located": [
+              "Platform migration status",
+              "notifications-service \u2014 scheduled for next quarter"
+            ]
+          },
+          "f5": {
+            "located": [
+              "Platform migration status",
+              "notifications-service \u2014 scheduled for next quarter",
+              "Timing constraint",
+              "will start after billing lessons are folded into the migration runbook"
+            ]
+          }
+        },
+        "r2": {
+          "f10": {
+            "omitted": true
+          },
+          "f7": {
+            "located": [
+              "Platform migration status",
+              "auth-service \u2014 explicitly not migrating"
+            ]
+          },
+          "f8": {
+            "multi_node": [
+              [
+                "Platform migration status",
+                "auth-service \u2014 explicitly not migrating",
+                "Rationale",
+                "contains bespoke compliance logic"
+              ],
+              [
+                "Platform migration status",
+                "auth-service \u2014 explicitly not migrating",
+                "Rationale",
+                "expensive and risky to port"
+              ]
+            ]
+          },
+          "f9": {
+            "located": [
+              "Platform migration status",
+              "auth-service \u2014 explicitly not migrating",
+              "Rationale",
+              "risk not justified by benefit"
+            ]
+          }
+        },
+        "r3": {
+          "f11": {
+            "located": [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted"
+            ]
+          },
+          "f13": {
+            "located": [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted",
+              "Failure reason",
+              "users encountered data-consistency bugs; search results lagged behind database"
+            ]
+          },
+          "f14": {
+            "located": [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted"
+            ]
+          }
+        },
+        "r4": {
+          "f1": {
+            "located": [
+              "Platform migration status",
+              "billing-service \u2014 fully migrated",
+              "Status details",
+              "cutover completed last month"
+            ]
+          },
+          "f11": {
+            "located": [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted"
+            ]
+          },
+          "f14": {
+            "located": [
+              "Platform migration status",
+              "search-service \u2014 attempted then reverted"
+            ]
+          },
+          "f2": {
+            "multi_node": [
+              [
+                "Platform migration status",
+                "billing-service \u2014 fully migrated",
+                "Status details",
+                "old infrastructure decommissioned"
+              ],
+              [
+                "Platform migration status",
+                "billing-service \u2014 fully migrated",
+                "Status details",
+                "no fallback path available"
+              ]
+            ]
+          }
+        },
+        "r5": {
+          "f3": {
+            "located": [
+              "Platform migration status",
+              "notifications-service \u2014 scheduled for next quarter"
+            ]
+          },
+          "f4": {
+            "located": [
+              "Platform migration status",
+              "notifications-service \u2014 scheduled for next quarter"
+            ]
+          },
+          "f7": {
+            "located": [
+              "Platform migration status",
+              "auth-service \u2014 explicitly not migrating"
+            ]
+          }
+        },
+        "r6": {
+          "f16": {
+            "located": [
+              "Platform migration status",
+              "reporting-service \u2014 in-progress"
+            ]
+          },
+          "f17": {
+            "located": [
+              "Platform migration status",
+              "reporting-service \u2014 in-progress",
+              "Hybrid state",
+              "some endpoints already cutover"
+            ]
+          },
+          "f18": {
+            "located": [
+              "Platform migration status",
+              "reporting-service \u2014 in-progress",
+              "Hybrid state",
+              "rest still on old infrastructure"
+            ]
+          },
+          "f19": {
+            "located": [
+              "Platform migration status",
+              "reporting-service \u2014 in-progress",
+              "Hybrid state",
+              "running both simultaneously"
+            ]
+          }
+        }
+      }
+    },
     "questions": {
       "q1": {
         "answer_given": "auth-service",

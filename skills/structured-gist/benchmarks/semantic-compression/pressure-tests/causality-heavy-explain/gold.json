@@ -180,6 +180,7 @@
         "f3",
         "f4"
       ],
+      "ordered": false,
       "source_quote": "a slow downstream call meant the webhook sender's HTTP connection stayed open for that same several seconds"
     },
     {
@@ -190,6 +191,7 @@
         "f4",
         "f5"
       ],
+      "ordered": true,
       "source_quote": "some of those calls ran long enough to exceed the sender's timeout"
     },
     {
@@ -201,6 +203,7 @@
         "f6",
         "f7"
       ],
+      "ordered": false,
       "source_quote": "every timeout produced a retry"
     },
     {
@@ -212,6 +215,7 @@
         "f8",
         "f9"
       ],
+      "ordered": true,
       "source_quote": "retries didn't relieve pressure on the downstream API, they added to it"
     },
     {
@@ -222,6 +226,7 @@
         "f9",
         "f10"
       ],
+      "ordered": true,
       "source_quote": "which pushed more calls past the timeout threshold and produced still more retries"
     },
     {
@@ -233,6 +238,7 @@
         "f11",
         "f12"
       ],
+      "ordered": false,
       "source_quote": "during peak traffic the same feedback loop ran hot enough to cascade"
     },
     {
@@ -244,6 +250,7 @@
         "f13",
         "f14"
       ],
+      "ordered": true,
       "source_quote": "That cascade is what drove the decision to introduce a message queue in front of the enrichment step"
     },
     {
@@ -258,6 +265,7 @@
         "f19",
         "f20"
       ],
+      "ordered": true,
       "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"
     }
   ],

@@ -377,6 +377,55 @@
         "evidence": "stopped mid-rollout after a health check failure; still running previous config",
         "status": "retained"
       }
+    },
+    "node_paths": {
+      "facts": {
+        "f1": {"located": ["Timeout-config rollouts", "A. Service A", "Timeout 30 seconds → 5 seconds, commit `abc1234`"]},
+        "f2": {"located": ["Timeout-config rollouts", "A. Service A", "Timeout 30 seconds → 5 seconds, commit `abc1234`"]},
+        "f3": {"located": ["Timeout-config rollouts", "A. Service A", "was masking slow downstream failures; shorter timeout forces faster failure detection"]},
+        "f4": {"located": ["Timeout-config rollouts", "A. Service A", "was masking slow downstream failures; shorter timeout forces faster failure detection"]},
+        "f5": {"located": ["Timeout-config rollouts", "B. Service B", "Timeout 30 seconds → 45 seconds, commit `def5678`"]},
+        "f6": {"located": ["Timeout-config rollouts", "B. Service B", "Timeout 30 seconds → 45 seconds, commit `def5678`"]},
+        "f7": {"located": ["Timeout-config rollouts", "B. Service B", "was timing out legitimate slow requests during nightly batch jobs; raised for headroom"]},
+        "f8": {"located": ["Timeout-config rollouts", "B. Service B", "was timing out legitimate slow requests during nightly batch jobs; raised for headroom"]},
+        "f9": {"located": ["Timeout-config rollouts", "C. Service C", "Version 2.3.1, seconds → duration string"]},
+        "f10": {"located": ["Timeout-config rollouts", "C. Service C", "Version 2.3.1, seconds → duration string"]},
+        "f11": {"located": ["Timeout-config rollouts", "C. Service C", "functionally the same 30-second effective timeout, just reconfigured"]},
+        "f12": {"located": ["Timeout-config rollouts", "D. Service D", "Aborted, target version 2.4.0-rc1"]},
+        "f13": {"located": ["Timeout-config rollouts", "D. Service D", "stopped mid-rollout after a health check failure; still running previous config"]},
+        "f14": {"located": ["Timeout-config rollouts", "D. Service D", "stopped mid-rollout after a health check failure; still running previous config"]}
+      },
+      "relations": {
+        "r1": {
+          "f1": {"located": ["Timeout-config rollouts", "A. Service A", "Timeout 30 seconds → 5 seconds, commit `abc1234`"]},
+          "f5": {"located": ["Timeout-config rollouts", "B. Service B", "Timeout 30 seconds → 45 seconds, commit `def5678`"]}
+        },
+        "r2": {
+          "f3": {"located": ["Timeout-config rollouts", "A. Service A", "was masking slow downstream failures; shorter timeout forces faster failure detection"]},
+          "f1": {"located": ["Timeout-config rollouts", "A. Service A", "Timeout 30 seconds → 5 seconds, commit `abc1234`"]},
+          "f4": {"located": ["Timeout-config rollouts", "A. Service A", "was masking slow downstream failures; shorter timeout forces faster failure detection"]}
+        },
+        "r3": {
+          "f7": {"located": ["Timeout-config rollouts", "B. Service B", "was timing out legitimate slow requests during nightly batch jobs; raised for headroom"]},
+          "f5": {"located": ["Timeout-config rollouts", "B. Service B", "Timeout 30 seconds → 45 seconds, commit `def5678`"]},
+          "f8": {"located": ["Timeout-config rollouts", "B. Service B", "was timing out legitimate slow requests during nightly batch jobs; raised for headroom"]}
+        },
+        "r4": {
+          "f9": {"located": ["Timeout-config rollouts", "C. Service C", "Version 2.3.1, seconds → duration string"]},
+          "f10": {"located": ["Timeout-config rollouts", "C. Service C", "Version 2.3.1, seconds → duration string"]},
+          "f11": {"located": ["Timeout-config rollouts", "C. Service C", "functionally the same 30-second effective timeout, just reconfigured"]}
+        },
+        "r5": {
+          "f2": {"located": ["Timeout-config rollouts", "A. Service A", "Timeout 30 seconds → 5 seconds, commit `abc1234`"]},
+          "f6": {"located": ["Timeout-config rollouts", "B. Service B", "Timeout 30 seconds → 45 seconds, commit `def5678`"]},
+          "f1": {"located": ["Timeout-config rollouts", "A. Service A", "Timeout 30 seconds → 5 seconds, commit `abc1234`"]},
+          "f5": {"located": ["Timeout-config rollouts", "B. Service B", "Timeout 30 seconds → 45 seconds, commit `def5678`"]}
+        },
+        "r6": {
+          "f13": {"located": ["Timeout-config rollouts", "D. Service D", "stopped mid-rollout after a health check failure; still running previous config"]},
+          "f14": {"located": ["Timeout-config rollouts", "D. Service D", "stopped mid-rollout after a health check failure; still running previous config"]}
+        }
+      }
     }
   }
 }

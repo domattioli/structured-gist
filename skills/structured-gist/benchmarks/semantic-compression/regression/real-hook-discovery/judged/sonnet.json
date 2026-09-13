@@ -71,6 +71,51 @@
       "q6": {"answer_given": "Before — validate frontmatter, then symlink.", "verdict": "correct"},
       "q7": {"answer_given": "77.", "verdict": "correct"},
       "q8": {"answer_given": "Nothing manual — updates happen automatically at the next bootstrap, no manual resync step needed.", "verdict": "correct"}
+    },
+    "node_paths": {
+      "facts": {
+        "f1": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+        "f2": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+        "f3": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+        "f4": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+        "f5": {"multi_node": [["Discovery gap", "Root cause", "harness scans `~/.claude/skills/` once, at startup"], ["Discovery gap", "Root cause", "harness scans `~/.claude/skills/` once, at startup", "no hot reload, so a missed skill never showed up the rest of the session"]]},
+        "f6": {"located": [["Discovery gap", "Root cause", "harness scans `~/.claude/skills/` once, at startup", "no hot reload, so a missed skill never showed up the rest of the session"]]},
+        "f7": {"located": [["The fix", "walk repo for `skills/<name>/SKILL.md`"]]},
+        "f8": {"located": [["The fix", "walk repo for `skills/<name>/SKILL.md`", "maxdepth 2 skips nested `tests/fixtures/` dirs"]]},
+        "f9": {"located": [["The fix", "walk repo for `skills/<name>/SKILL.md`", "maxdepth 2 skips nested `tests/fixtures/` dirs"]]},
+        "f10": {"located": [["The fix", "validate frontmatter, then symlink into `~/.claude/skills/`"]]},
+        "f11": {"located": [["The fix", "validate frontmatter, then symlink into `~/.claude/skills/`", "skips names already linked rather than clobbering"]]},
+        "f12": {"multi_node": [["The fix", "verify each new link"], ["The fix", "verify each new link", "confirms it resolves and its version parses, so broken links fail loudly"]]},
+        "f13": {"located": [["The fix", "verify each new link", "confirms it resolves and its version parses, so broken links fail loudly"]]},
+        "f14": {"located": [["Result", "77 skills load at session start"]]},
+        "f15": {"multi_node": [["Result", "consumer repos get skill updates automatically"], ["Result", "consumer repos get skill updates automatically", "next bootstrap; no manual resync step needed"]]}
+      },
+      "relations": {
+        "r1": {
+          "f1": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+          "f2": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+          "f3": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]},
+          "f4": {"located": [["Discovery gap", "Root cause", "load_local_skills assumed `.claude/` layout", "expected a manifest at `.claude/skills.manifest.json` and skill dirs under `.claude/skills/`, but this repo's skills live top-level, in `skills/`"]]}
+        },
+        "r2": {
+          "f5": {"multi_node": [["Discovery gap", "Root cause", "harness scans `~/.claude/skills/` once, at startup"], ["Discovery gap", "Root cause", "harness scans `~/.claude/skills/` once, at startup", "no hot reload, so a missed skill never showed up the rest of the session"]]},
+          "f6": {"located": [["Discovery gap", "Root cause", "harness scans `~/.claude/skills/` once, at startup", "no hot reload, so a missed skill never showed up the rest of the session"]]}
+        },
+        "r3": {
+          "f10": {"located": [["The fix", "validate frontmatter, then symlink into `~/.claude/skills/`"]]},
+          "f11": {"located": [["The fix", "validate frontmatter, then symlink into `~/.claude/skills/`", "skips names already linked rather than clobbering"]]}
+        },
+        "r4": {
+          "f11": {"located": [["The fix", "validate frontmatter, then symlink into `~/.claude/skills/`", "skips names already linked rather than clobbering"]]},
+          "f12": {"multi_node": [["The fix", "verify each new link"], ["The fix", "verify each new link", "confirms it resolves and its version parses, so broken links fail loudly"]]},
+          "f13": {"located": [["The fix", "verify each new link", "confirms it resolves and its version parses, so broken links fail loudly"]]}
+        },
+        "r5": {
+          "f7": {"located": [["The fix", "walk repo for `skills/<name>/SKILL.md`"]]},
+          "f14": {"located": [["Result", "77 skills load at session start"]]},
+          "f15": {"multi_node": [["Result", "consumer repos get skill updates automatically"], ["Result", "consumer repos get skill updates automatically", "next bootstrap; no manual resync step needed"]]}
+        }
+      }
     }
   },
   "deep": {

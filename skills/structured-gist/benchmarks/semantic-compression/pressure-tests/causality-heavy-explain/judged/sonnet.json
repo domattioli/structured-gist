@@ -462,6 +462,73 @@
         "evidence": "no timeout means no retry",
         "status": "retained"
       }
+    },
+    "node_paths": {
+      "facts": {
+        "f1": {"located": [["Synchronous design"]]},
+        "f2": {"located": [["Synchronous design", "Handler behavior", "called the enrichment API directly, held the HTTP request open until it returned"]]},
+        "f3": {"located": [["Synchronous design", "Downstream API", "already slow under normal conditions, often taking several seconds to respond"]]},
+        "f4": {"located": [["Synchronous design", "Direct effects", "connection held open"]]},
+        "f5": {"located": [["Synchronous design", "Direct effects", "sender timeouts"]]},
+        "f6": {"located": [["Synchronous design", "Direct effects", "automatic retry"]]},
+        "f7": {"located": [["Synchronous design", "Direct effects", "automatic retry"]]},
+        "f8": {"omitted": true},
+        "f9": {"located": [["Synchronous design", "Direct effects", "retry adds load"]]},
+        "f10": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]},
+        "f11": {"located": [["Feedback loop", "ordinary traffic", "loop stays small enough to go unnoticed"]]},
+        "f12": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]},
+        "f13": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]},
+        "f14": {"located": [["Queue-based redesign", "Trigger", "the peak-traffic cascade drove the decision to queue enrichment instead of calling it inline"]]},
+        "f15": {"located": [["Queue-based redesign", "New flow", "acknowledge immediately"]]},
+        "f16": {"located": [["Queue-based redesign", "New flow", "hand off to worker"]]},
+        "f17": {"located": [["Queue-based redesign", "Effect", "receiver latency no longer depends on enrichment latency, so the two are decoupled"]]},
+        "f18": {"located": [["Retry storm eliminated", "no timeout", "a slow call no longer produces a sender-facing timeout"]]},
+        "f19": {"located": [["Retry storm eliminated", "no retry", "no timeout means no retry"]]},
+        "f20": {"located": [["Retry storm eliminated", "failure mode gone", "the retry-storm failure mode is gone entirely, not just reduced"]]}
+      },
+      "relations": {
+        "r1": {
+          "f2": {"located": [["Synchronous design", "Handler behavior", "called the enrichment API directly, held the HTTP request open until it returned"]]},
+          "f3": {"located": [["Synchronous design", "Downstream API", "already slow under normal conditions, often taking several seconds to respond"]]},
+          "f4": {"located": [["Synchronous design", "Direct effects", "connection held open"]]}
+        },
+        "r2": {
+          "f4": {"located": [["Synchronous design", "Direct effects", "connection held open"]]},
+          "f5": {"located": [["Synchronous design", "Direct effects", "sender timeouts"]]}
+        },
+        "r3": {
+          "f5": {"located": [["Synchronous design", "Direct effects", "sender timeouts"]]},
+          "f6": {"located": [["Synchronous design", "Direct effects", "automatic retry"]]},
+          "f7": {"located": [["Synchronous design", "Direct effects", "automatic retry"]]}
+        },
+        "r4": {
+          "f7": {"located": [["Synchronous design", "Direct effects", "automatic retry"]]},
+          "f8": {"omitted": true},
+          "f9": {"located": [["Synchronous design", "Direct effects", "retry adds load"]]}
+        },
+        "r5": {
+          "f9": {"located": [["Synchronous design", "Direct effects", "retry adds load"]]},
+          "f10": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]}
+        },
+        "r6": {
+          "f10": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]},
+          "f11": {"located": [["Feedback loop", "ordinary traffic", "loop stays small enough to go unnoticed"]]},
+          "f12": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]}
+        },
+        "r7": {
+          "f12": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]},
+          "f13": {"located": [["Feedback loop", "peak traffic", "loop cascades until retries dominate the receiver's capacity"]]},
+          "f14": {"located": [["Queue-based redesign", "Trigger", "the peak-traffic cascade drove the decision to queue enrichment instead of calling it inline"]]}
+        },
+        "r8": {
+          "f15": {"located": [["Queue-based redesign", "New flow", "acknowledge immediately"]]},
+          "f16": {"located": [["Queue-based redesign", "New flow", "hand off to worker"]]},
+          "f17": {"located": [["Queue-based redesign", "Effect", "receiver latency no longer depends on enrichment latency, so the two are decoupled"]]},
+          "f18": {"located": [["Retry storm eliminated", "no timeout", "a slow call no longer produces a sender-facing timeout"]]},
+          "f19": {"located": [["Retry storm eliminated", "no retry", "no timeout means no retry"]]},
+          "f20": {"located": [["Retry storm eliminated", "failure mode gone", "the retry-storm failure mode is gone entirely, not just reduced"]]}
+        }
+      }
     }
   }
 }

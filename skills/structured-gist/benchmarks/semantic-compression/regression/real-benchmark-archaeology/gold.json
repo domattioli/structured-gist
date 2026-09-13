@@ -206,6 +206,7 @@
     {
       "id": "r1",
       "type": "causal",
+      "ordered": false,
       "text": "seconds_to_locate_fact's six-bump measurement failure (f3) caused its retirement and replacement by word_count_reduction_pct (f4, f5), specifically because the latter was the only metric with a real recorded number (f6)",
       "fact_ids": [
         "f3",
@@ -218,6 +219,7 @@
     {
       "id": "r2",
       "type": "comparative_outcome",
+      "ordered": false,
       "text": "KG mode (f11, f12) beats direct-prompt (f10) on composite score and robustness but loses to it on retention (f13)",
       "fact_ids": [
         "f10",
@@ -230,6 +232,7 @@
     {
       "id": "r3",
       "type": "causal",
+      "ordered": true,
       "text": "KG mode's stricter word budgets (f14) caused its lower retention score (f13)",
       "fact_ids": [
         "f14",
@@ -240,6 +243,7 @@
     {
       "id": "r4",
       "type": "causal",
+      "ordered": true,
       "text": "the retention shortfall (f13) drove the \"iterate\" verdict (f15), which meant KG mode was never shipped as default and was excluded from the public scaffold (f16, f17)",
       "fact_ids": [
         "f13",
@@ -252,6 +256,7 @@
     {
       "id": "r5",
       "type": "causal",
+      "ordered": true,
       "text": "the public-scaffold sync process (f19) is why the real scorer code and corpus no longer exist in this checkout (f18)",
       "fact_ids": [
         "f19",
@@ -262,6 +267,7 @@
     {
       "id": "r6",
       "type": "contrast_supersession",
+      "ordered": false,
       "text": "a JSONL claim-list format was proposed to replace the tree-shaped outline format but failed to supersede it, being rejected for recall below threshold (f23)",
       "fact_ids": [
         "f23"

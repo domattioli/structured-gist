@@ -104,11 +104,11 @@
         "verdict": "correct"
       },
       "q3": {
-        "answer_given": "A symptom \u2014 the outline states the slow query and pool exhaustion were both downstream symptoms of the missing index.",
+        "answer_given": "A symptom — the outline states the slow query and pool exhaustion were both downstream symptoms of the missing index.",
         "verdict": "correct"
       },
       "q4": {
-        "answer_given": "No \u2014 it only reduced how often the symptom surfaced and did nothing to fix the query, which kept recurring under peak load.",
+        "answer_given": "No — it only reduced how often the symptom surfaced and did nothing to fix the query, which kept recurring under peak load.",
         "verdict": "correct"
       },
       "q5": {
@@ -116,7 +116,7 @@
         "verdict": "correct"
       },
       "q6": {
-        "answer_given": "Before \u2014 the pool was raised at 14:24, and the secondary investigation that found the slow query continued in parallel afterward.",
+        "answer_given": "Before — the pool was raised at 14:24, and the secondary investigation that found the slow query continued in parallel afterward.",
         "verdict": "correct"
       },
       "q7": {
@@ -214,11 +214,11 @@
         "status": "retained"
       },
       "f4": {
-        "evidence": "raised pool 50\u2192150",
+        "evidence": "raised pool 50→150",
         "status": "partial"
       },
       "f5": {
-        "evidence": "errors dropped \u2014 seemed confirmed",
+        "evidence": "errors dropped — seemed confirmed",
         "status": "retained"
       },
       "f6": {
@@ -230,11 +230,11 @@
         "status": "partial"
       },
       "f8": {
-        "evidence": "connections pinned \u2192 pool starved",
+        "evidence": "connections pinned → pool starved",
         "status": "partial"
       },
       "f9": {
-        "evidence": "connections pinned \u2192 pool starved",
+        "evidence": "connections pinned → pool starved",
         "status": "partial"
       }
     },
@@ -249,11 +249,11 @@
         "verdict": "correct"
       },
       "q3": {
-        "answer_given": "Not stated explicitly, but the mechanism (connections pinned \u2192 pool starved, listed under the secondary probe, with the missing index named as the true cause) implies pool exhaustion was a downstream effect rather than the root cause.",
+        "answer_given": "Not stated explicitly, but the mechanism (connections pinned → pool starved, listed under the secondary probe, with the missing index named as the true cause) implies pool exhaustion was a downstream effect rather than the root cause.",
         "verdict": "partial"
       },
       "q4": {
-        "answer_given": "No \u2014 the outline says the symptom was only reduced and the slow query recurs.",
+        "answer_given": "No — the outline says the symptom was only reduced and the slow query recurs.",
         "verdict": "correct"
       },
       "q5": {
@@ -261,7 +261,7 @@
         "verdict": "correct"
       },
       "q6": {
-        "answer_given": "Before \u2014 the pool-exhaustion theory/raise section is listed before the secondary probe that finds the slow query.",
+        "answer_given": "Before — the pool-exhaustion theory/raise section is listed before the secondary probe that finds the slow query.",
         "verdict": "correct"
       },
       "q7": {
@@ -279,7 +279,7 @@
         "status": "partial"
       },
       "r2": {
-        "evidence": "connections pinned \u2192 pool starved",
+        "evidence": "connections pinned → pool starved",
         "status": "retained"
       },
       "r3": {
@@ -295,7 +295,7 @@
         "status": "partial"
       },
       "r6": {
-        "evidence": "raised pool 50\u2192150",
+        "evidence": "raised pool 50→150",
         "status": "partial"
       }
     }
@@ -401,15 +401,15 @@
         "verdict": "correct"
       },
       "q2": {
-        "answer_given": "A missing index (dropped by a migration), which slowed a query and caused it to hold connections open \u2014 the outline does not state how long before the outage the migration shipped.",
+        "answer_given": "A missing index (dropped by a migration), which slowed a query and caused it to hold connections open — the outline does not state how long before the outage the migration shipped.",
         "verdict": "partial"
       },
       "q3": {
-        "answer_given": "A symptom \u2014 the outline states the slow query and pool exhaustion were both downstream symptoms of the missing index.",
+        "answer_given": "A symptom — the outline states the slow query and pool exhaustion were both downstream symptoms of the missing index.",
         "verdict": "correct"
       },
       "q4": {
-        "answer_given": "No \u2014 it only reduced how often the symptom surfaced and did nothing to fix the query, which kept recurring under peak load.",
+        "answer_given": "No — it only reduced how often the symptom surfaced and did nothing to fix the query, which kept recurring under peak load.",
         "verdict": "correct"
       },
       "q5": {
@@ -417,7 +417,7 @@
         "verdict": "correct"
       },
       "q6": {
-        "answer_given": "Before \u2014 the pool was raised at 14:24, and the secondary investigation that found the slow query continued in parallel afterward.",
+        "answer_given": "Before — the pool was raised at 14:24, and the secondary investigation that found the slow query continued in parallel afterward.",
         "verdict": "correct"
       },
       "q7": {
@@ -453,6 +453,290 @@
       "r6": {
         "evidence": "At 14:24 the pool size was raised from 50 to 150.",
         "status": "retained"
+      }
+    },
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Outage onset",
+            "Start",
+            "The outage began at 14:02."
+          ]
+        },
+        "f2": {
+          "located": [
+            "Outage onset",
+            "First symptom",
+            "On-call's first signal was a wave of database connection errors from the payments service."
+          ]
+        },
+        "f3": {
+          "located": [
+            "Pool-exhaustion theory",
+            "initial diagnosis",
+            "Connection errors were the first visible signal, so on-call assumed pool exhaustion from traffic and spent the first twenty minutes on that assumption."
+          ]
+        },
+        "f4": {
+          "located": [
+            "Pool-exhaustion theory",
+            "stopgap: raise pool",
+            "At 14:24 the pool size was raised from 50 to 150."
+          ]
+        },
+        "f5": {
+          "located": [
+            "Pool-exhaustion theory",
+            "apparent confirmation",
+            "Error rates dropped noticeably afterward, which felt like confirmation that pool exhaustion was the root cause."
+          ]
+        },
+        "f6": {
+          "located": [
+            "Secondary probe",
+            "investigation resumes",
+            "Error rates had not fully returned to normal, so a slower secondary investigation kept going in parallel."
+          ]
+        },
+        "f7": {
+          "located": [
+            "Secondary probe",
+            "slow query found",
+            "Query-level tracing showed the payments service's customer order-history lookup taking upward of eight seconds per call instead of its usual under-100-millisecond time."
+          ]
+        },
+        "f8": {
+          "located": [
+            "Secondary probe",
+            "pool-starving mechanism",
+            "Every slow call held a database connection open for its full duration, and under load enough connections were tied up simultaneously to starve everything else — the actual cause of the pool-exhaustion symptoms on-call had been treating as root cause."
+          ]
+        },
+        "f9": {
+          "located": [
+            "Secondary probe",
+            "pool-starving mechanism",
+            "Every slow call held a database connection open for its full duration, and under load enough connections were tied up simultaneously to starve everything else — the actual cause of the pool-exhaustion symptoms on-call had been treating as root cause."
+          ]
+        },
+        "f10": {
+          "located": [
+            "Root cause",
+            "Reversed chain",
+            "migration drops index"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Root cause",
+            "Reversed chain",
+            "migration drops index"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Root cause",
+            "True cause",
+            "The missing index, not the connection pool, was the actual root cause; both the slow query and the pool exhaustion were downstream symptoms of it."
+          ]
+        },
+        "f13": {
+          "located": [
+            "Root cause",
+            "Reversed chain",
+            "slow query exhausts pool"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Root cause",
+            "Reversed chain",
+            "missing index slows query"
+          ]
+        },
+        "f15": {
+          "multi_node": [
+            [
+              "Stopgap limits",
+              "Symptom reduced",
+              "Raising the pool size only bought headroom, reducing how often the symptom surfaced."
+            ],
+            [
+              "Stopgap limits",
+              "Not fixed",
+              "It did nothing to fix the query itself, and the same slow-query behavior kept recurring under peak load."
+            ]
+          ]
+        },
+        "f16": {
+          "located": [
+            "Stopgap limits",
+            "Not fixed",
+            "It did nothing to fix the query itself, and the same slow-query behavior kept recurring under peak load."
+          ]
+        },
+        "f17": {
+          "located": [
+            "Index fix",
+            "Action",
+            "The missing index was added back later that day."
+          ]
+        },
+        "f18": {
+          "located": [
+            "Index fix",
+            "Result",
+            "Query time returned to under 100 milliseconds and the connection pileup was eliminated entirely."
+          ]
+        },
+        "f19": {
+          "located": [
+            "Postmortem verdict",
+            "Pool size kept",
+            "The pool size was left at 150 afterward since there was no reason to revert it."
+          ]
+        },
+        "f20": {
+          "located": [
+            "Postmortem verdict",
+            "Verdict",
+            "The postmortem was explicit that the pool increase was never the fix — the index was."
+          ]
+        }
+      },
+      "relations": {
+        "r1": {
+          "f10": {
+            "located": [
+              "Root cause",
+              "Reversed chain",
+              "migration drops index"
+            ]
+          },
+          "f11": {
+            "located": [
+              "Root cause",
+              "Reversed chain",
+              "migration drops index"
+            ]
+          },
+          "f7": {
+            "located": [
+              "Secondary probe",
+              "slow query found",
+              "Query-level tracing showed the payments service's customer order-history lookup taking upward of eight seconds per call instead of its usual under-100-millisecond time."
+            ]
+          }
+        },
+        "r2": {
+          "f7": {
+            "located": [
+              "Secondary probe",
+              "slow query found",
+              "Query-level tracing showed the payments service's customer order-history lookup taking upward of eight seconds per call instead of its usual under-100-millisecond time."
+            ]
+          },
+          "f8": {
+            "located": [
+              "Secondary probe",
+              "pool-starving mechanism",
+              "Every slow call held a database connection open for its full duration, and under load enough connections were tied up simultaneously to starve everything else — the actual cause of the pool-exhaustion symptoms on-call had been treating as root cause."
+            ]
+          },
+          "f9": {
+            "located": [
+              "Secondary probe",
+              "pool-starving mechanism",
+              "Every slow call held a database connection open for its full duration, and under load enough connections were tied up simultaneously to starve everything else — the actual cause of the pool-exhaustion symptoms on-call had been treating as root cause."
+            ]
+          }
+        },
+        "r3": {
+          "f3": {
+            "located": [
+              "Pool-exhaustion theory",
+              "initial diagnosis",
+              "Connection errors were the first visible signal, so on-call assumed pool exhaustion from traffic and spent the first twenty minutes on that assumption."
+            ]
+          },
+          "f12": {
+            "located": [
+              "Root cause",
+              "True cause",
+              "The missing index, not the connection pool, was the actual root cause; both the slow query and the pool exhaustion were downstream symptoms of it."
+            ]
+          },
+          "f13": {
+            "located": [
+              "Root cause",
+              "Reversed chain",
+              "slow query exhausts pool"
+            ]
+          },
+          "f14": {
+            "located": [
+              "Root cause",
+              "Reversed chain",
+              "missing index slows query"
+            ]
+          }
+        },
+        "r4": {
+          "f17": {
+            "located": [
+              "Index fix",
+              "Action",
+              "The missing index was added back later that day."
+            ]
+          },
+          "f18": {
+            "located": [
+              "Index fix",
+              "Result",
+              "Query time returned to under 100 milliseconds and the connection pileup was eliminated entirely."
+            ]
+          }
+        },
+        "r5": {
+          "f4": {
+            "located": [
+              "Pool-exhaustion theory",
+              "stopgap: raise pool",
+              "At 14:24 the pool size was raised from 50 to 150."
+            ]
+          },
+          "f15": {
+            "located": [
+              "Stopgap limits",
+              "Symptom reduced",
+              "Raising the pool size only bought headroom, reducing how often the symptom surfaced."
+            ]
+          },
+          "f20": {
+            "located": [
+              "Postmortem verdict",
+              "Verdict",
+              "The postmortem was explicit that the pool increase was never the fix — the index was."
+            ]
+          }
+        },
+        "r6": {
+          "f4": {
+            "located": [
+              "Pool-exhaustion theory",
+              "stopgap: raise pool",
+              "At 14:24 the pool size was raised from 50 to 150."
+            ]
+          },
+          "f7": {
+            "located": [
+              "Secondary probe",
+              "slow query found",
+              "Query-level tracing showed the payments service's customer order-history lookup taking upward of eight seconds per call instead of its usual under-100-millisecond time."
+            ]
+          }
+        }
       }
     }
   }

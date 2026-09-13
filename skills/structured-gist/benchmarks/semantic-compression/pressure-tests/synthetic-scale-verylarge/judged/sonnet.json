@@ -744,6 +744,752 @@
       }
     },
     "hallucinations": [],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "multi_node": [
+            [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ],
+            [
+              "Checkout-service reliability",
+              "alert four: duplicate charges"
+            ]
+          ]
+        },
+        "f10": {
+          "located": [
+            "Checkout-service reliability",
+            "top-priority fix pending",
+            "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Checkout-service reliability",
+            "top-priority fix pending",
+            "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Checkout-service reliability",
+            "top-priority fix pending",
+            "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Checkout-service reliability",
+            "top-priority fix pending",
+            "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Checkout-service reliability",
+            "five minor alerts",
+            "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Checkout-service reliability",
+            "five minor alerts",
+            "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+          ]
+        },
+        "f16": {
+          "multi_node": [
+            [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ],
+            [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          ]
+        },
+        "f17": {
+          "located": [
+            "Checkout-service reliability",
+            "top-priority fix pending"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Checkout-service reliability",
+            "alert four: duplicate charges",
+            "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Checkout-service reliability",
+            "five minor alerts",
+            "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Checkout-service reliability",
+            "five minor alerts",
+            "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Mobile app release train"
+          ]
+        },
+        "f21": {
+          "omitted": true
+        },
+        "f22": {
+          "located": [
+            "Mobile app release train",
+            "v3.14.1 \u2014 launch-crash fix",
+            "a one-line null check fixed a launch crash on one older OS version; shipped the same day it was found"
+          ]
+        },
+        "f23": {
+          "located": [
+            "Mobile app release train",
+            "v3.14.2 \u2014 overlap fix",
+            "a button overlapped the status bar on a particular screen-notch shape; purely cosmetic, no functional impact"
+          ]
+        },
+        "f24": {
+          "multi_node": [
+            [
+              "Mobile app release train",
+              "v3.14.3 \u2014 dependent hotfix"
+            ],
+            [
+              "Mobile app release train",
+              "v3.14.3 \u2014 dependent hotfix",
+              "v3.14.1's null check was too aggressive and also suppressed a legitimate error state, so v3.14.3 narrowed the condition \u2014 the only release in this train that depended on another"
+            ]
+          ]
+        },
+        "f25": {
+          "located": [
+            "Mobile app release train",
+            "v3.14.3 \u2014 dependent hotfix",
+            "v3.14.1's null check was too aggressive and also suppressed a legitimate error state, so v3.14.3 narrowed the condition \u2014 the only release in this train that depended on another"
+          ]
+        },
+        "f26": {
+          "located": [
+            "Mobile app release train",
+            "v3.14.3 \u2014 dependent hotfix",
+            "v3.14.1's null check was too aggressive and also suppressed a legitimate error state, so v3.14.3 narrowed the condition \u2014 the only release in this train that depended on another"
+          ]
+        },
+        "f27": {
+          "located": [
+            "Mobile app release train",
+            "v3.14.4 \u2014 accessibility setting",
+            "lets users disable a specific animation, added for accessibility feedback; unrelated to the other releases and to the other workstreams"
+          ]
+        },
+        "f28": {
+          "located": [
+            "Mobile app release train",
+            "v3.14.4 \u2014 accessibility setting",
+            "lets users disable a specific animation, added for accessibility feedback; unrelated to the other releases and to the other workstreams"
+          ]
+        },
+        "f29": {
+          "located": [
+            "Data-platform connector maintenance"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Checkout-service reliability",
+            "five minor alerts",
+            "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+          ]
+        },
+        "f30": {
+          "located": [
+            "Data-platform connector maintenance",
+            "crm-connector \u2014 column renamed",
+            "lead_status renamed to pipeline_stage upstream; mapping updated the same day"
+          ]
+        },
+        "f31": {
+          "located": [
+            "Data-platform connector maintenance",
+            "billing-events-connector \u2014 column added",
+            "a new currency_code column arrived with no mapping entry; added, defaulting historical rows to the existing single-currency assumption"
+          ]
+        },
+        "f32": {
+          "located": [
+            "Data-platform connector maintenance",
+            "support-tickets-connector \u2014 column renamed",
+            "priority renamed to severity, the same failure as crm-connector; fixed the same way, a mapping update"
+          ]
+        },
+        "f33": {
+          "located": [
+            "Data-platform connector maintenance",
+            "inventory-connector \u2014 column dropped",
+            "warehouse_region_legacy was dropped in favor of warehouse_region, which had already existed in parallel for months; mapping updated to stop referencing the dropped column"
+          ]
+        },
+        "f34": {
+          "located": [
+            "Data-platform connector maintenance",
+            "marketing-events-connector \u2014 column renamed",
+            "campaign_id renamed to campaign_uuid; fixed the same way as the rest"
+          ]
+        },
+        "f35": {
+          "located": [
+            "Data-platform connector maintenance",
+            "drift-detection follow-up",
+            "the fifth same-class failure in five days prompted a proposal to alert on schema drift before ingest fails, rather than after; not started, logged as a next-quarter candidate"
+          ]
+        },
+        "f36": {
+          "located": [
+            "Data-platform connector maintenance",
+            "drift-detection follow-up",
+            "the fifth same-class failure in five days prompted a proposal to alert on schema drift before ingest fails, rather than after; not started, logged as a next-quarter candidate"
+          ]
+        },
+        "f37": {
+          "omitted": true
+        },
+        "f38": {
+          "located": [
+            "On-call documentation cleanup",
+            "Trigger"
+          ]
+        },
+        "f39": {
+          "omitted": true
+        },
+        "f4": {
+          "located": [
+            "Checkout-service reliability",
+            "five minor alerts",
+            "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+          ]
+        },
+        "f40": {
+          "omitted": true
+        },
+        "f41": {
+          "multi_node": [
+            [
+              "On-call documentation cleanup",
+              "Reorganization",
+              "one runbook split per service"
+            ],
+            [
+              "On-call documentation cleanup",
+              "Reorganization",
+              "top-level index added, linking all files"
+            ]
+          ]
+        },
+        "f42": {
+          "located": [
+            "On-call documentation cleanup",
+            "Reorganization",
+            "nine sections archived (decommissioned services)"
+          ]
+        },
+        "f43": {
+          "located": [
+            "On-call documentation cleanup",
+            "Reorganization",
+            "no alert-handling guidance changed \u2014 every surviving section's instructions are byte-for-byte the same; only layout and the index changed"
+          ]
+        },
+        "f44": {
+          "located": [
+            "On-call documentation cleanup",
+            "Trigger",
+            "a new hire couldn't find the right section under time pressure during a real page \u2014 not any incident of the runbook itself causing a mishandled alert"
+          ]
+        },
+        "f45": {
+          "located": [
+            "On-call documentation cleanup",
+            "Trigger",
+            "a new hire couldn't find the right section under time pressure during a real page \u2014 not any incident of the runbook itself causing a mishandled alert"
+          ]
+        },
+        "f46": {
+          "located": [
+            "On-call documentation cleanup",
+            "Open item",
+            "three newly split files still need code-owner metadata updated to the right team \u2014 a minor cleanup with no urgency"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Checkout-service reliability",
+            "alert four: duplicate charges",
+            "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Checkout-service reliability",
+            "alert four: duplicate charges",
+            "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Checkout-service reliability",
+            "alert four: duplicate charges",
+            "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Checkout-service reliability",
+            "alert four: duplicate charges",
+            "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Checkout-service reliability",
+            "alert four: duplicate charges",
+            "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+          ]
+        }
+      },
+      "relations": {
+        "r1": {
+          "f5": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          },
+          "f6": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          }
+        },
+        "r10": {
+          "f40": {
+            "omitted": true
+          },
+          "f41": {
+            "multi_node": [
+              [
+                "On-call documentation cleanup",
+                "Reorganization",
+                "one runbook split per service"
+              ],
+              [
+                "On-call documentation cleanup",
+                "Reorganization",
+                "top-level index added, linking all files"
+              ]
+            ]
+          },
+          "f42": {
+            "located": [
+              "On-call documentation cleanup",
+              "Reorganization",
+              "nine sections archived (decommissioned services)"
+            ]
+          }
+        },
+        "r11": {
+          "f38": {
+            "located": [
+              "On-call documentation cleanup",
+              "Trigger"
+            ]
+          },
+          "f44": {
+            "located": [
+              "On-call documentation cleanup",
+              "Trigger",
+              "a new hire couldn't find the right section under time pressure during a real page \u2014 not any incident of the runbook itself causing a mishandled alert"
+            ]
+          },
+          "f45": {
+            "located": [
+              "On-call documentation cleanup",
+              "Trigger",
+              "a new hire couldn't find the right section under time pressure during a real page \u2014 not any incident of the runbook itself causing a mishandled alert"
+            ]
+          }
+        },
+        "r12": {
+          "f41": {
+            "multi_node": [
+              [
+                "On-call documentation cleanup",
+                "Reorganization",
+                "one runbook split per service"
+              ],
+              [
+                "On-call documentation cleanup",
+                "Reorganization",
+                "top-level index added, linking all files"
+              ]
+            ]
+          },
+          "f42": {
+            "located": [
+              "On-call documentation cleanup",
+              "Reorganization",
+              "nine sections archived (decommissioned services)"
+            ]
+          },
+          "f43": {
+            "located": [
+              "On-call documentation cleanup",
+              "Reorganization",
+              "no alert-handling guidance changed \u2014 every surviving section's instructions are byte-for-byte the same; only layout and the index changed"
+            ]
+          }
+        },
+        "r2": {
+          "f14": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f15": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f2": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f3": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f4": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f7": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          }
+        },
+        "r3": {
+          "f14": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f15": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f16": {
+            "multi_node": [
+              [
+                "Checkout-service reliability",
+                "five minor alerts",
+                "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+              ],
+              [
+                "Checkout-service reliability",
+                "alert four: duplicate charges",
+                "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+              ]
+            ]
+          },
+          "f17": {
+            "located": [
+              "Checkout-service reliability",
+              "top-priority fix pending"
+            ]
+          },
+          "f18": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          },
+          "f19": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f2": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f3": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f4": {
+            "located": [
+              "Checkout-service reliability",
+              "five minor alerts",
+              "CPU spike, deploy latency, stale cache, disk space, and a dependent-service outage \u2014 cleared within minutes via autoscaling, self-resolution, or a quick manual fix; no lasting impact"
+            ]
+          },
+          "f5": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          }
+        },
+        "r4": {
+          "f8": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          },
+          "f9": {
+            "located": [
+              "Checkout-service reliability",
+              "alert four: duplicate charges",
+              "a payment-retry race condition let roughly 140 customers get charged twice over a 40-minute window; missed by monitoring throughout, discovered six hours later via a support ticket, refunded the same day"
+            ]
+          }
+        },
+        "r5": {
+          "f10": {
+            "located": [
+              "Checkout-service reliability",
+              "top-priority fix pending",
+              "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+            ]
+          },
+          "f11": {
+            "located": [
+              "Checkout-service reliability",
+              "top-priority fix pending",
+              "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+            ]
+          },
+          "f12": {
+            "located": [
+              "Checkout-service reliability",
+              "top-priority fix pending",
+              "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+            ]
+          },
+          "f13": {
+            "located": [
+              "Checkout-service reliability",
+              "top-priority fix pending",
+              "the retry path needs an idempotency check; a design exists but is unreviewed, and the race condition is still live in production \u2014 ranked above every other open item"
+            ]
+          }
+        },
+        "r6": {
+          "f22": {
+            "located": [
+              "Mobile app release train",
+              "v3.14.1 \u2014 launch-crash fix",
+              "a one-line null check fixed a launch crash on one older OS version; shipped the same day it was found"
+            ]
+          },
+          "f24": {
+            "multi_node": [
+              [
+                "Mobile app release train",
+                "v3.14.3 \u2014 dependent hotfix"
+              ],
+              [
+                "Mobile app release train",
+                "v3.14.3 \u2014 dependent hotfix",
+                "v3.14.1's null check was too aggressive and also suppressed a legitimate error state, so v3.14.3 narrowed the condition \u2014 the only release in this train that depended on another"
+              ]
+            ]
+          },
+          "f25": {
+            "located": [
+              "Mobile app release train",
+              "v3.14.3 \u2014 dependent hotfix",
+              "v3.14.1's null check was too aggressive and also suppressed a legitimate error state, so v3.14.3 narrowed the condition \u2014 the only release in this train that depended on another"
+            ]
+          },
+          "f26": {
+            "located": [
+              "Mobile app release train",
+              "v3.14.3 \u2014 dependent hotfix",
+              "v3.14.1's null check was too aggressive and also suppressed a legitimate error state, so v3.14.3 narrowed the condition \u2014 the only release in this train that depended on another"
+            ]
+          }
+        },
+        "r7": {
+          "f23": {
+            "located": [
+              "Mobile app release train",
+              "v3.14.2 \u2014 overlap fix",
+              "a button overlapped the status bar on a particular screen-notch shape; purely cosmetic, no functional impact"
+            ]
+          },
+          "f27": {
+            "located": [
+              "Mobile app release train",
+              "v3.14.4 \u2014 accessibility setting",
+              "lets users disable a specific animation, added for accessibility feedback; unrelated to the other releases and to the other workstreams"
+            ]
+          },
+          "f28": {
+            "located": [
+              "Mobile app release train",
+              "v3.14.4 \u2014 accessibility setting",
+              "lets users disable a specific animation, added for accessibility feedback; unrelated to the other releases and to the other workstreams"
+            ]
+          }
+        },
+        "r8": {
+          "f29": {
+            "located": [
+              "Data-platform connector maintenance"
+            ]
+          },
+          "f30": {
+            "located": [
+              "Data-platform connector maintenance",
+              "crm-connector \u2014 column renamed",
+              "lead_status renamed to pipeline_stage upstream; mapping updated the same day"
+            ]
+          },
+          "f31": {
+            "located": [
+              "Data-platform connector maintenance",
+              "billing-events-connector \u2014 column added",
+              "a new currency_code column arrived with no mapping entry; added, defaulting historical rows to the existing single-currency assumption"
+            ]
+          },
+          "f32": {
+            "located": [
+              "Data-platform connector maintenance",
+              "support-tickets-connector \u2014 column renamed",
+              "priority renamed to severity, the same failure as crm-connector; fixed the same way, a mapping update"
+            ]
+          },
+          "f33": {
+            "located": [
+              "Data-platform connector maintenance",
+              "inventory-connector \u2014 column dropped",
+              "warehouse_region_legacy was dropped in favor of warehouse_region, which had already existed in parallel for months; mapping updated to stop referencing the dropped column"
+            ]
+          },
+          "f34": {
+            "located": [
+              "Data-platform connector maintenance",
+              "marketing-events-connector \u2014 column renamed",
+              "campaign_id renamed to campaign_uuid; fixed the same way as the rest"
+            ]
+          }
+        },
+        "r9": {
+          "f30": {
+            "located": [
+              "Data-platform connector maintenance",
+              "crm-connector \u2014 column renamed",
+              "lead_status renamed to pipeline_stage upstream; mapping updated the same day"
+            ]
+          },
+          "f31": {
+            "located": [
+              "Data-platform connector maintenance",
+              "billing-events-connector \u2014 column added",
+              "a new currency_code column arrived with no mapping entry; added, defaulting historical rows to the existing single-currency assumption"
+            ]
+          },
+          "f32": {
+            "located": [
+              "Data-platform connector maintenance",
+              "support-tickets-connector \u2014 column renamed",
+              "priority renamed to severity, the same failure as crm-connector; fixed the same way, a mapping update"
+            ]
+          },
+          "f33": {
+            "located": [
+              "Data-platform connector maintenance",
+              "inventory-connector \u2014 column dropped",
+              "warehouse_region_legacy was dropped in favor of warehouse_region, which had already existed in parallel for months; mapping updated to stop referencing the dropped column"
+            ]
+          },
+          "f34": {
+            "located": [
+              "Data-platform connector maintenance",
+              "marketing-events-connector \u2014 column renamed",
+              "campaign_id renamed to campaign_uuid; fixed the same way as the rest"
+            ]
+          },
+          "f35": {
+            "located": [
+              "Data-platform connector maintenance",
+              "drift-detection follow-up",
+              "the fifth same-class failure in five days prompted a proposal to alert on schema drift before ingest fails, rather than after; not started, logged as a next-quarter candidate"
+            ]
+          },
+          "f36": {
+            "located": [
+              "Data-platform connector maintenance",
+              "drift-detection follow-up",
+              "the fifth same-class failure in five days prompted a proposal to alert on schema drift before ingest fails, rather than after; not started, logged as a next-quarter candidate"
+            ]
+          }
+        }
+      }
+    },
     "questions": {
       "q1": {
         "answer_given": "Alert four \u2014 a payment-retry race condition causing ~140 customers to be double-charged over a 40-minute window, missed by monitoring throughout, and still listed as a top-priority fix pending; the other five had 'no lasting impact'.",

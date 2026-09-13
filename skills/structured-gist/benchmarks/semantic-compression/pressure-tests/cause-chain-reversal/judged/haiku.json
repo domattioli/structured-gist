@@ -1,131 +1,676 @@
 {
   "skim": {
     "facts": {
-      "f1": {"status": "retained", "evidence": "Checkout outage 14:02"},
-      "f2": {"status": "omitted", "evidence": ""},
-      "f3": {"status": "retained", "evidence": "Diagnosed as connection pool exhaustion"},
-      "f4": {"status": "omitted", "evidence": ""},
-      "f5": {"status": "omitted", "evidence": ""},
-      "f6": {"status": "omitted", "evidence": ""},
-      "f7": {"status": "omitted", "evidence": ""},
-      "f8": {"status": "omitted", "evidence": ""},
-      "f9": {"status": "omitted", "evidence": ""},
-      "f10": {"status": "omitted", "evidence": ""},
-      "f11": {"status": "omitted", "evidence": ""},
-      "f12": {"status": "partial", "evidence": "B. Caused by missing database index"},
-      "f13": {"status": "omitted", "evidence": ""},
-      "f14": {"status": "omitted", "evidence": ""},
-      "f15": {"status": "omitted", "evidence": ""},
-      "f16": {"status": "omitted", "evidence": ""},
-      "f17": {"status": "omitted", "evidence": ""},
-      "f18": {"status": "omitted", "evidence": ""},
-      "f19": {"status": "omitted", "evidence": ""},
-      "f20": {"status": "omitted", "evidence": ""}
+      "f1": {
+        "status": "retained",
+        "evidence": "Checkout outage 14:02"
+      },
+      "f2": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f3": {
+        "status": "retained",
+        "evidence": "Diagnosed as connection pool exhaustion"
+      },
+      "f4": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f5": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f6": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f7": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f8": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f9": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f10": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f11": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f12": {
+        "status": "partial",
+        "evidence": "B. Caused by missing database index"
+      },
+      "f13": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f14": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f15": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f16": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f17": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f18": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f19": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f20": {
+        "status": "omitted",
+        "evidence": ""
+      }
     },
     "relations": {
-      "r1": {"status": "lost", "evidence": ""},
-      "r2": {"status": "lost", "evidence": ""},
-      "r3": {"status": "partial", "evidence": "A. Diagnosed as connection pool exhaustion / B. Caused by missing database index"},
-      "r4": {"status": "lost", "evidence": ""},
-      "r5": {"status": "lost", "evidence": ""},
-      "r6": {"status": "lost", "evidence": ""}
+      "r1": {
+        "status": "lost",
+        "evidence": ""
+      },
+      "r2": {
+        "status": "lost",
+        "evidence": ""
+      },
+      "r3": {
+        "status": "partial",
+        "evidence": "A. Diagnosed as connection pool exhaustion / B. Caused by missing database index"
+      },
+      "r4": {
+        "status": "lost",
+        "evidence": ""
+      },
+      "r5": {
+        "status": "lost",
+        "evidence": ""
+      },
+      "r6": {
+        "status": "lost",
+        "evidence": ""
+      }
     },
     "hallucinations": [],
     "questions": {
-      "q1": {"answer_given": "Connection pool exhaustion (item A).", "verdict": "correct"},
-      "q2": {"answer_given": "Missing database index (item B) — no migration or query-timing detail given.", "verdict": "partial"},
-      "q3": {"answer_given": "Unclear; outline lists both as separate items (A diagnosed as pool exhaustion, B caused by missing index) without stating one is a symptom of the other.", "verdict": "partial"},
-      "q4": {"answer_given": "Not addressed — pool increase isn't mentioned at all.", "verdict": "unanswerable"},
-      "q5": {"answer_given": "Implied to be the missing index, but no fix action is stated.", "verdict": "partial"},
-      "q6": {"answer_given": "Not addressed — no timestamps or investigation timeline given beyond 14:02.", "verdict": "unanswerable"},
-      "q7": {"answer_given": "Not mentioned.", "verdict": "unanswerable"},
-      "q8": {"answer_given": "Not mentioned — migration isn't referenced.", "verdict": "unanswerable"}
+      "q1": {
+        "answer_given": "Connection pool exhaustion (item A).",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Missing database index (item B) — no migration or query-timing detail given.",
+        "verdict": "partial"
+      },
+      "q3": {
+        "answer_given": "Unclear; outline lists both as separate items (A diagnosed as pool exhaustion, B caused by missing index) without stating one is a symptom of the other.",
+        "verdict": "partial"
+      },
+      "q4": {
+        "answer_given": "Not addressed — pool increase isn't mentioned at all.",
+        "verdict": "unanswerable"
+      },
+      "q5": {
+        "answer_given": "Implied to be the missing index, but no fix action is stated.",
+        "verdict": "partial"
+      },
+      "q6": {
+        "answer_given": "Not addressed — no timestamps or investigation timeline given beyond 14:02.",
+        "verdict": "unanswerable"
+      },
+      "q7": {
+        "answer_given": "Not mentioned.",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "Not mentioned — migration isn't referenced.",
+        "verdict": "unanswerable"
+      }
     }
   },
   "standard": {
     "facts": {
-      "f1": {"status": "retained", "evidence": "Checkout outage 14:02"},
-      "f2": {"status": "partial", "evidence": "symptoms: connection errors"},
-      "f3": {"status": "retained", "evidence": "theory: pool exhaustion"},
-      "f4": {"status": "partial", "evidence": "mitigation: raised pool 50 → 150"},
-      "f5": {"status": "retained", "evidence": "result: errors dropped (felt correct)"},
-      "f6": {"status": "omitted", "evidence": ""},
-      "f7": {"status": "partial", "evidence": "a. slow query: 8+ seconds (usual <100ms)"},
-      "f8": {"status": "omitted", "evidence": ""},
-      "f9": {"status": "omitted", "evidence": ""},
-      "f10": {"status": "partial", "evidence": "b. cause: missing index from migration"},
-      "f11": {"status": "retained", "evidence": "cause: missing index from migration"},
-      "f12": {"status": "retained", "evidence": "index was root cause"},
-      "f13": {"status": "omitted", "evidence": ""},
-      "f14": {"status": "partial", "evidence": "b. cause: missing index from migration"},
-      "f15": {"status": "retained", "evidence": "pool increase was mitigation only, not fix"},
-      "f16": {"status": "omitted", "evidence": ""},
-      "f17": {"status": "retained", "evidence": "i. added missing index"},
-      "f18": {"status": "partial", "evidence": "ii. query restored to <100ms"},
-      "f19": {"status": "omitted", "evidence": ""},
-      "f20": {"status": "retained", "evidence": "pool increase was mitigation only, not fix; index was root cause"}
+      "f1": {
+        "status": "retained",
+        "evidence": "Checkout outage 14:02"
+      },
+      "f2": {
+        "status": "partial",
+        "evidence": "symptoms: connection errors"
+      },
+      "f3": {
+        "status": "retained",
+        "evidence": "theory: pool exhaustion"
+      },
+      "f4": {
+        "status": "partial",
+        "evidence": "mitigation: raised pool 50 → 150"
+      },
+      "f5": {
+        "status": "retained",
+        "evidence": "result: errors dropped (felt correct)"
+      },
+      "f6": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f7": {
+        "status": "partial",
+        "evidence": "a. slow query: 8+ seconds (usual <100ms)"
+      },
+      "f8": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f9": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f10": {
+        "status": "partial",
+        "evidence": "b. cause: missing index from migration"
+      },
+      "f11": {
+        "status": "retained",
+        "evidence": "cause: missing index from migration"
+      },
+      "f12": {
+        "status": "retained",
+        "evidence": "index was root cause"
+      },
+      "f13": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f14": {
+        "status": "partial",
+        "evidence": "b. cause: missing index from migration"
+      },
+      "f15": {
+        "status": "retained",
+        "evidence": "pool increase was mitigation only, not fix"
+      },
+      "f16": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f17": {
+        "status": "retained",
+        "evidence": "i. added missing index"
+      },
+      "f18": {
+        "status": "partial",
+        "evidence": "ii. query restored to <100ms"
+      },
+      "f19": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f20": {
+        "status": "retained",
+        "evidence": "pool increase was mitigation only, not fix; index was root cause"
+      }
     },
     "relations": {
-      "r1": {"status": "partial", "evidence": "a. slow query: 8+ seconds (usual <100ms) / b. cause: missing index from migration"},
-      "r2": {"status": "lost", "evidence": ""},
-      "r3": {"status": "partial", "evidence": "Initial diagnosis (incorrect) ... Root cause ... index was root cause"},
-      "r4": {"status": "partial", "evidence": "i. added missing index / ii. query restored to <100ms"},
-      "r5": {"status": "retained", "evidence": "pool increase was mitigation only, not fix; index was root cause"},
-      "r6": {"status": "partial", "evidence": "iii. mitigation: raised pool 50 → 150 [then, in a later section] a. slow query: 8+ seconds"}
+      "r1": {
+        "status": "partial",
+        "evidence": "a. slow query: 8+ seconds (usual <100ms) / b. cause: missing index from migration"
+      },
+      "r2": {
+        "status": "lost",
+        "evidence": ""
+      },
+      "r3": {
+        "status": "partial",
+        "evidence": "Initial diagnosis (incorrect) ... Root cause ... index was root cause"
+      },
+      "r4": {
+        "status": "partial",
+        "evidence": "i. added missing index / ii. query restored to <100ms"
+      },
+      "r5": {
+        "status": "retained",
+        "evidence": "pool increase was mitigation only, not fix; index was root cause"
+      },
+      "r6": {
+        "status": "partial",
+        "evidence": "iii. mitigation: raised pool 50 → 150 [then, in a later section] a. slow query: 8+ seconds"
+      }
     },
     "hallucinations": [],
     "questions": {
-      "q1": {"answer_given": "Pool exhaustion (theory under Initial diagnosis, marked incorrect).", "verdict": "correct"},
-      "q2": {"answer_given": "Missing index caused by a migration.", "verdict": "correct"},
-      "q3": {"answer_given": "The index is called the root cause and the pool increase is called mitigation only, but no explicit symptom chain (pool exhaustion caused by slow query) is stated.", "verdict": "partial"},
-      "q4": {"answer_given": "No — pool increase was mitigation only, not fix.", "verdict": "correct"},
-      "q5": {"answer_given": "Adding the missing index.", "verdict": "correct"},
-      "q6": {"answer_given": "Not explicit; section order (mitigation listed before root-cause investigation) implies pool raise came first, but no timestamps given.", "verdict": "partial"},
-      "q7": {"answer_given": "Not mentioned.", "verdict": "unanswerable"},
-      "q8": {"answer_given": "Not mentioned — no day count given.", "verdict": "unanswerable"}
+      "q1": {
+        "answer_given": "Pool exhaustion (theory under Initial diagnosis, marked incorrect).",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Missing index caused by a migration.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "The index is called the root cause and the pool increase is called mitigation only, but no explicit symptom chain (pool exhaustion caused by slow query) is stated.",
+        "verdict": "partial"
+      },
+      "q4": {
+        "answer_given": "No — pool increase was mitigation only, not fix.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Adding the missing index.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Not explicit; section order (mitigation listed before root-cause investigation) implies pool raise came first, but no timestamps given.",
+        "verdict": "partial"
+      },
+      "q7": {
+        "answer_given": "Not mentioned.",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "Not mentioned — no day count given.",
+        "verdict": "unanswerable"
+      }
+    },
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Checkout outage 14:02"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Checkout outage 14:02",
+            "Initial diagnosis (incorrect)",
+            "symptoms: connection errors"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Checkout outage 14:02",
+            "Initial diagnosis (incorrect)",
+            "theory: pool exhaustion"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Checkout outage 14:02",
+            "Initial diagnosis (incorrect)",
+            "mitigation: raised pool 50 → 150"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Checkout outage 14:02",
+            "Initial diagnosis (incorrect)",
+            "result: errors dropped (felt correct)"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Checkout outage 14:02",
+            "Root cause",
+            "slow query: 8+ seconds (usual <100ms)"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Checkout outage 14:02",
+            "Root cause",
+            "cause: missing index from migration"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Checkout outage 14:02",
+            "Root cause",
+            "cause: missing index from migration"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Checkout outage 14:02",
+            "Postmortem",
+            "pool increase was mitigation only, not fix; index was root cause"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Checkout outage 14:02",
+            "Root cause",
+            "cause: missing index from migration"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Checkout outage 14:02",
+            "Postmortem",
+            "pool increase was mitigation only, not fix; index was root cause"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Checkout outage 14:02",
+            "Actual fix",
+            "added missing index"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Checkout outage 14:02",
+            "Actual fix",
+            "query restored to <100ms"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Checkout outage 14:02",
+            "Postmortem",
+            "pool increase was mitigation only, not fix; index was root cause"
+          ]
+        },
+        "f6": {
+          "omitted": true
+        },
+        "f8": {
+          "omitted": true
+        },
+        "f9": {
+          "omitted": true
+        },
+        "f13": {
+          "omitted": true
+        },
+        "f16": {
+          "omitted": true
+        },
+        "f19": {
+          "omitted": true
+        }
+      },
+      "relations": {
+        "r1": {
+          "f10": {
+            "located": [
+              "Checkout outage 14:02",
+              "Root cause",
+              "cause: missing index from migration"
+            ]
+          },
+          "f11": {
+            "located": [
+              "Checkout outage 14:02",
+              "Root cause",
+              "cause: missing index from migration"
+            ]
+          },
+          "f7": {
+            "located": [
+              "Checkout outage 14:02",
+              "Root cause",
+              "slow query: 8+ seconds (usual <100ms)"
+            ]
+          }
+        },
+        "r2": {
+          "f7": {
+            "located": [
+              "Checkout outage 14:02",
+              "Root cause",
+              "slow query: 8+ seconds (usual <100ms)"
+            ]
+          },
+          "f8": {
+            "not_locatable": true
+          },
+          "f9": {
+            "not_locatable": true
+          }
+        },
+        "r3": {
+          "f3": {
+            "located": [
+              "Checkout outage 14:02",
+              "Initial diagnosis (incorrect)",
+              "theory: pool exhaustion"
+            ]
+          },
+          "f12": {
+            "located": [
+              "Checkout outage 14:02",
+              "Postmortem",
+              "pool increase was mitigation only, not fix; index was root cause"
+            ]
+          },
+          "f13": {
+            "not_locatable": true
+          },
+          "f14": {
+            "located": [
+              "Checkout outage 14:02",
+              "Root cause",
+              "cause: missing index from migration"
+            ]
+          }
+        },
+        "r4": {
+          "f17": {
+            "located": [
+              "Checkout outage 14:02",
+              "Actual fix",
+              "added missing index"
+            ]
+          },
+          "f18": {
+            "located": [
+              "Checkout outage 14:02",
+              "Actual fix",
+              "query restored to <100ms"
+            ]
+          }
+        },
+        "r5": {
+          "f4": {
+            "located": [
+              "Checkout outage 14:02",
+              "Initial diagnosis (incorrect)",
+              "mitigation: raised pool 50 → 150"
+            ]
+          },
+          "f15": {
+            "located": [
+              "Checkout outage 14:02",
+              "Postmortem",
+              "pool increase was mitigation only, not fix; index was root cause"
+            ]
+          },
+          "f20": {
+            "located": [
+              "Checkout outage 14:02",
+              "Postmortem",
+              "pool increase was mitigation only, not fix; index was root cause"
+            ]
+          }
+        },
+        "r6": {
+          "f4": {
+            "located": [
+              "Checkout outage 14:02",
+              "Initial diagnosis (incorrect)",
+              "mitigation: raised pool 50 → 150"
+            ]
+          },
+          "f7": {
+            "located": [
+              "Checkout outage 14:02",
+              "Root cause",
+              "slow query: 8+ seconds (usual <100ms)"
+            ]
+          }
+        }
+      }
     }
   },
   "deep": {
     "facts": {
-      "f1": {"status": "retained", "evidence": "Checkout outage 14:02"},
-      "f2": {"status": "retained", "evidence": "symptoms: connection errors from payments service"},
-      "f3": {"status": "retained", "evidence": "theory: pool exhaustion"},
-      "f4": {"status": "partial", "evidence": "mitigation: raised pool 50 → 150"},
-      "f5": {"status": "partial", "evidence": "outcome: error rates dropped noticeably"},
-      "f6": {"status": "omitted", "evidence": ""},
-      "f7": {"status": "retained", "evidence": "found slow query: >8 seconds / query typical: <100 milliseconds / query: customer order history lookups"},
-      "f8": {"status": "retained", "evidence": "slow query held connection open for entire duration"},
-      "f9": {"status": "retained", "evidence": "simultaneous connections starved other queries"},
-      "f10": {"status": "retained", "evidence": "root: 2-day-old migration dropped index"},
-      "f11": {"status": "retained", "evidence": "2-day-old migration dropped index"},
-      "f12": {"status": "retained", "evidence": "pool exhaustion: downstream effect, not root"},
-      "f13": {"status": "retained", "evidence": "simultaneous connections starved other queries / pool exhaustion: downstream effect, not root"},
-      "f14": {"status": "retained", "evidence": "root: 2-day-old migration dropped index"},
-      "f15": {"status": "retained", "evidence": "pool size increase was temporary headroom only, not the actual fix"},
-      "f16": {"status": "omitted", "evidence": ""},
-      "f17": {"status": "retained", "evidence": "added missing index back"},
-      "f18": {"status": "retained", "evidence": "query performance: >8s → <100ms / resolved connection pileup entirely"},
-      "f19": {"status": "retained", "evidence": "pool left at 150 (no revert)"},
-      "f20": {"status": "retained", "evidence": "pool size increase was temporary headroom only, not the actual fix; the missing index was the root cause"}
+      "f1": {
+        "status": "retained",
+        "evidence": "Checkout outage 14:02"
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "symptoms: connection errors from payments service"
+      },
+      "f3": {
+        "status": "retained",
+        "evidence": "theory: pool exhaustion"
+      },
+      "f4": {
+        "status": "partial",
+        "evidence": "mitigation: raised pool 50 → 150"
+      },
+      "f5": {
+        "status": "partial",
+        "evidence": "outcome: error rates dropped noticeably"
+      },
+      "f6": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f7": {
+        "status": "retained",
+        "evidence": "found slow query: >8 seconds / query typical: <100 milliseconds / query: customer order history lookups"
+      },
+      "f8": {
+        "status": "retained",
+        "evidence": "slow query held connection open for entire duration"
+      },
+      "f9": {
+        "status": "retained",
+        "evidence": "simultaneous connections starved other queries"
+      },
+      "f10": {
+        "status": "retained",
+        "evidence": "root: 2-day-old migration dropped index"
+      },
+      "f11": {
+        "status": "retained",
+        "evidence": "2-day-old migration dropped index"
+      },
+      "f12": {
+        "status": "retained",
+        "evidence": "pool exhaustion: downstream effect, not root"
+      },
+      "f13": {
+        "status": "retained",
+        "evidence": "simultaneous connections starved other queries / pool exhaustion: downstream effect, not root"
+      },
+      "f14": {
+        "status": "retained",
+        "evidence": "root: 2-day-old migration dropped index"
+      },
+      "f15": {
+        "status": "retained",
+        "evidence": "pool size increase was temporary headroom only, not the actual fix"
+      },
+      "f16": {
+        "status": "omitted",
+        "evidence": ""
+      },
+      "f17": {
+        "status": "retained",
+        "evidence": "added missing index back"
+      },
+      "f18": {
+        "status": "retained",
+        "evidence": "query performance: >8s → <100ms / resolved connection pileup entirely"
+      },
+      "f19": {
+        "status": "retained",
+        "evidence": "pool left at 150 (no revert)"
+      },
+      "f20": {
+        "status": "retained",
+        "evidence": "pool size increase was temporary headroom only, not the actual fix; the missing index was the root cause"
+      }
     },
     "relations": {
-      "r1": {"status": "retained", "evidence": "h. root: 2-day-old migration dropped index"},
-      "r2": {"status": "retained", "evidence": "slow query held connection open for entire duration / simultaneous connections starved other queries"},
-      "r3": {"status": "retained", "evidence": "pool exhaustion: downstream effect, not root / root: 2-day-old migration dropped index"},
-      "r4": {"status": "retained", "evidence": "added missing index back / query performance: >8s → <100ms / resolved connection pileup entirely"},
-      "r5": {"status": "retained", "evidence": "pool size increase was temporary headroom only, not the actual fix; the missing index was the root cause"},
-      "r6": {"status": "partial", "evidence": "iii. mitigation: raised pool 50 → 150 [Initial diagnosis section, followed by] Parallel investigation"}
+      "r1": {
+        "status": "retained",
+        "evidence": "h. root: 2-day-old migration dropped index"
+      },
+      "r2": {
+        "status": "retained",
+        "evidence": "slow query held connection open for entire duration / simultaneous connections starved other queries"
+      },
+      "r3": {
+        "status": "retained",
+        "evidence": "pool exhaustion: downstream effect, not root / root: 2-day-old migration dropped index"
+      },
+      "r4": {
+        "status": "retained",
+        "evidence": "added missing index back / query performance: >8s → <100ms / resolved connection pileup entirely"
+      },
+      "r5": {
+        "status": "retained",
+        "evidence": "pool size increase was temporary headroom only, not the actual fix; the missing index was the root cause"
+      },
+      "r6": {
+        "status": "partial",
+        "evidence": "iii. mitigation: raised pool 50 → 150 [Initial diagnosis section, followed by] Parallel investigation"
+      }
     },
     "hallucinations": [],
     "questions": {
-      "q1": {"answer_given": "Pool exhaustion.", "verdict": "correct"},
-      "q2": {"answer_given": "A missing index dropped by a 2-day-old migration, causing an order-history lookup query to take >8s instead of <100ms.", "verdict": "correct"},
-      "q3": {"answer_given": "A symptom — pool exhaustion is explicitly labeled a downstream effect, not root.", "verdict": "correct"},
-      "q4": {"answer_given": "No — pool size increase was temporary headroom only, not the actual fix.", "verdict": "correct"},
-      "q5": {"answer_given": "Adding the missing index back.", "verdict": "correct"},
-      "q6": {"answer_given": "Implied before, since the pool raise appears in the Initial diagnosis section and the query identification appears in the subsequent Parallel investigation section, but no explicit timestamp or before/after statement is given.", "verdict": "partial"},
-      "q7": {"answer_given": "No, pool left at 150 (no revert).", "verdict": "correct"},
-      "q8": {"answer_given": "Two days.", "verdict": "correct"}
+      "q1": {
+        "answer_given": "Pool exhaustion.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "A missing index dropped by a 2-day-old migration, causing an order-history lookup query to take >8s instead of <100ms.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "A symptom — pool exhaustion is explicitly labeled a downstream effect, not root.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No — pool size increase was temporary headroom only, not the actual fix.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Adding the missing index back.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Implied before, since the pool raise appears in the Initial diagnosis section and the query identification appears in the subsequent Parallel investigation section, but no explicit timestamp or before/after statement is given.",
+        "verdict": "partial"
+      },
+      "q7": {
+        "answer_given": "No, pool left at 150 (no revert).",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Two days.",
+        "verdict": "correct"
+      }
     }
   }
 }
