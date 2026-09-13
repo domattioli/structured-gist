@@ -1,0 +1,40 @@
+- **Tralee Speedway**
+  - **410m dirt oval**
+  - **Near Canberra, NSW**
+  - **Bred national champions**
+- **Dirt track racing**
+  - **Clay or dirt ovals**
+  - **Began pre-WWI US**
+  - **Open-wheel vs stock cars**
+- **Australian Street Stock Championship**
+  - **Annual national title**
+  - **Running since 1989/90**
+  - **Host state rotates**
+- **Dirt track racing in the United Kingdom**
+  - **UK oval racing**
+  - **Most common track type**
+  - **Also used for Speedway**
+- **List of dirt track ovals in South Africa**
+  - **South African oval racing**
+  - **Mirrors tar oval classes**
+  - **Five race classes**
+- **Dirt track racing in Australia**
+  - **September–April season**
+  - **Major tracks nationwide**
+  - **Premier series: Sprintcars**
+- **Dirt track racing in South Africa**
+  - **South African oval racing**
+  - **Mirrors tar oval classes**
+  - **Five race classes**
+- **List of dirt track ovals in the United Kingdom**
+  - **UK oval racing**
+  - **Britain's most popular racing**
+  - **Also used for Speedway**
+- **Kings Park Speedway**
+  - **Saskatchewan, Canada**
+  - **1/3-mile paved oval**
+  - **Originally dirt, paved 1970**
+- **Illinois State Fairgrounds Racetrack**
+  - **One-mile clay oval**
+  - **Racing since 1910**
+  - **Oldest dirt-track host**

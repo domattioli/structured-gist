@@ -1,0 +1,83 @@
+- **LDS Motion Picture Studios**
+  - **Origin**
+    - began as the BYU Motion Picture Studio in 1953, led by Wetzel Whitaker
+  - **Original location**
+    - a building called the Green Barn, now the site of BYU's Ernest L. Wilkinson Center
+- **Item 47**
+  - **Identity**
+    - 2012 American direct-to-video short film featuring S.H.I.E.L.D., produced by Marvel Studios, distributed on the home media release of "Marvel's The Avengers"
+  - **Series role**
+    - follow-up/spin-off of "The Avengers" and the third film in the Marvel One-Shots series
+  - **Creators**
+    - directed by Louis D'Esposito, written by Eric Pearson
+  - **Cast**
+    - Lizzy Caplan, Jesse Bradford, Maximiliano Hernández (reprising his role), and Titus Welliver
+  - **Plot**
+    - two civilians find a Chitauri gun and use it to commit crimes
+- **Phil Coulson**
+  - **Identity**
+    - MCU character portrayed by Clark Gregg, a high-ranking member of S.H.I.E.L.D.
+  - **Film appearances**
+    - a. first appeared in "Iron Man" (2008)
+    - b. "Iron Man 2" (2010), "Thor" (2011), "The Avengers" (2012)
+  - **TV/other appearances**
+    - headlines "Agents of S.H.I.E.L.D." (2013–), two Marvel One-Shots, tie-in comics, a 2016 digital series, and Marvel Comics tie-ins
+- **Solax Studios**
+  - **Founding**
+    - American motion picture studio founded in 1910 by Gaumont Film Company executives Alice Guy-Blaché, her husband Herbert, and George A. Magie
+  - **Roles**
+    - Alice Guy-Blaché was artistic director and directed many films; Herbert Blaché managed production
+  - **Location**
+    - took over a Gaumont-built studio in Flushing, New York, producing silent films there Oct 1910 – summer 1912
+  - **Growth**
+    - invested more than $100,000 in a modern production plant in 1912, in Fort Lee, New Jersey
+- **Televisa San Ángel**
+  - **Identity**
+    - film and television studio in Mexico City, originally built by Jorge Stahl, sold to the Azcárraga family in the 1970s
+  - **Facilities housed**
+    - headquarters of the Centro de Educación Artística (CEA), the Videocine production/distribution company, and the Centro de Post Produccion
+  - **Notability**
+    - the oldest movie/TV production facility in Mexico and the most famous telenovela studio in Latin America, one of four main Mexican film studios
+- **Marvel One-Shots**
+  - **Identity**
+    - series of direct-to-video Marvel Studios short films set in the MCU, released 2011–2014
+  - **Distribution**
+    - included as Blu-ray/digital special features, not on DVD releases
+  - **Format**
+    - 4–15 minutes each, self-contained backstory for MCU characters or events
+  - **Impact**
+    - two of the shorts inspired MCU television series
+- **Nestor Film Company**
+  - **Identity**
+    - defunct American motion picture production company, originally the Nestor Motion Picture Company
+  - **Founding**
+    - founded in 1909 as the West Coast production unit of the Centaur Film Company
+  - **Milestone**
+    - established the first permanent motion picture studio in Hollywood on October 27, 1911, producing the first Hollywood films
+  - **Merger**
+    - merged with its distributor, Universal Film Manufacturing Company, on May 20, 1912, and continued as a Universal brand name until at least mid-1917
+- **Marvel Studios**
+  - **Identity**
+    - American motion picture studio (originally Marvel Films, 1993–1996), based at The Walt Disney Studios in Burbank, California
+  - **Ownership**
+    - subsidiary of Walt Disney Studios; previously a subsidiary of Marvel Entertainment until Disney's August 2015 reorganization
+  - **Leadership**
+    - Kevin Feige serves as president
+- **All Hail the King**
+  - **Identity**
+    - 2014 American direct-to-video short film featuring Trevor Slattery, produced by Marvel Studios
+  - **Series role**
+    - follow-up/spin-off of "Iron Man 3" and the fifth film in the Marvel One-Shots series
+  - **Creator**
+    - written and directed by Drew Pearce
+  - **Cast**
+    - Ben Kingsley (reprising his "Iron Man 3" role), Scoot McNairy, Lester Speight, and Sam Rockwell (reprising his "Iron Man 2" role)
+  - **Plot**
+    - a documentary filmmaker interviews fake terrorist Trevor Slattery from behind bars
+- **Charles Evans Jr.**
+  - **Identity**
+    - American film producer and documentary film director
+  - **Credits**
+    - produced Johnny Depp's directorial debut "The Brave"; one of four producers on the 2004 Howard Hughes biopic "The Aviator"
+  - **Family**
+    - nephew of motion picture studio executive Robert Evans, son of fashion executive and producer Charles Evans

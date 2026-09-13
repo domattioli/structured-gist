@@ -1,0 +1,76 @@
+- **Minutes recap**
+  - **Requirements**
+    - a. nice look
+    - b. strong usability
+    - c. basic, not too many buttons
+    - d. lights up when a button is used
+    - e. text TV still supported
+    - f. easy to learn
+  - **Functions**
+    - a. volume
+    - b. channel selection
+    - c. on-off
+    - d. mute
+    - e. text TV
+- **Marketing trends**
+  - **Priority order**
+    - i. fancy look-and-feel
+      - Twice as important as the next factor, per market research from Italy and another European country.
+    - ii. technological innovation
+    - iii. ease of use
+  - **Target audience**
+    - Young and trendy, per fashion-watcher research from Paris and Italy.
+  - **Spongy material trend**
+    - A soft, stress-ball-like texture is the expected trend, also seen as practical since remotes get dropped often.
+  - **Changeable fronts idea**
+    - Interchangeable front covers, including a see-through fruit-themed option and basic colours, roughly five to start.
+  - **Budget constraint**
+    - Only about €12.50 can be spent per remote, limiting how much "innovative" technology (like speech) is realistic.
+- **UI design concept**
+  - **Modern iPod-style look**
+    - Move away from the old two-handed box shape toward a smaller, single-hand iPod/MP3-player/mobile-phone-inspired form.
+  - **Changeable fronts**
+    - Endorsed again as the most important design element.
+  - **Button layout debate**
+    - a. focus areas lit up
+      - Light up the number-pad and scroll areas more than other buttons, drawing visual focus.
+    - b. frequent buttons on top
+      - Volume, channel switching (zapping) placed where the thumb naturally reaches; less-used buttons like text TV moved to the bottom.
+    - c. colour buttons dropped
+      - Not considered usable or fitting the modern theme.
+  - **Volume/channel scroll idea**
+    - A side scroll works for volume, but not for channels since it's easy to scroll past the target too fast; direct zapping buttons are judged the highest priority to place well.
+  - **Speech recognition raised**
+    - The technology department recommends it; UI notes that a screen or speech recognition both look likely to need the pricier advanced chip.
+- **Components design**
+  - **Materials & shape guidance**
+    - a. soft materials, primary flashy colours
+    - b. curved, rounded shapes, no square corners
+    - c. sports/gaming-device styling
+  - **Case options**
+    - a. transparent case
+    - b. interchangeable coloured fronts
+    - c. hard plastic buttons on one flush level, like an iPod, instead of rubber
+  - **LED & lighting**
+    - Standard infrared LED plus multi-colour backlight LEDs; the case needs to be transparent for the backlight to show through.
+  - **Circuit board & battery**
+    - Standard circuit components common to most remotes; rechargeable batteries chosen over a separate charger unit.
+  - **Case curvature constraint**
+    - Two-D curved (front-to-back) keeps hard plastic buttons; three-D curved (also in depth) would force rubber buttons instead, so 2D curved is chosen.
+  - **Scroll wheel**
+    - Used for volume only; not practical for channel selection since it scrolls too fast.
+  - **Chip tier decision**
+    - An LCD display needs the priciest "advanced" chip and is dropped for time; the scroll wheel needs the "regular" mid-tier chip instead of "simple."
+- **Final decisions & branding**
+  - **Recharger/docking station**
+    - The remote slides bottom-first into a simple docking station with electrical contacts; exact shape (square vs. rounded) still open.
+  - **Five interchangeable fronts**
+    - Sold as a set or separately, each carrying the company logo.
+  - **Brand colours**
+    - Debate over how to place the black/yellow "Real Reaction" colours (sides vs. front); left as a matter of taste for whoever draws the prototype.
+  - **Speech recognition reversal**
+    - Despite unclear cost and only a vague description (a record/playback "speaker unit"), the team ultimately decides to include it as a good feature.
+  - **Confirmed spec recap**
+    - Energy: rechargeable batteries. Chip: regular grade (advanced if speech recognition stays in). Case: 2D-curved hard plastic with a scroll wheel and backlight.
+- **Next steps**
+  - Industrial Designer and User Interface will do prototype drawing together on the smart board in the next meeting, with further instructions to follow.

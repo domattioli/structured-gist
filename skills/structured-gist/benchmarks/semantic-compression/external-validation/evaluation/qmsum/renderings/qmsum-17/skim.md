@@ -1,0 +1,26 @@
+- **Meeting recap**
+  - **Audience targeting**
+  - **iPod-style button idea**
+- **Components & materials**
+  - **Custom parts**
+  - **Standard parts**
+  - **Material options**
+  - **Chip cost tradeoff**
+- **Market trends**
+  - **Priority order**
+  - **Fruit & vegetable theme**
+  - **Spongy feel**
+- **Screen debate**
+  - **Screen argument**
+  - **No-remote-screen resolution**
+  - **Resulting form factor**
+  - **DVD scope correction**
+- **Shape & branding synthesis**
+  - **Two-material concept**
+  - **Swappable fruit/veg face**
+  - **Prototype-and-test plan**
+  - **Open questions**
+- **Energy source**
+  - **Options considered**
+  - **Decision**
+- **Next steps**

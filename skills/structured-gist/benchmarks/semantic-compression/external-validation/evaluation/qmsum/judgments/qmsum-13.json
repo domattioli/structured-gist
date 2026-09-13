@@ -1,0 +1,151 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Nothing usable — skim.md is a bare two-level topic tree (e.g. 'Staff capacity & training', 'Curriculum consistency', 'Collaborative models') with no sentences or claims under any heading, so no actual content about special-education provision, curriculum, finance, or staff recruitment can be extracted or stated.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "PRU curriculum is broad, balanced, and inspected; assurance is far weaker once learners move into home tuition or third-party private provision."},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "retained", "evidence": "Expertise is niche and takes years to rebuild once experienced staff leave or retire."},
+      "f5": {"status": "partial", "evidence": "Newly qualified teachers currently can't work in EOTAS settings; the panel wants EOTAS exposure built into initial and ongoing training. (omits the 'both directions between mainstream schools and specialist provision' detail)"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "partial", "evidence": "Closing recommendations: 'a. make whole-school approach statutory' — names the recommendation but gives no rationale about ensuring everyone has knowledge/awareness rather than relying on individual schools' commitment."},
+      "f9": {"status": "partial", "evidence": "Samaritans' report calls for a compassionate, whole-school response ... backed by nine recommendations including ACE awareness and pupil voice. (omits training teachers, learning from what works, and the statutory-curriculum framing)"},
+      "f10": {"status": "partial", "evidence": "Closing recommendations: 'b. embed mental-health training in initial teacher education' — names the recommendation but omits the 'not supplementary' framing, confidence, and exclusion-risk reduction."},
+      "f11": {"status": "partial", "evidence": "Responsibility sits with the local education authority but should be shared across services, corporate-parenting style; parents also need better information. (omits the funding concern)"},
+      "f12": {"status": "partial", "evidence": "Undiagnosed communication or learning needs get children labelled 'naughty,' and pastoral staff doubling as disciplinarians can deter pupils from disclosing distress. (omits anxious children acting out to leave the classroom and being off-rolled)"},
+      "f13": {"status": "retained", "evidence": "Estyn data shows fewer off-rollings from Welsh-medium schools, possibly reflecting socio-economic profile or a lack of Welsh-medium EOTAS provision itself — an area nobody has studied."},
+      "f14": {"status": "partial", "evidence": "Delay entering EOTAS: 'Time spent outside any education setting compounds existing inequality and vulnerability, echoed in a Public Health Wales review of 33 youth suicides...' (this is Sarah Stone's point, not Dr Ian Johnson's specific capacity-driven-delay claim, which isn't distinctly restated)"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "f3 and f7 are both omitted, so the shared capacity/funding causation across all three facts is not stated."},
+      "r2": {"status": "lost", "evidence": "f8 and f10 appear as separate, unelaborated bullets (a. and b.) under Closing recommendations with no stated dependency between them."}
+    },
+    "hallucinations": [
+      {"text": "Swansea referrals for challenging behaviour/undiagnosed ASD-ALN rose roughly fourfold in five to six years", "source_supported": true},
+      {"text": "Authorities are building tiered behaviour-and-well-being strategies with universal provision, though rollout lags between authorities", "source_supported": true},
+      {"text": "Capped 9 measure: too early to confirm improvement, though Torfaen reports movement toward it", "source_supported": true},
+      {"text": "Estyn and directors now stress learner progression over raw attainment thresholds", "source_supported": true},
+      {"text": "A team-around-the-family, multi-agency approach with health and social care is now common practice across most authorities", "source_supported": true},
+      {"text": "New ALN Act expected to add system pressure, echoing England's costly, repeated ALN tribunal losses", "source_supported": true},
+      {"text": "Delegation levels already high and not seen as a direct driver of exclusions", "source_supported": true},
+      {"text": "Mid-term pupil moves create unplanned pressure because funding is allocated only once a year", "source_supported": true},
+      {"text": "Swansea devolved funding: secondary schools get extra money against a monitored action plan to manage behaviour themselves", "source_supported": true},
+      {"text": "Oxfordshire model: schools took over PRU funding under a partnership agreement so pupils couldn't be moved elsewhere; long-term outcomes unclear", "source_supported": true},
+      {"text": "Part-time timetables with managed reduction in support ease reintegration, harder at key stage 4", "source_supported": true},
+      {"text": "Safeguarding drives commissioning of additional providers, but home tuition is hard to quality-assure because access to the home is restricted", "source_supported": true},
+      {"text": "WLGA and ADEW worry changes to EOTAS pupil registration could disrupt funding-follows-the-learner and shared-ownership arrangements that stop off-rolling", "source_supported": true},
+      {"text": "CAMHS access varies by health board; a new designated education clinical lead officer role aims to strengthen ties, current provision 'hasn't been great'", "source_supported": true},
+      {"text": "Wide rural regions like Powys involve long EOTAS travel distances, unlike more compact authorities such as Torfaen", "source_supported": true},
+      {"text": "Official exclusion statistics are reductionist and don't surface underlying causes already documented in schools' own paper trails", "source_supported": true},
+      {"text": "Exclusions among younger children have risen substantially and are 'very concerning,' evidence largely anecdotal", "source_supported": true},
+      {"text": "Around 4% of pupils are off-rolled between year 10 and 11, a sharp spike tied to end-of-key-stage measures", "source_supported": true},
+      {"text": "A steadier 1.5-2% (roughly 500-600 pupils) are off-rolled every year in other secondary years", "source_supported": true},
+      {"text": "Measuring schools on academic outcomes alone discourages retaining challenging pupils; loneliness and isolation strategy commits to rewarding inclusive schools instead", "source_supported": true},
+      {"text": "Up to half a classroom may carry some additional learning need, so diagnosis alone has little value without matching support", "source_supported": true},
+      {"text": "Trauma-informed practice is spreading but inconsistently; the new curriculum's health-and-well-being area is seen as the vehicle to embed it statutorily", "source_supported": true},
+      {"text": "Samaritans research on middle-aged men links childhood exclusion and peer-group isolation to elevated later-life suicide risk", "source_supported": true},
+      {"text": "No central data exists on how many children are home-schooled, raising concern some are 'hidden'; academic tuition alone doesn't address peer-isolation harms", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Funding pressures and staff-capacity constraints shape special-education provision: newly qualified teachers currently can't work in EOTAS/PRU settings, so the panel wants EOTAS exposure built into initial and ongoing teacher training; specialist expertise is niche and hard to replace when staff leave. PRU curriculum itself is broad, balanced, and inspected, though quality assurance is weaker for home tuition/private provision, and regional collaboration on the new curriculum is developing but not yet consistent.",
+        "verdict": "partial"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "PRU curriculum: 'Broad, balanced, inspected, and under local authority control — the panel is content here.' Home tuition/private provision: 'Quality assurance is far weaker once learners leave the PRU system.'"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "Swansea wants a dedicated educational psychologist for its EOTAS learners but lacks the capacity."},
+      "f4": {"status": "retained", "evidence": "Expertise is niche and slow to rebuild once experienced staff leave or retire; it's 'more than just one person,' it's a whole training package."},
+      "f5": {"status": "retained", "evidence": "Newly qualified teachers currently can't work in EOTAS settings; the panel wants exposure built into initial teacher training and ongoing professional development, in both directions between PRU and mainstream staff."},
+      "f6": {"status": "retained", "evidence": "Professional development for small EOTAS staff cohorts is still limited, though networks and conferences are helping."},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "retained", "evidence": "Make whole-school approach statutory — 'So every school has the same baseline of knowledge and ethos, not just those with a proactive senior leadership team.'"},
+      "f9": {"status": "retained", "evidence": "Nine recommendations include recognising ACEs, training teachers, learning from what works, listening to pupil voice, and building emotional-literacy skills, statutory in the new curriculum."},
+      "f10": {"status": "partial", "evidence": "Embed mental-health training in initial teacher education — 'Rather than leaving it as optional supplementary training.' (omits the 'confidence' and exclusion-risk-lessening rationale)"},
+      "f11": {"status": "retained", "evidence": "Formal responsibility sits with the local education authority, but excluded children touch several institutions at once, so services need to be interwoven around them ... corporate-parenting-style model."},
+      "f12": {"status": "partial", "evidence": "Children with undiagnosed communication or learning needs get labelled 'naughty,' especially when they otherwise seem bright. (omits anxious children acting out specifically to leave the classroom, and being off-rolled)"},
+      "f13": {"status": "retained", "evidence": "Estyn data shows fewer off-rollings from Welsh-medium schools, possibly reflecting socio-economic profile or a lack of Welsh-medium EOTAS provision itself — an area nobody has specifically studied."},
+      "f14": {"status": "partial", "evidence": "Time spent outside any education setting compounds existing inequality and vulnerability and heightens exposure to exploitation such as county-lines drug gangs... (this is Sarah Stone's broader point; Dr Ian Johnson's specific claim that the delay is driven partly by capacity issues is not distinctly restated)"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "f3 and f4 appear under separate headers (ALN support gaps; Staff capacity & training a.) with no stated shared causation, and f7 is entirely absent."},
+      "r2": {"status": "lost", "evidence": "f8 and f10 appear as parallel, sibling items (a. and b.) under Closing recommendations with no stated dependency between them."}
+    },
+    "hallucinations": [
+      {"text": "What presents as difficult behaviour is often an unmet additional learning need; Swansea's referrals rose roughly fourfold in five to six years", "source_supported": true},
+      {"text": "Most authorities are moving in the same direction on behaviour/well-being strategy, but there's a lag bringing everyone to a consistent standard", "source_supported": true},
+      {"text": "Capped 9 measure: too early to confirm improvement, though Torfaen reports working toward it via a broader, more balanced curriculum", "source_supported": true},
+      {"text": "Directors stress learner progression over a fixed attainment level; Estyn has shifted its own messaging to match", "source_supported": true},
+      {"text": "Team-around-the-family approach brings health, social care, and education together, on the premise that in-school behaviour usually reflects a harder home situation", "source_supported": true},
+      {"text": "Widespread staff training on adverse childhood experiences now gives teachers more context for behaviour than the profession had in the past", "source_supported": true},
+      {"text": "New ALN Act expected to add system pressure; England's parallel legislation saw ALN funding come under sustained tribunal pressure, to the point authorities nearly stopped contesting them", "source_supported": true},
+      {"text": "Delegation levels already high, with agreements to devolve as much money as possible to schools directly — not seen as a driver of exclusions", "source_supported": true},
+      {"text": "Provision needs shift term to term and year to year, but funding is set once a year, so unplanned pupil moves create pressure with no spare budget to draw on", "source_supported": true},
+      {"text": "When a child moves out of school into a PRU, the funding stays with the school until the next annual allocation, leaving a gap PRUs must absorb", "source_supported": true},
+      {"text": "National and regional networks, conferences, and joint visits have improved practice-sharing between PRU and mainstream staff", "source_supported": true},
+      {"text": "Swansea devolves (not merely delegates) money to secondary schools against a monitored action plan", "source_supported": true},
+      {"text": "Oxfordshire model: a local authority handed PRU money to secondary schools under a partnership agreement so they couldn't keep moving learners between schools; started well, long-term outcomes unknown", "source_supported": true},
+      {"text": "Part-time timetables ease learners back into school, with support continuing and only gradually reduced after full return", "source_supported": true},
+      {"text": "The most challenging, oldest learners are far harder to reintegrate at key stage 4; focus shifts to further education and colleges", "source_supported": true},
+      {"text": "Managed moves offer a 'second chance' move to a new school, with a cooling-off period and learner voice built in", "source_supported": true},
+      {"text": "Safeguarding drives which providers are approved, balanced against not discouraging providers from coming forward at all", "source_supported": true},
+      {"text": "Authorities can't quality-assure home tuition beyond what families choose to let them see, since access into the home is restricted", "source_supported": true},
+      {"text": "Authorities use their own staff, not agency staff, for home or medical tuition", "source_supported": true},
+      {"text": "Torfaen curriculum panel: senior leaders reviewing each school's alternative provision because arrangements that worked before no longer fit learner complexity or curriculum needs", "source_supported": true},
+      {"text": "WLGA and ADEW worry changes to EOTAS registration could disrupt data, funding, and joint-working arrangements, including the shared ownership that stops schools quietly off-rolling GCSE-age pupils from their data", "source_supported": true},
+      {"text": "Regional collaboration on the new curriculum is developing but not yet consistent once learners leave the PRU system", "source_supported": true},
+      {"text": "Access to CAMHS varies across three health boards in one region alone; a new DECLO role should strengthen partnership, alongside a universal well-being strategy including counselling, but current support 'hasn't been great'", "source_supported": true},
+      {"text": "Wide rural regions like Powys require long EOTAS travel distances even with provision in both halves of the county; compact authorities like Torfaen see far less of an issue", "source_supported": true},
+      {"text": "Official exclusion statistics are reductionist and don't surface underlying causes already documented in schools' own paper trails, which rarely reach a higher level of analysis", "source_supported": true},
+      {"text": "Exclusions among younger children have risen substantially and are 'very concerning,' but reasons primary schools are excluding more aren't yet understood", "source_supported": true},
+      {"text": "Around 4% of pupils off-rolled year 10 to 11, spike tied to end-of-key-stage-4 accountability measures", "source_supported": true},
+      {"text": "A steadier 1.5-2% (roughly 500-600 pupils a cohort) off-rolled every year, needing qualitative not just quantitative investigation", "source_supported": true},
+      {"text": "Measuring schools on academic outcomes alone discourages retaining challenging pupils; loneliness and isolation strategy commits to rewarding inclusive schools and reducing incentive to remove pupils", "source_supported": true},
+      {"text": "Diagnosis alone has little value without matching support, given up to half a classroom may carry some additional learning need; deeper priority is an inclusive school regardless of diagnosis", "source_supported": true},
+      {"text": "One governor's school became fully trauma-informed, though practice spreads inconsistently across Wales", "source_supported": true},
+      {"text": "Samaritans' unpublished research on middle-aged men links childhood exclusion and peer-group isolation to elevated later-life suicide risk, tying belongingness to basic human functioning", "source_supported": true},
+      {"text": "Welsh-medium provision gap suspected to vary informally by local authority, possibly more prevalent in west and north-west Wales", "source_supported": true},
+      {"text": "Delay entering EOTAS heightens exposure to exploitation such as county-lines drug gangs, echoed in a Public Health Wales/Swansea University review of 33 youth suicides", "source_supported": true},
+      {"text": "Academic tuition alone can address the curriculum but not the peer-isolation harms tied to the same men's research on later-life suicide risk", "source_supported": true},
+      {"text": "Parents can't advocate for their child's entitlements if they aren't given clear information about what provision the child is owed", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Special-education provision is heavily shaped by staff capacity and funding: Swansea wants a dedicated educational psychologist for EOTAS learners but lacks the capacity; specialist expertise is niche and slow to rebuild when staff leave; newly qualified teachers currently can't work in EOTAS settings, and the panel wants exposure built into initial teacher training and ongoing professional development in both directions between PRU and mainstream staff, though professional development access for small EOTAS staff cohorts remains limited (improving via networks/conferences). PRU curriculum itself is broad, balanced, inspected, and satisfactory, but quality assurance and curriculum consistency weaken once learners leave the PRU system into home tuition or private provision, with regional collaboration on the new curriculum still developing.",
+        "verdict": "partial"
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "\"A. ~35 hours recorded so far, most non-digit\" — states current ~35 hrs but drops the earlier ~32-hours-a-week-and-a-half-ago data point"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "partial", "evidence": "\"most non-digit\" (A) conveys the conclusion but not the \"digits don't take up much time\" reasoning, nor that it was Grad C's statement"},
+      "f4": {"status": "retained", "evidence": "\"B. ~11 hours transcribed\""},
+      "f5": {"status": "partial", "evidence": "\"C. next: channelize data, tighten segment boundaries\" — channelizing is present but not framed as following a \"clean first\" step"},
+      "f6": {"status": "partial", "evidence": "\"cleaning pass covers spelling, markup, numbers/acronyms, VOC/NONVOC/GLOSS tags\" (B) — mentions numbers/acronyms as part of cleaning but omits that it was Liz's request and that it wasn't previously handled consistently"},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "partial", "evidence": "\"VOC/NONVOC/GLOSS tags\" (B) — labels present but their definitions (vocalized/non-vocal/pronunciation-error) are not given"},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "\"~35 hours recorded so far, most non-digit\" conveys the dependency's conclusion but not the ~30-hour derived figure or that the total includes digits"},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""},
+      "r4": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "next step includes tightening segment boundaries", "source_supported": true},
+      {"text": "spot-check found two transcribers nearly identical, differing mainly on technical vs colloquial vocabulary", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "About 35 hours recorded (mostly non-digit) and about 11 hours transcribed so far; the cleaning pass covers spelling, markup, numbers/acronyms, and VOC/NONVOC/GLOSS tagging; next comes channelizing and tightening segment boundaries.", "verdict": "correct"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "\"roughly 35 hours recorded total (including digits, not yet separated out)\" — gives the current figure but not the earlier ~32-hours-a-week-and-a-half-ago data point"},
+      "f2": {"status": "retained", "evidence": "\"(including digits, not yet separated out)\""},
+      "f3": {"status": "retained", "evidence": "\"comfortably more than 30 hours of non-digit content, since digits take under half a minute per person\""},
+      "f4": {"status": "retained", "evidence": "\"about 11 hours transcribed so far out of a 12-hour batch given to transcribers, with two transcribers still finishing it\""},
+      "f5": {"status": "retained", "evidence": "\"Cleaning pass (Jane's top priority)\" ... \"Next steps: after cleaning, data gets 'channelized'...\""},
+      "f6": {"status": "partial", "evidence": "\"new conventions from Liz: systematic handling of numbers ... and acronyms ...\" — attribution and content match but omits that this hadn't previously been handled consistently"},
+      "f7": {"status": "retained", "evidence": "\"PhD B separately suggests alphabetized word-frequency listings to catch misspellings, which Jane already uses\""},
+      "f8": {"status": "partial", "evidence": "\"which Jane already uses\" — confirms prior use but drops the explicit \"agreed it was a very efficient strategy\" assessment"},
+      "f9": {"status": "retained", "evidence": "\"VOC (vocalized, e.g. cough/laugh), NONVOC (e.g. door slam), GLOSS (pronunciation/spoken-form notes)\""},
+      "f10": {"status": "retained", "evidence": "\"applied via an automated filter rather than by hand, to reduce transcriber error\""},
+      "f11": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"roughly 35 hours recorded total (including digits, not yet separated out) — comfortably more than 30 hours of non-digit content, since digits take under half a minute per person\""},
+      "r2": {"status": "retained", "evidence": "\"PhD B separately suggests alphabetized word-frequency listings to catch misspellings, which Jane already uses\""},
+      "r3": {"status": "retained", "evidence": "\"applied via an automated filter rather than by hand, to reduce transcriber error\""},
+      "r4": {"status": "lost", "evidence": "numbers/acronyms are never stated as hand-handled in this rendering, so no contrast with the filter-based VOC/NONVOC/GLOSS tagging is established"}
+    },
+    "hallucinations": [
+      {"text": "digits take under half a minute per person", "source_supported": true},
+      {"text": "11 hours transcribed out of a 12-hour batch given to transcribers, with two transcribers still finishing it", "source_supported": true},
+      {"text": "numbers example: \"nine two\" vs \"ninety-two\" with a gloss; acronyms example: \"P Z M\", letters space-separated, possibly glossed", "source_supported": true},
+      {"text": "spot-check: two transcribers' independent 10-minute-segment output nearly word-for-word identical, differing mainly in comma placement; one caught \"neural nets\", the other \"gobbledy-gook\"", "source_supported": true},
+      {"text": "after cleaning, data is channelized for Liz and Don; Jane will then tighten segment-boundary timing; Thilo had a breakthrough on channel-based speech/nonspeech segmentation Jane hasn't yet applied", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Roughly 35 hours recorded (including digits, not separated out), comfortably more than 30 hours non-digit; about 11 hours transcribed out of a 12-hour batch, with two transcribers still finishing.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"roughly 32 hours as of a week and a half ago, now roughly 35 hours, including digits (not yet separated out)\""},
+      "f2": {"status": "retained", "evidence": "\"including digits (not yet separated out)\""},
+      "f3": {"status": "retained", "evidence": "\"comfortably more than 30 hours of non-digit content is implied since digits take under half a minute per person and don't add up to much time\""},
+      "f4": {"status": "retained", "evidence": "\"about 11 hours transcribed so far, out of a 12-hour batch handed to the transcribers; two transcribers are still working through the remainder\""},
+      "f5": {"status": "retained", "evidence": "\"Cleaning pass (Jane's top priority, before channelizing)\" ... \"after cleaning, data is 'channelized' into the multichannel format\""},
+      "f6": {"status": "partial", "evidence": "\"new conventions requested by Liz: systematic handling of numbers ... and acronyms ...\" — attribution and content match but omits that this hadn't previously been handled consistently"},
+      "f7": {"status": "retained", "evidence": "\"PhD B separately suggests generating alphabetized word/token-frequency lists to catch misspellings and inconsistent colloquial forms by proximity in the sorted list\""},
+      "f8": {"status": "retained", "evidence": "\"Jane already uses this technique (type-token frequency listings) and agrees it's efficient\""},
+      "f9": {"status": "retained", "evidence": "\"VOC (vocalized noise: cough, laugh), NONVOC (e.g. door slam), GLOSS (pronunciation/spoken-form notes)\""},
+      "f10": {"status": "retained", "evidence": "\"since Jane judges hand-typing the full tag format directly would be too error-prone for transcribers\""},
+      "f11": {"status": "retained", "evidence": "\"acronyms ... — handled by hand since these can't be automated reliably (unlike well-known terms like TIMIT or PLP)\""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"roughly 32 hours as of a week and a half ago, now roughly 35 hours, including digits (not yet separated out); comfortably more than 30 hours of non-digit content is implied since digits take under half a minute per person\""},
+      "r2": {"status": "retained", "evidence": "\"Jane already uses this technique (type-token frequency listings) and agrees it's efficient\" tied directly to PhD B's suggestion"},
+      "r3": {"status": "retained", "evidence": "\"implemented via an automated filter ... since Jane judges hand-typing the full tag format directly would be too error-prone for transcribers\""},
+      "r4": {"status": "partial", "evidence": "VOC/NONVOC/GLOSS-via-filter (bullet iii) and numbers/acronyms-by-hand (bullet ii) both appear as parallel list items with their respective handling methods stated, but no explicit contrastive connector ties them together as a contrast"}
+    },
+    "hallucinations": [
+      {"text": "digits take under half a minute per person and don't add up to much time", "source_supported": true},
+      {"text": "11 hours transcribed out of a 12-hour batch; two transcribers still working through the remainder; PhD B notes they're moving along efficiently, Jane confirms some transcribers put in more hours than others", "source_supported": true},
+      {"text": "numbers example \"nine two\" vs \"ninety-two\" with a gloss; acronyms kept space-separated e.g. \"P Z M\", possibly glossed; contrast with well-known terms like TIMIT or PLP", "source_supported": true},
+      {"text": "filter converts simple bracketed notes (e.g. \"{laugh}\") into the fuller tagged form", "source_supported": true},
+      {"text": "spot-check: two transcribers' output on the same 10-minute segment \"almost spooky\" in similarity, word-for-word identical apart from comma placement; one caught \"neural nets\"/\"downsampled\" but missed \"gobbledy-gook\", approximating it phonetically as \"GABBL...\"; the other caught the colloquial term but not the technical ones", "source_supported": true},
+      {"text": "after cleaning, data is channelized for Liz and Don; Jane's next priority is tightening segment-boundary timing; Thilo had a breakthrough on channel-based speech/nonspeech segmentation Jane hasn't yet had time to apply", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "About 32 hours as of a week and a half ago, now roughly 35 (including digits, not separated out), comfortably more than 30 hours non-digit; about 11 hours transcribed out of a 12-hour batch, two transcribers still finishing.", "verdict": "correct"}
+    }
+  }
+}

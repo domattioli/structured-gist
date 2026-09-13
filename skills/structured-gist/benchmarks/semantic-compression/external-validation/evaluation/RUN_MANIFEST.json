@@ -1,0 +1,53 @@
+{
+  "run_date": "2026-09-10",
+  "starting_branch": "eval/external-semantic-gold-adapter",
+  "starting_sha": "f2552b0385b7559fd22bf131bee6995864dea8b3",
+  "run_branch": "eval/external-eval-run",
+  "run_branch_base_sha": "f2552b0385b7559fd22bf131bee6995864dea8b3",
+  "dependencies": {
+    "pr_19_external_validation_corpus": {
+      "state": "open",
+      "frozen_corpus_commit": "1039d37"
+    },
+    "pr_20_external_semantic_gold_adapter": {
+      "state": "open",
+      "adapter_head": "f2552b0"
+    },
+    "pr_18_wording_fidelity_and_findability": {
+      "state": "open",
+      "note": "cherry-picked 3 commits (f795ef4, dd5effe, 4db6932) onto this run's branch as a read-only dependency -- PR #18 itself was not modified. These commits are purely additive (6 new scoring/results files, no existing file touched).",
+      "cherry_picked_commits": ["f795ef4", "dd5effe", "4db6932"]
+    }
+  },
+  "corpus_manifest_sha256": "d00987546e01da532b22de016dd2d8ade8132e095df3fea32ff0e791741691b7",
+  "derived_manifest_sha256": "38460499d582012a8d7f5c15a19fee695057e703d55cd630ad94f0ec27e9c7b2",
+  "structured_gist_skill_version": "0.4.8",
+  "generation_model": "claude-sonnet-5 (Sonnet 5) -- this session's own model, matching the existing semantic-compression benchmark's primary 'sonnet' tier convention",
+  "judge_model": "claude-sonnet-5 (Sonnet 5) -- same tier, separate isolated context per judge invocation",
+  "weak_model_pressure_tier": "not reproduced -- HANDOFF_FULL_EVAL.md did not pre-specify a weak-model subset, and the task brief said to reproduce one only if already specified there",
+  "scorer_versions": {
+    "combine.py_sha256": "e3e7cea9b98b89ada16923848b97165ae4d19ed0510a2bcaeb6a101878ff67df",
+    "spr.py_sha256": "f245d991f8763037206816bf8a247755665cfb48a80f0ba116f2ba8edb4826c2",
+    "deterministic.py_sha256": "e9c659600021912769aa8deea637c4d084b0e3aa0fd0989ccedc94fcc141db60",
+    "wording_fidelity.py_sha256": "ddc859e1173a07e3f953669ceeda4bad7c3fe18288e3e873053cf86ba8e09d6b",
+    "findability.py_sha256": "961474e2b29941d2943088df2f81ad699e44adb19eaf5648f4a37ab21a74e056",
+    "note": "none of these files were modified by this session -- all reused unmodified via direct import"
+  },
+  "renderings": {
+    "total": 126,
+    "by_dataset": {"qmsum": 72, "qasper": 30, "hotpotqa": 24},
+    "generation_failures": 0,
+    "retries": 0
+  },
+  "judgments": {
+    "total_case_files": 42,
+    "by_dataset": {"qmsum": 24, "qasper": 10, "hotpotqa": 8},
+    "protocol": "two-stage (stage 1 blind to source.md; stage 2 source-support check of hallucination candidates only)"
+  },
+  "scorer_coverage": {
+    "compression_conformance": "126/126 (case,level) rows scored -- fully deterministic",
+    "wording_fidelity": "126/126 (case,level) rows scored -- fully deterministic given renderings",
+    "semantic_fact_relation_recoverability_spr_critical_loss": "126/126 (case,level) rows scored -- deterministic given judgments + frozen weights",
+    "findability_corrected_retained_unit": "low eligibility (see FINDINGS section of RESULTS.md) -- most gold units fail strict verbatim-token alignment against the judge's 'evidence' field, which JUDGE_PROTOCOL.md explicitly allowed to be a paraphrase rather than a verbatim rendering quote. Documented as a scorer/protocol limitation, not a skill finding."
+  }
+}

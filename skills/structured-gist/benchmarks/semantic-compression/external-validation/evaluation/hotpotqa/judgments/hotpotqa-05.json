@@ -1,0 +1,122 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {
+        "status": "partial",
+        "evidence": "ASC section: \"Annual national title\" / \"Running since 1989/90\" / \"Host state rotates\" — captures the annual/national-champion purpose but never labels ASC a \"Dirt track racing championship\"; that type designation is dropped."
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "\"Dirt track racing\" heading with bullet \"Clay or dirt ovals\" conveys the clay/dirt-oval definition, though the explicit \"type of auto racing\" classifier is compressed away."
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "lost",
+        "evidence": "ASC's bullets never use the term \"dirt track racing\" or any equivalent phrase to type the championship, so nothing in the rendering states or implies that ASC's championship type is the same activity defined under \"Dirt track racing\"."
+      }
+    },
+    "hallucinations": [
+      {"text": "Tralee Speedway is a 410m dirt oval near Canberra, NSW that bred national champions.", "source_supported": true},
+      {"text": "Dirt track racing began pre-WWI in the US.", "source_supported": true},
+      {"text": "Dirt track racing distinguishes open-wheel vs stock cars.", "source_supported": true},
+      {"text": "The Australian Street Stock Championship has run since 1989/90.", "source_supported": true},
+      {"text": "The Australian Street Stock Championship's host state rotates.", "source_supported": true},
+      {"text": "Dirt track racing in the United Kingdom is the most common track type there and tracks are also used for Speedway.", "source_supported": true},
+      {"text": "Dirt track ovals in South Africa mirror tar oval classes across five race classes.", "source_supported": true},
+      {"text": "Dirt track racing in Australia runs a September–April season with major tracks nationwide and a premier Sprintcars series.", "source_supported": true},
+      {"text": "Dirt track racing in South Africa (second, duplicate paragraph) mirrors tar oval classes across five race classes.", "source_supported": true},
+      {"text": "Dirt track ovals in the UK are Britain's most popular racing type and are also used for Speedway.", "source_supported": true},
+      {"text": "Kings Park Speedway is a 1/3-mile paved oval in Saskatchewan, Canada, originally dirt, paved in 1970.", "source_supported": true},
+      {"text": "Illinois State Fairgrounds Racetrack is a one-mile clay oval racing since 1910, the oldest continual dirt-track championship host.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Dirt track racing (inferred: the only \"clay or dirt surfaced oval tracks\" definition in the document, though the rendering never explicitly ties it to the Australian Street Stock Championship)",
+        "verdict": "partial"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "\"Purpose: Determines the Australian national dirt track racing champion each year.\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "\"Definition: Auto racing performed on clay or dirt surfaced oval tracks.\""
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "retained",
+        "evidence": "ASC's own purpose line uses the exact phrase \"dirt track racing champion,\" and the adjacent \"Dirt track racing\" section immediately defines that same term — the reused term links the two as the same activity."
+      }
+    },
+    "hallucinations": [
+      {"text": "Tralee Speedway: location near Canberra, 410m track, past names (Fraser Park Raceway, Pepsi Power Dome), and legacy of producing champions.", "source_supported": true},
+      {"text": "Dirt track racing's history: began in the US before WWI, spread widely in the 1920s and 1930s.", "source_supported": true},
+      {"text": "Dirt track racing's car types: open wheel vs. stock (fendered) cars and their regional dominance (Northeast/West vs. South).", "source_supported": true},
+      {"text": "ASC's format: held over a single meeting, usually on consecutive nights.", "source_supported": true},
+      {"text": "ASC's history: run annually since the 1989/90 season.", "source_supported": true},
+      {"text": "ASC's governing body: the Australian Saloon Car Federation (ASCF), which rotates hosting among states.", "source_supported": true},
+      {"text": "Dirt track racing in the United Kingdom: definition, prevalence (dirt ovals outnumber other track types), shared use with Speedway.", "source_supported": true},
+      {"text": "List of dirt track ovals in South Africa: definition, classes mirroring tar-oval classes, five-class list.", "source_supported": true},
+      {"text": "Dirt track racing in Australia: September–April season, notable tracks list.", "source_supported": true},
+      {"text": "World Series Sprintcars: Australia's richest/best-known speedway series, conceived 1986 by John Hughes, modeled on US World of Outlaws, most recent season 2014–15.", "source_supported": true},
+      {"text": "Dirt track racing in South Africa (duplicate paragraph): definition, classes, five-class list.", "source_supported": true},
+      {"text": "List of dirt track ovals in the United Kingdom (duplicate paragraph): definition, prevalence, shared Speedway use.", "source_supported": true},
+      {"text": "Kings Park Speedway identity/history: location, operator, 1/3-mile paved oval, originally dirt, paved 1970, re-paved 2007.", "source_supported": true},
+      {"text": "Kings Park Speedway events: 2010 40th Anniversary events, 2015 special events (drifting, trailer racing, wheelies), 2016 regular classes.", "source_supported": true},
+      {"text": "Illinois State Fairgrounds Racetrack identity/history: location, one-mile clay \"Springfield Mile,\" construction/reconstruction history, racing since 1910, oldest continual national-championship dirt-track host (1934).", "source_supported": true},
+      {"text": "Illinois State Fairgrounds Racetrack current events and records: Allen Crowe Memorial 100, USAC Silver Crown, UMP Late Models/Modifieds, AMA Grand National, five world records.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Dirt track racing",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "\"Type: A dirt track racing championship.\" + \"Purpose: Determines the Australian national champion each year.\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "\"Definition: Auto racing performed on clay or dirt surfaced oval tracks.\""
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "retained",
+        "evidence": "ASC is explicitly typed as \"A dirt track racing championship,\" using the exact term the adjacent \"Dirt track racing\" section defines — an explicit coreference, stronger than standard's implicit link."
+      }
+    },
+    "hallucinations": [
+      {"text": "Tralee Speedway: type (dirt track venue), location near Canberra, 410m track, past names, legacy of producing champions.", "source_supported": true},
+      {"text": "Dirt track racing's origin (pre-WWI US) and growth (widespread 1920s–1930s).", "source_supported": true},
+      {"text": "Dirt track racing's dominant car types: open wheel vs. stock (fendered) cars and regional dominance.", "source_supported": true},
+      {"text": "ASC's format (single meeting, consecutive nights), history (since 1989/90), governing body (ASCF), and rotating hosting.", "source_supported": true},
+      {"text": "Dirt track racing in the United Kingdom: definition, prevalence, shared Speedway use.", "source_supported": true},
+      {"text": "List of dirt track ovals in South Africa: definition, classes, five-class list.", "source_supported": true},
+      {"text": "Dirt track racing in Australia: September–April season, notable tracks.", "source_supported": true},
+      {"text": "World Series Sprintcars: richest/best-known, conceived 1986 by John Hughes, modeled on US World of Outlaws (run since 1978), most recent season 2014–15.", "source_supported": true},
+      {"text": "Dirt track racing in South Africa (duplicate paragraph): definition, classes, five-class list.", "source_supported": true},
+      {"text": "List of dirt track ovals in the United Kingdom (duplicate paragraph): definition, prevalence claim (\"most popular auto racing sport in Britain\"), shared Speedway use.", "source_supported": true},
+      {"text": "Kings Park Speedway identity/history: location, operator, track layout, originally dirt/paved 1970/re-paved 2007, primary stock-car use.", "source_supported": true},
+      {"text": "Kings Park Speedway events: 2010 anniversary events, 2015 special events, 2016 regular classes.", "source_supported": true},
+      {"text": "Illinois State Fairgrounds Racetrack identity/history: location, \"Springfield Mile,\" construction history, racing since 1910, oldest continual national-championship host, first national race 1934 under AAA banner.", "source_supported": true},
+      {"text": "Illinois State Fairgrounds Racetrack current events and records: Allen Crowe Memorial 100, USAC Silver Crown, UMP Late Models/Modifieds, AMA Grand National, five world records.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Dirt track racing",
+        "verdict": "correct"
+      }
+    }
+  }
+}

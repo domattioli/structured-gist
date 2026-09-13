@@ -1,0 +1,20 @@
+- **LDS Motion Picture Studios**
+  - began as the BYU Motion Picture Studio in 1953, led by Wetzel Whitaker
+- **Item 47**
+  - 2012 Marvel One-Shot short film, a spin-off of "The Avengers"
+- **Phil Coulson**
+  - MCU character (played by Clark Gregg), a high-ranking S.H.I.E.L.D. agent
+- **Solax Studios**
+  - American motion picture studio founded in 1910 by Alice Guy-Blaché and partners
+- **Televisa San Ángel**
+  - Mexico City film/TV studio, the oldest production facility in Mexico
+- **Marvel One-Shots**
+  - series of direct-to-video MCU short films released 2011–2014
+- **Nestor Film Company**
+  - defunct company that built Hollywood's first permanent studio (1911)
+- **Marvel Studios**
+  - American motion picture studio behind the MCU, led by Kevin Feige
+- **All Hail the King**
+  - 2014 Marvel One-Shot short film, a spin-off of "Iron Man 3"
+- **Charles Evans Jr.**
+  - American film producer and documentary director, nephew of Robert Evans

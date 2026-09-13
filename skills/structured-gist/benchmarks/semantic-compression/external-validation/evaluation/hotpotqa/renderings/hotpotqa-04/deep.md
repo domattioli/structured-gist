@@ -1,0 +1,81 @@
+- **Bajaga i Instruktori**
+  - **Identity**
+    - a highly popular Serbian and former Yugoslav rock band
+  - **Founding**
+    - founded in Belgrade in 1984
+    - founded by Momčilo Bajagić "Bajaga" — composer, lyricist, and guitarist
+  - **Notability**
+    - possesses a rich discography and a plethora of hit songs
+      - placed them at the top of the former Yugoslav rock scene
+    - alongside other mega-selling bands such as Bijelo Dugme and Riblja Čorba
+- **Sanjalice**
+  - **Identity**
+    - former Yugoslav rock band from Belgrade
+  - **Notability**
+    - a. one of the first former Yugoslav all-female bands
+    - b. one of the pioneers of the former Yugoslav rock scene
+- **Riblja Čorba**
+  - **Identity**
+    - Serbian Cyrillic name translates as "Fish Stew"
+    - a Serbian and Yugoslav rock band from Belgrade
+  - **Notability**
+    - one of the most popular and most influential acts of the Yugoslav rock scene
+- **Iskre**
+  - **Identity**
+    - translates as "The Sparks"
+    - a former Yugoslav rock band
+  - **Notability**
+    - one of the pioneers of the former Yugoslav rock scene
+- **S Vremena Na Vreme**
+  - **Identity**
+    - translates as "From Time To Time"
+    - a Serbian and former Yugoslav rock band from Belgrade
+  - **Notability**
+    - a. one of the pioneers of the Serbian acoustic rock scene
+    - b. one of the pioneers of incorporating folk music elements into rock music on the former Yugoslav rock scene
+- **Bele Višnje**
+  - **Identity**
+    - translates as "White Sour Cherries"
+    - a Serbian and former Yugoslav rock band
+  - **Notability**
+    - one of the pioneers of the former Yugoslav rock scene
+- **Smak**
+  - **Identity**
+    - translates as "The end time"
+    - a Serbian and former Yugoslav rock band from Kragujevac
+  - **Peak**
+    - reached the peak of popularity in the 1970s
+      - one of the most notable acts of the former Yugoslav rock scene at that time
+  - **Leader**
+    - the band's leader was guitarist Radomir Mihailović
+    - nicknamed Točak ("The Wheel")
+      - considered one of the most influential guitarists on the former Yugoslav rock scene
+- **Korni Grupa**
+  - **Identity**
+    - translates as "Korni Group"
+    - a Yugoslav rock band from Belgrade
+    - also known as the Kornelyans, a name used during a short-lived foray into the international market
+  - **Founding**
+    - formed in 1968
+  - **Notability**
+    - a. one of the first Yugoslav rock bands to achieve major mainstream popularity
+    - b. the first Yugoslav supergroup
+    - c. considered one of the most prominent and influential bands in the history of rock music in Yugoslavia
+- **Daltoni**
+  - **Identity**
+    - translates as "The Daltons"
+    - a Serbian and former Yugoslav rock band from Niš
+  - **Notability**
+    - one of the pioneers of the former Yugoslav rock scene
+- **Dalton Gang**
+  - **Identity**
+    - a group of outlaws in the American Old West during 1890–1892
+    - also known as The Dalton Brothers, because three of its members were brothers
+  - **Specialty**
+    - specialized in bank and train robberies
+  - **Downfall**
+    - during an attempted bank robbery in Coffeyville, Kansas in 1892
+    - two of the brothers and two other gang members were killed
+  - **Aftermath**
+    - Emmett survived and was captured, tried, and convicted
+    - he was paroled after serving 14 years in prison

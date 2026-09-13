@@ -1,0 +1,33 @@
+- **Meeting opening**
+  - **Mic check ritual**
+  - **Recording reminder**
+- **Thesis proposal review**
+  - **Core claim**
+  - **Draft status**
+  - **Comment process**
+- **Feedback deadline**
+  - **Cutoff**
+  - **Delivery mode**
+- **EML talk plan**
+  - I. tourist-scenario motivator
+  - II. SmartKom progress recap
+  - III. data and rephrasing problem
+  - IV. NTL big picture
+  - V. constructions and Bayes-net
+  - VI. optional FMRI aside
+- **Construal punch line**
+  - **Claim**
+  - **Orthogonality prediction**
+  - **Worked example**
+  - **Draft gap**
+- **Domain example search**
+  - A. "in/on the bus"
+  - B. "out of film"
+  - C. castle admission-fee case
+  - D. metaphorical "where"
+  - E. fixed expressions
+  - F. building/museum polysemy
+- **Corpus metonymy check**
+  - a search of the full Heidelberg database for metonymy and polysemy cases found almost none.
+- **Meeting wrap-up**
+  - the group will send feedback electronically; good trip wished before the Wahlster meeting.

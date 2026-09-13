@@ -1,0 +1,121 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "retained", "evidence": "Middle layer added"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "partial", "evidence": "the group acknowledges all current probabilities are hand-guessed rather than learned from data, with some combinations nonsensical; real data is needed to fix this. (captures the 'probabilities not yet known' idea via a later restatement, not the original 'toy version' framing)"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Grad D suggests treating discourse cues as evidence for an underlying task plan, illustrated by inferring \"Track seven\" just from a traveler saying \"New York\" at a ticket counter.", "source_supported": false}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Based on the outline (Flat structure rejected; Middle layer added; Output modes), Grad B said the belief net's initial flat structure was rejected and a middle layer was added between the features and the output.", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "making it a pain to hand-set"},
+      "f2": {"status": "partial", "evidence": "unworkable for later learning (captures the general future-learning concern but not the specific 'I don't know belief-nets well, we'd be handicapped' reasoning)"},
+      "f3": {"status": "retained", "evidence": "with N features the probability table needed is exponential in N"},
+      "f4": {"status": "retained", "evidence": "an initial design pointed every feature directly at the output node"},
+      "f5": {"status": "retained", "evidence": "Middle layer added -- a hidden middle layer of feature-derived concepts... sits between the raw extracted features and the output"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "a hidden middle layer of feature-derived concepts... so the model infers intention rather than wiring every feature straight to it (captures the 'hidden'/indirect nature but not the specific 'could not be directly extracted from the data' rationale)"},
+      "f8": {"status": "retained", "evidence": "(tourist vs errand, in-a-hurry, final destination, closed)"},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "retained", "evidence": "(tourist vs errand, in-a-hurry, final destination, closed)"},
+      "f12": {"status": "partial", "evidence": "the group acknowledges all current probabilities are hand-guessed rather than learned from data... real data is needed to fix this (captures the substance but not the 'toy version' framing)"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Flat structure rejected: ...making it a pain to hand-set and unworkable for later learning. / Middle layer added: a hidden middle layer of feature-derived concepts... sits between the raw extracted features and the output, so the model infers intention rather than wiring every feature straight to it."},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Features listed: a. prosody b. discourse c. verb choice d. landmark-iness e. nice walls f. context g. time of day", "source_supported": true},
+      {"text": "Output modes: the belief-net's output node takes one of three modes -- Vista, Tango, or Enter -- inferred probabilistically from the middle layer.", "source_supported": true},
+      {"text": "JavaBayes demo evidence set: admission fee discussed -- false; nice walls -- true; time of day -- night.", "source_supported": true},
+      {"text": "querying the mode node with that evidence gives a distribution slightly biased toward Tango.", "source_supported": true},
+      {"text": "the previous day's demo got stuck always returning Tango regardless of evidence, attributed to hand-tuned rather than learned probabilities.", "source_supported": true},
+      {"text": "a statue and a celebrity's house can both be physically enterable, but a statue can never be entered while the house technically could be, though visitors usually aren't allowed in -- prompting a distinction between \"has a door\" and \"publicly enterable.\"", "source_supported": true},
+      {"text": "the group adds a binary \"has door\" node live in JavaBayes to see how it wires into the net.", "source_supported": true},
+      {"text": "JavaBayes tool assessment pros (free, has a GUI) and cons (interface is clunky, unclear if it does learning).", "source_supported": true},
+      {"text": "the network is stored as a text file listing probability tables as ordered number lists, hard to follow; the group considers scripting a friendlier way to edit them and flags Srini as the person to ask, including about a possible XML Bayes-net format.", "source_supported": true},
+      {"text": "adding more direct links from individual discourse cues would make the network \"spider-web-ish\" and hard to hand-edit as more cues are added.", "source_supported": true},
+      {"text": "group observed cues into separate regions (discourse cues, syntactic info, context), each with its own small hidden middle layer, feeding into the shared task-based middle layer instead of every cue pointing there directly.", "source_supported": true},
+      {"text": "SmartKom's discourse-history module is the system's memory of the whole dialogue -- who said what, what was shown on screen -- and it resolves anaphora and fills in information omitted in later turns.", "source_supported": true},
+      {"text": "the middle layer can query the discourse model for whether a cue was discussed within some configurable lookback depth, which the group agrees to bound for practicality.", "source_supported": true},
+      {"text": "Grad D suggests treating discourse cues as evidence for an underlying task plan the person is following, illustrated by inferring \"Track seven\" just from a traveler saying \"New York\" at a ticket counter -- a cue can support a whole multi-step plan, not just one node.", "source_supported": false},
+      {"text": "the group acknowledges all current probabilities are hand-guessed rather than learned from data, with the table already running to over a hundred entries and some combinations (e.g. \"want to enter\" + \"closed\" + \"night\") nonsensical; real data is needed to fix this.", "source_supported": true},
+      {"text": "ask Srini about alternative Bayes-net packages and the possible XML format, likely at Wednesday's meeting.", "source_supported": true},
+      {"text": "over the coming week, the three of them will segment the observed features into the proposed regions and sketch features/middle layers for each.", "source_supported": true},
+      {"text": "Fey has agreed to act as the wizard and help recruit/organize subjects; a trial run is planned for Friday afternoon to check she can handle the role's spontaneous, creative demands.", "source_supported": true},
+      {"text": "Liz volunteered to be the first test subject; the group favors an unfamiliar subject over an insider for a more realistic, less deliberately-adversarial test of the wizard.", "source_supported": true},
+      {"text": "existing Munich data is too simple with no metaphor, so the new collection aims to elicit richer, less-constrained language while including some clearly-labeled navigational tasks to keep the resulting corpus labelable, and to compare human-computer vs human-human pragmatics.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Grad B said the initial flat design (every feature pointing directly to the output) was rejected because it required an exponential number of hand-set probabilities and would not scale to future learning; instead, a hidden middle layer of feature-derived concepts (tourist/errand/hurry/final destination/closed) was added between the raw features and the output so the model infers intention rather than wiring every feature straight to it.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "making it a pain to hand-set"},
+      "f2": {"status": "partial", "evidence": "unworkable if the group later moves to learning (captures the general future-learning concern, not the specific 'handicapped/don't know belief-nets well' reasoning)"},
+      "f3": {"status": "retained", "evidence": "with N features the probability table needed is exponential in N"},
+      "f4": {"status": "retained", "evidence": "an initial design pointed every feature directly at the output node"},
+      "f5": {"status": "retained", "evidence": "Middle layer added -- a hidden middle layer of feature-derived concepts... sits between the raw extracted features and the three-way output"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "a hidden middle layer of feature-derived concepts... so the model can infer intention rather than wiring every feature straight to the output (captures the hidden/indirect nature, not the 'couldn't extract from data' rationale)"},
+      "f8": {"status": "retained", "evidence": "(tourist vs errand, in-a-hurry, final destination, closed)"},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "retained", "evidence": "(tourist vs errand, in-a-hurry, final destination, closed)"},
+      "f12": {"status": "partial", "evidence": "the group acknowledges all current probabilities are hand-guessed rather than learned from data... real data is needed to fix this"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Flat structure rejected: ...making it a pain to hand-set and unworkable if the group later moves to learning. / Middle layer added: a hidden middle layer of feature-derived concepts... sits between the raw extracted features and the three-way output, so the model can infer intention rather than wiring every feature straight to the output."},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Features listed: a. prosody b. discourse c. verb choice d. landmark-iness e. nice walls f. context g. time of day", "source_supported": true},
+      {"text": "Grad A raises \"saliency\" as a possibly-equivalent term, but the group agrees an object can be salient without being a landmark, and landmark-iness here means specifically touristic, not navigational, landmark status.", "source_supported": true},
+      {"text": "Output modes: the belief-net's single output node takes one of three modes -- Vista (view), Tango (approach/inspect), or Enter -- inferred probabilistically from the middle layer.", "source_supported": true},
+      {"text": "JavaBayes demo evidence set: admission fee discussed -- false; nice walls -- true; time of day -- night.", "source_supported": true},
+      {"text": "querying the mode node with that evidence gives a probability distribution slightly biased toward Tango.", "source_supported": true},
+      {"text": "the previous day's demo got stuck always returning Tango regardless of evidence, which the group attributes to hand-tuned, not learned, probabilities rather than a bug.", "source_supported": true},
+      {"text": "a statue and a celebrity's house (e.g. Tom Cruise's) can both be physically enterable landmarks, but a statue can never be entered while the house technically could be, though visitors normally aren't allowed in -- prompting a distinction between \"has a door\" and \"publicly enterable.\"", "source_supported": true},
+      {"text": "the group adds a binary \"has door\" node live in JavaBayes to see how it wires into the belief-net.", "source_supported": true},
+      {"text": "adding the new node appears to overwrite the existing probability function for the node it points to rather than preserving it, forcing the group to reload the previously saved network file.", "source_supported": true},
+      {"text": "JavaBayes tool assessment pros (free, has a GUI) and cons (interface is clunky, unclear if it does learning).", "source_supported": true},
+      {"text": "the network is stored as a plain text file listing probability tables as ordered number lists, whose layout is hard to follow; the group considers writing a small script to generate or edit these tables more easily, and flags Srini as the person to ask about it and about an XML Bayes-net format the tool may also read.", "source_supported": true},
+      {"text": "adding more direct links from individual discourse cues would make the network \"spider-web-ish\" and hard to hand-edit as more cues are added.", "source_supported": true},
+      {"text": "group observed cues into separate regions (discourse cues, syntactic info like verb/object/modifiers, context), each with its own small hidden middle layer, which then feeds into the shared task-based middle layer (tourist, doing business, in a hurry, final destination) instead of every cue pointing there directly.", "source_supported": true},
+      {"text": "instead of a single \"discussed admission fee\" node, several discourse cues (admission fee, \"how much to enter,\" opening hours) would funnel into one \"entrance requirements\" node inside the discourse region.", "source_supported": true},
+      {"text": "SmartKom's discourse-history module is the system's memory of the whole dialogue -- who said what, what was shown on screen -- and it resolves anaphora and fills in information omitted in later turns.", "source_supported": true},
+      {"text": "the middle layer can query the discourse model for whether a cue (like admission fee) was discussed within some configurable lookback depth, which the group agrees to bound for practicality rather than searching the entire conversation history.", "source_supported": true},
+      {"text": "Grad D suggests treating discourse cues as evidence for an underlying task plan the person is following (classic AI plan recognition), illustrated by inferring \"Track seven\" just from a traveler saying \"New York\" at a ticket counter -- a cue can support a whole multi-step plan, not just one node.", "source_supported": false},
+      {"text": "the group acknowledges all current probabilities are hand-guessed rather than learned from data -- with several incoming nodes at multiple values each, the table already runs to over a hundred entries, some of them (e.g. \"want to enter\" + \"closed\" + \"night\") nonsensical combinations -- and real data is needed to fix this.", "source_supported": true},
+      {"text": "ask Srini about alternative Bayes-net packages and about the possible XML format, likely at Wednesday's meeting.", "source_supported": true},
+      {"text": "over the coming week, the three of them will work on segmenting the observed features into the proposed regions and sketching features/middle layers for each.", "source_supported": true},
+      {"text": "Fey has agreed to act as the wizard (and help recruit/organize subjects); a trial run is planned for Friday afternoon to check she can handle the spontaneous, creative demands of the role.", "source_supported": true},
+      {"text": "Liz volunteered to be the first test subject; the group favors an unfamiliar subject over an insider for a more realistic, less deliberately-adversarial test of the wizard.", "source_supported": true},
+      {"text": "existing Munich data is too simple/command-line with no metaphor, so the new collection aims to elicit richer, less-constrained language while still including some clearly-labeled navigational tasks (implicit \"enter\" vs explicit \"look/photograph\") to keep the resulting corpus labelable, and to compare human-computer vs human-human pragmatics.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Grad B said the initial flat design (every feature pointing directly to the output) was rejected because it required an exponential number of hand-set probabilities and would not scale to future learning; instead, a hidden middle layer of feature-derived concepts (tourist/errand/hurry/final destination/closed) was added between the raw features and the output, so the model can infer intention rather than wiring every feature straight to it.", "verdict": "correct"}
+    }
+  }
+}

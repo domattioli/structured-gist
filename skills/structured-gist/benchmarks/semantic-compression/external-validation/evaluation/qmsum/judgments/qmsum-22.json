@@ -1,0 +1,82 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Headers show 'Color customization cost', 'Brand recognizability', 'Fashion positioning', 'Yellow proposal', and 'Compromise' as topics, but no content is given for any of them.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Color customization cost: multiple color options would raise production cost against the twelve-euro target\""},
+      "f2": {"status": "retained", "evidence": "\"Color customization cost: multiple color options would raise production cost against the twelve-euro target\""},
+      "f3": {"status": "partial", "evidence": "\"Fashion positioning: fancy, fashionable, powerful, easy to use, and low-cost all at once\" + \"Zapping priority: packing many functions onto few buttons risks slowing the most common action, channel-zapping\" — content present but scattered, and the specific 75%-zap statistic is missing (Marketing research findings list a different 75% stat, about remotes being called ugly)"},
+      "f4": {"status": "retained", "evidence": "\"Brand recognizability: must use the company's colour and imagery so it reads instantly as their product\" + \"Compromise: doesn't need to be fully yellow, just carry a recognizable brand accent\""},
+      "f5": {"status": "retained", "evidence": "\"Fashion positioning: fancy, fashionable...\" + \"Brand recognizability: must use the company's colour and imagery so it reads instantly as their product\" (company name generalized, not literally 'Real Reaction')"},
+      "f6": {"status": "partial", "evidence": "\"Fashion positioning: fancy, fashionable, powerful, easy to use, and low-cost\" — implies but doesn't explicitly state 'attractive'"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "'Fashion positioning' (New product requirements) and 'Color customization cost' (Button-reduction discussion) are in separate, non-adjacent sections with no explicit contrast language tying them together."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: three presentations (Industrial Design, UI, Marketing), then new requirements, function decisions, close; PM as secretary", "source_supported": true},
+      {"text": "Controller concept: existing remotes pack twenty-plus functions, making usability hard; Google-style goal of sophisticated-yet-simple interface; merging the two remains an open challenge", "source_supported": true},
+      {"text": "Standardization idea: international pictograms could shorten the learning curve", "source_supported": true},
+      {"text": "Component design: infrared vs. laser signal technology; core components (light bulb, infrared bulb); wireless vs. wired power connection; ~8 euro estimated cost", "source_supported": true},
+      {"text": "Wireless debate: PM frames wireless-vs-wired as more a UI/usability question; risk of losing a wireless remote", "source_supported": true},
+      {"text": "Marketing research: 100 subjects observed in a lab plus questionnaire; findings — 75% call remotes ugly, 80% would pay more, ~10% of buttons used, remotes often lost, 35% find them slow to learn, 26% report RSI strain", "source_supported": true},
+      {"text": "Recommendations: prioritize fancy look and fewer buttons, same functionality, to outsell competitors", "source_supported": true},
+      {"text": "Mode-switch proposal: group functions into categories with a switch button to cut button count", "source_supported": true},
+      {"text": "Fancy is subjective: colorful vs. simple/uniform reads as 'fancy' differently across users", "source_supported": true},
+      {"text": "Drop teletext (most homes now have internet)", "source_supported": true},
+      {"text": "TV-only scope, to limit complexity and cost", "source_supported": true},
+      {"text": "Yellow proposal: PM proposes yellow to match the brand; Industrial Designer questions whether users like it", "source_supported": true},
+      {"text": "Assignments: Industrial Designer, User Interface Designer, Marketing each continue their subject", "source_supported": true},
+      {"text": "Logistics: lunch break, thirty minutes of individual work, then coach-sent instructions", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The PM wanted the product fancy, fashionable, powerful, easy to use, and low-cost, but was wary of the cost impact of offering multiple color options. The PM also insisted the product must carry the company's colour/imagery so it's instantly recognizable, proposing yellow but accepting it need not be fully yellow as long as it carries a recognizable brand accent.", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Color customization cost: offering multiple color options would raise production cost against the twelve-euro target\""},
+      "f2": {"status": "retained", "evidence": "same bullet as f1"},
+      "f3": {"status": "partial", "evidence": "\"Fashion positioning: reaffirms 'fashion in electronics' — fancy, fashionable, powerful, easy to use, and low-cost all at once\" + \"Zapping priority: since users zap channels constantly, packing many functions onto few buttons risks slowing the most common action\" — scattered but present; the specific 75%-zap statistic is missing (a different 75% stat, about remotes being called ugly, appears in Marketing research instead)"},
+      "f4": {"status": "retained", "evidence": "\"Brand recognizability: must use the company's colour and imagery...\" + \"Compromise: doesn't need to be fully yellow, just carry a recognizable brand accent such as a yellow ribbon or logo\""},
+      "f5": {"status": "retained", "evidence": "\"Fashion positioning...\" + \"Brand recognizability: must use the company's colour and imagery so it reads instantly as their product\""},
+      "f6": {"status": "partial", "evidence": "\"fancy, fashionable, powerful, easy to use, and low-cost\" — implies but doesn't explicitly state 'attractive'"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "'Fashion positioning' and 'Color customization cost' remain in separate sections with no explicit contrast language."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: three presentations, then new requirements, function decisions, close; PM as secretary, presenters confirmed", "source_supported": true},
+      {"text": "Controller concept: existing remotes pack twenty-plus functions; Google-style goal; merging power and simplicity is the open, hard part of the job", "source_supported": true},
+      {"text": "Standardization idea: familiar universal symbols (e.g. power, escape) shorten the learning curve", "source_supported": true},
+      {"text": "Component design: infrared (recommended, cheaper) vs. laser (rejected, more expensive); core components; wireless (ID's preference, more practical) vs. wired (cheaper but impractical); ~8 euro cost", "source_supported": true},
+      {"text": "Wireless debate: PM frames it as a UI/usability question; risk of losing a wireless remote", "source_supported": true},
+      {"text": "Marketing research: 100 subjects, lab study plus questionnaire; findings on ugliness, willingness to pay more, button usage, remotes getting lost, learning time, RSI strain", "source_supported": true},
+      {"text": "Recommendations: prioritize fancy look and fewer buttons to outsell competitors", "source_supported": true},
+      {"text": "Mode-switch proposal: UI proposes grouping functions by category with a switch button, e.g. TV vs. recorder mode", "source_supported": true},
+      {"text": "Fancy is subjective across users", "source_supported": true},
+      {"text": "Drop teletext; TV-only scope (not recorder/camcorder/garage door)", "source_supported": true},
+      {"text": "Yellow proposal and whether users actually like yellow", "source_supported": true},
+      {"text": "Assignments: ID continues component design; UI works on UI concept; Marketing continues own subject", "source_supported": true},
+      {"text": "Logistics: lunch break, thirty minutes individual work, coach instructions; presenter reminded to save files in his own folder", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The PM wanted the product fancy, fashionable, powerful, easy to use, and low-cost, but was cautious about the added production cost of offering multiple color options (against the twelve-euro target). The PM also insisted the product carry the company's colour and imagery so it's instantly recognizable as their product, proposing yellow while accepting a partial brand accent (e.g. a yellow ribbon or logo) would suffice.", "verdict": "partial"}
+    }
+  }
+}

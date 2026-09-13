@@ -1,0 +1,19 @@
+- **Petitions presented**
+  - A. perinatal mental health strategy
+  - B. cystic fibrosis drug pricing
+  - C. family doctor shortage
+  - D. firearms legislation concerns
+  - E. open-net salmon farming ban
+  - F. Wet'suwet'en/Coastal GasLink
+  - G. COVID airline refunds
+- **Ministerial Q&A**
+  - **Benefit-integrity & fraud**
+  - **Corporate aid conditions**
+  - **Vulnerable populations**
+  - **Long-term care & pharmacare**
+  - **Firearms control**
+  - **Indigenous relations**
+  - **Sector-specific COVID relief**
+  - **Border, trade & consumer costs**
+  - **Governance & transparency**
+  - **Vaccine & science policy**

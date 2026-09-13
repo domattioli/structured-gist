@@ -1,0 +1,81 @@
+- **Meeting setup**
+  - **Agenda**
+    - three presentations, then decide on the remote control concept and close
+  - **Presentation order**
+    - User Interface presents first
+
+- **Controller concepts**
+  - **Google controller**
+    - easy to use combined with sophisticated functions
+  - **Fancy controller**
+    - attractive, cute design meant to stand out and be memorable among competitors
+  - **Intelligent controller**
+    - a smart controller using speech and gesture recognition, requiring cooperation with an outside research institute
+
+- **Intelligent-controller debate**
+  - **Concerns raised**
+    - a. repetitive-strain risk
+      - PM worries repeated gesture use could cause injury
+    - b. multi-user reliability
+      - family members might compete for channel control at the same time
+    - c. cost and R&D
+      - PM questions development cost; UI says partnering with a research institute avoids doing basic research in-house
+    - d. language and internationalization
+      - speech recognition needs per-country, even per-family, adaptation, raising cost and complexity
+    - e. microphone placement
+      - unclear whether the mic sits in the remote or a separate device; gesture also needs a camera
+  - **Defense**
+    - UI argues limited-vocabulary recognition is reliable, voice helps locate a lost remote, and users can still fall back to manual buttons
+  - **Reliability vs differentiation trade-off**
+    - Marketing and PM want something that works every time for everyone; UI counters that a distinguishing feature still drives purchase decisions even if rarely used
+  - **Outcome**
+    - the group leans against a full intelligent/gesture controller, favoring the Google and fancy concepts instead
+
+- **Component design**
+  - **Case material**
+    - a. wood
+      - higher-class, fashionable feel, but costs more and resists the spongy trend
+    - b. plastic
+      - common and resistant, but more impersonal
+  - **Button type**
+    - a. classic pushbutton
+    - b. LCD / lit buttons
+      - visible in darkness, seen as fashionable, helps locate the remote at night
+    - c. touch screen
+      - roughly as expensive as LCD buttons; a different design direction
+  - **Power source**
+    - recommend combining solar and regular battery — solar adds ecological appeal and works off-grid, at a modest added cost offset by perceived value
+  - **Chip level**
+    - low-level, cheap chips recommended, enough for an easy-to-use product and fits the twelve-euro price target
+
+- **Market trend research**
+  - **Priority ranking**
+    - i. fancy look and feel
+      - top priority, scored six of seven
+    - ii. technologically innovative
+      - scored three
+    - iii. easy to use
+      - ranked lowest of the three
+  - **Fruit-and-vegetable motif**
+    - a broader fashion trend across clothes, shoes, and furniture that should carry into the remote's design
+  - **Spongy touch**
+    - users want a soft, rubber-like feel, which sits in some tension with a wooden case
+
+- **Final concept decision**
+  - **Interface concept**
+    - merge the Google and fancy controllers rather than pursue the intelligent/gesture controller
+  - **Materials**
+    - wood body for a natural, fashionable feel, with a spongy rubber touch on the buttons
+  - **Energy**
+    - solar plus battery, and a low-level chip to hit the price target
+  - **Voice-command supplement**
+    - add a small set of simple voice commands, e.g. channel numbers and power, as an optional module rather than a full gesture/voice system
+
+- **Next steps**
+  - **Assignments**
+    - a. Industrial Designer and User Interface
+      - work on look-and-feel and build a clay prototype, refining the spongy button texture and wooden shape
+    - b. Marketing
+      - keep the fruit-and-vegetable trend and company color in mind, evaluate the product
+  - **Timing**
+    - next meeting starts in thirty minutes; coaches will send specific instructions

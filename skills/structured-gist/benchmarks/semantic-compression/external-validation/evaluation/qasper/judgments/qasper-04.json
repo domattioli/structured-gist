@@ -1,0 +1,91 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "explicitly injecting WordNet-derived general knowledge into an MRC model's attention improves robustness to noise and reduces data hunger without sacrificing accuracy", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "SQuAD 1.1, plus the AddSent and AddOneSent adversarial sets, which insert misleading or unrelated sentences to test robustness to noise"},
+      "f2": {"status": "retained", "evidence": "the AddSent and AddOneSent adversarial sets, which insert misleading or unrelated sentences to test robustness to noise"},
+      "f3": {"status": "retained", "evidence": "on par with state-of-the-art single MRC models on the development and test sets; outperforms them by a large margin on both adversarial sets"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "the AddSent and AddOneSent adversarial sets, which insert misleading or unrelated sentences to test robustness to noise"}
+    },
+    "hallucinations": [
+      {"text": "MRC models need large amounts of labeled data and are fragile to injected noise, unlike humans, because they only use the given passage-question pair, not general knowledge", "source_supported": true},
+      {"text": "explicitly extract inter-word semantic connections from WordNet and use them, understandably and controllably, inside an MRC model's attention mechanism, rather than encoding external knowledge implicitly into vector space", "source_supported": true},
+      {"text": "a concatenated sequence of WordNet semantic relations (16 types, e.g. hypernym, holonym) linking one synset to another; the number of relations is its hop count", "source_supported": true},
+      {"text": "all synsets reachable from a word's own synsets within a maximum hop count k, which bounds how far the chain can extend", "source_supported": true},
+      {"text": "for each word, the positions of semantically connected passage words are recorded as general knowledge; k is tuned by cross-validation, since larger k adds more connections but also more noise", "source_supported": true},
+      {"text": "lexicon embedding layer (GloVe + CNN character embeddings), context embedding layer (shared BiLSTM), coarse memory layer (knowledge aided mutual attention then BiLSTM), refined memory layer (knowledge aided self attention then BiLSTM), answer span prediction layer", "source_supported": true},
+      {"text": "each word's context embedding is enhanced with a summary of its semantically connected passage words before passage-question similarity is computed", "source_supported": true},
+      {"text": "fuses each passage word's coarse memory only with the coarse memories of the passage words it is semantically connected to, instead of the whole passage", "source_supported": true},
+      {"text": "multi-round alignment avoids attention redundancy/deficiency; mutual attention can also serve as a skip-connector densely linking pairwise layers", "source_supported": true},
+      {"text": "generating questions from unlabeled text, or paraphrasing training examples via back-translation, both substantially boost performance", "source_supported": true},
+      {"text": "re-reading a document multiple times, with step count set by reinforcement learning or fixed with stochastic dropout to avoid step bias", "source_supported": true},
+      {"text": "POS/NER embeddings or parse-tree-based structural embeddings added to the input layer", "source_supported": true},
+      {"text": "feature-based or fine-tuning-based transfer from word- or sentence-level models pre-trained on large corpora", "source_supported": true},
+      {"text": "spaCy tokenization, WordNet 3.0, TensorFlow; hop count k=3, hidden dimensionality 600, Adam optimizer, batch size 32", "source_supported": true},
+      {"text": "performance rises with hop count k up to 3, then drops as more (noisier) connections are added", "source_supported": true},
+      {"text": "replacing knowledge aided attention with plain mutual/self attention drops F1 on the dev set and both adversarial sets", "source_supported": true},
+      {"text": "after just one epoch, KAR already beats the final performance of strong baselines DCN and BiDAF", "source_supported": true},
+      {"text": "KAR's explicit approach outperforms a prior implicit-encoding approach to using external knowledge by a large margin", "source_supported": true},
+      {"text": "trained on small subsets of the training questions, KAR outperforms SAN and QANet by a large margin on both the development set and the adversarial sets", "source_supported": true},
+      {"text": "future work plans to use larger knowledge bases such as ConceptNet and Freebase", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "By evaluating KAR on the AddSent and AddOneSent adversarial sets, whose passages contain misleading/unrelated sentences meant to distract the model, in addition to the dev/test sets", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "SQuAD 1.1 ... plus the AddSent and AddOneSent adversarial sets, where each passage contains either several sentences similar to the question but not contradicting the answer (AddSent) or one human-approved, possibly unrelated random sentence (AddOneSent), both intended to distract MRC models"},
+      "f2": {"status": "retained", "evidence": "each passage contains either several sentences similar to the question but not contradicting the answer (AddSent) or one human-approved, possibly unrelated random sentence (AddOneSent), both intended to distract MRC models"},
+      "f3": {"status": "retained", "evidence": "compared against the five single MRC models ranked in the SQuAD 1.1 top 20 that also report adversarial-set results, KAR is on par with the state-of-the-art on the development and test sets; on both adversarial sets, KAR outperforms all five comparative models by a large margin"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "the AddSent and AddOneSent adversarial sets... both intended to distract MRC models (under a Dataset entry framed for measuring robustness, paired with the 'Performance & robustness' results discussion)"}
+    },
+    "hallucinations": [
+      {"text": "MRC models need large amounts of labeled training data and, per prior work, drop significantly in performance under intentionally injected noise (e.g. misleading sentences); human readers rarely suffer either problem, since they can also draw on general knowledge beyond the given passage-question pair", "source_supported": true},
+      {"text": "explicitly extract inter-word semantic connections from WordNet as general knowledge, then use them, in an understandable and controllable way, inside an MRC model's attention mechanism — replacing the existing approach of encoding such knowledge implicitly into vector space, whose effect on the model is neither interpretable nor directly controllable", "source_supported": true},
+      {"text": "a concatenated sequence of WordNet semantic relations (16 types available via NLTK's interface, e.g. hypernym, hyponym, holonym, meronym, attribute) linking one synset to another; the number of relations chained together is its hop count, and a single relation is a 1-hop chain", "source_supported": true},
+      {"text": "for a word, the set of all synsets that are its own senses or reachable from them via semantic relation chains, bounded by a maximum hop count k; without a hop-count limit this set would eventually include nearly all of WordNet, which carries little useful information", "source_supported": true},
+      {"text": "given a passage-question pair, for each word the positions of the passage words it is semantically connected to (excluding its own position, if it is itself a passage word) are recorded as the general knowledge to extract; increasing k extracts more connections but also raises the proportion that are noise rather than useful signal, so k is set via cross-validation on development-set performance", "source_supported": true},
+      {"text": "lexicon embedding layer concatenates pre-trained GloVe word vectors with CNN-derived character embeddings, then passes both passage and question through a shared dense ReLU layer", "source_supported": true},
+      {"text": "context embedding layer — a shared BiLSTM over the lexicon embeddings, concatenating forward and backward outputs, for both passage and question", "source_supported": true},
+      {"text": "answer span prediction layer — trainable projections of the refined memories and an attention-pooled question summary give start and end position distributions; training minimizes negative log-likelihood over the labeled span, and inference takes the max of an upper-triangular answer span matrix", "source_supported": true},
+      {"text": "the standard passage-question similarity function (BIBREF3) is modified to use 'enhanced' context embeddings: for each word, its semantically connected passage words' context embeddings are gathered and attention-summarized into a matching vector, which is concatenated with the word's own context embedding and passed through a dense ReLU layer", "source_supported": true},
+      {"text": "rather than fusing each passage word's coarse memory with those of all other passage words, each word's memory is fused only with the coarse memories of the passage words it is semantically connected to, via the same gather-then-attend-then-concatenate-then-project pattern used in the mutual attention — avoiding fusion the authors consider unnecessary and distracting for unrelated word pairs", "source_supported": true},
+      {"text": "multi-round alignment addresses attention redundancy and attention deficiency; mutual attention has also been used as a skip-connector to densely connect pairwise layers", "source_supported": true},
+      {"text": "training a generative model to produce questions from unlabeled text substantially boosts performance; so does training a back-and-forth translation model to paraphrase existing training examples", "source_supported": true},
+      {"text": "inspired by humans re-reading difficult documents, some models use reinforcement learning to dynamically choose the number of reasoning steps, while others fix the step count but use stochastic dropout in the output layer to avoid step bias", "source_supported": true},
+      {"text": "POS and NER embeddings, or structural embeddings derived from parse trees, have been incorporated into MRC input layers", "source_supported": true},
+      {"text": "several MRC breakthroughs draw on feature-based or fine-tuning-based transfer learning from word- or sentence-level models pre-trained on large external corpora", "source_supported": true},
+      {"text": "spaCy 2.0.13 tokenization, WordNet 3.0 via NLTK 3.3, TensorFlow 1.11.0 implementation; data enrichment hop count k=3; dense-layer/BiLSTM dimensionality 600; Adam optimizer, batch size 32; dropout applied to dense layers and BiLSTMs; exponential moving average applied to boost final performance; evaluated by Exact Match and F1", "source_supported": true},
+      {"text": "compared against the five single MRC models ranked in the SQuAD 1.1 top 20 that also report adversarial-set results", "source_supported": true},
+      {"text": "increasing the data-enrichment hop count k from 0 to 5 raises the amount of extracted general knowledge monotonically, but KAR's performance rises only up to k=3 before dropping, indicating the extra knowledge becomes noise beyond that point", "source_supported": true},
+      {"text": "replacing knowledge aided mutual attention and knowledge aided self attention with their plain (non-knowledge) counterparts drops F1 on the development set and on both AddSent and AddOneSent, confirming the knowledge aided mechanisms' contribution", "source_supported": true},
+      {"text": "after only one epoch of training, KAR already achieves an EM/F1 on the development set exceeding the final, fully-trained performance of strong baselines DCN and BiDAF", "source_supported": true},
+      {"text": "compared with a prior encoding-based method that dynamically retrieves general knowledge from Wikipedia and ConceptNet, whose best model scores much lower EM/F1 on the development set, KAR's explicit approach is shown to work better than that existing implicit approach", "source_supported": true},
+      {"text": "training subsets are built by sampling 1, 2, 3, or 4 questions per passage, producing four increasingly larger fractions of the full training set; across all four subsets, KAR outperforms re-implemented SAN and QANet (without data augmentation) by a large margin both on the development set and on both adversarial sets", "source_supported": true},
+      {"text": "future work plans to draw on larger knowledge bases such as ConceptNet and Freebase to widen the scope and quality of the extracted general knowledge", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "By evaluating KAR on the AddSent and AddOneSent adversarial sets, whose passages contain misleading or unrelated sentences intended to distract the model, in addition to the development and test sets", "verdict": "correct"}
+    }
+  }
+}

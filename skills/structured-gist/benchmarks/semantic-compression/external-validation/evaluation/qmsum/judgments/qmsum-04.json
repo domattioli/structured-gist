@@ -1,0 +1,124 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "nearly every submitted system uses two stages of speech enhancement rather than one, so Professor C suggests trying combinations of the group's own techniques rather than each working alone. (captures the two-stage observation, omits the explicit 'giving them improvement' claim)"},
+      "f6": {"status": "retained", "evidence": "so Professor C suggests trying combinations of the group's own techniques rather than each working alone."},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "retained", "evidence": "PhD D flags Vector Taylor Series techniques, from researchers in Granada and at Lucent (originally CMU), which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion."},
+      "f18": {"status": "retained", "evidence": "which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion."},
+      "f19": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""},
+      "r4": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "FFT neural-net idea: Professor C proposes feeding the raw FFT power spectrum straight into a neural network, the same way the filter bank is used, so the network discovers what the filter bank throws away that's actually useful.", "source_supported": true},
+      {"text": "LPC peak-tracking work: Grad E, helping researcher Pierre Divenyi study vowel-to-vowel formant transitions, finds the roots of the PLP-derived LPC polynomial to track spectral peaks over time in synthetic speech.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Skim's only content bearing on spectral subtraction is indirect: a bullet noting nearly every submitted system uses two-stage speech enhancement (implying spectral subtraction is one stage, without naming it) and a bullet on VTS noise modeling. Neither bullet names 'spectral subtraction' explicitly or describes FFT-bins-vs-mel-energies, the KL-transform chain, or JRASTA, so no real summary of the spectral subtraction discussion can be constructed from skim alone.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "nearly every submitted system uses two stages of speech enhancement rather than one, so Professor C suggests trying combinations of the group's own techniques rather than each working alone. (omits explicit 'giving improvement' framing)"},
+      "f6": {"status": "retained", "evidence": "so Professor C suggests trying combinations of the group's own techniques rather than each working alone."},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "retained", "evidence": "the signal-subspace method is essentially a KL transform followed by a Wiener filter."},
+      "f10": {"status": "retained", "evidence": "signal subspace performs poorly at low SNR and with colored noise, since it depends on inverting a noise covariance matrix that must be positive-definite; the fix is to whiten the noise first and re-color after reconstruction."},
+      "f11": {"status": "retained", "evidence": "since it depends on inverting a noise covariance matrix that must be positive-definite"},
+      "f12": {"status": "retained", "evidence": "the fix is to whiten the noise first and re-color after reconstruction."},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "retained", "evidence": "PhD D flags Vector Taylor Series techniques, from researchers in Granada and at Lucent (originally CMU), which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion."},
+      "f18": {"status": "retained", "evidence": "which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra"},
+      "f19": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "retained", "evidence": "signal subspace performs poorly at low SNR and with colored noise, since it depends on inverting a noise covariance matrix that must be positive-definite; the fix is to whiten the noise first and re-color after reconstruction."},
+      "r4": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Compute farm update: about twelve new SUN Blade-100 machines ordered; run-command finds the fastest available machine and exports the job; users should cap themselves around ten simultaneous jobs; P-make manages a whole batch of dependent jobs and caps concurrency, while run-command is unaware of other parallel jobs.", "source_supported": true},
+      {"text": "Aurora post-submission work: redesigned LDA filters on other teams' enhanced-speech submissions gave a slight, not dramatic, improvement; online cepstral normalization didn't help with the original time constant; giving the Aurora baseline true speech/nonspeech endpoints improved it by twenty-two percent overall and fifty percent on Spanish SpeechDat-Car, lowering the qualification threshold from fifty to twenty-five percent; Sunil is prototyping a signal-subspace approach in Matlab, planning to port it to C.", "source_supported": true},
+      {"text": "France Telecom comparison: the France Telecom-based experiments start from Wiener-filtered features extracted at the handset, then run the full proposal-one system on top, versus Sunil's simpler LDA-only pipeline; the modified system beats France Telecom on mismatched/high-mismatch but is slightly worse on well-matched, and the group agrees they need a results table.", "source_supported": true},
+      {"text": "Endpoint/VAD debate: 'well-matched' means seventy percent of the database trains and thirty percent tests, so it's matched only if the database is large and varied enough; systems get given speech start/end points but can still use audio outside them, and adding endpoint info will shrink each system's apparent contribution on the noisier mismatch conditions much more than on well-matched.", "source_supported": true},
+      {"text": "Large-vocab noisy plans: the group's next stage moves to Wall Street Journal with artificially added noise, and spectral subtraction alone tends to underperform Wiener/subspace approaches on large-vocabulary tasks in the literature; ICSI's own meeting recordings are being run through an untrained Switchboard-based large-vocabulary recognizer with some adaptation, but no one has yet tried the distant-mike condition with the SRI recognizer.", "source_supported": true},
+      {"text": "New voicing feature: PhD B compares the FFT-derived spectrum to the reconstructed spectrum from the mel filter bank and uses the variance of their difference as a new feature, requiring a longer (62.5ms) analysis window; tested on Italian and Spanish, feeding the feature through a neural network gave roughly the same results as cepstral features alone; using it raw, without a neural network, actually hurt.", "source_supported": true},
+      {"text": "FFT neural-net idea: Professor C proposes feeding the raw FFT power spectrum straight into a neural network, the same way the filter bank is used, so the network discovers what the filter bank throws away that's actually useful.", "source_supported": true},
+      {"text": "Acoustic-event qualifier project: Grad G's qualifying-exam proposal is to build robust primary detectors for acoustic events (voicing, nasality, r-coloring, burst/noise, frication), then feed their outputs tandem-style into a Gaussian-mixture HMM back-end; open issues are which acoustic events give good coverage and how to get labeled training data.", "source_supported": true},
+      {"text": "LPC peak-tracking work: Grad E, helping researcher Pierre Divenyi study vowel-to-vowel formant transitions, finds the roots of the PLP-derived LPC polynomial to track spectral peaks over time in synthetic speech, though real speech gives roots that don't always align cleanly with true formants.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Standard's spectral-subtraction-adjacent content: nearly every submitted system uses two-stage speech enhancement, prompting Professor C to suggest combining the group's own techniques; the signal-subspace method is essentially a KL transform followed by a Wiener filter, and it performs poorly at low SNR/colored noise because it needs a positive-definite noise covariance matrix, fixed by whitening the noise first; and PhD D flags VTS (Vector Taylor Series) techniques for modeling the nonlinear clean/noisy cepstra transformation. It does not cover the FFT-bins-vs-mel-energies pros/cons, Professor C's specific 'spectral subtraction then KL transform then Wiener filter' chain proposal, or the JRASTA connection -- all of which the reference answer calls out.", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "nearly every submitted system uses two stages of speech enhancement rather than one, so Professor C suggests trying combinations of the group's own techniques (e.g. simple spectral subtraction before signal-subspace, or vice versa) rather than each working alone. (omits explicit 'giving improvement' framing)"},
+      "f6": {"status": "retained", "evidence": "so Professor C suggests trying combinations of the group's own techniques rather than each working alone."},
+      "f7": {"status": "retained", "evidence": "(e.g. simple spectral subtraction before signal-subspace, or vice versa)"},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "retained", "evidence": "the signal-subspace method is essentially a KL transform followed by a Wiener filter, so it's a Wiener filter plus orthogonalization -- a cascade of the two."},
+      "f10": {"status": "retained", "evidence": "signal subspace performs poorly at low SNR and with colored noise"},
+      "f11": {"status": "retained", "evidence": "since it depends on inverting a noise covariance matrix that must be positive-definite (guaranteed for white noise but not colored)"},
+      "f12": {"status": "retained", "evidence": "the standard fix is to whiten the noise first and re-color the signal after reconstruction."},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "partial", "evidence": "this parallels JRASTA, which effectively works by adding a little noise back in to counteract the very variance-reduction that orthogonalizing (KLT) throws away (captures the 'add noise back in' idea, but reframes/loses the specific 'do spectral subtraction, then add noise' two-step framing and the half-joking tone)"},
+      "f16": {"status": "retained", "evidence": "this parallels JRASTA, which effectively works by adding a little noise back in to counteract the very variance-reduction that orthogonalizing (KLT) throws away"},
+      "f17": {"status": "retained", "evidence": "used by a researcher in Granada (Jose Carlos Segura) and one at Lucent, an idea originating at CMU -- which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a first- or second-order Taylor expansion"},
+      "f18": {"status": "retained", "evidence": "which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra"},
+      "f19": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "retained", "evidence": "since it depends on inverting a noise covariance matrix that must be positive-definite (guaranteed for white noise but not colored); the standard fix is to whiten the noise first and re-color the signal after reconstruction."},
+      "r4": {"status": "retained", "evidence": "this parallels JRASTA, which effectively works by adding a little noise back in to counteract the very variance-reduction that orthogonalizing (KLT) throws away"}
+    },
+    "hallucinations": [
+      {"text": "Compute farm update: about twelve new SUN Blade-100 machines ordered; run-command tool behavior; load etiquette (cap around ten simultaneous jobs, recalling a past workshop where twenty-five people on twenty-five shared machines was less efficient than local work); P-make vs run-command differences; eviction behavior for desktop machines with a 'no evict' attribute option.", "source_supported": true},
+      {"text": "Aurora post-submission work: redesigned LDA filters gave a slight improvement over the originally submitted narrow-band filter; online normalization didn't help with the original time constant and wasn't retuned further; endpoint information improved the Aurora baseline by twenty-two percent overall and fifty percent on Spanish SpeechDat-Car, lowering the qualification threshold from fifty to twenty-five percent; Sunil is prototyping a signal-subspace approach (decomposing signal-plus-noise into signal and noise subspaces) in Matlab, planning to port it to C and add it to the shared repository.", "source_supported": true},
+      {"text": "France Telecom comparison: experiments start from Wiener-filtered features extracted at the handset, then run the full proposal-one system (with a modified, lower-delay LDA filter) on top, versus Sunil's simpler LDA-only pipeline; the modified system beats France Telecom on mismatched/high-mismatch but is slightly worse on well-matched; the group needs a results table and to retune online-normalization time constants; a 64Hz cutoff no longer hurts TI-digits.", "source_supported": true},
+      {"text": "Endpoint/VAD debate: 'well-matched' means seventy percent train/thirty percent test, not a guarantee of true matching; Professor C questions whether well-matched is even realistic since real users rarely pre-record their own car's noise conditions; systems get given speech start/end points but can still use audio outside them (e.g. for noise estimation); adding endpoint info will shrink each system's apparent contribution on mismatch conditions more than on well-matched.", "source_supported": true},
+      {"text": "Large-vocab noisy plans: the group's next stage moves to Wall Street Journal with artificially added noise (organized by Guenter Hirsch and collaborators); Sunil notes spectral subtraction alone tends to underperform Wiener/subspace approaches on large-vocabulary tasks in the literature; ICSI's meeting recordings are being run through an untrained Switchboard-based recognizer with some adaptation but no one has tried the distant-mike condition with the SRI recognizer; Professor C notes ICSI's Broadcast News work handled noisy focus conditions with multi-stream methods, not spectral subtraction.", "source_supported": true},
+      {"text": "New voicing feature: PhD B compares the FFT-derived spectrum to the reconstructed mel-filter-bank spectrum and uses the variance of their difference as a feature (high variance signals noise, low variance signals speech), requiring a longer (62.5ms) window; tested on Italian and Spanish, the feature through a neural network gave roughly the same results as cepstral features alone; using it raw without a neural network hurt results.", "source_supported": true},
+      {"text": "FFT neural-net idea: Professor C proposes feeding the raw FFT power spectrum straight into a neural network so the network discovers what the filter bank throws away that's useful, likely helping mainly in combination; he recalls a decade-old conference where plain FFT beat an 'auditory-inspired' front-end in at least one comparison.", "source_supported": true},
+      {"text": "Acoustic-event qualifier project: Grad G's qualifying-exam proposal is to build robust primary detectors for acoustic events, inspired by multi-band techniques and Larry Saul's graphical-model work, feeding outputs tandem-style into a Gaussian-mixture HMM back-end; open issues are which events give good coverage and how to get labeled training data; Professor C notes the voiced/unvoiced piece overlaps with PhD B's multi-band voicing work.", "source_supported": true},
+      {"text": "LPC peak-tracking work: Grad E finds the roots of the PLP-derived LPC polynomial (an approach like line spectral pairs, suggested by Stephane) to track spectral peaks in synthetic speech, getting three or four complex-conjugate root pairs from an eighth-order polynomial, though on real speech these roots don't always align cleanly with true formants and reflect the psycho-acoustic PLP model rather than the synthesizer's own ground-truth formant/bandwidth values.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Deep's spectral-subtraction-adjacent content: nearly every submitted system uses two-stage speech enhancement, prompting Professor C to suggest combining techniques (e.g. spectral subtraction before signal-subspace, or vice versa); the signal-subspace method is essentially a KL transform followed by a Wiener filter and performs poorly at low SNR/colored noise because of the positive-definite covariance-matrix requirement, fixed by whitening the noise first; this parallels JRASTA, which works by adding noise back in to counteract variance-reduction from orthogonalizing; and PhD D flags VTS techniques for modeling the nonlinear clean/noisy cepstra transformation. It still omits the FFT-bins-vs-mel-energies pros/cons discussion and does not explicitly state Professor C's 'spectral subtraction, then KL transform, then Wiener filter' chain proposal as such -- both called out in the reference answer.", "verdict": "partial"}
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "\"A. Scheer/Kelly press Trudeau/Guilbeault to fully fund the AG's audits\" — general paraphrase of the ask, drops the specific \"additional funding she needs to look into government expenditures\" framing"},
+      "f2": {"status": "partial", "evidence": "\"opposition cites halved performance-audit capacity\" (B) — conveys the \"half as many audits\" idea but drops \"do more with less\" and the \"despite an almost doubling in government spending\" detail"},
+      "f3": {"status": "partial", "evidence": "\"government cites 38 added staff\" (B) — the 38-staff figure is retained but the 2018-19 funding increase and the contrast with 60 fired staff are dropped"},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "partial", "evidence": "\"opposition cites halved performance-audit capacity\" (B) — same evidence as f2; conveys the halving but omits the specific 27-to-14 figures and the interim-AG attribution"},
+      "f7": {"status": "partial", "evidence": "\"C. no yes/no commitment given\" — implies a yes/no question existed but doesn't state Scheer's specific \"office had requested more funds\" framing"},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "\"government cites 38 added staff; opposition cites halved performance-audit capacity\" (B) juxtaposes the two claims but never states Trudeau's answer failed to address Scheer's specific point"},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "Kelly (not just Scheer) also pressed Trudeau/Guilbeault on AG funding", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Scheer and Kelly pressed Trudeau and Guilbeault to fully fund the Auditor General's audits; the government pointed to 38 added staff while the opposition cited halved performance-audit capacity; no yes/no funding commitment was given.", "verdict": "correct"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"presses Trudeau to fund the Auditor General fully so she can conduct audits amid rising government spending\""},
+      "f2": {"status": "retained", "evidence": "\"cites her office's drop from ~27 to ~14 performance audits per year despite spending nearly doubling\" — conveys the same half-as-many-audits-despite-near-doubled-spending claim, using the exact figures instead of \"half\""},
+      "f3": {"status": "retained", "evidence": "\"cites 38 new full-time staff added to the AG's office in 2018-19, contrasted with 60 positions cut under the prior Conservative government\""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": "the $6.5 million budget-cut figure and the fact that this was Trudeau's second, repeated response after being accused of revisionist history are not present anywhere in this rendering"},
+      "f6": {"status": "retained", "evidence": "\"cites her office's drop from ~27 to ~14 performance audits per year despite spending nearly doubling\""},
+      "f7": {"status": "partial", "evidence": "\"without a direct yes/no\" implies a yes/no question was asked but doesn't state Scheer's \"office had requested more funds\" framing"},
+      "f8": {"status": "retained", "evidence": "\"Trudeau repeatedly pivots to the day's disability/CERB/wage-subsidy bill and a proposed debate, without a direct yes/no\""},
+      "f9": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "\"Scheer's line of questioning\" (audit numbers) and \"Government's defense\" (38 staff) are presented as separate headed items with no text stating Trudeau's answer failed to address Scheer's audit-halving claim"},
+      "r2": {"status": "lost", "evidence": "f4 (revisionist-history/volunteered-efficiencies accusation) is entirely absent, so no contrast with Trudeau's repeated response can be established"},
+      "r3": {"status": "partial", "evidence": "bullets ii (audit numbers) and iii (pivot without yes/no) appear in sequence under \"Scheer's line of questioning\" but no causal connector ties the audit figures to the renewed press for a commitment"}
+    },
+    "hallucinations": [
+      {"text": "Kelly's follow-up: disputes the \"cut positions\" framing (says the AG chose to reduce her own budget), presses again for full funding, notes a unanimous finance-committee motion to fully fund her office; Guilbeault commits only to \"work with her if she identifies a need,\" never a firm number", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Scheer pressed Trudeau to fully fund the Auditor General, citing her office's drop from 27 to 14 performance audits/year despite spending nearly doubling; Trudeau pointed to 38 added staff in 2018-19 vs. 60 cut under the Conservatives, without a direct yes/no. Kelly later disputed that framing and pressed again, but Guilbeault only committed to \"work with her.\"", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"accuses the PM of avoiding accountability (no budget, no economic update, limiting House sittings); asks whether the AG will get additional funding\""},
+      "f2": {"status": "retained", "evidence": "\"cites the AG's own statement that she can now complete only ~14 performance audits/year versus ~27 a decade ago, despite government spending nearly doubling\""},
+      "f3": {"status": "retained", "evidence": "\"Trudeau/Guilbeault repeat that the government added the equivalent of 38 new full-time staff to the AG's office in 2018-19, contrasted with 60 positions cut under the prior Harper government\""},
+      "f4": {"status": "retained", "evidence": "\"cites interim AG John Wiersema's past statement that earlier administrative efficiencies (not funding cuts) were the office's own choice and didn't affect its mandate\" combined with \"(a comparison Scheer calls 'revisionist history'...)\" in the adjacent Government's-defense bullet"},
+      "f5": {"status": "partial", "evidence": "\"Trudeau/Guilbeault repeat that...\" acknowledges the claim recurred, but the $6.5 million Harper-era budget-cut figure from Trudeau's second reply is never stated"},
+      "f6": {"status": "retained", "evidence": "\"cites the AG's own statement that she can now complete only ~14 performance audits/year versus ~27 a decade ago\""},
+      "f7": {"status": "partial", "evidence": "\"Trudeau repeatedly redirects...without ever answering 'yes or no'\" implies a yes/no ask but omits Scheer's \"office had requested more funds\" framing"},
+      "f8": {"status": "retained", "evidence": "\"Trudeau repeatedly redirects to the day's disability/CERB/wage-subsidy bill and a proposed debate/vote, without ever answering 'yes or no'\""},
+      "f9": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "audit-numbers claim (bullet ii) and \"Government's defense\" (38-staff bullet) are structurally separate with no statement that the staffing answer failed to address the audit-halving point"},
+      "r2": {"status": "partial", "evidence": "the Wiersema/volunteered-efficiencies content (f4) and the \"revisionist history\" label both appear, and \"Trudeau/Guilbeault repeat\" hints at recurrence, but no text explicitly says Trudeau still didn't address the volunteered-efficiencies point on repeating the comparison"},
+      "r3": {"status": "partial", "evidence": "bullets ii-iv are presented in sequence under \"Scheer's line of questioning,\" implying a natural flow from the audit figures to the renewed yes/no press, but no explicit causal connector is stated"}
+    },
+    "hallucinations": [
+      {"text": "Kelly's follow-up (separate later exchange): congratulates the new AG then repeats the funding question; disputes the \"60 positions cut\" framing, saying committee transcripts show the AG's office chose to reduce its own budget; notes the AG has already cut/stopped performance audits for lack of funds and that the House finance committee unanimously passed a motion to fully fund her office the day before; Guilbeault switches briefly to French \"in case it's clearer,\" repeats the 38-staff figure and a general \"if she identifies a need, we'll work with her\" pledge, never committing to the specific ask", "source_supported": true},
+      {"text": "Point of order: Kelly later invokes Standing Orders to suggest the PM \"misled the House,\" citing public-accounts-committee transcripts, but the Acting Chair rules this is turning into debate and moves on", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Scheer accused the PM of avoiding accountability and pressed him to fully fund the Auditor General, citing her office's drop from 27 to 14 audits/year despite spending nearly doubling and citing interim AG Wiersema's statement that earlier efficiencies were the office's own volunteered choice. Trudeau/Guilbeault repeatedly cited 38 added staff (vs. 60 cut under Harper, which Scheer called \"revisionist history\") and pivoted to the day's CERB/disability bill without a direct yes/no. Kelly's later, separate exchange with Guilbeault got the same non-committal response, including a unanimous finance-committee motion to fully fund her office being brushed aside.", "verdict": "correct"}
+    }
+  }
+}

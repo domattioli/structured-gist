@@ -1,0 +1,107 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Headers show 'Case material' under Component design and 'Materials' under Final concept decision as topics, but no content is given for either.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Component design > Case material: a. wood, b. plastic (options named, not framed as a raised open question)"},
+      "f2": {"status": "partial", "evidence": "Button type: a. classic pushbutton, b. LCD / lit buttons, c. touch screen (types named, darkness-visibility detail not given at this level)"},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "partial", "evidence": "\"Materials: wood body for a natural, fashionable feel\" — wood's positive quality present, plastic-resistant contrast missing"},
+      "f6": {"status": "partial", "evidence": "\"wood body for a natural, fashionable feel\" implies fashion motivation but no explicit causal statement or PM attribution"},
+      "f7": {"status": "partial", "evidence": "\"wood body ... with a spongy rubber touch on the buttons\" implies a mixed, not-fully-wood design, but doesn't restate the negotiation explicitly"},
+      "f8": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Case material list is bare (wood/plastic with no elaboration); no explicit contrast stated at this level."},
+      "r2": {"status": "partial", "evidence": "Fashion motivation -> wood choice is implied by 'Materials: wood body for a natural, fashionable feel', but this is framed under 'Final concept decision' as settled, not as the provisional/tentative interest gold characterizes it as."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: three presentations, then decide on the concept and close", "source_supported": true},
+      {"text": "Presentation order: User Interface presents first", "source_supported": true},
+      {"text": "Google controller: easy to use combined with sophisticated functions", "source_supported": true},
+      {"text": "Fancy controller: attractive, cute design to stand out among competitors", "source_supported": true},
+      {"text": "Intelligent controller: speech/gesture recognition via cooperation with an outside research institute", "source_supported": true},
+      {"text": "Intelligent-controller concerns: repetitive-strain risk, multi-user reliability, cost/R&D, language/internationalization, microphone placement", "source_supported": true},
+      {"text": "Defense: limited-vocabulary recognition reliable, manual-button fallback available", "source_supported": true},
+      {"text": "Reliability vs. differentiation trade-off between Marketing/PM and UI", "source_supported": true},
+      {"text": "Outcome: group leans against intelligent/gesture controller, favors Google and fancy concepts", "source_supported": true},
+      {"text": "Power source: recommend combining solar and regular battery for ecological appeal, modest added cost", "source_supported": true},
+      {"text": "Chip level: low-level cheap chips recommended, fits twelve-euro price target", "source_supported": true},
+      {"text": "Market trend priority ranking: fancy look and feel, technologically innovative, easy to use", "source_supported": true},
+      {"text": "Fruit-and-vegetable motif as a broader fashion trend across clothes/shoes/furniture", "source_supported": true},
+      {"text": "Spongy touch desired, in tension with a wooden case", "source_supported": true},
+      {"text": "Final interface concept: merge Google and fancy controllers rather than pursue intelligent/gesture controller", "source_supported": true},
+      {"text": "Energy decision: solar plus battery, and a low-level chip to hit the price target", "source_supported": true},
+      {"text": "Voice-command supplement added as a small optional module, not a full gesture/voice system", "source_supported": true},
+      {"text": "Assignments: Industrial Designer and User Interface vs. Marketing", "source_supported": true},
+      {"text": "Timing: next meeting starts in thirty minutes, coaches send specific instructions", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The final decision on materials was a wood body for a natural, fashionable feel, with a spongy rubber touch on the buttons (rather than plastic).", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Case material: a. wood ('higher-class, fashionable feel, but costs more and resists the spongy trend'), b. plastic ('common and resistant, but more impersonal')"},
+      "f2": {"status": "retained", "evidence": "Button type: a. classic pushbutton, b. LCD/lit buttons ('visible in darkness, seen as fashionable, helps locate the remote at night'), c. touch screen"},
+      "f3": {"status": "retained", "evidence": "\"b. plastic - common and resistant, but more impersonal\""},
+      "f4": {"status": "retained", "evidence": "\"more impersonal\" (plastic)"},
+      "f5": {"status": "retained", "evidence": "\"a. wood - higher-class, fashionable feel...b. plastic...resistant\""},
+      "f6": {"status": "partial", "evidence": "Fashion motivation present via 'fashionable feel' / 'fancy look and feel' top market priority, but no explicit causal statement tying PM's proposal to fashion-in-electronics reasoning"},
+      "f7": {"status": "retained", "evidence": "\"wood body for a natural, fashionable feel, with a spongy rubber touch on the buttons\" — wood body + rubber buttons realizes 'just a part... wooden'"},
+      "f8": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"wood - higher-class, fashionable feel...\" vs. \"plastic - common and resistant, but more impersonal\" directly states the contrast."},
+      "r2": {"status": "partial", "evidence": "The fashion-driven move to wood is implicit (Materials: wood body for fashionable feel, following the fancy-look-and-feel market priority), but it is presented under 'Final concept decision' as a settled outcome rather than the provisional/tentative interest gold characterizes it as."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: three presentations, then decide on the concept and close", "source_supported": true},
+      {"text": "Presentation order: User Interface presents first", "source_supported": true},
+      {"text": "Google controller: easy to use combined with sophisticated functions", "source_supported": true},
+      {"text": "Fancy controller: attractive, cute design to stand out and be memorable among competitors", "source_supported": true},
+      {"text": "Intelligent controller: speech/gesture recognition, requiring cooperation with an outside research institute", "source_supported": true},
+      {"text": "Concerns: repetitive-strain risk (PM worries repeated gestures cause injury)", "source_supported": true},
+      {"text": "Concerns: multi-user reliability (family members competing for channel control)", "source_supported": true},
+      {"text": "Concerns: cost/R&D — partnering with a research institute avoids in-house basic research", "source_supported": true},
+      {"text": "Concerns: language/internationalization needs per-country, even per-family, adaptation", "source_supported": true},
+      {"text": "Concerns: microphone placement unclear (remote vs. separate device); gesture needs a camera", "source_supported": true},
+      {"text": "Defense: limited-vocabulary recognition reliable; voice helps locate a lost remote; manual fallback exists", "source_supported": true},
+      {"text": "Reliability vs. differentiation trade-off between Marketing/PM and UI", "source_supported": true},
+      {"text": "Outcome: leans against intelligent/gesture controller, favors Google and fancy concepts", "source_supported": true},
+      {"text": "Power source: solar plus regular battery — ecological appeal, works off-grid, modest added cost offset by perceived value", "source_supported": true},
+      {"text": "Chip level: low-level cheap chips, enough for an easy-to-use product, fits twelve-euro price target", "source_supported": true},
+      {"text": "Priority ranking: fancy look and feel scored six of seven, technologically innovative scored three, easy to use ranked lowest", "source_supported": true},
+      {"text": "Fruit-and-vegetable motif as a broader fashion trend across clothes/shoes/furniture", "source_supported": true},
+      {"text": "Spongy touch desired, in tension with a wooden case", "source_supported": true},
+      {"text": "Final interface concept: merge Google and fancy controllers rather than pursue intelligent/gesture controller", "source_supported": true},
+      {"text": "Energy: solar plus battery, and a low-level chip to hit the price target", "source_supported": true},
+      {"text": "Voice-command supplement: small set of simple voice commands (e.g. channel numbers, power) as optional module", "source_supported": true},
+      {"text": "Assignments: Industrial Designer/User Interface work on look-and-feel and build a clay prototype, refining spongy button texture and wooden shape", "source_supported": true},
+      {"text": "Assignments: Marketing keeps fruit-and-vegetable trend and company color in mind, evaluates the product", "source_supported": true},
+      {"text": "Timing: next meeting starts in thirty minutes; coaches send specific instructions", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The team settled on a wood body (natural, fashionable feel, though costlier and less spongy) with a spongy rubber touch on the buttons, rather than plastic, which was seen as common and resistant but more impersonal — fitting the top market priority of a fancy look and feel.", "verdict": "correct"}
+    }
+  }
+}

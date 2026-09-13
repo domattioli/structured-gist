@@ -1,0 +1,112 @@
+- **Session admin**
+  - session logged as MR-11, correcting an earlier "R-9" label that should be marked unread/unused; no front-end meeting happened that day; date is February 15th
+
+- **Audio-spike question**
+  - **Observation**
+    - Jane noticed spikes/clicks in some already-recorded channels, including on her own mic in a prior session
+  - **Diagnosis**
+    - Adam suspects touching/fiddling with the mic, or a bad connector, since the issue shows up on a wired mike specifically — PhD B jokingly suggests deliberately wiggling the mic during a "spike test" and flagging transcribers to check
+  - **Resolution**
+    - Professor E notes professional audio testing would deliberately wiggle connections to rule this out; Jane pulls the item from the agenda once it's framed as a likely mechanical/connector issue rather than something needing group discussion
+
+- **Agenda-request process**
+  - **Motivation**
+    - Andreas, who is peripherally involved in the project, asked to know discussion topics in advance so he can choose not to attend meetings irrelevant to him — partly to save his own time and partly, in his view, to help keep meetings from growing too large when everyone shows up
+  - **Difficulty acknowledged**
+    - Professor E notes this will be hard since many topics arise unanticipated, but the group agrees to try producing an agenda a day ahead
+  - **Plan**
+    - i. Adam volunteers to send a reminder (Tuesday or Wednesday) asking people to submit agenda items ahead of the meeting, noting he'll need to remember to actually do it
+    - ii. Professor E is skeptical it'll work reliably — the department's admin meeting agenda requests, sent every time by Lila, usually arrive about ten minutes before that meeting — but agrees it's worth attempting anyway
+  - **Refinement**
+    - Jane suggests Andreas specify particular topics of interest so the group can flag relevant meetings for him more precisely; PhD B expects more topics will become relevant to Andreas as the group gets further into data processing
+
+- **Mic and channel expansion**
+  - **New hardware**
+    - two new mics have arrived and are being assembled; Adam will pick them up the next day since he didn't bring his car
+  - **Headset comfort**
+    - if the alternate headsets prove more comfortable once they arrive, the group should evaluate and likely switch, gathering everyone's opinions
+  - **Second wireless base station**
+    - i. current setup: one base station supporting up to six wireless receivers; five wireless mikes currently working, a sixth arriving, so the group could daisy-chain a second base station to go from six to nine wireless channels total
+    - ii. plan is to replace remaining wired mikes (of the original set, three still work) with wireless, since wireless has been notably more reliable and reduces reliance on the "Jimbox" signal path entirely
+    - iii. cost breakdown: about $900 for a new base station plus roughly $800 per additional wireless channel — beyond the mikes themselves, the base station is the only extra cost — Professor E approves on the spot given how small that marginal cost is
+  - **Comparison to other sites**
+    - UW is reportedly close to purchasing an off-the-shelf wireless setup; SRI is separately evaluating options; the group agrees to compare notes with both to stay aligned, while being careful not to discuss funding-related specifics that might need to be redacted/bleeped from the transcript later
+  - **Reliability track record**
+    - Sony radio mikes have been reliable as long as batteries are monitored (checked and confirmed working that morning) — audio quality has been good, and this bypasses more failure-prone wired/Jimbox paths that have caused more problems
+  - **Headset connector repair**
+    - the headset connector change requires hand-soldering, but it's being done by the vendor's own repair/maintenance shop rather than in-house — Professor E jokes it's "nothing against" Adam's soldering skills, and the group will judge quality once the units return the next day
+
+- **Digits status**
+  - **Digitized paperwork**
+    - per last time's decision that transcribers shouldn't handle digit-form paperwork, Adam personally entered all the forms onto the computer over the past week, and wrote scripts letting transcribers use different tools on that data, plus scripts to generate P-files and run recognition on the digit sets
+  - **Transition**
+    - Jane is meeting with Dave (Gelbart) today to plan the transition to using Adam's interface; expected to take only a few days
+  - **First user**
+    - Dave Gelbart is expected to be the primary user of the digits data once ready; five or six sets are already done so he could start with a partial set if he wants
+  - **Absence explained**
+    - Dave isn't present and isn't reliably on the meeting invite list (Jane says she also doesn't always get invited); the group figures out he's likely absent due to a Tuesday/Thursday signal-processing class (225A) he's currently taking; Adam will make sure he's added to the list going forward
+
+- **Transcription and corpus status**
+  - **Recording volume**
+    - roughly 32 hours as of a week and a half ago, now roughly 35 hours, including digits (not yet separated out); comfortably more than 30 hours of non-digit content is implied since digits take under half a minute per person and don't add up to much time
+  - **Transcription volume**
+    - about 11 hours transcribed so far, out of a 12-hour batch handed to the transcribers; two transcribers are still working through the remainder; PhD B notes they're moving along efficiently, and Jane confirms some transcribers put in more hours than others
+  - **Cleaning pass (Jane's top priority, before channelizing)**
+    - i. spell-checking and consistent markup throughout
+    - ii. new conventions requested by Liz: systematic handling of numbers (distinguishing spoken forms like "nine two" vs. "ninety-two," with a gloss) and acronyms (letters kept space-separated, e.g. "P Z M," possibly with a clarifying gloss comment) — handled by hand since these can't be automated reliably (unlike well-known terms like TIMIT or PLP)
+    - iii. explicit comment-type tagging — `VOC` (vocalized noise: cough, laugh), `NONVOC` (e.g. door slam), `GLOSS` (pronunciation/spoken-form notes) — implemented via an automated filter converting simple bracketed notes (e.g. "{laugh}") into the fuller tagged form, since Jane judges hand-typing the full tag format directly would be too error-prone for transcribers
+    - iv. PhD B separately suggests generating alphabetized word/token-frequency lists to catch misspellings and inconsistent colloquial forms by proximity in the sorted list; Jane already uses this technique (type-token frequency listings) and agrees it's efficient
+  - **Spot-check**
+    - Jane compared two transcribers' independent transcriptions of the same 10-minute segment: found them "almost spooky" in similarity, word-for-word identical apart from optional comma placement (left to transcriber discretion, not yet part of the formal conventions)
+    - each transcriber showed different vocabulary strengths: one caught "neural nets" and "downsampled" (suggesting possible cognitive-science background) but missed "gobbledy-gook," approximating it phonetically in parentheses ("GABBL...") per the convention for uncertain terms; the other transcriber caught the colloquial term but not the technical ones
+  - **Next steps**
+    - after cleaning, data is "channelized" into the multichannel format needed by Liz and Don; Jane's next priority after that is tightening the boundaries of segment time bins; Thilo had a breakthrough this past week getting channel-based speech/nonspeech segmentation working, which Jane hasn't yet had time to apply since cleaning/channelizing remains her top priority
+
+- **Channel-based speech/nonspeech detector (Adam)**
+  - **What changed**
+    - ran the existing HMM-based speech/nonspeech detector per-channel, output in the new multichannel format, and gave one processed meeting to Liz, who wanted to test it with the recognizer — the recognizer had been struggling (excess memory use) on long, unsegmented chunks of speech, which per-channel segmentation should help address
+  - **Underlying model**
+    - still the same basic HMM approach as before (confirmed to Adam when asked if this differed from the prior system); the core change is in the features used, not the modeling framework
+  - **Feature changes**
+    - switched the loudness-based feature from a log-domain representation to a different loudness scaling (Adam couldn't recall the exact term — possibly related to a Fletcher-Munson-style equal-loudness curve — and said he'd look it up)
+  - **Cross-channel and within-channel normalization**
+    - the one cross-channel step used so far is energy normalization across all channels together; separately, loudness and modified-loudness features are normalized within each individual channel specifically to help distinguish foreground from background speech — this works well in general but "not always"
+
+- **Bleep-editing system design (main debate)**
+  - **Problem framing**
+    - the group is contractually obligated to give every meeting participant a chance to review the transcript and exclude ("bleep") parts they don't want included, before wider release
+  - **Adam's proposed system**
+    - generates web pages containing the transcript for each meeting, letting participants scroll and check boxes next to lines/utterances they want excluded; submitting the HTML form emails Adam the excluded time intervals directly, ready to apply — access restricted per participant via a single password per person, valid only for meetings they actually attended, so nobody has to remember more than one password
+    - includes an audio playback option on the web page so people can listen to, not just read, the disputed sections
+  - **Privacy rationale**
+    - text can't be emailed directly for privacy/security reasons — hence the password-gated web approach and interval-only email
+  - **Morgan's initial concern**
+    - i. suspects this elaborate mechanism over-serves what should be a rare case; expects most participants will simply say "it's fine" without needing to review anything closely, so the system is engineered around the infrequent case rather than the common one
+    - ii. prefers, as a starting point, something closer to handing someone a printed transcript, asking "is this OK?", and having them sign or return a sheet if so — acknowledging this "sounds paleolithic" but reflecting his own reading preference (Adam counters that for himself, reading something this large is much easier on the web than on paper; the two disagree on this point without fully resolving it)
+    - iii. worries specifically that making bleeping too easy — and even "fun," referencing Professor E's own amusement upon hearing a bleeped clip played back — will lead people to remove more content than necessary, including content they simply dislike (someone else's remarks about them), fragmenting the corpus for future researchers who may depend on complete dialogue for their own (unknown) research questions; PhD B summarizes the worry as "the easier it is, the more is gonna be bleeped"
+  - **Adam's counterpoints**
+    - built the web form mainly for his own convenience — structured, pre-formatted email input he can directly insert into the release process — and expects most people would prefer to answer by email regardless of mechanism; visiting the web page is entirely optional; a printable version can still be offered on request; bleeping doesn't happen automatically or immediately (no "fun" instant playback of the bleep) — the form only records time intervals, applied to the actual data later at release time, partly to avoid maintaining two copies of every meeting under tight disk space
+  - **Scope-of-bleeping dispute**
+    - PhD B asks whether participants can bleep sections where they themselves weren't speaking; Adam and Jane argue yes — the consent form is read as permitting exclusion of anything a participant found objectionable, whether they said it or not, since bleeping only one side of a conversation could still let the excluded content be inferred; PhD B is uneasy about one person editing another's recorded words, and Professor E is initially unsure whose call that is before conceding the consent-form wording supports the broader interpretation
+  - **Signature question**
+    - resolved that no separate physical signature is required for approvals; email suffices, since participants already signed the original consent form agreeing to the review-and-exclude process, and Professor E notes email follow-ups to signed agreements are now fairly standard practice in his contract dealings generally
+  - **Granularity of edits**
+    - bleeping is restricted to whole utterances only (not sub-utterance spans), purely because sub-utterance editing would be much harder for Adam to implement — deleting a whole transcript line is easy, partial edits are not
+  - **Timing of bleep application**
+    - bleeps are recorded as a list of time intervals and only actually applied to the recording and transcript at release time, to avoid keeping two copies of every meeting given tight disk space
+  - **Final compromise (worked out collaboratively)**
+    - a. contact each participant first (by their preferred method, e.g. email) asking for a straightforward approval, worded carefully — with group review of the exact wording — to strongly (but honestly) bias toward keeping the full data, framing complete data as more valuable to the research field, without hiding anything or misrepresenting the choice
+    - b. only issue a web password to someone who specifically indicates they want to review further after that initial contact; passwords are distributed only by phone, in person, or physical mail — never by email, for security reasons (PGP was briefly considered and dismissed as too complex)
+    - c. printable transcripts can be offered on request as an alternative to the web interface, addressing Professor E's concern that not everyone works comfortably via a browser (though the group expects most current participants do); Jane raises that "having access to it" per the consent form doesn't necessarily mean proactively delivering it, and Adam confirms the physical consent form itself is available to anyone who wants to read its exact wording
+  - **Legal/consent-form considerations (Jane)**
+    - i. reviewing a paraphrase of the consent-form language: participants were told they'd have the opportunity to have "anything" excised, not just their own words, which turns out to be broader than Jane initially recalled, and confirms PhD B/Adam's reading over her prior assumption
+    - ii. worries that making review too cumbersome could shift legal responsibility back onto the group if something objectionable slips into the released corpus and a participant argues they were too busy or the process too hard to pursue; this pulls against Morgan's preference for friction, so the group agrees on a middle ground
+    - iii. separately values the audio-playback option because transcript text can misrepresent tone (sarcasm, mood) and social dynamics that only become apparent on listening — even though this is expected to be rarely used, and even though the meetings recorded so far are mostly technical in content, meaning objectionable material has been essentially nonexistent
+  - **Correction side-benefit**
+    - the group notes that this same review process would also surface transcript errors (mishearing, mistaken word substitutions) as useful feedback, separate from privacy bleeping
+
+- **Wrap-up**
+  - **Grad D check-in**
+    - Grad D reports nothing specific — his project continues but there's no particular update this week; he's present mainly to represent overall progress
+  - **Digits closing**
+    - the meeting ends with the group's usual digit-reading session; Adam reports finding more unfilled digit forms mixed in with completed ones than expected, so there are still a few more digits sessions left before that batch is done; some closing banter compares the wireless headset to working at a fast-food drive-through

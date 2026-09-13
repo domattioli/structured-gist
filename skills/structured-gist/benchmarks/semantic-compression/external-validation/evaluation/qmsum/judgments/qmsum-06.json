@@ -1,0 +1,92 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "PhD D flags Vector Taylor Series techniques, from researchers in Granada and at Lucent (originally CMU), which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion."},
+      "f2": {"status": "retained", "evidence": "which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion (the 'VTS noise modeling' heading plus content convey the noise/channel-removal purpose)"},
+      "f3": {"status": "retained", "evidence": "from researchers in Granada"},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "and at Lucent (captures the Lucent location, omits that PhD D met this person at ICASSP)"},
+      "f8": {"status": "retained", "evidence": "(originally CMU)"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "retained", "evidence": "from researchers in Granada and at Lucent (originally CMU)"}
+    },
+    "hallucinations": [
+      {"text": "Two-stage enhancement idea: nearly every submitted system uses two stages of speech enhancement rather than one, so Professor C suggests trying combinations of the group's own techniques rather than each working alone.", "source_supported": true},
+      {"text": "Subspace vs Wiener: Relationship, Weakness, Professor C's aside (bare headings, no elaborated claim).", "source_supported": true},
+      {"text": "FFT neural-net idea: Professor C proposes feeding the raw FFT power spectrum straight into a neural network, the same way the filter bank is used, so the network discovers what the filter bank throws away that's actually useful.", "source_supported": true},
+      {"text": "LPC peak-tracking work: Grad E, helping researcher Pierre Divenyi study vowel-to-vowel formant transitions, finds the roots of the PLP-derived LPC polynomial to track spectral peaks over time in synthetic speech.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Skim says only that PhD D flagged VTS techniques used by researchers in Granada and at Lucent, with the idea originally from CMU. It does not name the Granada researcher, does not mention PhD B's friendship with him, and does not mention Professor C saying he didn't know him -- so only a thin partial answer to 'what did the team say about the person in Grenada' can be built from skim. (Note: the given reference_answer's claim that the VTS technique was 'to do voice-unvoice' is itself flagged in the gold data as unsupported by the evidence span -- VTS here is about noise/channel removal, not voicing discrimination -- so no rendering should be expected to state that, and skim correctly does not.)", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "PhD D flags Vector Taylor Series techniques, from researchers in Granada and at Lucent (originally CMU), which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion."},
+      "f2": {"status": "retained", "evidence": "which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a Taylor expansion"},
+      "f3": {"status": "retained", "evidence": "from researchers in Granada"},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "and at Lucent (Lucent location captured, ICASSP meeting detail omitted)"},
+      "f8": {"status": "retained", "evidence": "(originally CMU)"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "retained", "evidence": "from researchers in Granada and at Lucent (originally CMU)"}
+    },
+    "hallucinations": [
+      {"text": "Compute farm update: about twelve new SUN Blade-100 machines ordered; run-command finds the fastest available machine and exports the job; users should cap themselves around ten simultaneous jobs; P-make manages a batch of dependent jobs and caps concurrency, while run-command is unaware of other parallel jobs.", "source_supported": true},
+      {"text": "Aurora post-submission work: redesigned LDA filters gave a slight, not dramatic, improvement; online normalization didn't help with the original time constant; giving the Aurora baseline true speech/nonspeech endpoints improved it by twenty-two percent overall and fifty percent on Spanish SpeechDat-Car, lowering the qualification threshold from fifty to twenty-five percent; Sunil is prototyping a signal-subspace approach in Matlab, planning to port it to C.", "source_supported": true},
+      {"text": "France Telecom comparison: experiments start from Wiener-filtered features extracted at the handset, then run the full proposal-one system on top, versus Sunil's simpler LDA-only pipeline; the modified system beats France Telecom on mismatched/high-mismatch but is slightly worse on well-matched.", "source_supported": true},
+      {"text": "Endpoint/VAD debate: 'well-matched' means seventy percent train/thirty percent test; systems get given speech start/end points but can still use audio outside them, and adding endpoint info will shrink each system's apparent contribution on mismatch conditions more than well-matched.", "source_supported": true},
+      {"text": "Subspace vs Wiener: the signal-subspace method is essentially a KL transform followed by a Wiener filter; it performs poorly at low SNR and colored noise since it needs a positive-definite noise covariance matrix, fixed by whitening the noise first.", "source_supported": true},
+      {"text": "Large-vocab noisy plans: the group's next stage moves to Wall Street Journal with artificially added noise, and spectral subtraction alone tends to underperform Wiener/subspace approaches on large-vocabulary tasks in the literature; ICSI's meeting recordings are run through an untrained Switchboard-based recognizer, but no one has tried the distant-mike condition with the SRI recognizer.", "source_supported": true},
+      {"text": "New voicing feature: PhD B compares the FFT-derived spectrum to the reconstructed mel-filter-bank spectrum and uses the variance of their difference as a feature, requiring a longer (62.5ms) analysis window; tested on Italian and Spanish, the feature through a neural network gave roughly the same results as cepstral features alone; using it raw hurt results.", "source_supported": true},
+      {"text": "FFT neural-net idea: Professor C proposes feeding the raw FFT power spectrum straight into a neural network, the same way the filter bank is used, so the network discovers what the filter bank throws away that's actually useful.", "source_supported": true},
+      {"text": "Acoustic-event qualifier project: Grad G's qualifying-exam proposal is to build robust primary detectors for acoustic events, then feed their outputs tandem-style into a Gaussian-mixture HMM back-end; open issues are which acoustic events give good coverage and how to get labeled training data.", "source_supported": true},
+      {"text": "LPC peak-tracking work: Grad E, helping researcher Pierre Divenyi study vowel-to-vowel formant transitions, finds the roots of the PLP-derived LPC polynomial to track spectral peaks over time in synthetic speech, though real speech gives roots that don't always align cleanly with true formants.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Standard states that PhD D flagged VTS techniques used by researchers in Granada and at Lucent, with the idea originally from CMU, approximating the nonlinear channel-plus-noise cepstra transformation with a Taylor expansion. It does not name the Granada researcher, mention PhD B's friendship with him, or mention Professor C not knowing him. (Note: the reference answer's 'to do voice-unvoice' claim is itself a documented corpus defect not supported by the evidence span; standard correctly does not repeat it.)", "verdict": "partial"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "PhD D flags Vector Taylor Series techniques -- used by a researcher in Granada (Jose Carlos Segura) and one at Lucent, an idea originating at CMU -- which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra"},
+      "f2": {"status": "retained", "evidence": "which approximate the nonlinear channel-plus-noise transformation between clean and noisy cepstra with a first- or second-order Taylor expansion"},
+      "f3": {"status": "retained", "evidence": "a researcher in Granada"},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "retained", "evidence": "(Jose Carlos Segura)"},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "partial", "evidence": "and one at Lucent (Lucent location captured, ICASSP meeting detail omitted)"},
+      "f8": {"status": "retained", "evidence": "an idea originating at CMU"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "a researcher in Granada (Jose Carlos Segura) -- directly identifies the Granada researcher by name, though without attributing the naming to PhD B specifically or the 'friend' detail"},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "retained", "evidence": "used by a researcher in Granada (Jose Carlos Segura) and one at Lucent, an idea originating at CMU"}
+    },
+    "hallucinations": [
+      {"text": "Compute farm update: about twelve new SUN Blade-100 machines ordered; run-command tool behavior; load etiquette (cap around ten simultaneous jobs, recalling a past workshop where twenty-five people on shared machines was less efficient); P-make vs run-command differences; eviction behavior with a 'no evict' attribute.", "source_supported": true},
+      {"text": "Aurora post-submission work: redesigned LDA filters gave a slight improvement; online normalization didn't help with the original time constant; endpoint information improved the Aurora baseline by twenty-two percent overall and fifty percent on Spanish SpeechDat-Car, lowering the qualification threshold; Sunil is prototyping a signal-subspace approach in Matlab, planning to port it to C and add it to the shared repository.", "source_supported": true},
+      {"text": "France Telecom comparison: experiments start from Wiener-filtered handset features, then run the full proposal-one system (with a modified, lower-delay LDA filter); the modified system beats France Telecom on mismatched/high-mismatch but is slightly worse on well-matched; a 64Hz cutoff no longer hurts TI-digits.", "source_supported": true},
+      {"text": "Endpoint/VAD debate: 'well-matched' means seventy/thirty split, not a guarantee of true matching; Professor C questions whether well-matched is even realistic; adding endpoint info will shrink each system's apparent contribution on mismatch conditions more than well-matched.", "source_supported": true},
+      {"text": "Subspace vs Wiener: the signal-subspace method is essentially a KL transform followed by a Wiener filter -- a cascade of the two; it performs poorly at low SNR/colored noise because of the positive-definite covariance-matrix requirement, fixed by whitening the noise first; this parallels JRASTA, which works by adding noise back in to counteract variance-reduction from orthogonalizing.", "source_supported": true},
+      {"text": "Large-vocab noisy plans: the group's next stage moves to Wall Street Journal with artificially added noise (organized by Guenter Hirsch and collaborators); spectral subtraction alone tends to underperform Wiener/subspace approaches on large-vocabulary tasks; ICSI's meeting recordings are run through an untrained Switchboard-based recognizer with some adaptation, but no one has tried the distant-mike condition with the SRI recognizer; Professor C notes ICSI's Broadcast News work used multi-stream methods, not spectral subtraction, for noisy focus conditions.", "source_supported": true},
+      {"text": "New voicing feature: PhD B compares the FFT-derived spectrum to the reconstructed mel-filter-bank spectrum and uses the variance of their difference as a feature (high variance signals noise, low variance signals speech), requiring a longer (62.5ms) window; tested on Italian and Spanish, results were roughly the same as cepstral features alone through a neural network; raw without a neural network hurt results.", "source_supported": true},
+      {"text": "FFT neural-net idea: Professor C proposes feeding the raw FFT power spectrum straight into a neural network so the network discovers what the filter bank throws away that's useful, likely helping mainly in combination; he recalls a decade-old conference where plain FFT beat an 'auditory-inspired' front-end in at least one comparison.", "source_supported": true},
+      {"text": "Acoustic-event qualifier project: Grad G's qualifying-exam proposal is to build robust primary detectors for acoustic events, inspired by multi-band techniques and Larry Saul's graphical-model work, feeding outputs tandem-style into a Gaussian-mixture HMM back-end; open issues are which events give good coverage and how to get labeled training data; Professor C notes the voiced/unvoiced piece overlaps with PhD B's multi-band voicing work.", "source_supported": true},
+      {"text": "LPC peak-tracking work: Grad E finds the roots of the PLP-derived LPC polynomial (an approach like line spectral pairs, suggested by Stephane) to track spectral peaks in synthetic speech, getting three or four complex-conjugate root pairs from an eighth-order polynomial, though on real speech these roots don't always align cleanly with true formants and reflect the psycho-acoustic PLP model rather than the synthesizer's own ground-truth formant/bandwidth values.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Deep states that PhD D flagged VTS techniques used by a researcher in Granada named Jose Carlos Segura and one at Lucent, with the idea originating at CMU, approximating the nonlinear channel-plus-noise cepstra transformation with a first- or second-order Taylor expansion. This names the Granada researcher (matching the reference answer) but still omits PhD B's friendship with him and Professor C's 'I don't know him' remark. (Note: the reference answer's claim that the VTS technique was 'to do voice-unvoice' is a documented corpus defect not supported by the evidence span; deep correctly does not repeat it.)", "verdict": "partial"}
+    }
+  }
+}

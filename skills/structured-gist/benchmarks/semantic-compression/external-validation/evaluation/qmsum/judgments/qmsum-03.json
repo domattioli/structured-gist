@@ -1,0 +1,140 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "omitted", "evidence": ""},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "omitted", "evidence": ""},
+      "f21": {"status": "omitted", "evidence": ""},
+      "f22": {"status": "omitted", "evidence": ""},
+      "f23": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""},
+      "r4": {"status": "lost", "evidence": ""},
+      "r5": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "DC offset bug: an old PLP bug meant a DC offset in recordings was never filtered, badly hurting error rate, until a high-pass filter was added -- but it was hard-coded for the wrong sampling rate until Dan made the cutoff a parameter.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Skim gives only bare section headers (Transcription pipeline status > Progress/Staffing/Target headcount; Segmentation ground truth > Approach/Pre-segmentation value/Diff tracking; Transcript consent policy > Milestone/Open question/Resolution) with no elaborating content, so no concrete answer to 'What was the status of transcription?' can actually be constructed from skim alone. Note: the given reference_answer ('The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised') does not match this question or this transcript at all -- 'SmartKom' never appears in this source, so no rendering could ever match it; this appears to be a corpus/reference defect unrelated to the rendering's quality.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "partial", "evidence": "Professor F suggests five or six transcribers on staff at a time, as a flexible middle ground. (captures the 5-6 number and 'flexible' framing but omits the contrast with hiring twelve being unsustainable)"},
+      "f3": {"status": "retained", "evidence": "transcribers start from Thilo's automatic pre-segmentation rather than blank audio, saving enormous time even though they still hand-adjust boundaries, especially around short utterances."},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "partial", "evidence": "Open question: whether participants should approve the final edited transcript, an as-is early version, or just the audio, given that subtle wording changes could matter legally... (captures that editing status affects the approval question, but not that Postdoc A specifically is mid final-pass editing or her suggestion to wait)"},
+      "f10": {"status": "partial", "evidence": "Milestone: Professor F sets a goal of having a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting. (reframes Professor F's raised question into an already-settled goal, losing the 'raised whether to start' framing)"},
+      "f11": {"status": "retained", "evidence": "it's late May with the DARPA meeting in mid-July / ...ready before the July DARPA meeting"},
+      "f12": {"status": "retained", "evidence": "a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting"},
+      "f13": {"status": "retained", "evidence": "legally-cleared"},
+      "f14": {"status": "retained", "evidence": "ready before the July DARPA meeting"},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "partial", "evidence": "Open question: whether participants should approve the final edited transcript, an as-is early version, or just the audio... (captures the topic but not PhD C's specific stance that participants don't need to approve a fully edited version)"},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "partial", "evidence": "given that subtle wording changes could matter legally even though the signed consent form only mentions 'transcripts.' (captures that wording matters legally, but not the specific rationale about relying on the transcript itself vs. re-listening)"},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "omitted", "evidence": ""},
+      "f21": {"status": "retained", "evidence": "new tighter-boundary transcriptions are being used to derive speech/nonspeech labels for training and evaluating the segmenter."},
+      "f22": {"status": "retained", "evidence": "new tighter-boundary transcriptions are being used to derive speech/nonspeech labels for training and evaluating the segmenter."},
+      "f23": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Milestone: Professor F sets a goal of having a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting, rather than continuing to say nothing is available."},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""},
+      "r4": {"status": "lost", "evidence": ""},
+      "r5": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "DARPA demo status: it's late May with the DARPA meeting in mid-July, leaving about a month, and nobody fully recalls the two planned demo pieces (a. transcriber interface, b. pre-stored question-answering mock-up); Professor F asks the group to sort out who's driving the second piece since time is short.", "source_supported": true},
+      {"text": "Automatic segmentation shift: all prior meeting-recognition experiments used hand segmentations as the recognition basis, which the group now considers cheating; with Thilo's automatic segmenter now working well, the group agrees to move recognition onto automatic segmentations instead, with follow-on ideas (retrain background-noise models, use continuous posteriors, train transient noise models).", "source_supported": true},
+      {"text": "IBM digit-beep chunking: per IBM's transcriber feedback, each chunk now gets a beep-digit-beep sequence; Adam recorded digits one through ten at three speeds and spliced in the fastest; one more sample meeting will be chunked and sent to Brian at IBM; ICSI's side is quick but the IBM side alone took roughly two to three weeks last time.", "source_supported": true},
+      {"text": "Transcription pipeline status > Progress: five meetings in 'set one' are done and now being edited.", "source_supported": true},
+      {"text": "Transcription pipeline status > Staffing: attrition (a baby, a planned end date) took the team down to two solid transcribers; two more were hired today with a third planned this week, but staffing is kept lean in case the IBM pipeline speeds things up.", "source_supported": true},
+      {"text": "Diff tracking: keeping the original automatic time marks alongside the edited ones would let the group measure recognition performance on a genuinely non-cheating segmentation, though this is complicated when editing merges partway through with the pre-segmented version.", "source_supported": true},
+      {"text": "Resolution: rather than resolve it in the meeting, Professor F asks Jane and the others to settle it offline before July.", "source_supported": true},
+      {"text": "Prosody classifier project: only eight usable meetings are available so far, likely below threshold for reliably modeling noisy prosodic features; twenty or so should help; boundary-to-pitch-peak distance and local pitch-range effects show up as useful features alongside some 'cheating' true-word features; prosodic features predict where a speaker is about to be interrupted and generalize across speakers once identity is anonymized; Don will continue this over the summer with Andreas's and Thilo's help.", "source_supported": true},
+      {"text": "Front-end recognizer tuning: PLP performance is now matching or beating MFCC; applying warp factors computed for the SRI system to the ICSI front-end improved word error by about one percent even without retraining; the tandem system still reuses the standard system's sixty-four-Gaussian-per-mixture setting versus CMU's ten; VTLN plus earlier front-end fixes add up to roughly three to five percent, though only a couple of those percentage points are genuinely front-end-specific.", "source_supported": true},
+      {"text": "Tandem next steps: the coupling procedure between the neural net and the SRI system is believed correct, but possible bug sources remain in KLT transform generation and net input normalization; PhD D proposes taking only the first thirteen principal components of the fifty-six-dimensional KLT output; redoing SRI forced alignments using tandem features and retraining the net would make the pipeline more directly discriminative for word error; Stephane's concatenation trick (neural-net outputs plus regular PLP features) already helped a lot and is the current best Aurora system.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Standard describes transcription status as: five meetings in 'set one' done and being edited; staffing reduced to two solid transcribers through attrition, with two more hired and a third planned, kept deliberately lean; a target of five or six transcribers on staff; new tighter-boundary transcriptions being used for segmentation ground truth; Thilo's automatic pre-segmentation saving transcribers enormous time; and a milestone to have a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting, with an open question about exactly what version participants should approve. Note: the given reference_answer ('The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised') is about a topic ('SmartKom') that never appears anywhere in this transcript -- this looks like a corpus/reference defect unrelated to the rendering's accuracy, so no rendering could match it despite standard's answer being accurate and thorough for the actual question asked.", "verdict": "wrong"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "retained", "evidence": "Professor F suggests five or six transcribers on staff at a time as a flexible middle ground between too few and an unsustainable twelve."},
+      "f3": {"status": "retained", "evidence": "transcribers start from Thilo's automatic pre-segmentation rather than blank audio, which saves enormous time even though they still hand-adjust boundaries here and there, especially around short utterances."},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "partial", "evidence": "Open question: whether participants should approve the final edited transcript, an as-is early version, or just the audio, given that subtle wording changes could matter legally (e.g. potentially slanderous misquotes)... (captures editing status affecting approval, not Postdoc A's specific position/suggestion to wait)"},
+      "f10": {"status": "partial", "evidence": "Milestone: Professor F sets a goal of having a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting, rather than continuing to say nothing is available. (reframes the raised question as an already-settled goal)"},
+      "f11": {"status": "retained", "evidence": "it's late May with the DARPA meeting in mid-July / ...ready before the July DARPA meeting"},
+      "f12": {"status": "retained", "evidence": "a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting"},
+      "f13": {"status": "retained", "evidence": "legally-cleared"},
+      "f14": {"status": "retained", "evidence": "ready before the July DARPA meeting"},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "partial", "evidence": "Open question: whether participants should approve the final edited transcript, an as-is early version, or just the audio... (topic present, PhD C's specific stance not stated)"},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "partial", "evidence": "given that subtle wording changes could matter legally (e.g. potentially slanderous misquotes) even though the signed consent form only mentions 'transcripts.' (captures the slander concern explicitly but not the specific rationale about relying on the transcript vs. re-listening)"},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "omitted", "evidence": ""},
+      "f21": {"status": "retained", "evidence": "new tighter-boundary transcriptions are being used to derive speech/nonspeech labels for training and evaluating the segmenter."},
+      "f22": {"status": "retained", "evidence": "new tighter-boundary transcriptions are being used to derive speech/nonspeech labels for training and evaluating the segmenter."},
+      "f23": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Milestone: Professor F sets a goal of having a legally-cleared, distributable subset of transcripts ready before the July DARPA meeting, rather than continuing to say nothing is available."},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""},
+      "r4": {"status": "lost", "evidence": ""},
+      "r5": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "DARPA demo status: it's late May with the DARPA meeting in mid-July, leaving about a month, and nobody fully recalls the two planned demo pieces (a. transcriber interface, b. pre-stored question-answering mock-up); Professor F asks the group to sort out who's driving the second piece since time is short.", "source_supported": true},
+      {"text": "Automatic segmentation shift: all prior meeting-recognition experiments used hand segmentations as the recognition basis, which the group now considers cheating; with Thilo's automatic segmenter now working well, the group agrees to move recognition onto automatic segmentations instead, with follow-on ideas.", "source_supported": true},
+      {"text": "IBM digit-beep chunking: per IBM's transcriber feedback, each chunk now gets a beep-digit-beep sequence; Adam recorded digits one through ten at three speeds and spliced in the fastest; ICSI's side is quick but the IBM side alone took roughly two to three weeks last time; Professor F wants this resolved soon since Jane is actively hiring transcribers who need to know what workflow to expect.", "source_supported": true},
+      {"text": "Transcription pipeline status > Progress: five meetings in 'set one' are done and now being edited.", "source_supported": true},
+      {"text": "Transcription pipeline status > Staffing: attrition (a baby, a planned end date) took the team down to two solid transcribers; two more were hired today with a third planned this week, but staffing is deliberately kept lean in case the IBM pipeline speeds things up and layoffs become necessary.", "source_supported": true},
+      {"text": "Diff tracking: keeping the original automatic time marks alongside the edited ones would let the group measure recognition performance on a genuinely non-cheating, fully-automatic segmentation -- though this is complicated when a transcriber's work is merged partway through with the pre-segmented version.", "source_supported": true},
+      {"text": "Resolution: rather than resolve it in the meeting, Professor F asks Jane and the others to settle it offline before July.", "source_supported": true},
+      {"text": "Prosody classifier project: only eight usable (non-non-native) meetings are available so far, likely below threshold for reliably modeling noisy prosodic features; twenty or so meetings should help; boundary-to-pitch-peak distance and local pitch-range effects show up as useful classifier features; prosodic features predict where a speaker is about to be interrupted and results generalize across speakers rather than just modeling one person once identity is anonymized; close-talking mikes give much cleaner pitch tracks than Switchboard's telephone-bandwidth data; Don will continue this over the summer with Andreas's and Thilo's help.", "source_supported": true},
+      {"text": "Front-end recognizer tuning: PLP performance is now matching or beating MFCC; applying warp factors computed for the SRI system (with the reciprocal taken to match convention) improved word error by about one percent even without retraining; the tandem system still reuses sixty-four Gaussians per mixture versus CMU's ten and Chuck/PhD C plan to tune this since training takes under 24 hours; VTLN plus earlier front-end fixes add up to roughly three to five percent, though Professor F notes only a couple of those points are genuinely front-end-specific rather than VTLN or rescoring/N-best-weight optimization.", "source_supported": true},
+      {"text": "Tandem next steps: the coupling procedure is believed correct (matching the working PLP setup), but possible bug sources remain in KLT transform generation and net input normalization; PhD D proposes taking only the first thirteen principal components of the 56-dimensional KLT output; redoing SRI forced alignments using tandem features and retraining the net would make the pipeline more directly discriminative for word error; Stephane's concatenation trick already helped a lot and is the current best Aurora system, though the best way to apply the KLT is still unresolved.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Deep gives essentially the same account as standard, with more supporting detail: five 'set one' meetings done and being edited; staffing down to two solid transcribers through attrition, two hired today with a third planned, kept lean deliberately to avoid needing layoffs; target of five or six on staff as a middle ground between too few and an unsustainable twelve; new tighter-boundary transcriptions being turned into segmentation ground truth; Thilo's pre-segmentation saving transcribers enormous time; and Professor F's milestone of a legally-cleared, distributable transcript subset ready before the July DARPA meeting, with the exact approval-version question left to be settled offline before July. Note: the given reference_answer ('The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised') is about a topic ('SmartKom') that never appears in this transcript at all -- this looks like a corpus/reference defect, not a shortcoming of the rendering, which otherwise answers the actual question thoroughly and accurately.", "verdict": "wrong"}
+    }
+  }
+}

@@ -1,0 +1,1642 @@
+{
+  "case_level_rows": {
+    "hotpotqa": [
+      {
+        "case_id": "hotpotqa-01",
+        "conformance_violations": 15,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.5,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 84.18,
+        "relation_retention": 0.0,
+        "spr": 0.3333
+      },
+      {
+        "case_id": "hotpotqa-01",
+        "conformance_violations": 10,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 36.92,
+        "relation_retention": 0.5,
+        "spr": 0.8333
+      },
+      {
+        "case_id": "hotpotqa-01",
+        "conformance_violations": 18,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 11.1,
+        "relation_retention": 0.5,
+        "spr": 0.8333
+      },
+      {
+        "case_id": "hotpotqa-02",
+        "conformance_violations": 10,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.6,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 86.07,
+        "relation_retention": 0.5,
+        "spr": 0.5714
+      },
+      {
+        "case_id": "hotpotqa-02",
+        "conformance_violations": 3,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 23.42,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-02",
+        "conformance_violations": 10,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 6.32,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-03",
+        "conformance_violations": 13,
+        "critical_lost_frac": 0.5,
+        "fact_retention": 0.25,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 85.77,
+        "relation_retention": 0.0,
+        "spr": 0.1875
+      },
+      {
+        "case_id": "hotpotqa-03",
+        "conformance_violations": 3,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 36.85,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-03",
+        "conformance_violations": 19,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 5.0,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-04",
+        "conformance_violations": 11,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.75,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 75.76,
+        "relation_retention": 0.5,
+        "spr": 0.6667
+      },
+      {
+        "case_id": "hotpotqa-04",
+        "conformance_violations": 5,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 21.72,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-04",
+        "conformance_violations": 15,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 4.49,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-05",
+        "conformance_violations": 9,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.625,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 78.6,
+        "relation_retention": 0.0,
+        "spr": 0.5
+      },
+      {
+        "case_id": "hotpotqa-05",
+        "conformance_violations": 51,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 26.13,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-05",
+        "conformance_violations": 52,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 14.64,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-06",
+        "conformance_violations": 12,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.5,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 87.28,
+        "relation_retention": 0.5,
+        "spr": 0.5
+      },
+      {
+        "case_id": "hotpotqa-06",
+        "conformance_violations": 72,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 31.62,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-06",
+        "conformance_violations": 93,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 10.99,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-07",
+        "conformance_violations": 7,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.625,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 79.98,
+        "relation_retention": null,
+        "spr": 0.625
+      },
+      {
+        "case_id": "hotpotqa-07",
+        "conformance_violations": 45,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 21.15,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-07",
+        "conformance_violations": 52,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 10.18,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-08",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.5714,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 81.3,
+        "relation_retention": 0.5,
+        "spr": 0.55
+      },
+      {
+        "case_id": "hotpotqa-08",
+        "conformance_violations": 60,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 9.19,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "hotpotqa-08",
+        "conformance_violations": 70,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": -3.03,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      }
+    ],
+    "qasper": [
+      {
+        "case_id": "qasper-01",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.5,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qasper-01",
+        "conformance_violations": 13,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.1154,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 92.14,
+        "relation_retention": 0.0,
+        "spr": 0.0938
+      },
+      {
+        "case_id": "qasper-01",
+        "conformance_violations": 20,
+        "critical_lost_frac": 0.3333333333333333,
+        "fact_retention": 0.4615,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 82.01,
+        "relation_retention": 0.5,
+        "spr": 0.5
+      },
+      {
+        "case_id": "qasper-02",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 97.38,
+        "relation_retention": null,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qasper-02",
+        "conformance_violations": 9,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.8571,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 87.28,
+        "relation_retention": null,
+        "spr": 0.8571
+      },
+      {
+        "case_id": "qasper-02",
+        "conformance_violations": 18,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 74.76,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-03",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.3333333333333333,
+        "fact_retention": 0.6667,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 98.11,
+        "relation_retention": 1.0,
+        "spr": 0.7273
+      },
+      {
+        "case_id": "qasper-03",
+        "conformance_violations": 9,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 89.29,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-03",
+        "conformance_violations": 15,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 78.38,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-04",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 97.83,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qasper-04",
+        "conformance_violations": 13,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 86.52,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-04",
+        "conformance_violations": 18,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 73.78,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-05",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 97.42,
+        "relation_retention": null,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qasper-05",
+        "conformance_violations": 10,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7143,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 86.72,
+        "relation_retention": null,
+        "spr": 0.7143
+      },
+      {
+        "case_id": "qasper-05",
+        "conformance_violations": 18,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 71.04,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-06",
+        "conformance_violations": 21,
+        "critical_lost_frac": null,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 91.89,
+        "relation_retention": null,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qasper-06",
+        "conformance_violations": 38,
+        "critical_lost_frac": null,
+        "fact_retention": 0.6667,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 61.51,
+        "relation_retention": null,
+        "spr": 0.6667
+      },
+      {
+        "case_id": "qasper-06",
+        "conformance_violations": 111,
+        "critical_lost_frac": null,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 12.75,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-07",
+        "conformance_violations": 36,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 93.43,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-07",
+        "conformance_violations": 53,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 69.62,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-07",
+        "conformance_violations": 112,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 40.07,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-08",
+        "conformance_violations": 32,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 94.4,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qasper-08",
+        "conformance_violations": 49,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 70.04,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-08",
+        "conformance_violations": 143,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 35.43,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-09",
+        "conformance_violations": 33,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.1,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 90.45,
+        "relation_retention": null,
+        "spr": 0.1
+      },
+      {
+        "case_id": "qasper-09",
+        "conformance_violations": 48,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 57.76,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-09",
+        "conformance_violations": 145,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 22.19,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-10",
+        "conformance_violations": 39,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.5,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 91.07,
+        "relation_retention": null,
+        "spr": 0.5
+      },
+      {
+        "case_id": "qasper-10",
+        "conformance_violations": 46,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 60.17,
+        "relation_retention": null,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qasper-10",
+        "conformance_violations": 134,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 23.15,
+        "relation_retention": null,
+        "spr": 1.0
+      }
+    ],
+    "qmsum": [
+      {
+        "case_id": "qmsum-01",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.5,
+        "fact_retention": 0.2333,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 98.68,
+        "relation_retention": 0.0,
+        "spr": 0.2188
+      },
+      {
+        "case_id": "qmsum-01",
+        "conformance_violations": 5,
+        "critical_lost_frac": 0.16666666666666666,
+        "fact_retention": 0.5167,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 95.36,
+        "relation_retention": 0.0,
+        "spr": 0.4844
+      },
+      {
+        "case_id": "qmsum-01",
+        "conformance_violations": 6,
+        "critical_lost_frac": 0.16666666666666666,
+        "fact_retention": 0.5833,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 93.02,
+        "relation_retention": 1.0,
+        "spr": 0.6094
+      },
+      {
+        "case_id": "qmsum-02",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.75,
+        "fact_retention": 0.1667,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 98.99,
+        "relation_retention": 0.0,
+        "spr": 0.14
+      },
+      {
+        "case_id": "qmsum-02",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7143,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 95.41,
+        "relation_retention": 0.5,
+        "spr": 0.72
+      },
+      {
+        "case_id": "qmsum-02",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7143,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 94.3,
+        "relation_retention": 0.5,
+        "spr": 0.72
+      },
+      {
+        "case_id": "qmsum-03",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.82,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-03",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.4211,
+        "level": "standard",
+        "recoverability": 0.0,
+        "reduction_pct": 93.96,
+        "relation_retention": 0.2,
+        "spr": 0.383
+      },
+      {
+        "case_id": "qmsum-03",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.4342,
+        "level": "deep",
+        "recoverability": 0.0,
+        "reduction_pct": 92.96,
+        "relation_retention": 0.2,
+        "spr": 0.3936
+      },
+      {
+        "case_id": "qmsum-04",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.8888888888888888,
+        "fact_retention": 0.1625,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.41,
+        "relation_retention": 0.0,
+        "spr": 0.1354
+      },
+      {
+        "case_id": "qmsum-04",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.8888888888888888,
+        "fact_retention": 0.2875,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 94.86,
+        "relation_retention": 0.25,
+        "spr": 0.2604
+      },
+      {
+        "case_id": "qmsum-04",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.4444444444444444,
+        "fact_retention": 0.475,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 91.98,
+        "relation_retention": 0.5,
+        "spr": 0.4792
+      },
+      {
+        "case_id": "qmsum-05",
+        "conformance_violations": 2,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.99,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-05",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.2,
+        "fact_retention": 0.5312,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 95.41,
+        "relation_retention": 0.25,
+        "spr": 0.4762
+      },
+      {
+        "case_id": "qmsum-05",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.2,
+        "fact_retention": 0.5312,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 94.3,
+        "relation_retention": 0.25,
+        "spr": 0.4762
+      },
+      {
+        "case_id": "qmsum-06",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.4643,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 98.41,
+        "relation_retention": 0.3333,
+        "spr": 0.375
+      },
+      {
+        "case_id": "qmsum-06",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.4643,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 94.86,
+        "relation_retention": 0.3333,
+        "spr": 0.375
+      },
+      {
+        "case_id": "qmsum-06",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.6786,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 91.98,
+        "relation_retention": 0.6667,
+        "spr": 0.675
+      },
+      {
+        "case_id": "qmsum-07",
+        "conformance_violations": 9,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0833,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.34,
+        "relation_retention": 0.0,
+        "spr": 0.0556
+      },
+      {
+        "case_id": "qmsum-07",
+        "conformance_violations": 35,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.9167,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 91.03,
+        "relation_retention": 1.0,
+        "spr": 0.9444
+      },
+      {
+        "case_id": "qmsum-07",
+        "conformance_violations": 62,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.9167,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 82.11,
+        "relation_retention": 1.0,
+        "spr": 0.9444
+      },
+      {
+        "case_id": "qmsum-08",
+        "conformance_violations": 10,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.4211,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 98.33,
+        "relation_retention": 0.125,
+        "spr": 0.38
+      },
+      {
+        "case_id": "qmsum-08",
+        "conformance_violations": 45,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.8158,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 91.26,
+        "relation_retention": 0.75,
+        "spr": 0.82
+      },
+      {
+        "case_id": "qmsum-08",
+        "conformance_violations": 56,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.9737,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 82.46,
+        "relation_retention": 0.875,
+        "spr": 0.96
+      },
+      {
+        "case_id": "qmsum-09",
+        "conformance_violations": 19,
+        "critical_lost_frac": 0.2857142857142857,
+        "fact_retention": 0.3043,
+        "level": "skim",
+        "recoverability": 1.0,
+        "reduction_pct": 98.1,
+        "relation_retention": 0.1667,
+        "spr": 0.2742
+      },
+      {
+        "case_id": "qmsum-09",
+        "conformance_violations": 42,
+        "critical_lost_frac": 0.2857142857142857,
+        "fact_retention": 0.6304,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 93.26,
+        "relation_retention": 0.3333,
+        "spr": 0.5484
+      },
+      {
+        "case_id": "qmsum-09",
+        "conformance_violations": 201,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.8043,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 80.65,
+        "relation_retention": 0.5,
+        "spr": 0.7258
+      },
+      {
+        "case_id": "qmsum-10",
+        "conformance_violations": 25,
+        "critical_lost_frac": 0.6,
+        "fact_retention": 0.2353,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 97.16,
+        "relation_retention": 0.0,
+        "spr": 0.1951
+      },
+      {
+        "case_id": "qmsum-10",
+        "conformance_violations": 139,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.8824,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 84.41,
+        "relation_retention": 0.75,
+        "spr": 0.8537
+      },
+      {
+        "case_id": "qmsum-10",
+        "conformance_violations": 262,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.9559,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 59.58,
+        "relation_retention": 0.75,
+        "spr": 0.9146
+      },
+      {
+        "case_id": "qmsum-11",
+        "conformance_violations": 25,
+        "critical_lost_frac": 0.4,
+        "fact_retention": 0.5,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 97.16,
+        "relation_retention": 0.25,
+        "spr": 0.4559
+      },
+      {
+        "case_id": "qmsum-11",
+        "conformance_violations": 139,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.9464,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 84.41,
+        "relation_retention": 0.75,
+        "spr": 0.9118
+      },
+      {
+        "case_id": "qmsum-11",
+        "conformance_violations": 262,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 59.58,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qmsum-12",
+        "conformance_violations": 15,
+        "critical_lost_frac": 0.3333333333333333,
+        "fact_retention": 0.3043,
+        "level": "skim",
+        "recoverability": 0.5,
+        "reduction_pct": 97.46,
+        "relation_retention": null,
+        "spr": 0.3043
+      },
+      {
+        "case_id": "qmsum-12",
+        "conformance_violations": 95,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.5217,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 89.63,
+        "relation_retention": null,
+        "spr": 0.5217
+      },
+      {
+        "case_id": "qmsum-12",
+        "conformance_violations": 208,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.9565,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 63.09,
+        "relation_retention": null,
+        "spr": 0.9565
+      },
+      {
+        "case_id": "qmsum-13",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 99.27,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-13",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.5714285714285714,
+        "fact_retention": 0.4333,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 94.39,
+        "relation_retention": 0.0,
+        "spr": 0.3611
+      },
+      {
+        "case_id": "qmsum-13",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.42857142857142855,
+        "fact_retention": 0.7333,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 89.6,
+        "relation_retention": 0.0,
+        "spr": 0.6111
+      },
+      {
+        "case_id": "qmsum-14",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 99.55,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-14",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.4,
+        "fact_retention": 0.4375,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 93.46,
+        "relation_retention": 0.0,
+        "spr": 0.3387
+      },
+      {
+        "case_id": "qmsum-14",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7708,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 88.39,
+        "relation_retention": 0.6667,
+        "spr": 0.7581
+      },
+      {
+        "case_id": "qmsum-15",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 99.55,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-15",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.2,
+        "fact_retention": 0.7115,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 93.46,
+        "relation_retention": 0.25,
+        "spr": 0.65
+      },
+      {
+        "case_id": "qmsum-15",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.2,
+        "fact_retention": 0.7885,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 88.39,
+        "relation_retention": 0.25,
+        "spr": 0.7167
+      },
+      {
+        "case_id": "qmsum-16",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 99.27,
+        "relation_retention": null,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-16",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.35,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 94.39,
+        "relation_retention": null,
+        "spr": 0.35
+      },
+      {
+        "case_id": "qmsum-16",
+        "conformance_violations": 2,
+        "critical_lost_frac": 0.6666666666666666,
+        "fact_retention": 0.4,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 89.6,
+        "relation_retention": null,
+        "spr": 0.4
+      },
+      {
+        "case_id": "qmsum-17",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.73,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-17",
+        "conformance_violations": 7,
+        "critical_lost_frac": 0.75,
+        "fact_retention": 0.15,
+        "level": "standard",
+        "recoverability": 0.0,
+        "reduction_pct": 92.49,
+        "relation_retention": 0.0,
+        "spr": 0.1154
+      },
+      {
+        "case_id": "qmsum-17",
+        "conformance_violations": 6,
+        "critical_lost_frac": 0.75,
+        "fact_retention": 0.15,
+        "level": "deep",
+        "recoverability": 0.0,
+        "reduction_pct": 86.57,
+        "relation_retention": 0.0,
+        "spr": 0.1154
+      },
+      {
+        "case_id": "qmsum-18",
+        "conformance_violations": 1,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.95,
+        "relation_retention": null,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-18",
+        "conformance_violations": 4,
+        "critical_lost_frac": 0.5,
+        "fact_retention": 0.3667,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 93.73,
+        "relation_retention": null,
+        "spr": 0.3667
+      },
+      {
+        "case_id": "qmsum-18",
+        "conformance_violations": 7,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7333,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 86.36,
+        "relation_retention": null,
+        "spr": 0.7333
+      },
+      {
+        "case_id": "qmsum-19",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.8888888888888888,
+        "fact_retention": 0.0556,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.3,
+        "relation_retention": 0.0,
+        "spr": 0.05
+      },
+      {
+        "case_id": "qmsum-19",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.1111111111111111,
+        "fact_retention": 0.5556,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 92.69,
+        "relation_retention": 1.0,
+        "spr": 0.6
+      },
+      {
+        "case_id": "qmsum-19",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 1.0,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 88.54,
+        "relation_retention": 1.0,
+        "spr": 1.0
+      },
+      {
+        "case_id": "qmsum-20",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.84,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-20",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.42857142857142855,
+        "fact_retention": 0.2895,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 94.98,
+        "relation_retention": 0.25,
+        "spr": 0.28
+      },
+      {
+        "case_id": "qmsum-20",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.8158,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 92.26,
+        "relation_retention": 0.75,
+        "spr": 0.8
+      },
+      {
+        "case_id": "qmsum-21",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.84,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-21",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7222,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 94.98,
+        "relation_retention": 0.25,
+        "spr": 0.6562
+      },
+      {
+        "case_id": "qmsum-21",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.0,
+        "fact_retention": 0.7593,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 92.26,
+        "relation_retention": 0.25,
+        "spr": 0.6875
+      },
+      {
+        "case_id": "qmsum-22",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.0,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-22",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.16666666666666666,
+        "fact_retention": 0.8529,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 91.72,
+        "relation_retention": 0.0,
+        "spr": 0.725
+      },
+      {
+        "case_id": "qmsum-22",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.16666666666666666,
+        "fact_retention": 0.8529,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 89.29,
+        "relation_retention": 0.0,
+        "spr": 0.725
+      },
+      {
+        "case_id": "qmsum-23",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.54,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-23",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.1111111111111111,
+        "fact_retention": 0.5727,
+        "level": "standard",
+        "recoverability": 1.0,
+        "reduction_pct": 94.17,
+        "relation_retention": 1.0,
+        "spr": 0.6148
+      },
+      {
+        "case_id": "qmsum-23",
+        "conformance_violations": 1,
+        "critical_lost_frac": 0.1111111111111111,
+        "fact_retention": 0.7273,
+        "level": "deep",
+        "recoverability": 1.0,
+        "reduction_pct": 91.88,
+        "relation_retention": 1.0,
+        "spr": 0.7541
+      },
+      {
+        "case_id": "qmsum-24",
+        "conformance_violations": 0,
+        "critical_lost_frac": 1.0,
+        "fact_retention": 0.0,
+        "level": "skim",
+        "recoverability": 0.0,
+        "reduction_pct": 98.79,
+        "relation_retention": 0.0,
+        "spr": 0.0
+      },
+      {
+        "case_id": "qmsum-24",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.8,
+        "fact_retention": 0.0818,
+        "level": "standard",
+        "recoverability": 0.5,
+        "reduction_pct": 94.63,
+        "relation_retention": 0.0,
+        "spr": 0.075
+      },
+      {
+        "case_id": "qmsum-24",
+        "conformance_violations": 0,
+        "critical_lost_frac": 0.3,
+        "fact_retention": 0.4273,
+        "level": "deep",
+        "recoverability": 0.5,
+        "reduction_pct": 91.79,
+        "relation_retention": 0.5,
+        "spr": 0.4333
+      }
+    ]
+  },
+  "h2_correlations_reduction_vs_quality": {
+    "hotpotqa": {
+      "reduction_vs_critical_lost_frac": {
+        "n": 24,
+        "spearman_rho": 0.391
+      },
+      "reduction_vs_fact_retention": {
+        "n": 24,
+        "spearman_rho": -0.829
+      },
+      "reduction_vs_recoverability": {
+        "n": 24,
+        "spearman_rho": -0.461
+      },
+      "reduction_vs_spr": {
+        "n": 24,
+        "spearman_rho": -0.82
+      }
+    },
+    "qasper": {
+      "reduction_vs_critical_lost_frac": {
+        "n": 27,
+        "spearman_rho": 0.736
+      },
+      "reduction_vs_fact_retention": {
+        "n": 30,
+        "spearman_rho": -0.765
+      },
+      "reduction_vs_recoverability": {
+        "n": 30,
+        "spearman_rho": -0.464
+      },
+      "reduction_vs_spr": {
+        "n": 30,
+        "spearman_rho": -0.757
+      }
+    },
+    "qmsum": {
+      "reduction_vs_critical_lost_frac": {
+        "n": 72,
+        "spearman_rho": 0.73
+      },
+      "reduction_vs_fact_retention": {
+        "n": 72,
+        "spearman_rho": -0.843
+      },
+      "reduction_vs_recoverability": {
+        "n": 72,
+        "spearman_rho": -0.651
+      },
+      "reduction_vs_spr": {
+        "n": 72,
+        "spearman_rho": -0.849
+      }
+    }
+  },
+  "h4_critical_loss_vs_recoverability": {
+    "hotpotqa": {
+      "n_cases_total_at_deep": 8,
+      "n_cases_with_any_critical_loss_at_deep": 0,
+      "recoverability_mean_when_critical_loss_present": null,
+      "recoverability_mean_when_no_critical_loss": 1.0
+    },
+    "qasper": {
+      "n_cases_total_at_deep": 10,
+      "n_cases_with_any_critical_loss_at_deep": 1,
+      "recoverability_mean_when_critical_loss_present": 1.0,
+      "recoverability_mean_when_no_critical_loss": 0.9375
+    },
+    "qmsum": {
+      "n_cases_total_at_deep": 24,
+      "n_cases_with_any_critical_loss_at_deep": 11,
+      "recoverability_mean_when_critical_loss_present": 0.5,
+      "recoverability_mean_when_no_critical_loss": 0.9615
+    }
+  },
+  "per_dataset": {
+    "hotpotqa": {
+      "deep": {
+        "conformance_clean_rate": 0.0,
+        "conformance_violation_mean": 41.125,
+        "critical_loss_rate": 0.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 1,
+        "critical_units_total": 17,
+        "extractive_coverage_min2_mean": 0.8749,
+        "fact_retention_mean": 1.0,
+        "recoverability_mean": 1.0,
+        "reduction_pct_mean": 7.4612,
+        "relation_retention_mean": 0.9286,
+        "spr_mean": 0.9792,
+        "unsupported_claims": 0,
+        "unverified_claims": 0,
+        "unweighted_retention_mean": 1.0,
+        "verbatim_node_rate_mean": 0.418
+      },
+      "skim": {
+        "conformance_clean_rate": 0.0,
+        "conformance_violation_mean": 10.125,
+        "critical_loss_rate": 0.1765,
+        "critical_units_lost": 3,
+        "critical_units_partial": 11,
+        "critical_units_total": 17,
+        "extractive_coverage_min2_mean": 0.6066,
+        "fact_retention_mean": 0.5527,
+        "recoverability_mean": 0.625,
+        "reduction_pct_mean": 82.3675,
+        "relation_retention_mean": 0.2857,
+        "spr_mean": 0.4917,
+        "unsupported_claims": 0,
+        "unverified_claims": 0,
+        "unweighted_retention_mean": 0.5833,
+        "verbatim_node_rate_mean": 0.3875
+      },
+      "standard": {
+        "conformance_clean_rate": 0.0,
+        "conformance_violation_mean": 31.125,
+        "critical_loss_rate": 0.0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 1,
+        "critical_units_total": 17,
+        "extractive_coverage_min2_mean": 0.8326,
+        "fact_retention_mean": 1.0,
+        "recoverability_mean": 1.0,
+        "reduction_pct_mean": 25.875,
+        "relation_retention_mean": 0.9286,
+        "spr_mean": 0.9792,
+        "unsupported_claims": 0,
+        "unverified_claims": 0,
+        "unweighted_retention_mean": 1.0,
+        "verbatim_node_rate_mean": 0.2761
+      }
+    },
+    "qasper": {
+      "deep": {
+        "conformance_clean_rate": 0.0,
+        "conformance_violation_mean": 73.4,
+        "critical_loss_rate": 0.0476,
+        "critical_units_lost": 1,
+        "critical_units_partial": 2,
+        "critical_units_total": 21,
+        "extractive_coverage_min2_mean": 0.5839,
+        "fact_retention_mean": 0.9462,
+        "recoverability_mean": 0.9,
+        "reduction_pct_mean": 51.356,
+        "relation_retention_mean": 0.875,
+        "spr_mean": 0.95,
+        "unsupported_claims": 0,
+        "unverified_claims": 1,
+        "unweighted_retention_mean": 0.95,
+        "verbatim_node_rate_mean": 0.2221
+      },
+      "skim": {
+        "conformance_clean_rate": 0.0,
+        "conformance_violation_mean": 16.6,
+        "critical_loss_rate": 0.7143,
+        "critical_units_lost": 15,
+        "critical_units_partial": 2,
+        "critical_units_total": 21,
+        "extractive_coverage_min2_mean": 0.4569,
+        "fact_retention_mean": 0.2267,
+        "recoverability_mean": 0.35,
+        "reduction_pct_mean": 95.048,
+        "relation_retention_mean": 0.25,
+        "spr_mean": 0.2327,
+        "unsupported_claims": 0,
+        "unverified_claims": 0,
+        "unweighted_retention_mean": 0.2417,
+        "verbatim_node_rate_mean": 0.4236
+      },
+      "standard": {
+        "conformance_clean_rate": 0.0,
+        "conformance_violation_mean": 28.8,
+        "critical_loss_rate": 0.0952,
+        "critical_units_lost": 2,
+        "critical_units_partial": 1,
+        "critical_units_total": 21,
+        "extractive_coverage_min2_mean": 0.4847,
+        "fact_retention_mean": 0.8354,
+        "recoverability_mean": 0.9,
+        "reduction_pct_mean": 76.105,
+        "relation_retention_mean": 0.75,
+        "spr_mean": 0.8332,
+        "unsupported_claims": 0,
+        "unverified_claims": 1,
+        "unweighted_retention_mean": 0.8267,
+        "verbatim_node_rate_mean": 0.2522
+      }
+    },
+    "qmsum": {
+      "deep": {
+        "conformance_clean_rate": 0.1667,
+        "conformance_violation_mean": 45.4583,
+        "critical_loss_rate": 0.1583,
+        "critical_units_lost": 22,
+        "critical_units_partial": 24,
+        "critical_units_total": 139,
+        "extractive_coverage_min2_mean": 0.3628,
+        "fact_retention_mean": 0.7159,
+        "recoverability_mean": 0.75,
+        "reduction_pct_mean": 85.8725,
+        "relation_retention_mean": 0.5552,
+        "spr_mean": 0.6912,
+        "unsupported_claims": 3,
+        "unverified_claims": 1,
+        "unweighted_retention_mean": 0.6991,
+        "verbatim_node_rate_mean": 0.0851
+      },
+      "skim": {
+        "conformance_clean_rate": 0.3333,
+        "conformance_violation_mean": 5.0833,
+        "critical_loss_rate": 0.8129,
+        "critical_units_lost": 113,
+        "critical_units_partial": 17,
+        "critical_units_total": 139,
+        "extractive_coverage_min2_mean": 0.2181,
+        "fact_retention_mean": 0.1221,
+        "recoverability_mean": 0.2083,
+        "reduction_pct_mean": 98.5617,
+        "relation_retention_mean": 0.0417,
+        "spr_mean": 0.1077,
+        "unsupported_claims": 2,
+        "unverified_claims": 0,
+        "unweighted_retention_mean": 0.1154,
+        "verbatim_node_rate_mean": 0.0789
+      },
+      "standard": {
+        "conformance_clean_rate": 0.2083,
+        "conformance_violation_mean": 22.125,
+        "critical_loss_rate": 0.3309,
+        "critical_units_lost": 46,
+        "critical_units_partial": 34,
+        "critical_units_total": 139,
+        "extractive_coverage_min2_mean": 0.3479,
+        "fact_retention_mean": 0.5488,
+        "recoverability_mean": 0.625,
+        "reduction_pct_mean": 92.8729,
+        "relation_retention_mean": 0.3746,
+        "spr_mean": 0.518,
+        "unsupported_claims": 3,
+        "unverified_claims": 0,
+        "unweighted_retention_mean": 0.5386,
+        "verbatim_node_rate_mean": 0.0961
+      }
+    }
+  }
+}

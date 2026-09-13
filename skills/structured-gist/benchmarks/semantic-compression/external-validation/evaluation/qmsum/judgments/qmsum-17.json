@@ -1,0 +1,77 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {
+        "answer_given": "Nothing usable — skim.md's 'Energy source' entry is just two bare sub-headers ('Options considered', 'Decision') with no sentences under them, and 'Kryptonite' is never mentioned anywhere in the document, so no cost information can be stated.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": "'Kryptonite' is never named anywhere in the rendering. The 'c. dynamo' bullet ('kinetic, generates energy on movement') describes an earlier, separate turn about a bicycle-style dynamo mechanism, not the later 'throw it' Kryptonite exchange, and neither the battery-elimination point nor the 'find them annoying' opinion appears."},
+      "f2": {"status": "partial", "evidence": "Decision: '...there's no cost data yet for the kinetic/dynamo options.' This captures the underlying substance (cost unknown) but merges it into a generic 'kinetic/dynamo' bucket rather than naming Kryptonite specifically, so the fact's actual referent is lost."},
+      "f3": {"status": "omitted", "evidence": "No mention anywhere of web research, or of finding only relative cost comparisons ('some chips more expensive than others') rather than actual costs."},
+      "f4": {"status": "omitted", "evidence": "No mention that most components are cheap in bulk, that cost wasn't expected to be a problem, or that the chip is probably the most expensive part; the separate 'Chip cost tradeoff' bullet is about the iPod-wheel chip-grade choice, not this claim."}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Neither f3 nor f4 is present, so no causal link between the lack of web cost data and the bulk-cheap/chip-is-priciest fallback reasoning can be stated."}
+    },
+    "hallucinations": [
+      {"text": "Custom parts: case is hard plastic or similar, custom-designed to protect the remote and locator; circuit board is custom-designed each time then mass-printed by the circuit supplier", "source_supported": true},
+      {"text": "Material options: titanium ruled out — only usable in flat cases and too heavy; rubber requires rubber buttons, incompatible with a plastic-button design", "source_supported": true},
+      {"text": "Chip cost tradeoff: the iPod-style scroll wheel needs the pricier 'regular' grade chip instead of the cheapest 'minimal' option", "source_supported": true},
+      {"text": "Market trends priority order: i. fashion and fancy look, ii. technological innovation, iii. ease of use", "source_supported": true},
+      {"text": "Fruit & vegetable theme sourced from Milan/Paris fashion-watchers; open question whether to print the motif or shape the remote like produce", "source_supported": true},
+      {"text": "No-remote-screen resolution: interface shown on the TV since a remote screen would need a pricier advanced chip", "source_supported": true},
+      {"text": "Two-material concept: soft stress-ball-like squishy grip paired with a harder plastic face", "source_supported": true},
+      {"text": "Prototype-and-test plan: build two prototypes, check swap cost with the relevant department, ask users which they prefer", "source_supported": true},
+      {"text": "Decision: batteries are chosen; solar isn't compatible with a rubber case", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The term 'Kryptonite' does not appear anywhere in this rendering. The closest content is the Energy source decision, which states batteries were chosen, solar was ruled out for a rubber case, and 'there's no cost data yet for the kinetic/dynamo options' — but nothing identifies this as referring to Kryptonite specifically, so its cost cannot be answered from this rendering.",
+        "verdict": "unanswerable"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": "'Kryptonite' is never named. 'c. dynamo — Explained by Marketing as a bicycle-style mechanism that stores energy from movement' describes the earlier, separate dynamo turn, not the later 'throw it' Kryptonite exchange or its 'annoying' battery opinion."},
+      "f2": {"status": "partial", "evidence": "Decision: '...no cost data exists yet to properly evaluate the dynamo/kinetic options, though they're noted as an interesting future possibility.' Captures the underlying substance (cost unknown) but merges it into the generic dynamo/kinetic category rather than naming Kryptonite."},
+      "f3": {"status": "omitted", "evidence": "No mention of web research or of finding only relative cost comparisons rather than actual costs."},
+      "f4": {"status": "omitted", "evidence": "No mention that most components are cheap in bulk or not expected to be a cost problem, or that the chip is probably the most expensive part; the separate 'Chip-on-print & case notes' entry is about the chip manufacturing/stamping process, a different claim triggered by a later, unrelated question."}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Neither f3 nor f4 is present, so no causal link can be stated."}
+    },
+    "hallucinations": [
+      {"text": "Custom parts: circuit board is custom-designed each time to route button input to output; once finalized, the design is sent to the circuit supplier to print", "source_supported": true},
+      {"text": "Material options: wood is available but nobody has a strong reason to want it; titanium ruled out — usable only in flat cases and too heavy for a handheld remote", "source_supported": true},
+      {"text": "Chip cost tradeoff: the scroll wheel needs the next-tier 'regular' grade chip; the Industrial Designer notes the cost difference isn't large", "source_supported": true},
+      {"text": "Screen argument: a colleague's own wheel-based remote showed channel feedback on the TV, not the remote itself", "source_supported": true},
+      {"text": "No-remote-screen resolution: a remote-mounted screen would require the pricier advanced chip, one tier above 'regular'", "source_supported": true},
+      {"text": "Resulting form factor: power achievable via a long-press on the central button; a Project Manager suggestion to hide rarely-used buttons under a sliding panel is dropped once the TV-menu approach removes the need", "source_supported": true},
+      {"text": "Swappable fruit/veg face: Marketing frames this as letting the remote's colour match a room's decor, e.g. strawberry-red for a red sitting room", "source_supported": true},
+      {"text": "Open questions: branding placement notes 'they don't have silver fruits and vegetables'", "source_supported": true},
+      {"text": "Chip-on-print & case notes: the control chip is mass-stamped rather than reprogrammable, similar to calculators, keeping per-unit costs low when produced in bulk", "source_supported": true},
+      {"text": "Decision: solar is ruled out for a rubber case, and the dynamo/kinetic options are noted as an interesting future possibility", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "The term 'Kryptonite' does not appear anywhere in this rendering. The Energy source decision states the Industrial Designer picked batteries as the practical default, solar was ruled out for a rubber case, and 'no cost data exists yet to properly evaluate the dynamo/kinetic options' — but nothing in the rendering identifies this as the Kryptonite option, so its cost cannot be answered from this rendering.",
+        "verdict": "unanswerable"
+      }
+    }
+  }
+}

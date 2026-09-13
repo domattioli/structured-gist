@@ -1,0 +1,99 @@
+- **Order of business**
+  - **Ministerial announcements**
+    - none today
+  - **Document tabling**
+    - i. Blair tables the 2019 RCMP report on use of law-enforcement justification provisions (Criminal Code ss. 25)
+    - ii. Sajjan tables the 2018-19 progress report on Canada's national action plan for UN women-peace-security resolutions
+  - **Petitions presented**
+    - a. May — protect pollinators from neonicotinoids; protect southern resident killer whales
+    - b. Genuis — support Bill S-204 against forced organ harvesting/trafficking
+    - c. Cannings — support Motion M-1, a "green new deal"
+    - d. Johns — guaranteed livable basic income for all Canadians
+    - e. Manly — halt Coastal GasLink construction on Wet'suwet'en territory, nation-to-nation talks
+    - f. Lamoureux — Canada advocate for democracy in Guyana's contested election
+  - **Member statements**
+    - roughly 14 MPs give brief local tributes to COVID-19 community responses (Sudbury, Pitt Meadows, Cape Breton–Canso, Richmond Hill, Orléans, Edmonton Mill Woods, Portugal Day, etc.), alongside a few pointed statements: police brutality/Indigenous reconciliation (Brébeuf), high school grads (MacKinnon, Lalonde, Godin), rural internet access (Vis), an Equator Prize for an Indigenous-led protected area (McLeod), inadequate scrutiny of $87B in spending (Falk), anti-Black-racism solidarity (Gazan), and criticism of the PM "locking down" Parliament (DeBellefeuille)
+
+- **Auditor General funding fight**
+  - **Scheer's line of questioning**
+    - i. presses Trudeau to fund the Auditor General fully so she can conduct audits amid rising government spending
+    - ii. cites her office's drop from ~27 to ~14 performance audits per year despite spending nearly doubling
+    - iii. Trudeau repeatedly pivots to the day's disability/CERB/wage-subsidy bill and a proposed debate, without a direct yes/no
+  - **Government's defense**
+    - cites 38 new full-time staff added to the AG's office in 2018-19, contrasted with 60 positions cut under the prior Conservative government
+  - **Kelly's follow-up**
+    - disputes the "cut positions" framing (says the AG chose to reduce her own budget), presses again for full funding, notes a unanimous finance-committee motion to do so; Guilbeault commits only to "work with her if she identifies a need," never a firm number
+
+- **Disability-support bill and CERB flexibility**
+  - **Blanchet (BQ)**
+    - repeatedly asks Trudeau to split the bill so the disability-support portion (part 3) passes immediately while other parts are debated separately; Trudeau says "all or some of the measures" without confirming a split
+  - **Singh (NDP)**
+    - i. presses for a direct CERB-extension commitment for families with no jobs to return to; Trudeau avoids a yes/no, citing "ongoing discussions"
+    - ii. flags the disability-support payment reaches only ~40% of people with disabilities because it's routed through the disability tax credit, excluding many low-income disabled Canadians (veterans, CPP/disability-payment recipients); Trudeau claims it covers "100% of tax-credit recipients" but doesn't address the excluded 60%
+  - **Government's offer**
+    - a same-afternoon bill covering: one-time disability payment, CERB flexibility (four-week to two-week eligibility windows), and expanded wage-subsidy eligibility for more businesses
+
+- **CERB extension pressure**
+  - **Angus (NDP)**
+    - raises constituents (a travel-agency owner, a bartender) with no work to return to as CERB winds down; ministers Qualtrough/Fortier repeat general "we'll be there" language without commitments
+  - **Bragdon / Trudel / Blanchette-Joncas**
+    - press for extension specifically for seasonal/tourism/arts workers who don't qualify for the wage subsidy; Qualtrough/Guilbeault cite existing programs (wage subsidy to Aug 31, $500M arts fund) but give no CERB extension date
+
+- **Economic transparency demand**
+  - **Rayes (CPC)**
+    - presses Morneau repeatedly for an economic update by end of June, noting most provinces and the Parliamentary Budget Officer are calling for one
+  - **Morneau's response**
+    - cites difficulty projecting amid a "dynamic" situation; commits only to continued daily disclosure of investments, not a formal update
+  - **CEBA access gap**
+    - Rayes separately raises that self-employed/dividend-paying businesses still can't access the promised expanded $40,000 CEBA loans a month after the announcement; Fortier cites expanded eligibility criteria and says financial institutions are adapting
+
+- **Business-relief rollout**
+  - **CEBA/sole-proprietor access**
+    - Bragdon raises sole proprietors who use personal (not business) chequing accounts and can't access CEBA despite years in business; Joly points to regional development agencies as a backstop, no fix date given
+  - **PPE shortages (Allison)**
+    - i. cites 10M substandard N95 masks, returned equipment, moldy swabs, under-filled cargo flights, <5% of a glove order received
+    - ii. Bains cites 700+ Canadian companies mobilized to retool for domestic PPE production; Anand disputes some specific figures (says Air Canada reimbursed for a cargo shortfall, and unused masks won't be paid for)
+  - **Energy-sector financing (Cooper)**
+    - EDC/BDC/LEEFF liquidity programs still not accepting applications or finalizing eligibility 54-77 days after announcement; O'Regan cites industry statements calling the programs "positive" and reiterates support for small/medium players (85% of sector jobs) and larger players via LEEFF
+  - **Double-standard question (Allison)**
+    - challenges apparent inconsistency between strict public-health rules for ordinary Canadians and the PM's son attending a large gathering; Hajdu redirects to anti-racism solidarity and defers to local public-health guidance
+
+- **Quebec-specific asks**
+  - **Health transfers (Ste-Marie)**
+    - Quebec's ~$3B estimated COVID health cost vs. ~$115M (under 4%) federal transfer called grossly inadequate; Hajdu cites an initial $500M transfer package and ongoing cooperation, without addressing the gap directly
+  - **Military in long-term care (Brunelle-Duceppe)**
+    - i. confirms 500 soldiers remain in Quebec care homes at Quebec's request, mission set to end Friday
+    - ii. presses for a firm extension commitment; Blair commits to support through mid-September while professional replacements are trained, working with the Red Cross
+  - **Regional economic development (Martel)**
+    - presses for support to Saguenay–Lac-Saint-Jean's forestry, aluminum, tourism and port sectors; Joly cites $71M in new regional funding and ongoing conversations, without addressing the region's specific asks directly
+
+- **Social-equity questions**
+  - **Disability payment reach (May)**
+    - presses whether other measures will reach the ~60% of disabled Canadians excluded by the tax-credit-based $600 payment; Qualtrough lists complementary measures (CERB, student top-up, CCB, GST credit) without a direct commitment to close the gap
+  - **CERB penalty provisions (May)**
+    - challenges a subjective "reasonableness" test in the bill that could jail CERB recipients for refusing work; Qualtrough frames it as accounting for individual circumstances (e.g., immunocompromised workers), aimed at intentional fraud, not honest mistakes
+  - **Anti-Black racism (Chen)**
+    - asks what's being done for Black youth amid the George Floyd killing and Statistics Canada data on disparities; Chagger cites a youth policy and a 56-project Black-youth support program, plus pandemic-specific measures
+  - **Child care (Mathyssen)**
+    - presses for legislated universal child care, noting women bore the pandemic's job losses and added care burden; Hussen cites 40,000 spaces created since 2015 and a $7.5B/11-year commitment for 250,000 more, without addressing universality
+  - **GBA+ / maternity-benefit gap (Sahota)**
+    - presses repeatedly (5+ times) on why no gender-based analysis was done before rollout, leaving pregnant/postpartum women without EI access; Qualtrough repeats that women's needs were "taken into account," without answering whether a GBA+ was actually conducted
+  - **Gay blood-donation ban (Garrison)**
+    - during National Blood Donor Week, presses to lift the ban (twice promised in past campaigns), noting 17+ countries use behavior-based screening instead; Duclos cites "progress" and ongoing work without lifting the ban or supporting Garrison's motion M-41
+
+- **Public-safety/justice items**
+  - **Parole Board video access (Carrie)**
+    - presses repeatedly on why crime victims can only join parole hearings by phone while inmates/staff get video conference, despite an April 29 promise of equal access; Mendicino repeatedly says victims "are able to participate" without confirming video access or hearing counts
+  - **Firearms ban vs. farm funding (Bragdon)**
+    - challenges the May 1 ban on 1,500 firearms as targeting law-abiding hunters/sport shooters, and suggests redirecting the ~$250M buyback budget to agriculture instead; Mendicino defends the ban as targeting guns "meant to kill people" and cites separate farm funding
+
+- **Sector and case-specific support**
+  - **Tourism and wine industry (Cannings, Trudel)**
+    - seasonal tourism businesses ineligible for existing programs need direct support (Joly points to regional development agency backstops); wine industry needs a replacement for an excise-tax exemption likely to be ruled trade-non-compliant (Morneau promises to "come back" with an update)
+  - **Veterans and seniors (Chiu)**
+    - i. veterans face up to a year's wait for medical-cost rate adjustments with no retroactive reimbursement; MacAulay cites $10B invested in veterans' supports generally, without addressing retroactivity
+    - ii. seniors' RRIF minimum withdrawals reduced 25% for 2020 as inflation/market volatility concerns are raised; Schulte cites this plus direct financial support
+  - **Consular case (Martel)**
+    - presses for repatriation of a Canadian (André Gauthier) stranded in the UAE without a passport; Garneau says the file remains active, no timeline given
+  - **China/Hong Kong (Chiu)**
+    - presses for Magnitsky-style sanctions over Hong Kong's national security law and detained Canadians, and for an independent COVID-origin investigation; Garneau reiterates "deep concern" and calls for dialogue, without committing to sanctions

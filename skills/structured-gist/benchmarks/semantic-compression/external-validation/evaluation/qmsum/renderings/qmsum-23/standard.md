@@ -1,0 +1,90 @@
+- **Meeting setup**
+  - **Agenda**
+    - opening, new requirements, three presentations, then close
+  - **Meeting goal**
+    - decide the target group and the remote control's functions, within forty minutes
+
+- **New project requirements**
+  - **No teletext**
+    - board decision: teletext is outdated, internet is replacing it
+  - **TV-only scope**
+    - supporting other devices isn't feasible given the time-to-market constraint
+  - **Target age**
+    - focus on customers younger than forty
+  - **Brand recognizability**
+    - corporate colours and slogan must appear in the product
+
+- **User Interface presentation**
+  - **Remote-control types**
+    - a. multi-function
+    - b. ease-of-use
+  - **Recommendation**
+    - favors the ease-of-use design for user-friendliness and trendiness
+  - **Teletext buttons**
+    - roughly eight buttons drop out now that teletext is excluded
+
+- **Industrial Designer presentation**
+  - **Core mechanism**
+    - the remote sends pulses of infrared light to the TV
+  - **Standard components**
+    - battery, infrared diode, buttons, chip, and circuit board, all in one case
+  - **Infrared choice**
+    - recommended since nearly every TV set already reads infrared
+  - **Lit buttons**
+    - glow-in-the-dark buttons add a fancy touch; power-friendly LEDs keep cost low
+  - **Cost strategy**
+    - a low-cost circuit board frees up savings for fancy lighting effects
+
+- **Marketing presentation**
+  - **Market sizing**
+    - targeting ten million units, aiming to sell roughly forty percent
+  - **Button usage stats**
+    - only about 10% of buttons see real use
+    - a. zap buttons
+    - b. volume button
+    - c. power button
+  - **Lost-remote complaint**
+    - many users can't find their remote; suggests an audio "find me" signal
+
+- **Find-the-remote debate**
+  - **Clapping-trigger idea**
+    - rejected: hard to distinguish a clap from other household sounds
+  - **Base-station idea**
+    - rejected as too costly and self-defeating
+  - **Central report approach**
+    - preferred: the remote reports itself in response to a signal, similar to existing TV "find remote" features
+  - **Assigned follow-up**
+    - Sebastian will investigate a concrete solution
+
+- **Design direction**
+  - **Simplicity choice**
+    - drop most advanced/extra functions, redirect the saved cost into design and lighting
+  - **Control input shape**
+    - a round four-direction push button beats a vulnerable stick
+  - **Ten-digit debate**
+    - contested: UI wants them, Industrial Designer doubts their necessity, Marketing notes younger viewers may want direct entry
+  - **Dual-channel button**
+    - proposed: one button to switch between two favorite channels
+
+- **Voice recognition trade-off**
+  - **Advantages**
+    - a. easy channel change by voice
+    - b. doubles as the find-the-remote trigger
+    - c. lets the circuit board be cheaper
+  - **Disadvantages**
+    - a. costlier and technically more complex
+    - b. shortens battery life
+  - **Power mitigation**
+    - a solar-plus-rechargeable hybrid, or a cheap charging cradle, could offset battery drain cheaply
+  - **Decision deferred**
+    - voice recognition versus ten digits isn't finalized this meeting
+
+- **Wrap-up**
+  - **Decisions locked**
+    - drop teletext, TV-only, target under-40 while staying mindful of older users, simple button layout, fancy lighting
+  - **Assignments**
+    - a. Industrial Designer
+    - b. User Interface Designer
+    - c. Marketing
+  - **Close**
+    - meeting ends for a lunch break, followed by thirty minutes of individual work

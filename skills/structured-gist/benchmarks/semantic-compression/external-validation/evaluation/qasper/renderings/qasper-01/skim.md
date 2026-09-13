@@ -1,0 +1,19 @@
+- **Motivation**
+  - **Gap**
+  - **Goal**
+- **Related work**
+  - **Extractive summarization**
+  - **Abstractive summarization**
+  - **Pre-training**
+- **STEP model**
+  - **Architecture**
+  - **Pre-training tasks**
+  - **Fine-tuning**
+- **Experimental setup**
+  - **Datasets**
+  - **Evaluation**
+- **Results**
+  - **Automatic evaluation**
+  - **Human evaluation**
+- **Conclusion**
+  - jointly pre-training the encoder and decoder with sentence reordering, next sentence generation, and masked document generation improves abstractive summarization over strong pre-trained baselines

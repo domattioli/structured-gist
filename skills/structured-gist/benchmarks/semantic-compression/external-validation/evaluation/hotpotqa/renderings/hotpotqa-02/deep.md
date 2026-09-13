@@ -1,0 +1,134 @@
+- **O-Acetylpsilocin**
+  - **Names**
+    - a. psilacetin
+    - b. 4-acetoxy-DMT
+    - c. 4-AcO-DMT
+  - **Type**
+    - synthetically produced psychoactive drug
+  - **Proposed use**
+    - suggested by David Nichols as a potentially useful alternative to psilocybin for pharmacological studies
+      - both are believed to be prodrugs of psilocin
+  - **Caveat**
+    - some users report its subjective effects differ from those of psilocybin and psilocin
+  - **Chemistry**
+    - the acetylated form of the psilocybin mushroom alkaloid psilocin
+    - a lower homolog of 4-AcO-MET, 4-AcO-DET, 4-AcO-MiPT, and 4-AcO-DiPT
+- **Baeocystin**
+  - **Identity**
+    - psilocybin mushroom alkaloid and analog of psilocybin
+  - **Occurrence**
+    - found as a minor compound in most psilocybin mushrooms
+    - occurs together with psilocybin, norbaeocystin, and psilocin
+  - **Chemistry**
+    - an N-demethylated derivative of psilocybin
+    - a phosphorylated derivative of 4-HO-NMT (4-hydroxy-N-methyltryptamine)
+  - **Structure**
+    - occurs in a zwitterionic form
+- **Psilocybin**
+  - **Identity**
+    - a naturally occurring psychedelic prodrug compound
+    - produced by more than 200 species of mushrooms, collectively "psilocybin mushrooms"
+  - **Most potent sources**
+    - a. genus Psilocybe, e.g. P. azurescens, P. semilanceata, P. cyanescens
+    - b. also isolated from about a dozen other genera
+  - **Mechanism**
+    - as a prodrug, quickly converted by the body to psilocin
+      - psilocin's mind-altering effects are similar, in some aspects, to those of LSD, mescaline, and DMT
+  - **Effects**
+    - a. euphoria
+    - b. visual and mental hallucinations
+    - c. changes in perception
+    - d. a distorted sense of time
+    - e. spiritual experiences
+  - **Possible adverse reactions**
+    - a. nausea
+    - b. panic attacks
+- **Psilocybe cubensis**
+  - **Identity**
+    - species of psychedelic mushroom
+    - principal active compounds are psilocybin and psilocin
+  - **Common names**
+    - shrooms, magic mushrooms, golden tops, cubes, gold caps
+  - **Taxonomy**
+    - belongs to family Hymenogastraceae
+    - previously known as Stropharia cubensis
+  - **Notability**
+    - the most well-known psilocybin mushroom
+      - due to its wide distribution and ease of cultivation
+- **Psilocybe azurescens**
+  - **Identity**
+    - psychedelic mushroom whose main active compounds are psilocybin and psilocin
+  - **Potency**
+    - among the most potent of the tryptamine-bearing mushrooms
+    - contains up to 1.8% psilocybin, 0.5% psilocin, and 0.4% baeocystin by dry weight
+    - averages about 1.1% psilocybin and 0.15% psilocin
+      - makes it one of the strongest mushrooms in the Psilocybe genus
+  - **Taxonomy**
+    - family Hymenogastraceae, order Agaricales
+- **Psilocybin mushroom**
+  - **Identity**
+    - a polyphyletic group of mushrooms
+    - contains the psychedelic compounds psilocybin, psilocin, and baeocystin
+  - **Common names**
+    - magic mushrooms, shrooms
+  - **Use**
+    - used mainly as an entheogen and recreational drug
+  - **Effects**
+    - a. euphoria
+    - b. altered thinking processes
+    - c. closed and open-eye visuals
+    - d. synesthesia
+    - e. an altered sense of time
+    - f. spiritual experiences
+  - **Genera containing them**
+    - Copelandia, Galerina, Gymnopilus, Inocybe, Mycena, Panaeolus, Pholiotina, Pluteus, and Psilocybe
+  - **Scale**
+    - over 100 species classified in the genus Psilocybe
+- **Psilocybe makarorae**
+  - **Identity**
+    - species of psilocybin mushroom in family Strophariaceae
+    - officially described as new to science in 1995
+  - **Distribution**
+    - known only from New Zealand
+    - grows on rotting wood and twigs of southern beeches
+  - **Appearance**
+    - brownish cap with lighter-coloured margins, up to 3.5 cm wide
+    - cap shape conical, bell-shaped, or flat depending on age, with a prominent umbo
+    - whitish stem, does not form a true ring but retains partial-veil remnants
+  - **Distinguishing features**
+    - distinguished from the similar North American Psilocybe caerulipes by microscopic characteristics
+      - presence of cystidia on the gill faces (pleurocystidia)
+      - cheilocystidia (on the gill edges) with more elongated necks
+  - **Chemistry**
+    - based on its bluing reaction to injury, presumed to contain psilocybin and psilocin
+- **Psilocybe**
+  - **Identity**
+    - genus of gilled mushrooms growing worldwide
+    - best known for the species with psychedelic properties
+  - **Active compounds**
+    - psilocybin, psilocin, and baeocystin
+      - the main psychedelic compounds responsible for the psychoactive effects of many species in the genus
+- **Psilocybe medullosa**
+  - **Identity**
+    - species of psychoactive mushroom
+  - **Taxonomic history**
+    - originally described in 1898 as Naucoria medullosa by Italian mycologist Giacomo Bresadola
+    - transferred to Psilocybe in 2007 by Czech mycologist Jan Borovička
+  - **Distribution**
+    - a widespread but rather rare species
+    - found in Europe, growing as a saprobe on woody debris and detritus
+  - **Chemistry**
+    - chemical analysis confirms the presence of psilocin and psilocybin in the fruit bodies
+      - probably at low levels
+  - **Related species**
+    - Psilocybe silvatica is its American sister species
+      - differs by subtle changes in molecular markers (LSU, ITS rDNA, and others)
+- **Psilocybe meridionalis**
+  - **Identity**
+    - psychedelic mushroom with psilocybin and psilocin as main active compounds
+  - **Related species**
+    - closely related to Psilocybe stuntzii
+      - distinguished by smaller spores and the presence of pleurocystidia
+  - **Distribution**
+    - the only species of Psilocybe section Stuntzii found in Mexico
+    - known only from the type location in Neverias, Sierra de Cacoma, Jalisco, Mexico

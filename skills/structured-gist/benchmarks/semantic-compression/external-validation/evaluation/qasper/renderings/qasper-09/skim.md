@@ -1,0 +1,33 @@
+- **Hierarchical Transformers for long document classification**
+  - **Problem**: BERT is limited to short input sequences
+  - **Method**: segment input, feed segments through BERT, aggregate with a recurrent layer (RoBERT) or another Transformer (ToBERT)
+  - **Result**: SOTA on Fisher topic classification, significant gain on CSAT over CNN baseline
+- **Related work**
+  - a. dimensionality-reduction + linear classifiers on BOW
+  - b. hierarchical attention networks, character-level CNNs, arXiv block sampling
+  - c. prior CSAT prediction work (LR, SVM, CNN)
+  - d. BERT for shorter documents; TransformerXL for long sequences
+- **BERT background**
+  - a. self-attention + feed-forward + residual + layer norm
+  - b. masked language modelling and next-sentence prediction pretraining
+  - c. limitations: quadratic self-attention cost, fixed learned positional embeddings
+- **Recurrence over BERT (RoBERT)**
+  - a. split input into overlapping fixed-size segments
+  - b. stack segment representations into an LSTM
+  - c. classify via fully-connected + softmax layers
+- **Transformer over BERT (ToBERT)**
+  - a. replace LSTM with a small 2-layer Transformer over segment representations
+  - b. optional segment-level positional embeddings variant
+- **Experiments**
+  - a. three datasets: CSAT, 20 newsgroups, Fisher
+  - b. segments of 200 tokens, 50-token shift
+  - c. RoBERT trained with Adam; ToBERT trained with BERT-style Adam
+- **Results**
+  - a. fine-tuned BERT features beat pre-trained features
+  - b. ToBERT beats RoBERT on Fisher and 20newsgroups; roughly ties on CSAT
+  - c. ToBERT beats simple averaging/majority-vote baselines, most on longer documents
+  - d. position embeddings help only CSAT
+  - e. ToBERT beats CNN baselines on CSAT and Fisher; near SOTA on 20newsgroups
+- **Conclusions**
+
+  Both RoBERT and ToBERT extend BERT to long-document classification with fast fine-tuning and competitive results, with gains scaling with document length; future work targets end-to-end training on long documents directly.

@@ -1,0 +1,17 @@
+- **Motivation**
+  - **Task**
+  - **Gap**
+- **Related work**
+  - **Prior approaches**
+  - **SemEval 2016**
+- **Data set**
+  - **Targets**
+  - **Construction**
+  - **Composition**
+  - **Release**
+- **Experiments**
+  - **Classifiers**
+  - **Feature comparison**
+  - **Observed pattern**
+- **Conclusion**
+  - the first Turkish and first sports-domain stance-annotated tweet data set, released publicly with SVM baseline results intended as reference points for future work

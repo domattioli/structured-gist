@@ -1,0 +1,94 @@
+- **Petitions presented**
+  - A. perinatal mental health strategy
+    - McPherson urges a national strategy with universal screening, citing 20% of women and 10% of men affected.
+  - B. cystic fibrosis drug pricing
+    - Reid asks the government to rescind Patented Medicine Prices Review Board changes threatening access to Trikafta.
+  - C. family doctor shortage
+    - May's constituents flag nearly five million Canadians without a family doctor, especially in rural areas.
+  - D. firearms legislation concerns
+    - Vis presents opposition to firearms confiscation and the "military-style assault rifle" label.
+  - E. open-net salmon farming ban
+    - Johns tables a Nova Scotia petition to ban open-net fish farming and invest in closed-containment aquaculture.
+  - F. Wet'suwet'en/Coastal GasLink
+    - Manly's petition calls for halting construction and honouring UNDRIP and TRC recommendations.
+  - G. COVID airline refunds
+    - Ratansi's petitioners want airline financial assistance conditioned on refunding cancelled flights.
+- **Ministerial Q&A**
+  - **Benefit-integrity & fraud**
+    - a. CERB fraud memo
+      - Albas presses Trudeau repeatedly on reports that 200,000 flagged applications were told to be ignored; the PM commits only to after-the-fact cleanup, not a direct answer.
+    - b. CRA fraud memo denial
+      - Rayes asks Lebouthillier the same question; she denies CRA told staff to ignore fraud, but repayment rules for returning to work ($500/week vs. full $2,000) stay unclarified.
+    - c. StatsCan data leak
+      - Aboultaif asks whether a pre-market economic data leak is a criminal offence under the Statistics Act; Bains calls it "unacceptable" and "being looked into" without committing to an RCMP referral.
+  - **Corporate aid conditions**
+    - a. tax-haven loophole
+      - Ste-Marie notes the large employer facility bars illegal evasion but not legal use of tax havens; Trudeau says applications are assessed case-by-case.
+    - b. executive pay cap
+      - The Bloc wants a ceiling on CEO compensation tied to large-employer aid; Morneau confirms compensation conditions are coming, with funds barred from dividends or buybacks.
+    - c. green recovery vs. pipeline funding
+      - Simard contrasts a $500M EDC loan to the Coastal GasLink pipeline with the government's green-transition promise; Wilkinson defers to post-crisis planning.
+    - d. forestry vs. oil liquidity parity
+      - Simard notes the same $500M went to one pipeline project as the entire forestry sector received in 2017; O'Regan cites broader multi-year forestry investment.
+  - **Vulnerable populations**
+    - a. CERB gap for spousal-support recipients
+      - Kwan raises a single parent taxed on spousal income but CERB-ineligible; Trudeau acknowledges "gaps" without a fix timeline.
+    - b. homelessness funding
+      - Kwan calls federal shelter funding insufficient and flags a low share of urban-indigenous housing funds for Vancouver East; Trudeau cites a 50%-reduction national housing strategy target.
+    - c. seniors support
+      - Kusie, Sgro, and May press on one-time $300-500 OAS/GIS payments as delayed and insufficient, and on a funding gap for not-for-profit seniors homes with rising costs but no revenue loss.
+    - d. Service Canada mail backlog
+      - Bergen cites a constituent's unopened mail from March; Hussen says he's unaware of a widespread issue and offers to investigate the individual case.
+  - **Long-term care & pharmacare**
+    - a. LTC death toll
+      - Davies notes Canada has the highest share of COVID deaths in long-term care among 14 peer countries and no province meets minimum care standards; Hajdu points to provincial jurisdiction while promising talks on stronger standards.
+    - b. universal pharmacare
+      - Davies links job losses to lost drug coverage; Hajdu says a national pharmacare plan remains part of her mandate.
+  - **Firearms control**
+    - a. farm-rifle ban rationale
+      - Bergen argues the Iver Johnson farm rifle is being wrongly banned; Blair cites police-association support for banning weapons of military-combat design.
+    - b. buyback legislation timeline
+      - May asks for full legislation to be tabled; Blair promises it "at the first opportunity," including the buyback program.
+    - c. retailer impact
+      - Dalton describes a retailer left with unsellable banned-model inventory; Blair reiterates hunting and sport weapons remain legal.
+  - **Indigenous relations**
+    - a. Wet'suwet'en MOU consultation
+      - Schmale says elected chiefs were excluded from rights-and-title talks and want the May 14 signing delayed; Bennett insists engagement must be Wet'suwet'en-led and denies suppressing committee debate.
+  - **Sector-specific COVID relief**
+    - a. fisheries
+      - d'Entremont flags lobster harvesters excluded from the $62.5M processor package and the wage subsidy's family-employee rule, plus an unauthorized gulf-region catch quota that was withdrawn.
+    - b. Trikafta access
+      - d'Entremont notes Vertex still hasn't filed for Canadian approval; Hajdu points to the special access program approving most applicants in the meantime.
+    - c. tourism
+      - d'Entremont and Gourde raise the Bar Harbor-Yarmouth ferry and tourism sector broadly; Joly commits to work through ACOA funding.
+    - d. agriculture
+      - Blois and Gourde ask about dairy and horticulture; Bibeau cites a $77.5M emergency processing fund, $50M surplus-food program, $125M AgriRecovery, and a proposed dairy loan-cap increase to $500M.
+    - e. oil & gas liquidity
+      - Yurdiga presses on delayed liquidity loans; O'Regan confirms measures now cover large-cap producers after small/medium producers (85% of sector jobs) were addressed, with indigenous contractor access and storage-capacity risk still open concerns.
+    - f. dairy processors & CUSMA
+      - Gourde wants import permits granted directly to processors, not multinationals; Freeland points to preserved supply management without directly answering.
+    - g. small business rent & PPE
+      - Dalton raises landlords refusing rent assistance and PPE access for reopening businesses; Morneau and Anand cite provincial jurisdiction and ongoing procurement work.
+  - **Border, trade & consumer costs**
+    - a. Canada-US border restrictions
+      - Masse presses on Windsor-Detroit's high infection rate ahead of the restriction's expiry; Freeland won't confirm what changes are under discussion with the US.
+    - b. interchange/credit-card fees
+      - Ste-Marie and Masse want fees capped near Europe/Australia's 0.3%; Trudeau and Morneau cite bank-negotiated fee cuts instead of legislation.
+    - c. hydroelectric energy corridor
+      - Gourde's proposal to export Quebec hydropower to Ontario gets only a general "continuing to work towards that" from Morneau.
+    - d. spousal-reunification travel
+      - Tochor notes CBSA treats it as discretionary non-essential travel, leaving some families stranded.
+  - **Governance & transparency**
+    - a. Harrington Lake cottage renovation
+      - Tochor calls the NCC-led expansion under-disclosed; Anand says details have been public since 2018.
+    - b. CERB amount rationale
+      - Tochor asks how $2,000 was set; Qualtrough says ESDC and Finance based it jointly on typical lost wages.
+    - c. charity wage-subsidy gap
+      - Tochor flags charities without a payroll number being shut out of the wage subsidy; Hussen cites $350M in separate charity funding rather than a program fix.
+    - d. French-interpretation time fairness
+      - Brunelle-Duceppe says a member lost speaking time to an interpretation outage during a French answer; the chair promises to review the recording.
+  - **Vaccine & science policy**
+    - a. open, non-profit vaccine access
+      - May invokes Salk's unpatented polio vaccine; Bains commits to an "open science" collaborative model while still protecting Canadian IP.
+    - b. profit-motive delay concern
+      - May cites an alleged for-profit delay of a Winnipeg-developed Ebola vaccine; Bains cites Canada's vaccine and DNA-sequencing record without directly addressing the profit-motive critique.

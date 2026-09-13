@@ -1,0 +1,73 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "Marvel One-Shots - series of direct-to-video MCU short films released 2011–2014. The specific producer 'Marvel Studios' is dropped in favor of 'MCU' (the fictional universe, not the studio) — the production-studio link gold states is degraded, though the entry still signals a Marvel connection."},
+      "f2": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Marvel Studios entry ('American motion picture studio behind the MCU, led by Kevin Feige') never mentions the studio produced Marvel One-Shots nor that it was formerly Marvel Films; neither anchor needed for the bridge is stated explicitly."}
+    },
+    "hallucinations": [
+      {"text": "LDS Motion Picture Studios: began as the BYU Motion Picture Studio in 1953, led by Wetzel Whitaker", "source_supported": true},
+      {"text": "Item 47: 2012 Marvel One-Shot short film, a spin-off of 'The Avengers'", "source_supported": true},
+      {"text": "Phil Coulson: MCU character (played by Clark Gregg), a high-ranking S.H.I.E.L.D. agent", "source_supported": true},
+      {"text": "Solax Studios: American motion picture studio founded in 1910 by Alice Guy-Blaché and partners", "source_supported": true},
+      {"text": "Televisa San Ángel: Mexico City film/TV studio, the oldest production facility in Mexico", "source_supported": true},
+      {"text": "Marvel Studios: American motion picture studio behind the MCU, led by Kevin Feige", "source_supported": true},
+      {"text": "Nestor Film Company: defunct company that built Hollywood's first permanent studio (1911)", "source_supported": true},
+      {"text": "All Hail the King: 2014 Marvel One-Shot short film, a spin-off of 'Iron Man 3'", "source_supported": true},
+      {"text": "Charles Evans Jr.: American film producer and documentary director, nephew of Robert Evans", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "unanswerable — nothing in the rendering ties Marvel Studios to a former name 'Marvel Films' or gives any time period", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Marvel One-Shots - Identity - series of direct-to-video Marvel Studios short films set in the MCU, released 2011–2014"},
+      "f2": {"status": "retained", "evidence": "Marvel Studios - Identity - American motion picture studio (originally Marvel Films, 1993–1996), based at The Walt Disney Studios in Burbank, California"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "The Marvel One-Shots entry explicitly names 'Marvel Studios' as producer, and the separately-titled 'Marvel Studios' entry (same proper noun) explicitly states it was formerly Marvel Films from 1993–1996 — a direct coreference bridge via the shared studio name, with no extra inferential leap required."}
+    },
+    "hallucinations": [
+      {"text": "Marvel One-Shots: distribution (Blu-ray/digital special features, not DVD), format (4–15 min, self-contained backstory), impact (two shorts inspired MCU TV series)", "source_supported": true},
+      {"text": "Marvel Studios: ownership (subsidiary of Walt Disney Studios, previously Marvel Entertainment until Disney's Aug 2015 reorganization), leadership (Kevin Feige as president)", "source_supported": true},
+      {"text": "LDS Motion Picture Studios: origin (BYU Motion Picture Studio, 1953, Wetzel Whitaker), original location (the Green Barn)", "source_supported": true},
+      {"text": "Item 47: identity, series role, creators, cast, plot", "source_supported": true},
+      {"text": "Phil Coulson: identity, film appearances, TV/other appearances", "source_supported": true},
+      {"text": "Solax Studios: founding, roles, location, growth", "source_supported": true},
+      {"text": "Televisa San Ángel: identity, facilities housed, notability", "source_supported": true},
+      {"text": "Nestor Film Company: identity, founding, milestone, merger", "source_supported": true},
+      {"text": "All Hail the King: identity, series role, creator, cast, plot", "source_supported": true},
+      {"text": "Charles Evans Jr.: identity, credits, family", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "1993 to 1996", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "Marvel One-Shots - Identity - a series of direct-to-video short films - produced by Marvel Studios, set within the Marvel Cinematic Universe - released from 2011 to 2014"},
+      "f2": {"status": "retained", "evidence": "Marvel Studios - Identity - Marvel Studios, LLC, originally known as Marvel Films from 1993 to 1996 - an American motion picture studio based at The Walt Disney Studios in Burbank, California"}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "Same coreference bridge as standard, stated even more explicitly and verbatim in both entries via the shared 'Marvel Studios' name."}
+    },
+    "hallucinations": [
+      {"text": "Marvel One-Shots: distribution, format, impact", "source_supported": true},
+      {"text": "Marvel Studios: ownership chain (Walt Disney Studios, previously Marvel Entertainment until Aug 2015 reorganization), leadership (Kevin Feige)", "source_supported": true},
+      {"text": "LDS Motion Picture Studios: origin, original location", "source_supported": true},
+      {"text": "Item 47: identity, series role, creators, setting, cast, plot", "source_supported": true},
+      {"text": "Phil Coulson: identity, film appearances, TV appearances, other appearances", "source_supported": true},
+      {"text": "Solax Studios: founding, founders, roles, location, operation, growth", "source_supported": true},
+      {"text": "Televisa San Ángel: identity, history, facilities housed, notability", "source_supported": true},
+      {"text": "Nestor Film Company: identity, founding, milestone, merger, legacy", "source_supported": true},
+      {"text": "All Hail the King: identity, series role, creator, setting, cast, plot", "source_supported": true},
+      {"text": "Charles Evans Jr.: identity, credits, family", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "1993 to 1996", "verdict": "correct"}
+    }
+  }
+}

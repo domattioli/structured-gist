@@ -1,0 +1,139 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "omitted", "evidence": ""},
+      "f19": {"status": "omitted", "evidence": ""},
+      "f20": {"status": "omitted", "evidence": ""},
+      "f21": {"status": "omitted", "evidence": ""},
+      "f22": {"status": "omitted", "evidence": ""},
+      "f23": {"status": "omitted", "evidence": ""},
+      "f24": {"status": "omitted", "evidence": ""},
+      "f25": {"status": "omitted", "evidence": ""},
+      "f26": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Headers show 'Remote-control types', 'Recommendation', 'Control input shape', 'Ten-digit debate', and 'Voice recognition trade-off' as topics, but no content is given for any of them.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Core mechanism: the remote sends pulses of infrared light to the TV\""},
+      "f2": {"status": "partial", "evidence": "\"Remote-control types: a. multi-function\" (named, no elaboration on possibilities/feel)"},
+      "f3": {"status": "partial", "evidence": "\"b. ease-of-use\" (named, no elaboration)"},
+      "f4": {"status": "partial", "evidence": "\"Recommendation: favors the ease-of-use design for user-friendliness and trendiness\" — missing the noted tension with the under-40 target audience"},
+      "f5": {"status": "partial", "evidence": "\"Recommendation...\" + \"Teletext buttons: roughly eight buttons drop out now that teletext is excluded\" — core conclusion and button count present, but the 'multi-function could be combined in' nuance is dropped"},
+      "f6": {"status": "retained", "evidence": "\"Button usage stats: only about 10% of buttons see real use\""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "retained", "evidence": "\"TV-only scope: supporting other devices isn't feasible given the time-to-market constraint\""},
+      "f10": {"status": "retained", "evidence": "\"Simplicity choice: drop most advanced/extra functions, redirect the saved cost into design and lighting\""},
+      "f11": {"status": "partial", "evidence": "\"Simplicity choice: drop most advanced/extra functions, redirect the saved cost into design and lighting\" — cost-saving-for-design captured, 'thinking about the user interface' dropped"},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "omitted", "evidence": ""},
+      "f14": {"status": "retained", "evidence": "\"Control input shape: a round four-direction push button beats a vulnerable stick\""},
+      "f15": {"status": "partial", "evidence": "\"...beats a vulnerable stick\" — vulnerability stated generically, no 'breaks if dropped' detail"},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "partial", "evidence": "\"Ten-digit debate: contested: UI wants them\" — generic, missing 'wouldn't buy it without them' claim"},
+      "f19": {"status": "partial", "evidence": "\"Industrial Designer doubts their necessity\" — bare, no elaboration on regular Dutch-TV users needing ~10 buttons"},
+      "f20": {"status": "partial", "evidence": "\"Disadvantages: a. costlier and technically more complex\" — captures cost/difficulty, omits that younger people would specifically like it"},
+      "f21": {"status": "retained", "evidence": "\"Advantages: a. easy channel change by voice\""},
+      "f22": {"status": "retained", "evidence": "\"Advantages: b. doubles as the find-the-remote trigger\""},
+      "f23": {"status": "retained", "evidence": "\"Decision deferred: voice recognition versus ten digits isn't finalized this meeting\""},
+      "f24": {"status": "retained", "evidence": "\"Advantages: b. doubles as the find-the-remote trigger\""},
+      "f25": {"status": "retained", "evidence": "\"Disadvantages: b. shortens battery life\""},
+      "f26": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"a round four-direction push button beats a vulnerable stick\" states the choice and the reason (vulnerability) in one sentence."},
+      "r2": {"status": "retained", "evidence": "'Voice recognition trade-off' section lists Advantages, Disadvantages, and 'Decision deferred: voice recognition versus ten digits isn't finalized this meeting' — matches the unresolved-tradeoff structure exactly."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: agenda (opening, requirements, three presentations, close); goal to decide target group and functions within forty minutes", "source_supported": true},
+      {"text": "No teletext: board decision — teletext is outdated, internet is replacing it", "source_supported": true},
+      {"text": "Target age: focus on customers younger than forty", "source_supported": true},
+      {"text": "Brand recognizability: corporate colours and slogan must appear in the product", "source_supported": true},
+      {"text": "Industrial Designer presentation: core mechanism (chip -> sender -> receiver via infrared), standard components (battery, infrared diode, buttons, chip, circuit board), infrared recommended since nearly every TV reads it, lit buttons add a fancy touch, low-cost circuit board frees savings for lighting", "source_supported": true},
+      {"text": "Marketing presentation: market sizing (10 million units, ~40% target), button usage breakdown (zap/volume/power), lost-remote complaint suggesting an audio find-me signal", "source_supported": true},
+      {"text": "Find-the-remote debate: clapping-trigger idea rejected (hard to distinguish from other sounds); base-station idea rejected (too costly, self-defeating); central-report approach preferred (remote reports itself on signal, like existing TV find-remote features); Sebastian assigned to investigate", "source_supported": true},
+      {"text": "Voice recognition advantage: lets the circuit board be cheaper (fewer physical buttons needed)", "source_supported": true},
+      {"text": "Power mitigation: solar-plus-rechargeable hybrid or a cheap charging cradle could offset battery drain cheaply", "source_supported": true},
+      {"text": "Dual-channel button: one button to switch between two favorite channels", "source_supported": true},
+      {"text": "Wrap-up: decisions locked (drop teletext, TV-only, target under-40 while mindful of older users, simple layout, fancy lighting); assignments for Industrial Designer, User Interface Designer, Marketing; meeting closes for lunch then thirty minutes of individual work", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "User Interface introduced multi-function and ease-of-use remote types and recommended ease-of-use for its friendliness and trendiness. The team settled on a round four-direction push button (replacing an earlier stick idea) since a stick is vulnerable to breaking. Whether to keep the ten physical number digits or replace them with voice recognition (which also doubles as a find-the-remote trigger but shortens battery life) was left undecided this meeting.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Core mechanism: the remote sends pulses of infrared light to the TV; the user interface connects to a chip, to a sender, to a receiver\""},
+      "f2": {"status": "retained", "evidence": "\"a. multi-function - many possibilities, but lacks a good feel\""},
+      "f3": {"status": "retained", "evidence": "\"b. ease-of-use - fewer possibilities, better feel on the buttons\""},
+      "f4": {"status": "retained", "evidence": "\"Recommendation: favors the ease-of-use design for user-friendliness and trendiness, though some multi-function elements may still fit the under-forty target\""},
+      "f5": {"status": "retained", "evidence": "\"Recommendation...though some multi-function elements may still fit the under-forty target\" + \"Teletext buttons: roughly eight buttons drop out now that teletext is excluded\""},
+      "f6": {"status": "retained", "evidence": "\"Button usage stats: only about 10% of buttons see real use, per the survey\""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "partial", "evidence": "\"a. zap buttons - roughly 1,500 uses\" vs. volume (~4) and power (~1) implies channel selection is by far the most used, but this isn't stated explicitly as 'most important'"},
+      "f9": {"status": "retained", "evidence": "\"TV-only scope: supporting other devices isn't feasible given the time-to-market constraint\""},
+      "f10": {"status": "retained", "evidence": "\"Simplicity choice: drop most advanced/extra functions, keep it simple, redirect the saved cost into design and lighting\""},
+      "f11": {"status": "partial", "evidence": "\"Cost strategy: use a low-cost circuit board...redirect the savings into fancy lighting effects\" — cost-saving-for-design captured, 'thinking about the user interface' still not mentioned"},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "partial", "evidence": "\"a round four-direction push button beats a vulnerable stick, doubling as volume/channel control\" — the 'combines the two most important functions' idea is present but reattributed to the round button rather than the original stick proposal"},
+      "f14": {"status": "retained", "evidence": "\"Control input shape: a round four-direction push button beats a vulnerable stick\""},
+      "f15": {"status": "partial", "evidence": "\"...beats a vulnerable stick\" — vulnerability stated, no 'breaks if dropped' mechanism detail"},
+      "f16": {"status": "omitted", "evidence": ""},
+      "f17": {"status": "omitted", "evidence": ""},
+      "f18": {"status": "retained", "evidence": "\"Industrial Designer doubts their necessity...UI wants the ten digits and wouldn't buy a remote without them\""},
+      "f19": {"status": "partial", "evidence": "\"Industrial Designer doubts their necessity for a normal viewer with about ten channels\" — reframes gold's 'about ten buttons suffice' as 'about ten channels', an imprecise restatement of the same underlying point"},
+      "f20": {"status": "partial", "evidence": "\"Disadvantages: a. costlier and technically more complex\" — captures cost/difficulty; 'younger people would like it' not stated in the voice-recognition section"},
+      "f21": {"status": "retained", "evidence": "\"Advantages: a. easy channel change by voice\""},
+      "f22": {"status": "retained", "evidence": "\"Advantages: b. doubles as the find-the-remote trigger\""},
+      "f23": {"status": "retained", "evidence": "\"Decision deferred: voice recognition versus ten digits isn't finalized this meeting\""},
+      "f24": {"status": "retained", "evidence": "\"Advantages: b. doubles as the find-the-remote trigger\""},
+      "f25": {"status": "retained", "evidence": "\"Disadvantages: b. shortens battery life\""},
+      "f26": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"a round four-direction push button beats a vulnerable stick\" states choice and reason together."},
+      "r2": {"status": "retained", "evidence": "'Voice recognition trade-off' lists Advantages, Disadvantages, and 'Decision deferred: voice recognition versus ten digits isn't finalized this meeting; Sebastian will bring updated cost and feasibility info next time' — matches the unresolved tradeoff exactly."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: agenda and forty-minute goal to decide target group and functions", "source_supported": true},
+      {"text": "No teletext: board decision — outdated, internet replacing it", "source_supported": true},
+      {"text": "Target age under forty; brand recognizability (corporate colours/slogan)", "source_supported": true},
+      {"text": "Industrial Designer presentation: standard components, infrared recommended, lit buttons on pricier remotes add a fancy touch with power-friendly LEDs, low-cost circuit board (biggest cost driver) frees savings for lighting", "source_supported": true},
+      {"text": "Marketing presentation: market sizing (10 million units, ~40%, ~5 million), button usage numbers (zap ~1500, volume ~4, power ~1), lost-remote complaint suggesting an audio find-me signal like a cordless phone", "source_supported": true},
+      {"text": "Find-the-remote debate: clapping-trigger rejected (a movie soundtrack would trigger false beeps); base-station idea rejected (costly, self-defeating since the base station itself could be lost/hard to find); central-report approach preferred, similar to existing TV find-remote features; Sebastian assigned to investigate, flagging added cost/complexity", "source_supported": true},
+      {"text": "Voice recognition advantage: lets the circuit board be cheaper (fewer physical buttons needed on the board)", "source_supported": true},
+      {"text": "Power mitigation: solar-panel-plus-rechargeable hybrid or a cheap charging cradle could offset battery drain at low cost", "source_supported": true},
+      {"text": "Dual-channel button: one button to switch between two favorite channels, e.g. four and six", "source_supported": true},
+      {"text": "Wrap-up: decisions locked, assignments (ID brings components concept and updated voice-recognition info; UI brings the interface concept; Marketing continues trend-watching), meeting closes for lunch then thirty minutes of individual work", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "User Interface presented multi-function (many possibilities, poor feel) and ease-of-use (fewer possibilities, great feel) remote types, recommending ease-of-use for friendliness and trendiness, though some multi-function elements might still suit the under-40 target. The team settled on a round four-direction push button over a vulnerable stick, doubling as the volume/channel control. UI insisted on keeping the ten digit buttons (wouldn't buy a remote without them) while the Industrial Designer doubted their necessity for a typical Dutch-TV viewer; the choice between keeping the ten digits or adopting voice recognition (which also doubles as a find-the-remote trigger but shortens battery life) was left undecided this meeting.", "verdict": "correct"}
+    }
+  }
+}

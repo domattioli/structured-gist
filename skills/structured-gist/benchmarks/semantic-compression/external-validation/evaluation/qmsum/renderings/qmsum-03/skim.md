@@ -1,0 +1,43 @@
+- **DARPA demo status**
+  - **Timeline pressure**
+  - **Two demo pieces**
+  - **Action**
+- **Automatic segmentation shift**
+  - **Current cheat**
+  - **Motivation**
+  - **Follow-on ideas**
+- **IBM digit-beep chunking**
+  - **Design**
+  - **Recording**
+  - **Rollout plan**
+  - **Turnaround estimate**
+- **Transcription pipeline status**
+  - **Progress**
+  - **Staffing**
+  - **Target headcount**
+- **Segmentation ground truth**
+  - **Approach**
+  - **Pre-segmentation value**
+  - **Diff tracking**
+- **Transcript consent policy**
+  - **Milestone**
+  - **Open question**
+  - **Resolution**
+- **Prosody classifier project**
+  - **Data limits**
+  - **Findings so far**
+  - **Interruption sub-study**
+  - **Pitch quality note**
+  - **Next steps**
+- **Front-end recognizer tuning**
+  - **PLP vs MFCC**
+  - **VTLN success**
+  - **Gaussian mixture size**
+  - **Cumulative gains**
+- **DC offset bug**
+  - an old PLP bug meant a DC offset in recordings was never filtered, badly hurting error rate, until a high-pass filter was added — but it was hard-coded for the wrong sampling rate until Dan made the cutoff a parameter.
+- **Tandem next steps**
+  - **Debugging status**
+  - **Feature dimensionality idea**
+  - **Word-error optimization idea**
+  - **Stephane's concatenation trick**

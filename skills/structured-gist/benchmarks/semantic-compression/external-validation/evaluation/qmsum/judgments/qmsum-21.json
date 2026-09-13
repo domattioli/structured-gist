@@ -1,0 +1,110 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "omitted", "evidence": ""},
+      "f11": {"status": "omitted", "evidence": ""},
+      "f12": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Headers show 'Fruit-and-vegetable motif', 'Spongy touch', and 'Materials' as topics under Market trend research / Final concept decision, but no content is given.", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Fruit-and-vegetable motif: a broader fashion trend across clothes, shoes, and furniture that should carry into the remote's design\""},
+      "f2": {"status": "retained", "evidence": "\"...that should carry into the remote's design\""},
+      "f3": {"status": "partial", "evidence": "Priority ranking: i. fancy look and feel, ii. technologically innovative, iii. easy to use (order preserved, no importance scores)"},
+      "f4": {"status": "retained", "evidence": "\"Spongy touch: users want a soft, rubber-like feel...\""},
+      "f5": {"status": "retained", "evidence": "\"...in some tension with a wooden case\""},
+      "f6": {"status": "partial", "evidence": "\"a soft, rubber-like feel\" — states rubber-like, omits the plastic-vs-rubber deliberation"},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "retained", "evidence": "\"Materials: wood body for a natural, fashionable feel...\""},
+      "f11": {"status": "retained", "evidence": "\"...in some tension with a wooden case\" (Spongy touch bullet)"},
+      "f12": {"status": "retained", "evidence": "\"wood body for a natural, fashionable feel, with a spongy rubber touch on the buttons\""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Priority ranking and Fruit-and-vegetable motif are separate bullets under the same section header, but no causal language ties the ranking to the trend choice."},
+      "r2": {"status": "partial", "evidence": "Spongy touch's 'tension with a wooden case' (earlier section) and Materials' 'wood body...with a spongy rubber touch on the buttons' (later section) together show the resolution, but no explicit connecting language links problem to fix."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: three presentations, then decide on the concept and close; User Interface presents first", "source_supported": true},
+      {"text": "Google controller: easy to use combined with sophisticated functions", "source_supported": true},
+      {"text": "Fancy controller: attractive, cute design to stand out among competitors", "source_supported": true},
+      {"text": "Intelligent controller: speech/gesture recognition via cooperation with an outside research institute", "source_supported": true},
+      {"text": "Intelligent-controller concerns: repetitive-strain risk, multi-user reliability, cost/R&D, language/internationalization, microphone placement", "source_supported": true},
+      {"text": "Defense: limited-vocabulary recognition reliable, manual-button fallback available", "source_supported": true},
+      {"text": "Reliability vs. differentiation trade-off between Marketing/PM and UI", "source_supported": true},
+      {"text": "Outcome: group leans against intelligent/gesture controller, favors Google and fancy concepts", "source_supported": true},
+      {"text": "Component design > Case material: a. wood, b. plastic (earlier mention of the topic)", "source_supported": true},
+      {"text": "Component design > Button type: classic pushbutton, LCD/lit buttons, touch screen", "source_supported": true},
+      {"text": "Component design > Power source: recommend combining solar and regular battery, modest added cost", "source_supported": true},
+      {"text": "Component design > Chip level: low-level cheap chips, fits twelve-euro price target", "source_supported": true},
+      {"text": "Final interface concept: merge Google and fancy controllers rather than pursue intelligent/gesture controller", "source_supported": true},
+      {"text": "Energy decision: solar plus battery, and a low-level chip to hit the price target", "source_supported": true},
+      {"text": "Voice-command supplement added as a small optional module, not a full gesture/voice system", "source_supported": true},
+      {"text": "Assignments: Industrial Designer and User Interface vs. Marketing", "source_supported": true},
+      {"text": "Timing: next meeting starts in thirty minutes, coaches send specific instructions", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Marketing pointed to a fruit-and-vegetable fashion trend across clothes, shoes, and furniture that should carry into the remote's design, and noted people want a spongy, rubber-like touch (in tension with a wooden case). The eventual material direction combined a wood body with a spongy rubber touch on the buttons.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"Fruit-and-vegetable motif: a broader fashion trend across clothes, shoes, and furniture that should carry into the remote's design\""},
+      "f2": {"status": "retained", "evidence": "\"...that should carry into the remote's design\""},
+      "f3": {"status": "retained", "evidence": "\"i. fancy look and feel - top priority, scored six of seven; ii. technologically innovative - scored three; iii. easy to use - ranked lowest of the three\""},
+      "f4": {"status": "retained", "evidence": "\"Spongy touch: users want a soft, rubber-like feel...\""},
+      "f5": {"status": "retained", "evidence": "\"...which sits in some tension with a wooden case\""},
+      "f6": {"status": "partial", "evidence": "\"a soft, rubber-like feel\" — states rubber-like, omits the plastic-vs-rubber deliberation"},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "retained", "evidence": "\"Materials: wood body for a natural, fashionable feel...\""},
+      "f11": {"status": "retained", "evidence": "\"...which sits in some tension with a wooden case\" (Spongy touch bullet)"},
+      "f12": {"status": "retained", "evidence": "\"wood body for a natural, fashionable feel, with a spongy rubber touch on the buttons\""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Priority ranking (with scores) and Fruit-and-vegetable motif remain separate bullets; no causal language ties the ranking to the trend choice."},
+      "r2": {"status": "partial", "evidence": "Spongy touch's tension with wooden case and Materials' wood+rubber-button combo together imply the resolution, but no explicit connecting language."}
+    },
+    "hallucinations": [
+      {"text": "Meeting setup: three presentations, then decide on the concept and close; User Interface presents first", "source_supported": true},
+      {"text": "Google controller: easy to use combined with sophisticated functions", "source_supported": true},
+      {"text": "Fancy controller: attractive, cute design to stand out and be memorable among competitors", "source_supported": true},
+      {"text": "Intelligent controller: speech/gesture recognition, requiring cooperation with an outside research institute", "source_supported": true},
+      {"text": "Concerns: repetitive-strain risk, multi-user reliability, cost/R&D (research-institute partnership), language/internationalization, microphone placement", "source_supported": true},
+      {"text": "Defense: limited-vocabulary recognition reliable, voice helps locate a lost remote, manual fallback exists", "source_supported": true},
+      {"text": "Reliability vs. differentiation trade-off between Marketing/PM and UI", "source_supported": true},
+      {"text": "Outcome: leans against intelligent/gesture controller, favors Google and fancy concepts", "source_supported": true},
+      {"text": "Component design > Case material: wood (higher-class, fashionable, costs more, resists spongy trend) vs. plastic (common, resistant, impersonal)", "source_supported": true},
+      {"text": "Component design > Button type: classic pushbutton; LCD/lit buttons (visible in darkness, fashionable, helps locate remote); touch screen (as expensive as LCD)", "source_supported": true},
+      {"text": "Component design > Power source: solar plus regular battery — ecological appeal, works off-grid, modest added cost", "source_supported": true},
+      {"text": "Component design > Chip level: low-level cheap chips, fits twelve-euro price target", "source_supported": true},
+      {"text": "Final interface concept: merge Google and fancy controllers rather than pursue intelligent/gesture controller", "source_supported": true},
+      {"text": "Energy: solar plus battery, and a low-level chip to hit the price target", "source_supported": true},
+      {"text": "Voice-command supplement: small set of simple voice commands (e.g. channel numbers, power) as optional module", "source_supported": true},
+      {"text": "Assignments: Industrial Designer/User Interface build a clay prototype refining spongy button texture and wooden shape; Marketing keeps fruit/veg trend and company color in mind, evaluates the product", "source_supported": true},
+      {"text": "Timing: next meeting starts in thirty minutes; coaches send specific instructions", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Marketing highlighted a fruit-and-vegetable fashion trend (clothes, shoes, furniture) as the top market priority (fancy look and feel scored six of seven) and said it should carry into the remote's design. They also noted people want a soft, rubber-like spongy touch, which is in tension with a wooden case. The eventual material direction combined a wood body (natural, fashionable) with a spongy rubber touch on the buttons.", "verdict": "correct"}
+    }
+  }
+}

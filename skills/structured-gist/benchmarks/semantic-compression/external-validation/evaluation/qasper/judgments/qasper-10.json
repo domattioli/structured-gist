@@ -1,0 +1,67 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "353 real nurse-patient-caregiver telemonitoring conversations, 41 hours"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "partial", "evidence": "... 41 hours"},
+      "f4": {"status": "partial", "evidence": "a. template construction from categorized seed utterances"},
+      "f5": {"status": "retained", "evidence": "b. five-step generation framework: topic selection, template selection, expression enrichment, dialogue-state tracking, sample annotation"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "78.23 EM / 80.18 F1 on Real-World Set", "source_supported": true},
+      {"text": "100k training samples optimal", "source_supported": true},
+      {"text": "removing bi-attention hurts performance; removing pretrained GloVe embeddings hurts performance", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "353 real nurse-patient-caregiver telemonitoring conversations, totaling 41 hours. (Speaker count/breakdown and topic/symptom counts are not given in the skim.)",
+        "verdict": "partial"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "353 conversations, 40 speakers (11 nurses, 16 patients, 13 caregivers)"},
+      "f2": {"status": "retained", "evidence": "ages 38-88, gender-balanced, multiple ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, 11% unspecified)"},
+      "f3": {"status": "retained", "evidence": "11 topics, 9 symptoms, 41 hours total"},
+      "f4": {"status": "retained", "evidence": "each categorized seed utterance is abstracted into a template ... expression pools for the 9 symptoms and 5 attributes are built from seed-data expressions, expanded via synonym replacement"},
+      "f5": {"status": "retained", "evidence": "b. five-step generation framework"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "78.23 EM and 80.18 F1 on the Real-World Set", "source_supported": true},
+      {"text": "bypassing bi-attention and randomly initializing embeddings each degrade performance by 10% (Augmented Set) and 18% (Real-World Set)", "source_supported": true},
+      {"text": "average simulated dialogue length is 184 words, twice the average length of a real-world evaluation-set dialogue", "source_supported": true},
+      {"text": "Base Set (1,264 samples), Augmented Set (1,280 samples), Real-World Set (944 samples)", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "353 conversations from 40 speakers (11 nurses, 16 patients, 13 caregivers); 41 hours total across 11 topics and 9 symptoms.",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "353 conversations from 40 speakers (11 nurses, 16 patients, 13 caregivers)"},
+      "f2": {"status": "retained", "evidence": "speakers aged 38-88, equally distributed across gender, spanning ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, 11% unspecified)"},
+      "f3": {"status": "retained", "evidence": "conversations cover 11 topics (e.g. medication compliance, symptom checking, education, greeting) and 9 symptoms (e.g. chest pain, cough), totaling 41 hours"},
+      "f4": {"status": "retained", "evidence": "construction is divided into two stages: building templates and expression pools via linguistic analysis plus manual verification, then generating simulated training data via a proposed framework"},
+      "f5": {"status": "retained", "evidence": "then generating simulated training data via a proposed framework"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "78.23 EM score and 80.18 F1 score on the Real-World Set", "source_supported": true},
+      {"text": "approved by the SingHealth Centralised Institutional Review Board (Protocol 1556561515)", "source_supported": true},
+      {"text": "respondent role ratio (patient:caregiver) set to 2:1", "source_supported": true},
+      {"text": "funding from Digital Health and Deep Learning (I2R DL2 SSF Project No: A1718g0045) and SERC Project No: A1818g0044", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "353 conversations from 40 speakers (11 nurses, 16 patients, 13 caregivers), ages 38-88, gender-balanced, across several ethnic groups; conversations cover 11 topics and 9 symptoms, totaling 41 hours.",
+        "verdict": "correct"
+      }
+    }
+  }
+}

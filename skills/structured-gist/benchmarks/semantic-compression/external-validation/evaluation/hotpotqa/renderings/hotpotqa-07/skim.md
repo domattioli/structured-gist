@@ -1,0 +1,40 @@
+- **Lawrence A. Gordon**
+  - **EY Professor, U Maryland**
+  - **Co-created Gordon-Loeb Model**
+  - **6,400+ Scholar citations**
+- **Security Management (magazine)**
+  - **ASIS International's monthly magazine**
+  - **Covers terrorism, corporate espionage**
+  - **Based in Alexandria, VA**
+- **Computer security**
+  - **Aka cyber/IT security**
+  - **Protects against theft, damage**
+  - **Protects against service disruption**
+- **Dancing pigs**
+  - **Term for security apathy**
+  - **Users ignore warnings**
+  - **Used by tech experts**
+- **International Computer Security Association**
+  - **Formerly NCSA**
+  - **Mission: security awareness**
+  - **Educates on security products**
+- **Ryan Lackey**
+  - **Co-founded HavenCo, first data haven**
+  - **Speaks at DEF CON, RSA**
+  - **Ran BlueIraq in Iraq/Afghanistan**
+- **Proceedings (magazine)**
+  - **US Naval Institute's magazine**
+  - **Launched 1874, oldest US mag**
+  - **Authors: active, retired, civilian**
+- **IX (magazine)**
+  - **German IT magazine since 1988**
+  - **Published by Heise Verlag**
+  - **Covers programming to security**
+- **Physical Security Professional**
+  - **ASIS board certification**
+  - **Lasts three years**
+  - **Requires 60 CPE credits**
+- **Rainbow Series**
+  - **US govt security standards**
+  - **Published 1980s–1990s**
+  - **Aka Rainbow Books**

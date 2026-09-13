@@ -1,0 +1,21 @@
+- **Motivation**
+  - **Gap**
+  - **Approach**
+  - **Questions**
+- **Related work**
+  - **ISIS strategy research**
+  - **Propaganda content studies**
+  - **Gap addressed**
+  - **Emotion detection background**
+- **Data**
+  - **ISIS corpus**
+  - **Comparison corpus**
+  - **Pre-processing**
+- **Methods**
+  - **Content analysis**
+  - **Emotion detection**
+- **Results**
+  - **Topics**
+  - **Emotions**
+- **Conclusion**
+  - ISIS's women-targeted propaganda and mainstream Catholic material share surface-level topics and an inspire-rather-than-frighten emotional strategy, despite very different vocabulary

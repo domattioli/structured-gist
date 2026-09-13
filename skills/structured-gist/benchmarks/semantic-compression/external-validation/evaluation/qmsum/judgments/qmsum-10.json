@@ -1,0 +1,103 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "\"A. fisheries/lobster harvesters (d'Entremont) — wage subsidy excludes family crews\""},
+      "f4": {"status": "partial", "evidence": "\"direct-support plan still pending\" (A) — captures the pending-support outcome but not Jordan's acknowledgment that the sector's unique structure makes it ineligible for existing supports"},
+      "f5": {"status": "omitted", "evidence": ""},
+      "f6": {"status": "omitted", "evidence": ""},
+      "f7": {"status": "omitted", "evidence": ""},
+      "f8": {"status": "omitted", "evidence": ""},
+      "f9": {"status": "omitted", "evidence": ""},
+      "f10": {"status": "partial", "evidence": "\"B. oil and gas liquidity (Yurdiga) — large-cap measures just announced\" — captures the large-cap announcement but drops the April-17/85%-of-workers completion detail"},
+      "f11": {"status": "partial", "evidence": "\"Indigenous contractors...raised\" (B) — names the topic but drops \"sent contractors home and laid off\" and \"difficult time qualifying\" specifics"},
+      "f12": {"status": "omitted", "evidence": ""},
+      "f13": {"status": "partial", "evidence": "\"storage capacity...raised\" (B) — names the topic but drops the SAGD/\"lost forever\" specifics"},
+      "f14": {"status": "omitted", "evidence": ""},
+      "f15": {"status": "omitted", "evidence": ""},
+      "f16": {"status": "partial", "evidence": "\"BCAP eligibility...raised\" (B) — names the topic but drops the \"company in default\" specifics and that O'Regan's answer didn't address it"},
+      "f17": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""},
+      "r3": {"status": "lost", "evidence": ""},
+      "r4": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [],
+    "questions": {
+      "q1": {"answer_given": "Fishing: family-run fishing operations are excluded from the wage subsidy, and a direct-support plan is still pending. Oil and gas: large-cap liquidity measures were just announced; Indigenous contractors, storage capacity, and BCAP eligibility issues were raised. Tourism, along with several other sectors, was raised without firm commitments.", "verdict": "partial"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"cites a 95% Asian-market loss for lobster exporters and a $62.5M aid package that left harvesters out\""},
+      "f2": {"status": "retained", "evidence": "\"Jordan cites CERB eligibility expansions for seasonal/fishery-EI-exhausted workers and ongoing work with provinces, acknowledges 'more needs to be done'\""},
+      "f3": {"status": "retained", "evidence": "\"notes most fishing enterprises are family-run and thus excluded from the wage subsidy's non-relative-employee rule\""},
+      "f4": {"status": "retained", "evidence": "\"Jordan confirms this gap and says direct-support measures are being developed, 'hopefully' with news soon\""},
+      "f5": {"status": "retained", "evidence": "\"raises an unauthorized quota/catch-limit regulation quietly added to 2021 gulf-region lobster licences without consultation\""},
+      "f6": {"status": "retained", "evidence": "\"Jordan confirms it was not authorized by her and has been removed\""},
+      "f7": {"status": "partial", "evidence": "\"asks about support for the Bar Harbor-Yarmouth ferry if borders stay closed\" — the ferry example survives but the general \"tourism season already deeply affected by COVID-19...festivals/businesses income losses\" framing is dropped"},
+      "f8": {"status": "retained", "evidence": "\"Joly commits to working with him via ACOA funding, no specifics\""},
+      "f9": {"status": "retained", "evidence": "\"liquidity loans promised 48 days earlier still had no applications open\""},
+      "f10": {"status": "retained", "evidence": "\"O'Regan announces new large-cap liquidity measures that day, building on earlier small/medium-business measures (April 17, covering 85% of sector jobs)\""},
+      "f11": {"status": "retained", "evidence": "\"asks about Indigenous oil-and-gas contractors (many laid off) struggling to qualify for aid\""},
+      "f12": {"status": "retained", "evidence": "\"O'Regan cites ~576,000 sector jobs including 11,000 Indigenous workers and general ongoing support\""},
+      "f13": {"status": "retained", "evidence": "\"asks about the risk of permanently losing thermal (SAGD) storage/production capacity if oversupply forces shutdowns\""},
+      "f14": {"status": "retained", "evidence": "\"O'Regan reiterates a worker-focused, industry-collaborative approach without new specifics\""},
+      "f15": {"status": "partial", "evidence": "\"O'Regan doesn't directly answer, reiterating the April 17 and newly announced liquidity measures\" — references the same measures but drops the explicit \"two crises\" (COVID + price war) framing and the BCAP-eligibility-broadening claim"},
+      "f16": {"status": "retained", "evidence": "\"asks whether a company in default to financial institutions still qualifies for the Business Credit Availability Program; O'Regan doesn't directly answer\""},
+      "f17": {"status": "partial", "evidence": "\"cites Bill C-69/C-48 and the COVID/price-war double hit on Alberta's oil sector\" — names the bills but drops the $200B-investment-pushed-out and Alberta-recession figures"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "the 95% loss/harvester question and Jordan's CERB response appear in the same bullet, juxtaposed without an explicit \"because\" connector"},
+      "r2": {"status": "retained", "evidence": "\"raises an unauthorized quota/catch-limit regulation...; Jordan confirms it was not authorized by her and has been removed\""},
+      "r3": {"status": "partial", "evidence": "the CERB/processor support (i) and wage-subsidy exclusion (ii) are separate sequential bullets without an explicit contrastive connector"},
+      "r4": {"status": "retained", "evidence": "\"liquidity loans promised 48 days earlier still had no applications open; O'Regan announces new large-cap liquidity measures that day, building on earlier small/medium-business measures (April 17...)\" — stated in the same bullet as direct response"}
+    },
+    "hallucinations": [
+      {"text": "cites Canadian Association of Petroleum Producers praise that the new measures match what industry \"asked for\" and are needed for \"future competitiveness\"", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Fishing: lobster fishery lost up to 95% of Asian markets; a $62.5M aid package left harvesters out; family-run operations are excluded from the wage subsidy; an unauthorized gulf-region quota addition was removed. Tourism: the Bar Harbor-Yarmouth ferry needs support if borders stay closed; Joly offered ACOA funding. Oil and gas: liquidity loans promised 48 days earlier had no applications open until large-cap measures were announced that day, building on April 17 small/medium-business measures; Indigenous contractors, SAGD storage risk, and BCAP default eligibility were also raised without full answers.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"recalls a 10-weeks-earlier acknowledgment from the Minister of Fisheries that the lobster fishery faced up to 95% Asian-market losses, and a subsequent question (April 28) about harvesters left out of a $62.5M aid package\""},
+      "f2": {"status": "retained", "evidence": "\"Jordan confirms the sector's severe COVID impact, cites the $62.5M processor-focused package and CERB-eligibility changes covering seasonal workers and those who've exhausted fishery EI, acknowledges 'more needs to be done'\""},
+      "f3": {"status": "retained", "evidence": "\"most fishing enterprises are family-run (spouses, sons, uncles, fathers...), making them ineligible for the wage subsidy's non-relative-employee rule, similar to farm enterprises\""},
+      "f4": {"status": "retained", "evidence": "\"Jordan confirms the structural exclusion...and commits to 'direct supports' being developed with cabinet colleagues, promising 'more to say about that very soon'\""},
+      "f5": {"status": "retained", "evidence": "\"an added catch-limitation/quota subsection quietly inserted into 2021 gulf-region lobster-licence conditions without advisory-member or harvester input\""},
+      "f6": {"status": "retained", "evidence": "\"Jordan...confirms it was 'not done under my authorization,' says it was 'removed right away,' and commits that 'they will not happen'\""},
+      "f7": {"status": "partial", "evidence": "\"asks what's planned to help the Bar Harbor (Maine)–Yarmouth (Nova Scotia) ferry, used by tens of thousands of tourists, survive\" — the ferry/tourist-count detail survives but the general \"tourism season already deeply affected...festivals/businesses income losses\" framing is not stated"},
+      "f8": {"status": "retained", "evidence": "\"Joly cites prior conversations with him about Atlantic tourism-sector solutions and new ACOA...funding, offering to keep working with him and sector leaders\""},
+      "f9": {"status": "retained", "evidence": "\"48 days had passed since promised liquidity loans with no applications yet open\""},
+      "f10": {"status": "retained", "evidence": "\"O'Regan announces new large-cap liquidity measures that same day, describing them as completing an April 17 small/medium-business liquidity package (covering 85% of sector jobs)\""},
+      "f11": {"status": "retained", "evidence": "\"Yurdiga notes junior oil companies closing, larger companies laying off contractors — many Indigenous-owned — struggling to qualify for existing aid programs\""},
+      "f12": {"status": "retained", "evidence": "\"O'Regan cites the sector's 576,000 total jobs, including 11,000 Indigenous jobs, particularly in Alberta/Saskatchewan\""},
+      "f13": {"status": "retained", "evidence": "\"Yurdiga raises the risk that if global oversupply persists into summer and production must shut down, thermal projects (e.g., SAGD) could be permanently lost\""},
+      "f14": {"status": "retained", "evidence": "\"O'Regan reiterates a worker- and job-retention-focused, industry/province-collaborative approach\""},
+      "f15": {"status": "retained", "evidence": "\"O'Regan doesn't directly answer, reiterating the dual-crisis framing (COVID plus the global price war) and citing the April 17 and newly announced liquidity measures plus expanded BCAP eligibility generally\""},
+      "f16": {"status": "retained", "evidence": "\"does a mid-sized energy company already in default to financial institutions still qualify for the Business Credit Availability Program? O'Regan doesn't directly answer\""},
+      "f17": {"status": "retained", "evidence": "\"he says pushed over $200B in investment out of Canada and pushed Alberta into recession even before COVID and the international oil price war\""}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "the 95% loss/harvester question (bullet i) and Jordan's CERB/processor response (bullet ii) are sequential bullets without an explicit \"because\" connector"},
+      "r2": {"status": "retained", "evidence": "bullet v (the unauthorized quota issue) is immediately followed by bullet vi (\"Jordan...confirms it was 'not done under my authorization'...'removed right away'...'will not happen'\")"},
+      "r3": {"status": "partial", "evidence": "the CERB/processor response (bullet ii) and the wage-subsidy exclusion (bullet iii) are sequential bullets without an explicit contrastive connector"},
+      "r4": {"status": "retained", "evidence": "bullet i (48-day delay, no applications) is immediately followed by bullet ii (\"O'Regan announces new large-cap liquidity measures that same day, describing them as completing an April 17 small/medium-business liquidity package\")"}
+    },
+    "hallucinations": [
+      {"text": "opens by thanking ministers/officials for support during Fort McMurray flooding", "source_supported": true},
+      {"text": "cites Canadian Association of Petroleum Producers praise that the new measures match what industry \"asked for\" and are needed for \"future competitiveness\"", "source_supported": true},
+      {"text": "question on Indigenous contractors directed to the Minister of Crown-Indigenous Relations but answered by O'Regan", "source_supported": true},
+      {"text": "junior oil companies closing their doors", "source_supported": true},
+      {"text": "the minister had said (on April 28) she was \"looking at sector-specific areas\"", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Fishing: the lobster fishery lost up to 95% of its Asian markets; a $62.5M processor-focused aid package and CERB eligibility expansions helped, but family-run fishing operations remain excluded from the wage subsidy and direct harvester support is still being developed; an unauthorized gulf-region 2021 quota addition was removed. Tourism: the Bar Harbor-Yarmouth ferry, serving tens of thousands of tourists, needs support if borders stay closed; Joly offered ACOA funding and continued collaboration. Oil and gas: liquidity loans promised 48 days earlier had no applications open (compounding Bill C-69/C-48's estimated $200B investment loss and Alberta recession) until new large-cap measures were announced that day, completing April 17 small/medium-business measures (85% of sector jobs); Indigenous contractors, SAGD storage-loss risk, and BCAP default eligibility were raised, with O'Regan citing the sector's two crises (COVID and the global price war) but not directly answering the default-eligibility question.", "verdict": "correct"}
+    }
+  }
+}

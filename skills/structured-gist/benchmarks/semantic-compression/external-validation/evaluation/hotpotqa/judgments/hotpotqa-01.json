@@ -1,0 +1,73 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "retained", "evidence": "American exceptionalism - ideology that the US is uniquely exceptional in democracy and personal freedom"}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": "Neo-libertarianism entry never mentions American exceptionalism, belief in it, or any link to the American-exceptionalism entry; the two ideas appear as unconnected topics."}
+    },
+    "hallucinations": [
+      {"text": "Bézout domain: integral domain (a form of Prüfer domain) where the sum of two principal ideals is itself principal", "source_supported": true},
+      {"text": "Splitting of prime ideals in Galois extensions: interplay between a Galois group and prime-ideal factorization, a core topic in algebraic number theory", "source_supported": true},
+      {"text": "Neo-libertarianism: political philosophy blending libertarian and neoconservative principles (beyond the American-exceptionalism belief itself)", "source_supported": true},
+      {"text": "Japanese aesthetics: ancient Japanese ideals of beauty — wabi, sabi, yūgen", "source_supported": true},
+      {"text": "Massoud Foundation: Afghan non-profit preserving Ahmad Shah Massoud's ideals", "source_supported": true},
+      {"text": "Hong Kong Democratic Foundation: Hong Kong public policy think tank founded in 1989", "source_supported": true},
+      {"text": "Islamic Foundation Bangladesh: Bangladeshi government body disseminating Islamic values", "source_supported": true},
+      {"text": "Mahatma Gandhi National Foundation: Kerala foundation propagating Gandhi's ideals and memory", "source_supported": true},
+      {"text": "Cognitive dissonance: psychological discomfort from holding contradictory beliefs", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "unanswerable — no stated link between Neo-libertarianism and American exceptionalism, so the ideals of democracy/personal freedom can't be tied to Neo-libertarianism's foundation", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "American strand - believes in American exceptionalism and supports interventionist foreign policy"},
+      "f2": {"status": "retained", "evidence": "American exceptionalism - ideology that the United States is unique among nations in a positive way, particularly regarding democracy and personal freedom"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "The Neo-libertarianism entry states the American strand 'believes in American exceptionalism,' and a separate, non-adjacent entry defines American exceptionalism's ideals as democracy and personal freedom. The shared term 'American exceptionalism' lets a reader bridge the two, but no sentence in the rendering itself states or asserts that these ideals are Neo-libertarianism's foundation — the connective claim is reconstructed by the reader, not stated."}
+    },
+    "hallucinations": [
+      {"text": "Neo-libertarianism Definition: combination of libertarian principles with present-day neoconservative principles, prioritizing liberty, free expression, and laissez-faire capitalism", "source_supported": true},
+      {"text": "Neo-libertarianism Divergence: neo-libertarians sympathize with neoconservative ideas on authority, especially military action", "source_supported": true},
+      {"text": "Bézout domain: definition, relation to PID, relation to UFD/GCD domain, named after Étienne Bézout", "source_supported": true},
+      {"text": "Splitting of prime ideals in Galois extensions: core relationship, also known as Hilbert theory, geometric analogue to ramified coverings of Riemann surfaces", "source_supported": true},
+      {"text": "Japanese aesthetics: core ideals (wabi, sabi, yūgen), cultural role (philosophy in West vs. daily life in Japan), scope now includes modern/culturally influenced ideals", "source_supported": true},
+      {"text": "Massoud Foundation: identity, purpose, and background on Ahmad Shah Massoud", "source_supported": true},
+      {"text": "Hong Kong Democratic Foundation: founding in 1989, founders, current form as a think tank chaired by Paul Zimmerman", "source_supported": true},
+      {"text": "Islamic Foundation Bangladesh: identity, mission, structure (head office, divisional/district offices, training/mission centers), leadership", "source_supported": true},
+      {"text": "Mahatma Gandhi National Foundation: founding, aim, mission of collective action for Kerala's vulnerable groups", "source_supported": true},
+      {"text": "Cognitive dissonance: definition and triggers (contradictory action, new contradicting information)", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "democracy and personal freedom", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "American strand - believes in American exceptionalism - supports interventionist policy to maintain America's importance in foreign relations"},
+      "f2": {"status": "retained", "evidence": "American exceptionalism - ideology that the United States is unique among nations in a positive way, particularly with respect to its ideals of democracy and personal freedom"}
+    },
+    "relations": {
+      "r1": {"status": "partial", "evidence": "Same structure as standard: Neo-libertarianism's American strand 'believes in American exceptionalism' and a separate entry defines American exceptionalism's ideals as democracy/personal freedom, sharing the exact term as the only link. No explicit sentence asserts these ideals are Neo-libertarianism's foundation."}
+    },
+    "hallucinations": [
+      {"text": "Neo-libertarianism Core values: liberty as main idea, free expression, freedom of choice/social freedoms, laissez-faire capitalism, critical of authority", "source_supported": true},
+      {"text": "Neo-libertarianism Divergence: differs from libertarians on government oversight; many sympathize with neoconservative ideas on authority, especially military action", "source_supported": true},
+      {"text": "Bézout domain: definition, relation to PID, relation to UFD/GCD domain, theoretical standing, named after Étienne Bézout", "source_supported": true},
+      {"text": "Splitting of prime ideals in Galois extensions: core relationship, also known as Hilbert theory, geometric analogue, historical note that the analogue predates Hilbert", "source_supported": true},
+      {"text": "Japanese aesthetics: study history (began ~200 years ago in the West), core ideals (wabi/sabi/yūgen), cultural role, East/West distinction, current scope", "source_supported": true},
+      {"text": "Massoud Foundation: identity, founding in Kabul 2003, purpose, background on Massoud including assassination two days before 9/11", "source_supported": true},
+      {"text": "Hong Kong Democratic Foundation: identity, founding 27 Oct 1989, founders (Jimmy McGregor, Dr Leong Che-hung), evolution to think tank, current leadership", "source_supported": true},
+      {"text": "Islamic Foundation Bangladesh: identity, mission, structure detail, leadership", "source_supported": true},
+      {"text": "Mahatma Gandhi National Foundation: founding, aim, mission, means (educational training, health/environment protection, living conditions, family/community)", "source_supported": true},
+      {"text": "Cognitive dissonance: field, definition, triggers", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "democracy and personal freedom", "verdict": "correct"}
+    }
+  }
+}

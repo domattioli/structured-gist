@@ -1,0 +1,68 @@
+- **Feature slide recap**
+  - **Features listed**
+    - a. prosody
+    - b. discourse
+    - c. verb choice
+    - d. landmark-iness
+    - e. nice walls
+    - f. context
+    - g. time of day
+  - **Landmark-iness vs saliency**
+- **Belief-net rationale**
+  - **Flat structure rejected**
+    - an initial design pointed every feature directly at the output node, but with N features the probability table needed is exponential in N, making it a pain to hand-set and unworkable for later learning.
+  - **Middle layer added**
+    - a hidden middle layer of feature-derived concepts (tourist vs errand, in-a-hurry, final destination, closed) sits between the raw extracted features and the output, so the model infers intention rather than wiring every feature straight to it.
+  - **Output modes**
+    - the belief-net's output node takes one of three modes — Vista, Tango, or Enter — inferred probabilistically from the middle layer.
+- **JavaBayes demo**
+  - **Evidence set**
+    - a. admission fee discussed — false
+    - b. nice walls — true
+    - c. time of day — night
+  - **Query result**
+    - querying the mode node with that evidence gives a distribution slightly biased toward Tango.
+  - **Earlier failure**
+    - the previous day's demo got stuck always returning Tango regardless of evidence, attributed to hand-tuned rather than learned probabilities.
+- **Enterable node test**
+  - **Motivating case**
+    - a statue and a celebrity's house can both be physically enterable, but a statue can never be entered while the house technically could be, though visitors usually aren't allowed in — prompting a distinction between "has a door" and "publicly enterable."
+  - **Node added**
+    - the group adds a binary "has door" node live in JavaBayes to see how it wires into the net.
+  - **Tooling glitch**
+- **JavaBayes tool assessment**
+  - **Pros**
+    - a. free
+    - b. has a GUI
+  - **Cons**
+    - a. interface is clunky
+    - b. unclear if it does learning
+  - **Underlying format**
+    - the network is stored as a text file listing probability tables as ordered number lists, hard to follow; the group considers scripting a friendlier way to edit them and flags Srini as the person to ask, including about a possible XML Bayes-net format.
+- **Middle-layer regions plan**
+  - **Problem**
+    - adding more direct links from individual discourse cues would make the network "spider-web-ish" and hard to hand-edit as more cues are added.
+  - **Proposed fix**
+    - group observed cues into separate regions (discourse cues, syntactic info, context), each with its own small hidden middle layer, feeding into the shared task-based middle layer instead of every cue pointing there directly.
+  - **Worked example**
+- **SmartKom discourse model**
+  - **Role**
+    - SmartKom's discourse-history module is the system's memory of the whole dialogue — who said what, what was shown on screen — and it resolves anaphora and fills in information omitted in later turns.
+  - **Query interface**
+    - the middle layer can query the discourse model for whether a cue was discussed within some configurable lookback depth, which the group agrees to bound for practicality.
+- **Plan-recognition idea**
+  - Grad D suggests treating discourse cues as evidence for an underlying task plan the person is following, illustrated by inferring "Track seven" just from a traveler saying "New York" at a ticket counter — a cue can support a whole multi-step plan, not just one node.
+- **Ad-hoc probabilities**
+  - the group acknowledges all current probabilities are hand-guessed rather than learned from data, with the table already running to over a hundred entries and some combinations (e.g. "want to enter" + "closed" + "night") nonsensical; real data is needed to fix this.
+- **Next steps**
+  - **Ask Srini**
+    - ask Srini about alternative Bayes-net packages and the possible XML format, likely at Wednesday's meeting.
+  - **Segment regions**
+    - over the coming week, the three of them will segment the observed features into the proposed regions and sketch features/middle layers for each.
+- **Data collection plan**
+  - **Wizard**
+    - Fey has agreed to act as the wizard and help recruit/organize subjects; a trial run is planned for Friday afternoon to check she can handle the role's spontaneous, creative demands.
+  - **First subject**
+    - Liz volunteered to be the first test subject; the group favors an unfamiliar subject over an insider for a more realistic, less deliberately-adversarial test of the wizard.
+  - **Rationale**
+    - existing Munich data is too simple with no metaphor, so the new collection aims to elicit richer, less-constrained language while including some clearly-labeled navigational tasks to keep the resulting corpus labelable, and to compare human-computer vs human-human pragmatics.

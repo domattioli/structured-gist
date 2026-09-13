@@ -1,0 +1,52 @@
+- **Motivation**
+  - **Gap**
+    - MRC models need large amounts of labeled data and are fragile to injected noise, unlike humans, because they only use the given passage-question pair, not general knowledge
+  - **Approach**
+    - explicitly extract inter-word semantic connections from WordNet and use them, understandably and controllably, inside an MRC model's attention mechanism, rather than encoding external knowledge implicitly into vector space
+- **Data enrichment method**
+  - **Semantic relation chain**
+    - a concatenated sequence of WordNet semantic relations (16 types, e.g. hypernym, holonym) linking one synset to another; the number of relations is its hop count
+  - **Extended synsets**
+    - all synsets reachable from a word's own synsets within a maximum hop count k, which bounds how far the chain can extend
+  - **Extraction**
+    - for each word, the positions of semantically connected passage words are recorded as general knowledge; k is tuned by cross-validation, since larger k adds more connections but also more noise
+- **KAR model**
+  - **Architecture**
+    - i. lexicon embedding layer — GloVe plus CNN character embeddings
+    - ii. context embedding layer — shared BiLSTM
+    - iii. coarse memory layer — knowledge aided mutual attention, then a BiLSTM
+    - iv. refined memory layer — knowledge aided self attention, then a BiLSTM
+    - v. answer span prediction layer
+  - **Knowledge aided mutual attention**
+    - each word's context embedding is enhanced with a summary of its semantically connected passage words before passage-question similarity is computed
+  - **Knowledge aided self attention**
+    - fuses each passage word's coarse memory only with the coarse memories of the passage words it is semantically connected to, instead of the whole passage
+- **Related work**
+  - **Attention mechanisms**
+    - multi-round alignment avoids attention redundancy/deficiency; mutual attention can also serve as a skip-connector densely linking pairwise layers
+  - **Data augmentation**
+    - generating questions from unlabeled text, or paraphrasing training examples via back-translation, both substantially boost performance
+  - **Multi-step reasoning**
+    - re-reading a document multiple times, with step count set by reinforcement learning or fixed with stochastic dropout to avoid step bias
+  - **Linguistic embeddings**
+    - POS/NER embeddings or parse-tree-based structural embeddings added to the input layer
+  - **Transfer learning**
+    - feature-based or fine-tuning-based transfer from word- or sentence-level models pre-trained on large corpora
+- **Experiments**
+  - **Dataset**
+    - SQuAD 1.1, plus the AddSent and AddOneSent adversarial sets, which insert misleading or unrelated sentences to test robustness to noise
+  - **Setup**
+    - spaCy tokenization, WordNet 3.0, TensorFlow; hop count k=3, hidden dimensionality 600, Adam optimizer, batch size 32
+- **Results**
+  - **Performance & robustness**
+    - a. on par with state-of-the-art single MRC models on the development and test sets
+    - b. outperforms them by a large margin on both adversarial sets
+  - **Ablations**
+    - a. performance rises with hop count k up to 3, then drops as more (noisier) connections are added
+    - b. replacing knowledge aided attention with plain mutual/self attention drops F1 on the dev set and both adversarial sets
+    - c. after just one epoch, KAR already beats the final performance of strong baselines DCN and BiDAF
+    - d. KAR's explicit approach outperforms a prior implicit-encoding approach to using external knowledge by a large margin
+  - **Low-data regime**
+    - trained on small subsets of the training questions, KAR outperforms SAN and QANet by a large margin on both the development set and the adversarial sets
+- **Conclusion**
+  - explicitly injecting WordNet-derived general knowledge into an MRC model's attention improves robustness to noise and reduces data hunger without sacrificing accuracy; future work plans to use larger knowledge bases such as ConceptNet and Freebase

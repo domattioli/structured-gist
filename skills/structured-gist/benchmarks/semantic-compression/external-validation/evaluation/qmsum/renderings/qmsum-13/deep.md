@@ -1,0 +1,121 @@
+- **ADEW/WLGA panel**
+  - **Exclusion causes**
+    - a. challenging behaviour
+      - Prevalence is rising system-wide across Wales, straining school and PRU capacity alike.
+    - b. undiagnosed ASD/ALN
+      - What presents as difficult behaviour is often an unmet additional learning need; Swansea's referrals rose roughly fourfold in five to six years, and the system hasn't caught up.
+  - **Support strategies**
+    - a. tiered behaviour and well-being strategy
+      - Built with schools to give universal provision plus a staged escalation for learners needing more specialist help.
+    - b. uneven rollout
+      - Most authorities are moving in the same direction, but there's a lag bringing everyone to a consistent standard.
+  - **Accountability impact**
+    - a. capped 9 measure
+      - Too early to confirm improvement, though Torfaen reports working toward it via a broader, more balanced curriculum.
+    - b. progression framing
+      - Directors stress to schools and government that a learner's future progression matters more than hitting a fixed attainment level; Estyn has shifted its own messaging to match.
+  - **Family engagement**
+    - a. team-around-the-family approach
+      - Brings health, social care, and education together, on the premise that in-school behaviour usually reflects a harder home situation.
+    - b. ACEs/trauma-informed training
+      - Widespread staff training on adverse childhood experiences now gives teachers more context for behaviour than the profession had in the past.
+  - **Funding pressures**
+    - a. new ALN Act
+      - Expected to add system pressure; England's parallel legislation saw ALN funding come under sustained tribunal pressure, to the point authorities nearly stopped contesting them.
+    - b. delegation levels
+      - Already high, with agreements to devolve as much money as possible to schools directly — not seen as a driver of exclusions.
+    - c. in-year funding variation
+      - Provision needs shift term to term and year to year, but funding is set once a year, so unplanned pupil moves create pressure with no spare budget to draw on.
+    - d. funding-follows-the-pupil lag
+      - When a child moves out of school into a PRU, the funding stays with the school until the next annual allocation, leaving a gap PRUs must absorb.
+  - **Collaborative models**
+    - a. PRU/EOTAS networking
+      - National and regional networks, conferences, and joint visits have improved practice-sharing between PRU and mainstream staff.
+    - b. Swansea devolved funding
+      - Money is "devolved," not merely delegated, to secondary schools against a monitored action plan, giving them resource to manage the process themselves.
+    - c. Oxfordshire model
+      - A local authority handed PRU money to secondary schools under a partnership agreement so they couldn't keep moving learners between schools; it started well, though long-term outcomes are unknown.
+  - **Reintegration & transition**
+    - a. staged reintegration
+      - Part-time timetables ease learners back into school, with support continuing (and only gradually reduced) after full return.
+    - b. harder at key stage 4
+      - The most challenging, oldest learners are far harder to reintegrate into mainstream; focus shifts instead to further education and colleges.
+    - c. managed moves
+      - A "second chance" move to a new school, with a cooling-off period and learner voice built in, since it doesn't always work out.
+  - **Provider quality assurance**
+    - a. safeguarding-first commissioning
+      - Safeguarding drives which providers are approved, balanced against not discouraging providers from coming forward at all.
+    - b. home tuition access limits
+      - Authorities can't quality-assure home tuition beyond what families choose to let them see, since access into the home is restricted.
+    - c. LA-employed home tutors
+      - Authorities use their own staff, not agency staff, for home or medical tuition, giving at least direct employment oversight.
+    - d. Torfaen curriculum panel review
+      - Senior leaders are reviewing each school's alternative provision because arrangements that worked before are no longer fitting learner complexity or curriculum needs.
+  - **Registration change concerns**
+    - WLGA and ADEW worry that changes to EOTAS pupil registration could disrupt data, funding, and joint-working arrangements — specifically the funding-follows-the-learner principle and the shared ownership that stops schools quietly off-rolling GCSE-age pupils from their data.
+  - **Curriculum consistency**
+    - a. PRU curriculum
+      - Broad, balanced, inspected, and under local authority control — the panel is content here.
+    - b. home tuition / private provision
+      - Quality assurance is far weaker once learners leave the PRU system; regional collaboration on the new curriculum is developing but not yet consistent.
+  - **ALN support gaps**
+    - ALN needs should follow learners into EOTAS, but support becomes increasingly hard to guarantee outside the tightly regulated PRU sector; Swansea wants a dedicated educational psychologist for its EOTAS learners but lacks the capacity.
+  - **Staff capacity & training**
+    - a. specialist staff retention
+      - Expertise is niche and slow to rebuild once experienced staff leave or retire; it's "more than just one person," it's a whole training package.
+    - b. teacher training pipeline
+      - Newly qualified teachers currently can't work in EOTAS settings; the panel wants exposure built into initial teacher training and ongoing professional development, in both directions between PRU and mainstream staff.
+    - c. limited but improving access
+      - Professional development for small EOTAS staff cohorts is still limited, though networks and conferences are helping.
+  - **Mental health access**
+    - Access to CAMHS varies across the three health boards in one region alone; a new designated education clinical lead officer (DECLO) role should strengthen partnership, alongside a universal well-being strategy including counselling, but current support "hasn't been great."
+  - **Rural transport**
+    - Wide rural regions like Powys (north to south) require long EOTAS travel distances even with provision in both halves of the county; more compact authorities such as Torfaen see far less of an issue.
+- **Samaritans/Mind Cymru panel**
+  - **Data gaps on causes**
+    - Official exclusion statistics are reductionist (e.g. "persistent disruptive behaviour") and don't surface the underlying causes already documented in schools' own paper trails, which rarely reach a higher level of analysis.
+  - **Younger children trend**
+    - Exclusions among younger children have risen substantially and are "very concerning," but the evidence is largely anecdotal and the reasons primary schools are excluding more aren't yet understood.
+  - **Off-rolling patterns**
+    - a. year 10 to 11
+      - Around 4% of pupils are off-rolled, a sharp spike tied to end-of-key-stage-4 accountability measures.
+    - b. other secondary years
+      - A steadier 1.5-2% (roughly 500-600 pupils a cohort) are off-rolled every year, a normalised baseline whose causes need qualitative, not just quantitative, investigation.
+  - **Accountability & incentives**
+    - Measuring schools on academic outcomes alone, not the journey or well-being effort invested in vulnerable pupils, discourages retaining challenging or low-attaining pupils; the loneliness and isolation strategy commits to rewarding inclusive schools and reducing the incentive to remove pupils.
+  - **Whole-school support response**
+    - a. compassionate, whole-school response
+      - Samaritans' report calls for confident, informed responses to distress from everyone in a school, since a young person's only safe place may be the school itself.
+    - b. nine recommendations
+      - Include recognising ACEs, training teachers, learning from what works, listening to pupil voice, and building emotional-literacy skills, statutory in the new curriculum.
+  - **Diagnosis vs support funding**
+    - Diagnosis alone has little value without matching support in place, given up to half a classroom may carry some additional learning need; the deeper priority is an inclusive school regardless of diagnosis.
+  - **ACEs & trauma awareness**
+    - Trauma-informed practice is spreading (one governor's school became fully trauma-informed) but inconsistently across Wales; the new curriculum's health-and-well-being area is seen as the vehicle to embed emotional and mental well-being statutorily.
+  - **Loneliness-suicide link**
+    - Samaritans' unpublished research on middle-aged men links childhood exclusion and peer-group isolation to elevated later-life suicide risk, tying belongingness to basic human functioning and framing early intervention as prevention.
+  - **Labelling as "naughty"**
+    - a. undiagnosed needs mislabelled
+      - Children with undiagnosed communication or learning needs get labelled "naughty," especially when they otherwise seem bright.
+    - b. disclosure barrier
+      - When the same staff member handles both pastoral care and discipline, pupils fear disclosure will be dismissed as an excuse for bad behaviour rather than taken seriously.
+  - **Welsh-medium provision gap**
+    - Estyn data shows fewer off-rollings from Welsh-medium schools, possibly reflecting socio-economic profile (free-school-meal eligibility correlates with exclusion) or a lack of Welsh-medium EOTAS provision itself — an area nobody has specifically studied, suspected to vary informally by local authority.
+  - **Delay entering EOTAS**
+    - Time spent outside any education setting compounds existing inequality and vulnerability and heightens exposure to exploitation such as county-lines drug gangs, echoed in a Public Health Wales/Swansea University review of 33 youth suicides where young people had "slipped through" education, training, and employment systems entirely.
+  - **Individual/home tuition concerns**
+    - No central data exists on how many children are home-schooled, raising concern that some are "hidden" or invisible to services; academic tuition alone can address the curriculum but not the peer-isolation harms tied to the same men's research on later-life suicide risk.
+  - **Post-exclusion responsibility**
+    - a. LEA responsibility
+      - Formal responsibility sits with the local education authority, but excluded children touch several institutions at once, so services need to be interwoven around them.
+    - b. corporate-parenting-style model
+      - The panel suggests treating this vulnerable group the way corporate parenting treats looked-after children.
+    - c. parental information gap
+      - Parents can't advocate for their child's entitlements if they aren't given clear information about what provision the child is owed.
+  - **Closing recommendations**
+    - a. make whole-school approach statutory
+      - So every school has the same baseline of knowledge and ethos, not just those with a proactive senior leadership team.
+    - b. embed mental-health training in initial teacher education
+      - Rather than leaving it as optional supplementary training.
+    - c. ensure the new curriculum covers EOTAS/PRU and Welsh-medium provision
+      - Including how local consortia will implement it and how initial/newly-qualified/experienced teachers alike will be brought up to speed.

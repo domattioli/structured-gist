@@ -1,0 +1,80 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "partial", "evidence": "D. self-limit ~10 jobs; P-make `-J` caps concurrency (states the ~10-job limit but omits the rationale that saturating the network would keep other people's jobs from running promptly)"},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""},
+      "f4": {"status": "omitted", "evidence": ""},
+      "f5": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {
+      "r1": {"status": "lost", "evidence": ""},
+      "r2": {"status": "lost", "evidence": ""}
+    },
+    "hallucinations": [
+      {"text": "~12 new Sun Blade-100s ordered", "source_supported": true},
+      {"text": "run-command finds fastest free machine", "source_supported": true},
+      {"text": "machine attributes target OS/speed/no-evict", "source_supported": true},
+      {"text": "P-make `-J` caps concurrency", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The skim rendering says nothing about a workshop; it only lists compute-farm setup and job-limiting guidance (~10 jobs, P-make -J).", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"run-command doesn't coordinate across jobs, so a script that needed to run, say, a thousand sub-jobs could in principle fire them all at once and saturate the shared network — users should self-limit to roughly ten simultaneous jobs, or write custom throttling logic to cap concurrency\""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "\"Professor C recalls a past workshop (Rutgers or Hopkins) where 25 users all fired jobs at 25 shared machines via a P-make-like tool\""},
+      "f4": {"status": "retained", "evidence": "\"25 users all fired jobs at 25 shared machines\""},
+      "f5": {"status": "retained", "evidence": "\"ended up less efficient than just using their own machines\""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"...25 users all fired jobs at 25 shared machines via a P-make-like tool and ended up less efficient than just using their own machines\" — cause and effect stated in the same sentence"},
+      "r2": {"status": "retained", "evidence": "the anecdote is placed directly under \"Parallel-job etiquette\" (the same heading as PhD F's self-limit warning) and explicitly labeled \"a cautionary anecdote for over-parallelizing\""}
+    },
+    "hallucinations": [
+      {"text": "about a dozen Sun Blade-100s ordered to build out a shared compute farm; arrival timing uncertain", "source_supported": true},
+      {"text": "run-command built on P-make and Customs, set up by Andreas with utilities so users don't have to hand-write P-make scripts", "source_supported": true},
+      {"text": "run-command finds the fastest currently available machine, exports the job (using `export`), duplicates the caller's environment; testable with `run-command ls`", "source_supported": true},
+      {"text": "machine attributes (OS, speed, memory, machine name, \"no-evict\") that a job can target", "source_supported": true},
+      {"text": "if the requested machine is busy, the job queues and runs when the resource frees up", "source_supported": true},
+      {"text": "a non-\"no-evict\" job gets evicted and auto-restarted elsewhere when the machine owner returns and starts typing; unclear whether remote/SSH activity triggers eviction the same way", "source_supported": true},
+      {"text": "Andreas and PhD F are currently the main users of run-command, and the SRI recognizer already has P-make/Customs integration built in", "source_supported": true},
+      {"text": "PhD F is identified by the name \"Chuck\"", "source_supported": false},
+      {"text": "a training-vs-recognition job collision recently forced PhD F to back off after Andreas complained his jobs weren't running", "source_supported": true},
+      {"text": "P-make tracks the whole dependency graph (a Makefile where the final target depends on all sub-jobs) and enforces a hard concurrency cap via `-J <N>`", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Professor C recalled that at a workshop (Rutgers or Hopkins), 25 participants sent jobs to 25 shared machines via a P-make-like tool, ending up less efficient than if each had used their own machine — offered as a cautionary anecdote about over-parallelizing.", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "\"run-command doesn't coordinate across jobs, so a script that needed to run, say, a thousand sub-jobs could in principle fire them all at once and saturate the shared network — users should self-limit to roughly ten simultaneous jobs, or write custom throttling logic to cap concurrency\""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "retained", "evidence": "\"Professor C recalls a past workshop (Rutgers or Hopkins) where 25 users all fired jobs at 25 shared machines via a P-make-like tool\""},
+      "f4": {"status": "retained", "evidence": "\"25 users all fired jobs at 25 shared machines\""},
+      "f5": {"status": "retained", "evidence": "\"ended up less efficient than just using their own machines\""}
+    },
+    "relations": {
+      "r1": {"status": "retained", "evidence": "\"...25 users all fired jobs at 25 shared machines via a P-make-like tool and ended up less efficient than just using their own machines\" — cause and effect stated in the same sentence"},
+      "r2": {"status": "retained", "evidence": "the anecdote is placed directly under \"Parallel-job etiquette\" (the same heading as PhD F's self-limit warning) and explicitly labeled \"a cautionary anecdote for over-parallelizing\""}
+    },
+    "hallucinations": [
+      {"text": "about a dozen Sun Blade-100s ordered to build out a shared compute farm; arrival timing uncertain", "source_supported": true},
+      {"text": "run-command built on P-make and Customs, set up by Andreas with utilities so users don't have to hand-write P-make scripts", "source_supported": true},
+      {"text": "run-command finds the fastest currently available machine, exports the job (using `export`), duplicates the caller's environment; testable with `run-command ls`", "source_supported": true},
+      {"text": "machine attributes (memory, speed, OS, its own name, \"no-evict\") that a job can request", "source_supported": true},
+      {"text": "if the requested machine is busy, the job queues and runs when the resource frees up", "source_supported": true},
+      {"text": "a non-\"no-evict\" job gets evicted and auto-restarted elsewhere when the machine owner returns and starts typing; unclear whether remote/SSH activity triggers eviction the same way (Andreas reportedly addressed this, unconfirmed)", "source_supported": true},
+      {"text": "Andreas and PhD F are currently the main users; the SRI recognizer already has P-make/Customs integration built in", "source_supported": true},
+      {"text": "PhD F is identified by the name \"Chuck\"", "source_supported": false},
+      {"text": "a training-vs-recognition job collision recently forced PhD F to back off after Andreas complained his jobs weren't running", "source_supported": true},
+      {"text": "P-make instead tracks the whole dependency graph (a Makefile where the final target depends on all sub-jobs) and enforces a hard concurrency cap via `-J <N>`", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "Professor C recalled that at a workshop (Rutgers or Hopkins), 25 participants sent jobs to 25 shared machines via a P-make-like tool, ending up less efficient than if each had used their own machine — offered as a cautionary anecdote about over-parallelizing.", "verdict": "correct"}
+    }
+  }
+}

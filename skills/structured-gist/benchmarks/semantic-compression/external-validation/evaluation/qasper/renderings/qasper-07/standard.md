@@ -1,0 +1,93 @@
+- **Research question: does attention model alignment or more?**
+  - **Background**
+    - attentional NMT lets the model use the most relevant source words at each translation step
+    - this capability also improves translation of longer sentences
+  - **Gap**
+    - no prior work specifically analyzes what phenomena attention actually captures, beyond assuming it equals alignment
+  - **Motivating observation**
+    - attention is sometimes "smeared out" over multiple source words whose relevance isn't obvious (e.g. "would"/"like"), raising the question of error vs. intended behavior
+  - **Questions asked**
+    - is attention only capable of modelling alignment?
+    - how similar is attention to alignment across different syntactic phenomena?
+  - **Headline finding**
+    - attention agrees with traditional alignment closely for nouns, but captures information beyond translational equivalence for verbs
+  - **Contributions**
+    - a. detailed comparison of NMT attention and word alignment
+    - b. shows global compliance with alignment is not always helpful for word prediction
+    - c. shows attention follows different patterns by word type
+    - d. shows attention's divergence from alignment stems from attending context words relevant to the current translation
+- **Related work**
+  - a. supervised attention training
+    - liu-EtAl:2016 train attention against GIZA++/fast_align alignments as ground truth, reporting translation gains
+    - chen2016guided find this helps mainly for e-commerce data with many OOV product names, less elsewhere
+    - alkhouli-EtAl:2016 separate alignment and translation models to avoid error propagation, using a feed-forward alignment model over HMM/IBM alignments
+  - b. attention and linguistic information
+    - shi-padhi-knight:2016 find syntactic information encoded in encoder hidden states, but argue attention doesn't affect this (non-attentional model)
+    - belinkov2017neural find attention does affect morphological information encoding, including more efficient POS-tag learning
+  - c. cross-lingual matching
+    - koehn2017six measure how much probability mass attention assigns to alignments across languages, finding differences by most-attended words
+  - d. motivating tension
+    - mixed results across these studies motivate the paper's more thorough analysis
+- **Two attention models studied**
+  - a. non-recurrent (global) attention
+    - decoder hidden state compared to each encoder hidden state (dot product), fed through softmax to get attention weights, then a weighted sum over encoder states gives the context vector
+  - b. input-feeding attention
+    - context vector at each step is aware of the previously computed context, feeding its own prior context back into the network before comparing to encoder states
+  - c. shared final step
+    - both models concatenate the context vector to the decoder hidden state and pass it through a non-linearity into the softmax output layer
+- **Measuring attention vs. alignment**
+  - a. soft-alignment conversion
+    - hard manual alignments (RWTH German-English dataset) are converted to soft alignments; unaligned words are treated as aligned to all source words before conversion
+  - b. attention loss
+    - cross-entropy between attention weights and soft alignment is used as the core comparison metric
+  - c. word prediction loss
+    - translation quality per word, defined as the log-probability loss between system output and reference translation
+  - d. correlating the two
+    - Spearman's rank correlation measures the relationship between attention loss and word prediction loss
+- **Measuring attention concentration**
+  - a. entropy of the attention distribution is used to quantify how spread out attention is, since alignments usually involve only one or a few words while attention can spread more freely
+- **Experimental setup**
+  - a. models: global (non-recurrent) and input-feeding attention, both on a unidirectional 4-layer encoder-decoder
+  - b. training: 1,000-dim, batch size 80, 20 epochs, 30K vocab each side, learning rate 1, max gradient norm 5, dropout 0.3
+  - c. data: WMT15 German-to-English; BPE not used since analysis relies on word-level POS tags and dependency roles
+- **Impact of attention mechanism**
+  - a. BLEU comparison
+    - both systems trained on WMT15 De-En; BLEU reported across multiple test sets
+  - b. alignment error rate (AER)
+    - hard alignments derived from attention (most-attended source word per target word) compared to GIZA++ automatic alignments and RWTH human alignments
+  - c. result
+    - input-feeding achieves both higher BLEU and attentions closer to human alignments than non-recurrent
+  - d. attention loss vs. AER
+    - attention loss (using the full distribution, not just the top word) tracks the same pattern as AER between the two systems
+- **Alignment quality vs. translation quality (by POS)**
+  - a. motivation
+    - prior mixed results from optimizing attention toward alignment (chen2016guided, liu-EtAl:2016, alkhouli-EtAl:2016) motivate a finer-grained, POS-based analysis
+  - b. attention loss by POS
+    - varies substantially across POS tags; NOUN has the lowest (closest to alignment), VERB's average loss is almost double NOUN's
+  - c. word prediction loss by POS
+    - despite higher attention loss, verbs have lower word prediction loss than nouns — translated more accurately despite less alignment-consistent attention
+  - d. correlation by POS
+    - Spearman correlation between attention loss and word prediction loss is low for verbs (attending elsewhere than the aligned word is necessary) and higher for nouns (alignment-consistency is more desirable there)
+  - e. interpretation
+    - this pattern helps explain the mixed results of alignment-supervised attention training, including chen2016guided's domain-specific gains for e-commerce OOV terms
+- **Attention concentration by POS**
+  - a. baseline alignment stat
+    - nouns and verbs are aligned on average to 1.1 and 1.2 source words respectively
+  - b. entropy by POS
+    - nouns have among the lowest attention entropy (concentrated); verbs have higher entropy (more distributed)
+  - c. entropy-loss correlation
+    - high correlation between attention entropy and attention loss for nouns, so entropy can proxy alignment-closeness there
+  - d. verbs
+    - low correlation between attention entropy and word prediction loss confirms concentrated attention is not required for translating verbs
+  - e. pronouns/particles
+    - also show low correlation and more distributed attention than nouns, alongside relatively low word prediction losses — ambiguous between the model "not knowing where to focus" and deliberately attending multiple relevant places
+- **Attention distribution over dependency roles**
+  - a. aligned-word attention share
+    - for most POS tags, less than half of attention probability mass falls on the aligned words
+  - b. dependency-role analysis
+    - source side parsed with ParZu; remaining attention mass (beyond alignment points) measured against dependency roles
+  - c. results by POS
+    - attention to nouns spreads mainly to adjectives and determiners; attention to verbs spreads to auxiliary verbs, adverbs (including negation), subjects, and objects
+- **Conclusion**
+
+  Attention agrees with traditional alignment to a certain extent, but this varies substantially by attention mechanism and target word type; the concentrated, alignment-consistent pattern for nouns supports training attention with explicit alignment labels, but for verbs the large attention mass on non-aligned words already captures useful relevant information, so alignment-supervised training there would force the model to discard it — explaining the mixed results reported by prior alignment-guided attention work.

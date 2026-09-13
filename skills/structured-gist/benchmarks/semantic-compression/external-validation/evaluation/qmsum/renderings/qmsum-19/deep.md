@@ -1,0 +1,112 @@
+- **Meeting recap**
+  - **Marketing progress**
+    - target audience identified in the prior session
+  - **Design options**
+    - iPod-style button/wheel system proposed, not yet decided
+
+- **Components design**
+  - **Custom parts**
+    - a. case
+      - custom hard-plastic or alternative-material housing that protects the remote and its locator
+    - b. circuit board
+      - must be custom-designed each time to route button input to output, then mass-printed by the circuit vendor
+  - **Standard parts**
+    - a. buttons and iPod-style wheel
+    - b. infrared LED
+      - comes bundled with the circuit board
+    - c. radio sender and receiver
+    - d. beeper or buzzer
+      - lets a user locate a misplaced remote
+  - **Material options**
+    - a. rubber
+      - requires rubber buttons, incompatible with a plastic-button design
+    - b. plastic
+    - c. wood
+      - viable, though no strong reason favors it
+    - d. titanium
+      - discouraged — heavy, and usable only in flat cases
+  - **Chip cost**
+    - the iPod-style wheel needs the mid-tier "regular" chip instead of the cheapest "minimal" chip, a modest cost increase
+
+- **Market trends**
+  - **Trend priorities**
+    - i. fashion and fancy look-and-feel
+    - ii. technological innovation
+    - iii. ease of use
+  - **Fruit-and-vegetable theme**
+    - Milan and Paris fashion-watchers flag fruit and vegetable motifs as the current trend crossing into electronics
+  - **Spongy feel**
+    - a soft, stress-ball-like texture is wanted; the exact material approach is left to the Industrial Designer
+  - **Print vs shape**
+    - still open whether the fruit/veg motif is printed on the casing or the remote itself is molded into that shape
+
+- **Screen vs wheel**
+  - **Case for a screen**
+    - a. song or channel selection
+      - a wheel alone can't show which song or channel is selected without a display
+    - b. many-channel navigation
+      - with 200-plus satellite channels, reaching a specific one needs an on-screen number, not blind scrolling
+    - c. settings menu
+      - brightness, timer, and similar options need a menu, easier to present on a screen
+    - d. avoids cryptic codes
+      - a screen can spell out functions instead of relying on button abbreviations nobody remembers
+  - **Case against a screen**
+    - a screen requires the priciest "advanced" chip, well above the regular or minimal tiers
+  - **DVD scope note**
+    - the product will not support DVD, only TV, which simplifies the mode-switching question
+  - **TV-as-display resolution**
+    - the group settles on routing any menu or output to the television screen itself, keeping the remote a simple, inexpensive wheel device
+  - **Wheel interaction modes**
+    - a. scroll
+      - continuous motion moves through a channel or volume range
+    - b. tap
+      - a quick tap jumps a small increment, e.g. channel five to six
+    - c. central or menu button
+      - held or pressed to bring up the TV's on-screen menu for less-frequent settings
+
+- **Physical form**
+  - **Size and shape**
+    - smaller than existing remotes, roughly circular and handheld, worked with a thumb or index finger like an iPod wheel
+  - **Two-part construction**
+    - a. squishy inner part
+      - stress-ball-style rubber, held for a comfortable, spongy grip
+    - b. hard plastic outer face
+      - carries the wheel/button area and the fruit or vegetable color or pattern
+  - **Swappable fruit/veg covers**
+    - a detachable squishy piece or slip-on cover lets users pick or change the fruit or vegetable look, echoing fruit-named product-color branding precedent
+  - **Company color conflict**
+    - the silver-and-yellow company colors don't map cleanly onto fruit or vegetable colors; a banana variant is floated as a compromise
+  - **Battery placement**
+    - batteries sit directly under the plastic case as a single snap-off unit, especially since the squishy part is swappable
+  - **Prototype plan**
+    - build two prototypes, cover-based and hard-shell-swap, test them with users, and check manufacturing cost for each before choosing
+
+- **Power source**
+  - **Options considered**
+    - a. batteries
+    - b. solar power
+      - not compatible with a rubber case
+    - c. dynamo
+      - generates charge from motion, bicycle-mechanism style
+    - d. kinetic wind-up
+      - user manually winds it, hand-powered rather than motion-triggered
+  - **Decision — batteries**
+    - chosen as the simplest option; motion-charged power felt unnecessary for a living-room remote
+  - **Cost data**
+    - no absolute prices were found, only relative chip-tier costs; bulk-bought parts are assumed cheap, with the chip likely the single most expensive component
+  - **Chip-on-print clarified**
+    - remote chips are mass-stamped, not reprogrammable like a general computer chip, which keeps unit cost low
+
+- **Next steps**
+  - **Term clarifications**
+    - a. "case"
+      - refers to the casing-material discussion just held, not a syntactic or programming sense
+    - b. "chip on print"
+      - means the remote's chip is mass-stamped for cheap production, not user-reprogrammable
+  - **Assignments**
+    - a. Industrial Designer and User Interface
+      - prototype look-and-feel with play-dough, per further coaching instructions
+    - b. Marketing
+      - handles product evaluation, per further coaching instructions
+  - **Early finish**
+    - the meeting ends slightly early, with no stated impact

@@ -1,0 +1,88 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {"status": "omitted", "evidence": ""},
+      "f2": {"status": "omitted", "evidence": ""},
+      "f3": {"status": "omitted", "evidence": ""}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "crosslingual latent variables give only small gains because too few arguments are aligned; small amounts of direct annotation are more cost-effective than scaling parallel data", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "", "verdict": "unanswerable"}
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "the Bayesian model of garg2012unsupervised, splitting each predicate's roles into ordering-governing Primary Roles and context-governed Secondary Roles"},
+      "f2": {"status": "retained", "evidence": "splitting each predicate's roles into... (roles treated as belonging to individual predicates, i.e. predicate-specific)"},
+      "f3": {"status": "partial", "evidence": "splitting each predicate's roles into ordering-governing Primary Roles and context-governed Secondary Roles (states the Primary/Secondary split but doesn't explicitly frame it as modeling 'ordering and repetition preferences' - only 'ordering' is named)"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "SRL needs labeled data, which is scarce for most languages, motivating unsupervised approaches", "source_supported": true},
+      {"text": "a word-aligned parallel corpus may let a resource-poor language borrow role information from a resource-rich one", "source_supported": true},
+      {"text": "crosslingual latent variables (CLVs) link aligned-argument role variables across per-language copies of the monolingual model, with the CLV count per predicate-pair induced via a Chinese Restaurant Process", "source_supported": true},
+      {"text": "true joint conditioning on CLVs breaks Dirichlet-multinomial conjugacy, so aligned roles are treated as generated twice, once monolingually and once by the CLV", "source_supported": true},
+      {"text": "scales naturally to more than two languages", "source_supported": true},
+      {"text": "supports semi-supervised settings by clamping annotated variables", "source_supported": true},
+      {"text": "avoids hard argument-key clustering and adds a global role-ordering probability", "source_supported": true},
+      {"text": "collapsed Gibbs sampling draws role labels and CLVs with parameters integrated out; only the monolingual parameters are used at test time, so crosslingual information acts as a training-time regularizer", "source_supported": true},
+      {"text": "Purity, Collocation, and their harmonic mean F1 against gold roles, weighted by argument count", "source_supported": true},
+      {"text": "assigns a role from syntactic function/dependency relation alone", "source_supported": true},
+      {"text": "CoNLL 2009 — ~40k EN / ~36k DE sentences", "source_supported": true},
+      {"text": "Europarl EN-DE — ~1.5M parallel sentences", "source_supported": true},
+      {"text": "MaltParser (EN) and LTH parser (DE) parses; GIZA++ intersected alignments define aligned arguments — only 8% of EN and 17% of DE arguments end up aligned", "source_supported": true},
+      {"text": "naseem2009 used superlingual latent variables for multilingual POS tagging; this paper applies the idea inside a Bayesian SRL model", "source_supported": true},
+      {"text": "pado2009 used graph-based English→German role transfer; furstenau2009 used graph alignment to relate known and unknown verbs' arguments", "source_supported": true},
+      {"text": "swier2004 gave the first domain-general approach; garg2012unsupervised (this paper's base) and titov2012bayesian gave Bayesian models; grenager2006 needed hand-built rules to constrain its parameter space", "source_supported": true},
+      {"text": "significantly beats the syntactic-function baseline in both languages, and beats titovcrosslingual's reported German F1", "source_supported": true},
+      {"text": "no change in English but a significant gain in German, whose small CoNLL set benefits from more data", "source_supported": true},
+      {"text": "only small, non-significant gains over monolingual+Europarl, likely limited by how few arguments are aligned", "source_supported": true},
+      {"text": "training on Europarl and testing on CoNLL reproduces the same small multilingual improvement", "source_supported": true},
+      {"text": "clamping source-language labels and propagating through alignments gives small target-language improvements", "source_supported": true},
+      {"text": "manually labeling about 10% of sentences matches or beats what 1.5M unlabeled parallel sentences buy"},
+      {"text": "crosslingual latent variables give only small gains because too few arguments are aligned; small amounts of direct annotation are more cost-effective than scaling parallel data; future work targets more language pairs and better alignment models", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The Bayesian model of garg2012unsupervised, which splits each predicate's role inventory into Primary and Secondary roles", "verdict": "correct"}
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {"status": "retained", "evidence": "the Bayesian model of garg2012unsupervised; splits each predicate's role inventory into Primary Roles... and Secondary Roles..."},
+      "f2": {"status": "retained", "evidence": "splits each predicate's role inventory into Primary Roles... and Secondary Roles... (roles are per-predicate, i.e. predicate-specific)"},
+      "f3": {"status": "retained", "evidence": "splits each predicate's role inventory into Primary Roles, which govern global ordering and repetition preferences, and Secondary Roles, governed by the local interval context between consecutive Primary Roles"}
+    },
+    "relations": {},
+    "hallucinations": [
+      {"text": "SRL needs labeled data, which is scarce for most languages, motivating unsupervised approaches", "source_supported": true},
+      {"text": "a word-aligned parallel corpus may let a resource-poor language borrow role information from a resource-rich one, as previously shown useful for multilingual POS tagging", "source_supported": true},
+      {"text": "crosslingual latent variables (CLVs) link aligned-argument role variables across per-language copies of the monolingual model; each CLV's values are trained to be peaky, correlating specific role labels across languages, and the number of CLVs per predicate-pair is induced via a Chinese Restaurant Process", "source_supported": true},
+      {"text": "true joint conditioning on CLVs breaks Dirichlet-multinomial conjugacy, making exact marginalization intractable, so aligned roles are instead treated as generated twice — once by the monolingual model, once by the corresponding CLV", "source_supported": true},
+      {"text": "scales naturally to more than two languages — a CLV connects only to whichever languages actually have an aligned argument for that predicate-tuple", "source_supported": true},
+      {"text": "supports semi-supervised settings by simply clamping annotated variables during training, since it is one joint Bayesian model rather than an external penalty term", "source_supported": true},
+      {"text": "avoids titovcrosslingual's hard argument-key clustering (same four syntactic features force the same role) and adds a global role-ordering probability they lack", "source_supported": true},
+      {"text": "collapsed Gibbs sampling draws role labels and CLVs with model parameters integrated out via Dirichlet-multinomial conjugacy; sampling a role considers both the monolingual probability and, when aligned, the probability of being generated by a CLV; sampling a CLV considers both aligned roles' generation probabilities plus the Chinese Restaurant Process prior; only the monolingual parameters are used to parse at test time, so crosslingual information acts purely as a training-time regularizer", "source_supported": true},
+      {"text": "following lang2011unsupervised: Purity, Collocation, and F1, their harmonic mean, weighted by argument-instance count and averaged over predicates", "source_supported": true},
+      {"text": "assigns a role purely from syntactic function/dependency relation; the (k-1) most frequent functions each get a dedicated cluster and all remaining functions share the kth", "source_supported": true},
+      {"text": "CoNLL 2009 — ~40k EN / ~36k DE sentences, ~3k EN / ~500 DE predicates", "source_supported": true},
+      {"text": "EN parsed with MaltParser, DE with the LTH parser; arguments identified at F1 85.1% (EN, via lang2011unsupervised's heuristics) and 86.5% (DE, via the LTH system); GIZA++ intersected (high-precision) alignments define aligned arguments as those whose head words align — only 8% of the resulting 9.3M EN arguments and 17% of the 4.43M DE arguments end up aligned (0.76M total)", "source_supported": true},
+      {"text": "naseem2009 introduced superlingual latent variables for multilingual POS tagging; this paper is the first to build the coupling of aligned arguments directly into a Bayesian SRL model", "source_supported": true},
+      {"text": "pado2009 used a graph-based approach to transfer role annotations from English to German; furstenau2009 used graph alignment to measure syntactic and semantic similarity between dependency-tree arguments of known and unknown verbs", "source_supported": true},
+      {"text": "swier2004 gave the first domain-general unsupervised approach, on the British National Corpus using 54 VerbNet verbs; garg2012unsupervised (this paper's base model) and titov2012bayesian gave closely related Bayesian models; grenager2006's generative model needed a separate hand-built, language-specific rule system to constrain its otherwise intractable parameter space; other approaches use an iterative split-merge algorithm or graph partitioning", "source_supported": true},
+      {"text": "significantly beats the syntactic-function baseline in both languages; beats titovcrosslingual's reported monolingual German F1 of 80.9%; English results are not directly comparable, since this paper's argument-identification F1 (85.1%) differs from titovcrosslingual's (80.7%), possibly because their pipeline discards more 'difficult' arguments", "source_supported": true},
+      {"text": "equivalent results in English, already strong due to CoNLL's larger dataset and accurate parsers, but a significant improvement in German, whose small CoNLL set benefits substantially from the extra monolingual data; titovcrosslingual did not report this setting", "source_supported": true},
+      {"text": "only small, non-significant gains over monolingual+Europarl in both languages; for German, comparable to titovcrosslingual's external-penalty-term approach (82.7% F1); English is not comparable due to argument-identification differences; likely limited because only 8%/17% of arguments are actually aligned", "source_supported": true},
+      {"text": "training only on Europarl and testing on CoNLL reproduces the same small multilingual improvement seen in the standard unsupervised setup, confirming the pattern", "source_supported": true},
+      {"text": "clamping source-language role labels in the CoNLL data (via a predefined mapping) and using the resulting good source-language parameters to sample roles in the unlabeled parallel Europarl data yields small improvements in the target language, again likely limited by the small aligned-role percentage", "source_supported": true},
+      {"text": "a semi-supervised model trained with a fraction p of sentences' role labels clamped is compared against a 'supervised baseline' (MAP estimate for predicates seen in the labeled fraction, standard baseline otherwise); around p=10% the supervised baseline starts outperforming the semi-supervised model, since by then 63% of German and 44% of English predicates have already been seen", "source_supported": true},
+      {"text": "about 3.5% (1,260) labeled German sentences match the performance gain from adding 1.5M unlabeled Europarl sentences; roughly 180 more labeled sentences match the further gain from multilingual alignment; no noticeable equivalent effect appears in English; a held-out CoNLL test set shows broadly the same pattern despite being too small for fully reliable evaluation", "source_supported": true},
+      {"text": "crosslingual latent variables give only small, non-significant gains because current alignment assumptions leave too few arguments actually aligned; small amounts of direct annotation are markedly more cost-effective than scaling parallel data; future work targets more language pairs, more than two languages jointly, and more inclusive models of role alignment", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {"answer_given": "The Bayesian model of garg2012unsupervised, which splits each predicate's role inventory into Primary Roles (global ordering/repetition) and Secondary Roles (local interval context)", "verdict": "correct"}
+    }
+  }
+}

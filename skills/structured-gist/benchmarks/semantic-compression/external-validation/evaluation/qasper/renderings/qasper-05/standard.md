@@ -1,0 +1,33 @@
+- **Motivation**
+  - **Task**
+    - stance detection classifies a text-target pair as Favor/Against/Neither, distinct from sentiment analysis, which scores the author's general sentiment rather than their stance toward a specific target
+  - **Gap**
+    - no prior stance detection data set exists for Turkish
+- **Related work**
+  - **Prior approaches**
+    - a. sentiment plus arguing-lexicon features for stance classification
+    - b. dialogue-structure features improving stance detection in on-line debates
+    - c. sequence models (HMMs) outperforming non-sequence models (Naive Bayes)
+    - d. bidirectional conditional encoding for unseen-target stance detection
+  - **SemEval 2016**
+    - the shared task that established the standard Favor/Against/Neither Twitter stance benchmark and its baselines, later compared against in this paper's results
+- **Data set**
+  - **Targets**
+    - two popular Turkish football clubs, Galatasaray and Fenerbahçe, chosen since large tweet volumes already exist about them
+  - **Construction**
+    - filtered by club name from an existing 1M-tweet Turkish corpus, then manually annotated Favor/Against (no Neither class used)
+  - **Composition**
+    - 700 tweets total, perfectly balanced: 175 Favor / 175 Against per target
+  - **Release**
+    - published publicly as a CSV of tweet id, target, and stance label — the first publicly available Turkish stance data set
+- **Experiments**
+  - **Classifiers**
+    - one SVM (Weka, SMO, linear kernel) per target, 10-fold cross-validated, after stopword removal
+  - **Feature comparison**
+    - a. unigrams — strong, favorable results
+    - b. bigrams alone — poor results, likely due to the small data set size
+    - c. unigrams plus hashtag existence — mixed: a slight drop for one target, a gain for the other
+  - **Observed pattern**
+    - both targets classify the Favor class more accurately than Against — the opposite pattern from the SemEval 2016 baselines, but consistent with typical sentiment-analysis systems that favor the Positive class
+- **Conclusion**
+  - the first Turkish and first sports-domain stance-annotated tweet data set, released publicly with SVM baseline results (unigram, bigram, hashtag features) intended as reference points for future stance detection work on Turkish text

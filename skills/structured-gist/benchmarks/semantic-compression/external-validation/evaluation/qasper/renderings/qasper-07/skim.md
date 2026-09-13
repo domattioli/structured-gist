@@ -1,0 +1,34 @@
+- **Research question: does attention model alignment or more?**
+  - **Gap**: no prior study analyzes what attention actually captures
+  - **Finding**: attention matches alignment for nouns, captures extra information for verbs
+- **Related work**
+  - a. supervised training of attention with traditional alignments
+  - b. syntactic/morphological information encoded via attention
+  - c. cross-lingual attention-alignment matching
+- **Two attention models studied**
+  - a. non-recurrent (global) attention
+  - b. input-feeding attention
+- **Measuring attention vs. alignment**
+  - a. attention loss (cross-entropy vs. soft alignment)
+  - b. word prediction loss
+  - c. Spearman correlation between the two losses
+- **Measuring attention concentration**
+  - a. entropy of the attention distribution
+- **Experimental setup**
+  - a. WMT15 German-to-English data
+  - b. RWTH manual alignments as gold standard
+- **Impact of attention mechanism**
+  - a. input-feeding beats non-recurrent on BLEU and AER
+  - b. attention loss tracks AER
+- **Alignment quality vs. translation quality (by POS)**
+  - a. nouns: attention closely tracks alignment
+  - b. verbs: attention diverges from alignment yet translates better
+- **Attention concentration by POS**
+  - a. nouns: low entropy, concentrated attention
+  - b. verbs/pronouns/particles: higher entropy, distributed attention
+- **Attention distribution over dependency roles**
+  - a. less than half of attention mass lands on aligned words
+  - b. verbs draw attention to auxiliaries, adverbs, subjects, objects
+- **Conclusion**
+
+  Attention agrees with alignment for nouns but deliberately looks beyond alignment for verbs, capturing useful context; forcing attention to match alignment would hurt verb translation, explaining prior mixed results from alignment-supervised attention training.

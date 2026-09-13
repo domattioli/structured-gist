@@ -1,0 +1,121 @@
+{
+  "skim": {
+    "facts": {
+      "f1": {
+        "status": "partial",
+        "evidence": "The Stratton Story: \"1949 Monty Stratton biopic\" — captures the film/subject/year but never mentions Stratton being \"disabled in a hunting accident,\" which is absent from every section of the skim rendering."
+      },
+      "f2": {
+        "status": "partial",
+        "evidence": "Monty Stratton: \"MLB pitcher, lost leg 1938\" / \"Comeback in minors, 1946–53\" / \"Subject of 1949 biopic\" — confirms MLB-pitcher status and the leg injury, but omits the full name \"Monty Franklin Pierce Stratton,\" birth/death dates, and the nickname \"Gander\" entirely."
+      },
+      "f3": {
+        "status": "retained",
+        "evidence": "Douglas Morrow: \"Screenwriter, film producer\" + \"Oscar for Stratton Story\" — together identify Morrow as a screenwriter who won an Oscar for the film, matching the gold claim."
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "partial",
+        "evidence": "Monty Stratton's bullet \"Subject of 1949 biopic\" cross-references The Stratton Story section, establishing that this MLB pitcher is the film's subject — but since f2 already drops the \"Gander\" nickname, the rendering never ties that specific nickname to the Stratton Story subject as gold's relation states."
+      }
+    },
+    "hallucinations": [
+      {"text": "Clay Buchholz is a Phillies pitcher, ex-Red Sox, who threw a no-hitter in his 2nd MLB start; 6'3\", 190 lbs.", "source_supported": true},
+      {"text": "Terry Felton is an ex-Twins pitcher with an 0-16 career record, the most losses with zero wins.", "source_supported": true},
+      {"text": "The Stratton Story was directed by Sam Wood and was the first Stewart/Allyson pairing.", "source_supported": true},
+      {"text": "Douglas Morrow died in 1994 of an aneurysm.", "source_supported": true},
+      {"text": "Joe Erautt was a Canadian-born White Sox catcher who played 32 games in 1950–51, elder brother of Eddie Erautt.", "source_supported": true},
+      {"text": "Jonathan Pettibone is an ex-Phillies pitcher whose father was also an MLB pitcher, drafted in the 3rd round in 2008.", "source_supported": true},
+      {"text": "Tim Keefe was a dominant 19th-century pitcher, the 2nd to reach 300 wins, Hall of Fame 1964.", "source_supported": true},
+      {"text": "Jim Palmer was an Orioles pitcher for 19 seasons with the most 1970s wins (186), Hall of Fame 1990.", "source_supported": true},
+      {"text": "Lance Niekro is an ex-Giants player (2003–07) and head coach at Florida Southern, nephew/son of MLB Niekros.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Monty Stratton (identified by elimination: the only MLB pitcher tagged \"Subject of 1949 biopic\"; the \"Gander\" nickname itself is never stated anywhere in the rendering, so that specific detail can't be independently confirmed)",
+        "verdict": "correct"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "Douglas Morrow — \"Award: Earned an Academy Award for his script for 1949's 'The Stratton Story,' a biography of baseball player Monty Stratton, who was disabled in a hunting accident.\""
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "Monty Stratton — \"Identity: Monty Franklin Pierce Stratton (May 21, 1912 – September 29, 1982), nicknamed 'Gander' for a trick pitch he developed, a Major League Baseball pitcher.\""
+      },
+      "f3": {
+        "status": "retained",
+        "evidence": "Douglas Morrow — same Award bullet: \"Earned an Academy Award for his script for 1949's 'The Stratton Story.'\""
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "retained",
+        "evidence": "Monty Stratton — \"Comeback: ... his comeback was the subject of the 1949 film 'The Stratton Story,' in which he was portrayed by Jimmy Stewart\" — explicitly ties the nicknamed-Gander pitcher to being the Stratton Story's subject."
+      }
+    },
+    "hallucinations": [
+      {"text": "Clay Buchholz's full profile: identity, MLB debut, no-hitter record, and build.", "source_supported": true},
+      {"text": "Terry Felton's full profile: identity, dubious records, 1982 season, and career record.", "source_supported": true},
+      {"text": "The Stratton Story's production (director Sam Wood), cast pairing (Stewart/Allyson trilogy), and Stratton's reception quote.", "source_supported": true},
+      {"text": "Douglas Morrow's identity dates and death by aneurysm in 1994.", "source_supported": true},
+      {"text": "Joe Erautt's full profile: identity, playing career, background, and family.", "source_supported": true},
+      {"text": "Jonathan Pettibone's full profile: identity, career, background, and draft history.", "source_supported": true},
+      {"text": "Tim Keefe's full profile: identity, build, career dominance, and Hall of Fame honor.", "source_supported": true},
+      {"text": "Monty Stratton's background (Palacios/Greenville, Texas), injury details, and minor-league comeback years (1946–1953).", "source_supported": true},
+      {"text": "Jim Palmer's full profile: identity, career span, 1970s dominance, records, and distinctions.", "source_supported": true},
+      {"text": "Lance Niekro's full profile: identity, playing career, coaching career, and family.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Monty Franklin Pierce Stratton",
+        "verdict": "correct"
+      }
+    }
+  },
+  "deep": {
+    "facts": {
+      "f1": {
+        "status": "retained",
+        "evidence": "Douglas Morrow — \"Subject: A biography of baseball player Monty Stratton, who was disabled in a hunting accident.\" (paired with the Award bullet naming \"The Stratton Story\")"
+      },
+      "f2": {
+        "status": "retained",
+        "evidence": "Monty Stratton — \"Identity: Monty Franklin Pierce Stratton (May 21, 1912 – September 29, 1982), nicknamed 'Gander' for a trick pitch he developed, a Major League Baseball pitcher.\""
+      },
+      "f3": {
+        "status": "retained",
+        "evidence": "Douglas Morrow — \"Award: Earned an Academy Award for his script for 1949's 'The Stratton Story.'\""
+      }
+    },
+    "relations": {
+      "r1": {
+        "status": "retained",
+        "evidence": "Monty Stratton — \"Legacy: His comeback was the subject of the 1949 film 'The Stratton Story,' in which he was portrayed by Jimmy Stewart\" — explicitly ties the nicknamed-Gander pitcher to being the Stratton Story's subject."
+      }
+    },
+    "hallucinations": [
+      {"text": "Clay Buchholz's full profile: identity, MLB debut, detailed no-hitter record, and build.", "source_supported": true},
+      {"text": "Terry Felton's full profile: identity, dubious records (itemized), 1982 season, career record, and team record.", "source_supported": true},
+      {"text": "The Stratton Story's production (director Sam Wood), cast pairing (itemized Stewart/Allyson trilogy), and Stratton's reception quote.", "source_supported": true},
+      {"text": "Douglas Morrow's identity dates and death by aneurysm in 1994.", "source_supported": true},
+      {"text": "Joe Erautt's full profile: identity, playing career, background, and itemized family details.", "source_supported": true},
+      {"text": "Jonathan Pettibone's full profile: identity, current role, MLB career, itemized background, and itemized draft history.", "source_supported": true},
+      {"text": "Tim Keefe's full profile: identity, build, career dominance, 300-win milestone, and Hall of Fame honor.", "source_supported": true},
+      {"text": "Monty Stratton's background (Palacios/Greenville, Texas) and injury details.", "source_supported": true},
+      {"text": "Jim Palmer's full profile: identity, career span, 1970s dominance (itemized), career record, and distinctions.", "source_supported": true},
+      {"text": "Lance Niekro's full profile: identity, playing career, coaching career, and family.", "source_supported": true}
+    ],
+    "questions": {
+      "q1": {
+        "answer_given": "Monty Franklin Pierce Stratton",
+        "verdict": "correct"
+      }
+    }
+  }
+}

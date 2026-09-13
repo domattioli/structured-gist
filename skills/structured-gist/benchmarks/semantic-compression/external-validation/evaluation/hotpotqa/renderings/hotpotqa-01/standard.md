@@ -1,0 +1,70 @@
+- **Bézout domain**
+  - **Definition**
+    - integral domain (a form of Prüfer domain) in which the sum of two principal ideals is always principal, so every finitely generated ideal is principal
+  - **Relation to PID**
+    - every PID is a Bézout domain, but a Bézout domain need not be Noetherian, so it need not be a PID
+  - **Relation to UFD**
+    - a non-Noetherian Bézout domain is not a UFD but remains a GCD domain
+  - **Named after**
+    - Étienne Bézout, French mathematician
+- **Splitting of prime ideals in Galois extensions**
+  - **Core relationship**
+    - the Galois group G of an extension L/K and how prime ideals P of the ring of integers O factor into products of primes — one of the richest parts of algebraic number theory
+  - **Also known as**
+    - Hilbert theory, sometimes attributed to David Hilbert
+  - **Geometric analogue**
+    - ramified coverings of Riemann surfaces, simpler since only one kind of subgroup of G is needed
+- **Neo-libertarianism**
+  - **Definition**
+    - combination of libertarian principles with present-day neoconservative principles, prioritizing liberty, free expression, and laissez-faire capitalism
+  - **Divergence from libertarianism**
+    - neo-libertarians sympathize with neoconservative ideas on authority, especially military action
+  - **American strand**
+    - believes in American exceptionalism and supports interventionist foreign policy
+- **Japanese aesthetics**
+  - **Core ideals**
+    - a. wabi — transient and stark beauty
+    - b. sabi — beauty of natural patina and aging
+    - c. yūgen — profound grace and subtlety
+  - **Cultural role**
+    - seen as a philosophy in the West, but an integral part of daily life in Japan
+  - **Scope**
+    - now includes both traditional ideals and modern, sometimes culturally influenced, ones
+- **American exceptionalism**
+  - ideology that the United States is unique among nations in a positive way, particularly regarding democracy and personal freedom
+- **Massoud Foundation**
+  - **Identity**
+    - non-profit NGO founded in Kabul in 2003, originally named the Ahmad Shah Massoud Foundation
+  - **Purpose**
+    - preserve and spread the values, leadership, and ideals of Ahmad Shah Massoud
+  - **About Massoud**
+    - the "Lion of the Panjshir," a founding father of resistance against the Soviet invasion and later the Taliban and Al-Qaeda, assassinated by Al-Qaeda two days before 9/11
+- **Hong Kong Democratic Foundation**
+  - **Founding**
+    - established 27 October 1989, initially as a political party, ahead of Hong Kong's first Legislative Council direct elections in 1991
+  - **Founders**
+    - business people and professionals endorsing democratic ideals, led by Jimmy McGregor and Dr Leong Che-hung
+  - **Current form**
+    - now a think tank chaired by Southern District Councillor Paul Zimmerman
+- **Islamic Foundation Bangladesh**
+  - **Identity**
+    - government organization under Bangladesh's Ministry of Religious Affairs
+  - **Mission**
+    - disseminate the values and ideals of Islam
+  - **Structure**
+    - head office in Dhaka, supported by 6 divisional offices, 64 district offices, 7 Imam Training Academy Centers, and 29 Islamic Mission Centers
+  - **Leadership**
+    - director general serves as chief executive
+- **Mahatma Gandhi National Foundation**
+  - **Founding**
+    - founded in Kerala in December 2000
+  - **Aim**
+    - propagate the ideals and perpetuate the memory of Mahatma Gandhi
+  - **Mission**
+    - collective action to help Kerala's most vulnerable groups — women, children, disabled persons, the aged, and other disadvantaged groups
+- **Cognitive dissonance**
+  - **Definition**
+    - mental discomfort experienced when a person simultaneously holds two or more contradictory beliefs, ideas, or values
+  - **Triggers**
+    - a. performing an action that contradicts personal beliefs and values
+    - b. confronting new information that contradicts existing beliefs and values

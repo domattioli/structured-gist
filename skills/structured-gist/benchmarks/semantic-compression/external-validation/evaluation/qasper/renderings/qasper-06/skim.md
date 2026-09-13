@@ -1,0 +1,29 @@
+- **Jasper: end-to-end convolutional acoustic model**
+  - **Headline result**: SOTA WER on LibriSpeech among E2E models, no external training data
+  - **Design**: only 1D convolutions, batch norm, ReLU, dropout, residual connections
+  - **Scale**: deepest variant uses 54 convolutional layers
+- **Jasper architecture**
+  - a. block/sub-block structure
+  - b. sub-block operation sequence
+  - c. residual connection into last sub-block
+  - d. Dense Residual (DR) variant
+- **Normalization and activation study**
+  - a. normalization types compared
+  - b. ReLU variants compared
+  - c. gated unit types compared
+  - d. masking fixes for padded sequences
+- **Residual connections**
+  - a. necessity for deep models
+  - b. Dense Residual chosen over DenseNet/DenseRNet
+- **Language model integration**
+  - a. N-gram LM for beam-search candidates
+  - b. Transformer-XL LM rescoring
+- **NovoGrad optimizer**
+  - a. per-layer second-moment scaling
+  - b. WER improvement over SGD with momentum
+- **Results**
+  - a. read speech: LibriSpeech, WSJ
+  - b. conversational speech: Hub5'00
+- **Conclusion**
+
+  Jasper is a scalable, GPU-efficient convolutional architecture that reaches SOTA/competitive results across benchmarks and serves as a baseline for further ASR research.

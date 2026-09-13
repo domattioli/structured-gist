@@ -1,0 +1,26 @@
+- **Motivation**
+  - **Gap**
+  - **Approach**
+- **Data enrichment method**
+  - **Semantic relation chain**
+  - **Extended synsets**
+  - **Extraction**
+- **KAR model**
+  - **Architecture**
+  - **Knowledge aided mutual attention**
+  - **Knowledge aided self attention**
+- **Related work**
+  - **Attention mechanisms**
+  - **Data augmentation**
+  - **Multi-step reasoning**
+  - **Linguistic embeddings**
+  - **Transfer learning**
+- **Experiments**
+  - **Dataset**
+  - **Setup**
+- **Results**
+  - **Performance & robustness**
+  - **Ablations**
+  - **Low-data regime**
+- **Conclusion**
+  - explicitly injecting WordNet-derived general knowledge into an MRC model's attention improves robustness to noise and reduces data hunger without sacrificing accuracy

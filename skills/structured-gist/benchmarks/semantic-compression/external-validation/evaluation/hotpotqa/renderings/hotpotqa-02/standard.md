@@ -1,0 +1,85 @@
+- **O-Acetylpsilocin**
+  - **Identity**
+    - synthetically produced psychoactive drug, also known as psilacetin, 4-acetoxy-DMT, or 4-AcO-DMT
+  - **Proposed use**
+    - suggested by David Nichols as a potentially useful alternative to psilocybin for pharmacological studies, since both are believed to be prodrugs of psilocin
+  - **Caveat**
+    - some users report its subjective effects differ from psilocybin and psilocin
+  - **Chemistry**
+    - acetylated form of the psilocybin mushroom alkaloid psilocin, a lower homolog of 4-AcO-MET, 4-AcO-DET, 4-AcO-MiPT, and 4-AcO-DiPT
+- **Baeocystin**
+  - **Identity**
+    - psilocybin mushroom alkaloid and analog of psilocybin
+  - **Occurrence**
+    - minor compound in most psilocybin mushrooms, alongside psilocybin, norbaeocystin, and psilocin
+  - **Chemistry**
+    - an N-demethylated derivative of psilocybin and a phosphorylated derivative of 4-HO-NMT
+- **Psilocybin**
+  - **Identity**
+    - naturally occurring psychedelic prodrug compound, produced by more than 200 species of mushrooms
+  - **Most potent sources**
+    - a. genus Psilocybe — e.g. P. azurescens, P. semilanceata, P. cyanescens
+    - b. also isolated from about a dozen other genera
+  - **Mechanism**
+    - quickly converted by the body to psilocin, which has mind-altering effects similar in some aspects to LSD, mescaline, and DMT
+  - **Effects**
+    - euphoria, visual and mental hallucinations, altered perception, distorted time sense, spiritual experiences, and possible adverse reactions such as nausea and panic attacks
+- **Psilocybe cubensis**
+  - **Identity**
+    - species of psychedelic mushroom whose principal active compounds are psilocybin and psilocin
+  - **Common names**
+    - shrooms, magic mushrooms, golden tops, cubes, gold caps
+  - **Taxonomy**
+    - family Hymenogastraceae, previously known as Stropharia cubensis
+  - **Notability**
+    - the most well-known psilocybin mushroom, due to wide distribution and ease of cultivation
+- **Psilocybe azurescens**
+  - **Identity**
+    - psychedelic mushroom whose main active compounds are psilocybin and psilocin
+  - **Potency**
+    - up to 1.8% psilocybin, 0.5% psilocin, and 0.4% baeocystin by dry weight, averaging about 1.1% psilocybin and 0.15% psilocin — one of the strongest in the genus
+  - **Taxonomy**
+    - family Hymenogastraceae, order Agaricales
+- **Psilocybin mushroom**
+  - **Identity**
+    - polyphyletic group of mushrooms containing psilocybin, psilocin, and baeocystin, also called magic mushrooms or shrooms
+  - **Use**
+    - mainly used as an entheogen and recreational drug
+  - **Effects**
+    - euphoria, altered thinking, open- and closed-eye visuals, synesthesia, an altered sense of time, and spiritual experiences
+  - **Genera**
+    - Copelandia, Galerina, Gymnopilus, Inocybe, Mycena, Panaeolus, Pholiotina, Pluteus, and Psilocybe (100+ species)
+- **Psilocybe makarorae**
+  - **Identity**
+    - species of psilocybin mushroom in family Strophariaceae, described as new to science in 1995
+  - **Distribution**
+    - known only from New Zealand, growing on rotting wood and twigs of southern beeches
+  - **Appearance**
+    - brownish cap with lighter margins up to 3.5 cm wide, conical/bell-shaped/flat depending on age, prominent umbo, whitish stem without a true ring
+  - **Distinguishing features**
+    - distinguished from the similar North American Psilocybe caerulipes by microscopic characteristics — pleurocystidia and more elongated-necked cheilocystidia
+  - **Chemistry**
+    - presumed, based on its bluing reaction to injury, to contain psilocybin and psilocin
+- **Psilocybe**
+  - **Identity**
+    - genus of gilled mushrooms growing worldwide, best known for its psychedelic species
+  - **Active compounds**
+    - psilocybin, psilocin, and baeocystin, responsible for the psychoactive effects of many species in the genus
+- **Psilocybe medullosa**
+  - **Identity**
+    - species of psychoactive mushroom
+  - **Taxonomic history**
+    - originally described in 1898 as Naucoria medullosa by Giacomo Bresadola, transferred to Psilocybe in 2007 by Jan Borovička
+  - **Distribution**
+    - widespread but rare, found in Europe growing as a saprobe on woody debris and detritus
+  - **Chemistry**
+    - confirmed presence of psilocin and psilocybin, probably at low levels
+  - **Related species**
+    - Psilocybe silvatica, its American sister species, differs by subtle molecular markers
+- **Psilocybe meridionalis**
+  - **Identity**
+    - psychedelic mushroom with psilocybin and psilocin as main active compounds
+  - **Related species**
+    - closely related to Psilocybe stuntzii, distinguished by smaller spores and the presence of pleurocystidia
+  - **Distribution**
+    - the only species of Psilocybe section Stuntzii found in Mexico, known only from the type location in Neverias, Sierra de Cacoma, Jalisco

@@ -1,0 +1,50 @@
+- **Motivation**
+  - **Gap**
+    - prior seq2seq summarization models (e.g. BERT-initialized) pre-train only the encoder, leaving the decoder randomly initialized and limiting generation quality
+  - **Goal**
+    - pre-train both the encoder and the decoder of a seq2seq Transformer, then fine-tune it on labeled summarization pairs
+- **Related work**
+  - **Extractive summarization**
+    - ranks sentences via a binary classifier (LSTMs/CNNs, more recently pre-trained Transformers); limited by redundancy and length, and human summaries are naturally abstractive anyway
+  - **Abstractive summarization**
+    - prior seq2seq LSTM models (with copy mechanism, coverage, or reinforcement learning) barely beat a Lead-3 baseline, likely because LSTMs without pre-training are not powerful enough
+    - Liu et al. improved on this by initializing only the encoder with a pre-trained BERT — this paper extends that by pre-training the decoder as well
+  - **Pre-training**
+    - BERT, XLNet, and RoBERTa pre-train Transformer encoders only, using masked, permutation, or improved masked language modeling objectives
+    - UniLM pre-trains a full seq2seq model but shares encoder/decoder parameters, unlike this paper's separate-parameter design
+    - MASS masks a text span and predicts the original text including masked positions, targets sentence-level tasks (translation, compression); this paper's Masked Document Generation instead predicts text without masked tokens and targets document-level summarization
+- **STEP model**
+  - **Architecture**
+    - a. encoder — 24-layer Transformer, RoBERTa-Large-initialized, 16 attention heads, hidden size 1,024, feed-forward size 4,096
+    - b. decoder — shallower, 6-layer, randomly initialized, same hidden size and head count as the encoder but a smaller 2,048 feed-forward size to reduce compute/memory cost
+  - **Pre-training tasks**
+    - a. Sentence Reordering (SR)
+      - shuffles a document's sentences and trains the model to recover the original order — teaches multi-sentence coherence (since summaries span multiple sentences), content reordering (40% of training summaries reorder source content), and token copying (needed to preserve factual details)
+    - b. Next Sentence Generation (NSG)
+      - splits a document into two segments and predicts the second from the first, using an arbitrary split point rather than only sentence boundaries — this mismatches skip-thought vectors (single-sentence segments, encoder-only) and BERT's next-sentence-prediction (a classification task, not generation), and better matches summarization's truncated, possibly mid-sentence inputs
+    - c. Masked Document Generation (MDG)
+      - recovers a randomly sized, randomly positioned masked span using BERT-style 80/10/10 mask/random-token/unchanged substitution, rather than replacing the entire span with [MASK] — avoids a [MASK]-token train/inference mismatch, keeps the surrounding document comprehensible, and preserves copying ability
+    - all three tasks can also be mixed, randomly selecting one per training batch with 1/3 probability each (denoted ALL)
+  - **Fine-tuning**
+    - continues training the pre-trained model directly on labeled document-summary pairs, decoding with beam search
+- **Experimental setup**
+  - **Datasets**
+    - a. CNN/DailyMail — 287,226 training / 13,368 validation / 11,490 test pairs, non-anonymized version
+    - b. New York Times — 96,834 training / 4,000 validation / 3,452 test examples (test = articles from Jan 1, 2017 onward with summaries of 50+ words)
+    - c. GIGA-CM — 6.5M unlabeled documents (Gigaword + CNN/DailyMail training documents), used only for pre-training; NYT test set explicitly excluded to avoid leakage
+  - **Preprocessing**
+    - Stanford CoreNLP tokenization, GPT-2's UTF8 BPE for vocabulary reduction; documents truncated to 512 tokens and summaries to 256; pre-training spans masked/predicted at up to 256 tokens
+  - **Implementation**
+    - separate Adam optimizers for encoder (lr 2e-5) and decoder (lr 1e-4) during pre-training, both at 2e-5 during fine-tuning; batch sizes scaled to dataset size; beam search of size 5 with trigram-repeat blocking at inference
+  - **Evaluation**
+    - automatic full-length F1 ROUGE-1/2/L on CNN/DailyMail, limited-length recall ROUGE on NYT; human evaluation asked participants to rank 20 sampled CNN/DailyMail outputs by informativeness, fluency, and succinctness
+- **Results**
+  - **Automatic evaluation**
+    - a. all three pre-training tasks significantly improve over the RoBERTa-S2S baseline, whether pre-trained in-domain (CNN/DailyMail only) or on the larger GIGA-CM
+    - b. Sentence Reordering is the strongest single task; even pre-trained on only 230M in-domain words, STEP outperforms UniLM despite UniLM's 3,000M-word pre-training corpus
+    - c. randomly mixing all three tasks (ALL) tends to outperform any single task in the smaller in-domain setting, but Sentence Reordering alone wins once GIGA-CM is used
+    - d. the best STEP configuration beats the prior best published abstractive model by 0.8 ROUGE-2 on CNN/DailyMail and 2.4 ROUGE-2 on NYT, with differences of ±0.22 ROUGE treated as significant at p<0.05
+  - **Human evaluation**
+    - STEP (GIGA-CM pre-trained with SR) is ranked best in 25% of sampled cases and obtains the lowest mean rank of any system except human-written gold summaries; a paired t-test on converted ratings shows STEP significantly better than all compared systems (p<0.05), though it still lags behind human quality — plausibly because it, like the other systems, only sees the first 512 tokens of long documents
+- **Conclusion**
+  - jointly pre-training the encoder and decoder with sentence reordering, next sentence generation, and masked document generation improves abstractive summarization over strong pre-trained baselines, even without extra unlabeled data; adding large-scale unlabeled pre-training data (GIGA-CM) further improves results; future work targets additional pre-training tasks and unsupervised abstractive summarization

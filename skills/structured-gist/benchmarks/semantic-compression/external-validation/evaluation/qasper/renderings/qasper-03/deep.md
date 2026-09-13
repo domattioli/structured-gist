@@ -1,0 +1,39 @@
+- **Motivation**
+  - **Gap**
+    - ISIS research has understudied how propaganda specifically targets women, despite a documented tactical shift toward recruiting them for travel to the caliphate or domestic attacks
+  - **Approach**
+    - apply topic modeling and lexicon-based emotion detection to ISIS's women-targeted magazine articles, comparing them against a mainstream, non-violent religious group's material to establish what, if anything, is distinctive about extremist rhetoric aimed at women
+  - **Questions**
+    - a. what are the main topics in women-targeted articles in ISIS's online magazines
+    - b. what similarities or differences do these topics have with non-violent, non-Islamic religious material addressed to women
+    - c. what emotions do these articles evoke in readers, and are ISIS and non-violent materials similar in this respect
+- **Related work**
+  - **ISIS strategy research**
+    - prior work covers ISIS's origins, leadership, funding, and rise to prominence, and its unusually sophisticated, voluminous, and targeted use of social media — e.g. roughly 40,000 tweets in one day during the advance on Mosul, aided by an Arabic Twitter app that avoided spam detection
+  - **Propaganda content studies**
+    - Winter identified recurring propaganda themes (brutality, mercy, victimhood, war, belonging, utopianism); Al-Tamimi describes ISIS's propaganda as portraying justice, governance, and development to resonate with young Westerners; Ingram compared Dabiq to Al Qaeda's Inspire (finding ISIS more balanced between identity-choice and rational-choice framing) and Wignell et al. compared Dabiq and Rumiyah's style — but most of this work relies on expert judgment rather than lexical analysis; one exception used word frequency across 11 Dabiq issues on attributes like anger, anxiety, power, and motive
+  - **Gap addressed**
+    - despite roughly 10% of Western ISIS recruits in 2015 being estimated female, and prior work like Kneip framing women's motivation as a form of emancipation, little research has used text mining specifically on how propaganda targets women
+  - **Emotion detection background**
+    - lexicon-based and machine-learning emotion detection methods typically measure the emotion expressed in a text, which differs from the emotion evoked in its reader; propaganda effectiveness depends on the latter, motivating this paper's use of Depechemood over standard text-emotion methods
+- **Data**
+  - **ISIS corpus**
+    - 20 women-targeted articles pulled from Dabiq (7 of 15 issues) and Rumiyah (all 13 issues), identifiable largely by a "to our sisters" framing in the title — the shift to full coverage in Rumiyah suggests growing attention to women over time
+  - **Comparison corpus**
+    - 132 articles scraped from catholicwomensforum.org, an online Catholic women's resource — individually much shorter than the ISIS articles despite the larger article count
+  - **Pre-processing**
+    - PDF-to-text conversion, sentence tokenization, lowercasing, removal of non-word tokens/punctuation/stopwords; spaCy part-of-speech tagging is applied separately so a word's emotional value can be looked up for its specific grammatical role in each sentence
+- **Methods**
+  - **Content analysis**
+    - a. normalized word frequency comparison — simple but can be dominated by high-frequency words that convey little information
+    - b. topic modeling — LDA tried first but produced poorer topic coherence, likely due to the corpora's small size and niche domain; non-negative matrix factorization (NMF), which decomposes the document-term matrix into topic-word and topic-document matrices, is adopted instead and used for all reported topics (10 topics selected per corpus, based on coherence)
+  - **Emotion detection**
+    - Depechemood is a lexicon-based method built from about 23.5K crowd-annotated news documents (avg. 500 words each) from rappler.com, where readers reported their own emotional reactions; multiplying the resulting document-emotion and word-document matrices yields an emotion-word matrix, giving each word scores from 0 to 1 across 8 categories (afraid, amused, angry, annoyed, don't care, happy, inspired, sad); it is used because it approximates the emotion evoked in a reader rather than the emotion merely present in the text, which better matches the goal of assessing propaganda effectiveness
+- **Results**
+  - **Topics**
+    - a. ISIS: Islam, women's role in early Islam, hijrah (migration to the caliphate), spousal relations, marriage, and motherhood
+    - b. Catholic forum: substantially different topics overall, but marriage/divorce, motherhood, and (to some extent) spousal relations recur in both sets — suggesting these themes are broadly effective when addressing a religious female audience regardless of corpus size or ideology
+  - **Emotions**
+    - both ISIS and Catholic materials score highest on "inspired" and lowest on "afraid," a pattern that holds in every one of the 20 individual ISIS issues examined separately; a 100-article baseline of unrelated Reuters news scores lower on inspiration and higher on fear by comparison, suggesting the "inspire, don't frighten" pattern is specific to this kind of persuasive religious material; despite reaching the same emotional conclusion, the specific words driving the "inspired" score differ sharply between the ISIS and Catholic corpora
+- **Conclusion**
+  - ISIS's women-targeted propaganda and mainstream Catholic material converge on similar surface-level topics (motherhood, marriage, spousal relations) and an inspire-rather-than-frighten emotional strategy, despite drawing on very different vocabulary to achieve it — indicating that automated NLP analysis of large bodies of text can expose such structural similarities between extremist and mainstream rhetoric, offering novel insight for the counterterrorism community

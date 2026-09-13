@@ -1,0 +1,37 @@
+- **Feature slide recap**
+  - **Features listed**
+  - **Landmark-iness vs saliency**
+- **Belief-net rationale**
+  - **Flat structure rejected**
+  - **Middle layer added**
+  - **Output modes**
+- **JavaBayes demo**
+  - **Evidence set**
+  - **Query result**
+  - **Earlier failure**
+- **Enterable node test**
+  - **Motivating case**
+  - **Node added**
+  - **Tooling glitch**
+- **JavaBayes tool assessment**
+  - **Pros**
+  - **Cons**
+  - **Underlying format**
+- **Middle-layer regions plan**
+  - **Problem**
+  - **Proposed fix**
+  - **Worked example**
+- **SmartKom discourse model**
+  - **Role**
+  - **Query interface**
+- **Plan-recognition idea**
+  - Grad D suggests treating discourse cues as evidence for an underlying task plan, illustrated by inferring "Track seven" just from a traveler saying "New York" at a ticket counter.
+- **Ad-hoc probabilities**
+  - the group acknowledges all current probabilities are hand-guessed rather than learned from data, with some combinations nonsensical; real data is needed to fix this.
+- **Next steps**
+  - **Ask Srini**
+  - **Segment regions**
+- **Data collection plan**
+  - **Wizard**
+  - **First subject**
+  - **Rationale**

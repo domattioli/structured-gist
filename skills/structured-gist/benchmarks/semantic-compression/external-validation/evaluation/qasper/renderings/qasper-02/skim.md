@@ -1,0 +1,28 @@
+- **Motivation**
+  - **Problem**
+  - **Idea**
+- **Model**
+  - **Monolingual base**
+  - **Crosslingual coupling**
+  - **Approximation**
+  - **Advantages over titovcrosslingual**
+- **Inference & evaluation**
+  - **Inference**
+  - **Metric**
+  - **Baseline**
+- **Data**
+  - **Corpora**
+  - **Processing**
+- **Related work**
+  - **Crosslingual latent variables**
+  - **Semi-supervised transfer**
+  - **Monolingual unsupervised SRL**
+- **Results**
+  - **Monolingual training**
+  - **Adding Europarl (monolingual only)**
+  - **Multilingual (adding alignments)**
+  - **Train/test-split setting**
+  - **Labeled-data transfer**
+  - **Semi-supervised comparison**
+- **Conclusion**
+  - crosslingual latent variables give only small gains because too few arguments are aligned; small amounts of direct annotation are more cost-effective than scaling parallel data

@@ -1,0 +1,123 @@
+- **Bézout domain**
+  - **Definition**
+    - a form of Prüfer domain
+    - an integral domain in which the sum of two principal ideals is again principal
+      - so a Bézout identity holds for every pair of elements, and every finitely generated ideal is principal
+  - **Relation to PID**
+    - every PID is a Bézout domain
+    - a Bézout domain need not be Noetherian
+      - so it could have non-finitely generated ideals, which excludes it from being a PID
+  - **Relation to UFD/GCD domain**
+    - if not Noetherian, it is not a UFD
+      - but it is still a GCD domain
+  - **Theoretical standing**
+    - retains many PID properties without requiring the Noetherian property
+  - **Named after**
+    - Étienne Bézout, French mathematician
+- **Splitting of prime ideals in Galois extensions**
+  - **Core relationship**
+    - the interplay between the Galois group G of a Galois extension L of a number field K
+    - and how prime ideals P of the ring of integers O factor as products of prime ideals of O
+      - this is one of the richest parts of algebraic number theory
+  - **Also known as**
+    - Hilbert theory
+      - sometimes attributed to David Hilbert
+  - **Geometric analogue**
+    - ramified coverings of Riemann surfaces
+      - simpler because only one kind of subgroup of G need be considered, rather than two
+  - **Historical note**
+    - the geometric analogue was familiar before Hilbert
+- **Neo-libertarianism**
+  - **Definition**
+    - a political and social philosophy
+    - combines libertarian principles with present-day neoconservative principles
+  - **Core values**
+    - a. liberty as the main idea
+    - b. free expression
+    - c. freedom of choice and other social freedoms
+    - d. laissez-faire capitalism
+    - e. critical of authority
+  - **Divergence from libertarianism**
+    - differs from libertarians on government oversight
+      - many neo-libertarians sympathize with neoconservative ideas on authority, especially military action
+  - **American strand**
+    - believes in American exceptionalism
+    - supports interventionist policy to maintain America's importance in foreign relations
+- **Japanese aesthetics**
+  - **Study history**
+    - modern study only began a little over two hundred years ago, in the West
+  - **Core ideals**
+    - a. wabi — transient and stark beauty
+    - b. sabi — beauty of natural patina and aging
+    - c. yūgen — profound grace and subtlety
+  - **Cultural role**
+    - underpins much of Japanese cultural and aesthetic norms of taste and beauty
+  - **East/West distinction**
+    - seen as a philosophy in Western societies
+    - seen as an integral part of daily life in Japan
+  - **Current scope**
+    - now encompasses a variety of ideals
+    - some traditional, some modern and influenced by other cultures
+- **American exceptionalism**
+  - ideology that the United States is unique among nations in a positive way, particularly with respect to its ideals of democracy and personal freedom
+- **Massoud Foundation**
+  - **Identity**
+    - founded as the Ahmad Shah Massoud Foundation
+    - non-profit, non-governmental organization operating in Afghanistan
+  - **Founding**
+    - established in Kabul in 2003
+  - **Purpose**
+    - preserve and spread the values, leadership, and ideals of Ahmad Shah Massoud
+  - **About Massoud**
+    - the "Lion of the Panjshir"
+    - a founding father of the resistance against the Soviet invasion in the 1980s
+    - then against the Taliban and Al-Qaeda in the 1990s
+    - assassinated by Al-Qaeda two days before 9/11
+- **Hong Kong Democratic Foundation**
+  - **Identity**
+    - Hong Kong public policy think tank (HKDF)
+  - **Founding**
+    - established 27 October 1989, initially as a political party
+      - ahead of the first Legislative Council direct elections of 1991
+  - **Founders**
+    - a group of business people and professionals endorsing democratic ideals
+    - led by Jimmy McGregor and Dr Leong Che-hung
+  - **Evolution**
+    - later transformed into a think tank
+  - **Current leadership**
+    - chaired by Southern District Councillor Paul Zimmerman
+- **Islamic Foundation Bangladesh**
+  - **Identity**
+    - government organization under the Ministry of Religious Affairs in Bangladesh
+  - **Mission**
+    - disseminate values and ideals of Islam
+    - carry out related activities
+  - **Structure**
+    - a. head office in Dhaka
+    - b. 6 divisional offices
+    - c. 64 district offices
+    - d. 7 Imam Training Academy Centers
+    - e. 29 Islamic Mission Centers
+  - **Leadership**
+    - director general is the chief executive
+- **Mahatma Gandhi National Foundation**
+  - **Founding**
+    - founded in Kerala in December 2000
+  - **Aim**
+    - propagate the ideals and perpetuate the memory of Mahatma Gandhi, father of the nation
+  - **Mission**
+    - a mission of collective action to provide a better future for Kerala's most vulnerable sections
+      - women, children, disabled persons, the aged, and other disadvantaged groups
+  - **Means**
+    - a. educational training
+    - b. protecting health and environment
+    - c. improving living conditions
+    - d. strengthening family and community
+- **Cognitive dissonance**
+  - **Field**
+    - psychology
+  - **Definition**
+    - mental discomfort (psychological stress) from simultaneously holding two or more contradictory beliefs, ideas, or values
+  - **Triggers**
+    - a. performing an action that contradicts personal beliefs, ideals, and values
+    - b. confronting new information that contradicts said beliefs, ideals, and values
