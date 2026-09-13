@@ -29,7 +29,7 @@ jobs:
 
       - name: Upload deterministic results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: deterministic-results
           path: skills/structured-gist/benchmarks/semantic-compression/results/
