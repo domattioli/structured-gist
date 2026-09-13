@@ -1,0 +1,4459 @@
+{
+  "across_case_distribution": {
+    "max": 0.722778,
+    "mean": 0.45472,
+    "median": 0.485005,
+    "min": 0.18406,
+    "n": 8,
+    "q1": 0.350366,
+    "q3": 0.572292,
+    "values": [
+      0.18406,
+      0.197136,
+      0.401443,
+      0.458874,
+      0.511136,
+      0.563416,
+      0.59892,
+      0.722778
+    ]
+  },
+  "cases": {
+    "causality-heavy-explain": {
+      "case_effect_median": 0.197136,
+      "rendering_count": 1,
+      "renderings": {
+        "sonnet": {
+          "candidate_null_pair_count": 171,
+          "mean_order_score": 1,
+          "null_mean_distance": 5.0652,
+          "null_percentile_closer": 0.999,
+          "order_relation_count": 2,
+          "proximity_advantage": 0.197136,
+          "real_mean_distance": 4.066667,
+          "relation_count": 8,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 4,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 2,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ],
+                  "score": 1
+                }
+              ],
+              "order_score": 1,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f5",
+                    "f6"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f5",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f6",
+                    "f7"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 2,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f7",
+                    "f9"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 6,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f9",
+                    "f10"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f9",
+                    "f10"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 2.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f11",
+                    "f12"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r7",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f12",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r8",
+              "mean_distance": 5.066667,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ],
+                  "score": 1
+                },
+                {
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f18",
+                    "f19"
+                  ],
+                  "score": 1
+                },
+                {
+                  "fact_ids": [
+                    "f19",
+                    "f20"
+                  ],
+                  "score": 1
+                }
+              ],
+              "order_score": 1,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f15",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f15",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f15",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f15",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f16",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f16",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f16",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f17",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f17",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f18",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f18",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f19",
+                    "f20"
+                  ]
+                }
+              ],
+              "type": "causal"
+            }
+          ],
+          "rendering": "pressure-tests/causality-heavy-explain/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 30
+        }
+      },
+      "test_class": "pressure-tests"
+    },
+    "cause-chain-reversal": {
+      "case_effect_median": 0.18406,
+      "rendering_count": 2,
+      "renderings": {
+        "haiku": {
+          "candidate_null_pair_count": 91,
+          "mean_order_score": 1,
+          "null_mean_distance": 3.243636,
+          "null_percentile_closer": 0.956,
+          "order_relation_count": 1,
+          "proximity_advantage": 0.159193,
+          "real_mean_distance": 2.727273,
+          "relation_count": 6,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 1.333333,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f11",
+                    "f7"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f11",
+                    "f7"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": null,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f7",
+                    "f9"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 4,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f3",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f12",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 2,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ],
+                  "score": 1
+                }
+              ],
+              "order_score": 1,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 2.666667,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f15",
+                    "f20"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f15",
+                    "f20"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f7"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f7"
+                  ]
+                }
+              ],
+              "type": "temporal_order"
+            }
+          ],
+          "rendering": "pressure-tests/cause-chain-reversal/renderings/haiku/standard.md",
+          "scorable_proximity_pair_count": 11
+        },
+        "sonnet": {
+          "candidate_null_pair_count": 190,
+          "mean_order_score": 1,
+          "null_mean_distance": 5.651294,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 1,
+          "proximity_advantage": 0.208927,
+          "real_mean_distance": 4.470588,
+          "relation_count": 6,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f11",
+                    "f7"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f10",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f11",
+                    "f7"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 2.666667,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ],
+                  "score": 1
+                },
+                {
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": 1,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f9"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 4.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f3",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f3",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f3",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f12",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 6,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f15",
+                    "f20"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f4",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f15",
+                    "f20"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 6,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f7"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f4",
+                    "f7"
+                  ]
+                }
+              ],
+              "type": "temporal_order"
+            }
+          ],
+          "rendering": "pressure-tests/cause-chain-reversal/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 17
+        }
+      },
+      "test_class": "pressure-tests"
+    },
+    "migration-tristate": {
+      "case_effect_median": 0.401443,
+      "rendering_count": 2,
+      "renderings": {
+        "haiku": {
+          "candidate_null_pair_count": 120,
+          "mean_order_score": null,
+          "null_mean_distance": 4.098417,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.430674,
+          "real_mean_distance": 2.333333,
+          "relation_count": 6,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f1",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f8",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f8",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f9",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f9",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f7",
+                    "f10"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1.333333,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f13",
+                    "f11"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f11",
+                    "f14"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f13",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 3,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f1",
+                    "f2"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f1",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f1",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 1.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f7",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f7",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f19",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f19",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f19",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f16",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            }
+          ],
+          "rendering": "pressure-tests/migration-tristate/renderings/haiku/standard.md",
+          "scorable_proximity_pair_count": 24
+        },
+        "sonnet": {
+          "candidate_null_pair_count": 171,
+          "mean_order_score": null,
+          "null_mean_distance": 5.42763,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.372211,
+          "real_mean_distance": 3.407407,
+          "relation_count": 6,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f1",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 3.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f8",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f8",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f9",
+                    "f7"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f9",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f10"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 2.666667,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f13",
+                    "f11"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f11",
+                    "f14"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f13",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 4,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f1",
+                    "f2"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f1",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f1",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f2",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f2",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 5.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f7",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f7",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f19",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f19",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f19",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f16",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            }
+          ],
+          "rendering": "pressure-tests/migration-tristate/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 27
+        }
+      },
+      "test_class": "pressure-tests"
+    },
+    "near-identical-numbers": {
+      "case_effect_median": 0.458874,
+      "rendering_count": 1,
+      "renderings": {
+        "sonnet": {
+          "candidate_null_pair_count": 91,
+          "mean_order_score": null,
+          "null_mean_distance": 3.478588,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.458874,
+          "real_mean_distance": 1.882353,
+          "relation_count": 6,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 4,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f1",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 1.333333,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f3",
+                    "f1"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f1"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1.333333,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f7",
+                    "f5"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f5",
+                    "f8"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f7",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f7",
+                    "f8"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f5",
+                    "f8"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 1.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f9",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f9",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 2.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f6"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f1"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f6",
+                    "f1"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f6",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f1",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 0,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                }
+              ],
+              "type": "causal"
+            }
+          ],
+          "rendering": "regression/near-identical-numbers/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 17
+        }
+      },
+      "test_class": "regression"
+    },
+    "negation-and-true-peers": {
+      "case_effect_median": 0.59892,
+      "rendering_count": 1,
+      "renderings": {
+        "sonnet": {
+          "candidate_null_pair_count": 190,
+          "mean_order_score": null,
+          "null_mean_distance": 3.56181,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.59892,
+          "real_mean_distance": 1.428571,
+          "relation_count": 4,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 1,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f13",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f13",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f13",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f14",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f14",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 2.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f8",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f8",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f8",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f10"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f17",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f17",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f18",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f18",
+                    "f20"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f19",
+                    "f20"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 0,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f1",
+                    "f2"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f1",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            }
+          ],
+          "rendering": "pressure-tests/negation-and-true-peers/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 21
+        }
+      },
+      "test_class": "pressure-tests"
+    },
+    "real-benchmark-archaeology": {
+      "case_effect_median": 0.511136,
+      "rendering_count": 1,
+      "renderings": {
+        "sonnet": {
+          "candidate_null_pair_count": 253,
+          "mean_order_score": null,
+          "null_mean_distance": 5.1139,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.511136,
+          "real_mean_distance": 2.5,
+          "relation_count": 6,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 3.833333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 5,
+                  "fact_ids": [
+                    "f3",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f3",
+                    "f6"
+                  ]
+                },
+                {
+                  "distance": 5,
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 6,
+                  "fact_ids": [
+                    "f4",
+                    "f6"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f5",
+                    "f6"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 1.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f11",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f14",
+                    "f13"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f14",
+                    "f13"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 2,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f13",
+                    "f15"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ],
+                  "score": null
+                },
+                {
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f13",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f13",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f13",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f15",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 4,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f19",
+                    "f18"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f19",
+                    "f18"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r6",
+              "mean_distance": null,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [],
+              "type": "contrast_supersession"
+            }
+          ],
+          "rendering": "regression/real-benchmark-archaeology/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 20
+        }
+      },
+      "test_class": "regression"
+    },
+    "real-hook-discovery": {
+      "case_effect_median": 0.722778,
+      "rendering_count": 1,
+      "renderings": {
+        "sonnet": {
+          "candidate_null_pair_count": 105,
+          "mean_order_score": null,
+          "null_mean_distance": 4.637857,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.722778,
+          "real_mean_distance": 1.285714,
+          "relation_count": 5,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 0,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f1",
+                    "f2"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f1",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f1",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 0,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f5",
+                    "f6"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f5",
+                    "f6"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                }
+              ],
+              "type": "temporal_order"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 2.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f11",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f11",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 3.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f14",
+                    "f15"
+                  ]
+                }
+              ],
+              "type": "causal"
+            }
+          ],
+          "rendering": "regression/real-hook-discovery/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 14
+        }
+      },
+      "test_class": "regression"
+    },
+    "synthetic-scale-verylarge": {
+      "case_effect_median": 0.563416,
+      "rendering_count": 2,
+      "renderings": {
+        "haiku": {
+          "candidate_null_pair_count": 630,
+          "mean_order_score": null,
+          "null_mean_distance": 5.405473,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.573082,
+          "real_mean_distance": 2.307692,
+          "relation_count": 12,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 2,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f6",
+                    "f5"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f6",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 2.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f2"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f4",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f14",
+                    "f15"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 2.285714,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f2",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f2",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f2",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f2",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f2",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f3",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f3",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f3",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f3",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f3",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f4",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f4",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f4",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f4",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f4",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f5",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f5",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f5",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f5",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f5",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f5",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f14",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f14",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f14",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f14",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f14",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f15",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f15",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f15",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f16",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f16",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f17",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f18",
+                    "f19"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 2,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 1.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f10",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f11",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f11",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 1.5,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f22",
+                    "f24"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f22",
+                    "f25"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f22",
+                    "f26"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f24",
+                    "f25"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f24",
+                    "f26"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f25",
+                    "f26"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r7",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f23",
+                    "f27"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f23",
+                    "f28"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f27",
+                    "f28"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r8",
+              "mean_distance": 1.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f29",
+                    "f30"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f29",
+                    "f31"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f29",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f29",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f29",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f31"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f31",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f31",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f31",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f32",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f32",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f33",
+                    "f34"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r9",
+              "mean_distance": 2.952381,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f31"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f30",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f31",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f31",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f31",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f32",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f32",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f33",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f33",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f33",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f34",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f34",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f35",
+                    "f36"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r10",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f40",
+                    "f41"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f40",
+                    "f42"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f41",
+                    "f42"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r11",
+              "mean_distance": null,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f44",
+                    "f38"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f44",
+                    "f45"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f38",
+                    "f45"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r12",
+              "mean_distance": 3.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f41",
+                    "f42"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f41",
+                    "f43"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f42",
+                    "f43"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            }
+          ],
+          "rendering": "pressure-tests/synthetic-scale-verylarge/renderings/haiku/standard.md",
+          "scorable_proximity_pair_count": 91
+        },
+        "sonnet": {
+          "candidate_null_pair_count": 861,
+          "mean_order_score": null,
+          "null_mean_distance": 4.743225,
+          "null_percentile_closer": 1.0,
+          "order_relation_count": 0,
+          "proximity_advantage": 0.553749,
+          "real_mean_distance": 2.116667,
+          "relation_count": 12,
+          "relations": [
+            {
+              "id": "r1",
+              "mean_distance": 0,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f6",
+                    "f5"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f6",
+                    "f5"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r2",
+              "mean_distance": 1.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f2"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f7",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f14",
+                    "f15"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            },
+            {
+              "id": "r3",
+              "mean_distance": 1.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f3"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f2",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f2",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f2",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f4"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f3",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f3",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f3",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f5"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f4",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f4",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f4",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f5",
+                    "f14"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f5",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f5",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f5",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f5",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f5",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f14",
+                    "f15"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f14",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f14",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f14",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f14",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f15",
+                    "f16"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f15",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f15",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f15",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f16",
+                    "f17"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f16",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f16",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f17",
+                    "f18"
+                  ]
+                },
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f17",
+                    "f19"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f18",
+                    "f19"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r4",
+              "mean_distance": 0,
+              "order_pairs": [
+                {
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ],
+                  "score": null
+                }
+              ],
+              "order_score": null,
+              "ordered": true,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f8",
+                    "f9"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r5",
+              "mean_distance": 0,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f11"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f10",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f12"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f11",
+                    "f13"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f12",
+                    "f13"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r6",
+              "mean_distance": 1.833333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 3,
+                  "fact_ids": [
+                    "f22",
+                    "f24"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f22",
+                    "f25"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f22",
+                    "f26"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f24",
+                    "f25"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f24",
+                    "f26"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f25",
+                    "f26"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r7",
+              "mean_distance": 2.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f23",
+                    "f27"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f23",
+                    "f28"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f27",
+                    "f28"
+                  ]
+                }
+              ],
+              "type": "dependency"
+            },
+            {
+              "id": "r8",
+              "mean_distance": 3.333333,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f29",
+                    "f30"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f29",
+                    "f31"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f29",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f29",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f29",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f31"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f33",
+                    "f34"
+                  ]
+                }
+              ],
+              "type": "comparative_outcome"
+            },
+            {
+              "id": "r9",
+              "mean_distance": 3.809524,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f31"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f30",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f32"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f31",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f33"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f32",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f33",
+                    "f34"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f33",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f33",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f34",
+                    "f35"
+                  ]
+                },
+                {
+                  "distance": 4,
+                  "fact_ids": [
+                    "f34",
+                    "f36"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f35",
+                    "f36"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r10",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f40",
+                    "f41"
+                  ]
+                },
+                {
+                  "distance": null,
+                  "fact_ids": [
+                    "f40",
+                    "f42"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f41",
+                    "f42"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r11",
+              "mean_distance": 0.666667,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f44",
+                    "f38"
+                  ]
+                },
+                {
+                  "distance": 0,
+                  "fact_ids": [
+                    "f44",
+                    "f45"
+                  ]
+                },
+                {
+                  "distance": 1,
+                  "fact_ids": [
+                    "f38",
+                    "f45"
+                  ]
+                }
+              ],
+              "type": "causal"
+            },
+            {
+              "id": "r12",
+              "mean_distance": 2,
+              "order_pairs": [],
+              "order_score": null,
+              "ordered": false,
+              "proximity_pairs": [
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f41",
+                    "f42"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f41",
+                    "f43"
+                  ]
+                },
+                {
+                  "distance": 2,
+                  "fact_ids": [
+                    "f42",
+                    "f43"
+                  ]
+                }
+              ],
+              "type": "contrast_supersession"
+            }
+          ],
+          "rendering": "pressure-tests/synthetic-scale-verylarge/renderings/sonnet/standard.md",
+          "scorable_proximity_pair_count": 120
+        }
+      },
+      "test_class": "pressure-tests"
+    }
+  },
+  "design": {
+    "case_rollup": "median rendering proximity advantage",
+    "corpus_wide_p_value": null,
+    "effect_size": "(null_mean_distance - real_mean_distance) / null_mean_distance",
+    "independent_case_count": 8,
+    "level": "standard",
+    "multi_node_aggregation": "minimum path-combination distance",
+    "order_partial_credit": "mean pass rate across eligible consecutive ordinal-sibling pairs",
+    "permutations_per_rendering": 1000,
+    "tree_distance": "edge count via LCA"
+  },
+  "limitations": [
+    "Effective independent n is about eight cases, not the relation-instance count.",
+    "Shared endpoints within a rendering remain dependent.",
+    "Corpus grammar non-conformance can confound a null result.",
+    "Topic-based source sections can make proximity restate topical grouping."
+  ]
+}
