@@ -1,9 +1,9 @@
-- Domain migration: mindmatterbh.com Squarespace → Cloudflare Pages
+- Domain migration: deeznutz.com Squarespace → Cloudflare Pages
     ▸ Current state
-        a. old site: Squarespace at mindmatterbh.com (live)
-        b. new site: Cloudflare Pages (mindmatter-bh.pages.dev)
+        a. old site: Squarespace at deeznutz.com (live)
+        b. new site: Cloudflare Pages (deeznutz.pages.dev)
         c. same CF account hosts personal site (do not touch)
-    ▸ Registrar for mindmatterbh.com
+    ▸ Registrar for deeznutz.com
         ↪ unconfirmed — must identify in Step 1
         a. Squarespace Domains (site built there, most likely)
         b. Google Domains legacy (possible)
@@ -34,10 +34,10 @@
         ↪ before cutover, lower TTLs if possible on
           current DNS host
     ▸ Step 4: Add custom domains in Cloudflare
-        ↪ Cloudflare Pages UI > mindmatter-bh > Custom
+        ↪ Cloudflare Pages UI > deeznutz > Custom
           domains
-        a. add mindmatterbh.com
-        b. add www.mindmatterbh.com
+        a. add deeznutz.com
+        b. add www.deeznutz.com
         c. apply prescribed DNS changes
     ▸ Step 5: Verify cutover
         a. apex + www resolve to new site over HTTPS

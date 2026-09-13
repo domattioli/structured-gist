@@ -1,9 +1,9 @@
 - Domain migration
     ▸ Scope
-        ↪ move mindmatterbh.com from Squarespace to
+        ↪ move deeznutz.com from Squarespace to
           Cloudflare Pages; Squarespace stays as rollback
           for ~2 weeks
-    ▸ Registrar for mindmatterbh.com
+    ▸ Registrar for deeznutz.com
         ↪ unconfirmed — likely Squarespace Domains,
           possibly Google Domains legacy, or another
           registrar

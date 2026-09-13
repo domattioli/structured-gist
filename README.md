@@ -29,16 +29,12 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## 1. Motivation
 
-Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression reduces filler,<sup><a href="https://github.com/JuliusBrussee/caveman">[1]</a></sup> but does not necessarily restructure the ideas into human readable format. Other mechanisms focus on rephrasing the prose,<sup><a href="https://github.com/gvzdv/claudish-to-english">[2]</a></sup> but their unstructured output are still vulnerable to the same noisy filler.
+Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganizing it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
 
 What's missing is structure: concept, sub-concept, and the relationship between them. This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
  
 `structured-gist` renders that decomposition as an explicit tree instead of a paragraph the reader has to parse for it. We can't get rid of the AI slop, but we can push it to the peripheries and help you get to the gist faster.
-<em>
-> [1] [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)
->
-> [2] [gvzdv/claudish-to-english](https://github.com/gvzdv/claudish-to-english)
-> </em>
+
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 2. Method
@@ -106,16 +102,16 @@ Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline thi
 
 ## 5. Benchmarks
 
-Representative measurements from the skill's version history. Each row evaluates a different kind of change, so results should be read independently rather than as a single trend. See the [full benchmark ledger](skills/structured-gist/tests/benchmark.md) for methodology and complete history.
+Representative measurements from the skill's version history, one metric per column so values in the same column can be compared across versions. Most versions only exercise one metric, so most cells are blank by design (`—`) — a filled cell means that version measured that metric. See the [full benchmark ledger](skills/structured-gist/tests/benchmark.md) for methodology and complete history.
 
-| Version | Evaluation | Metric | Measured result | Interpretation |
-|---|---|---|---|---|
-| v0.2.9 | Dense paragraph vs. skim outline (same content) | Word count | **147 → 88 words (-40.1%)** | — |
-| v0.3.7 | Block mode vs. responsive mode (same tree) | Word count | **19 → 24 words (+26.3%)** | GFM bullet-token artifact; not a regression. |
-| v0.4.0 | Direct prompt vs. experimental KG mode (20-source corpus) | Outline-quality composite (retention × robustness × brevity) | **0.549 → 0.760** | KG mode wins structure but loses retention; not shipped. See [Future work](#7-future-work). |
-| v0.4.2 | Linter rule coverage | Rules gated / tests passing | **11 → 15 rules; 33 → 46 tests** | — |
-| v0.4.3 | Rename and trigger-phrase expansion | Tests passing | **46 → 63** | No rule-logic change. |
-| Eval only (#10) | Semantic-compression suite | Weighted retention (skim → standard → deep) | **0.37 → 0.89 → 0.99** | 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8 and Haiku on 3/8, with a full-suite Opus 5 run planned this weekend.<br>Compression correlated *negatively* with usefulness (**r = -0.75**), so it remains a separate reported cost rather than part of the quality score. |
+| Version | Word count | Outline-quality composite | Rules gated | Tests passing | Weighted retention (skim → standard → deep) | Notes |
+|---|---|---|---|---|---|---|
+| v0.2.9 | **147 → 88 (-40.1%)** | — | — | — | — | Dense paragraph vs. skim outline, same content. |
+| v0.3.7 | **19 → 24 (+26.3%)** | — | — | — | — | Block mode vs. responsive mode, same tree; GFM bullet-token artifact, not a regression. |
+| v0.4.0 | — | **0.549 → 0.760** | — | — | — | Direct prompt vs. experimental KG mode, 20-source corpus; KG mode wins structure but loses retention. Not shipped — see [Future work](#7-future-work). |
+| v0.4.2 | — | — | **11 → 15** | **33 → 46** | — | Linter rule coverage. |
+| v0.4.3 | — | — | — | **46 → 63** | — | Rename and trigger-phrase expansion; no rule-logic change. |
+| Eval only (#10) | — | — | — | — | **0.37 → 0.89 → 0.99** | Semantic-compression suite: 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8, Haiku on 3/8, full-suite Opus 5 run planned. Compression correlated *negatively* with usefulness (**r = -0.75**), so it is reported as a separate cost, never blended into the quality score. |
 
 Word count, rule/test coverage, and semantic retention (`skills/structured-gist/benchmarks/semantic-compression/`) are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
 
@@ -125,17 +121,17 @@ Word count, rule/test coverage, and semantic retention (`skills/structured-gist/
 ### Before (source)
 
 ```
-Task: migrate the domain mindmatterbh.com from the old Squarespace site to an
+Task: migrate the domain deeznutz.com from the old Squarespace site to an
 already-deployed Cloudflare Pages site. Guide me click-by-click; I'll be
 logged into the relevant dashboards and can screen-share tabs.
 
 Context:
-- New site: Cloudflare Pages project "mindmatter-bh", live at
-  https://mindmatter-bh.pages.dev (direct wrangler uploads, not git-connected).
-  Cloudflare account name: [account name redacted].
+- New site: Cloudflare Pages project "deeznutz", live at
+  https://deeznutz.pages.dev (direct wrangler uploads, not git-connected).
+  Cloudflare account name: personal-account.
 - CRITICAL: the same Cloudflare account also hosts my personal site (project
-  [name redacted] / [redacted]). Do not touch that project or its DNS.
-- Old site: Squarespace, still live at mindmatterbh.com. It must remain
+  "personal-portfolio" / personal-portfolio.pages.dev). Do not touch that project or its DNS.
+- Old site: Squarespace, still live at deeznutz.com. It must remain
   intact as a rollback target for ~2 weeks after cutover. Prefer a DNS-record
   cutover I can revert in minutes; avoid destructive steps (do not cancel the
   Squarespace subscription, do not delete the Squarespace site, do not
@@ -145,7 +141,7 @@ Context:
   identifying it with me (whois + what the Squarespace/Domains dashboard shows).
 
 What I need from you, in order:
-1. Identify registrar + current DNS host for mindmatterbh.com; list current
+1. Identify registrar + current DNS host for deeznutz.com; list current
    DNS records so we have a written rollback snapshot before changing anything.
 2. Decide the cleanest path for pointing apex + www at the Pages project.
    Constraint check: if the DNS stays at Squarespace, confirm whether its DNS
@@ -155,11 +151,11 @@ What I need from you, in order:
    and note that this weakens the "instant rollback" property - tell me the
    actual rollback procedure and time for whichever path we take.
 3. Lower TTLs first if the current host allows it.
-4. In Cloudflare Pages > mindmatter-bh > Custom domains: add mindmatterbh.com
-   and www.mindmatterbh.com, then make the DNS changes it prescribes.
+4. In Cloudflare Pages > deeznutz > Custom domains: add deeznutz.com
+   and www.deeznutz.com, then make the DNS changes it prescribes.
 5. Verify: apex + www resolve to the new site over HTTPS, cert issued,
    http->https and www/apex canonicalization work, and
-   https://mindmatterbh.com/about (extensionless) returns 200.
+   https://deeznutz.com/about (extensionless) returns 200.
 6. Give me the exact rollback steps as a saved note, and remind me to submit
    the sitemap in Google Search Console after cutover.
 
@@ -174,10 +170,10 @@ accepted - launch decision is mine.
 ```text
 - Domain migration
     ▸ Scope
-        ↪ move mindmatterbh.com from Squarespace to
+        ↪ move deeznutz.com from Squarespace to
           Cloudflare Pages; Squarespace stays as rollback
           for ~2 weeks
-    ▸ Registrar for mindmatterbh.com
+    ▸ Registrar for deeznutz.com
         ↪ unconfirmed — likely Squarespace Domains,
           possibly Google Domains legacy, or another
           registrar
@@ -216,9 +212,9 @@ accepted - launch decision is mine.
 ```
 
 **Metrics:**
-- Source: 384 words
+- Source: 381 words
 - Rendering: 192 words
-- Compression: 50.0%
+- Compression: 49.6%
 
 **Key structure:**
 - The registrar hedge is encoded as an attribute node (`▸`) with the uncertainty hedge on the node itself
