@@ -371,6 +371,10 @@ def lint_text(text: str) -> List[Violation]:
                     break
             parent_info[lineno] = (parent_depth, parent_family)
 
+    # FR-003a rule-identifier allocation:
+    # R16 = depth-indent rule (issue #6)
+    # R17 = comma-split rule (issue #9)
+
     # R1: ladder-by-depth (NEW: bullet invalid at all depths, arrow valid at any depth, attr valid at depth>=1)
     for lineno, depth, family, _text, _line in parsed:
         valid_families = set()
@@ -706,6 +710,35 @@ def lint_text(text: str) -> List[Violation]:
         first_word = concept_text.split()[0].lower() if concept_text.split() else ''
         if first_word in count_words_set:
             violations.append((lineno, 'R15', f"concept '{concept_text}' starts with a count-word ('{first_word}') — remove the count and keep only the noun"))
+
+    # R16: depth-indent rule — an enumerator (uroman, ualpha, lroman, lalpha) or
+    # arrow/explanation (arrow) child must be nested strictly deeper than its attribute
+    # parent. For any such node, find the nearest preceding node at lower-or-equal depth
+    # that is an attribute (attr) family — that attribute MUST be at strictly lower depth
+    # than the enumerator/arrow node. If the nearest ancestor is an attribute at the same
+    # depth, report R16.
+    for i, (lineno, depth, family, _text, _line) in enumerate(parsed):
+        if family not in ('uroman', 'ualpha', 'lroman', 'lalpha', 'arrow'):
+            continue # only check enumerator and arrow families
+
+        # Find the nearest preceding node at depth <= current depth
+        nearest_lower_ancestor = None
+        nearest_lower_ancestor_depth = None
+        nearest_lower_ancestor_family = None
+        for j in range(i - 1, -1, -1):
+            prev_lineno, prev_depth, prev_family, _, _ = parsed[j]
+            if prev_depth <= depth:
+                nearest_lower_ancestor = prev_lineno
+                nearest_lower_ancestor_depth = prev_depth
+                nearest_lower_ancestor_family = prev_family
+                break
+
+        # If the nearest ancestor at lower-or-equal depth is an attribute at the same depth,
+        # report R16 (enumerator/arrow must be deeper than its attribute parent)
+        if (nearest_lower_ancestor_family == 'attr' and
+            nearest_lower_ancestor_depth == depth):
+            violations.append((lineno, 'R16',
+                f"enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth {depth})"))
 
     return violations
 

@@ -440,7 +440,7 @@
       "deep": {
         "compression_ratio": 0.9239,
         "conformance_clean": false,
-        "conformance_violation_count": 6,
+        "conformance_violation_count": 10,
         "conformance_violations": [
           {
             "line": 24,
@@ -471,6 +471,26 @@
             "line": 26,
             "message": "2 mid-line arrows chain multiple facts under one marker \u2014 nest each as a child",
             "rule": "R9"
+          },
+          {
+            "line": 7,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          },
+          {
+            "line": 12,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          },
+          {
+            "line": 17,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          },
+          {
+            "line": 22,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
           }
         ],
         "is_block_mode": true,
@@ -493,7 +513,7 @@
       "standard": {
         "compression_ratio": 0.5797,
         "conformance_clean": false,
-        "conformance_violation_count": 7,
+        "conformance_violation_count": 11,
         "conformance_violations": [
           {
             "line": 16,
@@ -529,6 +549,26 @@
             "line": 18,
             "message": "2 mid-line arrows chain multiple facts under one marker \u2014 nest each as a child",
             "rule": "R9"
+          },
+          {
+            "line": 5,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          },
+          {
+            "line": 8,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          },
+          {
+            "line": 11,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          },
+          {
+            "line": 14,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
           }
         ],
         "is_block_mode": true,

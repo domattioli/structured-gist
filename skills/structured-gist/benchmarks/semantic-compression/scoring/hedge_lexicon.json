@@ -1,0 +1,154 @@
+{
+  "_status": "DRAFT — pending supervising-operator review per FR-007a; MUST NOT be used to score any case before that review is recorded",
+  "modal_verbs": {
+    "citation": "Hyland, K. (2005). Metadiscourse in Academic Writing: Defining the discipline. Journal of English for Academic Purposes, 4(2), 95-113. http://dx.doi.org/10.1016/j.jeap.2004.07.001",
+    "description": "Epistemic modal verbs that express possibility, probability, or conditionality in place of direct assertion",
+    "terms": [
+      "may",
+      "might",
+      "could",
+      "can",
+      "would",
+      "should",
+      "shall"
+    ]
+  },
+  "epistemic_adverbs": {
+    "citation": "Lakoff, G. (1973). Hedges: A study in meaning criteria and the logic of fuzzy concepts. Journal of Philosophical Logic, 2(4), 458-508. https://doi.org/10.1007/BF00262952",
+    "description": "Adverbs that modify the degree of certainty or likelihood of a proposition, central to Lakoff's foundational hedging theory",
+    "terms": [
+      "likely",
+      "probably",
+      "possibly",
+      "perhaps",
+      "presumably",
+      "arguably",
+      "apparently",
+      "seemingly",
+      "relatively",
+      "somewhat",
+      "rather",
+      "quite"
+    ]
+  },
+  "approximators": {
+    "citation": "Kilicoglu, H., & Bergler, S. (2011). Adapting a general semantic web extraction system to biomedical texts. In Proceedings of the International Workshop on BioNLP: Shared Task (p. 92-100). Association for Computational Linguistics.",
+    "description": "Approximative terms that hedge by indicating estimates, ranges, or non-precise quantities rather than exact assertions",
+    "terms": [
+      "approximately",
+      "roughly",
+      "about",
+      "around",
+      "almost",
+      "some",
+      "several",
+      "many",
+      "more or less",
+      "sort of",
+      "kind of",
+      "in the region of",
+      "in the order of",
+      "on the order of"
+    ]
+  },
+  "evidential_frames": {
+    "citation": "Vincze, V., Szarvas, G., Farkas, R., Móra, G., & Csirik, J. (2008). The Szeged Corpus: A tagged database of clinical narratives. In Proceedings of the International Conference on Language Resources and Evaluation (LREC) (p. 661-666).",
+    "description": "Hedging frames that attribute statements to sources, reports, or subjective interpretation rather than asserting them directly",
+    "terms": [
+      "it seems",
+      "it appears",
+      "it seems that",
+      "it appears that",
+      "reportedly",
+      "allegedly",
+      "purportedly",
+      "according to",
+      "supposedly",
+      "it is believed",
+      "it is thought",
+      "it is suggested",
+      "it is argued",
+      "it has been claimed",
+      "as if"
+    ]
+  },
+  "knowledge_shields": {
+    "citation": "Hyland, K. (1998). Hedging in Scientific Research Articles. John Benjamins Publishing Company. https://doi.org/10.1075/pbns.54",
+    "description": "Explicit expressions of limited knowledge, uncertainty, or gaps in understanding that hedge assertions about facts or causality",
+    "terms": [
+      "in general",
+      "for the most part",
+      "by and large",
+      "to some extent",
+      "in some ways",
+      "I think",
+      "I believe",
+      "I would suggest",
+      "I would argue",
+      "it is possible that",
+      "it is conceivable that",
+      "one might argue",
+      "it is unclear",
+      "it is uncertain",
+      "to my knowledge",
+      "as far as I know",
+      "it seems likely that"
+    ]
+  },
+  "tentative_language": {
+    "citation": "Salager-Meyer, F. (1994). Hedges and textual communicative function in medical English written discourse. English for Specific Purposes, 13(2), 149-170. https://doi.org/10.1016/0889-4906(94)90013-2",
+    "description": "Adjectives and constructions that reduce commitment to claims by marking them as tentative, preliminary, or subject to revision",
+    "terms": [
+      "tentative",
+      "provisional",
+      "preliminary",
+      "proposed",
+      "supposed",
+      "alleged",
+      "claimed",
+      "apparent",
+      "seeming",
+      "possible",
+      "potential",
+      "apparent",
+      "putative",
+      "so-called"
+    ]
+  },
+  "quantifier_hedges": {
+    "citation": "Marín, R. (2010). Gradability and Measurement Construals in Natural Language. Cambridge Scholars Publishing. ISBN: 978-1-4438-2218-2",
+    "description": "Quantified expressions that hedge by restricting scope or applying domain-limiting modifiers to statements",
+    "terms": [
+      "some of",
+      "many of",
+      "several of",
+      "most of",
+      "a few",
+      "a number of",
+      "an amount of",
+      "in part",
+      "partially",
+      "in certain cases",
+      "in some respects",
+      "to varying degrees"
+    ]
+  },
+  "negation_hedges": {
+    "citation": "Hyland, K. (2005). Metadiscourse in Academic Writing: Defining the discipline. Journal of English for Academic Purposes, 4(2), 95-113. http://dx.doi.org/10.1016/j.jeap.2004.07.001",
+    "description": "Negative or restrictive formulations that hedge by framing statements narrowly rather than broadly",
+    "terms": [
+      "is not necessarily",
+      "is not always",
+      "is not entirely",
+      "may not be",
+      "cannot be",
+      "is not clear",
+      "is not established",
+      "fails to",
+      "does not appear to",
+      "doubt",
+      "question",
+      "questionable"
+    ]
+  }
+}

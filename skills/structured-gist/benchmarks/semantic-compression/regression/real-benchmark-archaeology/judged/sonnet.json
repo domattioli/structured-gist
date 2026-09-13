@@ -438,6 +438,390 @@
         "source_supported": true
       }
     ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            [
+              "Original metric",
+              "Definition"
+            ]
+          ]
+        },
+        "f10": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Results",
+              "direct-prompt composite 0.5488"
+            ]
+          ]
+        },
+        "f11": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Results",
+              "KG composite 0.7604, robustness 1.0"
+            ]
+          ]
+        },
+        "f12": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Results",
+              "KG composite 0.7604, robustness 1.0"
+            ]
+          ]
+        },
+        "f13": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Results",
+              "KG retention 0.7608 vs 0.8285"
+            ]
+          ]
+        },
+        "f14": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Results",
+              "KG retention 0.7608 vs 0.8285",
+              "lower \u2014 stricter word budgets dropped real content"
+            ]
+          ]
+        },
+        "f15": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Verdict",
+              "\"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006"
+            ]
+          ]
+        },
+        "f16": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Verdict",
+              "\"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006"
+            ]
+          ]
+        },
+        "f17": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Verdict",
+              "\"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006"
+            ]
+          ]
+        },
+        "f18": {
+          "located": [
+            [
+              "Missing scoring code",
+              "What's absent",
+              "compare_corpus.py, score_outline.py, the 20-source corpus"
+            ]
+          ]
+        },
+        "f19": {
+          "located": [
+            [
+              "Missing scoring code",
+              "Cause",
+              "lived in a private upstream repo; stripped by sync commits into this scaffold"
+            ]
+          ]
+        },
+        "f2": {
+          "located": [
+            [
+              "Original metric",
+              "Definition",
+              "wall-clock time to locate one fact: outline scan vs prose read"
+            ]
+          ]
+        },
+        "f20": {
+          "omitted": true
+        },
+        "f21": {
+          "located": [
+            [
+              "Earlier approaches",
+              "SCU scoring",
+              "unit-by-unit comparison, never formalized into a repeatable benchmark"
+            ]
+          ]
+        },
+        "f22": {
+          "located": [
+            [
+              "Earlier approaches",
+              "SCU scoring",
+              "unit-by-unit comparison, never formalized into a repeatable benchmark"
+            ]
+          ]
+        },
+        "f23": {
+          "located": [
+            [
+              "Earlier approaches",
+              "JSONL claim-list format",
+              "rejected \u2014 recall fell below the acceptance threshold"
+            ]
+          ]
+        },
+        "f24": {
+          "located": [
+            [
+              "Open question",
+              "revisit KG mode now that retention scoring exists, or is its retention gap a dead end regardless of robustness?"
+            ]
+          ]
+        },
+        "f3": {
+          "located": [
+            [
+              "Original metric",
+              "Track record",
+              "never measured across six version bumps \u2014 retired 2026-07-03"
+            ]
+          ]
+        },
+        "f4": {
+          "located": [
+            [
+              "Original metric",
+              "Track record",
+              "never measured across six version bumps \u2014 retired 2026-07-03"
+            ]
+          ]
+        },
+        "f5": {
+          "located": [
+            [
+              "Replacement metric",
+              "Why adopted"
+            ]
+          ]
+        },
+        "f6": {
+          "located": [
+            [
+              "Replacement metric",
+              "Why adopted",
+              "only metric ever recorded with a real number"
+            ]
+          ]
+        },
+        "f7": {
+          "located": [
+            [
+              "Replacement metric",
+              "v0.2.9 evidence",
+              "147-word paragraph \u2192 88-word outline, 40.1% reduction, literal count"
+            ]
+          ]
+        },
+        "f8": {
+          "located": [
+            [
+              "Composite benchmark",
+              "Composition",
+              "v0.4.0's outline_quality_composite (spec-023): retention, robustness, brevity"
+            ]
+          ]
+        },
+        "f9": {
+          "multi_node": [
+            [
+              "Composite benchmark",
+              "Results",
+              "direct-prompt composite 0.5488"
+            ],
+            [
+              "Composite benchmark",
+              "Results",
+              "KG composite 0.7604, robustness 1.0"
+            ]
+          ]
+        }
+      },
+      "relations": {
+        "r1": {
+          "f3": {
+            "located": [
+              [
+                "Original metric",
+                "Track record",
+                "never measured across six version bumps \u2014 retired 2026-07-03"
+              ]
+            ]
+          },
+          "f4": {
+            "located": [
+              [
+                "Original metric",
+                "Track record",
+                "never measured across six version bumps \u2014 retired 2026-07-03"
+              ]
+            ]
+          },
+          "f5": {
+            "located": [
+              [
+                "Replacement metric",
+                "Why adopted"
+              ]
+            ]
+          },
+          "f6": {
+            "located": [
+              [
+                "Replacement metric",
+                "Why adopted",
+                "only metric ever recorded with a real number"
+              ]
+            ]
+          }
+        },
+        "r2": {
+          "f10": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "direct-prompt composite 0.5488"
+              ]
+            ]
+          },
+          "f11": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "KG composite 0.7604, robustness 1.0"
+              ]
+            ]
+          },
+          "f12": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "KG composite 0.7604, robustness 1.0"
+              ]
+            ]
+          },
+          "f13": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "KG retention 0.7608 vs 0.8285"
+              ]
+            ]
+          }
+        },
+        "r3": {
+          "f13": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "KG retention 0.7608 vs 0.8285"
+              ]
+            ]
+          },
+          "f14": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "KG retention 0.7608 vs 0.8285",
+                "lower \u2014 stricter word budgets dropped real content"
+              ]
+            ]
+          }
+        },
+        "r4": {
+          "f13": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Results",
+                "KG retention 0.7608 vs 0.8285"
+              ]
+            ]
+          },
+          "f15": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Verdict",
+                "\"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006"
+              ]
+            ]
+          },
+          "f16": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Verdict",
+                "\"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006"
+              ]
+            ]
+          },
+          "f17": {
+            "located": [
+              [
+                "Composite benchmark",
+                "Verdict",
+                "\"iterate\" \u2014 KG never became default; excluded under spec-026 FR-006"
+              ]
+            ]
+          }
+        },
+        "r5": {
+          "f18": {
+            "located": [
+              [
+                "Missing scoring code",
+                "What's absent",
+                "compare_corpus.py, score_outline.py, the 20-source corpus"
+              ]
+            ]
+          },
+          "f19": {
+            "located": [
+              [
+                "Missing scoring code",
+                "Cause",
+                "lived in a private upstream repo; stripped by sync commits into this scaffold"
+              ]
+            ]
+          }
+        },
+        "r6": {
+          "f23": {
+            "located": [
+              [
+                "Earlier approaches",
+                "JSONL claim-list format",
+                "rejected \u2014 recall fell below the acceptance threshold"
+              ]
+            ]
+          }
+        }
+      }
+    },
     "questions": {
       "q1": {
         "answer_given": "An unnamed original metric defined as wall-clock time to locate a fact; retired 2026-07-03 because never measured across six version bumps",

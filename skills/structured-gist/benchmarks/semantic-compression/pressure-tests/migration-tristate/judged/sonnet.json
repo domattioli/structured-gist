@@ -373,6 +373,304 @@
         "source_supported": true
       }
     ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "billing-service",
+            "Status",
+            "fully migrated; old infrastructure decommissioned, no fallback remains"
+          ]
+        },
+        "f10": {
+          "located": [
+            "auth-service",
+            "Finality",
+            "final decision now, not a scheduling delay"
+          ]
+        },
+        "f11": {
+          "located": [
+            "search-service",
+            "Status",
+            "migrated, ran about three weeks, then rolled back; now fully reverted"
+          ]
+        },
+        "f12": {
+          "located": [
+            "search-service",
+            "Status",
+            "migrated, ran about three weeks, then rolled back; now fully reverted"
+          ]
+        },
+        "f13": {
+          "located": [
+            "search-service",
+            "Rollback cause",
+            "results lagged the source-of-truth database, unlike old infrastructure"
+          ]
+        },
+        "f14": {
+          "located": [
+            "search-service",
+            "Status",
+            "migrated, ran about three weeks, then rolled back; now fully reverted"
+          ]
+        },
+        "f15": {
+          "located": [
+            "search-service",
+            "Open question",
+            "whether to re-attempt is undecided"
+          ]
+        },
+        "f16": {
+          "located": [
+            "reporting-service",
+            "Status",
+            "mid-migration: some endpoints already cut to new infrastructure, rest still on old awaiting their cutover"
+          ]
+        },
+        "f17": {
+          "located": [
+            "reporting-service",
+            "Status",
+            "mid-migration: some endpoints already cut to new infrastructure, rest still on old awaiting their cutover"
+          ]
+        },
+        "f18": {
+          "located": [
+            "reporting-service",
+            "Status",
+            "mid-migration: some endpoints already cut to new infrastructure, rest still on old awaiting their cutover"
+          ]
+        },
+        "f19": {
+          "located": [
+            "reporting-service",
+            "Distinction",
+            "only service running on both infrastructures at once"
+          ]
+        },
+        "f2": {
+          "located": [
+            "billing-service",
+            "Status",
+            "fully migrated; old infrastructure decommissioned, no fallback remains"
+          ]
+        },
+        "f3": {
+          "located": [
+            "notifications-service",
+            "Status",
+            "not started, still fully on old infrastructure"
+          ]
+        },
+        "f4": {
+          "located": [
+            "notifications-service",
+            "Timeline",
+            "scheduled next quarter, after billing's lessons update the runbook"
+          ]
+        },
+        "f5": {
+          "located": [
+            "notifications-service",
+            "Timeline",
+            "scheduled next quarter, after billing's lessons update the runbook"
+          ]
+        },
+        "f6": {
+          "located": [
+            "notifications-service",
+            "Status",
+            "not started, still fully on old infrastructure"
+          ]
+        },
+        "f7": {
+          "located": [
+            "auth-service",
+            "Status",
+            "will not migrate under the current plan"
+          ]
+        },
+        "f8": {
+          "located": [
+            "auth-service",
+            "Reasoning",
+            "compliance logic too costly and risky to port; risk judged not worth the benefit"
+          ]
+        },
+        "f9": {
+          "located": [
+            "auth-service",
+            "Reasoning",
+            "compliance logic too costly and risky to port; risk judged not worth the benefit"
+          ]
+        }
+      },
+      "relations": {
+        "r1": {
+          "f1": {
+            "located": [
+              "billing-service",
+              "Status",
+              "fully migrated; old infrastructure decommissioned, no fallback remains"
+            ]
+          },
+          "f4": {
+            "located": [
+              "notifications-service",
+              "Timeline",
+              "scheduled next quarter, after billing's lessons update the runbook"
+            ]
+          },
+          "f5": {
+            "located": [
+              "notifications-service",
+              "Timeline",
+              "scheduled next quarter, after billing's lessons update the runbook"
+            ]
+          }
+        },
+        "r2": {
+          "f10": {
+            "located": [
+              "auth-service",
+              "Finality",
+              "final decision now, not a scheduling delay"
+            ]
+          },
+          "f7": {
+            "located": [
+              "auth-service",
+              "Status",
+              "will not migrate under the current plan"
+            ]
+          },
+          "f8": {
+            "located": [
+              "auth-service",
+              "Reasoning",
+              "compliance logic too costly and risky to port; risk judged not worth the benefit"
+            ]
+          },
+          "f9": {
+            "located": [
+              "auth-service",
+              "Reasoning",
+              "compliance logic too costly and risky to port; risk judged not worth the benefit"
+            ]
+          }
+        },
+        "r3": {
+          "f11": {
+            "located": [
+              "search-service",
+              "Status",
+              "migrated, ran about three weeks, then rolled back; now fully reverted"
+            ]
+          },
+          "f13": {
+            "located": [
+              "search-service",
+              "Rollback cause",
+              "results lagged the source-of-truth database, unlike old infrastructure"
+            ]
+          },
+          "f14": {
+            "located": [
+              "search-service",
+              "Status",
+              "migrated, ran about three weeks, then rolled back; now fully reverted"
+            ]
+          }
+        },
+        "r4": {
+          "f1": {
+            "located": [
+              "billing-service",
+              "Status",
+              "fully migrated; old infrastructure decommissioned, no fallback remains"
+            ]
+          },
+          "f11": {
+            "located": [
+              "search-service",
+              "Status",
+              "migrated, ran about three weeks, then rolled back; now fully reverted"
+            ]
+          },
+          "f14": {
+            "located": [
+              "search-service",
+              "Status",
+              "migrated, ran about three weeks, then rolled back; now fully reverted"
+            ]
+          },
+          "f2": {
+            "located": [
+              "billing-service",
+              "Status",
+              "fully migrated; old infrastructure decommissioned, no fallback remains"
+            ]
+          }
+        },
+        "r5": {
+          "f3": {
+            "located": [
+              "notifications-service",
+              "Status",
+              "not started, still fully on old infrastructure"
+            ]
+          },
+          "f4": {
+            "located": [
+              "notifications-service",
+              "Timeline",
+              "scheduled next quarter, after billing's lessons update the runbook"
+            ]
+          },
+          "f7": {
+            "located": [
+              "auth-service",
+              "Status",
+              "will not migrate under the current plan"
+            ]
+          }
+        },
+        "r6": {
+          "f16": {
+            "located": [
+              "reporting-service",
+              "Status",
+              "mid-migration: some endpoints already cut to new infrastructure, rest still on old awaiting their cutover"
+            ]
+          },
+          "f17": {
+            "located": [
+              "reporting-service",
+              "Status",
+              "mid-migration: some endpoints already cut to new infrastructure, rest still on old awaiting their cutover"
+            ]
+          },
+          "f18": {
+            "located": [
+              "reporting-service",
+              "Status",
+              "mid-migration: some endpoints already cut to new infrastructure, rest still on old awaiting their cutover"
+            ]
+          },
+          "f19": {
+            "located": [
+              "reporting-service",
+              "Distinction",
+              "only service running on both infrastructures at once"
+            ]
+          }
+        }
+      }
+    },
     "questions": {
       "q1": {
         "answer_given": "auth-service",

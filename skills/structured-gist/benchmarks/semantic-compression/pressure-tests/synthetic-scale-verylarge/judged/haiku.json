@@ -744,6 +744,778 @@
       }
     },
     "hallucinations": [],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Refunds issued same day; idempotency fix unreviewed"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Refunds issued same day; idempotency fix unreviewed"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Highest-priority; race condition still live"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Highest-priority; race condition still live"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "Five routine (auto/quick resolution)",
+            "Disk space"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "Five routine (auto/quick resolution)",
+            "Dependency outage"
+          ]
+        },
+        "f16": {
+          "omitted": true
+        },
+        "f17": {
+          "omitted": true
+        },
+        "f18": {
+          "omitted": true
+        },
+        "f19": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "Five routine (auto/quick resolution)"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "Five routine (auto/quick resolution)",
+            "CPU spike"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Mobile app release train",
+            "Four releases (v3.14.1\u2013v3.14.4)"
+          ]
+        },
+        "f21": {
+          "omitted": true
+        },
+        "f22": {
+          "multi_node": [
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.1: crash on older OS"
+            ],
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.1: crash on older OS",
+              "fixed with one-line null check"
+            ]
+          ]
+        },
+        "f23": {
+          "multi_node": [
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.2: button overlapped with notch"
+            ],
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.2: button overlapped with notch",
+              "cosmetic; no functional impact"
+            ]
+          ]
+        },
+        "f24": {
+          "located": [
+            "Mobile app release train",
+            "Four releases (v3.14.1\u2013v3.14.4)",
+            "v3.14.3: login regression hotfix"
+          ]
+        },
+        "f25": {
+          "multi_node": [
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.3: login regression hotfix",
+              "v3.14.1's null check too aggressive, suppressed error"
+            ],
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.3: login regression hotfix",
+              "hotfix narrowed the condition"
+            ]
+          ]
+        },
+        "f26": {
+          "located": [
+            "Mobile app release train",
+            "Four releases (v3.14.1\u2013v3.14.4)",
+            "v3.14.3: login regression hotfix"
+          ]
+        },
+        "f27": {
+          "multi_node": [
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.4: accessibility feature"
+            ],
+            [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.4: accessibility feature",
+              "disable animation setting; user feedback response"
+            ]
+          ]
+        },
+        "f28": {
+          "omitted": true
+        },
+        "f29": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Five schema-drift failures"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "Five routine (auto/quick resolution)",
+            "Deploy latency"
+          ]
+        },
+        "f30": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Five schema-drift failures",
+            "crm-connector: lead_status to pipeline_stage"
+          ]
+        },
+        "f31": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Five schema-drift failures",
+            "billing-events-connector: new currency_code column"
+          ]
+        },
+        "f32": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Five schema-drift failures",
+            "support-tickets-connector: priority to severity"
+          ]
+        },
+        "f33": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Five schema-drift failures",
+            "inventory-connector: dropped warehouse_region_legacy"
+          ]
+        },
+        "f34": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Five schema-drift failures",
+            "marketing-events-connector: campaign_id to campaign_uuid"
+          ]
+        },
+        "f35": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Follow-up item",
+            "add drift detection to alert before ingest failure"
+          ]
+        },
+        "f36": {
+          "located": [
+            "Data-platform connector maintenance",
+            "Follow-up item",
+            "not yet started; next-quarter candidate"
+          ]
+        },
+        "f37": {
+          "omitted": true
+        },
+        "f38": {
+          "omitted": true
+        },
+        "f39": {
+          "omitted": true
+        },
+        "f4": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "Five routine (auto/quick resolution)",
+            "Stale cache"
+          ]
+        },
+        "f40": {
+          "omitted": true
+        },
+        "f41": {
+          "multi_node": [
+            [
+              "On-call documentation cleanup",
+              "Runbook reorganization",
+              "Split single file into per-service files"
+            ],
+            [
+              "On-call documentation cleanup",
+              "Runbook reorganization",
+              "Added top-level index linking all files"
+            ]
+          ]
+        },
+        "f42": {
+          "located": [
+            "On-call documentation cleanup",
+            "Runbook reorganization",
+            "Archived 9 sections for decommissioned services"
+          ]
+        },
+        "f43": {
+          "located": [
+            "On-call documentation cleanup",
+            "Implementation details",
+            "No alert-handling guidance changed; layout only"
+          ]
+        },
+        "f44": {
+          "located": [
+            "On-call documentation cleanup",
+            "Implementation details",
+            "Prompted by new hire feedback (couldn't locate section)"
+          ]
+        },
+        "f45": {
+          "omitted": true
+        },
+        "f46": {
+          "located": [
+            "On-call documentation cleanup",
+            "Follow-up item",
+            "Update code-owner metadata on 3 files (minor)"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "~140 customers charged twice (40-min window)"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Race in retry path; payment check read stale state"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Missed by monitoring; discovered via support ticket"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Missed by monitoring; discovered via support ticket"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Checkout-service reliability",
+            "Six alerts",
+            "One critical: double-charge race condition",
+            "Refunds issued same day; idempotency fix unreviewed"
+          ]
+        }
+      },
+      "relations": {
+        "r1": {
+          "f5": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "~140 customers charged twice (40-min window)"
+            ]
+          },
+          "f6": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Race in retry path; payment check read stale state"
+            ]
+          }
+        },
+        "r10": {
+          "f40": {
+            "omitted": true
+          },
+          "f41": {
+            "multi_node": [
+              [
+                "On-call documentation cleanup",
+                "Runbook reorganization",
+                "Split single file into per-service files"
+              ],
+              [
+                "On-call documentation cleanup",
+                "Runbook reorganization",
+                "Added top-level index linking all files"
+              ]
+            ]
+          },
+          "f42": {
+            "located": [
+              "On-call documentation cleanup",
+              "Runbook reorganization",
+              "Archived 9 sections for decommissioned services"
+            ]
+          }
+        },
+        "r11": {
+          "f38": {
+            "omitted": true
+          },
+          "f44": {
+            "located": [
+              "On-call documentation cleanup",
+              "Implementation details",
+              "Prompted by new hire feedback (couldn't locate section)"
+            ]
+          },
+          "f45": {
+            "omitted": true
+          }
+        },
+        "r12": {
+          "f41": {
+            "multi_node": [
+              [
+                "On-call documentation cleanup",
+                "Runbook reorganization",
+                "Split single file into per-service files"
+              ],
+              [
+                "On-call documentation cleanup",
+                "Runbook reorganization",
+                "Added top-level index linking all files"
+              ]
+            ]
+          },
+          "f42": {
+            "located": [
+              "On-call documentation cleanup",
+              "Runbook reorganization",
+              "Archived 9 sections for decommissioned services"
+            ]
+          },
+          "f43": {
+            "located": [
+              "On-call documentation cleanup",
+              "Implementation details",
+              "No alert-handling guidance changed; layout only"
+            ]
+          }
+        },
+        "r2": {
+          "f14": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Disk space"
+            ]
+          },
+          "f15": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Dependency outage"
+            ]
+          },
+          "f2": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "CPU spike"
+            ]
+          },
+          "f3": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Deploy latency"
+            ]
+          },
+          "f4": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Stale cache"
+            ]
+          },
+          "f7": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Missed by monitoring; discovered via support ticket"
+            ]
+          }
+        },
+        "r3": {
+          "f14": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Disk space"
+            ]
+          },
+          "f15": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Dependency outage"
+            ]
+          },
+          "f16": {
+            "omitted": true
+          },
+          "f17": {
+            "omitted": true
+          },
+          "f18": {
+            "omitted": true
+          },
+          "f19": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)"
+            ]
+          },
+          "f2": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "CPU spike"
+            ]
+          },
+          "f3": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Deploy latency"
+            ]
+          },
+          "f4": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "Five routine (auto/quick resolution)",
+              "Stale cache"
+            ]
+          },
+          "f5": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "~140 customers charged twice (40-min window)"
+            ]
+          }
+        },
+        "r4": {
+          "f8": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Missed by monitoring; discovered via support ticket"
+            ]
+          },
+          "f9": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Refunds issued same day; idempotency fix unreviewed"
+            ]
+          }
+        },
+        "r5": {
+          "f10": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Refunds issued same day; idempotency fix unreviewed"
+            ]
+          },
+          "f11": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Refunds issued same day; idempotency fix unreviewed"
+            ]
+          },
+          "f12": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Highest-priority; race condition still live"
+            ]
+          },
+          "f13": {
+            "located": [
+              "Checkout-service reliability",
+              "Six alerts",
+              "One critical: double-charge race condition",
+              "Highest-priority; race condition still live"
+            ]
+          }
+        },
+        "r6": {
+          "f22": {
+            "multi_node": [
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.1: crash on older OS"
+              ],
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.1: crash on older OS",
+                "fixed with one-line null check"
+              ]
+            ]
+          },
+          "f24": {
+            "located": [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.3: login regression hotfix"
+            ]
+          },
+          "f25": {
+            "multi_node": [
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.3: login regression hotfix",
+                "v3.14.1's null check too aggressive, suppressed error"
+              ],
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.3: login regression hotfix",
+                "hotfix narrowed the condition"
+              ]
+            ]
+          },
+          "f26": {
+            "located": [
+              "Mobile app release train",
+              "Four releases (v3.14.1\u2013v3.14.4)",
+              "v3.14.3: login regression hotfix"
+            ]
+          }
+        },
+        "r7": {
+          "f23": {
+            "multi_node": [
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.2: button overlapped with notch"
+              ],
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.2: button overlapped with notch",
+                "cosmetic; no functional impact"
+              ]
+            ]
+          },
+          "f27": {
+            "multi_node": [
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.4: accessibility feature"
+              ],
+              [
+                "Mobile app release train",
+                "Four releases (v3.14.1\u2013v3.14.4)",
+                "v3.14.4: accessibility feature",
+                "disable animation setting; user feedback response"
+              ]
+            ]
+          },
+          "f28": {
+            "omitted": true
+          }
+        },
+        "r8": {
+          "f29": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures"
+            ]
+          },
+          "f30": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "crm-connector: lead_status to pipeline_stage"
+            ]
+          },
+          "f31": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "billing-events-connector: new currency_code column"
+            ]
+          },
+          "f32": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "support-tickets-connector: priority to severity"
+            ]
+          },
+          "f33": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "inventory-connector: dropped warehouse_region_legacy"
+            ]
+          },
+          "f34": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "marketing-events-connector: campaign_id to campaign_uuid"
+            ]
+          }
+        },
+        "r9": {
+          "f30": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "crm-connector: lead_status to pipeline_stage"
+            ]
+          },
+          "f31": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "billing-events-connector: new currency_code column"
+            ]
+          },
+          "f32": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "support-tickets-connector: priority to severity"
+            ]
+          },
+          "f33": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "inventory-connector: dropped warehouse_region_legacy"
+            ]
+          },
+          "f34": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Five schema-drift failures",
+              "marketing-events-connector: campaign_id to campaign_uuid"
+            ]
+          },
+          "f35": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Follow-up item",
+              "add drift detection to alert before ingest failure"
+            ]
+          },
+          "f36": {
+            "located": [
+              "Data-platform connector maintenance",
+              "Follow-up item",
+              "not yet started; next-quarter candidate"
+            ]
+          }
+        }
+      }
+    },
     "questions": {
       "q1": {
         "answer_given": "The critical double-charge race condition \u2014 it charged ~140 customers twice, was missed by monitoring, and is the highest-priority item with the race condition still live.",

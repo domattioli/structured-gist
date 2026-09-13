@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claim List Record",
+  "description": "A single claim extracted from an outline tree via the claim-list render target (FR-018). One record per emitted claim.",
+  "type": "object",
+  "required": ["claim", "modality", "polarity", "source_span", "parent_id"],
+  "additionalProperties": false,
+  "properties": {
+    "claim": {
+      "type": "string",
+      "description": "The claim text extracted from the source outline node."
+    },
+    "modality": {
+      "type": "string",
+      "enum": ["assertion", "epistemic_hedge", "deontic_hedge"],
+      "description": "The epistemic/deontic status of the claim. 'assertion' is unqualified; 'epistemic_hedge' marks likelihood/certainty qualification; 'deontic_hedge' marks obligation/permission (MUST/SHOULD/MAY)."
+    },
+    "polarity": {
+      "type": "string",
+      "enum": ["affirmative", "negative"],
+      "description": "Whether the claim is affirmative or negative. Mirrors the 'negation' gold-fact category."
+    },
+    "source_span": {
+      "type": "object",
+      "description": "Character offset and quoted text identifying the source of this claim in the original document.",
+      "required": ["start", "end", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Character offset (0-indexed) of the start of the claim in the source."
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Character offset (exclusive) of the end of the claim in the source."
+        },
+        "text": {
+          "type": "string",
+          "description": "The quoted text at source_span[start:end], for verification."
+        }
+      }
+    },
+    "parent_id": {
+      "type": "string",
+      "description": "Stable identifier of the emitting node's parent in the outline tree. Must be identical across re-renders of an unchanged outline."
+    }
+  }
+}

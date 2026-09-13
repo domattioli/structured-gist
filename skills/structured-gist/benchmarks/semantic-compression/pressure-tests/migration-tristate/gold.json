@@ -175,7 +175,8 @@
         "f4",
         "f5"
       ],
-      "source_quote": "once the billing cutover's lessons have been folded into the migration runbook"
+      "source_quote": "once the billing cutover's lessons have been folded into the migration runbook",
+      "ordered": true
     },
     {
       "id": "r2",
@@ -187,7 +188,8 @@
         "f7",
         "f10"
       ],
-      "source_quote": "the judgment was that the migration risk wasn't worth the benefit for this particular service"
+      "source_quote": "the judgment was that the migration risk wasn't worth the benefit for this particular service",
+      "ordered": false
     },
     {
       "id": "r3",
@@ -198,7 +200,8 @@
         "f11",
         "f14"
       ],
-      "source_quote": "was reverted after users started hitting data-consistency bugs"
+      "source_quote": "was reverted after users started hitting data-consistency bugs",
+      "ordered": true
     },
     {
       "id": "r4",
@@ -210,7 +213,8 @@
         "f11",
         "f14"
       ],
-      "source_quote": "Search-service is back on the old infrastructure now, fully reverted"
+      "source_quote": "Search-service is back on the old infrastructure now, fully reverted",
+      "ordered": false
     },
     {
       "id": "r5",
@@ -221,7 +225,8 @@
         "f3",
         "f4"
       ],
-      "source_quote": "`auth-service` is explicitly not going to be migrated, at least not under the current plan"
+      "source_quote": "`auth-service` is explicitly not going to be migrated, at least not under the current plan",
+      "ordered": false
     },
     {
       "id": "r6",
@@ -233,7 +238,8 @@
         "f17",
         "f18"
       ],
-      "source_quote": "It is the only service on this list that is simultaneously running on both infrastructures at once"
+      "source_quote": "It is the only service on this list that is simultaneously running on both infrastructures at once",
+      "ordered": false
     }
   ],
   "questions": [
