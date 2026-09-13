@@ -1,0 +1,163 @@
+{
+  "case_id": "qmsum-22",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 283,
+      "span_index": 0,
+      "start_idx": 264,
+      "turns": [
+        {
+          "content": "Yeah , but I think it will increase the price of the production of the remote control .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Specially distribution , yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah , yeah , maybe . Yeah , maybe .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "If you need to have special colours for remote controls it will cost more .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Uh {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah , personalised colour . Because you know {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , it will cost little bit more .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah , because maybe some people prefer a red remote control ,",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , yeah , yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "some people prefer black remote control .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , but this is what we would ask to the users , so .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "And also f",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Maybe we can have di di we can have uh several options ,",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "so user can select which colour they prefer , so .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah , but as soon as you speak about options , it means that the price increases ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "remember it's twelve Euros .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "and we don't really want the price to be too too high , because we wanna be able to produce it . So , we want something fancy , as uh previously said , Florent , something very easy to use , powerful and also as uh it's written here , seventy five percent of users , they zap lot , so maybe just having many functions in one button is not that good if you want to zap a lot .",
+          "speaker": "Project Manager"
+        }
+      ]
+    },
+    {
+      "end_idx": 379,
+      "span_index": 1,
+      "start_idx": 368,
+      "turns": [
+        {
+          "content": "Maybe you can change the colour , but the image of the society has to be recognised .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay . Okay .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "I think if you have you know th like a yellow ribbon here is the double R_ . Or should be .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Why you go {disfmarker} It has to be fashion .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah , so . Doesn't need to be completely yellow ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "So you have to {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "but just mm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah . It has to be a fashion and really be uh the image of the society . Just when you enter you say oh , oh , it's real reaction . Think it's a re reaction remote control , so .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay , okay . Okay .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "And also it has to be attractive , of course ,",
+          "speaker": "Project Manager"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Product",
+    "n_spans": 2,
+    "n_turns": 407,
+    "native_meeting_id": "IS1003b",
+    "source_word_count": 4624
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Summarize the project manager's opinions towards product appearance.",
+  "reference_answer": "The project manager agreed that the product should be good-looking but having many colours wasn't a good idea because it would increase the product cost. Also, the project manager thought the remote control should be marked with the image of the society so that one can recognize it at a glance."
+}

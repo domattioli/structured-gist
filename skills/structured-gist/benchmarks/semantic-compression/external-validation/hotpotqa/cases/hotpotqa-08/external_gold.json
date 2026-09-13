@@ -1,0 +1,37 @@
+{
+  "case_id": "hotpotqa-08",
+  "dataset": "hotpotqa",
+  "intent": {
+    "reader": "someone who needs the answer to a multi-hop question without reading all ten source paragraphs",
+    "task": "answer the question below by composing evidence from at least two paragraphs, using only what survives compression"
+  },
+  "native_evidence": [
+    {
+      "sent_id": 1,
+      "text": " He earned an Academy Award for his script for 1949's \"The Stratton Story\", a biography of baseball player Monty Stratton, who was disabled in a hunting accident.",
+      "title": "Douglas Morrow"
+    },
+    {
+      "sent_id": 0,
+      "text": "Monty Franklin Pierce Stratton (May 21, 1912 – September 29, 1982), nicknamed \"Gander\" for a trick pitch he developed), was a Major League Baseball pitcher.",
+      "title": "Monty Stratton"
+    }
+  ],
+  "native_metadata": {
+    "distinct_titles": [
+      "Douglas Morrow",
+      "Monty Stratton"
+    ],
+    "hotpot_id": "5ae8027d5542993210984031",
+    "level": "hard",
+    "n_context_paragraphs": 10,
+    "n_distinct_titles": 2,
+    "n_supporting_facts": 2,
+    "pressure_only": true,
+    "source_word_count": 888,
+    "type": "bridge"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What MLB pitcher nicknamed \"Gander\" was written about in \"the Stratton Story\">?",
+  "reference_answer": "Monty Franklin Pierce Stratton"
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-03",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Native evidence paragraph has 5 sentences; the first (topic comparison) and second (Depechemood methods) are method/prior-finding context outside the question's scope ('conclusions from the emotional-appeal similarity finding') and are correctly excluded. f1-f3 cover the three conclusion sentences exactly, quotes verbatim (including the source's own 'insight insight' typo, correctly preserved). r1's contrast relation adds real interpretive content (same effect, different underlying word choices) rather than merely restating the pair."
+}

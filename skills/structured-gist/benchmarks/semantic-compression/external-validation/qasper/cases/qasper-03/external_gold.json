@@ -1,0 +1,37 @@
+{
+  "case_id": "qasper-03",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 42,
+      "para_idx": 2,
+      "section_idx": 13,
+      "section_name": "Conclusion and Future Work",
+      "text": "Comparing these topics with those that appeared on a Catholic women forum, it seems that both ISIS and non-violent groups use topics about motherhood, spousal relationship, and marriage/divorce when they address women. Moreover, we used Depechemood methods to analyze the emotions that these materials are likely to elicit in readers. The result of our emotion analysis suggests that both corpuses used words that aim to inspire readers while avoiding fear. However, the actual words that lead to these effects are very different in the two contexts. Overall, our findings indicate that, using proper methods, automated analysis of large bodies of textual data can provide novel insight insight into extremist propaganda that can assist the counterterrorism community."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "extractive",
+    "arxiv_id": "1912.03804",
+    "cardinality": "single",
+    "distance_bucket": "n/a",
+    "evidence_distance": 0,
+    "evidence_raw": [
+      "Comparing these topics with those that appeared on a Catholic women forum, it seems that both ISIS and non-violent groups use topics about motherhood, spousal relationship, and marriage/divorce when they address women. Moreover, we used Depechemood methods to analyze the emotions that these materials are likely to elicit in readers. The result of our emotion analysis suggests that both corpuses used words that aim to inspire readers while avoiding fear. However, the actual words that lead to these effects are very different in the two contexts. Overall, our findings indicate that, using proper methods, automated analysis of large bodies of textual data can provide novel insight insight into extremist propaganda that can assist the counterterrorism community."
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 1,
+    "nlp_background": "five",
+    "paper_title": "Women in ISIS Propaganda: A Natural Language Processing Analysis of Topics and Emotions in a Comparison with Mainstream Religious Group",
+    "source_word_count": 3703,
+    "topic_background": ""
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What conclusions do the authors draw from their finding that the emotional appeal of ISIS and Catholic materials are similar?",
+  "reference_answer": "both corpuses used words that aim to inspire readers while avoiding fear | actual words that lead to these effects are very different in the two contexts | our findings indicate that, using proper methods, automated analysis of large bodies of textual data can provide novel insight insight into extremist propaganda"
+}

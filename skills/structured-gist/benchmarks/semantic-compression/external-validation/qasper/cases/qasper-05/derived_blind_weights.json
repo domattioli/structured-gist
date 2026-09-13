@@ -1,0 +1,14 @@
+{
+  "case_id": "qasper-05",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 1, "f3": 2, "f4": 3, "f5": 2, "f6": 3},
+  "relation_weights": {},
+  "rationale": {
+    "f1": "Names the two annotation targets (Galatasaray and Fenerbahçe), which the reference answer explicitly requires.",
+    "f2": "Describes the pre-annotation name-based filtering step, useful context but not itself part of how tweets were annotated (Favor/Against) as asked and as reflected in the reference answer.",
+    "f3": "Explains that tweets without an explicit target mention were excluded, a constraint that defines the annotated population and materially shapes what 'annotated' means here even though it isn't in the reference answer's wording.",
+    "f4": "States that no tweets were labeled with a Neither class, which directly grounds the reference answer's qualifier that tweets were annotated with 'only' Favor or Against.",
+    "f5": "Describes the convention of treating the club as the target even when management or a player was the real subject, a specific annotation rule that materially affects how 'annotated' should be understood but isn't required for the reference answer's core claim.",
+    "f6": "States the core annotation scheme itself—stance labeled as Favor or Against—directly matching the central content of the reference answer."
+  }
+}

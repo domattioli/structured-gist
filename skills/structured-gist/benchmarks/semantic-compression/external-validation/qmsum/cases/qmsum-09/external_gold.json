@@ -1,0 +1,56 @@
+{
+  "case_id": "qmsum-09",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 55,
+      "span_index": 0,
+      "start_idx": 49,
+      "turns": [
+        {
+          "content": "Mr. Chair, the Prime Minister is doing everything to avoid being accountable to Canadians. He is refusing to table a budget, refusing to provide an economic update and refusing to let the House of Commons do its work. Will he at least provide the Auditor General with the additional funding she needs to look into government expenditures?",
+          "speaker": "Hon. Andrew Scheer (Leader of the Opposition)"
+        },
+        {
+          "content": "Mr.Chair, not only are we introducing a bill this afternoon to help Canadians with the Canada emergency response benefit and those living with disabilities, but we are also proposing to the opposition parties that we hold a debate and a vote on that. I hope the opposition parties will allow a vote and a debate in the House on this important bill.",
+          "speaker": "Right Hon. Justin Trudeau (Prime Minister)"
+        },
+        {
+          "content": "Mr. Chair, the Prime Minister wants parliamentarians to vote on aspects of the government's spending. We want the Auditor General to be able to examine that government spending. Under the government, the Auditor General has had to do more with less, and her ability to conduct audits is being affected. The Auditor General has indicated that she will be able to do half as many audits, despite an almost doubling in the size of government spending. I have a simple question. Will the Prime Minister give the Auditor General the money she needs to do her job, yes or no?",
+          "speaker": "Hon. Andrew Scheer"
+        },
+        {
+          "content": "Mr. Chair, we worked with the Auditor General to increase the funding of the Auditor General's office in 2018-19, and the equivalent of 38 full-time staff were added. We support the Auditor General, unlike the Conservative government, which fired 60 people from the Auditor General's office. We are now proposing that we sit down to debate legislation this afternoon, and I certainly hope that members opposite will vote for debate.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "The Prime Minister is again engaged in revisionist history. He well knows that it was the Auditor General's office that volunteered to make administrative efficiencies, which did not affect its ability to do the job. In fact, as the interim auditor general, John Wiersema, said, We would not have proposed if we didnt think it was the right thing to do and that wed be able to carry out our role for Parliament. Only the government's refusal to grant that extra funding is hampering the Auditor General's ability to give Canadians the answers they deserve, and we wonder why. This is the government that cannot explain where 20,000 infrastructure projects went and where five billion dollars' worth of supposed infrastructure investments have gone. They can't identify that. Then there is, of course, the $35-billion Infrastructure Bank, which has completed precisely zero projects. Are these the reasons the Prime Minister is so intent on withholding funds from the Auditor General?",
+          "speaker": "Hon. Andrew Scheer"
+        },
+        {
+          "content": "Mr. Chair, talking of revisionist history, Stephen Harper's Conservatives cut $6.5 million from the Auditor General's budget and fired 60 staff. On the contrary, we worked with the Auditor General's office and increased its funding and added the equivalent of 38 new full-time staff. We will continue to demonstrate openness and transparency. We will continue to respect the officers of Parliament, whom the Conservatives, in their time in office, showed no respect for. We will continue to move forward in a way that has led, for example, to proposing debate and voting on important legislation this afternoon to help Canadians. The Conservatives don't seem to want that debate or vote.",
+          "speaker": "Right Hon. Justin Trudeau"
+        },
+        {
+          "content": "Mr. Chair, it's no surprise that the Prime Minister likes to reach back into history from before the 2015 election to justify his position. The 2015 election was the only time he got more votes than the Conservative Party did, so I understand why he likes to live in the past. In May, the interim auditor general said, Ten years ago, we were completing about 27 performance audits every year. With our current resources, we expect to be able to deliver 14 performance audits each year. That's half the number of audits, despite a massive explosion in government spending. The Auditor General's office has requested more funds to be able to do the job that Canadians expect to be done. Will the Prime Minister give those additional funds to the Auditor General's office, yes or no?",
+          "speaker": "Hon. Andrew Scheer"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Committee",
+    "n_spans": 1,
+    "n_turns": 321,
+    "native_meeting_id": "covid_9",
+    "source_word_count": 19894
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What was said about the Auditor General?",
+  "reference_answer": "The Prime Minister was quizzed on why he wasn't providing the money to allow the Auditor general to conduct audits on the Government's spending. The Prime Minister responded as to having increased the budget of the Auditor General's budget the previous year. The response was deemed unsatisfactory by the questioning party."
+}

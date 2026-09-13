@@ -7,6 +7,11 @@
     "medium"
   ],
   "source_word_count": 369,
+  "intent": {
+    "reader": "an engineer who needs to reason about the causal mechanism, e.g. to judge whether the same feedback loop could recur elsewhere",
+    "task": "understand why the cascade happened in causal order, not just which facts are true",
+    "rationale": "this case exists to pressure-test relation retention specifically -- a flattened list that keeps every fact but drops the causal chain fails this task even at high fact retention"
+  },
   "facts": [
     {
       "id": "f1",
@@ -166,6 +171,7 @@
       "text": "the retry-storm failure mode that caused the cascades is gone entirely, not just less frequent",
       "category": "outcome",
       "weight": 3,
+      "weight_reason": "confirms full resolution, not just mitigation -- distinguishing 'gone entirely' from 'reduced' is exactly what a reader judging recurrence risk needs",
       "precision_sensitive": false,
       "source_quote": "the specific retry-storm failure mode that caused the cascades is gone, not just less frequent"
     }

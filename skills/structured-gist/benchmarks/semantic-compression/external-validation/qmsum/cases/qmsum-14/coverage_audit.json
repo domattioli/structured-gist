@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-14",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["f2", "f3", "f5"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f2, f3, and f5 each end with a 'though Kwan said...' coda (that weeks had passed with no action / that the child benefit increase did not replace spousal support / that the funding was deficient and the goal insufficient) that is accurate and drawn from Kwan's separate, later turns, but is not covered by the fact's own cited source_quote (each quote covers only Trudeau's/Schulte's statement). This is a low-severity, systemic stylistic pattern in this case (three of ten facts) rather than a fabrication — the added content is true and traceable elsewhere in the span, just outside the specific cited quote. Minor, non-critical omission: Tochor's underlying problem statement (charities without their own payroll number are ineligible for the wage subsidy) that prompted Hussen's $350M funding response (f10) isn't itself captured, though the response substance is. Otherwise coverage is strong and well-scoped: the corpus_defect_notes correctly flag that native_evidence span:2 mixes off-topic content (spousal-reunification travel policy, Harrington Lake cottage) with on-topic material, and the fact inventory correctly extracts only the on-topic portions. All quotes checked verbatim match the supplied evidence, and both relations state genuine contrasts/dependencies."
+}

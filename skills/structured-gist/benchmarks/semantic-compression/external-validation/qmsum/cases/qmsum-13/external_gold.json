@@ -1,0 +1,450 @@
+{
+  "case_id": "qmsum-13",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 157,
+      "span_index": 0,
+      "start_idx": 95,
+      "turns": [
+        {
+          "content": "You won't get any arguments from us on that. Siân Gwenllian has got some questions on the curriculum.",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Yes. I just want to discuss a little about the curriculum as it stands, and thinking about transferring to a new curriculum, of course. What are the challenges? I'll begin with the WLGA, in general, and ask you, in both your areas, what are the challenges to ensure that EOTAS learners have access to a broad and balanced curriculum, and that there are learning opportunities that are appropriate for them? What are the challenges associated with that?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "In general terms—. You differentiate there between EOTAS and PRUs. PRUs: clearly, we know that they are following a set curriculum; they are inspected; they are under the control of the local authorities. So, we're happy and content that that is moving along and that the balance is there. Where home tuition is provided through the local authority, as has been discussed, again, there should be safeguards there to make sure that that quality assurance takes into account what the pupil is receiving. You can't always guarantee what then happens in the home. As you say, particular things happen there, and they may not get that. But that's a matter the authority has got to be aware of and tackle. It's more difficult where, I suspect, it's being provided by a third party that's been commissioned. The commissioning arrangements should ask for those things to be put into place; it's all about the monitoring then. But that's a very general, broad-brush answer. I couldn't give you a definitive one of what's happening across Wales. My colleagues can probably tell you what's happening in their localities, and that would be helpful. But in general: PRUs, yes, we'd be satisfied; home tuition that is commissioned and managed through the local authority, yes, we would be satisfied; other areas, we would not be able to give a definitive answer on, is my guess.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "And does that worry you?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Me?",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "The WLGA.",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Of course it's a concern. If you can't guarantee quality in any shape or form for a young person, it is a concern.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "In the region, we do collaborate with each other in terms of staff training. Certainly, they also work with school staff as well. So, the developments are quite positive currently, but there is work to do, I agree.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "In terms of the how curriculum is at present, are you happy that it's being delivered?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "To be honest, we are—",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "In the PRUs?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "To be honest, they are broad and balanced. They have to be broad and balanced currently. But there's working together now in terms of the new curriculum, and using the opportunity that exists now to collaborate with school staff as well.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Collaboration, I think, is the answer, between the PRUs and the schools. Collaborate and have joint working to ensure that the learners have what they need.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Yes. I can see how collaborative working with the units can work—because they're under your control—the problem is the other parts of the system, in a way.",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "They're not with other people all the time; they just go for something So, they would still have literacy and numeracy and Welsh—that would still be provided in the PRU. So, they're not out all the time.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "No, it's beyond the PRUs I'm talking about. If a pupil is in a PRU, you are telling me that they have the curriculum. But for those who are in homes, or in private provision, perhaps who are not in your experience—. Maybe, this morning, we're getting a picture of the best practice, and we're not going under the surface to where things aren't as good in some areas. Do you agree that there is that inconsistency? What we're hearing about now are the best elements.",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Consistency is developing across Wales.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "With the curriculum?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Yes, and in terms of collaboration. I'm not saying that it's perfect, but it is developing.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Thank you, Siân. Questions now from Dawn Bowden.",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Thank you, Chair. It's really around support. It follows on a little bit from what Siân was saying. Can I also just refer back to the point that David was making earlier on about ALN and the extent to which ALN support is available to learners in EOTAS? The information that we've had is that it's difficult enough in mainstream schools, but in an EOTAS setting, it's particularly challenging. So, how can that be improved? What can we do to address that? The reason I'm saying that is there are particular needs of learners in an EOTAS setting—that's why they're there, quite often. So, it's almost more important that that ALN provision follows them through.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "If a child has additional needs, of course they should be met, whatever the setting. But I take your point. There's a possibility that—. Again, going back to the previous question, we would know within, say a PRU or any local authority commissioned or delivered tuition—whatever form that took—then those needs definitely should be being met. I can't tell you hand on heart whether they all are or not—I don’t know—but they should be. Once you get out of that very tightly regulated part of the system, then, again, if a child has a particular need, of course that need should be met, but it becomes increasingly difficult. So, I think there possibly is an issue there, but I don't know whether my colleagues have a greater understanding of that. But there certainly may well be an issue there.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "There is a disconnect between what should be happening and what actually is happening, isn't there? Even in some local authority PRUs where we expect all of this to be happening, we know that it’s not; we know that the full curriculum is not being provided either. The basic numeracy, literacy and well-being stuff is taking place, but there is discrepancy of provision, even in local authority commissioned EOTAS provision.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "I think there will be variations in provision, but I would say that, within the local authority maintained sector, that provision should be being made. If it's not, the local authority concerned should be aware of that and should be dealing with that.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "We've probably—[Inaudible.]—in Swansea if you look at the inspections of the provision. Going back some years, they weren't— What you're describing, it was true. However, the most recent inspection is very positive, and not that we recognise that there's no work to be done; we're not being complacent. But to answer your question, I think the biggest challenge is the capacity. So, I suppose that comes down to additional funding, because I'd like a dedicated educational psychologist spending their time possibly only with our PRU youngsters and EOTAS provision, but we haven't got the capacity because of the demands on us from the wider system.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "And—. Sorry, go on.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "It's kind of what Nick said about capacity, but it's also ensuring the right staff as well, because sometimes, you may have them, but if they move on, or retire, or whatever, there's not a bus load, if you like, of people with that expertise. Because sometimes it takes years to build up on that expertise, and therefore, it's quite niche, and once that person has moved on, it's really difficult to start all over again.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "I understand that.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Absolutely. It's more than just one person—it's the whole training package that goes around that capacity as well.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Yes, and I'll come back to that in a moment.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "But I think that's something we could do better. I think we need to be more—. Because that's not just down to money, it's making sure that we perhaps offer, through our teacher training colleges, the opportunity for them to spend some time. At the moment, a newly qualified teacher can't work in this type of provision, which you can argue, that's fine, they need to perhaps get mainstream first. But we need a group of people in the future to fill those gaps. So, that should be built in to their teacher training, and even through their ongoing professional development, both ways—staff actually coming out to schools, going into our provision and vise versa—because you can also get very isolated if you've worked in PRUs for—. You've got very specialist skills, but you perhaps need those wider experiences as well. So, we could be doing more there, and I think that's probably, the group I chair, a discussion we need to have.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "And on that point, actually, we did hear from Estyn the point you were making about the staff leaving and there are very small numbers of staff working in that provision. There really isn't the capacity for them to access professional training. Is that your experience? And if so, what can we do about that?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "I think it's limited. I think it is getting better, as Nick mentioned. There are networks now, there are conferences. It is an improving picture, but I think it's limited.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Yes, okay. So, is there any way that local authorities can encourage specialist teachers and educational psychologists to actually share expertise with independent providers of EOTAS?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Yes, but again, it's a capacity issue, because if we take them out of the provision, it's difficult for perhaps a supply teacher to come in and manage that class because of the demands. So, it's not an easy conundrum.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "No. But you're saying, really, take it back to teacher training and start at that point so that every teacher has at least some basic awareness of dealing with education in that setting. I understand that.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Or whether there's an opportunity, if somebody wants to lead into that more, that there's an opportunity to do it; that there's an offer there, if they want to specialise more into that area. But at the minute, there isn't that option.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Okay. Can I just take you back to pupil support? We talked about ALN. What about access to mental health services? What's your experience of EOTAS learners' access to mental health support?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Again, even in the region there's variation there because we've got three health boards over the footprint of the south-west and mid Wales region. So, it varies. That's my understanding, anyway, and I think that's similar across Wales. Ours hasn't been great, to be honest with you. And that's one of the positive steps, that health boards have to have a DECLO now—don't ask me, I can't remember what the exact abbreviation is—but we've met with the designated education clinical lead officer, and I think those partnerships will be strong in the future. But it's also us then having a well-being strategy and support that is universal. So, there's counselling and so on to make sure that the learners are going through, if you like—. Not that we're trying to stop them going through, but we're trying to deal with them appropriately at the different stages so that they're not inundated either.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Yes, of course. But is your experience also that a lack of mental health support in mainstream schools could potentially be leading to more learners ending up in an EOTAS provision.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "I was going to say, about the question, I think there's a general deficit in child and adolescent mental health services, for example. I'm not criticising the services, I'm just saying the capacity isn't there, as we would like. So, I think there's probably a more general issue there that would, in turn, translate into pupils who've got additional needs, whether they're in EOTAS, PRU or wherever. I suspect—I've not got an evidence base to offer you, but there's a very long-standing problem there.",
+          "speaker": "David Hopkins"
+        },
+        {
+          "content": "Siân, you had a supplementary.",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Yes. Just to return to teacher training, and you say that new teachers can't go straight into a unit, and maybe more emphasis is needed on that aspect. But generally speaking, if there's an increase in challenging behaviour, are new teachers able—? They don't have the experience, but are they equipped well enough to deal with that? Because we hear of so many people leaving the profession because of this challenging behaviour, and again, I wonder if the system has adequately caught up with that. And we need—not just in this aspect—but we need to look at the system holistically to be more prepared to deal with challenging behaviour. Do you know what I'm saying?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "It's not just—. If people decide not to go into teaching after having training, it's not just because of challenging behaviour. There is a change now. There is more time for students in schools, so that helps. You need the theory, but also the practice—that's important to have somebody who can mentor you in the school and that shows good practice. Then there are the policies that the school uses to assure that there is consistency across the whole school.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "But if we're facing a situation where there are fewer wanting to go into the profession and we are losing those most experienced people, then it creates a great big challenge, doesn't it? We're looking at something very limited here, but we need to look at it in the bigger picture of what's happening. Would you agree with that?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Yes, certainly.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Sharon, the CAMHS in-reach project is operational in Gwent, but my understanding is that they don't include PRUs. Is that right?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "I don't know if that is the—.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Okay, that's fine, that's my understanding. I just wanted to ask, then, the Gwent attachment team has been working with PRUs in Gwent, and the committee is familiar with the work of the Gwent attachment team, can you just tell us what you think the impact of that has been in terms of support for staff and embedding that awareness of attachment and early trauma in the PRUs?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "I think any form of professional learning, it's positive, and, therefore, as we alluded to earlier, it's that expertise training for the PRU then and for the staff there. It's having a positive impact. At the minute, I don't know what the overall impact is. I think it's early days, but it seems to be positive.",
+          "speaker": "Sharon Davies"
+        },
+        {
+          "content": "Thank you. Janet, I think some of the areas have been covered. Is there anything you want to pick up from the—?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Yes, I think the rural aspect—are you aware that there are any issues relating to transport for EOTAS learners, particularly in more rural parts or areas of Wales?",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "Certainly, in our region, in Powys, from north Powys, when you're almost in Oswestry, down to Ystradgynlais, which is not far from me. So, you've got provision for those types of learners there. I think they've got provision in the north and south of the county, but you're still talking—",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "What provision in the north?",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "I think there's a PRU provision in the north of Powys and one in the south—",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Oh, sorry, north of Powys.",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "North Powys.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Oh, sorry, I thought you meant north Wales. Sorry.",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "Sorry. But even so, the distances that those learners are having to travel are huge.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Yes, I've got a—. It's a big issue.",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "For myself, and I'd hazard a guess, Torfaen, we're relatively compact, aren't we, so it's not such an issue.",
+          "speaker": "Nick Williams"
+        },
+        {
+          "content": "Has the WLGA got any comment on the transport issue?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "I'm not aware of issues, if I'm honest, but then again, it may be something we've not investigated. I'm quite happy to look at that.",
+          "speaker": "David Hopkins"
+        }
+      ]
+    },
+    {
+      "end_idx": 176,
+      "span_index": 1,
+      "start_idx": 173,
+      "turns": [
+        {
+          "content": "I think it's an issue where it's very important both to focus on the individual, but also on the macro situation, and, as Sarah mentioned, I think the whole-school approach, which is something that's been discussed within this committee, as part of the 'Mind over matter' work, is something that is hugely important. And that's why that should be—there should be statutory provision regarding a whole-school approach. Because understanding—. That prevention operating all the way through the whole-school community will, hopefully, be very effective in providing support levels, ensuring that that support is in place from the very beginning, all the way through primary school, all the way through secondary school, to ensure that learners are being supported and that that is something that's at the forefront of people's considerations whenever they're considering what a pupil is doing, and why they might be doing it. And that then also links back into consideration around adverse childhood experiences. But, generally, just that thinking about the behaviour and the emotional response first, I think, is hugely important in this context.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "Okay. And what do you think could be done more, and by whom, to help schools to support pupils to remain in mainstream education?",
+          "speaker": "Janet Finch-Saunders AM"
+        },
+        {
+          "content": "So, this is where we set out nine recommendations in our report and I think the major message is, as I said before, that we don't have a simple answer to this one. However, there are a number of things that we need to do: we need to recognise the impact of adverse childhood experiences; we need to train teachers so that they have an understanding response and are much more confident in that; we need to learn from what works; we need to listen to the voices of young people themselves. That's terribly important, because—. I know this committee is very well aware of that, because you've done very good work listening to the direct voices of young people, but they are very often able to articulate quite a lot about what is needed. I would also add to that that we would want young people themselves to be skilled up in understanding and recognising their own emotions, because this is about putting in place that awareness, that consciousness, if you like, about being able to name and recognise feelings. There's great international evidence on the importance of that and the benefit of it, which was carried out when the new curriculum was being developed, and the health aspect of that. So, we've kind of done that work in Wales. What we would like to see is that new curriculum around health and well-being and mental health and awareness being in the curriculum, so that young people, on a statutory basis—. Otherwise, you're entrenching the differences and the inequalities between teaching across Wales, because the good will do it, and perhaps others will find it much harder. So, that's a major message as well. So, I think there's a menu, if you like, and some of it is very much about respecting the experience of teachers and of schools and working with them, because this is about working with their will to do things well.",
+          "speaker": "Sarah Stone"
+        },
+        {
+          "content": "I think what's important, and maybe it's implicit within the question about helping to support pupils remain in mainstream schools, is working out what is the best support at this point in time for the young person. So, that has to be taken deeply into consideration. Obviously, the schools provide whatever support they can, but what is the best for the young person at this time? And that answer will differ from individual to individual. I think it is important to have the learner voice playing a role within this, and it's important to get more of a child-centred voice around this. One of the projects that Mind will be working on in Wales in the next year is regarding an inclusive education inquiry, where we'll be forefronting the voices of young people within the evidence, because at the moment a lot of the evidence that we have is data-driven or anecdotal, and I think we want to get to the bottom of how young people feel, and how they find this. Sarah's referred to the curriculum. I think there's a lot to be done, still, with regard to PRU and EOTAS with the new curriculum, and, hopefully, we'll be able to outline some of that in terms of questions later on.",
+          "speaker": "Dr Ian Johnson"
+        }
+      ]
+    },
+    {
+      "end_idx": 223,
+      "span_index": 2,
+      "start_idx": 189,
+      "turns": [
+        {
+          "content": "Thank you, Chair. A few questions around providing support for learners. You've set out very clearly what you think needs to happen in your report, your nine points and so on, but what's your view on the support currently provided, both in a school setting and EOTAS settings for mental health support? Have you been able to get that sort of information? Have you got a sense of—?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "I don't think we're really in a position to answer fully as to what's going on. I think that part of the problem is there's not really a national picture that we can pick up in terms of data or information regarding this, and I think that's really why there's been such a push towards seeing this in the curriculum.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "Sure. So much of your evidence is anecdotal, is it? It's people that have been referred to you, come to you for help, and you just—or your own research. What—?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "The research that we're going to do is really where we're at, and that's because we feel that there is a gap there regarding how young people are experiencing this within the school environment and in general. I think, in particular, we're aware of increases—quite substantial increases in some cases—regarding self-harm, and concern that manifests itself slightly differently between girls and boys. Specifically, I think there's now an increasing focus on self-harm behaviour amongst girls in the 15 to 19 age range, but we're not entirely sure of how good the support is at schools. My experience of projects that I've been involved in—I was previously in front of this committee as part of the Time to Change Wales project—was that, overall, it depends quite strongly on the senior management team and their commitment. Where the SMT has taken a lead, then it feels that schools are really doing something. Where the SMT are, perhaps, a bit more laissez-faire regarding this, then it feels that maybe schools are not making such a step forward. And to come back to the point, that's why we feel that whole-school approach guidance needs to be statutory, because we'll otherwise reach some quite uneven outcomes, because those who are doing it well will really push ahead and those that are not so engaged will not be helping their pupils in the way that they should be.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "I guess the EOTAS or PRU provision is going to be much more challenging then, isn't it, then main school provision. I suppose that was what I was trying to get at as well, whether you get a sense that there may be some progress being made in mainstream schools, is that following through in PRUs and EOTAS provision?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "I'll just be honest: right now, I couldn't give you an answer on that. I think that is something that, perhaps, slightly concerns me about the whole field is not being able to get a national feel for these issues. I would suspect that there are pockets of very good practice. I've heard discussions about things being done regionally and nationally, but I think it would be good to be able to see what that best practice looks like and how well it's done.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "I appreciate you're not educationalists and you wouldn't necessarily have all of that information, but have you got any sense of—again, whether this is anecdotal or from cases that are referred to you—evidence of schools off-rolling pupils with mental health problems? If you've got any evidence of that, what might the impact of that be on the individuals?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Yes, I think that certainly does happen. I suppose we know this anecdotally from Samaritans research, but also I have experience of working in pupil referral units and working with some really vulnerable children, and I think there is a sense sometimes that these children are labelled as naughty and disruptive. So, children who have additional learning needs or a communication problem that potentially is undiagnosed or not really properly understood. I think when children have mental health problems and additional learning needs, often they can find the school environment really difficult. I've worked with children who have told me that they just don't enjoy being in the classroom because they feel incredibly anxious. They don't feel they can contribute to the school environment, they don't feel like they're keeping up with their classmates and, as a result, they demonstrate challenging behaviour so that they can leave the classroom. I think that's very sad. As a result, these children aren't always understood and are off-rolled in some cases. But, like Sarah said earlier, there are certainly examples of really good practice, and I suppose this links in to what approaches schools, pupil referral units and EOTAS should take to vulnerable children with mental health problems. One example I can give you is that, at one pupil referral unit, the children would get really distressed and really disruptive towards the end of the day on a Friday. I suppose that, in some schools, the teachers would have thought, 'This is ridiculous, they're disrupting the lessons', but what the teachers knew is that these children would go home, they would face such adversity, wouldn't always get a meal, would be exposed to things they shouldn't be exposed to, and the teachers were able to respond to that with compassion and empathy. But, obviously, seeing behind behaviour is really, really difficult, and I don't think teachers should have to do this alone, they should be properly trained and properly equipped. Even going up to a child—and I suppose this goes back to mental health support. Ideally, as Samaritans, we would want suicide prevention plans to be embedded in schools and to be part of the culture of schools, but obviously this can't happen if teachers aren't properly equipped and don't have the confidence to go up to a student and ask them if they're struggling. In our compassion in education toolkit, we highlight the importance of asking a child, 'Are you self-harming?', if there are signs; 'Have you tried to take your own life?', if there are signs. But obviously that's a very difficult conversation to have. So, yes, there are certainly examples of best practice, but I do believe that, if school staff aren't properly equipped and trained, off-rolling pupils, especially at key stage 4, where obviously you will hold those grades, is definitely something that they don't necessarily have the incentive to prevent. So it's worth looking at that.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "You touched, in the beginning of that response, on children being labelled as naughty. To what extent have you come across that? Is that quite prevalent? Is that quite common?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Absolutely, yes. I think it's really down to the school. I think it's down to experience and it's down to the teacher. I think it links up with the question we were asked before about diagnosis and support. Lots of children with communication difficulties especially, if they haven't been formally diagnosed, they are certainly the ones that are deemed naughty, because I suppose people think, 'Well, you should be doing well, you're bright. You should be thriving in school.' But that's not always the case. Children can be incredibly anxious, have mental health problems, obviously, are exposed to ACEs and things that go on at home that not necessarily every teacher would know about. So, I think there are definitely children who are labelled 'naughty', and I think children also play up to that as well. Like I said, if children are very anxious in the school environment and in the classroom, if they know they can get out of the classroom and get into a safe space, they will do that.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "And then that labelling of a 'naughty' child is actually the impediment to getting that child the support that they need.",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Absolutely, yes, and I think that's where formal diagnosis can be helpful. I think the doors are open then to much more school support. So, yes, I think it is down to how the school approach it, and it goes back to the whole-school approach and having emotional and mental health on a statutory basis in the curriculum. It embeds emotional well-being into the culture of the school, and it means that students might know when they need help, how to be more resilient and helping themselves, and when and how to ask for help from the teachers. So, I think it's really important.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "If I can just pick up on one of those points, Mind Cymru conducted a series of focus groups around Wales to inform our response to the new curriculum. One of the comments that I think struck home most strongly with me was a young boy saying that, because the same teacher was responsible for pastoral and behaviour, because he had been labelled as naughty or a troublemaker, he felt uncomfortable in terms of going to that same person within the school in order to disclose the problems he was having, because there was a fear of not being believed or accepted, or it being considered as an excuse for poor behaviour, rather than them being taken seriously. I wouldn't want to over-egg that point, but I think it is an important consideration from a learners' perspective. 'If I disclose a problem, if I want to talk to somebody, are there appropriate considerations within the school setting where I can turn to somebody who maybe I might not have the greatest relationship with in other contexts?' I'd also just like to come back to the off-rolling question if I may, just quite briefly. As I said at the outset of the evidence here, Estyn conducted a piece of work on pupil registration practices that showed a substantially higher amount of off-rolling between year 10 and 11, but also a consistent level—1.5 per cent to 2 per cent—in other secondary school years. But we don't have the qualitative material to understand how much of that is related to mental health factors, and how much—because we're in discussion about school accountability—might drive some of that at year 10/11. But we don't know why that baseline of 500/600 young people every year is there within our schools. I think that needs further investigation.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "Okay. Thanks for that. Can I just ask you a couple of other questions about the impact of particular circumstances, and whether you've come across any issues relating to Welsh-medium provision to support the mental health and well-being of learners as an issue—that it's not been available, Welsh-medium support, for those learners? Have you come across that at all?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "We haven't necessarily come across it, but we haven't been looking for it either. The Estyn report notes that there are generally fewer off-rollings from Welsh-medium education to EOTAS. There are a number of potential reasons for that. That can include the complete lack of EOTAS provision within a local area. It could be the socio-economic profile, because exclusions, et cetera, are substantially higher amongst those who are eligible for free school meals, and in many parts of Wales the socio-economic profile of a Welsh-medium education school is slightly different. We are not aware of any particular work that's been done to examine the needs and the provision of Welsh-medium EOTAS. Therefore, my suspicion, without any particular evidence, would be that it happens on a local authority basis, possibly on an incidental basis, depending on the quality and the ability of staff, and possibly more prevalent therefore in west and north-west Wales.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "Okay. We can come back to that again, I'm sure. Do you know whether there's any impact on learners where there are actually delays in accessing EOTAS, again in terms of mental health conditions, if there's a delay in getting them to the appropriate provision? Have you got any evidence, anecdotal or otherwise, of the impact on that?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "Not specifically researched on that situation. I think, again, there is so much that we don't actually know and that we should know a lot more about, but I think there are some things that we can say about delays for young people who are not either in education or in anything else, and they're connected with the issues anyway. So, if you understand that there's a strong link between inequality and exclusion, and that the most likely young people to be excluded have other disadvantages as well, that's a really important issue to understand. So, being out of school or out of education for any time is going to exacerbate those pre-existing inequalities, and I can't emphasis that enough. This is exacerbating this cycle of inequality and disadvantage. So, being outside your peer group makes you vulnerable. It makes you vulnerable, and I guess the longer that continues I would expect the worse that impact and that uncertainty would be. So, there's the impact on loneliness and young people seeking an alternative community to the school one. Since the publication of our report, we have had an extraordinary level of interest from people concerned about crime. So, we've talked to the youth justice board, we've met with the police, there's a huge level of concern about county lines and about home-growing drug gangs, and the fodder that those young people are for people who will engage them in all sorts of activities, which are hugely damaging both to themselves and also to the wider society. So, I think we need to understand there's a lot at stake here for wider society in holding young people, and not allowing gaps to grow where they are not held. I would just refer you to the child death review on suicide and suspected suicide by young people, which came out very recently from Public Health Wales and Swansea University, and that looked at 33 young people who died by suicide over the past few years. One thing that came through that and was reflected in one of their suggestions for action was that those young people had not been held in education or training or employment, had slipped through all sorts of systems, and were extremely vulnerable. So, I think that's a really big message: that we need to try to hold people and not allow those gaps—where they're not held within their society—to lengthen and become really, really difficult. So, I think that's my major message on that particular one.",
+          "speaker": "Sarah Stone"
+        },
+        {
+          "content": "Can I just ask, as a follow on from that, whether you've got any views on the potential impact of individual tuition on learners' well-being? So, home tuition, for instance: are pupils going to be on their own doing that? That might be in their best interest, or do you have any concerns that it might not be?",
+          "speaker": "Dawn Bowden AM"
+        },
+        {
+          "content": "I suppose we don't have actual evidence to show the impact home schooling has on pupils, but what we do know and something that is of huge concern, I suppose, to most people is that there's no central data on how many young people are home schooled. So, it's quite likely that these children are hidden or invisible and could be at a huge risk of the adverse problems that are related to exclusion more generally. Also, it is a concern, if children aren't registered with any school, how they get back into school, how they reintroduce back into the schooling environment, if that's what people think is best for them. So, I think that is a concern: not having that transparency of data. And just to reiterate Sarah's point, I suppose, home schooling could tackle the more academic side of things, so it would mean that that child is still receiving an education, but it might not necessarily help with the adverse effects of exclusion, like loneliness and isolation. That child still isn't with its own peer group. That is something that came out of the men's research, as Sarah mentioned. These men, who are now middle aged and are at the highest risk of dying by suicide, weren't always interacting with children their own age, and that did cause problems in later life. So, I think it's definitely something we don't know enough about, but I think we need to know more about.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "There are two questions within there, regarding the delay in entering provision and the effect of long term individual teaching. I think there are occasions on which individual tuition will be beneficial, because there may be a reason why somebody is uncomfortable and unable to operate within an educational setting. However, it may be that, on a longer term basis, that is not entirely appropriate. But it's very much an individual matter. What concerns me, I think, is the idea of there being a gap between mainstream education and entering any form of EOTAS provision due to capacity or otherwise, because that is a period in time—. We don't know whether there's the causation of or exacerbation of mental health issues amongst those in EOTAS, but it's clear that—well, it seems intuitive that a gap between being in mainstream education and EOTAS is unhelpful, not least their rights to an education, but also the feelings that young people who are probably in quite a confused and troubled state may have during that gap and how long that gap can endure. I will refer back: there was a recommendation by Estyn in their 2016 report on EOTAS regarding CAMHS support for children within those settings, I don't know whether there's been any particular progress within that—and especially the mixture of issues that may be related to both mental health and also neurodevelopmental issues and whether those are more or less likely amongst this vulnerable part of the population.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "Just to draw your attention to it, I think there's an acknowledgment that there's a lot we don't know about this. Again, in the loneliness and isolation strategy, there's a commitment to analyse existing education and health data to explore correlations between exclusions or being educated other than at school and mental well-being, including loneliness and isolation. So, I think that's a very welcome commitment to try to expand our understanding in this area, because there may be some pluses as well as minuses, but actually there is so much that we don't know about this.",
+          "speaker": "Sarah Stone"
+        },
+        {
+          "content": "Thank you. We've got some questions now from Siân Gwenllian. I think some of them have been covered, but—",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Just in general, once a young person or a child has been excluded, is there enough support for them, not just on the educational side, but in general? Are we supporting these young people, these most vulnerable young people, once they're in the position of having been excluded?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "I'd say that that's something that's possibly happening locally, but we don't have a national picture. One of the things we have already noted is the time between being excluded and entering some kind of EOTAS provision. So, that in itself—and I've heard people talking about the capacity issues—shows what's happening to these children, at a time when they are most vulnerable because they are outside of the system.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "And who should be supporting them? Are we being clear enough with regard to who should be giving them the support? They've been excluded, so obviously the education system has a responsibility, but are we clear enough in terms of who else's responsibility this is, and who should be co-ordinating that support?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "The truth is, the responsibility lies on the local education authority in that context, I would say. The point is that, often, these children deal with several other institutions. So, it's incredibly important that any service is interweaved into that setting around the child or the children who are in this situation. More information is needed about this. When I was talking earlier about inclusive education, or some kind of investigation into this, that's the kind of thing I'd look at: how to bridge that gap and what kind of support will be available. I'm concerned, of course, in terms of education, whether there is enough funding available to ensure this. But because this is a very vulnerable group, we need to take responsibility in exactly the same way, perhaps, as corporate parenting plays a role there. We need to look at that kind of system, and how we help these individuals. I know there are figures available on local authorities, but I can't remember them off the top of my head, but maybe that's something to look at.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "And as Ian just said, although there's a lot of responsibility by the school and the local authority, I suppose some responsibility also sits with the parent as well. But for the parents to support their child, either if they're at risk of being excluded or if the child is already in EOTAS, and that parent wants to make sure that the child is having the best education possible, the parent has to have the right amount of information. They must know where to go for support themselves, and I think that a parent can't necessarily know the rights of their child to education and what their child is supposed to be having if they're not provided with all of the information. And I'm sure this is dependent on the school or dependent on the local authority, but that's something worth thinking about as well.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "Okay. Any other questions?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Well, unless you want to sum up—?",
+          "speaker": "Sian Gwenllian AM"
+        },
+        {
+          "content": "Just a comment, really, on the new curriculum and ensuring that EOTAS provision includes this, and how the whole-school approach will work within EOTAS, and how we ensure that the provision is available through the medium of Welsh, as we were referring to earlier, on a national level. Is it possible that it can be worked out within the local consortia, for example? How do we ensure that the teachers—? If it's initial teacher training, or if they're newly qualified teachers, or if they're more experienced, how will this be implemented through the system? Because I think that children in EOTAS situations are usually more vulnerable than others, and therefore there is a need to prioritise their well-being and their mental health. We talk a lot about certificates and so forth, and qualifications, but ensuring everybody's well-being is important, and an important outcome of the work. So, we're thinking of this whole-school approach and how it works within the new curriculum, and this is a vital point for the years to come.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "Just before we finish, then, is there anything you wanted to add in terms of what the committee could recommend about professional development for staff that would enhance this provision in this area?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "Yes, absolutely. I think it's so important for teachers to be equipped with the training and to understand the link between inequality and all the things that come under that term, and challenging behaviour, and I think if teachers are aware of that, and trained properly to deal with that, the risk of exclusion will ultimately lessen. And I think with regard to how that can happen, I think, in some cases, mental health training and mental health awareness training is supplementary at times, with just teacher's training, but I think it should be embedded in the initial teacher's training, so that, more than anything, as well as being equipped with the skills, teachers have the confidence to deal with those really challenging situations.",
+          "speaker": "Liz Williams"
+        },
+        {
+          "content": "Okay, thank you. Ian?",
+          "speaker": "Lynne Neagle AM"
+        },
+        {
+          "content": "I think that's the importance of a whole-school approach, and that being statutory, because that will ensure that everybody within the school community has that knowledge and awareness and knows what to do and where to signpost people. It means foregrounding and having that in the heart of the school ethos, and I think that turning the school into somewhere that considers mental health and emotional well-being first, rather than waiting for a problem—I think that's the key to improving the well-being of our future generations.",
+          "speaker": "Dr Ian Johnson"
+        },
+        {
+          "content": "I just think it would be great if the community would recognise the link between inequality, adverse childhood experiences, and the opportunity that there is in avoiding a young person falling out of school, and out of anything, and out of sight. So, I think, the other side of this is that this is a real moment of opportunity to intervene positively.",
+          "speaker": "Sarah Stone"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Committee",
+    "n_spans": 3,
+    "n_turns": 229,
+    "native_meeting_id": "education_4",
+    "source_word_count": 14631
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What did the meeting discuss about issues on the special education and recruitment of professional staff?",
+  "reference_answer": "PRU was supposed to collaborate with schools to arrange special curriculums to meet the students' special needs. This not only had something to do with finance but was also related to the recruitment of professional staff. The training for special education ought to be included in the professional training system."
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "qasper-09",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 1, "f2": 3, "f3": 3, "f4": 3},
+  "relation_weights": {},
+  "rationale": {
+    "f1": "Only states that three datasets were used in total, a framing count that does not itself name any of the datasets the question asks for.",
+    "f2": "Names the CSAT dataset and its task/modality, one of the three datasets explicitly required by the reference answer.",
+    "f3": "Names the 20 newsgroups dataset and its task/modality, one of the three datasets explicitly required by the reference answer.",
+    "f4": "Names the Fisher Phase 1 corpus and its task/modality, one of the three datasets explicitly required by the reference answer."
+  }
+}

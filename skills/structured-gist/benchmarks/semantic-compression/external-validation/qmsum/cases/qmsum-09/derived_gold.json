@@ -1,0 +1,183 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-09",
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass: added f8 to capture Trudeau's first response to Scheer's opening Auditor General question, which was a complete non-answer that pivoted to an unrelated bill (the Canada emergency response benefit and disability supports). Added f9 to capture Scheer's distinct 'withholding funds'/'hampering' accusation within his second turn, which was not covered by f4 (f4 only captures the 'revisionist history'/volunteered-efficiencies portion of that same turn)."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "Will he at least provide the Auditor General with the additional funding she needs to look into government expenditures?",
+      "text": "Hon. Andrew Scheer asked whether the Prime Minister would provide the Auditor General with the additional funding she needs to look into government expenditures."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "The Auditor General has indicated that she will be able to do half as many audits, despite an almost doubling in the size of government spending.",
+      "text": "Scheer said the Auditor General has had to do more with less, and that she indicated she would be able to do half as many audits despite an almost doubling in the size of government spending."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "we worked with the Auditor General to increase the funding of the Auditor General's office in 2018-19, and the equivalent of 38 full-time staff were added. We support the Auditor General, unlike the Conservative government, which fired 60 people from the Auditor General's office.",
+      "text": "Trudeau responded that the government worked with the Auditor General to increase her office's funding in 2018-19, adding the equivalent of 38 full-time staff, and contrasted this with the Conservative government having fired 60 people from the Auditor General's office."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "The Prime Minister is again engaged in revisionist history. He well knows that it was the Auditor General's office that volunteered to make administrative efficiencies, which did not affect its ability to do the job.",
+      "text": "Scheer called this response 'revisionist history' and said the Auditor General's office itself had volunteered administrative efficiencies that were not meant to affect its ability to do its job, citing interim auditor general John Wiersema."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "talking of revisionist history, Stephen Harper's Conservatives cut $6.5 million from the Auditor General's budget and fired 60 staff. On the contrary, we worked with the Auditor General's office and increased its funding and added the equivalent of 38 new full-time staff.",
+      "text": "Trudeau replied that Stephen Harper's Conservatives cut $6.5 million from the Auditor General's budget and fired 60 staff, while his own government added the equivalent of 38 new full-time staff and increased the office's funding."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "In May, the interim auditor general said, Ten years ago, we were completing about 27 performance audits every year. With our current resources, we expect to be able to deliver 14 performance audits each year.",
+      "text": "Scheer cited the interim auditor general's statement that the office used to complete about 27 performance audits a year, but with current resources expects to deliver only 14 per year."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f7",
+      "source_quote": "The Auditor General's office has requested more funds to be able to do the job that Canadians expect to be done. Will the Prime Minister give those additional funds to the Auditor General's office, yes or no?",
+      "text": "Scheer said the Auditor General's office had requested more funds to do the job Canadians expect, and asked the Prime Minister again for a yes-or-no commitment on giving those additional funds."
+    },
+    {
+      "category": "negation",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f8",
+      "source_quote": "Mr.Chair, not only are we introducing a bill this afternoon to help Canadians with the Canada emergency response benefit and those living with disabilities, but we are also proposing to the opposition parties that we hold a debate and a vote on that. I hope the opposition parties will allow a vote and a debate in the House on this important bill.",
+      "text": "Trudeau's first response to Scheer's opening Auditor General funding question did not address the Auditor General at all; he instead pivoted to introducing a bill on the Canada emergency response benefit and disability supports and proposed a debate and vote on it."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f9",
+      "source_quote": "Only the government's refusal to grant that extra funding is hampering the Auditor General's ability to give Canadians the answers they deserve, and we wonder why.",
+      "text": "Scheer separately accused the government of withholding funds from the Auditor General and of hampering her ability to give Canadians the answers they deserve."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "inferred",
+      "fact_ids": [
+        "f2",
+        "f3"
+      ],
+      "id": "r1",
+      "source_quote": "",
+      "text": "Trudeau's answer about increased 2018-19 funding and added staff did not directly address Scheer's specific claim that the Auditor General can now complete only half as many audits despite near-doubled government spending.",
+      "type": "contrast"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "inferred",
+      "fact_ids": [
+        "f4",
+        "f5"
+      ],
+      "id": "r2",
+      "source_quote": "",
+      "text": "After being accused of revisionist history for citing the Conservatives' cuts, Trudeau repeated essentially the same funding comparison rather than addressing Scheer's point that the earlier reduction in audits stemmed from the Auditor General's own volunteered efficiencies, not forced cuts.",
+      "type": "contrast"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f6",
+        "f7"
+      ],
+      "id": "r3",
+      "source_quote": "That's half the number of audits, despite a massive explosion in government spending. The Auditor General's office has requested more funds to be able to do the job that Canadians expect to be done. Will the Prime Minister give those additional funds to the Auditor General's office, yes or no?",
+      "text": "Because the Auditor General's office says it can now complete only half as many performance audits as a decade ago despite a large increase in government spending, Scheer pressed Trudeau again for a direct yes-or-no commitment on additional funding.",
+      "type": "causal"
+    }
+  ]
+}

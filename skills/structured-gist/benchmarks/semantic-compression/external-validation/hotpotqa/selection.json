@@ -1,0 +1,876 @@
+{
+  "dataset": "hotpotqa",
+  "eligibility_stats": {
+    "eligible_pool_size": 5899,
+    "n_rows_seen": 7405,
+    "rejections": {
+      "insufficient_distractor_context": 18,
+      "not_bridge_type": 1487,
+      "supporting_fact_unresolved": 1
+    }
+  },
+  "pressure_only": true,
+  "quota": 8,
+  "selected_candidates": [
+    {
+      "answer": "democracy and personal freedom",
+      "candidate_id": "5ab41b8c5542996a3a969f40",
+      "context_sentences": [
+        [
+          "In mathematics, a Bézout domain is a form of a Prüfer domain.",
+          " It is an integral domain in which the sum of two principal ideals is again a principal ideal.",
+          " This means that for every pair of elements a Bézout identity holds, and that every finitely generated ideal is principal.",
+          " Any principal ideal domain (PID) is a Bézout domain, but a Bézout domain need not be a Noetherian ring, so it could have non-finitely generated ideals (which obviously excludes being a PID); if so, it is not a unique factorization domain (UFD), but still is a GCD domain.",
+          " The theory of Bézout domains retains many of the properties of PIDs, without requiring the Noetherian property.",
+          " Bézout domains are named after the French mathematician Étienne Bézout."
+        ],
+        [
+          "In mathematics, the interplay between the Galois group \"G\" of a Galois extension \"L\" of a number field \"K\", and the way the prime ideals \"P\" of the ring of integers \"O\" factorise as products of prime ideals of \"O\", provides one of the richest parts of algebraic number theory.",
+          " The splitting of prime ideals in Galois extensions is sometimes attributed to David Hilbert by calling it Hilbert theory.",
+          " There is a geometric analogue, for ramified coverings of Riemann surfaces, which is simpler in that only one kind of subgroup of \"G\" need be considered, rather than two.",
+          " This was certainly familiar before Hilbert."
+        ],
+        [
+          "Neo-libertarianism is a political and social philosophy that is a combination of libertarian principles with present-day neoconservative principles.",
+          " This political philosophy prioritizes liberty as its main idea, promoting free expression, freedom of choice, other social freedoms, and \"laissez-faire\" capitalism, while also being critical of authority.",
+          " However, neo-libertarians differ with libertarians on issues of government oversight, as many neo-libertarians tend to sympathize with neoconservative ideas on authority, especially when it comes to military action.",
+          " American neo-libertarians believe in the idea of American exceptionalism, and support interventionist policy as a way to maintain America's importance in foreign relations."
+        ],
+        [
+          "The modern study of Japanese aesthetics only started a little over two hundred years ago in the West.",
+          " The Japanese aesthetic is a set of ancient ideals that include \"wabi\" (transient and stark beauty), \"sabi\" (the beauty of natural patina and aging), and \"yūgen\" (profound grace and subtlety).",
+          " These ideals, and others, underpin much of Japanese cultural and aesthetic norms on what is considered tasteful or beautiful.",
+          " Thus, while seen as a philosophy in Western societies, the concept of aesthetics in Japan is seen as an integral part of daily life.",
+          " Japanese aesthetics now encompass a variety of ideals; some of these are traditional while others are modern and sometimes influenced by other cultures."
+        ],
+        [
+          "American exceptionalism is an ideology that holds that the United States is unique among nations in a positive way, particularly with respect to its ideals of democracy and personal freedom."
+        ],
+        [
+          "The Massoud Foundation (founded as the Ahmad Shah Massoud Foundation; Dari Persian: بنیاد شهید احمد شاه مسعود ) is a non-profit and non-governmental organization operating in Afghanistan.",
+          " It was established in Kabul in 2003 to preserve and spread the values, leadership, and ideals of the late Ahmad Shah Massoud, the Lion of the Panjshir, who was a founding father of the resistance against the Soviet invasion in the 1980s and then against the Taliban and Al-Qaeda in the 1990s until he was assassinated by Al-Qaeda just two days prior to 9/11."
+        ],
+        [
+          "The Hong Kong Democratic Foundation (; HKDF) is a Hong Kong public policy think tank established initially as a political party on 27 October 1989.",
+          " The Foundation was founded in the run up to the first Legislative Council direct elections of 1991 by a group of business people and professionals who endorsed democratic ideals led by Jimmy McGregor and Dr Leong Che-hung.",
+          " The Foundation later transformed itself into a think tank and is currently chaired by Southern District Councillor Paul Zimmerman."
+        ],
+        [
+          "Islamic Foundation Bangladesh (Bengali: ইসলামিক ফাউন্ডেশন বাংলাদেশ ) is a government organization under the \"Ministry of Religious Affairs\" in Bangladesh working to disseminate values and ideals of Islam and carry out activities related to those values and ideals.",
+          " The head office of the foundation is in Dhaka, which is supported by 6 divisional offices and 64 district offices, as well as 7 Imam Training Academy Centers and 29 Islamic Mission Centers.",
+          " The director general is the chief executive of the foundation."
+        ],
+        [
+          "Mahatma Gandhi National Foundation, Kerala, founded in December 2000, is aims at propagating the ideals and perpetuating the memory of Mahatma Gandhi, father of nation.",
+          " Mahatma Gandhi National Foundation (MGNF) is a mission of collective action to provide better future to the most vulnerable sections of Kerala Society - women, children, disabled persons the aged and other disadvantaged groups - by providing educational training, protecting their health and environment, improving their living condition and strengthening their family and community."
+        ],
+        [
+          "In the field of psychology, cognitive dissonance is the mental discomfort (psychological stress) experienced by a person who simultaneously holds two or more contradictory beliefs, ideas, or values.",
+          " The occurrence of cognitive dissonance is a consequence of a person's performing an action that contradicts personal beliefs, ideals, and values; and also occurs when confronted with new information that contradicts said beliefs, ideals, and values."
+        ]
+      ],
+      "context_titles": [
+        "Bézout domain",
+        "Splitting of prime ideals in Galois extensions",
+        "Neo-libertarianism",
+        "Japanese aesthetics",
+        "American exceptionalism",
+        "Massoud Foundation",
+        "Hong Kong Democratic Foundation",
+        "Islamic Foundation Bangladesh",
+        "Mahatma Gandhi National Foundation",
+        "Cognitive dissonance"
+      ],
+      "distinct_titles": [
+        "American exceptionalism",
+        "Neo-libertarianism"
+      ],
+      "hotpot_id": "5ab41b8c5542996a3a969f40",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "What two ideals are the foundation of Neo-libertarianism?",
+      "sort_key": "00155072165a076fe0a58caf97f9fbb35624319a1504bdeb4e07c4aeeb037274",
+      "source_word_count": 865,
+      "supporting_facts": [
+        {
+          "sent_id": 3,
+          "text": " American neo-libertarians believe in the idea of American exceptionalism, and support interventionist policy as a way to maintain America's importance in foreign relations.",
+          "title": "Neo-libertarianism"
+        },
+        {
+          "sent_id": 0,
+          "text": "American exceptionalism is an ideology that holds that the United States is unique among nations in a positive way, particularly with respect to its ideals of democracy and personal freedom.",
+          "title": "American exceptionalism"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "psilocin",
+      "candidate_id": "5a7354d55542994cef4bc55a",
+      "context_sentences": [
+        [
+          "\"O\"-Acetylpsilocin (also known as psilacetin, 4-acetoxy-DMT, or 4-AcO-DMT) is a synthetically produced psychoactive drug and has been suggested by David Nichols to be a potentially useful alternative to psilocybin for pharmacological studies, as they are both believed to be prodrugs of psilocin.",
+          " However, some users report that \"O\"-acetylpsilocin's subjective effects differ from that of psilocybin and psilocin.",
+          " It is the acetylated form of the psilocybin mushroom alkaloid psilocin and is a lower homolog of 4-AcO-MET, 4-AcO-DET, 4-AcO-MiPT and 4-AcO-DiPT."
+        ],
+        [
+          "Baeocystin is a psilocybin mushroom alkaloid and analog of psilocybin.",
+          " It is found as a minor compound in most psilocybin mushrooms together with psilocybin, norbaeocystin, and psilocin.",
+          " Baeocystin is an \"N\"-demethylated derivative of psilocybin, and a phosphorylated derivative of 4-HO-NMT (4-hydroxy-\"N\"-methyltryptamine).",
+          " The structures at right illustrate baeocystin in its zwitterionic form."
+        ],
+        [
+          "Psilocybin ( ) is a naturally occurring psychedelic prodrug compound produced by more than 200 species of mushrooms, collectively known as psilocybin mushrooms.",
+          " The most potent are members of the genus \"Psilocybe\", such as \"P. azurescens\", \"P. semilanceata\", and \"P. cyanescens\", but psilocybin has also been isolated from about a dozen other genera.",
+          " As a prodrug, psilocybin is quickly converted by the body to psilocin, which has mind-altering effects similar, in some aspects, to those of LSD, mescaline, and DMT.",
+          " In general, the effects include euphoria, visual and mental hallucinations, changes in perception, a distorted sense of time, and spiritual experiences, and can include possible adverse reactions such as nausea and panic attacks."
+        ],
+        [
+          "Psilocybe cubensis is a species of psychedelic mushroom whose principal active compounds are psilocybin and psilocin.",
+          " Commonly called shrooms, magic mushrooms, golden tops, cubes, or gold caps, it belongs to the Hymenogastraceae family of fungi and was previously known as Stropharia cubensis.",
+          " It is the most well known psilocybin mushroom due to its wide distribution and ease of cultivation."
+        ],
+        [
+          "Psilocybe azurescens is a psychedelic mushroom whose main active compounds are psilocybin and psilocin.",
+          " It is among the most potent of the tryptamine-bearing mushrooms, containing up to 1.8% psilocybin, 0.5% psilocin, and 0.4% baeocystin by dry weight, averaging to about 1.1% psilocybin and 0.15% psilocin, makes it one of the strongest mushrooms in psilocybe genus.",
+          " It belongs to the family Hymenogastraceae in the order Agaricales."
+        ],
+        [
+          "Psilocybin mushrooms, also known as psychedelic mushrooms, are a polyphyletic group of mushrooms that contain the psychedelic compounds psilocybin, psilocin and baeocystin.",
+          " Common colloquial terms include magic mushrooms and shrooms.",
+          " They are used mainly as an entheogen and recreational drug whose effects can include euphoria, altered thinking processes, closed and open-eye visuals, synesthesia, an altered sense of time and spiritual experiences.",
+          " Biological genera containing psilocybin mushrooms include \"Copelandia\", \"Galerina\", \"Gymnopilus\", \"Inocybe\", \"Mycena\", \"Panaeolus\",\" Pholiotina\", \"Pluteus\", and \"Psilocybe\".",
+          " Over 100 species are classified in the genus \"Psilocybe\"."
+        ],
+        [
+          "Psilocybe makarorae is a species of psilocybin mushroom in the family Strophariaceae.",
+          " Officially described as new to science in 1995, it is known only from New Zealand, where it grows on rotting wood and twigs of southern beeches.",
+          " The fruit body (mushroom) has a brownish cap with lighter coloured margins, measuring up to 3.5 cm wide.",
+          " The cap shape is either conical, bell-shaped, or flat depending on the age of the mushroom, and it features a prominent umbo.",
+          " Although the whitish stem does not form a true ring, it retains remnants of the partial veil that covers and protects the gills of young fruit bodies.",
+          " \"P. makarorae\" mushrooms can be distinguished from the similar North American species \"Psilocybe caerulipes\" by microscopic characteristics such as the presence of cystidia on the gill faces (pleurocystidia), and cheilocystidia (found on the gill edges) with more elongated necks.",
+          " Based on the bluing reaction to injury, \"P. makarorae\" is presumed to contain the psychedelic compounds psilocybin and psilocin."
+        ],
+        [
+          "Psilocybe is a genus of gilled mushrooms growing worldwide.",
+          " This genus is best known for the species with psychedelic properties.",
+          " Psilocybin, psilocin and baeocystin are the main psychedelic compounds responsible for the psychoactive effects of many species in the genus."
+        ],
+        [
+          "Psilocybe medullosa is a species of psychoactive mushroom.",
+          " It was originally described in 1898 as \"Naucoria medullosa\" by Italian mycologist Giacomo Bresadola.",
+          " Czech mycologist Jan Borovička transferred it to \"Psilocybe\" in 2007.",
+          " A widespread but rather rare species, it is found in Europe, where it grows as a saprobe on woody debris and detritus.",
+          " Chemical analysis has been used to confirm the presence of the psychedelic compounds psilocin and psilocybin in the fruit bodies but probably at low levels.",
+          " \"Psilocybe silvatica\" is its American sister species; it differs by subtle changes in molecular markers (LSU, ITS rDNA, and others)."
+        ],
+        [
+          "Psilocybe meridionalis is a psychedelic mushroom which has psilocybin and psilocin as main active compounds.",
+          " This mushroom is closely related to \"Psilocybe stuntzii\" but can be distinguished by its smaller spores and the presence of pleurocystidia.",
+          " This is the only species of \"Psilocybe\" from section Stuntzii which has been found in Mexico.",
+          " It is known only from the type location in Neverias, Sierra de Cacoma, Jalisco, Mexico."
+        ]
+      ],
+      "context_titles": [
+        "O-Acetylpsilocin",
+        "Baeocystin",
+        "Psilocybin",
+        "Psilocybe cubensis",
+        "Psilocybe azurescens",
+        "Psilocybin mushroom",
+        "Psilocybe makarorae",
+        "Psilocybe",
+        "Psilocybe medullosa",
+        "Psilocybe meridionalis"
+      ],
+      "distinct_titles": [
+        "Psilocybe",
+        "Psilocybin"
+      ],
+      "hotpot_id": "5a7354d55542994cef4bc55a",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "Which of the three main psychedelic compounds found in the Psilocybin genus mushroom are converted to psilocin by the body?",
+      "sort_key": "0020697f7387b59c16a7d0d8071fc957260c38c9113cfd21a6eeb5407c4b2c1f",
+      "source_word_count": 822,
+      "supporting_facts": [
+        {
+          "sent_id": 2,
+          "text": " Psilocybin, psilocin and baeocystin are the main psychedelic compounds responsible for the psychoactive effects of many species in the genus.",
+          "title": "Psilocybe"
+        },
+        {
+          "sent_id": 2,
+          "text": " As a prodrug, psilocybin is quickly converted by the body to psilocin, which has mind-altering effects similar, in some aspects, to those of LSD, mescaline, and DMT.",
+          "title": "Psilocybin"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "from 1993 to 1996",
+      "candidate_id": "5adf9f6c5542992d7e9f93c2",
+      "context_sentences": [
+        [
+          "The institution that is now the LDS Motion Picture Studios began as the BYU Motion Picture Studio in 1953, and led by Wetzel Whitaker.",
+          " It was originally located in a building called the Green Barn where the Ernest L. Wilkinson Center on Brigham Young University (BYU) Campus is now located."
+        ],
+        [
+          "Item 47 is a 2012 American direct-to-video short film featuring the Marvel Comics organization S.H.I.E.L.D. (Strategic Homeland Intervention Enforcement and Logistics Division), produced by Marvel Studios and distributed by Walt Disney Studios Home Entertainment on the home media release of \"Marvel's The Avengers\".",
+          " It is a follow up and spin-off of \"The Avengers\", and is the third film in the Marvel One-Shots short film series.",
+          " The film is directed by Louis D'Esposito, with a screenplay by Eric Pearson, and is set in the Marvel Cinematic Universe (MCU), sharing continuity with the films of the franchise.",
+          " It stars Lizzy Caplan, Jesse Bradford, Maximiliano Hernández, and Titus Welliver, with Hernández reprising his role from the film series.",
+          " In \"Item 47\", two civilians come across a Chitauri gun and use it to commit crimes."
+        ],
+        [
+          "Phillip \"Phil\" Coulson is a character portrayed by Clark Gregg in the films and television series of the Marvel Cinematic Universe (MCU).",
+          " A high-ranking member of the espionage agency S.H.I.E.L.D., he first appeared in the 2008 film \"Iron Man\", the first film in the MCU.",
+          " Gregg went on to appear in \"Iron Man 2\" (2010), \"Thor\" (2011), and \"The Avengers\" (2012).",
+          " He additionally headlines the television series \"Agents of S.H.I.E.L.D.\" (2013–), appears in two Marvel One-Shots (2011), has been featured in various tie-in comics, and appears in the digital series \"\" (2016), all set in the MCU.",
+          " The character also appears in other media, including comics published by Marvel Comics."
+        ],
+        [
+          "Solax Studios was an American motion picture studio founded in 1910 by executives from the Gaumont Film Company of France.",
+          " Alice Guy-Blaché, her husband Herbert, and a third partner, George A. Magie, established The Solax Company.",
+          " Alice Guy-Blaché was artistic director and the director for many of its films, while her husband Herbert Blaché managed production for the new company.",
+          " They took over the studio Gaumont had built in Flushing, New York in 1908 for the production of Chronophone sound films, a venture which proved unsuccessful for Gaumont.",
+          " Solax produced silent films in Flushing from October 1910 to the summer of 1912.",
+          " Prospering, Solax invested more than $100,000 in a modern production plant in 1912 in Fort Lee, New Jersey, which had become the center of America's first motion picture industry."
+        ],
+        [
+          "Televisa San Ángel (originally Estudios y Laboratorios San Ángel, S.A.) is a film and television studio located in Mexico City.",
+          " It was originally built by Jorge Stahl as a motion picture studio, and in the 1970s would be sold to the Azcárraga family, which, through ownership of the Televisa networks, continues to own the studios.",
+          " It is the headquarters facility of the Centro de Educación Artística (CEA) and the Videocine (formerly Televicine) motion picture production and distribution company.",
+          " The network's Centro de Post Produccion is also housed at San Ángel.",
+          " Moreover, it is best known as a motion picture and television studio.",
+          " It is the oldest movie and television production facility in Mexico and the most famous telenovela studio facility in Latin America.",
+          " It was one of the four main Mexican film studios along with Estudios Churubusco, Estudios América, and Estudios Tepeyac."
+        ],
+        [
+          "Marvel One-Shots are a series of direct-to-video short films produced by Marvel Studios, set within the Marvel Cinematic Universe (MCU), released from 2011 to 2014.",
+          " They are included as special features in the MCU films' Blu-ray and digital distribution releases, but are not included in the DVD releases.",
+          " Each of the films, which range from 4 to 15 minutes, are designed to be a self-contained story that provides more backstory for characters or events introduced in the films.",
+          " Two of the shorts have been the inspiration for television series set in the MCU."
+        ],
+        [
+          "The Nestor Film Company, originally known as the Nestor Motion Picture Company, is a defunct American motion picture production company.",
+          " It was founded in 1909 as the West Coast production unit of the Centaur Film Company located in Bayonne, New Jersey.",
+          " On October 27, 1911, Nestor established the first permanent motion picture studio in Hollywood, California, and produced the first Hollywood films.",
+          " The company merged with its distributor, the Universal Film Manufacturing Company, on May 20, 1912.",
+          " Nestor became a brand name Universal used until at least mid-1917."
+        ],
+        [
+          "Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American motion picture studio based at The Walt Disney Studios in Burbank, California and is a subsidiary of Walt Disney Studios, itself a wholly owned division of The Walt Disney Company, with film producer Kevin Feige serving as president.",
+          " Previously, the studio was a subsidiary of Marvel Entertainment until The Walt Disney Company reorganized the companies in August 2015."
+        ],
+        [
+          "All Hail the King is a 2014 American direct-to-video short film featuring the Marvel Cinematic Universe (MCU) character Trevor Slattery, produced by Marvel Studios and distributed by Walt Disney Studios Home Entertainment on the home media release of \"\".",
+          " It is a follow up and spin-off of \"Iron Man 3\", and is the fifth film in the Marvel One-Shots short film series.",
+          " The film is written and directed by Drew Pearce, and is set in the Marvel Cinematic Universe, sharing continuity with the films of the franchise.",
+          " It stars Ben Kingsley, Scoot McNairy, Lester Speight, and Sam Rockwell, with Kingsley reprising his role from \"Iron Man 3\", and Rockwell reprising his role from \"Iron Man 2\".",
+          " In \"All Hail the King\", a documentary filmmaker interviews the infamous fake terrorist Trevor Slattery from behind bars."
+        ],
+        [
+          "Charles Evans Jr. is an American film producer and documentary film director.",
+          " He produced Johnny Depp's first directorial effort, \"The Brave\".",
+          " He was one of four producers on the 2004 Howard Hughes biopic \"The Aviator\", although his production credit was controversial.",
+          " Evans is the nephew of former motion picture studio executive Robert Evans, and the son of fashion industry executive and motion picture producer Charles Evans."
+        ]
+      ],
+      "context_titles": [
+        "LDS Motion Picture Studios",
+        "Item 47",
+        "Phil Coulson",
+        "Solax Studios",
+        "Televisa San Ángel",
+        "Marvel One-Shots",
+        "Nestor Film Company",
+        "Marvel Studios",
+        "All Hail the King",
+        "Charles Evans Jr."
+      ],
+      "distinct_titles": [
+        "Marvel One-Shots",
+        "Marvel Studios"
+      ],
+      "hotpot_id": "5adf9f6c5542992d7e9f93c2",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "Over what time period was the motion picture studio which produced Marvel One-Shots known as \"Marvel Films\"?",
+      "sort_key": "00277a9094fabffb15ec78d5712e0efa28166e387d52c74e9a2e62e200e716b3",
+      "source_word_count": 1018,
+      "supporting_facts": [
+        {
+          "sent_id": 0,
+          "text": "Marvel One-Shots are a series of direct-to-video short films produced by Marvel Studios, set within the Marvel Cinematic Universe (MCU), released from 2011 to 2014.",
+          "title": "Marvel One-Shots"
+        },
+        {
+          "sent_id": 0,
+          "text": "Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American motion picture studio based at The Walt Disney Studios in Burbank, California and is a subsidiary of Walt Disney Studios, itself a wholly owned division of The Walt Disney Company, with film producer Kevin Feige serving as president.",
+          "title": "Marvel Studios"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "Dalton Gang",
+      "candidate_id": "5a8b7cb95542995d1e6f13bb",
+      "context_sentences": [
+        [
+          "Bajaga i Instruktori (Serbian Cyrillic: Бајага и Инструктори; trans.",
+          " \"Bajaga and the Instructors\") are a highly popular Serbian and former Yugoslav rock band.",
+          " Founded in Belgrade in 1984 by composer, lyricist and guitarist Momčilo Bajagić \"Bajaga\", the group possesses a rich discography and a plethora of hit songs that placed them at the top of the former Yugoslav rock scene, alongside other mega-selling bands such as Bijelo Dugme and Riblja Čorba."
+        ],
+        [
+          "Sanjalice (Serbian Cyrillic: Сањалице, trans.",
+          " \"The Dreamers\") was a former Yugoslav rock band from Belgrade, notable for being one of the first former Yugoslav all-female bands, as well as one of the pioneers of the former Yugoslav rock scene."
+        ],
+        [
+          "Riblja Čorba (Serbian Cyrillic: Рибља Чорба, pronounced ] ; translation: \"Fish Stew\") is a Serbian and Yugoslav rock band from Belgrade.",
+          " The band was one of the most popular and most influential acts of the Yugoslav rock scene."
+        ],
+        [
+          "Iskre (Serbian Cyrillic: Искре, trans.",
+          " \"The Sparks\") was a former Yugoslav rock band.",
+          " The band is notable for being one of the pioneers of the former Yugoslav rock scene."
+        ],
+        [
+          "S Vremena Na Vreme (Serbian Cyrillic: С Времена На Време, trans.",
+          " \"From Time To Time\") is a Serbian and former Yugoslav rock band from Belgrade.",
+          " S Vremena Na Vreme were one of the pioneers of the Serbian acoustic rock scene, and one of the pioneers in incorporating folk music elements into rock music on the former Yugoslav rock scene."
+        ],
+        [
+          "Bele Višnje (Serbian Cyrillic: Беле Вишње, trans.",
+          " \"White Sour Cherries\") was a Serbian and former Yugoslav rock band.",
+          " The band is notable for being one of the pioneers of the former Yugoslav rock scene."
+        ],
+        [
+          "Smak (Serbian Cyrillic: Смак; trans.",
+          " \"The end time\") is a Serbian and former Yugoslav rock band from Kragujevac.",
+          " The group reached the peak of popularity in the 1970s when it was one of the most notable acts of the former Yugoslav rock scene.",
+          " The band's leader, guitarist Radomir Mihailović, nicknamed Točak (\"The Wheel\"), is considered one of the most influential guitarists on the former Yugoslav rock scene."
+        ],
+        [
+          "Korni Grupa (Serbian Cyrillic: Корни Група, trans.",
+          " \"Korni Group\") was a Yugoslav rock band from Belgrade, also known as the Kornelyans, the name which they used during a short-lived foray into the international market.",
+          " Formed in 1968, Korni Grupa was one of the first Yugoslav rock bands to achieve major mainstream popularity, and the first Yugoslav supergroup.",
+          " Korni Grupa is considered to be one of the most prominent and influential bands in the history of rock music in Yugoslavia."
+        ],
+        [
+          "Daltoni (Serbian Cyrillic: Далтони; translation: \"The Daltons\") was a Serbian and former Yugoslav rock band from Niš, notable for being one of the pioneers of the former Yugoslav rock scene."
+        ],
+        [
+          "The Dalton Gang was a group of outlaws in the American Old West during 1890–1892.",
+          " It was also known as The Dalton Brothers because three of its members were brothers.",
+          " The gang specialized in bank and train robberies.",
+          " During an attempted bank robbery in Coffeyville, Kansas in 1892, two of the brothers and two other gang members were killed; Emmett survived and was captured, tried, and convicted.",
+          " He was paroled after serving 14 years in prison."
+        ]
+      ],
+      "context_titles": [
+        "Bajaga i Instruktori",
+        "Sanjalice",
+        "Riblja Čorba",
+        "Iskre",
+        "S Vremena Na Vreme",
+        "Bele Višnje",
+        "Smak",
+        "Korni Grupa",
+        "Daltoni",
+        "Dalton Gang"
+      ],
+      "distinct_titles": [
+        "Dalton Gang",
+        "Daltoni"
+      ],
+      "hotpot_id": "5a8b7cb95542995d1e6f13bb",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "Which group of outlaws from the 1890s shares a name with a Yugoslav rock band?",
+      "sort_key": "00477486bb46abc23c919236f4557a690ccf1086a448bdecd7f6e413b0568596",
+      "source_word_count": 522,
+      "supporting_facts": [
+        {
+          "sent_id": 0,
+          "text": "Daltoni (Serbian Cyrillic: Далтони; translation: \"The Daltons\") was a Serbian and former Yugoslav rock band from Niš, notable for being one of the pioneers of the former Yugoslav rock scene.",
+          "title": "Daltoni"
+        },
+        {
+          "sent_id": 0,
+          "text": "The Dalton Gang was a group of outlaws in the American Old West during 1890–1892.",
+          "title": "Dalton Gang"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "Dirt track racing",
+      "candidate_id": "5abee41a5542993fe9a41d79",
+      "context_sentences": [
+        [
+          "Tralee Speedway was a Dirt track racing venue located in Jerrabomberra on the New South Wales side of the ACT/NSW border near Canberra, the capital city of Australia.",
+          " The speedway was home to several drivers who went on to become Australian national and state champions.",
+          " Tralee (for a time also known as Fraser Park Raceway and later the Pepsi Power Dome) was a 410 m dirt surfaced oval raceway."
+        ],
+        [
+          "Dirt track racing is a type of auto racing performed on clay or dirt surfaced oval tracks.",
+          " It began in the United States before World War I and became widespread during the 1920s and 1930s.",
+          " Two different types of race cars dominated—open wheel racers in the Northeast and West and stock cars in the South.",
+          " While open wheel race cars are purpose-built racing vehicles, stock cars (also known as fendered cars) can be either purpose-built race cars or street vehicles that have been modified to varying degrees."
+        ],
+        [
+          "The Australian Street Stock Championship is a Dirt track racing championship held each year to determine the Australian national champion.",
+          " The championship is held over a single meeting (usually on consecutive nights) and has run annually since the 1989/90 season and is awarded to a different state of Australia each year by the national controlling body, the Australian Saloon Car Federation (ASCF)."
+        ],
+        [
+          "Dirt track racing is a type of auto racing performed on oval tracks throughout the United Kingdom.",
+          " Dirt ovals outnumber all other types of tracks combined.",
+          " Tracks are also used for the motorcycle sport Speedway and other Track racing events."
+        ],
+        [
+          "Dirt track racing is a type of auto racing performed on oval tracks in South Africa.",
+          " Dirt track racing classes are, as elsewhere, similar to those raced at the tar (asphalt) oval track racing venues.",
+          " The dirt track classes include Hot Rods, 1600 Modified Saloons, Modified Non-contact Saloons, V8 American Saloons, and Midgets."
+        ],
+        [
+          "Dirt track racing is a type of auto racing performed on clay or dirt surfaced oval tracks in Australia.",
+          " The seasons tend to be from September to April.",
+          " There are a large number of tracks available Australia wide, with some of the most popular ones being Perth Motorplex, Bunbury Speedway, Speedway City, Premier Speedway Warrnambool (Sungold Stadium) and Sydney Speedway (trading as Valvoline Raceway).",
+          " The richest and best known Speedway series in Australia is the World Series Sprintcars.",
+          " The series was conceived by Adelaide based sedan driver and promoter John Hughes in 1986 as an Australian version of the famous World of Outlaws (WoO) series run in the United States since 1978.",
+          " The most recent season was the 2014–15 World Series Sprintcars season."
+        ],
+        [
+          "Dirt track racing is a type of auto racing performed on oval tracks in South Africa.",
+          " Dirt track racing classes are, as elsewhere, similar to those raced at the tar (asphalt) oval track racing venues.",
+          " The dirt track classes include Hot Rods, 1600 Modified Saloons, Modified Non-contact Saloons, V8 American Saloons, and Midgets."
+        ],
+        [
+          "Dirt track racing is a type of auto racing performed on oval tracks throughout the United Kingdom.",
+          " If the number of tracks is any indication of popularity, dirt track racing is the most popular auto racing sport in Britain, as dirt ovals outnumber all other types of tracks combined.",
+          " Tracks are also used for the motorcycle sport of Speedway and other motorcycle track racing events."
+        ],
+        [
+          "Kings Park Speedway is an auto racing facility located north-east of Regina and north-west of Pilot Butte, Saskatchewan, Canada, operated by the Regina Auto Racing Club.",
+          " The facility features a 1/3 mile high-banked paved oval with longer straights and tight turns, paper clip style track.",
+          " It is primarily used for stock car racing.",
+          " Originally a dirt oval, it was paved in 1970 and re-paved in 2007.",
+          " In 2010 it hosted 40th Anniversary events of Kickin Asphalt such has Pro Trucks, Baby Grand racing series, Legends of Alberta, Western Canada Super Late Model Racing Series & Evolution Mini Cup Car series, and numerous provincial racing divisions.",
+          " In 2016 it held regular races in the Street Stock, Bomber and Mini stock classes.",
+          " 2015 special events included Drifting, trailer racing, and wheelies."
+        ],
+        [
+          "Illinois State Fairgrounds Racetrack is a one mile long clay oval motor racetrack on the Illinois State Fairgrounds in Springfield, the state capital.",
+          " Constructed in the late 19th century and reconstructed in 1927, the \"Springfield Mile\" as it is known has hosted competitive auto racing since 1910, making it one of the oldest speedways in the United States.",
+          " It is the oldest track to continually host national championship dirt track racing, holding its first national championship race in 1934 under the American Automobile Association banner.",
+          " The Illinois State Fair mile currently hosts the Allen Crowe Memorial 100 ARCA stock car race, USAC Silver Crown championship dirt cars, UMP Late Models and Modifieds and the A.M.A. Grand National Championship.",
+          " It is the home of five world records for automobile racing making it one of the fastest dirt tracks in the world."
+        ]
+      ],
+      "context_titles": [
+        "Tralee Speedway",
+        "Dirt track racing",
+        "Australian Street Stock Championship",
+        "Dirt track racing in the United Kingdom",
+        "List of dirt track ovals in South Africa",
+        "Dirt track racing in Australia",
+        "Dirt track racing in South Africa",
+        "List of dirt track ovals in the United Kingdom",
+        "Kings Park Speedway",
+        "Illinois State Fairgrounds Racetrack"
+      ],
+      "distinct_titles": [
+        "Australian Street Stock Championship",
+        "Dirt track racing"
+      ],
+      "hotpot_id": "5abee41a5542993fe9a41d79",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "What type of auto racing, performed on clay or dirt surfaced oval tracks, is run for the Australian Street Stock Championship? ",
+      "sort_key": "004961d33d8969677967925cf52048a97904fa4db62716cbb7ac6eb3e4b7abd2",
+      "source_word_count": 821,
+      "supporting_facts": [
+        {
+          "sent_id": 0,
+          "text": "The Australian Street Stock Championship is a Dirt track racing championship held each year to determine the Australian national champion.",
+          "title": "Australian Street Stock Championship"
+        },
+        {
+          "sent_id": 0,
+          "text": "Dirt track racing is a type of auto racing performed on clay or dirt surfaced oval tracks.",
+          "title": "Dirt track racing"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "June 2003",
+      "candidate_id": "5ab8ffc655429934fafe6e30",
+      "context_sentences": [
+        [
+          "This is a comprehensive list of the awards received by 2NE1, a girl group formed by YG Entertainment in South Korea.",
+          " Their first extended play, \"2NE1\" (2009), was received well and spawned the hits \"Fire\" and \"I Don't Care\", one of the biggest singles of 2009.",
+          " It earned 2NE1 many awards and nominations.",
+          " After initial success in 2009, the group released their first full-length album in 2010, \"To Anyone\". \"",
+          "Clap Your Hands\", \"Go Away\", and \"Can't Nobody\" were used as promotional singles.",
+          " In 2011, they came back with the second EP, \"2NE1\" (2011), which earned 2NE1 many awards and nominations, including Album of the Year, and Song of the Year for the lead single \"I Am the Best\".",
+          " They released four singles in 2012 to 2013, including the hits \"I Love You\" and \"Missing You\", and released their first full-album in Japan.",
+          " They released their second full Korean album \"Crush\" in 2014 with the lead single \"Come Back Home\", and entered the Billboard 200 chart.",
+          " In January 2017, they released a farewell song called \"Goodbye\" for their fans after the announce of their disbandment."
+        ],
+        [
+          "\"Greatest Time of Year\" is the only single from Aly & AJ's Christmas album \"Acoustic Hearts of Winter\".",
+          " The single was used for \"\", similar to the way Hilary Duff's song \"Santa Clause Lane\" was used for \"The Santa Clause 2\", and the music video also had scenes from the film.",
+          " The video first aired on October 16, 2006 on the Disney Channel.",
+          " The single debuted at number 96 on the US \"Billboard\" Hot 100 chart."
+        ],
+        [
+          "\"In the Air Tonite\" is a remix of \"In the Air Tonight\" released in 2001 to promote the R&B/hip hop Phil Collins tribute album \"Urban Renewal\"; the song is a duet between Collins and American rapper Lil' Kim.",
+          " They did not work together for the video; scenes from the original video and new scenes featuring Lil' Kim were used to create a video.",
+          " The single has been certified Platinum in Germany by the IFPI."
+        ],
+        [
+          "Postal is an isometric top-down shooter video game developed by Running With Scissors and published by Ripcord Games in 1997.",
+          " A sequel to the game, \"Postal 2\", was released in 2003.",
+          " Director Uwe Boll bought the movie rights for the series, and produced a film of the same name.",
+          " A March 2001 re-release of the game, called Postal Plus, included a \"Special Delivery\" add-on.",
+          " A remaster of the game, \"Postal Redux\", was released for Microsoft Windows on May 20, 2016.",
+          " At the end of 2016, the game's source code was released."
+        ],
+        [
+          "Suraiya Jamaal Sheikh (15 June 1929 – 31 January 2004), popularly known as Suraiya, was an Indian Muslim Hindi/Hindustani film actress and playback singer in Bollywood from the 1940s to the early 1960s, who remained unmarried throughout her life, after her love affair with actor Dev Anand was aborted by her maternal grandmother.",
+          " She was the most popular singing star of the Indian sub-continent of her generation.",
+          " Until 1943, as a child singer, Suraiya did playback singing for one actress, namely Mehtab, in three films, and also in some of her own films for her roles as a child artiste.",
+          " After this, she only sang for her own films as an actress, and acted as a heroine from 1946 until the end of her career in 1963.",
+          " From 1948 to 1951, she became the singing superstar of Bollywood, earning more for her performances than all the performing actors of the times, male or female, including Dev Anand, Raj Kapoor, Dilip Kumar, Nargis and Madhubala.",
+          " She received 1.5–2 lakhs rupees for her role per film, when top male actors were getting 50 thousand to 1 lakh rs.",
+          " For a song, she commanded rs. 1000, while Lata Mangeshkar was getting rs. 100–200 per song.",
+          " She was the only child of her parents.",
+          " She had a natural talent for singing, acting and dancing from childhood.",
+          " She received basic training in music when her mother used to take her to a Hindustani music teacher or 'masterji' for training.",
+          " She first sang for a children's program for All India Radio in 1937.",
+          " Later on Naushad gave her on the job 'training', while recording.",
+          " She went on to become one of the most successful singing film stars of Bollywood.",
+          " She had received training in dancing from Mumtaz Ali, dancer-actor and father of the famous comedian Mehmood.",
+          " She was also known for her North Indian Muslim feudal style acting or 'adakari' in many of her films (\"Mirza Ghalib (film)\", \"Phool\", \"Afsar\", \"Shayar\", \"Jeet (1949 film)\", \"Anmol Ghadi\" and \"Dastan\").",
+          " This style 'endowed modernity with an aura of tradition' and brought nostalgic feudal tinge to the scenes.",
+          " Her performance 'expertly integrated gestures, music and speech'.",
+          " Suraiya in her heyday was known as 'Malika-e-Husn' (queen of beauty), 'Malika-e-Tarannum' (queen of melody) and 'Malika-e-Adakaari' (queen of acting), all rolled into one.",
+          " In a career spanning from 1936 till 1963, Suraiya sang 338 songs in films (which were mostly her own films) and 2 in addition were non-film songs, namely, 'tum rahe kahan ko piya' and 'hum tum karenge pyar'.",
+          " She acted in 67 movies, which do not include the incomplete films such as \"Jaanwar\" (with Dilip Kumar), \"Paagal Khaana\" with Bharat Bhushan and an Indo-British film on Wajid Ali Shah (1953) being directed by British director, Herbert Marshall, with Ashok Kumar in the role of Wajid Ali Shah."
+        ],
+        [
+          "\"Stray Cat Strut\" is the eighth track on the Stray Cats' debut album, \"Stray Cats\", released in 1981 in the UK, where it peaked at No. 11.",
+          " That same year it peaked at No.78 on US Dance/Disco chart, where it was released as an import record.",
+          " In the US, the song was released in 1982 on \"Built for Speed\".",
+          " The song became a hit in the US, peaking at No. 3 on the \"Billboard\" Hot 100.",
+          " The music video for the song received extensive airplay on MTV during the channel's early days.",
+          " The video consisted of band members (and extras) performing in an alley while an irate resident throws things at them.",
+          " It also featured scenes from the 1949 MGM cartoon \"Bad Luck Blackie\"."
+        ],
+        [
+          "\"Wonderful\" is a song by British singer Gary Go, released on 16 February 2009 as the first and debut single from his debut album \"Gary Go\".",
+          " It reached #25 on the UK singles chart and was a Top 40 on the Hot AC chart in the US.",
+          " The song was selected as Pop Song Of The Year by iTunes US in their Rewind recap of 2009 releases.",
+          " A version of the song became the title song for the German film \"Men in the City\" (German: 'Männerherzen' ) for which a new music video was filmed on a Berlin rooftop including scenes from the film.",
+          " It is also used in the trailer for the Disneynature film \"Oceans\", in the TVI Portuguese novella Mar de Paixão, at the conclusion of an \"American Idol\" episode, and in the Eurovision Song Contest 2011 during the interval, in a mini movie involving clips from the shorts that were broadcast before every song from the contest.",
+          " \"Wonderful\" was also used in Sky Sports' closing montage of the 2011–12 Premier League season."
+        ],
+        [
+          "\"Stricken\" is a song by the American heavy metal band Disturbed.",
+          " The song was released on July 25, 2005 as the second single from their third studio album \"Ten Thousand Fists\".",
+          " \"Stricken\" was certified gold in the United States by the Recording Industry Association of America on August 18, 2008 for selling 500,000 copies.",
+          " It is one of the first of Disturbed's songs to include a guitar solo.",
+          " The song is featured in \"\" and \"Guitar Hero Live\" in addition to the Disturbed track pack in \"Guitar Hero 5\".",
+          " The song is also a part of the \"Rock Band\" downloadable content catalog.",
+          " The song was also featured in the \"Project Gotham Racing 4\".",
+          " The musical video for the song was filmed in an abandoned hospital in which some scenes from the 1984 horror film \"A Nightmare on Elm Street\" were filmed.",
+          " \"Stricken\" was used as official theme for WWE's PPV New Year's Revolution, in 2006."
+        ],
+        [
+          "Postal 2 (stylized as POSTAL) is a black comedy first-person shooter video game by Running With Scissors, and it is the sequel to the 1997 game \"Postal\".",
+          " Both are intentionally highly controversial due to high levels of violence and stereotyping.",
+          " Unlike its predecessor, \"Postal 2\" is played completely in first-person based on the Unreal Engine 2.",
+          " Scenes of the game can be seen in the music video of The Black Eyed Peas single \"Where Is the Love?",
+          "\""
+        ],
+        [
+          "\"Where Is the Love?\"",
+          " is a song by American hip hop group The Black Eyed Peas.",
+          " It was released in June 2003 as the lead single from their third album, \"Elephunk\".",
+          " The song was written by will.i.am, apl.de.ap, Taboo, Justin Timberlake, Printz Board, Michael Fratantuno and George Pajon.",
+          " The track features vocals from Timberlake, although he is not officially credited on the single release.",
+          " It was the band's first song to feature singer Fergie as an official member."
+        ]
+      ],
+      "context_titles": [
+        "List of awards and nominations received by 2NE1",
+        "Greatest Time of Year",
+        "In the Air Tonite (Lil' Kim song)",
+        "Postal (video game)",
+        "Suraiya",
+        "Stray Cat Strut",
+        "Wonderful (Gary Go song)",
+        "Stricken (song)",
+        "Postal 2",
+        "Where Is the Love?"
+      ],
+      "distinct_titles": [
+        "Postal 2",
+        "Where Is the Love?"
+      ],
+      "hotpot_id": "5ab8ffc655429934fafe6e30",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "Postal 2 has scenes that are used in a song that was released in what year?",
+      "sort_key": "004aed0c3404511cf2eaaafaba36a35a5f76804aff4610fe91bd73daac77a806",
+      "source_word_count": 1504,
+      "supporting_facts": [
+        {
+          "sent_id": 3,
+          "text": " Scenes of the game can be seen in the music video of The Black Eyed Peas single \"Where Is the Love?",
+          "title": "Postal 2"
+        },
+        {
+          "sent_id": 2,
+          "text": " It was released in June 2003 as the lead single from their third album, \"Elephunk\".",
+          "title": "Where Is the Love?"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "Security Management is the monthly magazine of ASIS International",
+      "candidate_id": "5ab6973f554299110f219a25",
+      "context_sentences": [
+        [
+          "Lawrence A. Gordon is the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland’s Robert H. Smith School of Business.",
+          " He is also an Affiliate Professor in the University of Maryland Institute for Advanced Computer Studies.",
+          " Dr. Gordon earned his Ph.D. in Managerial Economics from Rensselaer Polytechnic Institute.",
+          " An internationally known scholar in the areas of managerial accounting (often called management accounting) and cybersecurity economics, Dr. Gordon's research focuses on such issues as economic aspects of information security (including cybersecurity or computer security), corporate performance measures, cost management systems, and capital investments.",
+          " He is the author of approximately 100 articles, published in such journals as The Accounting Review, ACM Transactions on Information and System Security, Communications of the ACM, Journal of Financial and Quantitative Analysis, Journal of Computer Security, MIS Quarterly, Accounting, Organizations and Society, and the Journal of Accounting and Public Policy.",
+          " Dr. Gordon's current research emphasizes the importance of applying concepts from economics and managerial accounting to an information-based economy.",
+          " Dr. Gordon is the co-creator (with Martin P. Loeb) of the Gordon-Loeb Model, which provides a mathematical economic model for deriving an organization's optimal investment level in cyber/information security.",
+          " The Gordon-Loeb Model has been featured in The Wall Street Journal and The Financial Times.",
+          " For a 3-minute video that provides a non-mathematical overview of the Model, go to: https://www.youtube.com/watch?v=cd8dT0FuqQ4.",
+          " Dr. Gordon also is the author of several books, including Managerial Accounting: Concepts and Empirical Evidence, Managing Cybersecurity Resources: A Cost-Benefit Analysis and Improving Capital Budgeting: A Decision Support System Approach.",
+          " In addition, he is the Editor-in-Chief of the Journal of Accounting and Public Policy and serves on the editorial boards of several other journals.",
+          " Dr. Gordon's research has over 6,400 citations in Google Scholar."
+        ],
+        [
+          "Security Management is the monthly magazine of ASIS International (formerly the American Society for Industrial Security).",
+          " The publication combines featured articles on topics such as terrorism and corporate espionage, with staff-written departments covering news and trends, homeland security, IT security, and legal developments.",
+          " The magazine is based in Alexandria, Virginia."
+        ],
+        [
+          "Computer security, also known as cyber security or IT security, is the protection of computer systems from the theft or damage to their hardware, software or information, as well as from disruption or misdirection of the services they provide."
+        ],
+        [
+          "In computer security, the \"dancing pigs\" is a term or problem that describes computer users' attitudes to computer security.",
+          " It states that users will continue to pick an amusing graphic even if they receive a warning from security software that it is potentially dangerous.",
+          " In other words, users choose their primary desire features without considering the security.",
+          " \"Dancing pigs\" is generally used by tech experts and can be found in IT articles."
+        ],
+        [
+          "ICSA Labs (International Computer Security Association) began as NCSA (National Computer Security Association).",
+          " Its mission was to increase awareness of the need for computer security and to provide education about various security products and technologies."
+        ],
+        [
+          "Ryan Donald Lackey (born March 17, 1979) is an entrepreneur and computer security professional.",
+          " He was a co-founder of HavenCo, the world's first data haven.",
+          " He also speaks at numerous conferences and trade shows, including DEF CON, RSA Data Security Conference, on various topics in the computer security field, and has appeared on the cover of Wired Magazine, in numerous television, radio, and print articles on HavenCo and Sealand.",
+          " Lackey operated BlueIraq, a VSAT communications and IT company serving the DoD and domestic markets in Iraq and Afghanistan during the US conflicts."
+        ],
+        [
+          "Proceedings is a 96-page monthly magazine published by the United States Naval Institute.",
+          " Launched in 1874, it is one of the oldest continuously published magazines in the United States.",
+          " \"Proceedings\" covers topics concerning global security and includes articles from military professionals and civilian experts, historical essays, book reviews, full-color photography, and reader commentary.",
+          " Roughly a third are written by active-duty personnel, a third by retired military, and a third by civilians.",
+          " \"Proceedings\" also frequently carries feature articles by Secretaries of Defense, Secretaries of the Navy, Chairmen of the Joint Chiefs of Staff, and top leaders of the Navy, Marine Corps and Coast Guard."
+        ],
+        [
+          "iX is a German monthly computer magazine, published by the Heise Verlag publishing house since 1988.",
+          " The magazine focuses primarily on professional IT.",
+          " Within this area it deals with a broad range of issues, ranging from various programming topics, server hardware reviews and virtualization, computer security to articles about emerging technologies and current IT related legal or political issues."
+        ],
+        [
+          "A Physical Security Professional (PSP) is a Board certification process for individuals involved in the physical security of organizations.",
+          " This certification process is offered by ASIS International.",
+          " Certification lasts for three years, during which time ASIS requires credential holders to complete 60 \"Continuing Professional Education\" credits in order to meet recertification standards."
+        ],
+        [
+          "The Rainbow Series (sometimes known as the Rainbow Books) is a series of computer security standards and guidelines published by the United States government in the 1980s and 1990s.",
+          " They were originally published by the U.S. Department of Defense Computer Security Center, and then by the National Computer Security Center."
+        ]
+      ],
+      "context_titles": [
+        "Lawrence A. Gordon",
+        "Security Management (magazine)",
+        "Computer security",
+        "Dancing pigs",
+        "International Computer Security Association",
+        "Ryan Lackey",
+        "Proceedings (magazine)",
+        "IX (magazine)",
+        "Physical Security Professional",
+        "Rainbow Series"
+      ],
+      "distinct_titles": [
+        "Computer security",
+        "Security Management (magazine)"
+      ],
+      "hotpot_id": "5ab6973f554299110f219a25",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "What monthly magazine, published by ASIS International, includes articles on topics of computer security?",
+      "sort_key": "004b7b90feeb2736cb916890806c09469691c3898399c633befc19a8967b7be3",
+      "source_word_count": 843,
+      "supporting_facts": [
+        {
+          "sent_id": 0,
+          "text": "Security Management is the monthly magazine of ASIS International (formerly the American Society for Industrial Security).",
+          "title": "Security Management (magazine)"
+        },
+        {
+          "sent_id": 0,
+          "text": "Computer security, also known as cyber security or IT security, is the protection of computer systems from the theft or damage to their hardware, software or information, as well as from disruption or misdirection of the services they provide.",
+          "title": "Computer security"
+        }
+      ],
+      "type": "bridge"
+    },
+    {
+      "answer": "Monty Franklin Pierce Stratton",
+      "candidate_id": "5ae8027d5542993210984031",
+      "context_sentences": [
+        [
+          "Clay Daniel Buchholz (born August 14, 1984) is an American professional baseball pitcher for the Philadelphia Phillies of Major League Baseball (MLB).",
+          " Buchholz made his MLB debut with the Boston Red Sox in 2007.",
+          " In his second major league start, he pitched a no-hitter, becoming the third MLB pitcher since 1900 to throw a no-hitter in his first or second start and the first Red Sox rookie to throw one.",
+          " He stands 6'3\" and weighs 190 lbs."
+        ],
+        [
+          "Terry Lane Felton (born October 29, 1957) is a former pitcher for the Minnesota Twins.",
+          " Felton holds two of the most dubious pitching records in Major League Baseball (MLB) history: the most consecutive losses to start a career and most career losses without ever being credited with a victory.",
+          " He was released by the Twins after the 1982 season in which he went 0–13, the last time an MLB pitcher had zero wins and at least twelve losses.",
+          " When added to his 0-3 record coming into the season, this gave him a combined lifetime record of 0-16.",
+          " However his team did win six of the 55 games in which he played."
+        ],
+        [
+          "The Stratton Story is a 1949 film directed by Sam Wood which tells the true story of Monty Stratton, a Major League Baseball pitcher who pitched for the Chicago White Sox from 1934-1938.",
+          " This is the first of three movies that paired stars Jimmy Stewart and June Allyson, the others being \"The Glenn Miller Story\" and \"Strategic Air Command\".",
+          " Stratton commented that Mr. Stewart \"did a great job of playing me, in a picture which I figure was about as true to life as they could make it\"."
+        ],
+        [
+          "Douglas Morrow (September 13, 1913 – September 9, 1994) was a Hollywood screenwriter and film producer.",
+          " He earned an Academy Award for his script for 1949's \"The Stratton Story\", a biography of baseball player Monty Stratton, who was disabled in a hunting accident.",
+          " Morrow died of an aneurysm in 1994."
+        ],
+        [
+          "Joseph Michael Erautt (September 1, 1921 – October 6, 1976) was a Canadian-born professional baseball player.",
+          " Nicknamed \"Stubby\", the 5 ft , 175 lb catcher appeared in 32 total games over parts of two seasons (1950–51) with the Chicago White Sox.",
+          " Born in Vibank, Saskatchewan, and of German descent, he was the elder brother of MLB pitcher Eddie Erautt.",
+          " The Erautt family moved to Portland, Oregon, before Eddie was born, hence the younger sibling was a native American citizen."
+        ],
+        [
+          "Jonathan H. Pettibone (born July 19, 1990) is an American professional baseball player.",
+          " He is a starting pitcher for the New Britain Bees of the Atlantic League of Professional Baseball.",
+          " He has played for the Philadelphia Phillies of Major League Baseball (MLB).",
+          " Originally from Placentia, California, he grew up in Yorba Linda, California (where he now resides in the off season) in a family of five; his father, Jay Pettibone, was a former MLB pitcher.",
+          " After committing to play baseball for the University of Southern California Trojans, the Phillies drafted him in the third round of the 2008 MLB draft, and he signed with the club after being swayed there by some Phillies' players."
+        ],
+        [
+          "Timothy John Keefe (January 1, 1857 – April 23, 1933), nicknamed \"Smiling Tim\" and \"Sir Timothy\", was an American Major League Baseball pitcher.",
+          " He stood 5 ft tall and weighed 185 lb .",
+          " He was one of the most dominating pitchers of the 19th century and posted impressive statistics in one category or another for almost every season he pitched.",
+          " He was the second MLB pitcher to record 300 wins.",
+          " He was elected to the Baseball Hall of Fame in 1964."
+        ],
+        [
+          "Monty Franklin Pierce Stratton (May 21, 1912 – September 29, 1982), nicknamed \"Gander\" for a trick pitch he developed), was a Major League Baseball pitcher.",
+          " He was born in Palacios, Texas, United States, but lived in Greenville, Texas for part of his life.",
+          " His major league career ended prematurely when a hunting accident in 1938 forced doctors to amputate his right leg.",
+          " Wearing a prosthetic leg, Stratton played in the minor leagues from 1946 to 1953.",
+          " His comeback was the subject of the 1949 film \"The Stratton Story\", in which he was portrayed by Jimmy Stewart."
+        ],
+        [
+          "James Alvin Palmer (born October 15, 1945) is a retired American right-handed pitcher who played all of his 19 years in Major League Baseball (MLB) with the Baltimore Orioles (1965–67, 1969–84) and was elected to the Baseball Hall of Fame in 1990 .",
+          " Palmer was the winning pitcher in 186 games in the 1970s, the most wins in that decade by any MLB pitcher.",
+          " He also won at least twenty games in each of eight seasons and received three Cy Young Awards and four Gold Gloves during the decade.",
+          " His 268 career victories are currently an Orioles record.",
+          " A six-time American League (AL) All-Star, he was also one of the rare pitchers who never allowed a grand slam in any major league contest."
+        ],
+        [
+          "Lance William Niekro (born January 29, 1979) is a former Major League Baseball (MLB) player.",
+          " Niekro appeared with the San Francisco Giants in several seasons between 2003 and 2007.",
+          " He served as an assistant coach at Florida Southern College and was elevated to the head coach position on May 9, 2012.",
+          " He is the nephew of former MLB pitcher Phil Niekro and son of former MLB pitcher Joe Niekro."
+        ]
+      ],
+      "context_titles": [
+        "Clay Buchholz",
+        "Terry Felton",
+        "The Stratton Story",
+        "Douglas Morrow",
+        "Joe Erautt",
+        "Jonathan Pettibone",
+        "Tim Keefe",
+        "Monty Stratton",
+        "Jim Palmer",
+        "Lance Niekro"
+      ],
+      "distinct_titles": [
+        "Douglas Morrow",
+        "Monty Stratton"
+      ],
+      "hotpot_id": "5ae8027d5542993210984031",
+      "level": "hard",
+      "n_context_paragraphs": 10,
+      "n_distinct_titles": 2,
+      "n_supporting_facts": 2,
+      "question": "What MLB pitcher nicknamed \"Gander\" was written about in \"the Stratton Story\">?",
+      "sort_key": "004f0905c292700f0cefd7dbbd756ec31c9935b53220d4b446ab6d9eed6aa716",
+      "source_word_count": 888,
+      "supporting_facts": [
+        {
+          "sent_id": 1,
+          "text": " He earned an Academy Award for his script for 1949's \"The Stratton Story\", a biography of baseball player Monty Stratton, who was disabled in a hunting accident.",
+          "title": "Douglas Morrow"
+        },
+        {
+          "sent_id": 0,
+          "text": "Monty Franklin Pierce Stratton (May 21, 1912 – September 29, 1982), nicknamed \"Gander\" for a trick pitch he developed), was a Major League Baseball pitcher.",
+          "title": "Monty Stratton"
+        }
+      ],
+      "type": "bridge"
+    }
+  ],
+  "selected_count": 8,
+  "source_word_count_distribution": {
+    "max": 1504,
+    "median": 843,
+    "min": 522
+  },
+  "supporting_fact_count_distribution": {
+    "max": 2,
+    "median": 2,
+    "min": 2
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "case_id": "qmsum-01",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 2,
+    "f4": 3,
+    "f5": 2,
+    "f6": 3,
+    "f7": 1,
+    "f8": 3,
+    "f9": 3,
+    "f10": 2,
+    "f11": 2,
+    "f12": 1,
+    "f13": 3
+  },
+  "relation_weights": {
+    "r1": 2
+  },
+  "rationale": {
+    "f1": "Names one of the talk's headline topics (rephrasing problems, the fix, and preliminary observations), so dropping it removes a major chunk of 'what was said about the EML talk.'",
+    "f2": "A specific preliminary observation nested under the rephrasing topic; useful detail but the colleague still knows preliminary observations were planned even without this specific one.",
+    "f3": "Describes the talk's structural purpose (tying back to the original research problem) rather than a distinct content item the colleague needs to answer the query.",
+    "f4": "Names two more headline topics of the talk (big picture, the NTL story), core content the colleague would need to summarize the talk.",
+    "f5": "An explicitly unresolved inclusion decision about theoretical framing; relevant background but not settled content of the talk.",
+    "f6": "Names the embodied/simulation approach and the monkeys-in-Italy example, a concrete planned segment of the talk directly tied to its theoretical/neural content.",
+    "f7": "Explains a logistical workaround (paper instead of slides) for preparing one segment; doesn't change what the colleague would say was covered in the talk.",
+    "f8": "Identifies the X-schema material explicitly, which is one of the specific theoretical topics the reference material centers the talk description on.",
+    "f9": "Names the construction aspect and the Bayes-net segment, both explicit planned content items closing out the talk.",
+    "f10": "Raises the FMRI/brain-imaging idea as a candidate talk topic tied to the neural-background theme, but it's explicitly left undecided.",
+    "f11": "Gives the concrete guidance for how the FMRI point would be placed within the neural/mirror-neuron segment if used, clarifying the talk's likely structure.",
+    "f12": "A narrow research-plan detail (stories vs. phenomena) nested inside the mirror-neuron aside; tangential to summarizing the talk itself.",
+    "f13": "Describes the concrete data-recording example (subjects mimicking machine prosody) that a colleague would need to answer the query's data-collection component.",
+    "r1": "Clarifies that the FMRI item is conditionally attached to the mirror-neuron segment rather than standalone, which matters for correctly describing the talk's structure if that item comes up at all."
+  }
+}

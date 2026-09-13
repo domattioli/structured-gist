@@ -1,0 +1,29 @@
+{
+  "case_id": "qasper-02",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The individual (monolingual) model used as the base for each language is the Bayesian model of garg2012unsupervised.",
+      "category": "descriptive",
+      "source_quote": "We use the Bayesian model of garg2012unsupervised as our base monolingual model.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:10"}]
+    },
+    {
+      "id": "f2",
+      "text": "In this model, the semantic roles are predicate-specific.",
+      "category": "constraint",
+      "source_quote": "The semantic roles are predicate-specific.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:10"}]
+    },
+    {
+      "id": "f3",
+      "text": "To model role ordering and repetition preferences, the role inventory for each predicate is divided into Primary and Secondary roles.",
+      "category": "descriptive",
+      "source_quote": "To model the role ordering and repetition preferences, the role inventory for each predicate is divided into Primary and Secondary roles as follows:",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:10"}]
+    }
+  ],
+  "relations": [],
+  "question_fact_ids": ["f1", "f2", "f3"],
+  "corpus_defect_notes": []
+}

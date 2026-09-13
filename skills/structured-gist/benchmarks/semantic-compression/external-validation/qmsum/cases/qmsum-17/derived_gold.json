@@ -1,0 +1,83 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-17",
+  "corpus_defect_notes": [
+    "Coverage-audit correction: f2's text claimed Marketing 'did not know' the cost, but the original source_quote ('But we need to find cost.') only expresses a need to find it, not an explicit statement of not knowing it. Retargeted f2's source_quote to Marketing's separate, later turn in the same span ('Don't know the cost.'), which directly and fully supports the 'did not know' claim, and narrowed f2's text to drop the 'needed to find that information' clause that the new quote does not itself state."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "if you throw it , it's gonna store loads of energy , and you don't need to buy a battery 'cause they're quite f I find them annoying .",
+      "text": "Marketing said the Kryptonite energy option would store energy automatically when the remote is thrown or moved, removing the need to buy batteries, which she found annoying."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "Don't know the cost .",
+      "text": "Marketing said she didn't know the actual cost of the Kryptonite energy option."
+    },
+    {
+      "category": "negation",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "All it said was it gave sort of relative , some chips are more expensive than others , sort of things . It didn't give me any actual cost .",
+      "text": "Industrial Designer said their web research did not turn up actual cost figures for components, only relative comparisons such as some chips being more expensive than others."
+    },
+    {
+      "category": "outcome",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "Most of the stuff is pretty cheap though bought in bulk . So I don't think it's that much of a problem . Like the chip is probably the most expensive part .",
+      "text": "Industrial Designer said most components are cheap when bought in bulk, so cost was not expected to be much of a problem, with the chip likely being the most expensive single part."
+    }
+  ],
+  "question_fact_ids": [
+    "f2",
+    "f3",
+    "f4"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "evidence_mode": "inferred",
+      "fact_ids": [
+        "f3",
+        "f4"
+      ],
+      "id": "r1",
+      "source_quote": "",
+      "text": "Because web research provided no actual cost data for the Kryptonite option, the team fell back on the general expectation that bulk-purchased components are cheap and the chip is the likely biggest cost driver, rather than settling the specific Kryptonite price.",
+      "type": "cause_rationale"
+    }
+  ]
+}

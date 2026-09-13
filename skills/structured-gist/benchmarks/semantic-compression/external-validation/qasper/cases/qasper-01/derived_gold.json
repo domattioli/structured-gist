@@ -1,0 +1,72 @@
+{
+  "case_id": "qasper-01",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Among the three individual pre-training tasks (SR, NSG, MDG), SR performs slightly better than the other two.",
+      "category": "outcome",
+      "source_quote": "Among all three pre-training tasks, SR works slightly better than the other two tasks (i.e., NSG and MDG).",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f1", "b:f1"]}
+    },
+    {
+      "id": "f2",
+      "text": "The authors also tried randomly using all three tasks during training, each with 1/3 probability, calling this variant ALL.",
+      "category": "descriptive",
+      "source_quote": "We also tried to randomly use all the three tasks during training with 1/3 probability each (indicated as ALL).",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f2", "b:f2"]}
+    },
+    {
+      "id": "f3",
+      "text": "When only using the unlabeled documents from the training splits of CNNDM or NYT (a limited amount of in-domain data), ALL generally outperforms all three individual tasks, which the authors attribute to the limited number of unlabeled documents available in the training splits.",
+      "category": "outcome",
+      "source_quote": "we observed that, in general, All outperforms all three tasks when employing unlabeled documents of training splits of CNNDM or NYT, which might be due to limited number of unlabeled documents of the training splits.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f3", "b:f3"]}
+    },
+    {
+      "id": "f4",
+      "text": "After adding more pre-training data (the GIGA-CM dataset), SR consistently achieves the highest ROUGE-2 score on both CNNDM and NYT.",
+      "category": "outcome",
+      "source_quote": "After adding more data (i.e., GIAG-CM) to pre-training, SR consistently achieves highest ROUGE-2 on both CNNDM and NYT.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f4", "b:f4"]}
+    },
+    {
+      "id": "f5",
+      "text": "The authors conclude that SR is the most effective task for pre-training, because sentence reordering requires comprehensively understanding a document across a wide scope beyond individual words and sentences, closely matching the essence of abstractive document summarization.",
+      "category": "cause_rationale",
+      "source_quote": "We conclude that SR is the most effective task for pre-training since sentence reordering task requires comprehensively understanding a document in a wide coverage, going beyond individual words and sentences, which is highly close to the essense of abstractive document summarization.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "merged", "source_annotator_ids": ["a:f5", "a:f6", "b:f5"]}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "condition",
+      "text": "Whether SR or ALL performs best is conditional on the amount of pre-training data available: ALL tends to outperform the individual tasks (including SR) when only limited in-domain unlabeled data is used, but SR pulls ahead and wins consistently once more pre-training data (GIGA-CM) is added.",
+      "fact_ids": ["f3", "f4"],
+      "evidence_mode": "explicit",
+      "source_quote": "After adding more data (i.e., GIAG-CM) to pre-training, SR consistently achieves highest ROUGE-2 on both CNNDM and NYT.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:r1", "b:r1"]}
+    },
+    {
+      "id": "r2",
+      "type": "decision_outcome",
+      "text": "The authors' conclusion that SR is the most effective pre-training task follows from the observed outcome that SR consistently achieves the highest ROUGE-2 once more pre-training data is added.",
+      "fact_ids": ["f4", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "We conclude that SR is the most effective task for pre-training",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:39"}],
+      "adjudication": {"agreement": "b_only", "source_annotator_ids": ["b:r2"]}
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "reconciled",
+  "annotator_metadata": "isolated_llm_agent_pair+adjudicator",
+  "build_date": "2026-09-10"
+}

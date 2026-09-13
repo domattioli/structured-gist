@@ -1,0 +1,39 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "hotpotqa-07",
+  "corpus_defect_notes": [
+    "The question asks for a monthly ASIS International magazine that 'includes articles on topics of computer security,' but the two native_evidence sentences given do not jointly support that claim. f2 (Computer security::sent0) is a stand-alone generic definition of computer security; it never mentions Security Management or ASIS International, and nothing in native_evidence connects it to f1. A coverage audit found that source.md's own 'Security Management (magazine)' paragraph DOES contain a connecting sentence (\"The publication combines featured articles on topics such as terrorism and corporate espionage, with staff-written departments covering news and trends, homeland security, IT security, and legal developments.\") that names 'IT security' as a covered department -- but that sentence is not part of this case's native_evidence (only its sent0 is), so per this corpus's rule that derived_from must cite native_evidence, not arbitrary source.md content (see ADAPTER_DESIGN.md), it is not encoded as a fact/relation here. This is a genuine native-evidence-annotation gap: the connecting sentence exists in the source paper/page but was not included in the dataset's own supporting-facts annotation for this question. The native reference_answer ('Security Management is the monthly magazine of ASIS International') itself only restates f1 and does not address the computer-security portion of the question either."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Security Management (magazine)::sent0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "Security Management is the monthly magazine of ASIS International (formerly the American Society for Industrial Security).",
+      "text": "Security Management is the monthly magazine of ASIS International (formerly the American Society for Industrial Security)."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "hotpotqa",
+          "native_evidence_id": "Computer security::sent0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "Computer security, also known as cyber security or IT security, is the protection of computer systems from the theft or damage to their hardware, software or information, as well as from disruption or misdirection of the services they provide.",
+      "text": "Computer security, also known as cyber security or IT security, is the protection of computer systems from theft or damage to their hardware, software, or information, and from disruption or misdirection of the services they provide."
+    }
+  ],
+  "question_fact_ids": [
+    "f1"
+  ],
+  "relations": []
+}

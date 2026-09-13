@@ -1,0 +1,36 @@
+{
+  "case_id": "qmsum-14",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 2,
+    "f4": 3,
+    "f5": 3,
+    "f6": 2,
+    "f7": 3,
+    "f8": 2,
+    "f9": 2,
+    "f10": 2
+  },
+  "relation_weights": {
+    "r1": 2,
+    "r2": 3,
+    "r3": 2
+  },
+  "rationale": {
+    "f1": "States the concrete single-parent CERB gap case, the anchor example the reference summary's opening point is built on.",
+    "f2": "Records the government's acknowledgment of the gap without a concrete fix; relevant but a softer claim than the concrete case itself.",
+    "f3": "Describes a support measure (child benefit increase) offered in response; secondary supporting detail relative to the core gap/housing/elderly facts.",
+    "f4": "Describes the pandemic homelessness crisis in concrete terms, needed to support the reference summary's housing/matching-funds point.",
+    "f5": "States the government's housing response (shelter funding, 50% reduction goal), the direct counterpart needed to summarize the housing exchange.",
+    "f6": "Adds a specific indigenous-housing funding disparity; relevant supporting detail but narrower than the core housing exchange.",
+    "f7": "States the concrete senior support payments ($300/$200), directly matching the reference summary's 'elderly ... obtained extra funding' point.",
+    "f8": "Sets up the comparison of benefit amounts across seniors/disabled/CERB, relevant context for the disabled-support point in the reference summary.",
+    "f9": "Explains how the CERB amount was determined, supporting the reference summary's point about worker support.",
+    "f10": "States the charities/non-profits funding, relevant supporting detail for the broader 'vulnerable people' support theme.",
+    "r1": "Captures the direct dispute over whether federal housing funding is adequate, useful context for the housing point but secondary to the raw facts themselves.",
+    "r2": "Shows the specific CERB gap remained unresolved despite acknowledgment, directly matching the reference summary's central 'should fix this gap' framing.",
+    "r3": "Shows the child benefit increase does not actually resolve the specific spousal/child-support gap, reinforcing the core unmet-need point in the reference summary."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "qmsum-10",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "Yurdiga's final oil/gas question in span:1 — whether a medium-sized energy company in default to financial institutions still qualifies for the Business Credit Availability Program (BCAP) — is not captured by any fact, even though it is squarely on-topic (a specific, concrete oil-and-gas COVID relief eligibility question) and O'Regan's answer (f15) notably does not address the 'in default' condition at all, which is itself worth capturing for a faithful summary.",
+      "source_quote": "Can the minister clarify? On a medium-sized energy company's eligibility, if the company is in default to financial institutions, does it still qualify for the business credit availability program?"
+    },
+    {
+      "description": "Yurdiga's claim that Bills C-69 and C-48 pushed over $200 billion of investment out of Canada and caused the Alberta economy to retract to recession levels, which he frames as compounding the COVID-19/price-war damage to the oil and gas sector, is not captured by any fact.",
+      "source_quote": "These two bills alone pushed over $200 billion of investment out of Canada, causing the Alberta economy to retract to recession levels."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["f9", "f15", "r5"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f9's text claims the oil and gas industry was 'under severe strain, worsened by an international oil price war and the COVID-19-driven drop in oil demand,' but f9's cited source_quote only covers the '48 days...no applications open' sentence — the strain/price-war/demand-drop content is true and present earlier in the same Yurdiga turn, just not in this fact's own quote. f15 similarly claims the government 'had been tackling both fronts through the April 17 liquidity measures...and broadened eligibility under BCAP,' but its cited quote stops at 'tackling both of these on each front' — the April 17/BCAP detail comes from later in the same O'Regan turn, outside the cited span. r5 asserts that the SAGD/oil-storage shutdown risk (f13, raised by Yurdiga) is 'part of why' the government frames its response as it does (f15, O'Regan's answer) — but O'Regan's actual answer never addresses oil storage or SAGD at all; this causal/conditional link looks like an inferred connection stronger than the text supports, closer to a manufactured edge than a real one. Otherwise the 15-fact/5-relation inventory tracks this dense, multi-topic committee exchange (lobster fishery, wage-subsidy exclusion, gulf licence conditions, tourism ferry, oil liquidity measures, indigenous contractors, BCAP) proportionately, and correctly excludes the off-topic Trikafta/health exchange within span:0."
+}

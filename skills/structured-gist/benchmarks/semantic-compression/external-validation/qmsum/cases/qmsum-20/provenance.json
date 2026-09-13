@@ -1,0 +1,19 @@
+{
+  "dataset": "qmsum",
+  "deviations": [
+    "QMSum's published jsonl splits carry no per-meeting ID field; native_meeting_id was recovered by exact content match against data/Product/all/IS1003c.json in the same pinned commit."
+  ],
+  "license": "MIT",
+  "license_source": "https://raw.githubusercontent.com/Yale-LILY/QMSum/83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e/LICENSE",
+  "retrieval_date": "2026-09-10T04:14:13Z",
+  "source_sha256": "8c9daded6bc2a5dd435c187229251604cf37eb88322d3f7fc353175f3b94f7d5",
+  "transformation_script_version": "1.0.0",
+  "transformed_case_sha256": "141b9dbda6737eff8be8dea212ad847190fd738783e9ea65564d216e0968ef81",
+  "upstream_case_id": "Product:IS1003c:sq5",
+  "upstream_document_id": "IS1003c",
+  "upstream_domain": "Product",
+  "upstream_question_id": "sq5",
+  "upstream_revision": "83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e",
+  "upstream_source_repository": "https://github.com/Yale-LILY/QMSum",
+  "upstream_split": "test"
+}

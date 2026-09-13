@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-08",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "The already-flagged corpus defect (question wording 'realistic' has no textual match; evidence is really about H4's training/tuning confirmation) is not re-flagged. Within the two evidence paragraphs, f1-f3 cover the H4 statement and its confirming results; the H3/H5-specific course-by-course ROUGE deltas in the back half of para:38 are correctly excluded as belonging to different hypotheses, not H4. f2 and f3 read as related but distinct claims (a quantitative outperformance claim vs. a qualitative helps/not-always-helps contrast) rather than a strict duplicate. All quotes verified verbatim; r1 adds real framing (results as confirmation of H4, not standalone) rather than restating the pair."
+}

@@ -1,0 +1,184 @@
+{
+  "case_id": "qmsum-04",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "In some of the team's proposals, spectral subtraction was done on the FFT bins.",
+      "category": "descriptive",
+      "source_quote": "Yeah . So - some of the proposal , uh , we 're doing this on the bin {disfmarker} on the FFT bins ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "In other proposals, spectral subtraction was done on the mel energies, and PhD D could not say which of the two approaches was better.",
+      "category": "unresolved_question",
+      "source_quote": "others on the um , mel energies . You can do both , but I cannot tell you what 's {disfmarker} which one might be better or {disfmarker} I {disfmarker}",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "PhD A suggested that if you want to reconstruct the speech, doing spectral subtraction on FFT bins may be a good idea.",
+      "category": "cause_rationale",
+      "source_quote": "I guess if you want to reconstruct the speech , it may be a good idea to do it on FFT bins .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "For speech recognition specifically, PhD A thought it might not matter much whether spectral subtraction was done on mel-warped or FFT features, since a linear weighting is applied afterward anyway.",
+      "category": "cause_rationale",
+      "source_quote": "But for speech recognition , it may not . I mean it may not be very different if you do it on mel warped or whether you do it on FFT . So you 're going to do a linear weighting anyway after that .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "PhD A noted that everyone seemed to use two stages of speech enhancement in their proposals, and that this was giving them real improvement.",
+      "category": "descriptive",
+      "source_quote": "Because everybody seems to have a mod two stages of speech enhancement in all the proposals , which is really giving them some improvement .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Professor C suggested combining what PhD A and PhD D were each working on, since one approach might work better if the other had already been applied first.",
+      "category": "next_action",
+      "source_quote": "I mean maybe one or {disfmarker} one or the other of the things that you 're doing would benefit from the other happening first .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "Professor C proposed specifically that PhD D's simple spectral subtraction might be done before PhD A's signal subspace approach, or the other way around.",
+      "category": "next_action",
+      "source_quote": "Right , so he 's doing a signal subspace thing , maybe it would work better if you 'd already done some simple spectral subtraction , or maybe vi maybe the other way around ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "PhD A had been thinking about combining Wiener filtering with the signal subspace approach to see whether some permutation of the two actually helps.",
+      "category": "next_action",
+      "source_quote": "So I 've been thinking about combining the Wiener filtering with signal subspace ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "PhD A explained that the signal subspace approach already has Wiener filtering built into it.",
+      "category": "descriptive",
+      "source_quote": "The signal subspace approach has actually an in - built Wiener filtering in it .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "The advantage of combining the two approaches comes mainly from the fact that the signal subspace approach performs poorly when the SNR is very bad or the noise is colored.",
+      "category": "constraint",
+      "source_quote": "the advantage of combining two things is mainly coming from the signal subspace approach doesn't work very well if the SNR is very bad . It 's {disfmarker} it works very poorly with the poor SNR conditions , and in colored noise .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "PhD A said the signal subspace approach behaves poorly unless the noise covariance matrix is positive definite, which reliably holds for white noise but not necessarily for colored noise.",
+      "category": "constraint",
+      "source_quote": "I mean it has a {disfmarker} it 's {disfmarker} It doesn't behave very well if it is not positive definite ak It works very well with white noise because we know for sure that it has a positive definite .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f12",
+      "text": "The workaround for colored noise is to first apply an inverse filtering step to whiten the noise.",
+      "category": "descriptive",
+      "source_quote": "So the way they get around is like they do an inverse filtering , first of the colo colored noise",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f13",
+      "text": "Professor C suggested a processing sequence of simple spectral subtraction followed by a KL transform.",
+      "category": "next_action",
+      "source_quote": "I see . So essentially you could do simple spectral subtraction , followed by a KL transform , followed by a",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f14",
+      "text": "PhD A confirmed this would be a cascade of two stages, completing the sequence with a Wiener filter.",
+      "category": "descriptive",
+      "source_quote": "Wiener filtering . It 's a {disfmarker} it 's a cascade of two s",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f15",
+      "text": "Professor C, half-jokingly, suggested doing spectral subtraction and then adding a little noise back in.",
+      "category": "cause_rationale",
+      "source_quote": "I was only half kidding . I mean if you {disfmarker} sort of {vocalsound} you do the s spectral subtraction , that also gets rid {disfmarker}",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f16",
+      "text": "Professor C said that doing spectral subtraction and then adding a little noise back in is roughly what JRASTA does, and that JRASTA is equivalent to adding a little noise in order to get rid of the effects of noise.",
+      "category": "descriptive",
+      "source_quote": "and then you {disfmarker} then {disfmarker} then add a little bit l noise {disfmarker} noise addition {disfmarker} I mean , that sort of what J {disfmarker} JRASTA does , in a way .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f17",
+      "text": "PhD D said that some people the team might work with have implemented VTS (Vector Taylor Series) techniques, used to model the transformation between clean and noisy cepstra.",
+      "category": "descriptive",
+      "source_quote": "they have implementation of VTS techniques so it 's um , Vector Taylor Series that are used to mmm , {vocalsound} uh f to model the transformation between clean cepstra and noisy cepstra .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f18",
+      "text": "PhD D noted that under the standard model of channel plus noise, the relationship is a nonlinear transformation in the cepstral domain.",
+      "category": "descriptive",
+      "source_quote": "if you take the standard model of channel plus noise , uh , it 's {disfmarker} it 's a nonlinear eh uh , transformation in the cepstral domain .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f19",
+      "text": "PhD D said the team was also working on adding another, simpler spectral-subtraction implementation to the code, done on mel energies, which had already been tested without frame dropping — and that frame dropping is important when using spectral subtraction.",
+      "category": "descriptive",
+      "source_quote": "We are playing {disfmarker} we are also playing , trying to put other spectral subtraction mmm , in the code . Um , it would be a very simple spectral subtraction , on the um , mel energies which I already tested but without the um frame dropping actually , and I think it 's important to have frame dropping if you use spectral subtraction .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "causal",
+      "text": "The proposed order of combining spectral subtraction with the signal subspace approach is motivated by the signal subspace method's poor performance under low SNR and colored noise.",
+      "fact_ids": ["f7", "f10"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "dependency",
+      "text": "Professor C's proposed chain (spectral subtraction, then a KL transform, then a Wiener filter) is the same KL-transform-plus-Wiener-filter decomposition that the signal subspace approach already performs, with an extra spectral-subtraction stage added first.",
+      "fact_ids": ["f9", "f13", "f14"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r3",
+      "type": "causal",
+      "text": "Because colored noise's covariance matrix is not reliably positive definite, the workaround is to inverse-filter the noise to whiten it first.",
+      "fact_ids": ["f11", "f12"],
+      "evidence_mode": "explicit",
+      "source_quote": "So the way they get around is like they do an inverse filtering , first of the colo colored noise",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r4",
+      "type": "causal",
+      "text": "The spectral-subtraction-then-add-noise idea Professor C floats is the same mechanism he attributes to JRASTA.",
+      "fact_ids": ["f15", "f16"],
+      "evidence_mode": "explicit",
+      "source_quote": "and then you {disfmarker} then {disfmarker} then add a little bit l noise {disfmarker} noise addition {disfmarker} I mean , that sort of what J {disfmarker} JRASTA does , in a way .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12", "f13", "f14", "f15", "f16", "f17", "f18", "f19"],
+  "corpus_defect_notes": [
+    "The native reference_answer's phrase 'spectral subtraction with both scaling and GGT bins' appears to contain a typo: the evidence supports 'FFT bins', not 'GGT bins'. This does not affect evidence support, only the reference answer's own wording.",
+    "Coverage-audit correction pass: added fact f19 for the frame-dropping/mel-energies spectral-subtraction opening turn (PhD D), the very first turn of native_evidence span:0, which was previously entirely uncaptured. Narrowed f18: its former source_quote ('...first-order or second-order Taylor Series...') was verified against source.md to be the PhD D turn immediately AFTER the last turn actually included in native_evidence span:0 (which ends at Professor C's 'Mm-hmm. Yes.'), so it was not truly supported by this case's declared evidence span even though the content itself is accurate; f18 now cites only the nonlinear-transformation clause that is genuinely the last sentence of the last turn within span:0."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

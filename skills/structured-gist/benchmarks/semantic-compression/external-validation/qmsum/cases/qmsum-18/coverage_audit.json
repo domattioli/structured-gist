@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-18",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "All substantive content of native_evidence span:0 is captured across six facts, each quoting its own clause directly with no cross-turn bundling issues (unlike several other cases in this pass). question_fact_ids (f1, f3, f4, f5) correctly selects the shape/front-design facts most relevant to 'spongy remote,' excluding f2 (fruit front) and f6 (tech innovation) which, while accurate, are less central to that specific question — matching the reference_answer's own scope. No missing, redundant, unsupported, or granularity issues found; empty relations array is reasonable given this is a loose sequence of independent design ideas rather than tightly connected claims."
+}

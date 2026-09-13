@@ -1,0 +1,41 @@
+{
+  "case_id": "hotpotqa-02",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Psilocybin, psilocin, and baeocystin are the main psychedelic compounds responsible for the psychoactive effects of many species in the genus Psilocybe.",
+      "category": "descriptive",
+      "source_quote": "Psilocybin, psilocin and baeocystin are the main psychedelic compounds responsible for the psychoactive effects of many species in the genus.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Psilocybe::sent2"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f1", "b:f1"]}
+    },
+    {
+      "id": "f2",
+      "text": "As a prodrug, psilocybin is quickly converted by the body to psilocin.",
+      "category": "descriptive",
+      "source_quote": "As a prodrug, psilocybin is quickly converted by the body to psilocin, which has mind-altering effects similar, in some aspects, to those of LSD, mescaline, and DMT.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Psilocybin::sent2"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f2", "b:f2"]}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "Among the three main psychedelic compounds named for the genus Psilocybe (psilocybin, psilocin, baeocystin), psilocybin specifically is the compound identified in the evidence as being converted by the body into psilocin.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Psilocybe::sent2"}, {"dataset": "hotpotqa", "native_evidence_id": "Psilocybin::sent2"}],
+      "adjudication": {"agreement": "merged", "source_annotator_ids": ["a:r1", "b:r1"]}
+    }
+  ],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [
+    "The question text ('...found in the Psilocybin genus mushroom...') appears to conflate the genus name 'Psilocybe' (the article the first evidence sentence is drawn from) with the compound name 'Psilocybin' (a different article); the genus is Psilocybe, not 'Psilocybin genus'. This looks like a minor wording slip in the native question rather than an evidence problem.",
+    "The native reference_answer for this case is 'psilocin', but the question asks which of the three named compounds (psilocybin, psilocin, baeocystin) IS CONVERTED TO psilocin by the body. The evidence (Psilocybin::sent2) states that psilocybin — not psilocin — 'is quickly converted by the body to psilocin'; a compound is not naturally described as being converted to itself. Read literally against the question as worded, the evidence-supported answer is 'psilocybin', not 'psilocin'. Both independent annotators flagged this same mismatch. This looks like a possible answer/question mismatch in the native benchmark annotation; this derived-gold record reflects what the evidence actually supports for the question as worded, rather than silently substituting the native reference_answer."
+  ],
+  "adjudication_status": "reconciled",
+  "annotator_metadata": "isolated_llm_agent_pair+adjudicator",
+  "build_date": "2026-09-10"
+}

@@ -1,0 +1,38 @@
+{
+  "case_id": "qmsum-21",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 2,
+    "f4": 3,
+    "f5": 2,
+    "f6": 3,
+    "f7": 2,
+    "f8": 2,
+    "f9": 1,
+    "f10": 1,
+    "f11": 2,
+    "f12": 3
+  },
+  "relation_weights": {
+    "r1": 2,
+    "r2": 3
+  },
+  "rationale": {
+    "f1": "States the fruit-and-vegetable fashion trend, directly matching the reference summary's opening claim.",
+    "f2": "States Marketing's explicit recommendation to factor the trend into the design, the core 'recommend to do' answer the query asks for.",
+    "f3": "Provides design-priority ranking context; relevant background but not itself a fashion recommendation.",
+    "f4": "States the spongy-touch trend, directly matching the reference summary's second point.",
+    "f5": "Notes the tension between spongy touch and wood; relevant supporting context for the eventual material recommendation.",
+    "f6": "States the recommended spongy materials (plastic/rubber-like), matching the reference summary's 'partly rubber-made' claim.",
+    "f7": "The Project Manager's proposal, not itself Marketing's recommendation, though it frames the ensuing discussion the query is about.",
+    "f8": "Marketing's clarification narrowing the wood-avoidance to the touched part; relevant nuance supporting the final blended-material recommendation.",
+    "f9": "The Industrial Designer's suggestion, not Marketing's own recommendation; tangential to the specific query.",
+    "f10": "A general group observation about wood's feel; tangential color, not a marketing recommendation.",
+    "f11": "Marketing's restated tension between wood and the spongy trend, supporting rationale for the final blended proposal.",
+    "f12": "States Marketing's final blended-material proposal (wood plus rubber buttons), directly matching the reference summary's closing point.",
+    "r1": "Connects the priority ranking to the fruit/vegetable theme; useful elaboration but secondary to the standalone trend and recommendation facts.",
+    "r2": "Captures the resolution of the wood-vs-spongy tension into the blended-material proposal, the core logical link behind the reference summary's answer."
+  }
+}

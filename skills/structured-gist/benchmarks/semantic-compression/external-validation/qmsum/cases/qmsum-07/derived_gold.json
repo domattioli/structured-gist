@@ -1,0 +1,65 @@
+{
+  "case_id": "qmsum-07",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "PhD F advised Grad G that if he had a large number of small jobs to run, he should not run more than about ten jobs of his own at a time, because saturating the network would keep other people's jobs from running promptly.",
+      "category": "constraint",
+      "source_quote": "because um , you don't wanna saturate the network . Uh , so , um , you know , you should {disfmarker} you should probably not run more than , say ten jobs yourself at any one time , uh , just because then it would keep other people {disfmarker}",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "PhD F said that if everybody ran fifty jobs at once, it would bring everything to a halt and delay everyone's jobs, since the compute resources are shared.",
+      "category": "cause_rationale",
+      "source_quote": "if everybody ran fifty jobs at once then it would just bring everything to a halt and , you know , people 's jobs would get delayed , so it 's sort of a sharing thing .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "Professor C recalled a workshop, either at Rutgers or Hopkins (he could not remember which), where a P-make-like system was used to send jobs out to twenty-five machines.",
+      "category": "descriptive",
+      "source_quote": "I remember I {disfmarker} I forget whether it was when the Rutgers or {disfmarker} or Hopkins workshop , I remember one of the workshops I was at there were {disfmarker} everybody was real excited cuz they got twenty - five machines and there was some kind of P - make like thing that sit sent things out .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "At that workshop, all twenty-five people were sending their jobs to all twenty-five machines.",
+      "category": "descriptive",
+      "source_quote": "So all twenty - five people were sending things to all twenty - five machines",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "Professor C said that as a result, things were a lot less efficient than if each person had just used their own machine.",
+      "category": "outcome",
+      "source_quote": "and {vocalsound} and things were a lot less efficient than if you 'd just use your own machine .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "causal",
+      "text": "Because all twenty-five workshop participants sent jobs to all twenty-five shared machines at once, the result was worse efficiency than if each person had used their own machine.",
+      "fact_ids": ["f4", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "and {vocalsound} and things were a lot less efficient than if you 'd just use your own machine .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "supporting_example",
+      "text": "Professor C's workshop anecdote about twenty-five people overwhelming twenty-five shared machines illustrates the same shared-resource contention problem that PhD F had just warned Grad G about.",
+      "fact_ids": ["f1", "f2", "f3", "f4", "f5"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

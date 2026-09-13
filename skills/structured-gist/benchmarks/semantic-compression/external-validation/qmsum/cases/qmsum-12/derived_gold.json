@@ -1,0 +1,144 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-12",
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass (case qmsum-12): split f3 (which bundled three distinct David Hopkins claims from one turn but was quoted only for the third) into a revised f3 covering just the 'delegation levels are not a direct factor' claim (the direct answer to Gwenllian's actual question) and new fact f8 covering the narrow key-stage-4 attainment measure and ALN tribunal-pressure claims, each now properly quoted. Added f9 (Hopkins's point about working with Estyn/Welsh Government toward a broader range of measures, explicitly named in the case's own reference_answer) and f10 (Liz Williams's point that up to 50% of learners could have an additional learning need and that school inclusivity matters regardless of formal diagnosis), both flagged by the coverage audit as missing task-critical content."
+  ],
+  "facts": [
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "In particular now with the new Act coming into force, that's going to place more pressure on the system. In Torfaen, we know that we have schools that are looking at their funding\u2014they are behind, and they have to make these hard choices.",
+      "text": "Sharon Davies said Torfaen schools were already behind on funding and having to make hard choices across every aspect of provision, and that this pressure would increase with the new Additional Learning Needs Act coming into force."
+    },
+    {
+      "category": "cause_rationale",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "the Government doesn't think about the staff in the pupil referral units, because we've gone back to the Government to tell them, 'Right, you've provided money to school staff, but what about staff that need training\u2014perhaps more than staff in the school sector?' And in fairness, they have addressed that, but perhaps it's not at the forefront of their minds when they're thinking of providing funding to the schools.",
+      "text": "Nick Williams said the Government tends to treat funding for training pupil referral unit staff as an afterthought compared to funding for mainstream school staff, though it had since partly addressed the gap after being pressed by local authorities."
+    },
+    {
+      "category": "cause_rationale",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "The delegation levels are already very high in most authority areas, and we've got agreements in place with the Government to make sure that more money, or as much money as possible, is devolved to schools. So, I don't think that's a direct factor.",
+      "text": "David Hopkins said delegation levels of funding from local authorities to schools were already very high, with agreements in place to devolve as much money as possible to schools, and that this was not a direct factor in exclusions."
+    },
+    {
+      "category": "cause_rationale",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f8",
+      "source_quote": "I think the factors that really affect exclusions, which is where I think the question came from: you've got the very narrow measure at the end of key stage 4 attainment, which I think has put pressure on some schools, certainly, and headteachers have felt that\u2014sometimes excluded, or otherwise put into another school as a consequence, which is regrettable, but that's what's happened. And on the additional learning needs side, whilst the Minister has currently made some more money available, if we look at experiences that have happened in England, in particular, because there are direct parallels there with legislation, we know from those experiences that ALN funding has become increasingly under pressure\u2014there have been big issues around tribunals, to the point where local authorities at one point almost gave up going to tribunals, because they were losing them time and time again.",
+      "text": "David Hopkins said the factors that actually drive exclusions are the narrow key stage 4 attainment measure, which has put pressure on some schools and led to headteachers excluding or transferring pupils, and increasing pressure on Additional Learning Needs funding, drawing on tribunal-related problems already seen in England."
+    },
+    {
+      "category": "next_action",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f9",
+      "source_quote": "Culturally, we've got to get to the point, I think, particularly with the new curriculum coming in, where we say, 'Look, forget the narrow measures that you're being judged by. We're trying to agree with partners, including Estyn and the Welsh Government, a broader range of measures.' That, in a sense, may provide opportunities for schools, and local authorities, to look more constructively at this whole area.",
+      "text": "David Hopkins said local authorities were trying to move away from the narrow attainment measures schools are judged by, working with Estyn and the Welsh Government to agree a broader range of measures, which may give schools and local authorities more room to address funding and exclusion pressures constructively."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f10",
+      "source_quote": "So, I think one of the participants said that up to 50 per cent of learners in a classroom could have an additional learning need, so, again, if the support isn't there, that child isn't going to benefit from diagnosis. And what was really highlighted is the importance of the school being inclusive, and for that child, regardless of whether they had an additional learning need or not, to have proper opportunity to progress.",
+      "text": "Liz Williams said one participant noted up to 50% of learners in a classroom could have an additional learning need, so diagnosis without support in place doesn't benefit the child, and what really matters is the school being inclusive so every child, diagnosed or not, has a proper opportunity to progress."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "I think the ALN legislation will put pressures on, not just local authorities and schools, but also on the post-16 sector, because we're talking now about a wider age range\u2014doing up to 25 as well.",
+      "text": "David Hopkins said the Additional Learning Needs legislation would put funding pressures not only on local authorities and schools but also on the post-16 sector, since it extends support up to age 25."
+    },
+    {
+      "category": "cause_rationale",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "because it changes, it's difficult then to plan ahead, and from year to year and also, as you've said, within the term. Perhaps you have provision for more learners coming in or moving, and then that causes the pressure within the system, then, because you haven't planned for them, and therefore there's no spare funding there to draw on.",
+      "text": "Sharon Davies said term-to-term and week-to-week variation in the level of provision schools must supply makes funding hard to plan for, since unplanned increases in learner numbers create pressure with no spare funding to draw on."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "if children move out of school, the funding follows them. We don't want a lag in the system, because they have to meet the challenge of the pupils, but the money is still in the schools, because it's once a year that they have that funding.",
+      "text": "Nick Williams said funding does not immediately follow a pupil who moves out of mainstream school, since local authorities only receive that school funding once a year, creating a lag even as staff must meet the pupil's needs right away."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f7",
+      "source_quote": "unless there was a proper understanding of the child's condition or additional learning needs, and that the proper support was there, then diagnosis alone wasn't of value.",
+      "text": "Liz Williams said funding tends to go toward diagnosing additional learning needs rather than toward the ongoing support children need once diagnosed, and that participants in Samaritans' research said diagnosis alone has little value unless proper support is also in place."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "f10"
+  ],
+  "relations": []
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "qasper-08",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 2, "f2": 3, "f3": 2},
+  "relation_weights": {"r1": 1},
+  "rationale": {
+    "f1": "States Hypothesis H4 itself, needed framing for what 'confirmed' means, but is a claim under test rather than the evidence that yields the yes/no answer.",
+    "f2": "Reports that the results actually confirm H4 across training and tuning conditions, which is the direct evidentiary basis for the reference answer of 'Yes'.",
+    "f3": "Adds the nuance that only template-derived synthetic data (not baseline data) reliably helps, reinforcing the positive answer with supporting detail that is not strictly required to reach 'Yes'.",
+    "r1": "Restates that the Table TABREF13 results are presented as confirmation of H4, a connection f2's own wording ('Table TABREF13 supports H4') already makes explicit, so losing it does not impair answering the question."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "case_id": "qasper-08",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Hypothesis 4 (H4) states that the proposed template-based synthesis model outperforms a simple word replacement model.",
+      "category": "descriptive",
+      "source_quote": "Hypothesis 4 (H4) : The proposed template-based synthesis model outperforms a simple word replacement model.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:25"}]
+    },
+    {
+      "id": "f2",
+      "text": "Results in Table TABREF13 confirm H4: the proposed synthesis model outperforms the WordNet word-replacement baseline in training (except for Stat2016) and in tuning across all four courses.",
+      "category": "outcome",
+      "source_quote": "Table TABREF13 supports H4 by showing that the proposed synthesis model outperforms the WordNet baseline in training (rows 7, 8 and 19, 20) except Stat2016, and tuning (10, 11 and 22, 23) over all courses.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:38"}]
+    },
+    {
+      "id": "f3",
+      "text": "Adding synthetic data from the template model helps improve both the training and tuning process, whereas adding synthetic data from the word-replacement baseline is not always helpful.",
+      "category": "outcome",
+      "source_quote": "It also shows that while adding synthetic data from the baseline is not always helpful, adding synthetic data from the template model helps to improve both the training and the tuning process.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:38"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "decision_outcome",
+      "text": "The Table TABREF13 results are presented specifically as confirmation of Hypothesis H4 (that the template model outperforms simple word replacement), not as a standalone finding.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "explicit",
+      "source_quote": "Table TABREF13 supports H4 by showing that the proposed synthesis model outperforms the WordNet baseline in training (rows 7, 8 and 19, 20) except Stat2016, and tuning (10, 11 and 22, 23) over all courses.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:38"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3"],
+  "corpus_defect_notes": [
+    "The native question_or_query, 'Is the template-based model realistic?', does not closely match the supplied evidence. The evidence (Hypothesis H4 and its confirmation in Results) is specifically about whether the template-based synthesis model outperforms a simple word-replacement baseline, not about 'realism' in any sense the source text ever states -- the word 'realistic' does not appear anywhere in source.md. The reference_answer 'Yes' is plausibly a loose gloss of 'H4 is confirmed' rather than an answer to a literal question about realism; the mapping between the question's wording and the cited evidence is not verifiable as stated."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

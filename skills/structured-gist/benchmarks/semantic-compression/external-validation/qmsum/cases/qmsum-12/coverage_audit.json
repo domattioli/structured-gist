@@ -1,0 +1,24 @@
+{
+  "case_id": "qmsum-12",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "David Hopkins's point about working toward a broader range of performance measures with Estyn and the Welsh Government (moving away from narrow attainment measures) as a way to give schools and local authorities more constructive room on funding/exclusion pressure is not captured by any fact — despite being specifically named in the case's own reference_answer ('The committee was trying to communicate with Estyn and the Welsh Government for a broader range of measures to provide opportunities for schools and local authorities'). f4 only captures the unrelated post-16/age-25 extension sentence from the same Hopkins turn.",
+      "source_quote": "Culturally, we've got to get to the point, I think, particularly with the new curriculum coming in, where we say, 'Look, forget the narrow measures that you're being judged by. We're trying to agree with partners, including Estyn and the Welsh Government, a broader range of measures.' That, in a sense, may provide opportunities for schools, and local authorities, to look more constructively at this whole area."
+    },
+    {
+      "description": "Liz Williams's closing point in span:1 — that up to 50% of learners in a classroom could have an additional learning need, and that what really matters is the school being inclusive for every child regardless of whether they have a diagnosed ALN — is not captured; f7 only covers the 'diagnosis alone isn't of value without support' claim from the same long turn.",
+      "source_quote": "So, I think one of the participants said that up to 50 per cent of learners in a classroom could have an additional learning need, so, again, if the support isn't there, that child isn't going to benefit from diagnosis. And what was really highlighted is the importance of the school being inclusive, and for that child, regardless of whether they had an additional learning need or not, to have proper opportunity to progress."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["f3"],
+  "granularity_problems": [
+    {
+      "unit_ids": ["f3"],
+      "issue": "f3 bundles three distinct claims from one long David Hopkins turn — (1) delegation levels are already high and not a direct factor in exclusions, (2) narrow key-stage-4 attainment measures put pressure on schools, and (3) ALN funding is under increasing pressure (tribunal issues seen in England) — but its cited source_quote covers only claim (3). Claim (1) is the direct answer to Gwenllian's actual question in this turn (whether money kept back by local authorities vs. delegated to schools affects provision) and arguably deserved its own fact rather than being folded, unquoted, into f3."
+    }
+  ],
+  "relation_omissions": [],
+  "notes": "Aside from the issues above, the 7-fact inventory covers this broad, whole-meeting-scoped question ('what did the meeting discuss about funding issues') reasonably across both spans — new-Act funding pressure, PRU staff training as an afterthought, term-to-term provision variation, and the funding-lag when pupils move schools are all accurately captured with verbatim-matching quotes. relations array is empty, which is defensible here since the discussion is largely a sequence of independent points rather than tightly connected claims."
+}

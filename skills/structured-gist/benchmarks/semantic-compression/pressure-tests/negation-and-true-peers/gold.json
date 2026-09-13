@@ -3,6 +3,11 @@
   "size_bucket": "small",
   "pressure_tags": ["adversarial", "true_peers", "negation", "small"],
   "source_word_count": 272,
+  "intent": {
+    "reader": "a stakeholder getting a status update spanning several unrelated workstreams",
+    "task": "know what did and did NOT happen in each workstream independently, without inferring a shared cause or hierarchy that isn't there",
+    "rationale": "negations here are load-bearing -- dropping a negation changes what the fact means, not just how much detail survives"
+  },
   "facts": [
     {"id": "f1", "text": "the four workstreams are genuinely independent of each other this quarter", "category": "constraint", "weight": 3, "precision_sensitive": false, "source_quote": "they are genuinely independent of each other"},
     {"id": "f2", "text": "none of the four workstreams is a sub-part of another, and none depends on another finishing first", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "none of them is a sub-part of another, none of them depends on another finishing first"},
@@ -19,7 +24,7 @@
     {"id": "f13", "text": "the database was the first suspect for the slowness", "category": "descriptive", "weight": 1, "precision_sensitive": false, "source_quote": "The database was the first suspect"},
     {"id": "f14", "text": "the investigation explicitly ruled out the database: it was not the bottleneck", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "the investigation explicitly ruled it out: the database was not the bottleneck"},
     {"id": "f15", "text": "query times were normal", "category": "outcome", "weight": 2.5, "precision_sensitive": false, "source_quote": "Query times were normal"},
-    {"id": "f16", "text": "the actual bottleneck was an unoptimized client-side rendering path re-running the same computation on every scroll event", "category": "outcome", "weight": 3, "precision_sensitive": false, "source_quote": "The actual bottleneck turned out to be an unoptimized client-side rendering path that re-ran the same computation on every scroll event"},
+    {"id": "f16", "text": "the actual bottleneck was an unoptimized client-side rendering path re-running the same computation on every scroll event", "category": "outcome", "weight": 3, "weight_reason": "the corrected finding -- keeping only the ruled-out theory (f13/f14) without this would misattribute the bottleneck to the wrong system", "precision_sensitive": false, "source_quote": "The actual bottleneck turned out to be an unoptimized client-side rendering path that re-ran the same computation on every scroll event"},
     {"id": "f17", "text": "the hiring push is not expanding headcount at all", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "it is not expanding headcount at all"},
     {"id": "f18", "text": "the hiring push is backfilling exactly one departure from earlier this year, nothing more", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "it is backfilling exactly one departure from earlier this year, nothing more"},
     {"id": "f19", "text": "the hiring push has no connection to the other three workstreams", "category": "negation", "weight": 3, "precision_sensitive": false, "source_quote": "It has no connection to the other three workstreams"},

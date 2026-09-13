@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-02",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Native evidence is one short paragraph with three independent sentences; f1-f3 map one-to-one onto them, all source_quotes verified verbatim. The question ('what does an individual model consist of') is fully answerable from the inventory. No relation is needed or omitted given the facts are independently listable descriptive claims, not connective ones."
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "qasper-03",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3, "f3": 3},
+  "relation_weights": {"r1": 2},
+  "rationale": {
+    "f1": "States the emotional-appeal finding (both corpora inspire while avoiding fear) that the question explicitly references and that forms one required segment of the reference answer.",
+    "f2": "States that the actual words producing the similar effect differ between the two corpora, a required conclusion segment directly quoted in the reference answer.",
+    "f3": "States the authors' overarching conclusion about what the analysis method enables for counterterrorism research, the final required segment of the reference answer.",
+    "r1": "Makes explicit the contrast between the similar emotional effect and the differing underlying word choices, reinforcing a distinction the facts already state individually so it strengthens but is not solely load-bearing for the answer."
+  }
+}

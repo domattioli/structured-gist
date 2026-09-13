@@ -1,0 +1,18 @@
+{
+  "dataset": "hotpotqa",
+  "deviations": [
+    "Primary host curtis.ml.cmu.edu did not respond (TCP connect timeout, no HTTP error) from the build environment. Used the hotpotqa org's own Hugging Face mirror instead, pinned to the dataset repo's sha. Schema and content are the official distractor dev split; only the transport differs."
+  ],
+  "license": "CC BY-SA 4.0",
+  "license_source": "https://hotpotqa.github.io/ (\"HotpotQA is distributed under a CC BY-SA 4.0 License\")",
+  "retrieval_date": "2026-09-10T04:19:25Z",
+  "source_sha256": "8ec1dccdd670a3285ea4a630e8c777784ec2848f5d005351aaebe9ec5705e104",
+  "transformation_script_version": "1.0.0",
+  "transformed_case_sha256": "b2a43b27f4c93f93a96b21b58cc253728d6f25e9c34192a81e171a75c927edb4",
+  "upstream_case_id": "5ab8ffc655429934fafe6e30",
+  "upstream_document_id": "5ab8ffc655429934fafe6e30",
+  "upstream_question_id": "5ab8ffc655429934fafe6e30",
+  "upstream_revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+  "upstream_source_repository": "https://hotpotqa.github.io/ (canonical); https://huggingface.co/datasets/hotpotqa/hotpot_qa (mirror used for retrieval)",
+  "upstream_split": "validation (distractor)"
+}

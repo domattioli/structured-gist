@@ -1,0 +1,11 @@
+{
+  "case_id": "hotpotqa-04",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3},
+  "relation_weights": {"r1": 3},
+  "rationale": {
+    "f1": "This fact supplies the translated name ('The Daltons') that the question's 'shares a name with' criterion depends on; without it there is no name to match against any outlaw group.",
+    "f2": "This fact is the only place an outlaw group from the 1890s appears at all, and without it there is no candidate answer regardless of any name match.",
+    "r1": "The question specifically asks which group shares a name with the band, and this relation is what states that 'The Daltons' and 'Dalton Gang' are the same shared name — without it a reader has two separate facts but no stated basis for picking the Dalton Gang over any other 1890s outlaw group."
+  }
+}

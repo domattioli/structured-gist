@@ -1,0 +1,567 @@
+{
+  "case_id": "qmsum-24",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 193,
+      "span_index": 0,
+      "start_idx": 66,
+      "turns": [
+        {
+          "content": "Um and then we we're loo looking into battery options .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "There's um actually no rechargeable option available , so we {disfmarker} I saw the um the standard double A_ and triple A_ which we thought were a bit bit too bulky at the moment , dynamo charging , I thought that that might be a bit silly to be to be honest ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Wa {vocalsound} can you explain that ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "people won't {disfmarker} it's it's basically like wind-up radio .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Like a {disfmarker} right , okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So you wind up your remote control before you use it .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "How {vocalsound} {disfmarker} what kind of {disfmarker} how l long can you get out of that ,",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "It might {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I mean can you pick it up and then wind it for two minutes and then that's it for the night ? Or {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "You {disfmarker} Yeah , yeah , oh yeah I presu you wouldn't have to wind it for very long , but I don't I don't think it's really sort of necessary when you th you think of the next two options , like the the solar charging , 'cause most people have the light on in the room anyway so they could get {disfmarker} when when you got T_V_ .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "That doesn't count though does it ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Does does light charge as as sunlight does ?",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "I thought it was U_V_ like {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "No .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Artificial light ?",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Is it ? Alright i",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Any , any {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Has to be solar .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yep . Regarding those sizes , which one you think will be light because we we have to take into consideration size also , so maybe a standard triple A_ might take lesser space or {disfmarker} and dynamo might take more space .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Yeah it would the d yeah the dynamo would take more space 'cause you actually need a physical sort of handle to wind up .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I'm pretty sure that solar is from the sun .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah , okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh , I don't think it counts electric lights",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm . Artificial light , no .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "no , but I mean not many {disfmarker} you don't want to limit your market .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "That's going to {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "I mean people who live in basement flats there's not that many people , but there are people .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Uh {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "I know ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "But {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "different parts of the world too , if we're if we're marketing internationally .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Right .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "and most people most people also watch T_V_ in the in the night anyway .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Night .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm , but then it would be charging through the day , I think the point is that it charges through the day and then you've got it charged for the evening .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "But I I think I think the the next one's the best anyway .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "The the kinetic charging which is like you get it in r you get it in wrist watches",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Yeah I've seen {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "and you d you don't even notice it . I mean the amount the amount of probably moving around you'd be doing all the time would would charge it up , I don't think you'd ever need to actually physically start shaking it up to make it work .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And are these like uh {disfmarker} what are the life of the kinetic battery , it like it runs for long time ?",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Um yeah it's {disfmarker} it charges into um some form of {disfmarker} it's a smaller cell which it charges into and uh the si the size sort of a watch a watch battery ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "'cause they use them quite frequently in watches .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "And that'll that would l would last for um well I do I d I'm not entirely sure how long it would last but I've never seen one run out {gap} .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "We c",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "But then if you think about a watch , it's on your wrist so it's on your whole bod it's on your body the whole time",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "so you're walking around , you're doing things , it is moving a lot of the time . If you'd {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah and {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I mean you switch the T_V_ on , then you put it on the side , then you pick it up to change it and then you put it on the side .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah but then again",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Is it really gonna be enough ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "I I think it is because if you think about it , the watch , although it's only a tiny amount it's it's um {vocalsound} it's always moving for the whole day and they don't run out over night when you leave them on the side .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "And th for the same the same reason , you're only using it for a v incredibly short amount of time just to send the signal and then you're finished with it",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "So it's not {disfmarker} the draw on it isn't {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "and you put it {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Hmm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "no no I do I don't think the the draw on it would be {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm . Mm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Could I just ask {disfmarker} referring back to solar charging , is that compatible with um standard batteries ?",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "I mean , could people put standard batteries in but with a s you know they could leave it in the sunlight for solar charging",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Ye yeah I think I th uh g y you could have a dual um power thing",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "or the two things not compatible ?",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Like a dual kind of .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "but the the thing with the solar cells is you would need to put them on the case and they {disfmarker} because , if you lie {gap} {disfmarker} on a calculator they they're qui they're quite big and they all they all look i identical .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm . So that affects the exterior design .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Solar would be slightly {gap} expensives .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Expensive as well . What kind of price are we looking at for {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "They're they're expensive , they don't {disfmarker}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "It's twelve point f",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "I presume the normal batteries are the cheapest ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah the normal batteries would be the cheapest I'd presume then it would actually be the the solar charging ones , um but the {disfmarker} It's i I think they're not very resistant to dropping ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Solar .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "'cause if you drop stuff {disfmarker} yeah if you if you have y",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Well they're not designed {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "the size you'd need to charge a remote wouldn't be that big but I mean if {disfmarker} remotes always get thrown around and stuff , so .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Practical-wise okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Y I think {disfmarker} yeah , practically . I mean calculators you don't really throw around a lot {vocalsound} whereas remotes you do ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "You do get a bit of wear",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "they can t",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "but don't calculators have a battery in them as well ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah they do , they {disfmarker} yeah they've got dual things , but they're {disfmarker} the batteries are smaller I think .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Another question is like {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Again it de",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "sorry . W w which one would last the longest , because we don't want customers to be like you know charging like a mobile phone every day .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "A remote control , like ,",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "W m yeah",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "so we have to s look at the life also .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Mm .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "so the {disfmarker} Yeah the the s if you if you had something du uh using the standard batteries and the solar charging , um , I don't think you'd {disfmarker} I think the {disfmarker} it would d well you know how long the standard double A_s would last in {disfmarker} or triple A_s would last .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "It would just detract from the attractiveness of the of the whole feature ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah I think i I think it would , yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "i {vocalsound} it's not gonna add anything , okay .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay , can we add in uh an attachment to closing feature ?",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Can we think about that ? 'Cause if we're doing the kinetic thing and it's {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Shouldn't we do some market research on that first before we add it in because I I personally {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Well add it in to think about um",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "right , okay .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "because , where am I ? If it is the kinetic thing and it is small and it is portable and it is a different shape and the kinetic is something people don't do kind of {disfmarker}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "we're doing something original and different um but if you wore it if it's something you could just clip on your pocket then you would have that less , you you wouldn't lose it so much .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But then maybe that's looking at someone who's just sitting on their own rather than",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "the eternal battle for control of the controls .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "It's not something that's come up in any of our uh focus groups and market research ,",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "No .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "it's not a thing that people are looking for",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "So {disfmarker}",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "when we threw it open to the field yeah .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "But it's something to put on the side to think about maybe .",
+          "speaker": "Marketing"
+        }
+      ]
+    },
+    {
+      "end_idx": 207,
+      "span_index": 1,
+      "start_idx": 203,
+      "turns": [
+        {
+          "content": "so that {disfmarker} And then to {disfmarker} uh yeah , so to conserve battery life the remote should be in a standby mode no while not being used . Now what I was thinking about that was {disfmarker} 'cause sometimes when y when you have these things , they've got little lights on behind the buttons , so you can see what all the buttons are , like on a mobile phone , they do it more often than on a than on a T_V_ remote ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Mm-hmm .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "but you could you could have lights behind the buttons and um after like five or ten seconds of not being used I'd have that turned off , if we decided to go for buttons that could light up .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "User Interface"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Product",
+    "n_spans": 2,
+    "n_turns": 604,
+    "native_meeting_id": "ES2004c",
+    "source_word_count": 8103
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What are the benefits and drawbacks for each battery option mentioned and what did Industrial Manager suggest to conserve battery life when discussing the design and availability of actual components?",
+  "reference_answer": "Standard AA and AAA are bulky but the cheapest. Dynamo and dual charging with normal batteries and solar charging take up too much space. Solar charging is the second cheapest but not resistant to dropping. Also, Project Manager believed it would limit the market. Kinetic charging is small and portable but market research should be done first. No rechargeable battery options were available. The remote could have a standby mode and the lights behind the buttons would be switched off after five or ten seconds when not in use."
+}

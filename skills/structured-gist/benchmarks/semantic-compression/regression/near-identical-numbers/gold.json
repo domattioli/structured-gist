@@ -3,6 +3,10 @@
   "size_bucket": "medium",
   "pressure_tags": ["adversarial", "numeric_precision", "medium"],
   "source_word_count": 276,
+  "intent": {
+    "reader": "an engineer who needs to act on the exact values in this recap (cite a version, path, or SHA) without re-reading the source",
+    "task": "precise recall of exact identifiers under compression -- near-miss numbers/paths/SHAs must not become interchangeable"
+  },
   "facts": [
     {"id": "f1", "text": "Service A's request timeout was decreased from 30 seconds to 5 seconds", "category": "outcome", "weight": 2.5, "precision_sensitive": true, "source_quote": "Service A's request timeout was decreased from 30 seconds to 5 seconds"},
     {"id": "f2", "text": "Service A's change shipped at commit abc1234 in config/service-a.yaml", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "shipped at commit `abc1234` in `config/service-a.yaml`"},

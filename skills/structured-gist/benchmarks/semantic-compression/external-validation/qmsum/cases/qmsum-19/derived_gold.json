@@ -1,0 +1,91 @@
+{
+  "case_id": "qmsum-19",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The Industrial Designer said some parts of the remote control need custom design, while other parts can just use standard components.",
+      "category": "descriptive",
+      "source_quote": "so we need some custom design parts , and other parts we'll just use standard .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "The Industrial Designer assumed the case would be custom designed, probably hard plastic or another material, to protect the remote and the locator.",
+      "category": "descriptive",
+      "source_quote": "I assume we'll be custom designing our case , probably a hard plastic or some other material case , to protect the remote and the locator .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "The Industrial Designer said the circuit board needs custom design because it has to take the button input and send it to the output, so it must be designed each time.",
+      "category": "cause_rationale",
+      "source_quote": "we'll need to custom desi design a circuit board , because the circuit board has to take the button input and send it to the output so you have to design that each time .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "The Industrial Designer said standard parts include the buttons and the wheels (the iPod-style wheel), the infrared LED (included in the circuit board), and the radio sender and receiver.",
+      "category": "descriptive",
+      "source_quote": "standard parts include the buttons and the wheels , um the iPod-style wheel . The infrared L_E_D_ is actually gonna be included in the circuit board that comes with it . Um , we need a radio sender and receiver , those are standard .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "The Industrial Designer said a beeper, buzzer, or other noise-making component would also be needed to locate the remote.",
+      "category": "descriptive",
+      "source_quote": "we also need a beeper or buzzer or other sort of noise thing for locating the remote .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "The Industrial Designer listed rubber, plastic, wood, or titanium as the material options for the case.",
+      "category": "descriptive",
+      "source_quote": "we can use rubber , plastic , wood or titanium .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "The Industrial Designer recommended against titanium because it can only be used in flat cases and it is really heavy.",
+      "category": "cause_rationale",
+      "source_quote": "I'd recommend against titanium because it can only be used in the flat cases and it's really heavy .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "The Industrial Designer said a rubber case requires rubber buttons, so if the team definitely wants plastic buttons they shouldn't use a rubber case.",
+      "category": "constraint",
+      "source_quote": "the rubber case requires rubber buttons , so if we definitely want plastic buttons , we shouldn't have a rubber case .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "The Industrial Designer said wood could be used as a material, though he did not know a specific reason to choose it.",
+      "category": "descriptive",
+      "source_quote": "well we can use wood . {vocalsound} I don't know why we'd want to .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "The Industrial Designer said using an iPod-style wheel button would require a slightly more expensive 'regular' grade chip instead of the minimal chip.",
+      "category": "constraint",
+      "source_quote": "if we want an iPod-style wheel button , it's gonna require a m qu slightly more expensive chip . We can't use the minimal chip , we need the next higher grade , which is called regular .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "Choosing the iPod-style wheel (one of the standard parts) is what forces the more expensive 'regular' chip instead of the minimal chip.",
+      "fact_ids": ["f4", "f10"],
+      "evidence_mode": "explicit",
+      "source_quote": "if we want an iPod-style wheel button , it's gonna require a m qu slightly more expensive chip . We can't use the minimal chip , we need the next higher grade , which is called regular .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f10"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

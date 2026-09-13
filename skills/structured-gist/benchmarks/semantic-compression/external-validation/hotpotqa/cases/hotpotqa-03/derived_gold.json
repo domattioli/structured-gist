@@ -1,0 +1,38 @@
+{
+  "case_id": "hotpotqa-03",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Marvel One-Shots is a series of direct-to-video short films produced by Marvel Studios.",
+      "category": "descriptive",
+      "source_quote": "Marvel One-Shots are a series of direct-to-video short films produced by Marvel Studios",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Marvel One-Shots::sent0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Marvel Studios was originally known as Marvel Films from 1993 to 1996.",
+      "category": "descriptive",
+      "source_quote": "Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996)",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Marvel Studios::sent0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "coreference_bridge",
+      "text": "The motion picture studio that produced Marvel One-Shots (Marvel Studios) is the same studio that was formerly known as Marvel Films, from 1993 to 1996.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [
+        {"dataset": "hotpotqa", "native_evidence_id": "Marvel One-Shots::sent0"},
+        {"dataset": "hotpotqa", "native_evidence_id": "Marvel Studios::sent0"}
+      ]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

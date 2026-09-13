@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-16",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["f3"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f3's text adds 'so schools shared responsibility and could not simply move learners elsewhere,' a substantive claim about the outcome/purpose of the terms-of-reference arrangement, but f3's cited source_quote stops at '...there's got to be terms of reference.' The claim is true and present later in the same single-turn span:1 ('the schools worked together as a partnership...so that they couldn't keep moving the children around') but is not included in f3's own citation — a minor quote-completeness gap rather than a fabrication. This is a very small, carefully-scoped case (two single-turn spans, four facts): f1/f2 fully and accurately cover span:0, f4 is a clean, fully-supported fact, and both native turns are completely represented with no missing content, no redundancy, and no overreach otherwise. relations is empty, which is defensible given all four facts sit within two short, largely independent statements."
+}

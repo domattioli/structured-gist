@@ -1,0 +1,37 @@
+{
+  "case_id": "qasper-01",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 39,
+      "para_idx": 3,
+      "section_idx": 19,
+      "section_name": "Results ::: Automatic Evaluation",
+      "text": "Among all three pre-training tasks, SR works slightly better than the other two tasks (i.e., NSG and MDG). We also tried to randomly use all the three tasks during training with 1/3 probability each (indicated as ALL). Interesting, we observed that, in general, All outperforms all three tasks when employing unlabeled documents of training splits of CNNDM or NYT, which might be due to limited number of unlabeled documents of the training splits. After adding more data (i.e., GIAG-CM) to pre-training, SR consistently achieves highest ROUGE-2 on both CNNDM and NYT. We conclude that SR is the most effective task for pre-training since sentence reordering task requires comprehensively understanding a document in a wide coverage, going beyond individual words and sentences, which is highly close to the essense of abstractive document summarization."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "extractive",
+    "arxiv_id": "2004.01853",
+    "cardinality": "single",
+    "distance_bucket": "n/a",
+    "evidence_distance": 0,
+    "evidence_raw": [
+      "Among all three pre-training tasks, SR works slightly better than the other two tasks (i.e., NSG and MDG). We also tried to randomly use all the three tasks during training with 1/3 probability each (indicated as ALL). Interesting, we observed that, in general, All outperforms all three tasks when employing unlabeled documents of training splits of CNNDM or NYT, which might be due to limited number of unlabeled documents of the training splits. After adding more data (i.e., GIAG-CM) to pre-training, SR consistently achieves highest ROUGE-2 on both CNNDM and NYT. We conclude that SR is the most effective task for pre-training since sentence reordering task requires comprehensively understanding a document in a wide coverage, going beyond individual words and sentences, which is highly close to the essense of abstractive document summarization."
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 1,
+    "nlp_background": "infinity",
+    "paper_title": "STEP: Sequence-to-Sequence Transformer Pre-training for Document Summarization",
+    "source_word_count": 4402,
+    "topic_background": "familiar"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Which of the three pretraining tasks is the most helpful?",
+  "reference_answer": "SR"
+}

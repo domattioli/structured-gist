@@ -1,0 +1,34 @@
+{
+  "case_id": "qmsum-09",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 3,
+    "f3": 3,
+    "f4": 3,
+    "f5": 2,
+    "f6": 2,
+    "f7": 3,
+    "f8": 2,
+    "f9": 2
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3,
+    "r3": 2
+  },
+  "rationale": {
+    "f1": "States the core question being pressed (fund the Auditor General), the anchor of the whole exchange.",
+    "f2": "Gives the concrete evidence (half as many audits despite doubled spending) underpinning the funding demand, essential to the exchange's substance.",
+    "f3": "States the Prime Minister's central defense (increased funding, added staff), directly matching the reference summary's core claim.",
+    "f4": "Captures Scheer's rebuttal that the cuts were the AG's own volunteered efficiency, the key counter-argument that frames the response as unsatisfactory.",
+    "f5": "Reinforces Trudeau's funding-increase defense with a comparative jab at the prior government; supports but partly repeats f3's point.",
+    "f6": "Adds a specific statistic (27 to 14 audits) that strengthens Scheer's core claim but is somewhat redundant with f2.",
+    "f7": "The final direct yes-or-no demand, which crystallizes the entire exchange's unresolved ask and matches the reference's framing of an unsatisfactory answer.",
+    "f8": "Shows Trudeau's first response entirely dodged the Auditor General question, a fact relevant to why the answer is later characterized as unsatisfactory.",
+    "f9": "A restated version of the core funding accusation; relevant but overlaps substantially with f1/f2.",
+    "r1": "Directly captures that Trudeau's funding answer did not address Scheer's specific audits-halved claim, which is precisely the 'unsatisfactory response' the reference summary describes.",
+    "r2": "Shows the exchange repeating without resolution (Trudeau restating funding figures instead of engaging the volunteered-efficiencies rebuttal), core to the back-and-forth's unresolved nature.",
+    "r3": "Ties the audits-halved statistic to Scheer's final demand, the logical chain that leads to the exchange's unresolved conclusion."
+  }
+}

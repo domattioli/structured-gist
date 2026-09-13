@@ -1,0 +1,72 @@
+{
+  "case_id": "qmsum-05",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "SmartKom's first step is to try to figure out a person's intention simply by parsing their utterance, without differentiating between all the possible modes.",
+      "category": "descriptive",
+      "source_quote": "The first thing we get is that {pause} already the intention is sort of t They tried to figure out the intention , right ? simply by parsing it . And this um {disfmarker} m won't differentiate between all modes , yeah ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "After the parser processes an utterance, the result is handed on to the discourse history, one of SmartKom's most elaborate modules, which acts as the memory of the entire system, tracking who said what and what was presented.",
+      "category": "descriptive",
+      "source_quote": "what happens is you know the parser parses it and then it 's handed on to the discourse history which is , um o one of the most elaborate {disfmarker} elaborate modules . It 's {disfmarker} it 's actually the {disfmarker} the whole memory of the entire system , that knows what {disfmarker} wh who said what , which was {disfmarker} what was presented .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "The discourse history helps with anaphora resolution and fills in structures that are omitted from an utterance, using information carried over from earlier in the discourse.",
+      "category": "descriptive",
+      "source_quote": "It helps an an anaphora resolution and it {disfmarker} and it fills in all the structures that are omitted , so , {pause} um , because you say \" OK , {pause} how can I get to the castle ? \" Oh , how {disfmarker} how much is it ? \" and um \" yeah I would like uh {disfmarker} um {disfmarker} to g let 's do it \" and so forth .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Since not every module in SmartKom keeps a memory of everything that happened, the discourse model adds information into the system's representations at each dialogue step, unless the person is actually rejecting what happened before.",
+      "category": "descriptive",
+      "source_quote": "Because not every module keeps a memory of everything that happened . so {vocalsound} whenever the uh , um person is not actually rejecting what happened before , so as in \" No I really don't want to see that movie . I 'd rather stay home and watch TV \" um {disfmarker} What movie was selected in what cinema in what town is {disfmarker} is going to be sort of added into the disc into the representations every di at each dialogue step , by the discourse model",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "The discourse model also helps coordinate gesture and screen issues, storing what was presented at what location on the screen when a person points to something.",
+      "category": "descriptive",
+      "source_quote": "and it also helps in coordinating the gesture screen issues . So a person pointing to something on the screen , you know , the discourse model actually stores what was presented at what location on the s on the screen",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "The discourse model has a clear interface that can be queried, for example to check whether admission fees were discussed in the last turn or in earlier turns, with control over how deep to search back.",
+      "category": "descriptive",
+      "source_quote": "we can {pause} sort of {disfmarker} It has a very clear interface . We can query it whether admission fees were discussed in the last turn and {disfmarker} and the turn before that or you know how {pause} deep we want to search",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "The discourse history module receives its input from the parser's intention-parsing output.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "explicit",
+      "source_quote": "what happens is you know the parser parses it and then it 's handed on to the discourse history",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "dependency",
+      "text": "Because the discourse history stores the system's whole memory of what was said and presented, it is what makes anaphora resolution, gap-filling, and queryable lookups (such as whether admission fees were discussed earlier) possible.",
+      "fact_ids": ["f2", "f3", "f6"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

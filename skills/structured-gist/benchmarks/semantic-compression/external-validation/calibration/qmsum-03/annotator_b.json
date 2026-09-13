@@ -1,0 +1,166 @@
+{
+  "case_id": "qmsum-03",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Professor F said that in the unlikely event transcribers ever ran out of backlog work (because the pipeline processes material faster than new recordings are generated), the team would find other work for them to do.",
+      "category": "next_action",
+      "source_quote": "in the unlikely event that we actually find {vocalsound} that we have , uh , transcribers on staff who are twiddling their thumbs because ... the pipeline is faster than {disfmarker} {vocalsound} uh , than the generation ... I {disfmarker} I bet we could find some other stuff for them to do .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Professor F said the plan is to keep about five or six transcribers on staff at any given time (rather than twelve), because that number is small enough to keep the team flexible and sustainable.",
+      "category": "decision",
+      "source_quote": "if we have five on staff {disfmarker} five or six on staff at any given time , then {vocalsound} it 's a small enough number so we can be flexible either way .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "PhD E is planning to use the transcriptions that have already been completed to create speech/non-speech labels.",
+      "category": "next_action",
+      "source_quote": "That was a thing I {disfmarker} I planned working on , is , uh , to use the {disfmarker} the transcriptions which are done by now , and to {disfmarker} to use them as {disfmarker} ... To {disfmarker} to create some speech - nonspeech labels out of them",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Automatic pre-segmentations of meeting audio are described as extremely helpful for the transcribers and correct most of the time, needing only minor boundary adjustments (mainly on short utterances).",
+      "category": "outcome",
+      "source_quote": "The {disfmarker} the {disfmarker} the pre - segmentations are so much {disfmarker} are s so extremely helpful . ... it 's so correct for so much of the time , that it 's an enormous time saver ... and it just gets tweaked a little around the boundaries . So .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "When a transcriber begins work before pre-segmentation is available, Postdoc A merges their manual work with the pre-segmented version, so the result is not a 'pure' pre-segmented condition; this happened for about four recent meetings but is expected to be avoidable in the future.",
+      "category": "constraint",
+      "source_quote": "There is a {disfmarker} there is one problem with that and that is when they start part way through then what I do is I merge what they 've done with the pre - segmented version . ... it wasn't possible for about four of the recent ones . But , it will be possible in the future",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "The team plans to keep a record of the original automatic segment boundaries (before manual adjustment) so they can later evaluate recognition performance using purely automatic, 'non-cheating' boundaries.",
+      "category": "next_action",
+      "source_quote": "As long as we have a record , I guess , of the original {pause} automatic one , we can always find out how well {pause} we would do fr from the recognition side by using those boundaries . ... a completely non - cheating version .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "PhD D, Jane, and Adam met to plan a reorganization of the directory structure for all of the Meeting Recorder data; that planning meeting itself was not recorded, which they noted they should have done.",
+      "category": "descriptive",
+      "source_quote": "Jane and Adam and I had a meeting where we talked about the reorganization of the {pause} directory structure for all of the meeting {disfmarker} ... No . For all the Meeting Recorder data . We should have .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "Jane prepared a spreadsheet tracking every collected meeting (start time, date, old/new meeting name, number of speakers, duration, comments, and transcription status), which PhD D has been adding to, with the plan to export it as HTML on the Meeting Recorder website to keep people updated.",
+      "category": "next_action",
+      "source_quote": "Jane also s prepared a {disfmarker} um , started getting all of the {disfmarker} the meetings organized , so she prepared a {disfmarker} {vocalsound} a spreadsheet ... with start time , the date , the old meeting name , the new meeting name , the number of speakers , the duration of the meeting , comments , you know , what its transcription status is , all that kind of stuff . And so , the idea is that we can take this and then export it as HTML and put it on the Meeting Recorder web page",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "As of Monday the 14th, the team had collected a total of 62 hours of meetings, with an average of six speakers per meeting; PhD D still needs to confirm with Jane exactly which meetings have been fully transcribed.",
+      "category": "descriptive",
+      "source_quote": "as of Monday , the fourteenth , um , we 've had a total number of meeting sixty - two hours of meetings that we have collected . And , um {disfmarker} Uh , some other interesting things , average number of speakers per meeting is six .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "The planned web-published status tracker will show, for each meeting, whether it is at IBM or at ICSI, whether it is completed, or if it is being excluded (with a comments field explaining exclusions).",
+      "category": "descriptive",
+      "source_quote": "it 'll also list , uh , like under the status , if it 's at IBM or if it 's at ICSI , uh , or if it 's completed or which ones we 're excluding and {disfmarker} and there 's a place for comments , so we can , {vocalsound} um , say why we 're excluding things",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "Professor F raised whether the team should now start having participants formally approve already-transcribed meetings for distribution.",
+      "category": "unresolved_question",
+      "source_quote": "shouldn't we go through and do the business - es u of {disfmarker} of having the , um , uh , participants approve it , uh , for {disfmarker} approve the transcriptions for distribution and so forth ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f12",
+      "text": "Postdoc A said she agreed in principle but was still completing final-pass editing — converting transcripts to a channelized master file, cleaning up places where the transcriber was uncertain, and spot-checking — and suggested waiting until that editing is finished before seeking approval.",
+      "category": "constraint",
+      "source_quote": "I still am doing some {disfmarker} the final - pass editing , trying to convert it over to the master file as the {disfmarker} being the channelized version ... Cleaning up the things like the , uh , uh , places where the transcriber was uncertain , and {disfmarker} and doing spot - checking here and there . So , um , uh , I guess it would make sense to wait until th that 's done",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f13",
+      "text": "Professor F set a milestone that, given the DARPA meeting in mid-July and having already given public talks about the data, a subset of the transcribed meetings should be legally cleared and made available before July.",
+      "category": "decision",
+      "source_quote": "we are gonna have this DARPA {pause} meeting in the middle of July , and I think it w it 'd be {disfmarker} given that we 've been {disfmarker} we 've given a couple public talks about it already , spaced by months and months , I think it 'd be pretty bad if we continued to say none of this is available . ... we {disfmarker} we wanna be able to say \" here is a subset that is available right now \" ... and that 's has been through the legal issues and so forth .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f14",
+      "text": "Postdoc A confirmed that a subset of transcriptions will certainly be ready by the DARPA meeting.",
+      "category": "outcome",
+      "source_quote": "It 'll certainly be done by then . Yeah .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f15",
+      "text": "PhD C suggested participants don't need to approve a fully edited final version — they can approve whatever version currently exists — since ongoing editing only fixes errors and won't change the meeting's content.",
+      "category": "decision",
+      "source_quote": "they don't have to approve , you know , th an edited version , they can just give their approval to whatever version ... the editing will continue . Presumably if {disfmarker} if s errors are found , they will be fixed , but they won't change the {disfmarker} the content of the meetings .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f16",
+      "text": "Professor F and Postdoc A noted that transcribed word-choice subtleties can matter (e.g., for slander concerns), so if a participant relies on the transcript rather than re-listening to the meeting to judge what they said, the transcript needs to be more accurate before they approve it.",
+      "category": "constraint",
+      "source_quote": "The other thing , too , is there can be subtleties where a person uses this word instead of that word , which @ @ {comment} could 've been transcribed in the other way . ... if {disfmarker} if the person is using the transcript as the way of them judging what they said and whether it was slanderous , {vocalsound} then it seems like it 's {disfmarker} it 's {disfmarker} i it needs to be more correct than if we could count on them re - listening to the meeting .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f17",
+      "text": "Professor F concluded that as long as the transcript is close enough to its final form that it will not meaningfully change a year later, and given that the consent form participants sign is worded broadly (permitting future use of the data), that level of confidence should be sufficient to proceed with approval.",
+      "category": "decision",
+      "source_quote": "i I think we wanna {disfmarker} So , assuming that it 's in that kind of wording , which I don't remember , {vocalsound} um , I think i we just wanna have enough confidence ourselves that it 's so close to the final form it 's gonna be in , a year from now that they 're {disfmarker}",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "Because manually-adjusted segments merged with pre-segmented ones are not a 'pure' automatic-boundary condition, the team wants to preserve a record of the original automatic segment boundaries so recognition performance can later be evaluated on purely automatic ('non-cheating') boundaries.",
+      "fact_ids": ["f5", "f6"],
+      "evidence_mode": "explicit",
+      "source_quote": "so that if we run it we know whether we 're {disfmarker} which ones were cheating",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "problem_resolution",
+      "text": "Professor F's question about whether to start having participants approve already-transcribed meetings for distribution is answered by Postdoc A, who agrees in principle but wants to finish final-pass editing first.",
+      "fact_ids": ["f11", "f12"],
+      "evidence_mode": "explicit",
+      "source_quote": "I guess it would make sense to wait until th that 's done",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r3",
+      "type": "cause_rationale",
+      "text": "The desire to finish careful final-pass editing before seeking participant approval is reinforced by the later-raised concern that wording subtleties matter (e.g., for slander), especially since a participant approving the transcript may not re-listen to the original meeting audio.",
+      "fact_ids": ["f12", "f16"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r4",
+      "type": "decision_outcome",
+      "text": "Professor F's milestone — that a legally-cleared subset of transcripts should be available before the mid-July DARPA meeting — is confirmed as achievable by Postdoc A.",
+      "fact_ids": ["f13", "f14"],
+      "evidence_mode": "explicit",
+      "source_quote": "It 'll certainly be done by then . Yeah .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12", "f13", "f14", "f15", "f16", "f17"],
+  "corpus_defect_notes": [
+    "The provided reference_answer ('The final english SmartKom demo will be presented to the whole institute once the system is de-bugged and stabilised.') does not appear to be supported by, or even related to, the native_evidence span given for this case, nor by the broader portion of source.md read for context. The term 'SmartKom' does not occur anywhere in this transcript (meeting Bmr023); this meeting's subject matter is the ICSI Meeting Recorder transcription/segmentation pipeline, staffing, data-organization spreadsheet, and the legal/approval process for distributing transcripts — not a SmartKom demo. This looks like a mismatched reference_answer (possibly copied from a different case/meeting in the corpus, since 'SmartKom' is discussed in at least one other unrelated academic-domain meeting). This annotation instead builds Stage A facts directly from the given native_evidence span and the actual question ('What was the status of transcription?'), which that span does answer well."
+  ]
+}

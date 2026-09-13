@@ -1,0 +1,88 @@
+{
+  "case_id": "qmsum-18",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 93,
+      "span_index": 0,
+      "start_idx": 79,
+      "turns": [
+        {
+          "content": "How are you gonna make it ?",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "R_ soft .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Yeah ,",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Uh {disfmarker}",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "I've some uh material uh information , but I'll give you it later in my presentation .",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "Okay .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Okay ?",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "What do I think ? Uh because a fancy look is the most important thing uh for remote control uh control , I think about changeable fronts .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "Project Manager"
+        },
+        {
+          "content": "Uh maybe a see-through one in a a fruit front . Because it's uh it's hot .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "{vocalsound}",
+          "speaker": "Industrial Designer"
+        },
+        {
+          "content": "And uh some basic uh colour fronts . {vocalsound} Uh so we can make uh five different fronts to start with or something . Uh maybe an extraordinary shape , like a sponge . {vocalsound} Uh or uh , yeah , just another shape than a normal uh remote control ha uh has .",
+          "speaker": "Marketing"
+        },
+        {
+          "content": "Yeah .",
+          "speaker": "User Interface"
+        },
+        {
+          "content": "Just uh something round in it , or uh maybe not uh not uh {disfmarker} Yeah , I dun dunno . We have to discuss about that . Uh y yeah . Main point uh still uh is the technolo technological innovative . Yeah , how do we do that ? Maybe speech ? We ma must have some kind of gadget .",
+          "speaker": "Marketing"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "single",
+    "domain": "Product",
+    "n_spans": 1,
+    "n_turns": 839,
+    "native_meeting_id": "TS3004c",
+    "source_word_count": 8622
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What did Marketing think of making spongy remote when presenting the market trend?",
+  "reference_answer": "When User Interface asked the group how to make the spongy remote, Marketing thought about changeable fronts and some basic colour fronts because a fancy look was the most important thing for remote control. So they could make five different fronts to start with. Marketing also mentioned that it could be round, different from a normal remote control."
+}

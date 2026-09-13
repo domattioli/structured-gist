@@ -1,0 +1,18 @@
+{
+  "dataset": "qasper",
+  "deviations": [
+    "Float (figure/table) evidence entries are preserved as captions in native_metadata.float_evidence_captions but are not resolved to a text location, since this corpus does not retain paper images."
+  ],
+  "license": "CC BY 4.0",
+  "license_source": "https://huggingface.co/datasets/allenai/qasper (cardData.license = cc-by-4.0); homepage https://allenai.org/data/qasper",
+  "retrieval_date": "2026-09-10T04:14:28Z",
+  "source_sha256": "6242829eb9995425c3d1d9b1970b548887990f2a4e6052198f920b829c074a8c",
+  "transformation_script_version": "1.0.0",
+  "transformed_case_sha256": "0225d0a907b27c9d8fc6b7c7398623ca53e92fc5c498643e9ed4769d8426a645",
+  "upstream_case_id": "2004.01853:ed2eb4e54b641b7670ab5a7060c7b16c628699ab",
+  "upstream_document_id": "2004.01853",
+  "upstream_question_id": "ed2eb4e54b641b7670ab5a7060c7b16c628699ab",
+  "upstream_revision": "v0.3",
+  "upstream_source_repository": "https://allenai.org/data/qasper (dataset); https://huggingface.co/datasets/allenai/qasper (card)",
+  "upstream_split": "dev"
+}

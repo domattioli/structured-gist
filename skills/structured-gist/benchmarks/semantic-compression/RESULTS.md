@@ -157,3 +157,87 @@ For reproducibility, not because this suite runs it automatically:
    recoverability/unsupported-claim arithmetic) are deterministic, source
    is unchanged, and rerunning them against the same `renderings/`+
    `judged/` files reproduces `results/` byte-for-byte.
+
+## 6. Intent metadata and measurement-vocabulary correction (two follow-up PRs)
+
+**PR A** added case-level intent metadata on top of this document's
+`weighted_retention` number, without changing the arithmetic in §1 or any
+score recorded above:
+
+- Each case's `gold.json` gained an `intent` (reader/task, optional
+  rationale) so a fact's `weight` has an explicit referent: what it is
+  *supposed* to encode importance for. The category buckets this file and
+  `README.md` describe remain a default for hand-authoring a new case, not
+  a claim that every fact in a category is equally important.
+- That PR also introduced a `semantic_sufficiency` scored key, aliased to
+  `weighted_retention` — reviewed and corrected by **PR B**, below, before
+  merge, because adding `intent` after the fact does not prove the
+  existing weights were actually derived from it, and the name
+  `semantic_sufficiency` claimed more than the arithmetic supported (see
+  `README.md` "Semantic sufficiency vs. task-weighted fact retention").
+
+**PR B** (this correction) renamed that scored key to
+`task_weighted_fact_retention` — the precise claim: retained gold facts,
+weighted for importance, nothing about relationship preservation or task
+completion, never divided by compression. `semantic_sufficiency` is no
+longer emitted as a scored key at all; "semantic sufficiency" now names
+only the broader, multi-dimensional evaluation question (task-weighted
+fact retention + relation retention + recoverability + source support +
+conformance + compression cost, reported as a profile, never combined).
+PR B also:
+
+- documented, in `README.md` "Weight semantics", that this corpus's
+  weights were assigned primarily by the category-default heuristic, not
+  derived per-case from `intent` — with `regression/near-identical-numbers`
+  as a concrete counterexample (exact-identifier facts still sit at
+  category-default weight `1` despite a task of precise identifier recall);
+- left every existing `weight` value in every `gold.json` unchanged — this
+  is a measurement-vocabulary and safety correction, not a reweighting, and
+  a genuine re-annotation is deferred to the blinded experiment `README.md`
+  describes under "Next experiment: blinded task-weight re-annotation";
+- changed `score_semantic()`'s empty-fact-list behavior from `0.0` to
+  `None`/`null` (a case with no gold facts is "not applicable", not "0% of
+  meaning survived") — this suite has no zero-fact case today, so no
+  existing score is affected;
+- hardened `unsupported_claim_count` so a hallucination entry missing
+  `source_supported` (not yet checked against `source.md`) counts toward a
+  new `unverified_claim_count` instead of silently reading as "confirmed
+  unsupported" — every entry in this corpus's current `judged/*.json`
+  already carries an explicit `source_supported` value, so this is also a
+  safety net, not a change to any existing number.
+
+No case's `weighted_retention`/`task_weighted_fact_retention` value changed
+as a result of either PR — `results/combined.json`'s diff across both is
+additive keys only (`intent`, then `task_weighted_fact_retention` replacing
+`semantic_sufficiency`, plus `unverified_claim_count`).
+
+## 7. Blinded task-weight re-annotation and Semantic Preservation Recall (PR C, measurement-only)
+
+**PR C** ran PR B's deferred experiment: a fresh, isolated annotator per
+case rated every gold fact and relation's task importance (integer 1-3)
+using only `source.md` + `intent.reader`/`intent.task` + the gold unit
+text — blind to category labels, existing `weight` values, renderings,
+judge verdicts, and scores. It found the category heuristic §6 describes
+to be, at best, a moderate proxy for task-derived importance (mean exact
+agreement 46%, mean Spearman rho 0.30 across the 8 retained cases, one case
+—`near-identical-numbers`— with *negative* correlation, directly confirming
+the exact-identifier counterexample `README.md` "Weight semantics"
+predicted from inspection alone).
+
+On top of that annotation, PR C also tested a candidate broader metric,
+**Semantic Preservation Recall (SPR)**, that promotes relations to a
+first-class weighted semantic unit alongside facts (`scoring/spr.py`, full
+write-up in `SPR_FINDINGS.md`). No case's `task_weighted_fact_retention`,
+`relation_retention`, or any other `combine.py`-computed value changed —
+SPR is purely additive, computed from the same already-recorded
+`judged/*.json` verdicts. Headline result: on `causality-heavy-explain`
+`standard` — the exact case §1 already flagged (fact retention 0.80 next to
+relation retention 0.5625) — SPR (0.7143) with 4 blind-weight-3 units lost
+tells a materially more honest story than fact retention (0.80) alone,
+which is the core hypothesis PR C set out to test. PR C also found real
+failure modes (a relation-weight ceiling effect that erases differentiation
+in 2 of 8 cases, and a modest relation-volume-to-score correlation) and
+classified SPR as **A: promising experimental metric** — kept for further
+evidence-gathering, not promoted to `SKILL.md`, a required threshold, or a
+replacement for this suite's existing decomposed metrics. See
+`SPR_FINDINGS.md` for full detail.

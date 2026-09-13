@@ -1,0 +1,53 @@
+{
+  "case_id": "real-benchmark-archaeology",
+  "annotation_protocol": "blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 2,
+    "f2": 1,
+    "f3": 2,
+    "f4": 2,
+    "f5": 3,
+    "f6": 2,
+    "f7": 2,
+    "f8": 3,
+    "f9": 2,
+    "f10": 2,
+    "f11": 2,
+    "f12": 2,
+    "f13": 3,
+    "f14": 2,
+    "f15": 3,
+    "f16": 2,
+    "f17": 3,
+    "f18": 3,
+    "f19": 3,
+    "f20": 3,
+    "f21": 1,
+    "f22": 1,
+    "f23": 1,
+    "f24": 3
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 3,
+    "r3": 2,
+    "r4": 3,
+    "r5": 3,
+    "r6": 1
+  },
+  "rationale": {
+    "f5": "Names the current declared primary benchmark; a teammate resuming work needs this identifier over the retired one.",
+    "f8": "Introduces the named benchmark artifact (outline_quality_composite) and spec identifier (spec-023) central to the investigation.",
+    "f13": "The retention gap is the crux fact behind the still-open question about whether to revisit KG mode.",
+    "f15": "Establishes KG mode's current formal status (never shipped), needed to know what's settled vs. open.",
+    "f17": "Names spec-026/FR-006, direct identifiers to search for explaining KG mode's current exclusion.",
+    "f18": "Central finding: the scoring scripts/corpus a teammate might look for are confirmed absent from this checkout, preventing wasted local search.",
+    "f19": "Names the specific commit-message pattern to search git history for ('sync from DomI structured-gist skill'), a concrete next-step identifier.",
+    "f20": "Identifies exactly what surviving evidence exists to inspect next (benchmark.md row, stub files).",
+    "f24": "This is the literal stated open question the task requires the reader to recognize as unresolved.",
+    "r1": "Ties together the full metric-history narrative explaining why the current primary metric is what it is.",
+    "r2": "The core comparative result underlying the still-open KG mode question.",
+    "r4": "Causal chain explaining KG mode's current excluded/non-default status, key to separating established fact from open question.",
+    "r5": "Explains why the real scorer code won't be found locally, critical to avoid the teammate wasting search effort in this checkout."
+  }
+}

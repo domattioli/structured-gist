@@ -1,0 +1,38 @@
+{
+  "case_id": "qmsum-02",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 1,
+    "f3": 3,
+    "f4": 2,
+    "f5": 3,
+    "f6": 2,
+    "f7": 2,
+    "f8": 1,
+    "f9": 1,
+    "f10": 1,
+    "f11": 1,
+    "f12": 1
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 1
+  },
+  "rationale": {
+    "f1": "Gives one of the two concrete reasons the flat structure was rejected (probability setup would be a pain), directly explaining the structural change the query asks about.",
+    "f2": "A side worry about the team's own belief-net expertise, not itself a statement about the net's structure.",
+    "f3": "States the concrete technical cost (exponential parameters) of the flat structure, the core reasoning behind needing an intermediate layer that the query is about.",
+    "f4": "Describes the baseline (flat) structure being moved away from, useful context for understanding what 'adding a layer' changed.",
+    "f5": "States the actual structural decision (add a middle layer) that is precisely what the query asks Grad B said about the belief net's structure.",
+    "f6": "Explains the conceptual motivation (capturing an abstract communicative goal) behind the middle layer, supporting but not itself a structural claim.",
+    "f7": "Explains that the middle layer holds a hidden, non-directly-extractable concept, relevant to why a layer (vs. direct features) is structurally needed.",
+    "f8": "Lists specific example hidden variables; illustrative content, not itself part of the structural claim about layering.",
+    "f9": "A specific piece of reasoning behind one example variable; tangential detail about feature content rather than net structure.",
+    "f10": "Another piece of reasoning about one variable's behavior; tangential to the structural question.",
+    "f11": "Lists two more candidate variables; content detail, not structural.",
+    "f12": "Notes implementation status (toy version, probabilities unknown yet), which is about progress rather than the structural design itself.",
+    "r1": "Directly ties the rejected flat structure's costs to the decision to add a middle layer, which is exactly the structural claim and reasoning the query is asking about.",
+    "r2": "Connects the specific example variables to their underlying reasoning; useful color but not load-bearing for the structural question."
+  }
+}

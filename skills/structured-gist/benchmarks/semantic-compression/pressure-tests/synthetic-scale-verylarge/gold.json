@@ -11,6 +11,11 @@
   ],
   "source_word_count": 1313,
   "deviation_note": "Source landed at 1313 words rather than the originally targeted 1700-2000. It was expanded once (added a fourth independent thread, on-call documentation cleanup, plus more detail in the checkout-service incident) and is left here rather than padded further, since additional padding risked diluting information density rather than adding genuine complexity. It is still substantially larger and more multi-threaded than the 'large' case (761 words, one buried root-cause chain, one set of near-identical siblings) \u2014 this case has four independent threads and two separate near-identical-sibling clusters (six checkout alerts, five connector fixes) plus the deliberately buried critical item.",
+  "intent": {
+    "reader": "someone triaging a large weekly ops digest under time pressure",
+    "task": "find the one item that actually needs attention among many that don't, without reading the full source",
+    "rationale": "most 'outcome' facts here are deliberately low-weight because they are resolved noise (f2-f4, f14-f15); f10-f12 (the true root cause and its unresolved status) are weighted high because missing them defeats the reader's actual task even though they share a category with the noise facts"
+  },
   "facts": [
     {
       "id": "f1",
@@ -25,6 +30,7 @@
       "text": "alert 1: a brief CPU spike; the autoscaler added capacity automatically and it cleared in 3 minutes with no human involvement",
       "category": "outcome",
       "weight": 1,
+      "weight_reason": "resolved, routine noise -- peripheral to the reader's triage task (see r3)",
       "precision_sensitive": true,
       "source_quote": "the autoscaler added capacity automatically and the alert cleared in 3 minutes with no human involvement needed"
     },
@@ -33,6 +39,7 @@
       "text": "alert 2: a latency warning during a routine deploy resolved on its own once the deploy finished and traffic normalized, about 5 minutes total",
       "category": "outcome",
       "weight": 1,
+      "weight_reason": "resolved, routine noise -- peripheral to the reader's triage task (see r3)",
       "precision_sensitive": true,
       "source_quote": "it resolved on its own once the deploy finished and traffic normalized across the new pods, about 5 minutes total"
     },
@@ -41,6 +48,7 @@
       "text": "alert 3: a stale-cache warning was resolved by manually flushing cache keys, cleared in about 8 minutes, no confirmed customer impact",
       "category": "outcome",
       "weight": 1,
+      "weight_reason": "resolved, routine noise -- peripheral to the reader's triage task (see r3)",
       "precision_sensitive": true,
       "source_quote": "an engineer manually flushed the affected cache keys and the warning cleared in about 8 minutes, with no customer-facing impact confirmed afterward"
     },
@@ -89,6 +97,7 @@
       "text": "the root cause is precisely identified: the retry path is missing an idempotency check that would prevent a second confirmation for the same order regardless of timing",
       "category": "outcome",
       "weight": 3,
+      "weight_reason": "the buried critical item this case exists to test -- must survive compression as a distinct entry, not merged into the minor-alerts bucket",
       "precision_sensitive": false,
       "source_quote": "the retry path is missing an idempotency check that would prevent a second confirmation from ever being processed for the same order, regardless of timing"
     },
@@ -97,6 +106,7 @@
       "text": "the idempotency-check fix has not shipped yet; a design exists but has not been reviewed",
       "category": "unresolved_question",
       "weight": 3,
+      "weight_reason": "whether the fix has shipped determines if the race condition is still live in production -- critical for the reader's triage task, not just a residual curiosity",
       "precision_sensitive": false,
       "source_quote": "That fix has not shipped yet \u2014 a design for the idempotency check exists but has not been reviewed"
     },
@@ -122,6 +132,7 @@
       "text": "alert 5: a disk-space warning was resolved via a manually triggered log-rotation job, cleared in about 2 minutes",
       "category": "outcome",
       "weight": 1,
+      "weight_reason": "resolved, routine noise -- peripheral to the reader's triage task (see r3)",
       "precision_sensitive": true,
       "source_quote": "a log-rotation job was triggered manually and the warning cleared in about 2 minutes"
     },
@@ -130,6 +141,7 @@
       "text": "alert 6: a brief 500-error spike from an unrelated dependent service's outage resolved on its own once the dependency recovered, about 6 minutes later",
       "category": "outcome",
       "weight": 1,
+      "weight_reason": "resolved, routine noise -- peripheral to the reader's triage task (see r3)",
       "precision_sensitive": true,
       "source_quote": "it resolved on its own once the dependency recovered about 6 minutes later"
     },

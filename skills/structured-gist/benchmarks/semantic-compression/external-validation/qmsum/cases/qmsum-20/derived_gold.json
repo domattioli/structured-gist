@@ -1,0 +1,89 @@
+{
+  "case_id": "qmsum-20",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The Industrial Designer wanted to discuss whether the remote control would be made of wood or plastic.",
+      "category": "unresolved_question",
+      "source_quote": "so will {disfmarker} it will be wooden wooden di wooden remote control or a a plastic remote control like this one .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "The Industrial Designer also wanted to discuss the button type: classic pushbuttons, or LCD-style buttons that can be seen in the dark.",
+      "category": "unresolved_question",
+      "source_quote": "so it can be some , you know , classic pushbutton like this one , or you have also some button like L_C_D_ where you know , the button the buttons are unlighted during the night ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "The Industrial Designer said that, compared to wood, plastic material is more common.",
+      "category": "descriptive",
+      "source_quote": "And the materials , it depends for example you {disfmarker} if you have a wooden material it can be more {disfmarker} the plastic material is more common",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f4",
+      "text": "The Project Manager characterized plastic as impersonal.",
+      "category": "descriptive",
+      "source_quote": "Impersonal , mm-hmm .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f5",
+      "text": "The Industrial Designer said that although plastic is very resistant, wood would give a special, high-class quality.",
+      "category": "descriptive",
+      "source_quote": "it's very resistant but , you know , something wooden will be like , I don't know high cl so a special high class ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f6",
+      "text": "The Project Manager proposed trying to use wood because the team wants to put fashion into electronics.",
+      "category": "cause_rationale",
+      "source_quote": "Yeah , and i if you {disfmarker} we want to put fashion in electronics maybe we can try to do something with wood .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f7",
+      "text": "The Industrial Designer agreed the remote need not be entirely wood; just a part of it could be wooden.",
+      "category": "decision",
+      "source_quote": "Yeah , even if it is not completely wood , but just a part of the , you know , will be wooden , in wood",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f8",
+      "text": "The Industrial Designer judged the idea of a partly-wooden remote control interesting.",
+      "category": "decision",
+      "source_quote": "and it can be interesting .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "contrast",
+      "text": "Wood is presented as special/high-class in contrast to plastic, which is described as merely resistant and more common.",
+      "fact_ids": ["f3", "f5"],
+      "evidence_mode": "explicit",
+      "source_quote": "it's very resistant but , you know , something wooden will be like , I don't know high cl so a special high class ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "r2",
+      "type": "cause_rationale",
+      "text": "The Project Manager's fashion-in-electronics rationale for using wood is what the Industrial Designer responded to by agreeing that only part of the case need be wooden and calling the idea interesting — a provisional expression of interest within this evidence, not a firm, finalized decision.",
+      "fact_ids": ["f6", "f7", "f8"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "question_fact_ids": ["f3", "f4", "f5", "f6", "f7", "f8"],
+  "corpus_defect_notes": [
+    "The native reference_answer states the group 'decided' to use wood partly instead of plastic, but the native_evidence provided for this case (span:0 and span:1) only shows the team characterizing a partial-wood case as 'interesting' ('Mm okay , seems to be interesting , mm .') rather than recording an explicit, firm decision statement within those spans. A more definite confirmation ('So wood.', 'so maybe we can stay with wood.') appears later in the full source.md transcript, outside the two evidence spans supplied for this case.",
+    "Coverage-audit correction: r2 previously used type 'decision_outcome' and claimed the exchange 'led to the decision to make at least part of the case wooden,' which overstated what span:0/span:1 show and directly contradicted this file's own note above (only provisional interest, not a firm decision, is evidenced here). Changed r2's type to 'cause_rationale' and reworded its text to describe the exchange as a provisional expression of interest rather than a settled decision, consistent with f7/f8 and the existing corpus_defect_notes entry."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

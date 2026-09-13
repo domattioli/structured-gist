@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-09",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Four short native-evidence bullets map exactly onto f1-f4 (intro sentence plus one fact per dataset), quotes verified verbatim. question_fact_ids correctly excludes f1 (the lead-in sentence carries no dataset-identifying content). No relation is needed for a simple dataset-enumeration question."
+}

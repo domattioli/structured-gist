@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-22",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "All six facts quote their own supporting text verbatim and completely (no cross-turn bundling issues, unlike several other cases in this pass). question_fact_ids correctly focuses on the Project Manager's own statements about appearance, appropriately excluding other speakers' contributions (Marketing's 12-Euro cost reminder, the Industrial Designer's yellow-ribbon idea) and f3 (a PM statement more about function/button design than appearance). r1's inferred 'attractive vs. cost-constrained' tension across f2 and f6, though drawn from different points in the conversation, is a fair synthesis of the PM's recurring stance rather than a fabricated connection. No missing, redundant, unsupported, or granularity issues found."
+}

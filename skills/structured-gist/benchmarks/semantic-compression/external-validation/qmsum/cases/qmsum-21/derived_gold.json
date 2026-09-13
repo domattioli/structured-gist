@@ -1,0 +1,114 @@
+{
+  "case_id": "qmsum-21",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Marketing said that this year, fashion trends in clothes, shoes, and furniture were inspired by fruits and vegetables.",
+      "category": "descriptive",
+      "source_quote": "Wha what we really see this year is that uh everything from clothes to shoes and furniture is is inspired by fruits and vegetables ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Marketing recommended taking this fruit-and-vegetable fashion trend into account when designing the product.",
+      "category": "next_action",
+      "source_quote": "so I think we really have to take this into account for the design of the the thing .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "Marketing ranked design priorities: fancy look and feel is the most important (importance 6 of 7), being technologically innovative is next (importance 3), and being easy to use is comparatively the least important of the three.",
+      "category": "descriptive",
+      "source_quote": "'Cause it's it's really what people want . Even if it's in general fashion , we want it to be in the remote control . And then uh if if we take the ordering or the ranking of all the points , fancy look and feel has , on a score of seven would have six as importance . Uh the remote control has to be technologically innovative , it's three . Then easy to use uh it's not so important actually with respect to other y other ones .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Marketing also mentioned that people wanted a spongy touch.",
+      "category": "descriptive",
+      "source_quote": "And the other point I haven't mention is people wan want to have a spongy touch ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "Marketing noted the spongy-touch trend might not fit well with a wooden design.",
+      "category": "constraint",
+      "source_quote": "okay so this is this maybe doesn't really fit with the wooden design .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Marketing suggested the spongy material could be plastic-like or, more likely, rubber-like.",
+      "category": "next_action",
+      "source_quote": "plastic-like , but rubber , mayb maybe , you know , rubber-like uh",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "The Project Manager proposed the case be something spongy rather than wood.",
+      "category": "next_action",
+      "source_quote": "So you think {gap} case . Something spongy . {vocalsound} Someth no wood .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f8",
+      "text": "Marketing clarified that avoiding wood should mean avoiding it only on the part that is touched, not excluding wood altogether.",
+      "category": "constraint",
+      "source_quote": "Maybe not no wood , but I mean ma maybe not the part you touching you know .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f9",
+      "text": "The Industrial Designer suggested wood could be used for the bottom of the case, depending on the design.",
+      "category": "next_action",
+      "source_quote": "I think we can have wood for example in the bottom and , you know . It depends on the design we want ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f10",
+      "text": "The group described wood's feel as natural.",
+      "category": "descriptive",
+      "source_quote": "It's it's natural .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f11",
+      "text": "Marketing noted that using wood doesn't align well with the desired spongy feel.",
+      "category": "constraint",
+      "source_quote": "Yeah , I mean it's not exactly right for the spongy point of view .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f12",
+      "text": "Marketing proposed combining materials: part wood, with some rubber for the buttons.",
+      "category": "decision",
+      "source_quote": "But we could maybe have both like part of wood and some rubber for the buttons ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "cause_rationale",
+      "text": "Combining the importance ranking (fancy look and feel highest) with the Paris/Milan fashion trend is what led Marketing to point toward a fruit-and-vegetable theme.",
+      "fact_ids": ["f1", "f3"],
+      "evidence_mode": "explicit",
+      "source_quote": "we go to the fruits and vede vegetables .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "problem_resolution",
+      "text": "The tension between wanting a spongy feel and wanting to use wood is resolved by proposing a mixed-material design using both wood and rubber for the buttons.",
+      "fact_ids": ["f11", "f12"],
+      "evidence_mode": "explicit",
+      "source_quote": "But we could maybe have both like part of wood and some rubber for the buttons ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f4", "f6", "f12"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

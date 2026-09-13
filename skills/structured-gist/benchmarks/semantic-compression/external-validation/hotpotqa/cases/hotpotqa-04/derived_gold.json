@@ -1,0 +1,38 @@
+{
+  "case_id": "hotpotqa-04",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Daltoni was a Serbian and former Yugoslav rock band whose name translates to \"The Daltons.\"",
+      "category": "descriptive",
+      "source_quote": "Daltoni (Serbian Cyrillic: Далтони; translation: \"The Daltons\") was a Serbian and former Yugoslav rock band from Niš",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Daltoni::sent0"}]
+    },
+    {
+      "id": "f2",
+      "text": "The Dalton Gang was a group of outlaws in the American Old West during 1890–1892.",
+      "category": "descriptive",
+      "source_quote": "The Dalton Gang was a group of outlaws in the American Old West during 1890–1892.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Dalton Gang::sent0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "name_correspondence",
+      "text": "The Yugoslav rock band Daltoni's name translates into English as \"The Daltons,\" the same name shared (as \"Dalton\") by the 1890s American outlaw group, the Dalton Gang.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [
+        {"dataset": "hotpotqa", "native_evidence_id": "Daltoni::sent0"},
+        {"dataset": "hotpotqa", "native_evidence_id": "Dalton Gang::sent0"}
+      ]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

@@ -1,0 +1,192 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qmsum-15",
+  "corpus_defect_notes": [
+    "Coverage-audit correction pass (case qmsum-15): narrowed f3's text to cover only Gourde's tourism-infrastructure question (which its quote fully supports) and added f11 with its own proper quote for Minister Joly's separate reply, since the original f3 text also described Joly's response without a supporting quote. Extended f7's and f9's source_quotes to the full O'Regan and Morneau turns respectively, so their claims about ongoing forestry-sector investment since 2017 (f7) and rent/landlord-tenant matters being under provincial jurisdiction (f9) are now actually supported by the quoted text; both extensions stay within the same contiguous, single-speaker turn."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "Will the government show leadership and allow Canada's provinces to share renewable energy through an energy corridor, as we proposed?",
+      "text": "Jacques Gourde asked whether the government would show leadership in allowing provinces to share renewable hydroelectric energy through an energy corridor, given Quebec's position as Canada's biggest hydroelectricity producer."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "we are continuing to work towards that end. It is always very important to protect Canadians, and we are going to stick to that approach.",
+      "text": "Minister Morneau responded only that the government was continuing to work toward that end, without committing to specific action on an energy corridor."
+    },
+    {
+      "category": "decision",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "Is the government going to protect the tourism-based economy by investing in tourism infrastructure and upgrades to ensure Canada's tourist regions are ready when the economy reopens?",
+      "text": "Gourde asked whether the government would commit to investing in tourism infrastructure and upgrades so Canada's tourist regions would be ready when the economy reopened, given the risk of the tourism industry's disappearance."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:0"
+        }
+      ],
+      "id": "f11",
+      "source_quote": "Yes, I look forward to working with my fellow member on this issue. I know the tourism sector is important to him and, especially, his constituents. Let's work together to find ways to get this hard-hit sector moving again. Many people have lost their jobs and need assistance from the government. That is why we're here, providing a helping hand at this difficult time so they can come out the other side.",
+      "text": "Minister Joly said she looked forward to working with Gourde on the hard-hit tourism sector, noting many people had lost their jobs and needed government assistance to get through this difficult time."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "It's going to lend TC Energy $500million to build its Coastal GasLink pipeline. That's $500million for a pipeline project that will eventually produce 8.6million tonnes of greenhouse gases annually. How does the government reconcile that with its desire to transition to a green economy?",
+      "text": "Mario Simard criticized the government's economic recovery/green transition group as an empty shell, arguing the government's two main natural-resources announcements were focused on fossil fuels, including a $500 million Export Development Canada loan to TC Energy for the Coastal GasLink pipeline, which he said would produce 8.6 million tonnes of greenhouse gases annually."
+    },
+    {
+      "category": "outcome",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "at the current time, the focus is clearly on combatting the virus.",
+      "text": "Minister Wilkinson said the government's primary focus at that time was on the immediate pandemic response, with conversations about the green economy transition and climate change to take place once the crisis phase passed."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f6",
+      "source_quote": "EDC is shelling out $500million for just one project, Coastal GasLink, even though the whole of the forestry industry also received $500million when it needed EDC's support under a 2017 action plan to deal with tariffs. The industry accounts for 58,000jobs in Quebec and $6billion of Quebec's GDP.",
+      "text": "Simard argued the $500 million EDC loan for the single Coastal GasLink pipeline project was inequitable compared to the $500 million EDC provided to the entire forestry industry under the 2017 softwood lumber action plan, given forestry supports 58,000 jobs and $6 billion of Quebec's GDP."
+    },
+    {
+      "category": "unresolved_question",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f7",
+      "source_quote": "Mr.Chair, since 2017, our government has invested billions of dollars.  I'll answer the question in English.  Sorry. We launched our softwood lumber action plan to support workers in communities. We introduced funding through the strategic innovation fund specifically for forestry. Building on our work today, we have included traditional investments to make sure this sector innovates, diversifies and grows. Over these past two and a half months, I have spent an inordinate amount of time with CEOs, with heads of the forestry sectors from coast to coast to coast. A few days ago, I convened a meeting of CEOs from all parts of this country, from Quebec to British Columbia, to talk to them about solutions, about answers. The liquidity measures that were announced yesterday will help some of them. We will continue to work closely with industry to make sure we are there for them and that we stand by them through the COVID crisis, so we make sure that",
+      "text": "Minister O'Regan did not directly address the equity comparison, instead pointing to ongoing forestry-sector investments since 2017 and stating the newly announced liquidity measures would help some forestry companies."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f8",
+      "source_quote": "These businesses have seen revenue drops between 50% and 100% and are asking for just 25% off their rent",
+      "text": "Marc Dalton said small businesses like a local fitness club had seen revenue drops of 50-100% and were requesting only a 25% rent reduction, but some landlords were refusing to participate in the federal rent assistance program."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f9",
+      "source_quote": "Mr. Chair, first of all, we share the member's concern that small businesses be supported. That's why we've moved forward with a number of measures that are designed to be of assistance. With respect to rent support, we are encouraging landlords to support this measure. Obviously, rent and landlord-tenant relations are under provincial jurisdiction. At every opportunity I talk to the provincial finance ministers to encourage them to get engaged there. We will continue to support small businesses. We believe this program has significant merit. It allows for small businesses to significantly reduce their rent and for landlords to be protected with up to 75% of the rent. We think it is an excellent program. It will require the provinces to step forward and enforce it.",
+      "text": "Minister Morneau said the rent assistance program lets small businesses significantly reduce rent while landlords are protected for up to 75% of the rent, but noted that rent and landlord-tenant relations fall under provincial jurisdiction, so provinces would need to step forward to enforce the program."
+    },
+    {
+      "category": "constraint",
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "id": "f10",
+      "source_quote": "Our first priority is to provide PPE to our front-line health care workers. However, we are actively involved in trying to ascertain how the federal government can work with the provinces and territories to provide essential services and other businesses with PPE.",
+      "text": "Dalton asked what the federal government was doing to help small businesses access PPE for reopening; Minister Anand said the federal government's first priority was front-line health care workers but that it was actively working with provinces and territories on providing PPE to essential services and other businesses."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "f10",
+    "f11"
+  ],
+  "relations": [
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f4",
+        "f6"
+      ],
+      "id": "r1",
+      "source_quote": "there always seem to be two sets of rules when it comes to helping key industries, including providing liquidity support.",
+      "text": "Simard's specific comparison of the Coastal GasLink loan against the smaller historical forestry-industry support extends and evidences his broader claim that the government's recovery announcements favored fossil fuels over other sectors despite green-economy rhetoric.",
+      "type": "contrast"
+    },
+    {
+      "derived_from": [
+        {
+          "dataset": "qmsum",
+          "native_evidence_id": "span:1"
+        }
+      ],
+      "evidence_mode": "explicit",
+      "fact_ids": [
+        "f8",
+        "f9"
+      ],
+      "id": "r2",
+      "source_quote": "It will require the provinces to step forward and enforce it.",
+      "text": "The rent assistance program's benefit to small businesses depends on provinces choosing to enforce it, which is part of why some landlords were still refusing to participate.",
+      "type": "dependency"
+    }
+  ]
+}

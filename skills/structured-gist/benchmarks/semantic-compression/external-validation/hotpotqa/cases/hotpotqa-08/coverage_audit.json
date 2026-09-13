@@ -1,0 +1,15 @@
+{
+  "case_id": "hotpotqa-08",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [
+    {
+      "unit_ids": ["f1"],
+      "issue": "f1 bundles two independent propositions into one fact: (a) 'Douglas Morrow earned an Academy Award for his script for The Stratton Story' and (b) 'The Stratton Story is a biography of baseball player Monty Stratton, who was disabled in a hunting accident.' Only (b) is needed for the bridge the question depends on (identifying that 'the Stratton Story' is about Monty Stratton); (a) is extraneous career-achievement detail about Morrow that is not needed to answer 'What MLB pitcher nicknamed Gander was written about in the Stratton Story?' and could be lost entirely with zero impact on task completion. Per the protocol's own merge-test ('if a reader could lose one half and still get partial credit for the other, they're two facts'), these should be split, with only the identifying proposition retained as the question-critical fact."
+    }
+  ],
+  "relation_omissions": [],
+  "notes": "f2's source_quote is verbatim and correctly supports its text, and the coreference_bridge relation correctly identifies 'the baseball player written about in the Stratton Story' with 'Monty Franklin Pierce Stratton, nicknamed Gander.' The only issue found is f1's granularity: it glues an irrelevant biographical detail about Douglas Morrow's Academy Award onto the one clause that actually matters (the book's subject), inflating the fact beyond what the question needs."
+}

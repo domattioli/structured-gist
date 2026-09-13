@@ -1,0 +1,15 @@
+{
+  "case_id": "qmsum-11",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "Minister Hussen's first, substantive response to Bergen's Service Canada mail-delay question — explaining that unprecedented pandemic volumes led to staff being redeployed to front-line phone service and that a number of centres had to be closed for COVID-19 safety reasons — is not captured by any fact. Only his later, more evasive follow-up ('not aware of unopened mail being a widespread issue') made it into f6; the actual operational explanation for the delays is missing, even though it is directly relevant to the 'supervisory'/oversight angle of the question.",
+      "source_quote": "In the context of the COVID-19 pandemic, we have had unprecedented volumes, but we have redeployed thousands of staff to front-line services by phone and by other means. We had to close a number of the centres because of COVID-19 concerns and the safety and well-being of Canadians."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "The inventory reasonably compresses Trudeau's ~6 near-identical deflections in the fraud exchange down to two representative facts (f2, f3) plus f1's framing, rather than transcribing every repetition — a sound compression choice, not under- or over-atomization. It also correctly excludes the off-topic interchange-fees/credit-card sub-exchange in span:0, which falls outside 'fraud, tax evasion, violence handling' scope. Quotes checked verbatim against the supplied evidence. Both relations (r1, r2) state genuine contrasts rather than restating fact pairs."
+}

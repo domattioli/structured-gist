@@ -1,0 +1,37 @@
+{
+  "case_id": "hotpotqa-02",
+  "dataset": "hotpotqa",
+  "intent": {
+    "reader": "someone who needs the answer to a multi-hop question without reading all ten source paragraphs",
+    "task": "answer the question below by composing evidence from at least two paragraphs, using only what survives compression"
+  },
+  "native_evidence": [
+    {
+      "sent_id": 2,
+      "text": " Psilocybin, psilocin and baeocystin are the main psychedelic compounds responsible for the psychoactive effects of many species in the genus.",
+      "title": "Psilocybe"
+    },
+    {
+      "sent_id": 2,
+      "text": " As a prodrug, psilocybin is quickly converted by the body to psilocin, which has mind-altering effects similar, in some aspects, to those of LSD, mescaline, and DMT.",
+      "title": "Psilocybin"
+    }
+  ],
+  "native_metadata": {
+    "distinct_titles": [
+      "Psilocybe",
+      "Psilocybin"
+    ],
+    "hotpot_id": "5a7354d55542994cef4bc55a",
+    "level": "hard",
+    "n_context_paragraphs": 10,
+    "n_distinct_titles": 2,
+    "n_supporting_facts": 2,
+    "pressure_only": true,
+    "source_word_count": 822,
+    "type": "bridge"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Which of the three main psychedelic compounds found in the Psilocybin genus mushroom are converted to psilocin by the body?",
+  "reference_answer": "psilocin"
+}

@@ -1,0 +1,45 @@
+{
+  "case_id": "qasper-04",
+  "dataset": "qasper",
+  "intent": {
+    "reader": "someone evaluating this paper who has not read it in full",
+    "task": "answer the question below using only what survives compression of the paper"
+  },
+  "native_evidence": [
+    {
+      "global_idx": 31,
+      "para_idx": 0,
+      "section_idx": 11,
+      "section_name": "Experimental Settings",
+      "text": "MRC Dataset. The MRC dataset used in this paper is SQuAD 1.1, which contains over INLINEFORM0 passage-question pairs and has been randomly partitioned into three parts: a training set ( INLINEFORM1 ), a development set ( INLINEFORM2 ), and a test set ( INLINEFORM3 ). Besides, we also use two of its adversarial sets, namely AddSent and AddOneSent BIBREF6 , to evaluate the robustness to noise of MRC models. The passages in the adversarial sets contain misleading sentences, which are aimed at distracting MRC models. Specifically, each passage in AddSent contains several sentences that are similar to the question but not contradictory to the answer, while each passage in AddOneSent contains a human-approved random sentence that may be unrelated to the passage."
+    },
+    {
+      "global_idx": 33,
+      "para_idx": 0,
+      "section_idx": 12,
+      "section_name": "Model Comparison in both Performance and the Robustness to Noise",
+      "text": "We compare KAR with other MRC models in both performance and the robustness to noise. Specifically, we not only evaluate the performance of KAR on the development set and the test set, but also do this on the adversarial sets. As for the comparative objects, we only consider the single MRC models that rank in the top 20 on the SQuAD 1.1 leader board and have reported their performance on the adversarial sets. There are totally five such comparative objects, which can be considered as representatives of the state-of-the-art MRC models. As shown in Table TABREF12 , on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them."
+    }
+  ],
+  "native_metadata": {
+    "answer_type": "free_form",
+    "arxiv_id": "1809.03449",
+    "cardinality": "multi",
+    "distance_bucket": "nearby",
+    "evidence_distance": 2,
+    "evidence_raw": [
+      "MRC Dataset. The MRC dataset used in this paper is SQuAD 1.1, which contains over INLINEFORM0 passage-question pairs and has been randomly partitioned into three parts: a training set ( INLINEFORM1 ), a development set ( INLINEFORM2 ), and a test set ( INLINEFORM3 ). Besides, we also use two of its adversarial sets, namely AddSent and AddOneSent BIBREF6 , to evaluate the robustness to noise of MRC models. The passages in the adversarial sets contain misleading sentences, which are aimed at distracting MRC models. Specifically, each passage in AddSent contains several sentences that are similar to the question but not contradictory to the answer, while each passage in AddOneSent contains a human-approved random sentence that may be unrelated to the passage.",
+      "We compare KAR with other MRC models in both performance and the robustness to noise. Specifically, we not only evaluate the performance of KAR on the development set and the test set, but also do this on the adversarial sets. As for the comparative objects, we only consider the single MRC models that rank in the top 20 on the SQuAD 1.1 leader board and have reported their performance on the adversarial sets. There are totally five such comparative objects, which can be considered as representatives of the state-of-the-art MRC models. As shown in Table TABREF12 , on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them."
+    ],
+    "float_evidence_captions": [],
+    "n_annotators": 2,
+    "n_evidence_locations": 2,
+    "nlp_background": "five",
+    "paper_title": "Explicit Utilization of General Knowledge in Machine Reading Comprehension",
+    "source_word_count": 4214,
+    "topic_background": ""
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "How do the authors examine whether a model is robust to noise or not?",
+  "reference_answer": "By evaluating their model on adversarial sets containing misleading sentences"
+}

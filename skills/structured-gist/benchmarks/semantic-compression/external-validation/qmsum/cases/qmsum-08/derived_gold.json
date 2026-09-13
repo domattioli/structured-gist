@@ -1,0 +1,128 @@
+{
+  "case_id": "qmsum-08",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "As of about a week and a half earlier the team had roughly thirty-two hours of recordings, so by the time of this meeting they probably had about thirty-five hours.",
+      "category": "descriptive",
+      "source_quote": "Well , we have about thirty - two hours uh as of , I guess a week and a half ago , so we probably now have about thirty - five hours .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Grad C said this thirty-two-to-thirty-five-hour total includes the digits recordings, and she had not separated out how much of it was digits.",
+      "category": "descriptive",
+      "source_quote": "I haven't separated it out so I have no clue how much of that is digits .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "Grad C agreed that the non-digits recording must make up most of the total, since digits don't take up much time.",
+      "category": "descriptive",
+      "source_quote": "Yeah , absolutely . I mean , the digits don't take up that much time .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Postdoc F estimated that about eleven hours of the recordings had been finished being transcribed by the transcribers at that point.",
+      "category": "descriptive",
+      "source_quote": "OK , and the transcribers h I , uh , don't have the exact numbers , but I {pause} think it would come to about eleven hours that are finished uh , transcribing from them right now .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "Postdoc F said the next step she was working on was making sure the transcript data were clean and then getting them channelized.",
+      "category": "next_action",
+      "source_quote": "The next step is to {disfmarker} that I 'm working on is to insure that the data are clean first , and then channelized .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Part of the cleaning work was incorporating new conventions requested by Liz for systematically handling numbers and acronyms, which had not previously been handled consistently.",
+      "category": "descriptive",
+      "source_quote": "also that we now incorporate these additional conventions that uh , Liz requested in terms of um , um {pause} in terms of having a s a systematic handling of numbers , and acronyms which I hadn't been specific about .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "PhD B suggested that separating all transcribed words and alphabetizing them helps surface spelling inconsistencies, since problem words tend to cluster together in an alphabetized list.",
+      "category": "next_action",
+      "source_quote": "if you um , just take all the transcriptions and separate them into words and then alphabetize them , {comment} a lot of times just scanning down that list you 'll find a lot of {pause} inconsistencies and mis",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "Postdoc F said she already used such type-token frequency listings and agreed it was a very efficient strategy.",
+      "category": "descriptive",
+      "source_quote": "Yeah , those are e extremely efficient and I and I {disfmarker} I agree that 's a very good use of it .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "Postdoc F said the new convention marks each comment type explicitly inside curly brackets: VOC for vocalized sounds like coughs or laughs, NONVOC for non-vocal sounds like door-slams, and GLOSS for spoken forms with a pronunciation error.",
+      "category": "descriptive",
+      "source_quote": "so i curly b inside the curly brackets I 'm gonna put either \" VOC \" for vocalized , like cough or like laugh or whatever , \" NONVOC \" for door - slam , and \" GLOSS \" for things that have to do with {disfmarker} if they said a s a spoken form with this {disfmarker} m this pronunciation error .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "Postdoc F said it is less error-prone to convert these tagged comments via an automated filter than to have transcribers laboriously type out the full tag by hand.",
+      "category": "cause_rationale",
+      "source_quote": "then y you know it 's {disfmarker} it 's {disfmarker} You {disfmarker} you risk less error if you handle it by a filter , than if you have this transcriber ch laboriously typing in sort of a VOC space ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "Postdoc F said that numbers and acronyms have to be handled by hand.",
+      "category": "constraint",
+      "source_quote": "But the numbers and acronyms have to be handled by hand",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "The thirty-two-to-thirty-five-hour total includes digits recordings, so the non-digits total is somewhat less, at roughly thirty hours.",
+      "fact_ids": ["f1", "f2", "f3"],
+      "evidence_mode": "explicit",
+      "source_quote": "That 's including digits .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "problem_resolution",
+      "text": "PhD B's suggestion to alphabetize transcription tokens to catch inconsistencies matches a technique (type-token frequency listings) Postdoc F was already using.",
+      "fact_ids": ["f7", "f8"],
+      "evidence_mode": "explicit",
+      "source_quote": "You 're talking about the type token frequency listings , and I use those too .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r3",
+      "type": "causal",
+      "text": "The VOC/NONVOC/GLOSS tagging convention is meant to be applied via an automated filter rather than by hand, because filtering is less error-prone than manual tagging.",
+      "fact_ids": ["f9", "f10"],
+      "evidence_mode": "explicit",
+      "source_quote": "then y you know it 's {disfmarker} it 's {disfmarker} You {disfmarker} you risk less error if you handle it by a filter , than if you have this transcriber ch laboriously typing in sort of a VOC space ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r4",
+      "type": "contrast",
+      "text": "Unlike the VOC/NONVOC/GLOSS comment tags, which are applied automatically by a filter, numbers and acronyms are instead handled by hand.",
+      "fact_ids": ["f10", "f11"],
+      "evidence_mode": "explicit",
+      "source_quote": "But the numbers and acronyms have to be handled by hand",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6"],
+  "corpus_defect_notes": [
+    "The native reference_answer states 'The transcribers have begun performing digit extraction (see abstract for Bmr013) and should be finished within a few days.' This claim is not supported by the given native_evidence span for this case (turns 201-248), which covers recording-hour totals and the transcript-cleaning/markup process, not a digit-extraction timeline. It also cites 'Bmr013', a different meeting id from this case's own meeting (Bmr014), suggesting the reference answer may be drawing on content outside this transcript's evidence rather than on the provided source.md/native_evidence.",
+    "Coverage-audit correction pass: f11's text had asserted a specific causal reason ('because how they were spoken cannot be inferred automatically...') to complete a sentence that is literally cut off at the end of native_evidence span:0 ('...because, you know I mean, jus'); the fabricated reason has been removed and both f11's text and source_quote now stop where the evidence actually stops ('But the numbers and acronyms have to be handled by hand'). r4, which relied on the same fabricated reason, was corrected the same way and is now a plain contrast (filter-handled vs. hand-handled) without an invented cause. f3's text was narrowed to drop the specific 'at least about thirty hours' figure, which was not covered by f3's own cited source_quote (Grad C's agreement turn) — that number is stated by Professor E in a separate, non-adjacent turn within the same span."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-01",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "Both facts' source_quotes are verbatim and exactly support their text; the single inferred relation correctly states the two-hop bridge (neo-libertarians hold American exceptionalism -> American exceptionalism's stated ideals are democracy and personal freedom) and matches question_fact_ids. The existing corpus_defect_notes entry already flags that the Neo-libertarianism paragraph states its own literal foundation as 'liberty' rather than 'democracy and personal freedom', which conflicts with reference_answer; that note is accurate and does not point to anything missing from this inventory, since including the 'liberty' sentence would not help answer the question as the benchmark intends it (matching reference_answer via American exceptionalism), so no addition is warranted."
+}

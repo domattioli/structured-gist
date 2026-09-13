@@ -1,0 +1,34 @@
+{
+  "case_id": "hotpotqa-01",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "American neo-libertarians believe in the idea of American exceptionalism.",
+      "category": "descriptive",
+      "source_quote": "American neo-libertarians believe in the idea of American exceptionalism, and support interventionist policy as a way to maintain America's importance in foreign relations.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Neo-libertarianism::sent3"}]
+    },
+    {
+      "id": "f2",
+      "text": "American exceptionalism is an ideology holding that the United States is unique among nations in a positive way, particularly with respect to its ideals of democracy and personal freedom.",
+      "category": "descriptive",
+      "source_quote": "American exceptionalism is an ideology that holds that the United States is unique among nations in a positive way, particularly with respect to its ideals of democracy and personal freedom.",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "American exceptionalism::sent0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "dependency",
+      "text": "Because American neo-libertarians hold American exceptionalism as a core belief, and American exceptionalism is itself defined by the ideals of democracy and personal freedom, those two ideals are what neo-libertarians' belief in American exceptionalism is grounded in.",
+      "fact_ids": ["f1", "f2"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "hotpotqa", "native_evidence_id": "Neo-libertarianism::sent3"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [
+    "The question asks for the two ideals that are 'the foundation of Neo-libertarianism.' The full Neo-libertarianism paragraph in source.md states its own explicit foundational idea directly ('This political philosophy prioritizes liberty as its main idea...'), but that sentence is not part of the provided native_evidence. The reference_answer ('democracy and personal freedom') is instead reached via an inferential bridge: neo-libertarians 'believe in the idea of' American exceptionalism (f1), and American exceptionalism's own ideals are democracy and personal freedom (f2). This chain is plausible and is the intended multi-hop reasoning (the case is marked pressure_only: true), but it requires treating 'believing in an idea' as equivalent to 'having that idea's ideals as one's foundation,' which is not literally stated anywhere in the source. Flagging for completeness; this is standard bridge-question construction rather than an evidence gap, so it is not necessarily disqualifying."
+  ]
+}

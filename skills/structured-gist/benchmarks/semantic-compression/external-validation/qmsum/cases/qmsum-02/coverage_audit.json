@@ -1,0 +1,15 @@
+{
+  "case_id": "qmsum-02",
+  "status": "issues_found",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": ["f4", "f7"],
+  "granularity_problems": [
+    {
+      "unit_ids": ["f4"],
+      "issue": "f4 merges two separate speaker turns into one fact — Grad B's 'And they wouldn't look pretty. So.' and Grad C's 'Yeah, they'd all be like pointing to the one node.' — but cites only Grad C's line as source_quote. The text's claim that 'Grad B remarked' the structure 'wouldn't look pretty' is true (verifiable in the wider span) but is not covered by f4's own cited source_quote."
+    }
+  ],
+  "relation_omissions": [],
+  "notes": "f7's text asserts the middle-layer concept 'could not be directly extracted from the data,' but its cited source_quote stops at '...along those lines' and does not include the later clause in the same Grad B turn ('we couldn't extract the - from the data, the hidden variables') that actually supports this claim — the claim is true and present in the wider span but not in the quote as cited. Coverage is otherwise strong: all 14 turns of native_evidence span:0 are represented across f1-f12, the 12-fact granularity for a dense ~500-word span looks proportionate rather than over-atomized (each fact is one clause-level proposition, not fragments), and both relations (r1, r2) describe real causal connective tissue rather than restating facts. No task-critical omissions or redundant units found."
+}

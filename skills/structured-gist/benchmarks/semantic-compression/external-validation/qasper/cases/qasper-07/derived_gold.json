@@ -1,0 +1,25 @@
+{
+  "case_id": "qasper-07",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The authors use manual alignments provided by the RWTH German-English dataset as hard (gold-standard) word alignments for their attention/alignment comparison.",
+      "category": "descriptive",
+      "source_quote": "For this purpose, we use manual alignments provided by RWTH German-English dataset as the hard alignments.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:17"}]
+    },
+    {
+      "id": "f2",
+      "text": "The two attention systems (non-recurrent and input-feeding) were trained on the WMT15 German-to-English training data.",
+      "category": "descriptive",
+      "source_quote": "We train both of the systems on the WMT15 German-to-English training data, see Table TABREF18 for some statistics.",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:29"}]
+    }
+  ],
+  "relations": [],
+  "question_fact_ids": ["f1", "f2"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

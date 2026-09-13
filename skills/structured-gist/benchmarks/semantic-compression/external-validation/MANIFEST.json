@@ -1,0 +1,480 @@
+{
+  "build_script_version": "1.0.0",
+  "cases": [
+    {
+      "case_id": "hotpotqa-01",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-01/provenance.json",
+      "source_sha256": "ee4f54ba1e84e475fb6bd32ec93b69a48603f2f90fa4a346bc9da263682a5394",
+      "source_word_count": 865,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "2817144d2a8d5994033da00064c4ed2f0755bf259a08233e6dfe5d92afeff837",
+      "upstream_id": "5ab41b8c5542996a3a969f40"
+    },
+    {
+      "case_id": "hotpotqa-02",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-02/provenance.json",
+      "source_sha256": "292c718bc6326eebd5f78f4a5c37ec5856406158f2a29d5e7e0e66837ce74e22",
+      "source_word_count": 822,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "d336a21845b2e934074ff185ad2fb47927dc6b016cd8f111c0a087bf9d1e5ed9",
+      "upstream_id": "5a7354d55542994cef4bc55a"
+    },
+    {
+      "case_id": "hotpotqa-03",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-03/provenance.json",
+      "source_sha256": "5512b655495fe6a8fafef7f857e0a8cfef0effae638bb711e0a0da29712b2896",
+      "source_word_count": 1018,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "2d3836bdcae306f01fa22eedd86dfb4c07b4ff8182f8d8380e6343ae14b1daa5",
+      "upstream_id": "5adf9f6c5542992d7e9f93c2"
+    },
+    {
+      "case_id": "hotpotqa-04",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-04/provenance.json",
+      "source_sha256": "200bbbfff3acd122ddd624dc3869916f7f33606cf73c08b1d9fa531b93f3a436",
+      "source_word_count": 522,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "b9dafb80b5dcd03b4f4d2050353f63287fd12a7ec06a9aebabf81e42d84cfc3e",
+      "upstream_id": "5a8b7cb95542995d1e6f13bb"
+    },
+    {
+      "case_id": "hotpotqa-05",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-05/provenance.json",
+      "source_sha256": "fea4448ab4fd0bd586d99a65e41bfd91c2d35c5a289dd77e5d53016e625117d3",
+      "source_word_count": 821,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "5c31202942a3d2f3e1035c5cbe52b9087a07cdc369418f698ba5f9d58d64974e",
+      "upstream_id": "5abee41a5542993fe9a41d79"
+    },
+    {
+      "case_id": "hotpotqa-06",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-06/provenance.json",
+      "source_sha256": "8ec1dccdd670a3285ea4a630e8c777784ec2848f5d005351aaebe9ec5705e104",
+      "source_word_count": 1504,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "b2a43b27f4c93f93a96b21b58cc253728d6f25e9c34192a81e171a75c927edb4",
+      "upstream_id": "5ab8ffc655429934fafe6e30"
+    },
+    {
+      "case_id": "hotpotqa-07",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-07/provenance.json",
+      "source_sha256": "2063eb515108a04589bbf0b01ae7f1e07b8198eb60bd4effc9d479752e3381c0",
+      "source_word_count": 843,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "5909dae790df97c0b06d85b3c2c0f676fd6f278160843e7dd97d3125169d1ee2",
+      "upstream_id": "5ab6973f554299110f219a25"
+    },
+    {
+      "case_id": "hotpotqa-08",
+      "dataset": "hotpotqa",
+      "evidence_cardinality": "n/a",
+      "provenance_path": "hotpotqa/cases/hotpotqa-08/provenance.json",
+      "source_sha256": "92ce2e68a5c7aefc14e24099d8f0693fce0ed76a3991aef30499d4c1462f9af6",
+      "source_word_count": 888,
+      "split_or_domain": "validation (distractor)",
+      "transformed_case_sha256": "9e79ba46bed32bf688d8e1f1ca10869876d89d43ca7f7b974251b328858946f1",
+      "upstream_id": "5ae8027d5542993210984031"
+    },
+    {
+      "case_id": "qasper-01",
+      "dataset": "qasper",
+      "evidence_cardinality": "single",
+      "provenance_path": "qasper/cases/qasper-01/provenance.json",
+      "source_sha256": "6242829eb9995425c3d1d9b1970b548887990f2a4e6052198f920b829c074a8c",
+      "source_word_count": 4402,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "0225d0a907b27c9d8fc6b7c7398623ca53e92fc5c498643e9ed4769d8426a645",
+      "upstream_id": "2004.01853:ed2eb4e54b641b7670ab5a7060c7b16c628699ab"
+    },
+    {
+      "case_id": "qasper-02",
+      "dataset": "qasper",
+      "evidence_cardinality": "single",
+      "provenance_path": "qasper/cases/qasper-02/provenance.json",
+      "source_sha256": "38f62c88c05f18336429cd1264b51290821745a5ca2a58d8a531806bb3db3302",
+      "source_word_count": 3796,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "b0aaec43b9ad7b0e4a19e439bf1e10a4938eba0fc7422ccef22e265cf3f8c0d0",
+      "upstream_id": "1603.01514:50cc6c5f2dcf5fb87b56007f6a825fa7c90b64ed"
+    },
+    {
+      "case_id": "qasper-03",
+      "dataset": "qasper",
+      "evidence_cardinality": "single",
+      "provenance_path": "qasper/cases/qasper-03/provenance.json",
+      "source_sha256": "493dcd840e21ac4919fa47a775dac91325907761943ee67d7aa014fbef62bca4",
+      "source_word_count": 3703,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "19b3bedd3e6682a2b01e2b5ab2fbe500474480160cbafa34cc1388621a8c1523",
+      "upstream_id": "1912.03804:f318a2851d7061f05a5b32b94251f943480fbd15"
+    },
+    {
+      "case_id": "qasper-04",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-04/provenance.json",
+      "source_sha256": "1344dbc4fe7e11de7a8d4d3c01b7efab417a54cef28d68733a21493bc5047bc7",
+      "source_word_count": 4214,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "e6cd508252cd1e71e0f54669f0b8d00a2403f4b9fa8bb05915ccf2fba0607d14",
+      "upstream_id": "1809.03449:b0dbe75047310fec4d4ce787be5c32935fc4e37b"
+    },
+    {
+      "case_id": "qasper-05",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-05/provenance.json",
+      "source_sha256": "56f029fe09d82c79fa06020b3dfe0e73a732071fd17ccec121d42ca46b207bda",
+      "source_word_count": 2375,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "380020d538de7d993508221bcdc04ee5d2bfb2d4b5b038e0c2379c9623d10a55",
+      "upstream_id": "1706.06894:9ca447c8959a693a3f7bdd0a2c516f4b86f95718"
+    },
+    {
+      "case_id": "qasper-06",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-06/provenance.json",
+      "source_sha256": "5673df4fa837e1493e06b7190c31209fcd9bfecfbf24503e55b8f91357a16d3f",
+      "source_word_count": 1948,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "b6e4234be8c96da070f0a43e0e043ed0e52ddd3f64ec39fe4df81fb00d97e1ba",
+      "upstream_id": "1904.03288:e587559f5ab6e42f7d981372ee34aebdc92b646e"
+    },
+    {
+      "case_id": "qasper-07",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-07/provenance.json",
+      "source_sha256": "815143e8f0ba817cbad6425dc6a29457af8f2ef07b4f9b357cc6b9f4b332d08d",
+      "source_word_count": 3438,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "ac6d5396e953bfc82e81af8ea948bc8b990dab8ef3ec8641958d17304747b618",
+      "upstream_id": "1710.03348:91e326fde8b0a538bc34d419541b5990d8aae14b"
+    },
+    {
+      "case_id": "qasper-08",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-08/provenance.json",
+      "source_sha256": "55e454e68ca738b1bd465aca22d95adca7f6712a2a431266d5efe1dccd38ffe8",
+      "source_word_count": 3759,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "14d9f67f780d37c56ac5d941f0907f5ce5485e436e42df537e860b8fb2420340",
+      "upstream_id": "2002.03407:10d450960907091f13e0be55f40bcb96f44dd074"
+    },
+    {
+      "case_id": "qasper-09",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-09/provenance.json",
+      "source_sha256": "c41eb9cbac2836b6d701dff04bef1ab7e78cbfb58c619e69f67d1192d5773813",
+      "source_word_count": 2756,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "0faf11892dbb79b1d2053b6945c3391e83182587982a0deee6a9c95254fad19e",
+      "upstream_id": "1910.10781:12c50dea84f9a8845795fa8b8c1679328bd66246"
+    },
+    {
+      "case_id": "qasper-10",
+      "dataset": "qasper",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qasper/cases/qasper-10/provenance.json",
+      "source_sha256": "b628b827024a30ada0134f28d734d9d4f699ce9de21976cf86f5c85f914ed8e3",
+      "source_word_count": 3482,
+      "split_or_domain": "dev",
+      "transformed_case_sha256": "cf0f05e19162837193d7ac9aa02db9f105e90219d630b354d441cf38423d3f36",
+      "upstream_id": "1903.03530:1b1a30e9e68a9ae76af467e60cefb180d135e285"
+    },
+    {
+      "case_id": "qmsum-01",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-01/provenance.json",
+      "source_sha256": "4649841a99b759780b279e73cf2d4155f4c09dd9ecedf8ca32bb53fa6c262b50",
+      "source_word_count": 8844,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "ac7c8d4852623bec16c339f6c83bbe5727ea50469d6a194b2d505709ca664fb9",
+      "upstream_id": "Academic:Bed016:sq1"
+    },
+    {
+      "case_id": "qmsum-02",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-02/provenance.json",
+      "source_sha256": "1387e65cdbe2312fbd909907b24d788b7ceb3b89a9b58ddb0c47a1e9a250c9ad",
+      "source_word_count": 14060,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "c60db318d733b59b1bd89d3392b440f0895b2f82d260c513c151fab91916b61e",
+      "upstream_id": "Academic:Bed003:sq0"
+    },
+    {
+      "case_id": "qmsum-03",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-03/provenance.json",
+      "source_sha256": "0a7bdf18b8eb5e035fc00b3831a4db6558f97e3220fc647564ab16cbd4cec2d7",
+      "source_word_count": 13457,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "4d51f90c61f4854de196bddc2cf6b12d7156889c6c751ec1e42b826b8d2e50c0",
+      "upstream_id": "Academic:Bmr023:sq2"
+    },
+    {
+      "case_id": "qmsum-04",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-04/provenance.json",
+      "source_sha256": "1f8cc9f18c66f425ca85eb87cadf504c6917b50208577f4b3cbe7b51c3cd27cd",
+      "source_word_count": 13945,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "8238ec5eaa26595f01912cb053b6f348bd7e5c9c037e3a30da30cf8b298f95f4",
+      "upstream_id": "Academic:Bro019:sq3"
+    },
+    {
+      "case_id": "qmsum-05",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-05/provenance.json",
+      "source_sha256": "1387e65cdbe2312fbd909907b24d788b7ceb3b89a9b58ddb0c47a1e9a250c9ad",
+      "source_word_count": 14060,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "4a99ef3fcd99cff57ba45b0fe5434af1f6593333c134ca3c5a47742a53993bd4",
+      "upstream_id": "Academic:Bed003:sq4"
+    },
+    {
+      "case_id": "qmsum-06",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-06/provenance.json",
+      "source_sha256": "1f8cc9f18c66f425ca85eb87cadf504c6917b50208577f4b3cbe7b51c3cd27cd",
+      "source_word_count": 13945,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "cf587061decccfdaeab63111367de9ff03a0d4b38f2e0ffdc2b965db1d12e5eb",
+      "upstream_id": "Academic:Bro019:sq4"
+    },
+    {
+      "case_id": "qmsum-07",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-07/provenance.json",
+      "source_sha256": "1f8cc9f18c66f425ca85eb87cadf504c6917b50208577f4b3cbe7b51c3cd27cd",
+      "source_word_count": 13945,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "bcbdfd307215e587a9ed6144a823284b96220e91126e90624c167c44be4fd08c",
+      "upstream_id": "Academic:Bro019:sq2"
+    },
+    {
+      "case_id": "qmsum-08",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-08/provenance.json",
+      "source_sha256": "3109489fef6d774009ffa0a9cd13d5f0febf4da174d2c825c204401f3b8c9090",
+      "source_word_count": 12565,
+      "split_or_domain": "Academic",
+      "transformed_case_sha256": "0b436a4ce61c2489f0979718206b3a8ab6ae05481920da68b3080f522e87692d",
+      "upstream_id": "Academic:Bmr014:sq2"
+    },
+    {
+      "case_id": "qmsum-09",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-09/provenance.json",
+      "source_sha256": "cc3f3b202e50f39ac8f84ad62065412a01363476c79797c2432fb6e2d8f7a059",
+      "source_word_count": 19894,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "62e3616b349e34c0766527a8e457c209f1717fbbea6fdcb37eabc2d6e85ec844",
+      "upstream_id": "Committee:covid_9:sq3"
+    },
+    {
+      "case_id": "qmsum-10",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-10/provenance.json",
+      "source_sha256": "b20a5db3e63d2133d1c1975857a2c8ae83a31de03ac8aa2300de814dbd39ad54",
+      "source_word_count": 16180,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "4e17f5896d1ac1e323deca34ce08b8a49930732ffbe90c870889c6a6bea42514",
+      "upstream_id": "Committee:covid_4:sq9"
+    },
+    {
+      "case_id": "qmsum-11",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-11/provenance.json",
+      "source_sha256": "b20a5db3e63d2133d1c1975857a2c8ae83a31de03ac8aa2300de814dbd39ad54",
+      "source_word_count": 16180,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "d0b58c45beed8eb4430cd78b5891f35c9e3a33b89595b536787af9db848541bc",
+      "upstream_id": "Committee:covid_4:sq0"
+    },
+    {
+      "case_id": "qmsum-12",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-12/provenance.json",
+      "source_sha256": "c68c84b2951aaf02bc12d537ca9dcc7d6101b8a933720c037edd371a141801ee",
+      "source_word_count": 14631,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "8c6bb9071c9bfaf2df1bdded4a53d3f75af00545e6ce847681c580cce3b69664",
+      "upstream_id": "Committee:education_4:sq0"
+    },
+    {
+      "case_id": "qmsum-13",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-13/provenance.json",
+      "source_sha256": "c68c84b2951aaf02bc12d537ca9dcc7d6101b8a933720c037edd371a141801ee",
+      "source_word_count": 14631,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "0b777f38c15fb47ee4c701dd070c12418d796a4ddf17e8abd3c60a76e710e08a",
+      "upstream_id": "Committee:education_4:sq9"
+    },
+    {
+      "case_id": "qmsum-14",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-14/provenance.json",
+      "source_sha256": "b20a5db3e63d2133d1c1975857a2c8ae83a31de03ac8aa2300de814dbd39ad54",
+      "source_word_count": 16180,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "960bde493f504d6583ea2519cc615cad7c2c7f1cd694ac9b7870ed5354712ba7",
+      "upstream_id": "Committee:covid_4:sq3"
+    },
+    {
+      "case_id": "qmsum-15",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-15/provenance.json",
+      "source_sha256": "b20a5db3e63d2133d1c1975857a2c8ae83a31de03ac8aa2300de814dbd39ad54",
+      "source_word_count": 16180,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "dca3eca3a258c8daf3f25ffb1bf6741eeb51465ab84cbfa02331364b27071c0e",
+      "upstream_id": "Committee:covid_4:sq6"
+    },
+    {
+      "case_id": "qmsum-16",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-16/provenance.json",
+      "source_sha256": "c68c84b2951aaf02bc12d537ca9dcc7d6101b8a933720c037edd371a141801ee",
+      "source_word_count": 14631,
+      "split_or_domain": "Committee",
+      "transformed_case_sha256": "fcd6dd9db73b2d7b257baad311fefbec6842743c0aff5f045b72f2b1e39036b2",
+      "upstream_id": "Committee:education_4:sq5"
+    },
+    {
+      "case_id": "qmsum-17",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-17/provenance.json",
+      "source_sha256": "033457259e8a1e48522154e8d98f06e31376275855eb10fb7f8833b229416330",
+      "source_word_count": 5883,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "9c55b59181c640a56058e4d61e63ac459f0b1e73064ce0c86d7b725c7cd4257d",
+      "upstream_id": "Product:ES2011c:sq5"
+    },
+    {
+      "case_id": "qmsum-18",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-18/provenance.json",
+      "source_sha256": "682c413ea2e7d752474a6b4f1bea5d149cee71cd04140cb17eaaf71237eeb227",
+      "source_word_count": 8622,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "e26c1588d85fe6da06cc683b2de0a2cac52ac35c37191c81bd8d80b3c6970c6e",
+      "upstream_id": "Product:TS3004c:sq1"
+    },
+    {
+      "case_id": "qmsum-19",
+      "dataset": "qmsum",
+      "evidence_cardinality": "single",
+      "provenance_path": "qmsum/cases/qmsum-19/provenance.json",
+      "source_sha256": "033457259e8a1e48522154e8d98f06e31376275855eb10fb7f8833b229416330",
+      "source_word_count": 5883,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "1f0d520dd0ff78615b135179774ce02f896910d64a106785a234d1f14f8ed5a8",
+      "upstream_id": "Product:ES2011c:sq1"
+    },
+    {
+      "case_id": "qmsum-20",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-20/provenance.json",
+      "source_sha256": "8c9daded6bc2a5dd435c187229251604cf37eb88322d3f7fc353175f3b94f7d5",
+      "source_word_count": 6156,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "141b9dbda6737eff8be8dea212ad847190fd738783e9ea65564d216e0968ef81",
+      "upstream_id": "Product:IS1003c:sq5"
+    },
+    {
+      "case_id": "qmsum-21",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-21/provenance.json",
+      "source_sha256": "8c9daded6bc2a5dd435c187229251604cf37eb88322d3f7fc353175f3b94f7d5",
+      "source_word_count": 6156,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "64e670cb1095aaf70c348541902ba0d623318e7fbd6357daf147d38ba37a7e28",
+      "upstream_id": "Product:IS1003c:sq7"
+    },
+    {
+      "case_id": "qmsum-22",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-22/provenance.json",
+      "source_sha256": "d64dab6447e5bb3a03e0449392b8d8d6efc964d83cf95db3aaded2ba9c9a69f0",
+      "source_word_count": 4624,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "449462dd8825992dd1295f77fa2d22ed263366e1a68ff1ac4c1a4717dc437994",
+      "upstream_id": "Product:IS1003b:sq8"
+    },
+    {
+      "case_id": "qmsum-23",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-23/provenance.json",
+      "source_sha256": "062483cf68b5def8b8a0f94e6dfd08f1f1e59956f9c80909502065a79a3cbece",
+      "source_word_count": 7279,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "eb7f2eeaa845c01c190f07b1b9e47035e7fa8088677f868dba7075db94252a56",
+      "upstream_id": "Product:TS3011b:sq0"
+    },
+    {
+      "case_id": "qmsum-24",
+      "dataset": "qmsum",
+      "evidence_cardinality": "multi",
+      "provenance_path": "qmsum/cases/qmsum-24/provenance.json",
+      "source_sha256": "745d51bf43ca27ac9f09a5cf5e5920f00467d5d7429ae2fe071631e4602d6d0b",
+      "source_word_count": 8103,
+      "split_or_domain": "Product",
+      "transformed_case_sha256": "d79ae64f4061f4b148d41cf547b4ae264d1862f400fe70d9a0b41af429bf93eb",
+      "upstream_id": "Product:ES2004c:sq3"
+    }
+  ],
+  "corpus_version": 1,
+  "datasets": {
+    "hotpotqa": {
+      "case_count": 8,
+      "pressure_only": true
+    },
+    "qasper": {
+      "case_count": 10
+    },
+    "qmsum": {
+      "case_count": 24
+    }
+  }
+}

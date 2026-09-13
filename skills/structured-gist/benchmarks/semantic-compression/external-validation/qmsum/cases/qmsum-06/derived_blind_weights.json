@@ -1,0 +1,32 @@
+{
+  "case_id": "qmsum-06",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 1,
+    "f2": 1,
+    "f3": 3,
+    "f4": 2,
+    "f5": 3,
+    "f6": 2,
+    "f7": 1,
+    "f8": 1
+  },
+  "relation_weights": {
+    "r1": 3,
+    "r2": 2,
+    "r3": 1
+  },
+  "rationale": {
+    "f1": "General VTS background that motivates the discussion but does not itself say anything about the person in Grenada.",
+    "f2": "Technical explanation of the VTS method; background context, not about the Grenada person specifically.",
+    "f3": "First introduces that a specific person in Grenada exists and works on this, the seed fact the query is about.",
+    "f4": "Adds a personal relationship detail (PhD B's friend), relevant color for who this person is to the team.",
+    "f5": "Names the Grenada researcher, the single most load-bearing fact for answering 'who is the person in Grenada.'",
+    "f6": "Records the professor's direct reaction (not knowing him) to the named person, a relevant but secondary detail.",
+    "f7": "Introduces a different person (at Lucent), useful mainly to distinguish from, not to answer about, the Grenada person.",
+    "f8": "States the technique's origin (CMU), background unrelated to identifying the Grenada person specifically.",
+    "r1": "Ties PhD D's 'guy in Grenada' directly to the name Jose Carlos Segura, which is the core identification the query needs.",
+    "r2": "Captures the professor's explicit response to the named person, useful secondary context on how the team related to him.",
+    "r3": "Connects VTS's CMU origin to the Grenada/Lucent researchers; background lineage, not central to who the Grenada person is."
+  }
+}

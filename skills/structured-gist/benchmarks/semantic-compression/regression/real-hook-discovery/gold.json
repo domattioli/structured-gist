@@ -3,6 +3,10 @@
   "size_bucket": "small",
   "pressure_tags": ["realistic_recap", "small"],
   "source_word_count": 231,
+  "intent": {
+    "reader": "an engineer resuming this debugging thread later, or a teammate picking it up cold",
+    "task": "confirm what broke, why, and whether the fix is complete enough to trust without re-reading the full investigation"
+  },
   "facts": [
     {"id": "f1", "text": "load_local_skills expected a manifest at .claude/skills.manifest.json", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "look for a manifest at `.claude/skills.manifest.json`"},
     {"id": "f2", "text": "load_local_skills expected skill directories under .claude/skills/", "category": "descriptive", "weight": 1, "precision_sensitive": true, "source_quote": "expect skill directories under `.claude/skills/`"},

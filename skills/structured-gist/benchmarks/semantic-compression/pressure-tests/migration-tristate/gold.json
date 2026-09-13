@@ -7,6 +7,10 @@
     "medium"
   ],
   "source_word_count": 280,
+  "intent": {
+    "reader": "a lead tracking migration status across systems",
+    "task": "know the exact current status of each system without confusing similar-sounding states (done vs. scheduled vs. will-not vs. reverted vs. in-progress)"
+  },
   "facts": [
     {
       "id": "f1",

@@ -1,0 +1,19 @@
+{
+  "dataset": "qmsum",
+  "deviations": [
+    "QMSum's published jsonl splits carry no per-meeting ID field; native_meeting_id was recovered by exact content match against data/Academic/all/Bed016.json in the same pinned commit."
+  ],
+  "license": "MIT",
+  "license_source": "https://raw.githubusercontent.com/Yale-LILY/QMSum/83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e/LICENSE",
+  "retrieval_date": "2026-09-10T04:14:13Z",
+  "source_sha256": "4649841a99b759780b279e73cf2d4155f4c09dd9ecedf8ca32bb53fa6c262b50",
+  "transformation_script_version": "1.0.0",
+  "transformed_case_sha256": "ac7c8d4852623bec16c339f6c83bbe5727ea50469d6a194b2d505709ca664fb9",
+  "upstream_case_id": "Academic:Bed016:sq1",
+  "upstream_document_id": "Bed016",
+  "upstream_domain": "Academic",
+  "upstream_question_id": "sq1",
+  "upstream_revision": "83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e",
+  "upstream_source_repository": "https://github.com/Yale-LILY/QMSum",
+  "upstream_split": "test"
+}

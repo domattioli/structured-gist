@@ -1,0 +1,200 @@
+{
+  "case_id": "qmsum-24",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "No rechargeable battery option was available.",
+      "category": "negation",
+      "source_quote": "There's um actually no rechargeable option available ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Standard AA and AAA batteries were considered a bit too bulky.",
+      "category": "constraint",
+      "source_quote": "I saw the um the standard double A_ and triple A_ which we thought were a bit bit too bulky at the moment ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "The Industrial Designer considered dynamo charging a bit silly/unnecessary.",
+      "category": "cause_rationale",
+      "source_quote": "dynamo charging , I thought that that might be a bit silly to be to be honest ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "The Industrial Designer favored solar charging partly because most people have a light on in the room anyway while watching TV.",
+      "category": "cause_rationale",
+      "source_quote": "most people have the light on in the room anyway so they could get {disfmarker} when when you got T_V_ .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "The Project Manager clarified that solar charging should not count ordinary electric/artificial light, implying it requires real sunlight.",
+      "category": "constraint",
+      "source_quote": "I don't think it counts electric lights",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "The Project Manager worried that relying on solar/sunlight charging could limit the market.",
+      "category": "constraint",
+      "source_quote": "no , but I mean not many {disfmarker} you don't want to limit your market .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "The Project Manager noted that although few people live in places with little direct sunlight (e.g. basement flats), such customers still exist and matter.",
+      "category": "constraint",
+      "source_quote": "I mean people who live in basement flats there's not that many people , but there are people .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "The Industrial Designer proposed kinetic charging, like that used in wristwatches, noting that everyday movement while holding the remote would charge it without the user needing to notice or shake it deliberately.",
+      "category": "next_action",
+      "source_quote": "and you d you don't even notice it . I mean the amount the amount of probably moving around you'd be doing all the time would would charge it up , I don't think you'd ever need to actually physically start shaking it up to make it work .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "The Industrial Designer reasoned that kinetic charging would be sufficient because, like a watch that is always moving a little and never runs out overnight, the remote's battery would similarly stay charged.",
+      "category": "cause_rationale",
+      "source_quote": "I I think it is because if you think about it , the watch , although it's only a tiny amount it's it's um {vocalsound} it's always moving for the whole day and they don't run out over night when you leave them on the side .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "The Industrial Designer added that the remote only draws power briefly to send a signal each time it's used, so the power draw would not be a problem.",
+      "category": "cause_rationale",
+      "source_quote": "And th for the same the same reason , you're only using it for a v incredibly short amount of time just to send the signal and then you're finished with it",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "The Industrial Designer said solar cells would need to be placed on the case and would look bulky and uniform, similar to those on a calculator.",
+      "category": "constraint",
+      "source_quote": "the thing with the solar cells is you would need to put them on the case and they {disfmarker} because , if you lie {gap} {disfmarker} on a calculator they they're qui they're quite big and they all they all look i identical .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f12",
+      "text": "Marketing noted this would affect the exterior design.",
+      "category": "constraint",
+      "source_quote": "So that affects the exterior design .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f13",
+      "text": "User Interface noted solar charging would be somewhat more expensive.",
+      "category": "constraint",
+      "source_quote": "Solar would be slightly {gap} expensives .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f14",
+      "text": "The Industrial Designer confirmed normal batteries would be the cheapest option, with solar charging being the next-cheapest.",
+      "category": "descriptive",
+      "source_quote": "Yeah the normal batteries would be the cheapest I'd presume then it would actually be the the solar charging ones ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f15",
+      "text": "The Industrial Designer said solar-charging cells are not very resistant to being dropped.",
+      "category": "constraint",
+      "source_quote": "It's i I think they're not very resistant to dropping ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f16",
+      "text": "The Industrial Designer explained this matters because remote controls are especially prone to being dropped or thrown around, unlike something like a calculator.",
+      "category": "cause_rationale",
+      "source_quote": "remotes always get thrown around and stuff , so .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f17",
+      "text": "Marketing said combining standard batteries with solar charging in a dual setup would detract from the product's attractiveness.",
+      "category": "constraint",
+      "source_quote": "It would just detract from the attractiveness of the of the whole feature ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f18",
+      "text": "Marketing said the dual-charging combination wouldn't add any real benefit.",
+      "category": "constraint",
+      "source_quote": "it's not gonna add anything , okay .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f19",
+      "text": "Marketing said the idea of an attachable/clip-on feature (raised while discussing the kinetic-charging design) had not come up in any of the team's market research or focus groups.",
+      "category": "constraint",
+      "source_quote": "It's not something that's come up in any of our uh focus groups and market research ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f20",
+      "text": "The Industrial Designer suggested the remote should have a standby mode to conserve battery life while not in use.",
+      "category": "next_action",
+      "source_quote": "so that {disfmarker} And then to {disfmarker} uh yeah , so to conserve battery life the remote should be in a standby mode no while not being used .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f21",
+      "text": "The Industrial Designer suggested that if the buttons had backlighting, the lights should turn off after about five or ten seconds of inactivity.",
+      "category": "next_action",
+      "source_quote": "but you could you could have lights behind the buttons and um after like five or ten seconds of not being used I'd have that turned off , if we decided to go for buttons that could light up .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:1"}]
+    },
+    {
+      "id": "f22",
+      "text": "The Industrial Designer said dynamo charging would take up more space than standard batteries because it requires a physical handle to wind it up.",
+      "category": "constraint",
+      "source_quote": "Yeah it would the d yeah the dynamo would take more space 'cause you actually need a physical sort of handle to wind up .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f23",
+      "text": "The Industrial Designer said the kinetic-charging option charges into a smaller cell about the size of a watch battery.",
+      "category": "descriptive",
+      "source_quote": "it charges into um some form of {disfmarker} it's a smaller cell which it charges into and uh the si the size sort of a watch a watch battery ,",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f24",
+      "text": "The Industrial Designer admitted he was not entirely sure how long the kinetic charge would last, though he had never seen one run out.",
+      "category": "unresolved_question",
+      "source_quote": "And that'll that would l would last for um well I do I d I'm not entirely sure how long it would last but I've never seen one run out {gap} .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "problem_resolution",
+      "text": "The Industrial Designer addressed a doubt about whether occasional handling generates enough kinetic charge by noting that each use of the remote only briefly draws power to send a signal.",
+      "fact_ids": ["f9", "f10"],
+      "evidence_mode": "explicit",
+      "source_quote": "And th for the same the same reason , you're only using it for a v incredibly short amount of time just to send the signal and then you're finished with it",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "r2",
+      "type": "contrast",
+      "text": "Standard AA/AAA batteries, while bulky, were identified as the cheapest option, in contrast to solar charging which was next-cheapest but more fragile (not resistant to dropping).",
+      "fact_ids": ["f2", "f14", "f15"],
+      "evidence_mode": "inferred",
+      "source_quote": "",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12", "f13", "f14", "f15", "f16", "f17", "f18", "f19", "f20", "f21", "f22", "f23", "f24"],
+  "corpus_defect_notes": [
+    "Coverage-audit correction: added f22, a task-critical fact the inventory was missing — dynamo charging's space/size drawback (it takes more space than standard batteries because it needs a physical winding handle), which the case's own reference_answer explicitly relies on ('Dynamo and dual charging ... take up too much space') but which f3 alone (dynamo called 'a bit silly') did not cover. Also added f23 and f24, capturing the kinetic-charging component's physical description (watch-battery-sized cell) and the Industrial Designer's candid admission of uncertainty about its lifespan, both relevant to the question's benefits/drawbacks and component-availability framing. Also fixed f7: its text attributed the clause 'especially if marketing internationally' to the Project Manager, but that phrase was actually said by Marketing in a later turn — a genuine speaker misattribution. Narrowed f7's text to only the claim its own source_quote (the Project Manager's basement-flats turn) actually supports, dropping the misattributed clause."
+  ],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

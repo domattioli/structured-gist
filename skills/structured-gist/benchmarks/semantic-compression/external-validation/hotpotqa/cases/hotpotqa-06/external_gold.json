@@ -1,0 +1,37 @@
+{
+  "case_id": "hotpotqa-06",
+  "dataset": "hotpotqa",
+  "intent": {
+    "reader": "someone who needs the answer to a multi-hop question without reading all ten source paragraphs",
+    "task": "answer the question below by composing evidence from at least two paragraphs, using only what survives compression"
+  },
+  "native_evidence": [
+    {
+      "sent_id": 3,
+      "text": " Scenes of the game can be seen in the music video of The Black Eyed Peas single \"Where Is the Love?",
+      "title": "Postal 2"
+    },
+    {
+      "sent_id": 2,
+      "text": " It was released in June 2003 as the lead single from their third album, \"Elephunk\".",
+      "title": "Where Is the Love?"
+    }
+  ],
+  "native_metadata": {
+    "distinct_titles": [
+      "Postal 2",
+      "Where Is the Love?"
+    ],
+    "hotpot_id": "5ab8ffc655429934fafe6e30",
+    "level": "hard",
+    "n_context_paragraphs": 10,
+    "n_distinct_titles": 2,
+    "n_supporting_facts": 2,
+    "pressure_only": true,
+    "source_word_count": 1504,
+    "type": "bridge"
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "Postal 2 has scenes that are used in a song that was released in what year?",
+  "reference_answer": "June 2003"
+}

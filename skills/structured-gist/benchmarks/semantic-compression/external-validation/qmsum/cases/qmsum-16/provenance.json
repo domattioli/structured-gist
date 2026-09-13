@@ -1,0 +1,19 @@
+{
+  "dataset": "qmsum",
+  "deviations": [
+    "QMSum's published jsonl splits carry no per-meeting ID field; native_meeting_id was recovered by exact content match against data/Committee/all/education_4.json in the same pinned commit."
+  ],
+  "license": "MIT",
+  "license_source": "https://raw.githubusercontent.com/Yale-LILY/QMSum/83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e/LICENSE",
+  "retrieval_date": "2026-09-10T04:14:13Z",
+  "source_sha256": "c68c84b2951aaf02bc12d537ca9dcc7d6101b8a933720c037edd371a141801ee",
+  "transformation_script_version": "1.0.0",
+  "transformed_case_sha256": "fcd6dd9db73b2d7b257baad311fefbec6842743c0aff5f045b72f2b1e39036b2",
+  "upstream_case_id": "Committee:education_4:sq5",
+  "upstream_document_id": "education_4",
+  "upstream_domain": "Committee",
+  "upstream_question_id": "sq5",
+  "upstream_revision": "83d7768c1f2b4dfeb091385d3dc7e239b8e5bb7e",
+  "upstream_source_repository": "https://github.com/Yale-LILY/QMSum",
+  "upstream_split": "test"
+}

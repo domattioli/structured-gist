@@ -1,0 +1,42 @@
+{
+  "case_id": "migration-tristate",
+  "annotation_protocol": "blinded-task-importance-v1",
+  "fact_weights": {
+    "f1": 3,
+    "f2": 2,
+    "f3": 3,
+    "f4": 3,
+    "f5": 1,
+    "f6": 2,
+    "f7": 3,
+    "f8": 1,
+    "f9": 1,
+    "f10": 3,
+    "f11": 3,
+    "f12": 1,
+    "f13": 2,
+    "f14": 3,
+    "f15": 2,
+    "f16": 3,
+    "f17": 2,
+    "f18": 2,
+    "f19": 3
+  },
+  "relation_weights": {
+    "r1": 1,
+    "r2": 1,
+    "r3": 2,
+    "r4": 3,
+    "r5": 3,
+    "r6": 3
+  },
+  "rationale": {
+    "f10": "Directly distinguishes the 'will-not' final decision from a mere scheduling delay, which is exactly the confusion the task warns against.",
+    "f14": "Establishes search-service's current status as reverted-to-old-infra, the load-bearing fact for tracking its state.",
+    "f15": "Clarifies that reverted-with-undecided-future is not the same as auth-service's permanent will-not, preventing conflation of the two.",
+    "f19": "Uniquely identifies reporting-service as running on both infrastructures at once, preventing it from being miscategorized as simply done or in-progress like the others.",
+    "r4": "Captures that billing and search-service both 'were migrated' but landed in opposite, easily-confused end states (permanent vs. reverted).",
+    "r5": "Explicitly guards against the exact mix-up the task names: auth's deliberate non-migration vs. notifications' scheduled-but-not-yet status.",
+    "r6": "Flags reporting-service's dual-infrastructure state as the outlier, which is central to not confusing in-progress with done or not-started."
+  }
+}

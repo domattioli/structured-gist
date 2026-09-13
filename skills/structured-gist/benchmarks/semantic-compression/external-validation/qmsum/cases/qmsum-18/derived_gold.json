@@ -1,0 +1,53 @@
+{
+  "case_id": "qmsum-18",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Marketing thought about changeable fronts because a fancy look was the most important thing for a remote control.",
+      "category": "cause_rationale",
+      "source_quote": "What do I think ? Uh because a fancy look is the most important thing uh for remote control uh control , I think about changeable fronts .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "Marketing suggested a see-through front with a fruit theme, since fruit was currently trendy.",
+      "category": "descriptive",
+      "source_quote": "Uh maybe a see-through one in a a fruit front . Because it's uh it's hot .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "Marketing also proposed some basic colour fronts, suggesting the team could make five different fronts to start with.",
+      "category": "next_action",
+      "source_quote": "And uh some basic uh colour fronts . {vocalsound} Uh so we can make uh five different fronts to start with or something .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "Marketing suggested an extraordinary shape, like a sponge, or otherwise just a different shape from a normal remote control.",
+      "category": "next_action",
+      "source_quote": "Uh maybe an extraordinary shape , like a sponge . {vocalsound} Uh or uh , yeah , just another shape than a normal uh remote control ha uh has .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "Marketing tentatively suggested something round, but was unsure and said it needed further group discussion.",
+      "category": "unresolved_question",
+      "source_quote": "Just uh something round in it , or uh maybe not uh not uh {disfmarker} Yeah , I dun dunno . We have to discuss about that .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "Marketing said the main remaining point was still to make the remote technologically innovative, wondering aloud whether speech-related technology or some kind of gadget could achieve that.",
+      "category": "unresolved_question",
+      "source_quote": "Uh y yeah . Main point uh still uh is the technolo technological innovative . Yeah , how do we do that ? Maybe speech ? We ma must have some kind of gadget .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [],
+  "question_fact_ids": ["f1", "f3", "f4", "f5"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

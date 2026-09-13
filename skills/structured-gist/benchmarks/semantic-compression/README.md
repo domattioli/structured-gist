@@ -28,7 +28,7 @@ bug to silently fix by deleting the case.
 
 ## Cases
 
-| case | class | property / failure mode protected | canonical baseline |
+| case | class | property / failure mode protected | observed reference baseline |
 |---|---|---|---|
 | `regression/real-hook-discovery` | regression | semantic retention + relation retention + recoverability + conformance on an ordinary small realistic recap | `standard`/`deep`: wRetention ≥ 0.95, 0 conformance violations, monotone skim<standard<deep |
 | `regression/real-benchmark-archaeology` | regression | same, on a richer realistic recap with unresolved questions and named identifiers | `standard`/`deep`: wRetention ≥ 0.88, unsupported_claim_count = 0 |
@@ -38,6 +38,19 @@ bug to silently fix by deleting the case.
 | `pressure-tests/negation-and-true-peers` | pressure | **lost negation + fake hierarchy on true peers** — 4 flat independent workstreams with load-bearing negations | `standard`/`deep`: wRetention ≥ 0.98, relRetention = 1.0, no invented shared parent |
 | `pressure-tests/cause-chain-reversal` | pressure | **root-cause reversal / supersession** — an initial diagnosis is later overturned by better evidence; must preserve *which* cause is real | `standard`/`deep` (sonnet): wRetention ≥ 0.97; **haiku tier included** — this is also the sharpest model-sensitivity signal (see below) |
 | `pressure-tests/synthetic-scale-verylarge` | pressure | **compression cliff + buried critical exception + structural-conformance collapse at scale** — 1 critical incident buried among many minor ones across 4 independent threads, 1,313 source words | `skim` is *expected* to lose most substance (wRetention 0.25) but must keep the critical item as its own distinct top-level entry, not merged into the minor bucket; **haiku tier's conformance collapses to 43 violations at `deep`** vs. sonnet's 2 — the clearest model-independence breakpoint found |
+
+`wRetention` above is this suite's original name for the number
+`results/combined.json` reports under both `weighted_retention` (unchanged)
+and `task_weighted_fact_retention` (same value, precise name — see "Semantic
+sufficiency vs. task-weighted fact retention" below for why it is *not*
+called `semantic_sufficiency`). These baseline numbers are **observed
+reference points from the renderings currently committed, not a formal
+definition of "sufficient" and not a required threshold** — there is no
+universal acceptable-sufficiency cutoff defined anywhere in this suite.
+Likewise, `skim < standard < deep` is something this corpus currently
+shows, not a semantic requirement; a strong `skim` output is allowed to
+outperform a weak `standard` one, and a future case that does so is a
+finding, not a bug in the suite.
 
 Full current numbers for every case/tier/level: `results/SCORES.md`
 (generated, do not hand-edit) and `results/combined.json` (machine-readable).
@@ -52,31 +65,230 @@ breaking down first under a weaker model at scale (`RESULTS.md` §4). The
 other 5 cases are sonnet-only; that tier is the one to regenerate against
 by default.
 
+## Semantic sufficiency vs. task-weighted fact retention
+
+**Semantic sufficiency** is this suite's evaluation *question*, not a
+number: *is enough of the meaning that matters to the intended reader/task
+preserved by the transformation?* Nothing in this suite computes that
+question as one scalar. It is currently assessed through a profile of
+independent dimensions, each reported separately and never combined:
+
+- **task-weighted fact retention** (`task_weighted_fact_retention`, below)
+- **relation retention** — did the *relationships* between facts survive,
+  not just the facts themselves
+- **recoverability** — can the gold questions be answered from the output
+- **source support** — is every claim in the output actually backed by the
+  source (see "Hallucination / unsupported-claim correction" below)
+- **structural conformance** — a linter gate, reported alongside, not
+  blended in
+- **compression cost** — reduction%, reported as a cost, never rewarded
+
+That profile is deliberately not collapsed into a master score, because the
+divergences between its dimensions are the findings this suite exists to
+surface — see `causality-heavy-explain` at `standard`: task-weighted fact
+retention 0.80 next to relation retention 0.5625, i.e. facts mostly survived
+while the causal chain between them did not; or `synthetic-scale-verylarge`
+at `skim`: retention as low as 0.25 by design, alongside a separate check
+that the one critical item still survives as its own entry rather than
+merging into the noise bucket. A single scalar would hide exactly those
+cases. No "meaning per word" or other blended efficiency composite is
+computed anywhere in this suite (see "No density composite" below).
+
+### `task_weighted_fact_retention` — what it actually measures
+
+```
+task_weighted_fact_retention = sum(weight_i * retention_i for fact i) / sum(weight_i)
+```
+
+where `retention_i` is `1.0` retained, `0.5` partial, `0.0`
+omitted/mutated (`scoring/combine.py`'s `STATUS_SCORE`). This is this
+suite's original `weighted_retention` calculation — the arithmetic has not
+changed. What changed is the name: an earlier revision of this suite called
+this number `semantic_sufficiency`, which overstated what it measures. It
+is **narrow by design**:
+
+- it measures retained gold *facts*, weighted for importance
+- it does **not** itself measure relationship preservation (`relation_retention` does)
+- it does **not** itself prove the reader's task was completed (`recoverability` is the closest proxy this suite has, and even that is not a direct usefulness measurement — see below)
+- it is not divided by compression, and never will be (see "No density composite")
+
+`scoring/combine.py` emits both `task_weighted_fact_retention` and the
+historical `weighted_retention` key with an identical value —
+`weighted_retention` is kept only so the baselines already written down in
+this file and in `RESULTS.md` still mean what they said. There are not two
+independently-computed "how much meaning survived" numbers in this suite,
+and `semantic_sufficiency` is no longer emitted as a scored key at all —
+"semantic sufficiency" now names the broader question above, not this
+scalar, so there is exactly one canonical numeric name
+(`task_weighted_fact_retention`, aliased as `weighted_retention`) rather
+than three that mean the same thing.
+
+**Recoverability is not the same as usefulness.** It is a useful *proxy* —
+can a reader answer the gold questions from the output alone — but this
+corpus has not directly measured whether a human reader actually found an
+output useful for their stated task. Treat `recoverability` as evidence
+toward that, not as a stand-in for it.
+
+## Weight semantics
+
+A fact's `weight` in `gold.json` is meant to capture **the importance of
+preserving that fact for the case's stated `intent.reader` and
+`intent.task`** — not a universal importance ranking. That is the *intent*
+of the weight. It is not yet a validated *property* of the weight:
+
+**The weights currently in this corpus were assigned primarily by a
+category-default heuristic** — decision/constraint/negation/failure ≈ 3,
+cause_rationale/outcome/next_action ≈ 2.5, unresolved_question ≈ 2,
+descriptive ≈ 1 — not derived from each case's `intent.reader`/`intent.task`
+individually. `intent` was added to `gold.json` *after* most weights were
+already set, to give those weights an explicit referent and make them
+interpretable; adding it does not retroactively prove the weights are
+task-sensitive. There is at least one clear counterexample already in this
+corpus: `regression/near-identical-numbers` declares a task of precise
+recall of exact identifiers (versions/paths/SHAs), yet several of its exact
+identifier facts (`f2`, `f6`, `f9`, `f12`) are still category-`descriptive`
+at weight `1`, while less identifier-specific rationale/outcome facts sit at
+weight `2.5`–`3` — defensible as *weighted fact retention*, not yet proven
+as *task-weighted* retention for that case's stated task. This PR does not
+retroactively reweight the corpus to fix that in this PR (see "Blinded
+task-weight re-annotation and Semantic Preservation Recall" below, now run
+in a follow-up PR) — mixing a metric-definition correction with new human
+judgment and changed benchmark scores in one change would make neither
+auditable.
+
+The category buckets above remain a reasonable **default** for
+hand-authoring a new case, and category never implies every fact in it
+must carry the default weight: the same "outcome" category already holds
+weight-1 facts (routine, resolved noise in `synthetic-scale-verylarge`)
+and weight-3 facts (the corrected root cause in the same case) side by
+side. But "this fact's weight differs from its category default" is not
+the same claim as "this weight was independently derived from the stated
+task" — only the former is currently true of this corpus.
+
+Where a fact's weight is unusual for its category, the fact may carry an
+optional `weight_reason` string — a one-line note on **why this weight is
+especially consequential for the stated task**, not a claim about how or
+when the weight was originally set. It is not consumed by any arithmetic in
+`scoring/combine.py`; it exists so a reader auditing a surprising weight
+(e.g. an "outcome" fact weighted at 3 next to five "outcome" facts weighted
+at 1) can see why without reverse-engineering intent from the case alone.
+Reserve it for facts whose weight is actually exceptional — most facts
+should rely on the category default with no `weight_reason` at all.
+
+## Intended reader/task
+
+Each `gold.json` carries a case-level `intent` object stating what the
+transformation is supposed to preserve *for*:
+
+```json
+"intent": {
+  "reader": "who this outline is for",
+  "task": "what they need to do with it",
+  "rationale": "optional: why the weights below are shaped the way they are"
+}
+```
+
+This is deliberately the smallest representation that makes weights
+interpretable — not a persona system, not product requirements, not a
+task ontology. `scoring/combine.py` surfaces it at the case level in
+`results/combined.json` and lists it per case in `results/SCORES.md`
+purely for human interpretation; it is not an input to any score.
+`intent` currently provides three things, and no more:
+interpretation of an already-set weight, a referent future re-weighting
+work can be checked against, and something a reader can use to judge
+whether `task_weighted_fact_retention` actually matches this case's
+consumption task. It does not make the legacy category-default weights
+task-derived — see "Weight semantics" above and "Blinded task-weight
+re-annotation and Semantic Preservation Recall" below.
+
+## Blinded task-weight re-annotation and Semantic Preservation Recall (run; experimental)
+
+The "Weight semantics" question above — *are these weights actually
+task-sensitive, or just category defaults with a task description attached
+after the fact?* — has now been measured, in a follow-up PR to the one
+that wrote this file. Every retained case was blindly re-annotated (fresh,
+isolated annotator per case; access to `source.md` + `intent.reader`/
+`intent.task` + gold fact/relation text only — no category labels, no
+`weight` values, no renderings, no judge verdicts, no scores) on an integer
+1-3 task-importance scale, for both facts and (newly) relations. That
+comparison found the category heuristic to be, at best, a moderate proxy
+for task importance (mean exact agreement 46%, mean Spearman rho 0.30,
+one case with negative correlation) — **not** a rubber stamp.
+
+On top of that annotation, the same follow-up PR tests a candidate broader
+metric, **Semantic Preservation Recall (SPR)**: a Pyramid-style weighted
+semantic-recall measure over this benchmark's existing fact + relation
+representation, combining task-weighted fact recall and task-weighted
+relation recall into one blinded-weight-proportional number (formula and
+full results in `SPR_FINDINGS.md`). SPR is **experimental** —
+`scoring/spr.py`, additive to and never replacing `scoring/combine.py`'s
+canonical `task_weighted_fact_retention`/`relation_retention`/
+`recoverability`, none of which changed. It is not in `SKILL.md`, not a
+required threshold, and not a replacement for this suite's existing
+decomposed-metrics profile (see "Scoring dimensions" below, still
+unchanged).
+
+**Read `SPR_FINDINGS.md` for the full write-up**, including: the blinded
+annotation protocol; per-case legacy-vs-blind weight comparison; the exact
+formulas for `blinded_task_weighted_fact_recall`,
+`task_weighted_relation_recall`, and SPR; behavior on every named pressure
+case (`causality-heavy-explain`, `cause-chain-reversal`,
+`migration-tristate`, `near-identical-numbers`, `synthetic-scale-verylarge`);
+five concrete failure modes actively found while trying to falsify the
+metric (relation-weight ceiling effects, a modest relation-volume score
+correlation, granularity sensitivity, bounded fact/relation double
+-counting, and why the critical-loss diagnostic must stay un-collapsed);
+and the classification decision (kept as **A: promising experimental
+metric**, not yet promoted to durable-secondary or primary).
+
+The new artifacts:
+- `scoring/blind_weights/<case_id>.json` — the blinded annotations
+  themselves (`annotation_protocol: "blinded-task-importance-v1"`), a
+  separate artifact from `gold.json` so provenance stays auditable; no
+  existing `weight` value in any `gold.json` was changed by this
+  annotation.
+- `scoring/spr.py` (+ `scoring/test_spr.py`) — the new arithmetic. It
+  reads `gold.json`'s legacy `weight` field in exactly one place
+  (`compare_weights()`, a descriptive comparison, never a score input) —
+  regression-tested so the legacy and blinded weight sources cannot
+  accidentally mix.
+- `results/spr.json`, `results/SPR_SCORES.md`, `results/weight_comparison.json`
+  — generated; regenerate with
+  `python3 scoring/deterministic.py && python3 scoring/combine.py && python3 scoring/spr.py`.
+
 ## Scoring dimensions (decomposable — no master scalar)
 
 Every case reports these, computed by `scoring/deterministic.py` (no
 judgment, reuses the real linter) and `scoring/combine.py` (arithmetic over
 judge verdicts already recorded in each case's `judged/<tier>.json`):
 
-- **weighted / unweighted retention** — fraction of gold facts recoverable
-  from the outline, weighted by category (decision/constraint/negation/
-  failure = 3, cause/outcome/next-action = 2.5, unresolved question = 2,
-  descriptive = 1)
+- **task-weighted fact retention** (`task_weighted_fact_retention`, alias
+  `weighted_retention`) and **unweighted retention** — see above for the
+  formula and what `weight` currently does (and does not) mean; a case
+  with zero gold facts reports both as `None`/`null`, never `0.0`
 - **relation retention** — fraction of gold relationships (causal,
   dependency, temporal, supersession, comparative) whose *relationship*,
   not just both endpoints, survives
 - **recoverability** — fraction of gold questions answerable from the
-  outline alone
-- **unsupported-claim count** — see correction below; NOT the same as
-  "absent from the gold fact list"
+  outline alone (a usefulness *proxy*, not a direct usefulness measurement
+  — see above)
+- **unsupported-claim count** and **unverified-claim count** — see
+  correction below; neither is the same as "absent from the gold fact list"
 - **structural conformance** — a gate (violation count from the unmodified
   linter), reported alongside the above, never blended into them
 - **compression ratio / reduction%** — reported as a cost, never rewarded
   on its own (see `RESULTS.md` §2 for why)
 
+None of these combine into a "semantic sufficiency score" — see "Semantic
+sufficiency vs. task-weighted fact retention" above for why.
+
+### No density composite
+
 No "meaning per word" density composite is computed anywhere in this
-suite. Round-1 evidence showed every such formula is *negatively*
-correlated with actual usefulness — see `RESULTS.md`.
+suite, and task-weighted fact retention does not create one either — it is
+not divided by size or word count anywhere. Round-1 evidence showed every
+such formula is *negatively* correlated with actual usefulness — see
+`RESULTS.md`.
 
 ## Hallucination / unsupported-claim correction (read before trusting that number)
 
@@ -85,14 +297,24 @@ An isolated judge sees only `gold.json` and the outline — never
 list*, which is **not the same as unsupported by the source**. Gold is a
 curated, weighted subset of the source, not an exhaustive transcript.
 
-Every entry in `judged/<tier>.json`'s `hallucinations` list therefore
-carries a `source_supported` boolean, set by checking the exact claim
-against `source.md` directly. `unsupported_claim_count` (the canonical
-metric) counts only `source_supported: false` entries. The raw
-judge-flagged count is kept as `flagged_vs_gold_count` for transparency,
-but is not something to gate on — in this corpus it was 20 and the
-corrected count is 0 (every flagged claim was verbatim or near-verbatim
-source text gold's fact list simply hadn't extracted).
+Every entry in `judged/<tier>.json`'s `hallucinations` list is expected to
+carry a `source_supported` boolean, set by checking the exact claim against
+`source.md` directly. That field is a **tri-state**, not a bool:
+`source_supported: false` (confirmed unsupported), `source_supported: true`
+(confirmed supported), or the key absent entirely (not yet checked).
+`unsupported_claim_count` (the canonical "confirmed unsupported" metric)
+counts only explicit `source_supported: false` entries — an entry that
+simply hasn't been checked yet is **never** silently treated as
+unsupported. It instead counts toward `unverified_claim_count`, so "not
+yet adjudicated" and "confirmed unsupported" can never be conflated. Every
+entry in this corpus's current `judged/*.json` already carries an explicit
+`source_supported` value, so `unverified_claim_count` is `0` everywhere
+today — this is a safety net for future judging runs, not a change to any
+existing number. The raw judge-flagged count is kept as
+`flagged_vs_gold_count` for transparency, but is not something to gate on
+— in this corpus it was 20 and the corrected count is 0 (every flagged
+claim was verbatim or near-verbatim source text gold's fact list simply
+hadn't extracted).
 
 **If you re-run judging**, give the unsupported-claim check — and only that
 check — access to `source.md`; keep the fact/relation/question checks
@@ -100,11 +322,39 @@ source-blind (that isolation is what makes retention/recoverability
 grading trustworthy). Do not restore the "no matching gold fact ⇒
 hallucination" heuristic.
 
+## Wording fidelity and findability (measurement-only, new)
+
+Two further deterministic measurements, additive to and independent of
+everything above — neither changes `SKILL.md`, the grammar, the linter, or
+any existing rendering/judged/gold file, and neither is combined into any
+existing or new master score.
+
+**Wording fidelity** (`scoring/wording_fidelity.py`) tests SKILL.md's own
+claim ("structure only, wording untouched") directly: after stripping
+structured-gist's marker syntax, how much of a rendering's wording is
+actually copied from `source.md`, vs. paraphrased? A lexical-provenance
+test, not a semantic one — a correct paraphrase still fails it. Full
+write-up: `WORDING_FIDELITY_FINDINGS.md`.
+
+**Findability** (`scoring/findability.py`, "Evidence Access Cost")
+asks whether structured-gist's hierarchy makes already-preserved evidence
+easier to reach than the same evidence in flat, original-order prose. The
+headline metric compares the identical set of semantic units a given
+rendering actually retained — source order vs. gist order over that exact
+set — not raw source.md vs. gist (that would mostly measure deletion) and
+not a case-wide baseline of all gold content (that still let compression
+leak into the comparison; see the findings doc). Full write-up, including
+two documented baseline-confound failure modes found and fixed before the
+corrected numbers were finalized: `FINDABILITY_FINDINGS.md`.
+
 ## Re-running
 
 ```
 python3 scoring/deterministic.py   # word counts, compression, lint gate
 python3 scoring/combine.py         # merges in judged/*.json -> results/
+python3 scoring/spr.py             # experimental: SPR + blinded weight comparison -> results/
+python3 scoring/wording_fidelity.py  # measurement-only: lexical provenance -> results/
+python3 scoring/findability.py       # measurement-only: evidence-access cost -> results/
 ```
 
 Regenerating `renderings/` or `judged/` (i.e. actually re-generating

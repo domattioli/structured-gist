@@ -1,5 +1,10 @@
 {
   "causality-heavy-explain": {
+    "intent": {
+      "rationale": "this case exists to pressure-test relation retention specifically -- a flattened list that keeps every fact but drops the causal chain fails this task even at high fact retention",
+      "reader": "an engineer who needs to reason about the causal mechanism, e.g. to judge whether the same feedback loop could recur elsewhere",
+      "task": "understand why the cascade happened in causal order, not just which facts are true"
+    },
     "pressure_tags": [
       "adversarial",
       "causality_heavy",
@@ -53,8 +58,10 @@
         "relation_retention": 0.9375,
         "source_words": 369,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9722,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.975,
         "weighted_retention": 0.9722
       },
@@ -73,8 +80,10 @@
         "relation_retention": 0.0625,
         "source_words": 369,
         "status": "scored",
+        "task_weighted_fact_retention": 0.5556,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.575,
         "weighted_retention": 0.5556
       },
@@ -124,8 +133,10 @@
         "relation_retention": 0.5625,
         "source_words": 369,
         "status": "scored",
+        "task_weighted_fact_retention": 0.8,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.8,
         "weighted_retention": 0.8
       }
@@ -190,8 +201,10 @@
         "relation_retention": 0.9167,
         "source_words": 361,
         "status": "scored",
+        "task_weighted_fact_retention": 0.8333,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.85,
         "weighted_retention": 0.8333
       },
@@ -210,8 +223,10 @@
         "relation_retention": 0.0833,
         "source_words": 361,
         "status": "scored",
+        "task_weighted_fact_retention": 0.101,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.125,
         "weighted_retention": 0.101
       },
@@ -241,11 +256,18 @@
         "relation_retention": 0.5,
         "source_words": 361,
         "status": "scored",
+        "task_weighted_fact_retention": 0.5707,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.55,
         "weighted_retention": 0.5707
       }
+    },
+    "intent": {
+      "rationale": "an outline that faithfully reports the initial theory but drops the reversal is actively misleading for this task, even though the initial-theory facts are individually true",
+      "reader": "someone reading this after the fact (postmortem, handoff) who needs to act on the real cause",
+      "task": "know which diagnosis turned out to be correct, not just the order theories were proposed in"
     },
     "pressure_tags": [
       "adversarial",
@@ -269,8 +291,10 @@
         "relation_retention": 1.0,
         "source_words": 361,
         "status": "scored",
+        "task_weighted_fact_retention": 1.0,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 1.0,
         "weighted_retention": 1.0
       },
@@ -289,8 +313,10 @@
         "relation_retention": 0.6667,
         "source_words": 361,
         "status": "scored",
+        "task_weighted_fact_retention": 0.6414,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.65,
         "weighted_retention": 0.6414
       },
@@ -309,8 +335,10 @@
         "relation_retention": 1.0,
         "source_words": 361,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9747,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.975,
         "weighted_retention": 0.9747
       }
@@ -435,8 +463,10 @@
         "relation_retention": 1.0,
         "source_words": 280,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9884,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.9737,
         "weighted_retention": 0.9884
       },
@@ -466,8 +496,10 @@
         "relation_retention": 0.1667,
         "source_words": 280,
         "status": "scored",
+        "task_weighted_fact_retention": 0.25,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.2368,
         "weighted_retention": 0.25
       },
@@ -512,11 +544,17 @@
         "relation_retention": 0.75,
         "source_words": 280,
         "status": "scored",
+        "task_weighted_fact_retention": 0.7442,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.7105,
         "weighted_retention": 0.7442
       }
+    },
+    "intent": {
+      "reader": "a lead tracking migration status across systems",
+      "task": "know the exact current status of each system without confusing similar-sounding states (done vs. scheduled vs. will-not vs. reverted vs. in-progress)"
     },
     "pressure_tags": [
       "adversarial",
@@ -540,8 +578,10 @@
         "relation_retention": 1.0,
         "source_words": 280,
         "status": "scored",
+        "task_weighted_fact_retention": 1.0,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 1.0,
         "weighted_retention": 1.0
       },
@@ -560,8 +600,10 @@
         "relation_retention": 0.25,
         "source_words": 280,
         "status": "scored",
+        "task_weighted_fact_retention": 0.314,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.2895,
         "weighted_retention": 0.314
       },
@@ -580,8 +622,10 @@
         "relation_retention": 0.9167,
         "source_words": 280,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9477,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.9211,
         "weighted_retention": 0.9477
       }
@@ -589,6 +633,10 @@
     "test_class": "pressure-tests"
   },
   "near-identical-numbers": {
+    "intent": {
+      "reader": "an engineer who needs to act on the exact values in this recap (cite a version, path, or SHA) without re-reading the source",
+      "task": "precise recall of exact identifiers under compression -- near-miss numbers/paths/SHAs must not become interchangeable"
+    },
     "pressure_tags": [
       "adversarial",
       "numeric_precision",
@@ -642,8 +690,10 @@
         "relation_retention": 1.0,
         "source_words": 276,
         "status": "scored",
+        "task_weighted_fact_retention": 1.0,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 1.0,
         "weighted_retention": 1.0
       },
@@ -662,8 +712,10 @@
         "relation_retention": 0.25,
         "source_words": 276,
         "status": "scored",
+        "task_weighted_fact_retention": 0.3115,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.3214,
         "weighted_retention": 0.3115
       },
@@ -718,8 +770,10 @@
         "relation_retention": 0.9167,
         "source_words": 276,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9508,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.8929,
         "weighted_retention": 0.9508
       }
@@ -727,6 +781,11 @@
     "test_class": "regression"
   },
   "negation-and-true-peers": {
+    "intent": {
+      "rationale": "negations here are load-bearing -- dropping a negation changes what the fact means, not just how much detail survives",
+      "reader": "a stakeholder getting a status update spanning several unrelated workstreams",
+      "task": "know what did and did NOT happen in each workstream independently, without inferring a shared cause or hierarchy that isn't there"
+    },
     "pressure_tags": [
       "adversarial",
       "true_peers",
@@ -756,8 +815,10 @@
         "relation_retention": 1.0,
         "source_words": 272,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9895,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.975,
         "weighted_retention": 0.9895
       },
@@ -782,8 +843,10 @@
         "relation_retention": 0.125,
         "source_words": 272,
         "status": "scored",
+        "task_weighted_fact_retention": 0.0316,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.025,
         "weighted_retention": 0.0316
       },
@@ -808,8 +871,10 @@
         "relation_retention": 1.0,
         "source_words": 272,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9895,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.975,
         "weighted_retention": 0.9895
       }
@@ -817,6 +882,10 @@
     "test_class": "pressure-tests"
   },
   "real-benchmark-archaeology": {
+    "intent": {
+      "reader": "a teammate resuming an in-progress investigation",
+      "task": "know what's already established, what's still unresolved, and which named identifiers to search for next"
+    },
     "pressure_tags": [
       "realistic_recap",
       "medium",
@@ -850,8 +919,10 @@
         "relation_retention": 1.0,
         "source_words": 466,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9658,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.9583,
         "weighted_retention": 0.9658
       },
@@ -870,8 +941,10 @@
         "relation_retention": 0.5,
         "source_words": 466,
         "status": "scored",
+        "task_weighted_fact_retention": 0.4658,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.4583,
         "weighted_retention": 0.4658
       },
@@ -906,8 +979,10 @@
         "relation_retention": 0.9167,
         "source_words": 466,
         "status": "scored",
+        "task_weighted_fact_retention": 0.8846,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.8542,
         "weighted_retention": 0.8846
       }
@@ -915,6 +990,10 @@
     "test_class": "regression"
   },
   "real-hook-discovery": {
+    "intent": {
+      "reader": "an engineer resuming this debugging thread later, or a teammate picking it up cold",
+      "task": "confirm what broke, why, and whether the fix is complete enough to trust without re-reading the full investigation"
+    },
     "pressure_tags": [
       "realistic_recap",
       "small"
@@ -936,8 +1015,10 @@
         "relation_retention": 1.0,
         "source_words": 231,
         "status": "scored",
+        "task_weighted_fact_retention": 1.0,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 1.0,
         "weighted_retention": 1.0
       },
@@ -956,8 +1037,10 @@
         "relation_retention": 0.6,
         "source_words": 231,
         "status": "scored",
+        "task_weighted_fact_retention": 0.3923,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.4333,
         "weighted_retention": 0.3923
       },
@@ -976,8 +1059,10 @@
         "relation_retention": 0.9,
         "source_words": 231,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9538,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.9667,
         "weighted_retention": 0.9538
       }
@@ -1217,8 +1302,10 @@
         "relation_retention": 0.9167,
         "source_words": 1313,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9079,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.9348,
         "weighted_retention": 0.9079
       },
@@ -1253,8 +1340,10 @@
         "relation_retention": 0.25,
         "source_words": 1313,
         "status": "scored",
+        "task_weighted_fact_retention": 0.1579,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.1739,
         "weighted_retention": 0.1579
       },
@@ -1344,11 +1433,18 @@
         "relation_retention": 0.625,
         "source_words": 1313,
         "status": "scored",
+        "task_weighted_fact_retention": 0.5553,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.587,
         "weighted_retention": 0.5553
       }
+    },
+    "intent": {
+      "rationale": "most 'outcome' facts here are deliberately low-weight because they are resolved noise (f2-f4, f14-f15); f10-f12 (the true root cause and its unresolved status) are weighted high because missing them defeats the reader's actual task even though they share a category with the noise facts",
+      "reader": "someone triaging a large weekly ops digest under time pressure",
+      "task": "find the one item that actually needs attention among many that don't, without reading the full source"
     },
     "pressure_tags": [
       "synthetic_scale",
@@ -1386,8 +1482,10 @@
         "relation_retention": 0.9583,
         "source_words": 1313,
         "status": "scored",
+        "task_weighted_fact_retention": 0.9947,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.9891,
         "weighted_retention": 0.9947
       },
@@ -1406,8 +1504,10 @@
         "relation_retention": 0.25,
         "source_words": 1313,
         "status": "scored",
+        "task_weighted_fact_retention": 0.2526,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.2609,
         "weighted_retention": 0.2526
       },
@@ -1426,8 +1526,10 @@
         "relation_retention": 0.7917,
         "source_words": 1313,
         "status": "scored",
+        "task_weighted_fact_retention": 0.7316,
         "unsupported_claim_count": 0,
         "unsupported_claims": [],
+        "unverified_claim_count": 0,
         "unweighted_retention": 0.7391,
         "weighted_retention": 0.7316
       }

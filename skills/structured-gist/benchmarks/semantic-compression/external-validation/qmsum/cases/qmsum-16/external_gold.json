@@ -1,0 +1,43 @@
+{
+  "case_id": "qmsum-16",
+  "dataset": "qmsum",
+  "intent": {
+    "reader": "a colleague who missed this meeting and needs the answer to one specific point from it",
+    "task": "answer the query below using only what survives compression of the meeting"
+  },
+  "native_evidence": [
+    {
+      "end_idx": 47,
+      "span_index": 0,
+      "start_idx": 47,
+      "turns": [
+        {
+          "content": "As Nick said, it does get more difficult at key stage 4, and it's working, then, with—. It comes back to that team-around-the-family approach, to ensure what is needed for that learner to go back into school, what can the school provide. It's looking at the whole package of support, then, that surrounds not just the learner but the family, whether it's transport—it's looking at the whole agenda, then, to ensure that everything is in place for that learner to go back to school, where it's possible.",
+          "speaker": "Sharon Davies"
+        }
+      ]
+    },
+    {
+      "end_idx": 53,
+      "span_index": 1,
+      "start_idx": 53,
+      "turns": [
+        {
+          "content": "A few years ago, I used to be a primary headteacher in England, so we were looking at different models, then, at various conferences, and I believe Oxford, as a local authority—they had a PRU, and they had discussions with their secondary schools, then, whether to get rid of the PRU, as such, and give the money back into schools. But they looked at a partnership within the schools, then, to say, 'Okay, you can have the money, but there's got to be terms of reference'—not quite a service level agreement, but the schools worked together as a partnership, then, so that they couldn't keep moving the children around, the learners around. It's looking at how well that worked. It started off really well, but that was a few years ago, so I don't know whether it's continued now. But that was a model that, at the time, that local authority looked at to get more money into schools and to get schools, then, to have that responsibility—that they didn't offload the learners elsewhere.",
+          "speaker": "Sharon Davies"
+        }
+      ]
+    }
+  ],
+  "native_metadata": {
+    "cardinality": "multi",
+    "domain": "Committee",
+    "n_spans": 2,
+    "n_turns": 229,
+    "native_meeting_id": "education_4",
+    "source_word_count": 14631
+  },
+  "provenance_ref": "provenance.json",
+  "question_or_query": "What was the solution to the major challenge for the transition of the excluded students?",
+  "reference_answer": "Sharon Davies recommended the team-around-the-family approach to ensure what was needed for learners to go back into school, as well as what the school could provide. She pointed out the importance of the whole package of support, which not only surrounded the learners but also their families. In addition, she gave an example of the PRU in Oxford who built the partnership between the school and the PRU student to demonstrate the responsibility of schools and the significance of school participation."
+}

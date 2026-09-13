@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "case_id": "hotpotqa-01",
+      "fact_count_a": 2,
+      "fact_count_b": 4,
+      "fact_count_ratio": 0.5,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 1,
+      "relation_count_b": 1,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 0.624,
+      "source_quote_overlap_b_to_a": 0.5
+    },
+    {
+      "case_id": "hotpotqa-02",
+      "fact_count_a": 2,
+      "fact_count_b": 3,
+      "fact_count_ratio": 0.667,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 1,
+      "relation_count_b": 1,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 0.824,
+      "source_quote_overlap_b_to_a": 0.667
+    },
+    {
+      "case_id": "qasper-01",
+      "fact_count_a": 6,
+      "fact_count_b": 5,
+      "fact_count_ratio": 0.833,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 2,
+      "relation_count_b": 2,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 0.84,
+      "source_quote_overlap_b_to_a": 0.948
+    },
+    {
+      "case_id": "qasper-02",
+      "fact_count_a": 3,
+      "fact_count_b": 3,
+      "fact_count_ratio": 1.0,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 0,
+      "relation_count_b": 0,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 1.0,
+      "source_quote_overlap_b_to_a": 1.0
+    },
+    {
+      "case_id": "qmsum-01",
+      "fact_count_a": 11,
+      "fact_count_b": 12,
+      "fact_count_ratio": 0.917,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 1,
+      "relation_count_b": 1,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 0.721,
+      "source_quote_overlap_b_to_a": 0.621
+    },
+    {
+      "case_id": "qmsum-02",
+      "fact_count_a": 10,
+      "fact_count_b": 12,
+      "fact_count_ratio": 0.833,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 1,
+      "relation_count_b": 2,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 0.785,
+      "source_quote_overlap_b_to_a": 0.699
+    },
+    {
+      "case_id": "qmsum-03",
+      "fact_count_a": 14,
+      "fact_count_b": 17,
+      "fact_count_ratio": 0.824,
+      "native_evidence_id_jaccard": 1.0,
+      "relation_count_a": 2,
+      "relation_count_b": 4,
+      "relation_existence_agreement": true,
+      "source_quote_overlap_a_to_b": 0.462,
+      "source_quote_overlap_b_to_a": 0.385
+    }
+  ]
+}

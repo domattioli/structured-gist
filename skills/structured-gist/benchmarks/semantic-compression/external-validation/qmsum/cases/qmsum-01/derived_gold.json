@@ -1,0 +1,129 @@
+{
+  "case_id": "qmsum-01",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Grad C plans to talk about the group's problems with rephrasing (in the dialogue system) and how they solved them, plus some preliminary observations.",
+      "category": "descriptive",
+      "source_quote": "I will talk about our problems with the rephrasing , and how we solved it , and some preliminary observations",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f1", "b:f3"]}
+    },
+    {
+      "id": "f2",
+      "text": "One preliminary observation Grad C plans to present is that some aspect of the data is basically the same as in every human-human telephone conversation, whereas the human-computer telephone conversation is quite different from some first observations.",
+      "category": "descriptive",
+      "source_quote": "I thought it would interesting to , uh , um , point out that it 's basically the same . Um , as in every human - human telephone conversation , and the human - computer telephone conversation is of course quite d quite different from , uh , some first , uh , observations .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f2", "b:f4"]}
+    },
+    {
+      "id": "f3",
+      "text": "Grad C plans to use the talk to feed back to the group's original research problem: how to get there, and what is actually happening today.",
+      "category": "descriptive",
+      "source_quote": "Then sort of feed you back to our original problem cuz , uh {disfmarker} how to get there , what actually is happening there today",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f3", "b:f5"]}
+    },
+    {
+      "id": "f4",
+      "text": "Grad C plans to then talk about the 'big picture' and as much as possible about the 'NTL story.'",
+      "category": "descriptive",
+      "source_quote": "and then maybe talk about the big picture here , e tell a little bit {disfmarker} as much as I {pause} can about the NTL story .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f4", "b:f5"]}
+    },
+    {
+      "id": "f5",
+      "text": "Grad C was undecided about whether to include discussion of two different camps of researchers with differing views on how language understanding works.",
+      "category": "unresolved_question",
+      "source_quote": "I 'm not quite sure about this , whether I should put this in , um , that , you know , you have these two sort of different ideas that are {disfmarker} or two different camps of people envisioning how language understanding works",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f5", "b:f6"]}
+    },
+    {
+      "id": "f6",
+      "text": "Grad C plans to talk about the embodied and simulation approach favored at the institute, using monkeys in Italy (mirror-neuron research) as a prelude.",
+      "category": "descriptive",
+      "source_quote": "talk a bit about the embodied and simulation approach favored here and as a prelude , I 'll talk about monkeys in Italy .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f6", "b:f6", "b:f7"]}
+    },
+    {
+      "id": "f7",
+      "text": "Because Srini did not send Grad C the slides he had promised, Grad C will instead use Srini's paper to make his own summary of that material for the talk.",
+      "category": "cause_rationale",
+      "source_quote": "Srini was gonna send me some slides but he didn't do it , so from {disfmarker} but I have the paper , I can make a resume of that",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f7", "b:f7"]}
+    },
+    {
+      "id": "f8",
+      "text": "Grad C will use an X-schema slide he says he took from one of the addressee's earlier talks (the specific person isn't clearly identified within this span), possibly originally based on work by Bergen, Chang, or similar authors.",
+      "category": "descriptive",
+      "source_quote": "I stole an X - schema from one of your talks I think .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f8", "b:f8"]}
+    },
+    {
+      "id": "f9",
+      "text": "After the X-schema material, Grad C plans to discuss the construction aspect, and end the talk with the group's Bayes-net work.",
+      "category": "descriptive",
+      "source_quote": "So X - schemas , then , I would like to do {disfmarker} talk about the construction aspect and then at the end about our Bayes - net .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f9", "b:f9"]}
+    },
+    {
+      "id": "f10",
+      "text": "Grad C was unsure whether to mention in the talk, as a 'Future activities' item, that the group has started (or is about to start) looking at people's brains more directly (FMRI-type work).",
+      "category": "unresolved_question",
+      "source_quote": "Oh , maybe the FMRI stuff . Should I mention the fact that , um , we 're also actually started {disfmarker} going to start to look at people 's brains in a more direct way ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f10", "b:f10"]}
+    },
+    {
+      "id": "f11",
+      "text": "Professor E advised that, if the FMRI/brain-imaging point is mentioned, it should come up when discussing mirror neurons, alongside the more recent findings about 'the kicking.'",
+      "category": "next_action",
+      "source_quote": "Well , the time to mention it , if you mention it , is when you talk about mirror neurons , then you should talk about the more recent stuff , about the kicking",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:f11", "b:f11"]}
+    },
+    {
+      "id": "f12",
+      "text": "Professor E said the plan is to see whether the same phenomena occur in response to stories, in connection with this mirror-neuron/'kicking' research.",
+      "category": "next_action",
+      "source_quote": "that the plan is to see to what extent the {disfmarker} you 'll get the same phenomena with stories about this",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "b_only", "source_annotator_ids": ["b:f12"]}
+    },
+    {
+      "id": "f13",
+      "text": "As an example for the talk's data section, Grad C plans to play a recording of an actual subject, illustrating that people unconsciously mimic and match the synthesized system's prosody when they speak to it.",
+      "category": "descriptive",
+      "source_quote": "the {disfmarker} you can observe that all the time , they 're trying to match their prosody onto the machine .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "correction_added", "source_annotator_ids": ["coverage_audit_fix"]}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "condition",
+      "text": "Whether the FMRI/brain-research item appears in the talk, and where, depends on Professor E's suggestion: it should only be raised alongside the mirror-neuron discussion, not as a standalone item.",
+      "fact_ids": ["f10", "f11"],
+      "evidence_mode": "explicit",
+      "source_quote": "the time to mention it , if you mention it , is when you talk about mirror neurons , then you should talk about the more recent stuff , about the kicking",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}],
+      "adjudication": {"agreement": "both", "source_annotator_ids": ["a:r1", "b:r1"]}
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12", "f13"],
+  "corpus_defect_notes": [
+    "The single native_evidence span given for this case (span:0, turns 176-210) does not cover an earlier portion of source.md (e.g., the discotheque/ontological-knowledge example and the explicit term 'image schemas') that the reference_answer's phrases 'examples of inference of user intentions' and 'the theoretical (X-schemas, image schemas, Bayes-nets)... background' appear to draw on. Because derived_from can only cite native_evidence locations actually supplied (only span:0 exists for this case), this annotation is restricted to facts supported by span:0. Span:0 substantiates the 'recordings of the on-going data collection' portion and the 'X-schemas, Bayes-nets, and neural background' portion of the reference_answer, but not the 'inference of user intentions' or 'image schemas' portions, whose supporting text (if it exists) lies outside the given evidence span.",
+    "Coverage-audit correction pass: (1) added fact f13, backed by a verbatim quote from span:0, to capture the audio-recording example (a subject mimicking/matching the synthesized system's prosody) that was previously entirely uncaptured despite being a plausible referent for the reference_answer's 'recordings of the on-going data collection.' (2) Narrowed f8's text to remove the specific 'Professor E's/Nancy's' attribution, which was not supported by f8's own source_quote — within span:0 the addressee of 'one of your talks' is ambiguous and, if anything, more plausibly Grad A given the immediate reaction ('where'd you get that?'); f8 now only claims what its quote actually supports."
+  ],
+  "adjudication_status": "reconciled",
+  "annotator_metadata": "isolated_llm_agent_pair+adjudicator",
+  "build_date": "2026-09-10"
+}

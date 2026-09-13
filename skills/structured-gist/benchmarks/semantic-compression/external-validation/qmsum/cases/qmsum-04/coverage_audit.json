@@ -1,0 +1,15 @@
+{
+  "case_id": "qmsum-04",
+  "status": "issues_found",
+  "missing_critical_units": [
+    {
+      "description": "The very first turn of native_evidence span:0 — PhD D describing that the team is trying to add a new (simple) spectral subtraction implementation to the code, done on mel energies, already tested but without frame dropping, and that frame dropping is important when using spectral subtraction — is not captured by any fact. This is directly on-topic for 'Summarize the discussion about spectral subtraction' (it is literally the statement that opens the discussion) and 'frame dropping' does not appear anywhere else in the 18-fact inventory.",
+      "source_quote": "We are playing {disfmarker} we are also playing , trying to put other spectral subtraction mmm , in the code . Um , it would be a very simple spectral subtraction , on the um , mel energies which I already tested but without the um frame dropping actually , and I think it 's important to have frame dropping if you use spectral subtraction ."
+    }
+  ],
+  "redundant_units": [],
+  "unsupported_units": ["f18"],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "f18's source_quote ('there is a way to approximate this using uh, first-order or second-order Taylor Series and it can be used for getting rid of the noise and the channel effect') is verbatim, accurate text from source.md and correctly attributed to PhD D — but checked against source.md it is the turn immediately AFTER the last turn actually listed in native_evidence span:0 (span:0's turns end at Professor C's 'Mm-hmm. Yes.'; PhD D's Taylor-series sentence is the next turn, outside the given span boundary). So while the claim is true, it is not actually supported by the native_evidence that was supplied for this case under span:0, and derived_from's 'span:0' label is not accurate for this fact. This is a boundary/mislabeling issue rather than a fabrication. Otherwise the 18-fact/4-relation inventory tracks this dense, multi-topic technical passage (FFT-vs-mel subtraction placement, two-stage enhancement, combining signal subspace with Wiener filtering, colored-noise workaround, JRASTA analogy, VTS) closely and proportionately — granularity looks appropriate to the source's real density rather than inflated, and no redundant units or unsupported relations were found."
+}

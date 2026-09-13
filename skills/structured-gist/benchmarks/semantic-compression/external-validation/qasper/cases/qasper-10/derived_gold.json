@@ -1,0 +1,77 @@
+{
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10",
+  "case_id": "qasper-10",
+  "corpus_defect_notes": [
+    "The native reference_answer's second segment, 'we build templates and expression pools using linguistic analysis,' is drawn from evidence paragraph global_idx 25 (f4 here), which describes the two-stage *methodology* for constructing the simulated dataset (template/expression-pool building, then a generation framework). It states no size, count, or quantity, and does not appear to answer 'How big is their created dataset?' at all -- it reads like evidence for a different question (how the simulated dataset was built). Only the first evidence paragraph (global_idx 12: 353 conversations, 40 speakers, 41 hours) actually contains information responsive to the 'how big' question.",
+    "coverage audit: f4 originally bundled two distinct, separately section-referenced construction stages into one fact; split into f4 (stage 1: templates/expression pools) and f5 (stage 2: generation framework)."
+  ],
+  "facts": [
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:12"
+        }
+      ],
+      "id": "f1",
+      "source_quote": "The dataset comprises a total of 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) with consent to the use of anonymized data for research.",
+      "text": "The collected nurse-patient conversation dataset comprises 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers)."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:12"
+        }
+      ],
+      "id": "f2",
+      "source_quote": "The speakers are 38 to 88 years old, equally distributed across gender, and comprise a range of ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, and 11% unspecified).",
+      "text": "The speakers range from 38 to 88 years old, are equally distributed across gender, and span a range of ethnic groups (55% Chinese, 17% Malay, 14% Indian, 3% Eurasian, 11% unspecified)."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:12"
+        }
+      ],
+      "id": "f3",
+      "source_quote": "The conversations cover 11 topics (e.g., medication compliance, symptom checking, education, greeting) and 9 symptoms (e.g., chest pain, cough) and amount to 41 hours.",
+      "text": "The conversations cover 11 topics (e.g., medication compliance, symptom checking, education, greeting) and 9 symptoms (e.g., chest pain, cough), and amount to 41 hours in total."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:25"
+        }
+      ],
+      "id": "f4",
+      "source_quote": "We divide the construction of data simulation into two stages. In Section SECREF16 , we build templates and expression pools using linguistic analysis followed by manual verification.",
+      "text": "Construction of the simulated (training) dataset's first stage builds templates and expression pools using linguistic analysis followed by manual verification."
+    },
+    {
+      "category": "descriptive",
+      "derived_from": [
+        {
+          "dataset": "qasper",
+          "native_evidence_id": "para:25"
+        }
+      ],
+      "id": "f5",
+      "source_quote": "In Section SECREF20 , we present our proposed framework for generating simulated training data.",
+      "text": "The dataset construction's second stage applies a proposed framework to generate the simulated training data."
+    }
+  ],
+  "question_fact_ids": [
+    "f1",
+    "f3"
+  ],
+  "relations": []
+}

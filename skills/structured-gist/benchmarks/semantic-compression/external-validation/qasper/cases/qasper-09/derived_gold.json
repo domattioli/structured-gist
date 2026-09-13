@@ -1,0 +1,39 @@
+{
+  "case_id": "qasper-09",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "The authors evaluated their models on 3 different datasets.",
+      "category": "descriptive",
+      "source_quote": "We evaluated our models on 3 different datasets:",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:20"}]
+    },
+    {
+      "id": "f2",
+      "text": "One evaluation dataset was the CSAT dataset, used for CSAT (customer satisfaction) prediction, consisting of spoken transcripts obtained automatically via ASR.",
+      "category": "descriptive",
+      "source_quote": "CSAT dataset for CSAT prediction, consisting of spoken transcripts (automatic via ASR).",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:21"}]
+    },
+    {
+      "id": "f3",
+      "text": "A second evaluation dataset was 20 newsgroups, used for a topic identification task, consisting of written text.",
+      "category": "descriptive",
+      "source_quote": "20 newsgroups for topic identification task, consisting of written text;",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:22"}]
+    },
+    {
+      "id": "f4",
+      "text": "A third evaluation dataset was the Fisher Phase 1 corpus, used for a topic identification task, consisting of manually transcribed spoken conversations.",
+      "category": "descriptive",
+      "source_quote": "Fisher Phase 1 corpus for topic identification task, consisting of spoken transcripts (manual);",
+      "derived_from": [{"dataset": "qasper", "native_evidence_id": "para:23"}]
+    }
+  ],
+  "relations": [],
+  "question_fact_ids": ["f2", "f3", "f4"],
+  "corpus_defect_notes": [],
+  "adjudication_status": "single_pass",
+  "annotator_metadata": "isolated_llm_agent_single_pass",
+  "build_date": "2026-09-10"
+}

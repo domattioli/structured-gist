@@ -7,6 +7,10 @@
     "unresolved_question_heavy"
   ],
   "source_word_count": 466,
+  "intent": {
+    "reader": "a teammate resuming an in-progress investigation",
+    "task": "know what's already established, what's still unresolved, and which named identifiers to search for next"
+  },
   "facts": [
     {
       "id": "f1",

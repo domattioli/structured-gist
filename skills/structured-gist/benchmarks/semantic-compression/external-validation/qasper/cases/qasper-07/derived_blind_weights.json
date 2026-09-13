@@ -1,0 +1,10 @@
+{
+  "case_id": "qasper-07",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 3},
+  "relation_weights": {},
+  "rationale": {
+    "f1": "Names the RWTH German-English dataset as the source of hard alignments, one of the two datasets explicitly required by the reference answer.",
+    "f2": "Names the WMT15 German-to-English training data used to train both systems, the other dataset explicitly required by the reference answer."
+  }
+}

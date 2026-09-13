@@ -1,0 +1,10 @@
+{
+  "case_id": "qmsum-06",
+  "status": "pass",
+  "missing_critical_units": [],
+  "redundant_units": [],
+  "unsupported_units": [],
+  "granularity_problems": [],
+  "relation_omissions": [],
+  "notes": "All 17 turns of native_evidence span:0 are accounted for across 8 facts, each a distinct clause-level claim; quotes checked verbatim against the supplied evidence. question_fact_ids correctly excludes f7 (the Lucent researcher), which is off-topic for 'the person in Grenada'. All three relations state genuine connective claims (identification of the Grenada guy, a contrast, and a causal origin) rather than restating fact pairs. No issues found."
+}

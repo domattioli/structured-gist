@@ -1,0 +1,10 @@
+{
+  "case_id": "hotpotqa-07",
+  "annotation_protocol": "external-blinded-task-importance-v1",
+  "fact_weights": {"f1": 3, "f2": 1},
+  "relation_weights": {},
+  "rationale": {
+    "f1": "This fact is the literal reference answer (Security Management is ASIS International's monthly magazine) and the only fact addressing the magazine/publisher portion of the question.",
+    "f2": "This is a generic, free-standing definition of computer security with no stated connection to Security Management or ASIS International, so it does not establish that the magazine covers computer security topics and contributes only background context to the question."
+  }
+}

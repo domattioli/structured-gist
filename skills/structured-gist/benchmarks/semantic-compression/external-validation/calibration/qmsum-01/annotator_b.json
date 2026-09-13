@@ -1,0 +1,104 @@
+{
+  "case_id": "qmsum-01",
+  "facts": [
+    {
+      "id": "f1",
+      "text": "Grad A asked whether the audio example being played was from an actual experimental subject; the discussion proceeds on the assumption that it was.",
+      "category": "descriptive",
+      "source_quote": "This was an actual , um , subject ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f2",
+      "text": "The recording shows that when subjects speak to the system, they mimic its synthesized speech, consistently trying to match their own prosody to the machine's.",
+      "category": "descriptive",
+      "source_quote": "they 're mimicking the synthesis when they speak to the computer , the {disfmarker} you can observe that all the time , they 're trying to match their prosody onto the machine .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f3",
+      "text": "The talk will cover problems the team had with rephrasing (the system's dialogue repair strategy) and how those problems were solved, along with some preliminary observations.",
+      "category": "next_action",
+      "source_quote": "I will talk about our problems with the rephrasing , and how we solved it , and some preliminary observations",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f4",
+      "text": "One preliminary observation to be presented is that, in some respect, human-computer telephone conversation turns out to be basically the same as human-human telephone conversation, even though the two are otherwise quite different.",
+      "category": "outcome",
+      "source_quote": "I thought it would interesting to , uh , um , point out that it 's basically the same . Um , as in every human - human telephone conversation , and the human - computer telephone conversation is of course quite d quite different from , uh , some first , uh , observations .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f5",
+      "text": "The talk will then return to the team's original research problem — how to get there and what is currently happening — before moving to the 'big picture' and the NTL story.",
+      "category": "next_action",
+      "source_quote": "Then sort of feed you back to our original problem cuz , uh {disfmarker} how to get there , what actually is happening there today , and then maybe talk about the big picture here , e tell a little bit {disfmarker} as much as I {pause} can about the NTL story .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f6",
+      "text": "As part of the NTL story, the talk will present two different camps of thought on how language understanding works, focusing on the embodied and simulation approach favored by this research group.",
+      "category": "descriptive",
+      "source_quote": "you have these two sort of different ideas that are {disfmarker} or two different camps of people envisioning how language understanding works , and then , {vocalsound} talk a bit about the embodied and simulation approach favored here",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f7",
+      "text": "As a prelude to that discussion, the talk will include a segment on 'monkeys in Italy,' for which a summary will be drawn from a paper since a colleague (Srini) did not send the promised slides.",
+      "category": "next_action",
+      "source_quote": "as a prelude , I 'll talk about monkeys in Italy . And , um , Srini was gonna send me some slides but he didn't do it , so from {disfmarker} but I have the paper , I can make a resume of that",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f8",
+      "text": "The talk will reuse an X-schema slide taken from a previous talk by one of the meeting's attendees, possibly originally based on work by Bergen, Chang, or similar.",
+      "category": "descriptive",
+      "source_quote": "and then I stole an X - schema from one of your talks I think .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f9",
+      "text": "The talk plan, as it currently stands, ends with the X-schema material, then the construction aspect, and finally the team's Bayes-net work; the remaining content will be worked out while traveling.",
+      "category": "next_action",
+      "source_quote": "now I 'm not going to bring that . So that 's basically what I have , so far , and the rest is for airplanes . So X - schemas , then , I would like to do {disfmarker} talk about the construction aspect and then at the end about our Bayes - net .",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f10",
+      "text": "Grad C was unsure whether to mention in the talk that the group has started to look at people's brains more directly (FMRI-related work).",
+      "category": "unresolved_question",
+      "source_quote": "Oh , maybe the FMRI stuff . Should I mention the fact that , um , we 're also actually started {disfmarker} going to start to look at people 's brains in a more direct way ?",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f11",
+      "text": "Professor E advised that, if the FMRI/brain-imaging point is mentioned, it should come up when discussing mirror neurons, alongside the more recent findings about 'the kicking.'",
+      "category": "decision",
+      "source_quote": "Well , the time to mention it , if you mention it , is when you talk about mirror neurons , then you should talk about the more recent stuff , about the kicking",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    },
+    {
+      "id": "f12",
+      "text": "Professor E said the team's plan is to see whether the same phenomena occur in response to stories, in connection with this mirror-neuron/'kicking' research.",
+      "category": "next_action",
+      "source_quote": "that the plan is to see to what extent the {disfmarker} you 'll get the same phenomena with stories about this",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "type": "problem_resolution",
+      "text": "Professor E's guidance on when to mention the FMRI/brain-imaging point directly answers Grad C's earlier question about whether to include it in the talk.",
+      "fact_ids": ["f10", "f11"],
+      "evidence_mode": "explicit",
+      "source_quote": "Well , the time to mention it , if you mention it , is when you talk about mirror neurons",
+      "derived_from": [{"dataset": "qmsum", "native_evidence_id": "span:0"}]
+    }
+  ],
+  "question_fact_ids": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"],
+  "corpus_defect_notes": [
+    "The single native_evidence span given for this case (span:0, turns 176-210) does not cover an earlier portion of source.md (e.g., the discotheque/ontological-knowledge example beginning around 'imagine that they're standing somewhere in Heidelberg...', and the explicit term 'image schemas') that the reference_answer's phrases 'examples of inference of user intentions' and 'the theoretical (X-schemas, image schemas, Bayes-nets)... background' appear to draw on. Because derived_from can only cite native_evidence locations actually supplied (only span:0 exists for this case), this annotation is restricted to facts supported by span:0. Span:0 substantiates the 'recordings of the on-going data collection' portion and the 'X-schemas, Bayes-nets, and neural background' portion of the reference_answer, but not the 'inference of user intentions' or 'image schemas' portions, whose supporting text (if it exists) lies outside the given evidence span."
+  ]
+}
