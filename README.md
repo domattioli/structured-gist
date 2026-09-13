@@ -2,10 +2,12 @@
 
 ![Status](https://img.shields.io/badge/status-alpha-orange)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Version](https://img.shields.io/badge/version-0.4.8-informational)
+![Version](https://img.shields.io/badge/version-0.4.10-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
-![Tests](https://img.shields.io/badge/tests-57%20passing-success)
+![Tests](https://img.shields.io/badge/tests-61%20passing-success)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
+![Claude Code Plugin](https://img.shields.io/badge/claude%20code-plugin-blueviolet)
+![Dependencies](https://img.shields.io/badge/linter-stdlib--only-informational)
 
 A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure and via node depth; prose stays confined to explanation nodes. 
 
@@ -73,7 +75,7 @@ Rendered as an outline in `skim` granularity and `block` mode (the default modal
     c. GitHub issue + PR comments
 ```
 
-`block` is one of three render modes; `responsive` (the GitHub/chat default) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
+`block` is one of three render modes and is the default on all surfaces; `responsive` (opt-in for GitHub issue/PR/comment bodies and chat-app replies) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
