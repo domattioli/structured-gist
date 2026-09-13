@@ -102,16 +102,16 @@ Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline thi
 
 ## 5. Benchmarks
 
-Measured deltas from the skill's version history. Full table with methodology: `skills/structured-gist/tests/benchmark.md`.
+Representative measurements from the skill's version history. Each row evaluates a different kind of change, so results should be read independently rather than as a single trend. See the [full benchmark ledger](skills/structured-gist/tests/benchmark.md) for methodology and complete history.
 
-| Version | Change | Metric | Result |
-|---|---|---|---|
-| v0.2.9 | dense paragraph vs. skim outline, same content | word count | 147 → 88 words (**-40.1%**) |
-| v0.3.7 | block mode vs. responsive mode, same tree | word count | 19 → 24 words (**+26.3%**, GFM bullet-token artifact, not a regression) |
-| v0.4.0 | direct-prompt outline vs. experimental KG-mode generation, 20-source corpus | outline-quality composite (retention × robustness × brevity) | 0.549 → 0.760 (KG mode wins structure, loses retention; not shipped — see Future work) |
-| v0.4.2 | linter rule coverage | rules gated / tests passing | 11 rules / 33 tests → 15 rules / 46 tests |
-| v0.4.3 | rename + trigger-phrase expansion | tests passing | 46 → 63 (no rule-logic change) |
-| eval-only (#10) | semantic-compression suite curated: 8 regression/pressure-test cases, weighted retention scored against gold fact lists (sonnet run on all 8; haiku run on 3 of 8 — full-suite Opus 5 run planned this weekend) | weighted retention (skim → standard → deep) | 0.37 → 0.89 → 0.99; compression itself correlates *negatively* with usefulness (r = -0.75) — kept as a separate reported cost, never blended into a quality score |
+| Version | Evaluation | Metric | Measured result | Interpretation |
+|---|---|---|---|---|
+| v0.2.9 | Dense paragraph vs. skim outline (same content) | Word count | **147 → 88 words (-40.1%)** | — |
+| v0.3.7 | Block mode vs. responsive mode (same tree) | Word count | **19 → 24 words (+26.3%)** | GFM bullet-token artifact; not a regression. |
+| v0.4.0 | Direct prompt vs. experimental KG mode (20-source corpus) | Outline-quality composite (retention × robustness × brevity) | **0.549 → 0.760** | KG mode wins structure but loses retention; not shipped. See [Future work](#7-future-work). |
+| v0.4.2 | Linter rule coverage | Rules gated / tests passing | **11 → 15 rules; 33 → 46 tests** | — |
+| v0.4.3 | Rename and trigger-phrase expansion | Tests passing | **46 → 63** | No rule-logic change. |
+| Eval only (#10) | Semantic-compression suite | Weighted retention (skim → standard → deep) | **0.37 → 0.89 → 0.99** | 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8 and Haiku on 3/8, with a full-suite Opus 5 run planned this weekend.<br>Compression correlated *negatively* with usefulness (**r = -0.75**), so it remains a separate reported cost rather than part of the quality score. |
 
 Word count, rule/test coverage, and semantic retention (`skills/structured-gist/benchmarks/semantic-compression/`) are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
 
