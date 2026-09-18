@@ -152,12 +152,17 @@ has_deep_arrow=$(grep -q "↪" "$deep_file" && echo 1 || echo 0)
 [ "$has_deep_arrow" -eq 1 ] && assert "deep.md contains ↪" 0 || assert "deep.md contains ↪" 1
 
 # ---------------------------------------------------------------------------
-# 10. MANIFEST.md references structured-gist
+# 10. MANIFEST.md references structured-gist (DomI-only check; conditional —
+# public repo carries no MANIFEST.md, skip there)
 # ---------------------------------------------------------------------------
-if grep -q "### structured-gist" MANIFEST.md; then
-  assert "MANIFEST.md references structured-gist" 0
+if [ -f "MANIFEST.md" ]; then
+  if grep -q "### structured-gist" MANIFEST.md; then
+    assert "MANIFEST.md references structured-gist" 0
+  else
+    assert "MANIFEST.md references structured-gist" 1
+  fi
 else
-  assert "MANIFEST.md references structured-gist" 1
+  echo "SKIP MANIFEST.md references structured-gist (no MANIFEST.md — not a DomI checkout)"
 fi
 
 # ---------------------------------------------------------------------------
