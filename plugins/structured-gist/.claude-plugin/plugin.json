@@ -1,0 +1,8 @@
+{
+  "name": "structured-gist",
+  "description": "Hierarchical lecture-note output skill. Replace verbose prose with structured, scannable outlines.",
+  "version": "0.4.12",
+  "author": {"name": "domattioli"},
+  "homepage": "https://github.com/domattioli/structured-gist",
+  "license": "Apache-2.0"
+}
