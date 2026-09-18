@@ -100,7 +100,39 @@ renderer enforces line width and draws the bullets):
 Same ladder, same nesting depth, same content. The differences are the
 wrapper (`block`'s fence + 4-space rungs vs. real list syntax + 2-space
 rungs) and the role signal (`block`'s literal glyphs vs. typography — bold
-attribute, literal enumerator label, plain prose leaf). A long `↪` leaf in `responsive` mode can run to any length
+attribute, literal enumerator label, plain prose leaf).
+
+**WRONG — do not do this (#484).** Carrying `block`'s literal `▸`/`↪`
+glyphs AND its 4-space rungs into a `responsive`-mode reply mixes two
+containers: the glyphs double up with the renderer's own bullet (`• ▸`,
+the render-layer R10 defect), and the 4-space rungs read as GFM indented
+code blocks past depth 1. This exact shape shipped twice in one session
+(issue #484 repro):
+
+```
+- **S2-rev mission**
+    ▸ Goal
+        ↪ find a state representation that lets RL agent complete meshing on all 7 domains, evidence-only, no cherry-picking
+    ▸ Method
+        a. Stage A — cheap 2-domain CPU screen, filters candidates
+        b. Stage B — full 7-domain eval, only for Stage A survivors
+```
+
+**RIGHT — glyph-free, 2-space real-list nesting, same tree:**
+
+```
+- **S2-rev mission**
+  - **Goal**
+    - find a state representation that lets RL agent complete meshing on all 7 domains, evidence-only, no cherry-picking
+  - **Method**
+    - a. Stage A — cheap 2-domain CPU screen, filters candidates
+    - b. Stage B — full 7-domain eval, only for Stage A survivors
+```
+
+Rule of thumb: if you are about to type `▸` or `↪` in a `responsive`-mode
+reply, stop — those glyphs belong only to `block` mode's fenced text.
+
+A long `↪` leaf in `responsive` mode can run to any length
 on ONE physical line — the renderer wraps it visually; the linter does not
 hard-wrap the source, and R11 never fires on it (`lint_outline.py` gates R11
 to `is_block_mode` only; `responsive` lines are reclassified before R1–R10

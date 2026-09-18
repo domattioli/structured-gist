@@ -1,6 +1,6 @@
 ---
 name: structured-gist
-version: "0.4.10"
+version: "0.4.11"
 benchmark: word_count_reduction_pct
 description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — role ladder concept (-) → attribute (▸, a named property of the concept) → ordinal/nominal enumerator (I./A./i./a.) → explanation (↪, one prose sentence per branch; usually a leaf, may preview a branch). No plain bullets. Render modes — block (monospace/terminal, fenced; ladder glyphs literal; default for all surfaces) and responsive (opt-in for any markdown-rendering surface incl. GitHub issue/PR/comment bodies AND chat-app replies — a real GFM nested list the renderer wraps to its own box width; glyph-free since v0.3.9: the renderer's bullets carry structure, role moves to typography — bold attributes, literal enumerator labels, plain prose leaves); the legacy inline mode is deprecated (its 4-space rungs render as code blocks on GitHub). Granularity skim (default) / standard / deep. Independent of caveman (structure vs wording). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 ---
@@ -39,7 +39,7 @@ Off: "stop structured-gist" / explicit prose request.
 
 **Activation is verify-don't-assume (same bar as caveman).** Attempt the real Skill call (`/structured-gist deep`, or the level/mode in effect) — do not assume it loaded. On success, state so. On `Unknown skill` (skill not loaded at container start), emit exactly one line — `structured-gist NOT loaded → emulating from SKILL.md` — then apply the outline rules manually from this file. NEVER claim "structured-gist active" without a successful Skill call; a false claim of this exact form shipped in a session recap on 2026-06-27. The missing skill never blocks the turn — emulate and continue.
 
-**Recommended: pair with a Stop-hook activation nudge, not a blocking gate ().** A model can simply forget to invoke structured-gist on a long recap/explanation — there is no in-session signal forcing the check. The fix is advisory, not blocking: a Stop hook that reads the session transcript, and if the final assistant turn is long (word-count heuristic) AND no `Launching skill: structured-gist` backed call appears anywhere in the transcript, emits one stderr nudge line. It never blocks the turn — same fail-open contract as every other advisory hook in this repo (ADR-005: judgement-class checks are Stop advisories, not CI-hard gates). this repo ships this at `scripts/hooks/stop_structured_gist_activation_guard.sh`, wired in `.claude/settings.json`'s `Stop` hook list alongside `stop_skill_claim_guard.sh` (audits false activation *claims*) and `stop_structured_gist_lint.sh` (audits *rule-compliance* of outlines already emitted) — three independent Stop-hook checks, not overlapping: claim-vs-call, output-quality, and activation-was-skipped. Smoke: `scripts/hooks/tests/stop_structured_gist_activation_guard_smoke.sh`. Cron-silent (`CLAUDE_INTERACTIVE=1` gate) and fail-open on missing jq/python3/transcript, matching every sibling hook. A hook cannot itself invoke the `Skill` tool (hooks are shell, not model turns) — it can only nudge the next turn's model into doing so; a blocking variant (exit nonzero to force another turn) was considered and rejected as unnecessarily coercive for a judgement-class check.
+**Recommended: pair with a Stop-hook activation nudge, not a blocking gate.** A model can simply forget to invoke structured-gist on a long recap/explanation — there is no in-session signal forcing the check. The fix is advisory, not blocking: a Stop hook that reads the session transcript, and if the final assistant turn is long (word-count heuristic) AND no `Launching skill: structured-gist` backed call appears anywhere in the transcript, emits one stderr nudge line. It never blocks the turn — same fail-open contract as every other advisory hook (judgement-class checks are Stop advisories, not CI-hard gates). A consumer repo wiring this hook should model it on `stop_structured_gist_activation_guard.sh` alongside a claim-vs-call guard (audits false activation *claims*) and a rule-compliance guard (audits outlines already emitted) — three independent Stop-hook checks, not overlapping: claim-vs-call, output-quality, and activation-was-skipped. Cron-silent (`CLAUDE_INTERACTIVE=1` gate) and fail-open on missing jq/python3/transcript is the recommended contract. A hook cannot itself invoke the `Skill` tool (hooks are shell, not model turns) — it can only nudge the next turn's model into doing so; a blocking variant (exit nonzero to force another turn) was considered and rejected as unnecessarily coercive for a judgement-class check. This skill ships no hook scripts itself — the above is guidance for a consumer repo's own `.claude/hooks`.
 
 ## When — primary target
 
@@ -160,7 +160,9 @@ Full spec (fence-tag rationale, per-mode cost tradeoffs, block-mode line-wrappin
 
 ## Worked example
 
-Block render (` ```text `). Attributes (`▸`) name properties of the concept; enumerators (`I.`/`A.`/`a.`) are ordered/grouped parts; `↪` carries the prose. Note `▸ Capabilities` groups an attribute; its parts are enumerated below it — attribute, then its composition.
+Same "Agentic harness" tree, two ways — pick the one matching your surface's default from `## Render modes` above (**`block` is the default everywhere**; `responsive` is opt-in for GitHub/chat). Attributes (`▸`/bold) name properties of the concept; enumerators (`I.`/`A.`/`a.`) are ordered/grouped parts; the explanation leaf carries the prose. Note `Capabilities` groups an attribute; its parts are enumerated below it — attribute, then its composition.
+
+**`block` — default everywhere, literal glyphs, 4-space rungs, fenced (` ```text `):**
 
 ```text
 - Agentic harness
@@ -179,7 +181,28 @@ Block render (` ```text `). Attributes (`▸`) name properties of the concept; e
     IV. repeat until done / budget cap
 ```
 
-Here `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness (`▸`), not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). (In `responsive` mode — opt-in for GitHub and chat (no longer the default; `block` is), **glyph-free since v0.3.9** — the same tree becomes a real GFM nested list at 2 spaces/rung with the role carried by typography instead of glyphs: `- **Purpose**` for the attribute, `- a. tool execution` for enumerators, and the `↪` sentence as a plain nested prose item. The renderer draws the bullets and wraps each line to its own box width with no code blocks; worked side-by-side example: `reference/render-modes.md` `## Responsive mode`. The deprecated `inline` form indented each rung 4 spaces under a `- ` list item, which GFM turns into emoji-led paragraphs at depth 1 and indented code blocks at depth 2+. More examples: `examples/{skim,standard,deep,attribute}.md`.)
+**`responsive` — opt-in for GitHub/chat, glyph-free since v0.3.9, 2-space real-list nesting, no fence:**
+
+```
+- **Agentic harness**
+  - **Purpose**
+    - a raw text-predictor gains the ability to act
+  - **Capabilities**
+    - a. tool execution
+    - b. control loop
+  - **Output**
+    - an acting agent
+- **Control loop**
+  - I. assemble context
+  - II. emit tool calls
+  - III. harness executes
+    - side effects hit the real world: files, shell, network
+  - IV. repeat until done / budget cap
+```
+
+**Do not mix them (#484).** Never carry `block`'s literal `▸`/`↪` glyphs or its 4-space rungs into a `responsive` reply — the glyph doubles up with the renderer's own bullet (`• ▸`) and the 4-space rungs render as GFM code blocks past depth 1. Negative example + full detail: `reference/render-modes.md` `## Responsive mode`.
+
+In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness, not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). More examples: `examples/{skim,standard,deep,attribute}.md`.
 
 ## Caveman coexistence
 

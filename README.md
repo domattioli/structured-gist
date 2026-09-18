@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/status-alpha-orange)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Version](https://img.shields.io/badge/version-0.4.10-informational)
+![Version](https://img.shields.io/badge/version-0.4.11-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
 ![Tests](https://img.shields.io/badge/tests-61%20passing-success)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
@@ -255,13 +255,17 @@ accepted - launch decision is mine.
     - b. recall dropped below the acceptance threshold
   - C. no SKILL.md change
     - neither direction changed the shipped spec
+  - D. KG mode (experimental, opt-in)
+    - a. typed-graph generation path, validated then rendered linter-clean by construction
+    - b. v0.4.0 comparison: wins structure, loses retention (see [Benchmarks](#5-benchmarks))
+    - c. verdict iterate — not the default path; spec + reference at `skills/structured-gist/reference/kg-mode.md`
 - **Additional benchmark metrics**: word count, rule/test coverage, and semantic retention (see [Benchmarks](#5-benchmarks)) are the tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 8. Documentation
 
-`skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to.
+`skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to, including `reference/kg-mode.md` (the experimental KG generation path — see [Future work](#7-future-work)).
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
