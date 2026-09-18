@@ -35,8 +35,8 @@
 | migration-tristate | sonnet | standard | 48.57 | 0.9477 | 0.9302 | 0.8846 | 0.9196 | 1.0 | 0/2/12 | 0 |
 | migration-tristate | sonnet | deep | 32.5 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 0/0/12 | 0 |
 | near-identical-numbers | sonnet | skim | 81.88 | 0.3115 | 0.3824 | 0.2812 | 0.35 | 0.5 | 5/3/12 | 0 |
-| near-identical-numbers | sonnet | standard | 42.03 | 0.9508 | 0.8676 | 0.9062 | 0.88 | 1.0 | 0/4/12 | 7 |
-| near-identical-numbers | sonnet | deep | 7.61 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 0/0/12 | 6 |
+| near-identical-numbers | sonnet | standard | 42.03 | 0.9508 | 0.8676 | 0.9062 | 0.88 | 1.0 | 0/4/12 | 11 |
+| near-identical-numbers | sonnet | deep | 7.61 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 0/0/12 | 10 |
 | negation-and-true-peers | sonnet | skim | 83.09 | 0.0316 | 0.0294 | 0.125 | 0.0476 | 0.0625 | 15/2/17 | 1 |
 | negation-and-true-peers | sonnet | standard | 17.28 | 0.9895 | 0.9804 | 1.0 | 0.9841 | 1.0 | 0/0/17 | 1 |
 | negation-and-true-peers | sonnet | deep | 11.4 | 0.9895 | 0.9804 | 1.0 | 0.9841 | 1.0 | 0/0/17 | 1 |

@@ -5166,6 +5166,1329 @@
     },
     "test_class": "regression"
   },
+  "registrar-hedge": {
+    "haiku": {
+      "deep": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 11,
+            "verbatim": 1,
+            "verbatim_node_rate": 0.0909
+          },
+          "concept": {
+            "total": 1,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          },
+          "enumerator": {
+            "total": 31,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.0645
+          },
+          "explanation": {
+            "total": 10,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.7627,
+        "extractive_coverage_min2": 0.4746,
+        "extractive_coverage_min3": 0.2847,
+        "longest_novel_span_length": 23,
+        "non_verbatim_node_count": 50,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration: deeznutz.com Squarespace \u2192 Cloudflare Pages"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Current state"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 2,
+            "text": "old site: Squarespace at deeznutz.com (live)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 3,
+            "text": "new site: Cloudflare Pages (deeznutz.pages.dev)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 4,
+            "text": "same CF account hosts personal site (do not touch)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 5,
+            "text": "Registrar for deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 6,
+            "text": "unconfirmed \u2014 must identify in Step 1"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 7,
+            "text": "Squarespace Domains (site built there, most likely)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 8,
+            "text": "Google Domains legacy (possible)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 9,
+            "text": "Another registrar (possible)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 10,
+            "text": "Step 1: Identify registrar + DNS host"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 11,
+            "text": "check registrar via whois + Squarespace/Domains dashboard"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 12,
+            "text": "list all current DNS records (written snapshot)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 13,
+            "text": "snapshot saved for rollback reference"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 14,
+            "text": "Step 2: Choose DNS hosting path"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 15,
+            "text": "constraint: if Squarespace hosts DNS, must support CNAME flattening/ALIAS for apex"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 16,
+            "text": "Path A: keep DNS at Squarespace"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 17,
+            "text": "only if it supports ALIAS/CNAME flattening"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 18,
+            "text": "Path B: move DNS to Cloudflare"
+          },
+          {
+            "depth": 3,
+            "family": "lalpha",
+            "index": 19,
+            "text": "add site as free zone"
+          },
+          {
+            "depth": 3,
+            "family": "lalpha",
+            "index": 20,
+            "text": "import existing records"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 22,
+            "text": "tradeoff: instant rollback becomes documented-procedure rollback"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 23,
+            "text": "Preference"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 24,
+            "text": "record-level cutover (revertible in minutes); avoid destructive steps"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 25,
+            "text": "do NOT cancel Squarespace subscription"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 26,
+            "text": "do NOT delete Squarespace site"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 27,
+            "text": "do NOT transfer domain registration yet"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 28,
+            "text": "Step 3: Reduce TTLs"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 29,
+            "text": "before cutover, lower TTLs if possible on current DNS host"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 30,
+            "text": "Step 4: Add custom domains in Cloudflare"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 31,
+            "text": "Cloudflare Pages UI > deeznutz > Custom domains"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 33,
+            "text": "add www.deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 34,
+            "text": "apply prescribed DNS changes"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 35,
+            "text": "Step 5: Verify cutover"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 36,
+            "text": "apex + www resolve to new site over HTTPS"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 37,
+            "text": "cert issued correctly"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 38,
+            "text": "http \u2192 https redirect works"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 39,
+            "text": "www \u2194 apex canonicalization correct"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 40,
+            "text": "extensionless paths return 200 (e.g., /about)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 41,
+            "text": "Step 6: Documentation + notification"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 42,
+            "text": "save exact rollback steps (procedure + timing)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 43,
+            "text": "remind user to submit sitemap to Google Search Console"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 44,
+            "text": "Rollback requirement"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 45,
+            "text": "old site must remain intact ~2 weeks post-cutover"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 46,
+            "text": "enables fast revert if needed"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 47,
+            "text": "DNS revert fastest on path A, slower on path B"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 49,
+            "text": "contact form backend not functional (separate fix in progress)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 50,
+            "text": "user accepts this risk"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 51,
+            "text": "launch decision belongs to user"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 52,
+            "text": "does not block DNS migration"
+          }
+        ],
+        "novel_span_count": 32,
+        "novel_span_count_ge3": 18,
+        "output_token_count": 295,
+        "representative_novel_spans": [
+          {
+            "end": 230,
+            "length": 23,
+            "start": 207,
+            "text": "correctly http \u2192 https redirect works www \u2194 apex canonicalization correct extensionless paths return 200 e.g /about step 6 documentation + notification save"
+          },
+          {
+            "end": 270,
+            "length": 16,
+            "start": 254,
+            "text": "post-cutover enables fast revert if needed dns revert fastest on path a slower on path b"
+          },
+          {
+            "end": 82,
+            "length": 10,
+            "start": 72,
+            "text": "written snapshot snapshot saved for rollback reference step 2 choose"
+          },
+          {
+            "end": 112,
+            "length": 10,
+            "start": 102,
+            "text": "only if it supports alias/cname flattening path b move dns"
+          },
+          {
+            "end": 92,
+            "length": 8,
+            "start": 84,
+            "text": "path constraint if squarespace hosts dns must support"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 53,
+        "verbatim_node_count": 3,
+        "verbatim_node_rate": 0.0566
+      },
+      "skim": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 3,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.6667
+          },
+          "concept": {
+            "total": 1,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          },
+          "explanation": {
+            "total": 3,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.7714,
+        "extractive_coverage_min2": 0.4857,
+        "extractive_coverage_min3": 0.4286,
+        "longest_novel_span_length": 5,
+        "non_verbatim_node_count": 5,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "unconfirmed \u2014 likely Squarespace Domains, possibly Google Domains legacy, or another"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "DNS record cutover (revertible in minutes); Squarespace as rollback for ~2 weeks"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 5,
+            "text": "Risk"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 6,
+            "text": "contact form backend broken, accepted by user"
+          }
+        ],
+        "novel_span_count": 5,
+        "novel_span_count_ge3": 4,
+        "output_token_count": 35,
+        "representative_novel_spans": [
+          {
+            "end": 5,
+            "length": 5,
+            "start": 0,
+            "text": "domain migration registrar unconfirmed \u2014"
+          },
+          {
+            "end": 19,
+            "length": 5,
+            "start": 14,
+            "text": "path dns record cutover revertible"
+          },
+          {
+            "end": 35,
+            "length": 4,
+            "start": 31,
+            "text": "broken accepted by user"
+          },
+          {
+            "end": 24,
+            "length": 3,
+            "start": 21,
+            "text": "squarespace as rollback"
+          },
+          {
+            "end": 28,
+            "length": 1,
+            "start": 27,
+            "text": "risk"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 7,
+        "verbatim_node_count": 2,
+        "verbatim_node_rate": 0.2857
+      },
+      "standard": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 8,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.375
+          },
+          "concept": {
+            "total": 1,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          },
+          "enumerator": {
+            "total": 11,
+            "verbatim": 4,
+            "verbatim_node_rate": 0.3636
+          },
+          "explanation": {
+            "total": 6,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8133,
+        "extractive_coverage_min2": 0.5361,
+        "extractive_coverage_min3": 0.3434,
+        "longest_novel_span_length": 15,
+        "non_verbatim_node_count": 19,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Scope"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "move deeznutz.com from Squarespace to Cloudflare Pages; Squarespace stays as rollback for ~2 weeks"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Registrar for deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "unconfirmed \u2014 likely Squarespace Domains, possibly Google Domains legacy, or another registrar"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 9,
+            "text": "identify which registrar + current DNS host, snapshot all current DNS records before any changes"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 10,
+            "text": "DNS hosting decision"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 11,
+            "text": "if Squarespace hosts DNS: confirm it supports CNAME flattening/ALIAS for apex"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 12,
+            "text": "if not: move DNS to Cloudflare (free zone, import records, switch nameservers)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 13,
+            "text": "Tradeoff"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 14,
+            "text": "DNS move weakens instant-rollback property; requires documented procedure instead"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 15,
+            "text": "Preference"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 16,
+            "text": "record-level cutover that reverts in minutes; no destructive steps (keep Squarespace site + subscription intact, do not transfer domain registration yet)"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 19,
+            "text": "add custom domains (apex + www) in Cloudflare Pages UI"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 20,
+            "text": "apply DNS changes it prescribes"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 21,
+            "text": "verify HTTPS, certs, canonicalization, extensionless paths"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 22,
+            "text": "save exact rollback procedure"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 23,
+            "text": "submit sitemap to Google Search Console"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 25,
+            "text": "contact form backend is broken (being fixed separately) but user accepts the risk and will proceed"
+          }
+        ],
+        "novel_span_count": 22,
+        "novel_span_count_ge3": 9,
+        "output_token_count": 166,
+        "representative_novel_spans": [
+          {
+            "end": 97,
+            "length": 15,
+            "start": 82,
+            "text": "tradeoff dns move weakens instant-rollback property requires documented procedure instead preference record-level cutover that reverts"
+          },
+          {
+            "end": 66,
+            "length": 8,
+            "start": 58,
+            "text": "decision if squarespace hosts dns confirm it supports"
+          },
+          {
+            "end": 166,
+            "length": 8,
+            "start": 158,
+            "text": "but user accepts the risk and will proceed"
+          },
+          {
+            "end": 139,
+            "length": 7,
+            "start": 132,
+            "text": "verify https certs canonicalization extensionless paths save"
+          },
+          {
+            "end": 14,
+            "length": 5,
+            "start": 9,
+            "text": "pages squarespace stays as rollback"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 26,
+        "verbatim_node_count": 7,
+        "verbatim_node_rate": 0.2692
+      }
+    },
+    "sonnet": {
+      "deep": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 11,
+            "verbatim": 1,
+            "verbatim_node_rate": 0.0909
+          },
+          "concept": {
+            "total": 1,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          },
+          "enumerator": {
+            "total": 31,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.0645
+          },
+          "explanation": {
+            "total": 10,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.7627,
+        "extractive_coverage_min2": 0.4746,
+        "extractive_coverage_min3": 0.2847,
+        "longest_novel_span_length": 23,
+        "non_verbatim_node_count": 50,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration: deeznutz.com Squarespace \u2192 Cloudflare Pages"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Current state"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 2,
+            "text": "old site: Squarespace at deeznutz.com (live)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 3,
+            "text": "new site: Cloudflare Pages (deeznutz.pages.dev)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 4,
+            "text": "same CF account hosts personal site (do not touch)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 5,
+            "text": "Registrar for deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 6,
+            "text": "unconfirmed \u2014 must identify in Step 1"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 7,
+            "text": "Squarespace Domains (site built there, most likely)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 8,
+            "text": "Google Domains legacy (possible)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 9,
+            "text": "Another registrar (possible)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 10,
+            "text": "Step 1: Identify registrar + DNS host"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 11,
+            "text": "check registrar via whois + Squarespace/Domains dashboard"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 12,
+            "text": "list all current DNS records (written snapshot)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 13,
+            "text": "snapshot saved for rollback reference"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 14,
+            "text": "Step 2: Choose DNS hosting path"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 15,
+            "text": "constraint: if Squarespace hosts DNS, must support CNAME flattening/ALIAS for apex"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 16,
+            "text": "Path A: keep DNS at Squarespace"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 17,
+            "text": "only if it supports ALIAS/CNAME flattening"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 18,
+            "text": "Path B: move DNS to Cloudflare"
+          },
+          {
+            "depth": 3,
+            "family": "lalpha",
+            "index": 19,
+            "text": "add site as free zone"
+          },
+          {
+            "depth": 3,
+            "family": "lalpha",
+            "index": 20,
+            "text": "import existing records"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 22,
+            "text": "tradeoff: instant rollback becomes documented-procedure rollback"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 23,
+            "text": "Preference"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 24,
+            "text": "record-level cutover (revertible in minutes); avoid destructive steps"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 25,
+            "text": "do NOT cancel Squarespace subscription"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 26,
+            "text": "do NOT delete Squarespace site"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 27,
+            "text": "do NOT transfer domain registration yet"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 28,
+            "text": "Step 3: Reduce TTLs"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 29,
+            "text": "before cutover, lower TTLs if possible on current DNS host"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 30,
+            "text": "Step 4: Add custom domains in Cloudflare"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 31,
+            "text": "Cloudflare Pages UI > deeznutz > Custom domains"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 33,
+            "text": "add www.deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 34,
+            "text": "apply prescribed DNS changes"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 35,
+            "text": "Step 5: Verify cutover"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 36,
+            "text": "apex + www resolve to new site over HTTPS"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 37,
+            "text": "cert issued correctly"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 38,
+            "text": "http \u2192 https redirect works"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 39,
+            "text": "www \u2194 apex canonicalization correct"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 40,
+            "text": "extensionless paths return 200 (e.g., /about)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 41,
+            "text": "Step 6: Documentation + notification"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 42,
+            "text": "save exact rollback steps (procedure + timing)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 43,
+            "text": "remind user to submit sitemap to Google Search Console"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 44,
+            "text": "Rollback requirement"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 45,
+            "text": "old site must remain intact ~2 weeks post-cutover"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 46,
+            "text": "enables fast revert if needed"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 47,
+            "text": "DNS revert fastest on path A, slower on path B"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 49,
+            "text": "contact form backend not functional (separate fix in progress)"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 50,
+            "text": "user accepts this risk"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 51,
+            "text": "launch decision belongs to user"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 52,
+            "text": "does not block DNS migration"
+          }
+        ],
+        "novel_span_count": 32,
+        "novel_span_count_ge3": 18,
+        "output_token_count": 295,
+        "representative_novel_spans": [
+          {
+            "end": 230,
+            "length": 23,
+            "start": 207,
+            "text": "correctly http \u2192 https redirect works www \u2194 apex canonicalization correct extensionless paths return 200 e.g /about step 6 documentation + notification save"
+          },
+          {
+            "end": 270,
+            "length": 16,
+            "start": 254,
+            "text": "post-cutover enables fast revert if needed dns revert fastest on path a slower on path b"
+          },
+          {
+            "end": 82,
+            "length": 10,
+            "start": 72,
+            "text": "written snapshot snapshot saved for rollback reference step 2 choose"
+          },
+          {
+            "end": 112,
+            "length": 10,
+            "start": 102,
+            "text": "only if it supports alias/cname flattening path b move dns"
+          },
+          {
+            "end": 92,
+            "length": 8,
+            "start": 84,
+            "text": "path constraint if squarespace hosts dns must support"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 53,
+        "verbatim_node_count": 3,
+        "verbatim_node_rate": 0.0566
+      },
+      "skim": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 3,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.6667
+          },
+          "concept": {
+            "total": 1,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          },
+          "explanation": {
+            "total": 3,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.7714,
+        "extractive_coverage_min2": 0.4857,
+        "extractive_coverage_min3": 0.4286,
+        "longest_novel_span_length": 5,
+        "non_verbatim_node_count": 5,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "unconfirmed \u2014 likely Squarespace Domains, possibly Google Domains legacy, or another"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "DNS record cutover (revertible in minutes); Squarespace as rollback for ~2 weeks"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 5,
+            "text": "Risk"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 6,
+            "text": "contact form backend broken, accepted by user"
+          }
+        ],
+        "novel_span_count": 5,
+        "novel_span_count_ge3": 4,
+        "output_token_count": 35,
+        "representative_novel_spans": [
+          {
+            "end": 5,
+            "length": 5,
+            "start": 0,
+            "text": "domain migration registrar unconfirmed \u2014"
+          },
+          {
+            "end": 19,
+            "length": 5,
+            "start": 14,
+            "text": "path dns record cutover revertible"
+          },
+          {
+            "end": 35,
+            "length": 4,
+            "start": 31,
+            "text": "broken accepted by user"
+          },
+          {
+            "end": 24,
+            "length": 3,
+            "start": 21,
+            "text": "squarespace as rollback"
+          },
+          {
+            "end": 28,
+            "length": 1,
+            "start": 27,
+            "text": "risk"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 7,
+        "verbatim_node_count": 2,
+        "verbatim_node_rate": 0.2857
+      },
+      "standard": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 8,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.375
+          },
+          "concept": {
+            "total": 1,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          },
+          "enumerator": {
+            "total": 11,
+            "verbatim": 4,
+            "verbatim_node_rate": 0.3636
+          },
+          "explanation": {
+            "total": 6,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8133,
+        "extractive_coverage_min2": 0.5361,
+        "extractive_coverage_min3": 0.3434,
+        "longest_novel_span_length": 15,
+        "non_verbatim_node_count": 19,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Scope"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "move deeznutz.com from Squarespace to Cloudflare Pages; Squarespace stays as rollback for ~2 weeks"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Registrar for deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "unconfirmed \u2014 likely Squarespace Domains, possibly Google Domains legacy, or another registrar"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 9,
+            "text": "identify which registrar + current DNS host, snapshot all current DNS records before any changes"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 10,
+            "text": "DNS hosting decision"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 11,
+            "text": "if Squarespace hosts DNS: confirm it supports CNAME flattening/ALIAS for apex"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 12,
+            "text": "if not: move DNS to Cloudflare (free zone, import records, switch nameservers)"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 13,
+            "text": "Tradeoff"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 14,
+            "text": "DNS move weakens instant-rollback property; requires documented procedure instead"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 15,
+            "text": "Preference"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 16,
+            "text": "record-level cutover that reverts in minutes; no destructive steps (keep Squarespace site + subscription intact, do not transfer domain registration yet)"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 19,
+            "text": "add custom domains (apex + www) in Cloudflare Pages UI"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 20,
+            "text": "apply DNS changes it prescribes"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 21,
+            "text": "verify HTTPS, certs, canonicalization, extensionless paths"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 22,
+            "text": "save exact rollback procedure"
+          },
+          {
+            "depth": 2,
+            "family": "uroman",
+            "index": 23,
+            "text": "submit sitemap to Google Search Console"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 25,
+            "text": "contact form backend is broken (being fixed separately) but user accepts the risk and will proceed"
+          }
+        ],
+        "novel_span_count": 22,
+        "novel_span_count_ge3": 9,
+        "output_token_count": 166,
+        "representative_novel_spans": [
+          {
+            "end": 97,
+            "length": 15,
+            "start": 82,
+            "text": "tradeoff dns move weakens instant-rollback property requires documented procedure instead preference record-level cutover that reverts"
+          },
+          {
+            "end": 66,
+            "length": 8,
+            "start": 58,
+            "text": "decision if squarespace hosts dns confirm it supports"
+          },
+          {
+            "end": 166,
+            "length": 8,
+            "start": 158,
+            "text": "but user accepts the risk and will proceed"
+          },
+          {
+            "end": 139,
+            "length": 7,
+            "start": 132,
+            "text": "verify https certs canonicalization extensionless paths save"
+          },
+          {
+            "end": 14,
+            "length": 5,
+            "start": 9,
+            "text": "pages squarespace stays as rollback"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 26,
+        "verbatim_node_count": 7,
+        "verbatim_node_rate": 0.2692
+      }
+    },
+    "test_class": "pressure-tests"
+  },
   "synthetic-scale-verylarge": {
     "haiku": {
       "deep": {

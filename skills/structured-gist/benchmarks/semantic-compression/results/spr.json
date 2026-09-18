@@ -233,7 +233,7 @@
       "deep": {
         "blinded_task_weighted_fact_recall": 1.0,
         "compression_ratio": 0.9239,
-        "conformance_violation_count": 6,
+        "conformance_violation_count": 10,
         "critical_units_lost": 0,
         "critical_units_partial": 0,
         "critical_units_total": 12,
@@ -261,7 +261,7 @@
       "standard": {
         "blinded_task_weighted_fact_recall": 0.8676,
         "compression_ratio": 0.5797,
-        "conformance_violation_count": 7,
+        "conformance_violation_count": 11,
         "critical_units_lost": 0,
         "critical_units_partial": 4,
         "critical_units_total": 12,

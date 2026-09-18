@@ -13,8 +13,8 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 | case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | near-identical-numbers | sonnet | skim | 276 | 50 | 81.88 | 0 | 0.3115 | 0.25 | 57.1 | 0 | 0.5 |
-| near-identical-numbers | sonnet | standard | 276 | 160 | 42.03 | 7 | 0.9508 | 0.9167 | 0 | 0 | 1.0 |
-| near-identical-numbers | sonnet | deep | 276 | 255 | 7.61 | 6 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| near-identical-numbers | sonnet | standard | 276 | 160 | 42.03 | 11 | 0.9508 | 0.9167 | 0 | 0 | 1.0 |
+| near-identical-numbers | sonnet | deep | 276 | 255 | 7.61 | 10 | 1.0 | 1.0 | 0 | 0 | 1.0 |
 | real-benchmark-archaeology | sonnet | skim | 466 | 74 | 84.12 | 0 | 0.4658 | 0.5 | 33.3 | 0 | 0.5625 |
 | real-benchmark-archaeology | sonnet | standard | 466 | 190 | 59.23 | 3 | 0.8846 | 0.9167 | 4.2 | 0 | 0.8125 |
 | real-benchmark-archaeology | sonnet | deep | 466 | 344 | 26.18 | 2 | 0.9658 | 1.0 | 0 | 0 | 0.875 |
