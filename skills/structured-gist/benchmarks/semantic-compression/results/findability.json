@@ -12838,6 +12838,5010 @@
     },
     "test_class": "regression"
   },
+  "registrar-hedge": {
+    "diagnostic_case_baseline_token_count": 334,
+    "opus-v0.4.12": {
+      "deep": {
+        "gist_token_count": 492,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": -0.0083,
+                "delta_evidence_span": -0.0144,
+                "eligible": true,
+                "gist_eac": 0.0366,
+                "gist_evidence_span": 0.0305
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": -0.0083,
+                "delta_evidence_span": -0.0144,
+                "eligible": true,
+                "gist_eac": 0.0366,
+                "gist_evidence_span": 0.0305
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0455,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.0455,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0455,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.0455,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0013,
+                "delta_evidence_span": -0.0586,
+                "eligible": true,
+                "gist_eac": 0.9837,
+                "gist_evidence_span": 0.0163
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0013,
+                "delta_evidence_span": -0.0586,
+                "eligible": true,
+                "gist_eac": 0.9837,
+                "gist_evidence_span": 0.0163
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.9545,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.9545,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.9545,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.9545,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.0417,
+                "delta_evidence_span": -0.0067,
+                "eligible": true,
+                "gist_eac": 0.2154,
+                "gist_evidence_span": 0.122
+              },
+              "strict": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.0417,
+                "delta_evidence_span": -0.0067,
+                "eligible": true,
+                "gist_eac": 0.2154,
+                "gist_evidence_span": 0.122
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 16,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                29,
+                12
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1818,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.1818,
+                "source_locality_span": 0.1364
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1818,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.1818,
+                "source_locality_span": 0.1364
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.0096,
+                "delta_evidence_span": -0.0295,
+                "eligible": true,
+                "gist_eac": 0.3557,
+                "gist_evidence_span": 0.0244
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.0096,
+                "delta_evidence_span": -0.0295,
+                "eligible": true,
+                "gist_eac": 0.3557,
+                "gist_evidence_span": 0.0244
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 2,
+              "lca_depth": 0,
+              "lca_node_index": 39,
+              "support_node_indices": [
+                41,
+                44
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0909
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0909
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.0096,
+                "delta_evidence_span": -0.0376,
+                "eligible": true,
+                "gist_eac": 0.3557,
+                "gist_evidence_span": 0.0163
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.0096,
+                "delta_evidence_span": -0.0376,
+                "eligible": true,
+                "gist_eac": 0.3557,
+                "gist_evidence_span": 0.0163
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0215,
+                "delta_evidence_span": -0.0354,
+                "eligible": true,
+                "gist_eac": 0.4736,
+                "gist_evidence_span": 0.0305
+              },
+              "strict": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0215,
+                "delta_evidence_span": -0.0354,
+                "eligible": true,
+                "gist_eac": 0.4736,
+                "gist_evidence_span": 0.0305
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4545,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.4545,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4545,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.4545,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": -0.0191,
+                "delta_evidence_span": -0.0524,
+                "eligible": true,
+                "gist_eac": 0.6037,
+                "gist_evidence_span": 0.0793
+              },
+              "strict": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": -0.0191,
+                "delta_evidence_span": -0.0524,
+                "eligible": true,
+                "gist_eac": 0.6037,
+                "gist_evidence_span": 0.0793
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 3,
+              "lca_depth": 1,
+              "lca_node_index": 57,
+              "support_node_indices": [
+                60,
+                64
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6364,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.6364,
+                "source_locality_span": 0.1364
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6364,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.6364,
+                "source_locality_span": 0.1364
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_baseline"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial",
+                  "r3:unaligned_in_baseline"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_source"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial,unaligned_in_source"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": -0.037,
+                "delta_evidence_span": -0.0764,
+                "eligible": true,
+                "gist_eac": 0.2744,
+                "gist_evidence_span": 0.0224
+              },
+              "strict": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": -0.037,
+                "delta_evidence_span": -0.0764,
+                "eligible": true,
+                "gist_eac": 0.2744,
+                "gist_evidence_span": 0.0224
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2727,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2727,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2727,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2727,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.0354,
+                "delta_evidence_span": -0.0104,
+                "eligible": true,
+                "gist_eac": 0.248,
+                "gist_evidence_span": 0.0285
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.0354,
+                "delta_evidence_span": -0.0104,
+                "eligible": true,
+                "gist_eac": 0.248,
+                "gist_evidence_span": 0.0285
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2273,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2273,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2273,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2273,
+                "source_locality_span": 0.0455
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "r3": [
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 22,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "r3": [
+                "status=partial",
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 22,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      },
+      "skim": {
+        "gist_token_count": 169,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0557,
+                "delta_evidence_span": 0.0379,
+                "eligible": true,
+                "gist_eac": 0.1006,
+                "gist_evidence_span": 0.0828
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0557,
+                "delta_evidence_span": 0.0379,
+                "eligible": true,
+                "gist_eac": 0.1006,
+                "gist_evidence_span": 0.0828
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0556,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.0556,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0909,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 11,
+                "source_eac": 0.0909,
+                "source_locality_span": 0.0909
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": -0.0098,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.0651
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": -0.0098,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.0651
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0556,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.9444,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0909,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 11,
+                "source_eac": 0.9091,
+                "source_locality_span": 0.0909
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.2109,
+                "delta_evidence_span": 0.037,
+                "eligible": true,
+                "gist_eac": 0.3846,
+                "gist_evidence_span": 0.1657
+              },
+              "strict": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.2109,
+                "delta_evidence_span": 0.037,
+                "eligible": true,
+                "gist_eac": 0.3846,
+                "gist_evidence_span": 0.1657
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 11,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                20,
+                8
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2222,
+                "gist_locality_span": 0.1667,
+                "retained_set_size": 18,
+                "source_eac": 0.2222,
+                "source_locality_span": 0.1667
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.2727,
+                "retained_set_size": 11,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.2727
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": 0.2205,
+                "delta_evidence_span": -0.0243,
+                "eligible": true,
+                "gist_eac": 0.5858,
+                "gist_evidence_span": 0.0296
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4444,
+                "gist_locality_span": 0.1111,
+                "retained_set_size": 18,
+                "source_eac": 0.4444,
+                "source_locality_span": 0.1111
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": 0.2205,
+                "delta_evidence_span": -0.0361,
+                "eligible": true,
+                "gist_eac": 0.5858,
+                "gist_evidence_span": 0.0178
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4444,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.4444,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.2165,
+                "delta_evidence_span": -0.0245,
+                "eligible": true,
+                "gist_eac": 0.6686,
+                "gist_evidence_span": 0.0414
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0556,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.5556,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=partial"
+                ]
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.233,
+                "delta_evidence_span": -0.0751,
+                "eligible": true,
+                "gist_eac": 0.5444,
+                "gist_evidence_span": 0.0237
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.3333,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=partial"
+                ]
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.2549,
+                "delta_evidence_span": 0.038,
+                "eligible": true,
+                "gist_eac": 0.4675,
+                "gist_evidence_span": 0.0769
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.2549,
+                "delta_evidence_span": 0.038,
+                "eligible": true,
+                "gist_eac": 0.4675,
+                "gist_evidence_span": 0.0769
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2778,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.2778,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4545,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 11,
+                "source_eac": 0.4545,
+                "source_locality_span": 0.0909
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 18,
+            "unit_ids": [
+              "f1",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "r1",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f11": [
+                "status=partial"
+              ],
+              "f14": [
+                "status=partial"
+              ],
+              "f15": [
+                "status=partial"
+              ],
+              "f16": [
+                "status=partial"
+              ],
+              "f6": [
+                "status=partial"
+              ],
+              "f7": [
+                "status=partial"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=partial"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 11,
+            "unit_ids": [
+              "f1",
+              "f12",
+              "f13",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      },
+      "standard": {
+        "gist_token_count": 348,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0097,
+                "delta_evidence_span": 0.0011,
+                "eligible": true,
+                "gist_eac": 0.0546,
+                "gist_evidence_span": 0.046
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0097,
+                "delta_evidence_span": 0.0011,
+                "eligible": true,
+                "gist_eac": 0.0546,
+                "gist_evidence_span": 0.046
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0476,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.0476,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.05,
+                "gist_locality_span": 0.05,
+                "retained_set_size": 20,
+                "source_eac": 0.05,
+                "source_locality_span": 0.05
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": -0.0404,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.0345
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": -0.0404,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.0345
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0476,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.9524,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.05,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.05,
+                "retained_set_size": 20,
+                "source_eac": 0.95,
+                "source_locality_span": 0.05
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.0792,
+                "delta_evidence_span": 0.0035,
+                "eligible": true,
+                "gist_eac": 0.2529,
+                "gist_evidence_span": 0.1322
+              },
+              "strict": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.0792,
+                "delta_evidence_span": 0.0035,
+                "eligible": true,
+                "gist_eac": 0.2529,
+                "gist_evidence_span": 0.1322
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 14,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                23,
+                8
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1905,
+                "gist_locality_span": 0.1429,
+                "retained_set_size": 21,
+                "source_eac": 0.1905,
+                "source_locality_span": 0.1429
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2,
+                "gist_locality_span": 0.15,
+                "retained_set_size": 20,
+                "source_eac": 0.2,
+                "source_locality_span": 0.15
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0853,
+                "delta_evidence_span": -0.0343,
+                "eligible": true,
+                "gist_eac": 0.5374,
+                "gist_evidence_span": 0.0316
+              },
+              "strict": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0853,
+                "delta_evidence_span": -0.0343,
+                "eligible": true,
+                "gist_eac": 0.5374,
+                "gist_evidence_span": 0.0316
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4286,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.4286,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.45,
+                "gist_locality_span": 0.05,
+                "retained_set_size": 20,
+                "source_eac": 0.45,
+                "source_locality_span": 0.05
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": 0.0554,
+                "delta_evidence_span": -0.0196,
+                "eligible": true,
+                "gist_eac": 0.6782,
+                "gist_evidence_span": 0.1121
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f9:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.619,
+                "gist_locality_span": 0.1429,
+                "retained_set_size": 21,
+                "source_eac": 0.619,
+                "source_locality_span": 0.1429
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f9:status=partial"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_baseline"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial",
+                  "r3:unaligned_in_baseline"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_source"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial,unaligned_in_source"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.0191,
+                "delta_evidence_span": -0.0729,
+                "eligible": true,
+                "gist_eac": 0.3305,
+                "gist_evidence_span": 0.0259
+              },
+              "strict": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.0191,
+                "delta_evidence_span": -0.0729,
+                "eligible": true,
+                "gist_eac": 0.3305,
+                "gist_evidence_span": 0.0259
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2857,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.2857,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3,
+                "gist_locality_span": 0.05,
+                "retained_set_size": 20,
+                "source_eac": 0.3,
+                "source_locality_span": 0.05
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.0863,
+                "delta_evidence_span": 0.0013,
+                "eligible": true,
+                "gist_eac": 0.2989,
+                "gist_evidence_span": 0.0402
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.0863,
+                "delta_evidence_span": 0.0013,
+                "eligible": true,
+                "gist_eac": 0.2989,
+                "gist_evidence_span": 0.0402
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2381,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.2381,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.25,
+                "gist_locality_span": 0.05,
+                "retained_set_size": 20,
+                "source_eac": 0.25,
+                "source_locality_span": 0.05
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f6": [
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 21,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f6": [
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=partial"
+              ],
+              "r3": [
+                "status=partial",
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 20,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f7",
+              "f8",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      }
+    },
+    "opus-v0.5.0b1": {
+      "deep": {
+        "gist_token_count": 450,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": -0.0227,
+                "delta_evidence_span": -0.0293,
+                "eligible": true,
+                "gist_eac": 0.0222,
+                "gist_evidence_span": 0.0156
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": -0.0227,
+                "delta_evidence_span": -0.0293,
+                "eligible": true,
+                "gist_eac": 0.0222,
+                "gist_evidence_span": 0.0156
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0455,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.0455,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0455,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.0455,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0561,
+                "delta_evidence_span": -0.0593,
+                "eligible": true,
+                "gist_eac": 0.9289,
+                "gist_evidence_span": 0.0156
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0561,
+                "delta_evidence_span": -0.0593,
+                "eligible": true,
+                "gist_eac": 0.9289,
+                "gist_evidence_span": 0.0156
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0454,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.9091,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.9545,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": -0.0454,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.9091,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.9545,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.0485,
+                "delta_evidence_span": -0.002,
+                "eligible": true,
+                "gist_eac": 0.2222,
+                "gist_evidence_span": 0.1267
+              },
+              "strict": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.0485,
+                "delta_evidence_span": -0.002,
+                "eligible": true,
+                "gist_eac": 0.2222,
+                "gist_evidence_span": 0.1267
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 16,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                29,
+                12
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1818,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.1818,
+                "source_locality_span": 0.1364
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1818,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.1818,
+                "source_locality_span": 0.1364
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.032,
+                "delta_evidence_span": -0.0406,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_evidence_span": 0.0133
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.032,
+                "delta_evidence_span": -0.0406,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_evidence_span": 0.0133
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 1,
+              "lca_depth": 0,
+              "lca_node_index": 38,
+              "support_node_indices": [
+                38,
+                40
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0909
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0909
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.032,
+                "delta_evidence_span": -0.0472,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_evidence_span": 0.0067
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.032,
+                "delta_evidence_span": -0.0472,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_evidence_span": 0.0067
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0123,
+                "delta_evidence_span": -0.0459,
+                "eligible": true,
+                "gist_eac": 0.4644,
+                "gist_evidence_span": 0.02
+              },
+              "strict": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0123,
+                "delta_evidence_span": -0.0459,
+                "eligible": true,
+                "gist_eac": 0.4644,
+                "gist_evidence_span": 0.02
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4545,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.4545,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4545,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.4545,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": 0.0061,
+                "delta_evidence_span": -0.0317,
+                "eligible": true,
+                "gist_eac": 0.6289,
+                "gist_evidence_span": 0.1
+              },
+              "strict": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": 0.0061,
+                "delta_evidence_span": -0.0317,
+                "eligible": true,
+                "gist_eac": 0.6289,
+                "gist_evidence_span": 0.1
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 7,
+              "lca_depth": 1,
+              "lca_node_index": 57,
+              "support_node_indices": [
+                61,
+                69
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6364,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.6364,
+                "source_locality_span": 0.1364
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6364,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.6364,
+                "source_locality_span": 0.1364
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_baseline"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial",
+                  "r3:unaligned_in_baseline"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_source"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial,unaligned_in_source"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": -0.0336,
+                "delta_evidence_span": -0.081,
+                "eligible": true,
+                "gist_eac": 0.2778,
+                "gist_evidence_span": 0.0178
+              },
+              "strict": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": -0.0336,
+                "delta_evidence_span": -0.081,
+                "eligible": true,
+                "gist_eac": 0.2778,
+                "gist_evidence_span": 0.0178
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2727,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2727,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2727,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2727,
+                "source_locality_span": 0.0455
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.0318,
+                "delta_evidence_span": -0.0189,
+                "eligible": true,
+                "gist_eac": 0.2444,
+                "gist_evidence_span": 0.02
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.0318,
+                "delta_evidence_span": -0.0189,
+                "eligible": true,
+                "gist_eac": 0.2444,
+                "gist_evidence_span": 0.02
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2273,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2273,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2273,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2273,
+                "source_locality_span": 0.0455
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "r3": [
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 22,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "r3": [
+                "status=partial",
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 22,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      },
+      "skim": {
+        "gist_token_count": 92,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0638,
+                "delta_evidence_span": 0.0421,
+                "eligible": true,
+                "gist_eac": 0.1087,
+                "gist_evidence_span": 0.087
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0638,
+                "delta_evidence_span": 0.0421,
+                "eligible": true,
+                "gist_eac": 0.1087,
+                "gist_evidence_span": 0.087
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0666,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1333,
+                "gist_locality_span": 0.0667,
+                "retained_set_size": 15,
+                "source_eac": 0.0667,
+                "source_locality_span": 0.0667
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2,
+                "gist_locality_span": 0.2,
+                "retained_set_size": 5,
+                "source_eac": 0.2,
+                "source_locality_span": 0.2
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0285,
+                "delta_evidence_span": 0.0121,
+                "eligible": true,
+                "gist_eac": 0.9565,
+                "gist_evidence_span": 0.087
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0285,
+                "delta_evidence_span": 0.0121,
+                "eligible": true,
+                "gist_eac": 0.9565,
+                "gist_evidence_span": 0.087
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0667,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0667,
+                "retained_set_size": 15,
+                "source_eac": 0.9333,
+                "source_locality_span": 0.0667
+              },
+              "strict": {
+                "delta_eac": 0.2,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.2,
+                "retained_set_size": 5,
+                "source_eac": 0.8,
+                "source_locality_span": 0.2
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": -0.0107,
+                "delta_evidence_span": 0.0126,
+                "eligible": true,
+                "gist_eac": 0.163,
+                "gist_evidence_span": 0.1413
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=partial",
+                  "f3:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0667,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2,
+                "gist_locality_span": 0.2,
+                "retained_set_size": 15,
+                "source_eac": 0.2667,
+                "source_locality_span": 0.2
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=partial",
+                  "f3:status=partial"
+                ]
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted",
+                  "f6:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted",
+                  "f6:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted",
+                  "f6:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted",
+                  "f6:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.0479,
+                "delta_evidence_span": -0.0116,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_evidence_span": 0.0543
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0667,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4,
+                "gist_locality_span": 0.0667,
+                "retained_set_size": 15,
+                "source_eac": 0.4667,
+                "source_locality_span": 0.0667
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=partial"
+                ]
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=omitted",
+                  "f11:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=omitted",
+                  "f11:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f19:status=omitted",
+                  "f19:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f19:status=omitted",
+                  "f19:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f19:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f19:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f11": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f19": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f6": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 15,
+            "unit_ids": [
+              "f1",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f7",
+              "r1",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f11": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f13": [
+                "status=partial"
+              ],
+              "f14": [
+                "status=partial"
+              ],
+              "f15": [
+                "status=partial"
+              ],
+              "f16": [
+                "status=partial"
+              ],
+              "f17": [
+                "status=partial"
+              ],
+              "f19": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=partial"
+              ],
+              "f3": [
+                "status=partial"
+              ],
+              "f4": [
+                "status=partial"
+              ],
+              "f6": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f7": [
+                "status=partial"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=partial"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 5,
+            "unit_ids": [
+              "f1",
+              "f12",
+              "f18",
+              "f5",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      },
+      "standard": {
+        "gist_token_count": 221,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0003,
+                "delta_evidence_span": -0.0132,
+                "eligible": true,
+                "gist_eac": 0.0452,
+                "gist_evidence_span": 0.0317
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0003,
+                "delta_evidence_span": -0.0132,
+                "eligible": true,
+                "gist_eac": 0.0452,
+                "gist_evidence_span": 0.0317
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0556,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.0556,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0833,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.0833,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0031,
+                "delta_evidence_span": -0.0432,
+                "eligible": true,
+                "gist_eac": 0.9819,
+                "gist_evidence_span": 0.0317
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": -0.0031,
+                "delta_evidence_span": -0.0432,
+                "eligible": true,
+                "gist_eac": 0.9819,
+                "gist_evidence_span": 0.0317
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0556,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.9444,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0833,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.9167,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.2381,
+                "delta_evidence_span": 0.1111,
+                "eligible": true,
+                "gist_eac": 0.4118,
+                "gist_evidence_span": 0.2398
+              },
+              "strict": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": 0.2381,
+                "delta_evidence_span": 0.1111,
+                "eligible": true,
+                "gist_eac": 0.4118,
+                "gist_evidence_span": 0.2398
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 14,
+              "lca_depth": null,
+              "lca_node_index": null,
+              "support_node_indices": [
+                23,
+                8
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2222,
+                "gist_locality_span": 0.1667,
+                "retained_set_size": 18,
+                "source_eac": 0.2222,
+                "source_locality_span": 0.1667
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_locality_span": 0.25,
+                "retained_set_size": 12,
+                "source_eac": 0.3333,
+                "source_locality_span": 0.25
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": 0.241,
+                "delta_evidence_span": -0.0268,
+                "eligible": true,
+                "gist_eac": 0.6063,
+                "gist_evidence_span": 0.0271
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4444,
+                "gist_locality_span": 0.1111,
+                "retained_set_size": 18,
+                "source_eac": 0.4444,
+                "source_locality_span": 0.1111
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": 0.241,
+                "delta_evidence_span": -0.0403,
+                "eligible": true,
+                "gist_eac": 0.6063,
+                "gist_evidence_span": 0.0136
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4444,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.4444,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f6:status=partial"
+                ]
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": 0.2855,
+                "delta_evidence_span": -0.0388,
+                "eligible": true,
+                "gist_eac": 0.7376,
+                "gist_evidence_span": 0.0271
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5556,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.5556,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=partial"
+                ]
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.2044,
+                "delta_evidence_span": -0.0671,
+                "eligible": true,
+                "gist_eac": 0.5158,
+                "gist_evidence_span": 0.0317
+              },
+              "strict": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.2044,
+                "delta_evidence_span": -0.0671,
+                "eligible": true,
+                "gist_eac": 0.5158,
+                "gist_evidence_span": 0.0317
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.3333,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.5,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.2444,
+                "delta_evidence_span": 0.0018,
+                "eligible": true,
+                "gist_eac": 0.457,
+                "gist_evidence_span": 0.0407
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.2444,
+                "delta_evidence_span": 0.0018,
+                "eligible": true,
+                "gist_eac": 0.457,
+                "gist_evidence_span": 0.0407
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2778,
+                "gist_locality_span": 0.0556,
+                "retained_set_size": 18,
+                "source_eac": 0.2778,
+                "source_locality_span": 0.0556
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4167,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.4167,
+                "source_locality_span": 0.0833
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 18,
+            "unit_ids": [
+              "f1",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "r1",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f13": [
+                "status=partial"
+              ],
+              "f14": [
+                "status=partial"
+              ],
+              "f15": [
+                "status=partial"
+              ],
+              "f16": [
+                "status=partial"
+              ],
+              "f6": [
+                "status=partial"
+              ],
+              "f7": [
+                "status=partial"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 12,
+            "unit_ids": [
+              "f1",
+              "f11",
+              "f12",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "r1",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      }
+    },
+    "sonnet": {
+      "deep": {
+        "gist_token_count": 295,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": -0.0212,
+                "delta_evidence_span": -0.0212,
+                "eligible": true,
+                "gist_eac": 0.0237,
+                "gist_evidence_span": 0.0237
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": -0.0212,
+                "delta_evidence_span": -0.0212,
+                "eligible": true,
+                "gist_eac": 0.0237,
+                "gist_evidence_span": 0.0237
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0455,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.0455,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0526,
+                "gist_locality_span": 0.0526,
+                "retained_set_size": 19,
+                "source_eac": 0.0526,
+                "source_locality_span": 0.0526
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": -0.058,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.0169
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": -0.058,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.0169
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0455,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.9545,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.0526,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0526,
+                "retained_set_size": 19,
+                "source_eac": 0.9474,
+                "source_locality_span": 0.0526
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": -0.1059,
+                "delta_evidence_span": -0.0914,
+                "eligible": true,
+                "gist_eac": 0.0678,
+                "gist_evidence_span": 0.0373
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f3:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0454,
+                "delta_locality_span": -0.0455,
+                "eligible": true,
+                "gist_eac": 0.1364,
+                "gist_locality_span": 0.0909,
+                "retained_set_size": 22,
+                "source_eac": 0.1818,
+                "source_locality_span": 0.1364
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f3:status=partial"
+                ]
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2094,
+                "delta_evidence_span": -0.0064,
+                "eligible": true,
+                "gist_eac": 0.1559,
+                "gist_evidence_span": 0.0475
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2094,
+                "delta_evidence_span": -0.0064,
+                "eligible": true,
+                "gist_eac": 0.1559,
+                "gist_evidence_span": 0.0475
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 0,
+              "lca_depth": 1,
+              "lca_node_index": 5,
+              "support_node_indices": [
+                6,
+                7
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0454,
+                "delta_locality_span": 0.0455,
+                "eligible": true,
+                "gist_eac": 0.3182,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0909
+              },
+              "strict": {
+                "delta_eac": -0.0526,
+                "delta_locality_span": 0.0526,
+                "eligible": true,
+                "gist_eac": 0.3158,
+                "gist_locality_span": 0.1579,
+                "retained_set_size": 19,
+                "source_eac": 0.3684,
+                "source_locality_span": 0.1053
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2094,
+                "delta_evidence_span": -0.0302,
+                "eligible": true,
+                "gist_eac": 0.1559,
+                "gist_evidence_span": 0.0237
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2094,
+                "delta_evidence_span": -0.0302,
+                "eligible": true,
+                "gist_eac": 0.1559,
+                "gist_evidence_span": 0.0237
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0454,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3182,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.3636,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": -0.0526,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3158,
+                "gist_locality_span": 0.0526,
+                "retained_set_size": 19,
+                "source_eac": 0.3684,
+                "source_locality_span": 0.0526
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": -0.2013,
+                "delta_evidence_span": -0.0422,
+                "eligible": true,
+                "gist_eac": 0.2508,
+                "gist_evidence_span": 0.0237
+              },
+              "strict": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": -0.2013,
+                "delta_evidence_span": -0.0422,
+                "eligible": true,
+                "gist_eac": 0.2508,
+                "gist_evidence_span": 0.0237
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0909,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3636,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.4545,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": -0.1053,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3684,
+                "gist_locality_span": 0.0526,
+                "retained_set_size": 19,
+                "source_eac": 0.4737,
+                "source_locality_span": 0.0526
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": -0.2364,
+                "delta_evidence_span": -0.0537,
+                "eligible": true,
+                "gist_eac": 0.3864,
+                "gist_evidence_span": 0.078
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f9:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0909,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5455,
+                "gist_locality_span": 0.1364,
+                "retained_set_size": 22,
+                "source_eac": 0.6364,
+                "source_locality_span": 0.1364
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f9:status=partial"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_baseline"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial",
+                  "r3:unaligned_in_baseline"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_source"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial,unaligned_in_source"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.1496,
+                "delta_evidence_span": -0.0819,
+                "eligible": true,
+                "gist_eac": 0.461,
+                "gist_evidence_span": 0.0169
+              },
+              "strict": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.1496,
+                "delta_evidence_span": -0.0819,
+                "eligible": true,
+                "gist_eac": 0.461,
+                "gist_evidence_span": 0.0169
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.3637,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6364,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2727,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.3157,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5789,
+                "gist_locality_span": 0.0526,
+                "retained_set_size": 19,
+                "source_eac": 0.2632,
+                "source_locality_span": 0.0526
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.6518,
+                "delta_evidence_span": -0.0118,
+                "eligible": true,
+                "gist_eac": 0.8644,
+                "gist_evidence_span": 0.0271
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.6518,
+                "delta_evidence_span": -0.0118,
+                "eligible": true,
+                "gist_eac": 0.8644,
+                "gist_evidence_span": 0.0271
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.6363,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.8636,
+                "gist_locality_span": 0.0455,
+                "retained_set_size": 22,
+                "source_eac": 0.2273,
+                "source_locality_span": 0.0455
+              },
+              "strict": {
+                "delta_eac": 0.6316,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.8421,
+                "gist_locality_span": 0.0526,
+                "retained_set_size": 19,
+                "source_eac": 0.2105,
+                "source_locality_span": 0.0526
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "r3": [
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 22,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f12": [
+                "status=partial"
+              ],
+              "f3": [
+                "status=partial"
+              ],
+              "f9": [
+                "status=partial"
+              ],
+              "r3": [
+                "status=partial",
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 19,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      },
+      "skim": {
+        "gist_token_count": 35,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0122,
+                "delta_evidence_span": 0.0122,
+                "eligible": true,
+                "gist_eac": 0.0571,
+                "gist_evidence_span": 0.0571
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.125,
+                "gist_locality_span": 0.125,
+                "retained_set_size": 8,
+                "source_eac": 0.125,
+                "source_locality_span": 0.125
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f1:status=partial"
+                ]
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": 0.1251,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.2
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.015,
+                "delta_evidence_span": 0.1251,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_evidence_span": 0.2
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.875,
+                "gist_locality_span": 0.125,
+                "retained_set_size": 8,
+                "source_eac": 0.875,
+                "source_locality_span": 0.125
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.25,
+                "retained_set_size": 4,
+                "source_eac": 1.0,
+                "source_locality_span": 0.25
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=omitted",
+                  "f2:unaligned_in_rendering",
+                  "f3:status=omitted",
+                  "f3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=omitted",
+                  "f2:unaligned_in_rendering",
+                  "f3:status=omitted",
+                  "f3:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=omitted,unaligned_in_rendering",
+                  "f3:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.1367,
+                "delta_evidence_span": 0.089,
+                "eligible": true,
+                "gist_eac": 0.2286,
+                "gist_evidence_span": 0.1429
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.1367,
+                "delta_evidence_span": 0.089,
+                "eligible": true,
+                "gist_eac": 0.2286,
+                "gist_evidence_span": 0.1429
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 0,
+              "lca_depth": 2,
+              "lca_node_index": 2,
+              "support_node_indices": [
+                2,
+                2
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.25,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.375,
+                "gist_locality_span": 0.25,
+                "retained_set_size": 8,
+                "source_eac": 0.625,
+                "source_locality_span": 0.25
+              },
+              "strict": {
+                "delta_eac": -0.25,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_locality_span": 0.5,
+                "retained_set_size": 4,
+                "source_eac": 0.75,
+                "source_locality_span": 0.5
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.1367,
+                "delta_evidence_span": 0.089,
+                "eligible": true,
+                "gist_eac": 0.2286,
+                "gist_evidence_span": 0.1429
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.1367,
+                "delta_evidence_span": 0.089,
+                "eligible": true,
+                "gist_eac": 0.2286,
+                "gist_evidence_span": 0.1429
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.25,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.375,
+                "gist_locality_span": 0.125,
+                "retained_set_size": 8,
+                "source_eac": 0.625,
+                "source_locality_span": 0.125
+              },
+              "strict": {
+                "delta_eac": -0.25,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_locality_span": 0.25,
+                "retained_set_size": 4,
+                "source_eac": 0.75,
+                "source_locality_span": 0.25
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=omitted",
+                  "f7:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=omitted",
+                  "f7:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f7:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted",
+                  "f8:unaligned_in_rendering",
+                  "f9:status=omitted",
+                  "f9:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f8:status=omitted,unaligned_in_rendering",
+                  "f9:status=omitted,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost",
+                  "r3:unaligned_in_baseline",
+                  "r3:unaligned_in_rendering"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=lost,unaligned_in_source,unaligned_in_rendering"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.2886,
+                "delta_evidence_span": 0.0726,
+                "eligible": true,
+                "gist_eac": 0.6,
+                "gist_evidence_span": 0.1714
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.125,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.5,
+                "gist_locality_span": 0.125,
+                "retained_set_size": 8,
+                "source_eac": 0.375,
+                "source_locality_span": 0.125
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f11:status=partial"
+                ]
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.5588,
+                "delta_evidence_span": 0.1325,
+                "eligible": true,
+                "gist_eac": 0.7714,
+                "gist_evidence_span": 0.1714
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": 0.5588,
+                "delta_evidence_span": 0.1325,
+                "eligible": true,
+                "gist_eac": 0.7714,
+                "gist_evidence_span": 0.1714
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.375,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.625,
+                "gist_locality_span": 0.125,
+                "retained_set_size": 8,
+                "source_eac": 0.25,
+                "source_locality_span": 0.125
+              },
+              "strict": {
+                "delta_eac": 0.5,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.75,
+                "gist_locality_span": 0.25,
+                "retained_set_size": 4,
+                "source_eac": 0.25,
+                "source_locality_span": 0.25
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f12": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f13": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f14": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f15": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f16": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f7": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 8,
+            "unit_ids": [
+              "f1",
+              "f11",
+              "f17",
+              "f18",
+              "f19",
+              "f5",
+              "f6",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f1": [
+                "status=partial"
+              ],
+              "f10": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f11": [
+                "status=partial"
+              ],
+              "f12": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f13": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f14": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f15": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f16": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f17": [
+                "status=partial"
+              ],
+              "f18": [
+                "status=partial"
+              ],
+              "f2": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f3": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f7": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f8": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r1": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r2": [
+                "status=lost",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ],
+              "r4": [
+                "status=lost",
+                "unaligned_in_source",
+                "unaligned_in_rendering"
+              ]
+            },
+            "size": 4,
+            "unit_ids": [
+              "f19",
+              "f5",
+              "f6",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      },
+      "standard": {
+        "gist_token_count": 166,
+        "questions": {
+          "q1": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0033,
+                "delta_evidence_span": -0.0148,
+                "eligible": true,
+                "gist_eac": 0.0482,
+                "gist_evidence_span": 0.0301
+              },
+              "strict": {
+                "baseline_eac": 0.0449,
+                "baseline_evidence_span": 0.0449,
+                "delta_eac": 0.0033,
+                "delta_evidence_span": -0.0148,
+                "eligible": true,
+                "gist_eac": 0.0482,
+                "gist_evidence_span": 0.0301
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0476,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.0476,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.0833,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.0833,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q10": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.009,
+                "delta_evidence_span": -0.0267,
+                "eligible": true,
+                "gist_eac": 0.994,
+                "gist_evidence_span": 0.0482
+              },
+              "strict": {
+                "baseline_eac": 0.985,
+                "baseline_evidence_span": 0.0749,
+                "delta_eac": 0.009,
+                "delta_evidence_span": -0.0267,
+                "eligible": true,
+                "gist_eac": 0.994,
+                "gist_evidence_span": 0.0482
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0476,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.9524,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 1.0,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 1.0,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q2": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.1737,
+                "baseline_evidence_span": 0.1287,
+                "delta_eac": -0.0894,
+                "delta_evidence_span": -0.0624,
+                "eligible": true,
+                "gist_eac": 0.0843,
+                "gist_evidence_span": 0.0663
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=partial",
+                  "f3:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.0476,
+                "delta_locality_span": 0.0477,
+                "eligible": true,
+                "gist_eac": 0.1905,
+                "gist_locality_span": 0.1429,
+                "retained_set_size": 21,
+                "source_eac": 0.1429,
+                "source_locality_span": 0.0952
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f2:status=partial",
+                  "f3:status=partial"
+                ]
+              }
+            }
+          },
+          "q3": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2147,
+                "delta_evidence_span": -0.0238,
+                "eligible": true,
+                "gist_eac": 0.1506,
+                "gist_evidence_span": 0.0301
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2147,
+                "delta_evidence_span": -0.0238,
+                "eligible": true,
+                "gist_eac": 0.1506,
+                "gist_evidence_span": 0.0301
+              }
+            },
+            "structural_diagnostic": {
+              "intervening_node_count": 0,
+              "lca_depth": 2,
+              "lca_node_index": 4,
+              "support_node_indices": [
+                4,
+                4
+              ]
+            },
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0476,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2857,
+                "gist_locality_span": 0.0952,
+                "retained_set_size": 21,
+                "source_eac": 0.3333,
+                "source_locality_span": 0.0952
+              },
+              "strict": {
+                "delta_eac": -0.0834,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_locality_span": 0.1667,
+                "retained_set_size": 12,
+                "source_eac": 0.4167,
+                "source_locality_span": 0.1667
+              }
+            }
+          },
+          "q4": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2147,
+                "delta_evidence_span": -0.0238,
+                "eligible": true,
+                "gist_eac": 0.1506,
+                "gist_evidence_span": 0.0301
+              },
+              "strict": {
+                "baseline_eac": 0.3653,
+                "baseline_evidence_span": 0.0539,
+                "delta_eac": -0.2147,
+                "delta_evidence_span": -0.0238,
+                "eligible": true,
+                "gist_eac": 0.1506,
+                "gist_evidence_span": 0.0301
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0476,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.2857,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.3333,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": -0.0834,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.4167,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q5": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": -0.1629,
+                "delta_evidence_span": -0.0237,
+                "eligible": true,
+                "gist_eac": 0.2892,
+                "gist_evidence_span": 0.0422
+              },
+              "strict": {
+                "baseline_eac": 0.4521,
+                "baseline_evidence_span": 0.0659,
+                "delta_eac": -0.1629,
+                "delta_evidence_span": -0.0237,
+                "eligible": true,
+                "gist_eac": 0.2892,
+                "gist_evidence_span": 0.0422
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0953,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.3333,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.4286,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": -0.0833,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.4167,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.5,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q6": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.6228,
+                "baseline_evidence_span": 0.1317,
+                "delta_eac": -0.1529,
+                "delta_evidence_span": -0.0172,
+                "eligible": true,
+                "gist_eac": 0.4699,
+                "gist_evidence_span": 0.1145
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f9:status=partial"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 2,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0952,
+                "delta_locality_span": -0.0477,
+                "eligible": true,
+                "gist_eac": 0.5238,
+                "gist_locality_span": 0.0952,
+                "retained_set_size": 21,
+                "source_eac": 0.619,
+                "source_locality_span": 0.1429
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "f9:status=partial"
+                ]
+              }
+            }
+          },
+          "q7": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_baseline"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial",
+                  "r3:unaligned_in_baseline"
+                ]
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "relational",
+            "unit_rank": {
+              "exploratory": {
+                "eligible": false,
+                "reasons": [
+                  "r3:unaligned_in_source"
+                ]
+              },
+              "strict": {
+                "eligible": false,
+                "reasons": [
+                  "r3:status=partial,unaligned_in_source"
+                ]
+              }
+            }
+          },
+          "q8": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.285,
+                "delta_evidence_span": -0.0627,
+                "eligible": true,
+                "gist_eac": 0.5964,
+                "gist_evidence_span": 0.0361
+              },
+              "strict": {
+                "baseline_eac": 0.3114,
+                "baseline_evidence_span": 0.0988,
+                "delta_eac": 0.285,
+                "delta_evidence_span": -0.0627,
+                "eligible": true,
+                "gist_eac": 0.5964,
+                "gist_evidence_span": 0.0361
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": 0.4286,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.6667,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.2381,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.5,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.75,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.25,
+                "source_locality_span": 0.0833
+              }
+            }
+          },
+          "q9": {
+            "diagnostic_token_eac": {
+              "exploratory": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": -0.1283,
+                "delta_evidence_span": -0.0028,
+                "eligible": true,
+                "gist_eac": 0.0843,
+                "gist_evidence_span": 0.0361
+              },
+              "strict": {
+                "baseline_eac": 0.2126,
+                "baseline_evidence_span": 0.0389,
+                "delta_eac": -0.1283,
+                "delta_evidence_span": -0.0028,
+                "eligible": true,
+                "gist_eac": 0.0843,
+                "gist_evidence_span": 0.0361
+              }
+            },
+            "structural_diagnostic": null,
+            "support_unit_count": 1,
+            "type": "factual",
+            "unit_rank": {
+              "exploratory": {
+                "delta_eac": -0.0476,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1429,
+                "gist_locality_span": 0.0476,
+                "retained_set_size": 21,
+                "source_eac": 0.1905,
+                "source_locality_span": 0.0476
+              },
+              "strict": {
+                "delta_eac": 0.0,
+                "delta_locality_span": 0.0,
+                "eligible": true,
+                "gist_eac": 0.1667,
+                "gist_locality_span": 0.0833,
+                "retained_set_size": 12,
+                "source_eac": 0.1667,
+                "source_locality_span": 0.0833
+              }
+            }
+          }
+        },
+        "retained_set": {
+          "exploratory": {
+            "excluded": {
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "r3": [
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 21,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+              "f19",
+              "f2",
+              "f3",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "r1",
+              "r2",
+              "r5"
+            ]
+          },
+          "strict": {
+            "excluded": {
+              "f12": [
+                "status=partial"
+              ],
+              "f13": [
+                "status=partial"
+              ],
+              "f15": [
+                "status=partial"
+              ],
+              "f16": [
+                "status=partial"
+              ],
+              "f18": [
+                "status=partial"
+              ],
+              "f2": [
+                "status=partial"
+              ],
+              "f3": [
+                "status=partial"
+              ],
+              "f4": [
+                "status=omitted",
+                "unaligned_in_rendering"
+              ],
+              "f9": [
+                "status=partial"
+              ],
+              "r1": [
+                "status=partial"
+              ],
+              "r3": [
+                "status=partial",
+                "unaligned_in_source"
+              ],
+              "r4": [
+                "unaligned_in_source"
+              ]
+            },
+            "size": 12,
+            "unit_ids": [
+              "f1",
+              "f10",
+              "f11",
+              "f14",
+              "f17",
+              "f19",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "r2",
+              "r5"
+            ]
+          }
+        },
+        "status": "scored"
+      }
+    },
+    "source_integrity": {
+      "units_ambiguous_in_source": [],
+      "units_total": 24,
+      "units_unaligned_in_source": [
+        "r3",
+        "r4"
+      ]
+    },
+    "test_class": "pressure-tests"
+  },
   "synthetic-scale-verylarge": {
     "diagnostic_case_baseline_token_count": 929,
     "haiku": {

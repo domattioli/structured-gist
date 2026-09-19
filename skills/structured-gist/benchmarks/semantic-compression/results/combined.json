@@ -1109,6 +1109,504 @@
     },
     "test_class": "regression"
   },
+  "registrar-hedge": {
+    "intent": null,
+    "opus-v0.4.12": {
+      "deep": {
+        "compression_ratio": 1.5696,
+        "conformance_clean": false,
+        "conformance_violation_count": 7,
+        "conformance_violations": [
+          {
+            "line": 78,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 80,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 81,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 82,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 51,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 66,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 80,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          }
+        ],
+        "flagged_vs_gold_count": 8,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 598,
+        "recoverability": 1.0,
+        "reduction_pct": -56.96,
+        "relation_retention": 0.9,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 1,
+        "unsupported_claims": [
+          {
+            "claim": "guide the operator click-by-click rather than acting for them.",
+            "note": "delivery format not in any gold fact",
+            "source_check_note": "source says 'Guide me click-by-click'; the contrast 'rather than acting for them' is inferred, not stated",
+            "source_supported": false
+          }
+        ],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "skim": {
+        "compression_ratio": 0.5643,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.1579,
+        "output_words": 215,
+        "recoverability": 0.7,
+        "reduction_pct": 43.57,
+        "relation_retention": 0.5,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.6386,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.6842,
+        "weighted_retention": 0.6386
+      },
+      "standard": {
+        "compression_ratio": 1.1102,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 52,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 3,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 423,
+        "recoverability": 1.0,
+        "reduction_pct": -11.02,
+        "relation_retention": 0.9,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.9699,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.9737,
+        "weighted_retention": 0.9699
+      }
+    },
+    "opus-v0.5.0b1": {
+      "deep": {
+        "compression_ratio": 1.4541,
+        "conformance_clean": false,
+        "conformance_violation_count": 4,
+        "conformance_violations": [
+          {
+            "line": 66,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 86,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 93,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 90,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 5,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 554,
+        "recoverability": 1.0,
+        "reduction_pct": -45.41,
+        "relation_retention": 0.9,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      },
+      "skim": {
+        "compression_ratio": 0.2861,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 2,
+            "message": "too many arrows (2) vs non-arrow nodes (0) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 17,
+            "message": "too many arrows (1) vs non-arrow nodes (0) in block",
+            "rule": "R5"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.3158,
+        "output_words": 109,
+        "recoverability": 0.35,
+        "reduction_pct": 71.39,
+        "relation_retention": 0.5,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.4096,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.4474,
+        "weighted_retention": 0.4096
+      },
+      "standard": {
+        "compression_ratio": 0.7139,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 3,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.1579,
+        "output_words": 272,
+        "recoverability": 0.75,
+        "reduction_pct": 28.61,
+        "relation_retention": 0.6,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.6446,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.6842,
+        "weighted_retention": 0.6446
+      }
+    },
+    "pressure_tags": [
+      "epistemic",
+      "hedge",
+      "unconfirmed_assumption",
+      "migration"
+    ],
+    "size_bucket": "medium",
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.9134,
+        "conformance_clean": false,
+        "conformance_violation_count": 26,
+        "conformance_violations": [
+          {
+            "line": 17,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 19,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 1,
+            "message": "text too wordy (7 words, max 3)",
+            "rule": "R7"
+          },
+          {
+            "line": 5,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 8,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 11,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 13,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 15,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 31,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 37,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 42,
+            "message": "text too wordy (5 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 43,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 44,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 48,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 1,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 3,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 5,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 8,
+            "message": "parenthetical with 5 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 11,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 15,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 17,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 19,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 31,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 39,
+            "message": "'\u2192' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 42,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 43,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 348,
+        "recoverability": 1.0,
+        "reduction_pct": 8.66,
+        "relation_retention": 0.9,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.9217,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.9211,
+        "weighted_retention": 0.9217
+      },
+      "skim": {
+        "compression_ratio": 0.1102,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.6316,
+        "output_words": 42,
+        "recoverability": 0.5,
+        "reduction_pct": 88.98,
+        "relation_retention": 0.2,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.2711,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.2632,
+        "weighted_retention": 0.2711
+      },
+      "standard": {
+        "compression_ratio": 0.5039,
+        "conformance_clean": false,
+        "conformance_violation_count": 14,
+        "conformance_violations": [
+          {
+            "line": 12,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 13,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 19,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 20,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 21,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 22,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 23,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 24,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 12,
+            "message": "text too wordy (11 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 13,
+            "message": "text too wordy (12 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 20,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 12,
+            "message": "':' followed by 7 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 13,
+            "message": "parenthetical with 6 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 20,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": false,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0526,
+        "output_words": 192,
+        "recoverability": 0.95,
+        "reduction_pct": 49.61,
+        "relation_retention": 0.8,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.753,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.7368,
+        "weighted_retention": 0.753
+      }
+    },
+    "test_class": "pressure-tests"
+  },
   "synthetic-scale-verylarge": {
     "haiku": {
       "deep": {

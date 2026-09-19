@@ -220,6 +220,96 @@ Measurement only -- see `../FINDABILITY_FINDINGS.md` for full methodology. **Hea
 | real-hook-discovery | sonnet | deep | relational | 1 | 19 | yes | 0.6842 | 0.6842 | 0.0 | 0.0526 | 0.0526 | 0.0 |
 | real-hook-discovery | sonnet | deep | factual | 1 | 19 | yes | 0.9474 | 0.9474 | 0.0 | 0.0526 | 0.0526 | 0.0 |
 | real-hook-discovery | sonnet | deep | factual | 1 | 19 | yes | 1.0 | 1.0 | 0.0 | 0.0526 | 0.0526 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 1 | 11 | yes | 0.0909 | 0.0909 | 0.0 | 0.0909 | 0.0909 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | skim | relational | 1 | 11 | yes | 0.9091 | 1.0 | 0.0909 | 0.0909 | 0.0909 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 2 | 11 | yes | 0.3636 | 0.3636 | 0.0 | 0.2727 | 0.2727 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 2 | - | no (f6:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | skim | relational | 1 | - | no (f6:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 1 | - | no (f7:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 2 | - | no (f8:status=omitted,unaligned_in_rendering,f9:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | skim | relational | 1 | - | no (r3:status=lost,unaligned_in_source,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 1 | - | no (f11:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | skim | factual | 1 | 11 | yes | 0.4545 | 0.4545 | 0.0 | 0.0909 | 0.0909 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 1 | 20 | yes | 0.05 | 0.05 | 0.0 | 0.05 | 0.05 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | standard | relational | 1 | 20 | yes | 0.95 | 1.0 | 0.05 | 0.05 | 0.05 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 2 | 20 | yes | 0.2 | 0.2 | 0.0 | 0.15 | 0.15 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 2 | - | no (f6:unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | standard | relational | 1 | - | no (f6:unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 1 | 20 | yes | 0.45 | 0.45 | 0.0 | 0.05 | 0.05 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 2 | - | no (f9:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | standard | relational | 1 | - | no (r3:status=partial,unaligned_in_source) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 1 | 20 | yes | 0.3 | 0.3 | 0.0 | 0.05 | 0.05 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | standard | factual | 1 | 20 | yes | 0.25 | 0.25 | 0.0 | 0.05 | 0.05 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 1 | 22 | yes | 0.0455 | 0.0455 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | relational | 1 | 22 | yes | 0.9545 | 0.9545 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 2 | 22 | yes | 0.1818 | 0.1818 | 0.0 | 0.1364 | 0.1364 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 2 | 22 | yes | 0.3636 | 0.3636 | 0.0 | 0.0909 | 0.0909 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | relational | 1 | 22 | yes | 0.3636 | 0.3636 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 1 | 22 | yes | 0.4545 | 0.4545 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 2 | 22 | yes | 0.6364 | 0.6364 | 0.0 | 0.1364 | 0.1364 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | relational | 1 | - | no (r3:status=partial,unaligned_in_source) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 1 | 22 | yes | 0.2727 | 0.2727 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.4.12 | deep | factual | 1 | 22 | yes | 0.2273 | 0.2273 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 1 | 5 | yes | 0.2 | 0.2 | 0.0 | 0.2 | 0.2 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | skim | relational | 1 | 5 | yes | 0.8 | 1.0 | 0.2 | 0.2 | 0.2 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 2 | - | no (f2:status=partial,f3:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 2 | - | no (f6:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | relational | 1 | - | no (f6:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 1 | - | no (f7:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 2 | - | no (f8:status=omitted,unaligned_in_rendering,f9:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | relational | 1 | - | no (r3:status=lost,unaligned_in_source,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 1 | - | no (f11:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | skim | factual | 1 | - | no (f19:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 1 | 12 | yes | 0.0833 | 0.0833 | 0.0 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | standard | relational | 1 | 12 | yes | 0.9167 | 1.0 | 0.0833 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 2 | 12 | yes | 0.3333 | 0.3333 | 0.0 | 0.25 | 0.25 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 2 | - | no (f6:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | standard | relational | 1 | - | no (f6:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 1 | - | no (f7:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 2 | - | no (f8:status=omitted,unaligned_in_rendering,f9:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | standard | relational | 1 | - | no (r3:status=lost,unaligned_in_source,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 1 | 12 | yes | 0.5 | 0.5 | 0.0 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | standard | factual | 1 | 12 | yes | 0.4167 | 0.4167 | 0.0 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 1 | 22 | yes | 0.0455 | 0.0455 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | relational | 1 | 22 | yes | 0.9545 | 0.9091 | -0.0454 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 2 | 22 | yes | 0.1818 | 0.1818 | 0.0 | 0.1364 | 0.1364 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 2 | 22 | yes | 0.3636 | 0.3636 | 0.0 | 0.0909 | 0.0909 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | relational | 1 | 22 | yes | 0.3636 | 0.3636 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 1 | 22 | yes | 0.4545 | 0.4545 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 2 | 22 | yes | 0.6364 | 0.6364 | 0.0 | 0.1364 | 0.1364 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | relational | 1 | - | no (r3:status=partial,unaligned_in_source) | - | - | - | - | - | - |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 1 | 22 | yes | 0.2727 | 0.2727 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | opus-v0.5.0b1 | deep | factual | 1 | 22 | yes | 0.2273 | 0.2273 | 0.0 | 0.0455 | 0.0455 | 0.0 |
+| registrar-hedge | sonnet | skim | factual | 1 | - | no (f1:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | skim | relational | 1 | 4 | yes | 1.0 | 1.0 | 0.0 | 0.25 | 0.25 | 0.0 |
+| registrar-hedge | sonnet | skim | factual | 2 | - | no (f2:status=omitted,unaligned_in_rendering,f3:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | skim | factual | 2 | 4 | yes | 0.75 | 0.5 | -0.25 | 0.5 | 0.5 | 0.0 |
+| registrar-hedge | sonnet | skim | relational | 1 | 4 | yes | 0.75 | 0.5 | -0.25 | 0.25 | 0.25 | 0.0 |
+| registrar-hedge | sonnet | skim | factual | 1 | - | no (f7:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | skim | factual | 2 | - | no (f8:status=omitted,unaligned_in_rendering,f9:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | skim | relational | 1 | - | no (r3:status=lost,unaligned_in_source,unaligned_in_rendering) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | skim | factual | 1 | - | no (f11:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | skim | factual | 1 | 4 | yes | 0.25 | 0.75 | 0.5 | 0.25 | 0.25 | 0.0 |
+| registrar-hedge | sonnet | standard | factual | 1 | 12 | yes | 0.0833 | 0.0833 | 0.0 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | sonnet | standard | relational | 1 | 12 | yes | 1.0 | 1.0 | 0.0 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | sonnet | standard | factual | 2 | - | no (f2:status=partial,f3:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | standard | factual | 2 | 12 | yes | 0.4167 | 0.3333 | -0.0834 | 0.1667 | 0.1667 | 0.0 |
+| registrar-hedge | sonnet | standard | relational | 1 | 12 | yes | 0.4167 | 0.3333 | -0.0834 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | sonnet | standard | factual | 1 | 12 | yes | 0.5 | 0.4167 | -0.0833 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | sonnet | standard | factual | 2 | - | no (f9:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | standard | relational | 1 | - | no (r3:status=partial,unaligned_in_source) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | standard | factual | 1 | 12 | yes | 0.25 | 0.75 | 0.5 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | sonnet | standard | factual | 1 | 12 | yes | 0.1667 | 0.1667 | 0.0 | 0.0833 | 0.0833 | 0.0 |
+| registrar-hedge | sonnet | deep | factual | 1 | 19 | yes | 0.0526 | 0.0526 | 0.0 | 0.0526 | 0.0526 | 0.0 |
+| registrar-hedge | sonnet | deep | relational | 1 | 19 | yes | 0.9474 | 1.0 | 0.0526 | 0.0526 | 0.0526 | 0.0 |
+| registrar-hedge | sonnet | deep | factual | 2 | - | no (f3:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | deep | factual | 2 | 19 | yes | 0.3684 | 0.3158 | -0.0526 | 0.1053 | 0.1579 | 0.0526 |
+| registrar-hedge | sonnet | deep | relational | 1 | 19 | yes | 0.3684 | 0.3158 | -0.0526 | 0.0526 | 0.0526 | 0.0 |
+| registrar-hedge | sonnet | deep | factual | 1 | 19 | yes | 0.4737 | 0.3684 | -0.1053 | 0.0526 | 0.0526 | 0.0 |
+| registrar-hedge | sonnet | deep | factual | 2 | - | no (f9:status=partial) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | deep | relational | 1 | - | no (r3:status=partial,unaligned_in_source) | - | - | - | - | - | - |
+| registrar-hedge | sonnet | deep | factual | 1 | 19 | yes | 0.2632 | 0.5789 | 0.3157 | 0.0526 | 0.0526 | 0.0 |
+| registrar-hedge | sonnet | deep | factual | 1 | 19 | yes | 0.2105 | 0.8421 | 0.6316 | 0.0526 | 0.0526 | 0.0 |
 | synthetic-scale-verylarge | haiku | skim | relational | 1 | - | no (r3:status=partial) | - | - | - | - | - | - |
 | synthetic-scale-verylarge | haiku | skim | factual | 1 | - | no (f5:status=partial) | - | - | - | - | - | - |
 | synthetic-scale-verylarge | haiku | skim | relational | 2 | - | no (f7:status=omitted,unaligned_in_rendering,f8:status=omitted,unaligned_in_rendering) | - | - | - | - | - | - |
@@ -273,29 +363,29 @@ Measurement only -- see `../FINDABILITY_FINDINGS.md` for full methodology. **Hea
 
 | question type | n | avg delta EAC | avg delta locality-span |
 |---|---|---|---|
-| factual | 108 | 0.0237 | 0.0086 |
-| relational | 48 | -0.0262 | 0.0013 |
+| factual | 147 | 0.0267 | 0.0067 |
+| relational | 62 | -0.0195 | 0.001 |
 
 ## Delta EAC / delta locality-span by granularity level (strict-eligible, unit-rank)
 
 | level | n | avg delta EAC | avg delta locality-span |
 |---|---|---|---|
-| skim | 17 | 0.0147 | 0.0 |
-| standard | 61 | 0.0083 | 0.0103 |
-| deep | 78 | 0.007 | 0.0046 |
+| skim | 27 | 0.02 | 0.0 |
+| standard | 79 | 0.0113 | 0.0079 |
+| deep | 103 | 0.0125 | 0.004 |
 
 ## Delta EAC by support-unit count (single vs. multi-support, strict-eligible, unit-rank)
 
 | support | n | avg delta EAC | avg delta locality-span |
 |---|---|---|---|
-| single | 105 | 0.002 | 0.0 |
-| multi | 51 | 0.0215 | 0.0194 |
+| single | 146 | 0.0138 | 0.0 |
+| multi | 63 | 0.0113 | 0.0165 |
 
-**Strict eligibility (unit-rank):** 156/264 (case, tier, level, question) combinations were strict-findability-scorable (59.1%). See `results/findability.json` for the per-question `reasons` on every ineligible one, and each rendering's `retained_set.strict.excluded` for why any given unit did not make it into `R`.
+**Strict eligibility (unit-rank):** 209/354 (case, tier, level, question) combinations were strict-findability-scorable (59.0%). See `results/findability.json` for the per-question `reasons` on every ineligible one, and each rendering's `retained_set.strict.excluded` for why any given unit did not make it into `R`.
 
 ## Diagnostic only: token-normalized, case-level-baseline EAC (no longer the headline metric -- see `FINDABILITY_FINDINGS.md` "Failure mode 2")
 
 | question type | n | avg delta EAC (diagnostic, token-based) |
 |---|---|---|
-| factual | 108 | 0.0251 |
-| relational | 48 | -0.0369 |
+| factual | 147 | 0.0332 |
+| relational | 62 | -0.0386 |

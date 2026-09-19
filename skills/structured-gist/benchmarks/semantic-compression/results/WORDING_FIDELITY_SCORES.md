@@ -34,6 +34,12 @@ Measurement only -- see `../WORDING_FIDELITY_FINDINGS.md` for what this found. R
 | registrar-hedge | haiku | skim | 7 | 0.2857 | 0.7714 / 0.4857 / 0.4286 | 4 | 5 |
 | registrar-hedge | haiku | standard | 26 | 0.2692 | 0.8133 / 0.5361 / 0.3434 | 9 | 15 |
 | registrar-hedge | haiku | deep | 53 | 0.0566 | 0.7627 / 0.4746 / 0.2847 | 18 | 23 |
+| registrar-hedge | opus-v0.4.12 | skim | 45 | 0.4 | 0.8393 / 0.5714 / 0.4286 | 12 | 12 |
+| registrar-hedge | opus-v0.4.12 | standard | 74 | 0.4054 | 0.8415 / 0.6599 / 0.5216 | 20 | 7 |
+| registrar-hedge | opus-v0.4.12 | deep | 105 | 0.3238 | 0.7841 / 0.5418 / 0.4114 | 31 | 12 |
+| registrar-hedge | opus-v0.5.0b1 | skim | 17 | 0.2941 | 0.8587 / 0.587 / 0.4783 | 5 | 11 |
+| registrar-hedge | opus-v0.5.0b1 | standard | 50 | 0.34 | 0.8636 / 0.6182 / 0.5182 | 12 | 12 |
+| registrar-hedge | opus-v0.5.0b1 | deep | 103 | 0.2816 | 0.8352 / 0.6147 / 0.5256 | 20 | 13 |
 | registrar-hedge | sonnet | skim | 7 | 0.2857 | 0.7714 / 0.4857 / 0.4286 | 4 | 5 |
 | registrar-hedge | sonnet | standard | 26 | 0.2692 | 0.8133 / 0.5361 / 0.3434 | 9 | 15 |
 | registrar-hedge | sonnet | deep | 53 | 0.0566 | 0.7627 / 0.4746 / 0.2847 | 18 | 23 |
@@ -48,7 +54,7 @@ Measurement only -- see `../WORDING_FIDELITY_FINDINGS.md` for what this found. R
 
 | role | nodes | verbatim | verbatim-node rate |
 |---|---|---|---|
-| attribute | 255 | 50 | 0.1961 |
-| concept | 132 | 66 | 0.5 |
-| enumerator | 391 | 56 | 0.1432 |
-| explanation | 363 | 32 | 0.0882 |
+| attribute | 355 | 70 | 0.1972 |
+| concept | 171 | 87 | 0.5088 |
+| enumerator | 550 | 132 | 0.24 |
+| explanation | 459 | 48 | 0.1046 |

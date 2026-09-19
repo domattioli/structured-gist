@@ -1,0 +1,854 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "migrate the domain deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site.",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "note that the nameserver move weakens the instant-rollback property.",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "prefer a DNS-record cutover that the operator can revert in minutes.",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "decide the cleanest way to point both apex and www at the Pages project.",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "do this ahead of the cutover, if the current DNS host allows it.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "Cloudflare Pages > deeznutz > Custom domains.",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "the extensionless path must return 200.",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "remind the operator to submit the sitemap in Google Search Console after cutover.",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "the site's contact-form backend is not functional yet and is being fixed separately.",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "the launch decision belongs to the operator.",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "it must remain intact as a rollback target for roughly two weeks after cutover.",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. still live at deeznutz.com",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "a. https://deeznutz.pages.dev",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the same Cloudflare account also hosts the operator's personal site.",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "a. unconfirmed",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "the likeliest, because the site was built there.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "list them so there is a written rollback snapshot in hand before anything is changed.",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "if the DNS stays at Squarespace, confirm whether its DNS supports what the apex needs.",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "walk through moving only the DNS hosting to Cloudflare.",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "guide the operator click-by-click rather than acting for them.",
+        "note": "delivery format not in any gold fact",
+        "source_check_note": "source says 'Guide me click-by-click'; the contrast 'rather than acting for them' is inferred, not stated",
+        "source_supported": false
+      },
+      {
+        "claim": "a. operator logged into dashboards",
+        "note": "dashboard access not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "b. can screen-share tabs",
+        "note": "not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "a. personal-account",
+        "note": "Cloudflare account name not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "a. whois lookup",
+        "note": "identification method not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "b. what the Squarespace or Domains dashboard shows",
+        "note": "identification method not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "registration transfer is out of scope right now, not forever.",
+        "note": "'not forever' gloss not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "raised for awareness only, not as work to do here.",
+        "note": "'not as work to do here' scope gloss not in any gold fact",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Migration task",
+            "Goal"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path",
+            "c. rollback cost disclosure"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Old site",
+            "Preferred mechanism"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Ordered asks",
+            "III. Lower TTLs first"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Ordered asks",
+            "IV. Add the custom domains",
+            "Location"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Ordered asks",
+            "V. Verify",
+            "f. https://deeznutz.com/about"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Ordered asks",
+            "VI. Close out",
+            "b. sitemap reminder"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Known open issue",
+            "Contact form"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Known open issue",
+            "Ownership"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Old site",
+            "Retention window"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Old site",
+            "State"
+          ]
+        },
+        "f3": {
+          "located": [
+            "New site",
+            "Current address"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Blast-radius limit",
+            "Shared account"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Registrar",
+            "Status"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Registrar",
+            "Candidates",
+            "a. Squarespace Domains"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Ordered asks",
+            "I. Identify and snapshot",
+            "c. current DNS records"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path",
+            "a. constraint check, DNS stays put"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path",
+            "b. fallback, DNS moves to Cloudflare"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Migrate the domain deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact-form backend not functional, fixed separately; completing DNS today is accepted, launch decision is the operator's",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace, still live at deeznutz.com. New: Cloudflare Pages project deeznutz at https://deeznutz.pages.dev",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No, unconfirmed; Squarespace Domains likeliest (site built there), else Google Domains legacy or some other registrar",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains (likeliest), Google Domains legacy, some other registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar and current DNS host; list current DNS records as a written rollback snapshot",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Confirm Squarespace DNS supports CNAME flattening / ALIAS for the apex; if not, move only DNS hosting to Cloudflare",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "The nameserver move weakens instant rollback; actual rollback procedure and time must be stated",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "DNS-record cutover revertible in minutes; avoid cancelling subscription, deleting site, transferring registration",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "Old Squarespace site, intact as rollback target for roughly two weeks after cutover",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "identifying the registrar is step 1",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "if Squarespace DNS cannot do it, walk through moving only the DNS hosting to Cloudflare.",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "note that the nameserver move weakens the instant-rollback property.",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "III. Lower TTLs first",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "if DNS is completed today, that is accepted.",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "move deeznutz.com off the old Squarespace site and onto the already-deployed Cloudflare Pages site.",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "c. transfer domain registration now",
+        "status": "partial"
+      },
+      "f12": {
+        "evidence": "II. decide apex + www path to Pages",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "III. lower TTLs first if allowed",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "IV. add custom domains in Pages",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "V. verify resolution, cert, redirects",
+        "status": "partial"
+      },
+      "f16": {
+        "evidence": "VI. save rollback note + sitemap reminder",
+        "status": "partial"
+      },
+      "f17": {
+        "evidence": "the backend is not functional yet and is being fixed separately.",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "finishing DNS today is accepted; the launch decision is the operator's.",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "must stay intact as a rollback target for about two weeks after cutover.",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. Squarespace, still live",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "b. live at deeznutz.pages.dev",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "a. project \"personal-portfolio\"",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "a. unconfirmed",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a. Squarespace Domains, likely",
+        "status": "partial"
+      },
+      "f7": {
+        "evidence": "I. identify registrar + DNS host, snapshot records",
+        "status": "partial"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "",
+        "status": "omitted"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "guide click-by-click; the operator is logged into the dashboards and can screen-share tabs.",
+        "note": "delivery format / dashboard access not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "a. personal-account",
+        "note": "Cloudflare account name not in any gold fact",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Migration task",
+            "Goal"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Old site",
+            "Forbidden steps"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Ordered asks",
+            "II."
+          ]
+        },
+        "f13": {
+          "located": [
+            "Ordered asks",
+            "III."
+          ]
+        },
+        "f14": {
+          "located": [
+            "Ordered asks",
+            "IV."
+          ]
+        },
+        "f15": {
+          "located": [
+            "Ordered asks",
+            "V."
+          ]
+        },
+        "f16": {
+          "located": [
+            "Ordered asks",
+            "VI."
+          ]
+        },
+        "f17": {
+          "located": [
+            "Known open issue",
+            "Contact form"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Known open issue",
+            "Launch call"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Old site",
+            "Retention"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Old site",
+            "State"
+          ]
+        },
+        "f3": {
+          "located": [
+            "New site",
+            "Project"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Do not touch",
+            "Same account"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Registrar",
+            "Status"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Registrar",
+            "Candidates"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Ordered asks",
+            "I."
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Move deeznutz.com off the old Squarespace site onto the already-deployed Cloudflare Pages site",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact form backend not functional, fixed separately; finishing DNS today is accepted, launch decision is the operator's",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace, still live (deeznutz.com). New: Cloudflare Pages project deeznutz at deeznutz.pages.dev",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No, unconfirmed; Squarespace Domains likely, else Google Domains legacy or another registrar",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains (likely), Google Domains legacy, another registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar + DNS host, snapshot records (rollback purpose not stated)",
+        "verdict": "partial"
+      },
+      "q6": {
+        "answer_given": "Not stated",
+        "verdict": "unanswerable"
+      },
+      "q7": {
+        "answer_given": "Not stated",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "Only forbidden steps given (no cancel, no delete, no registration transfer now); revert-in-minutes record cutover not stated",
+        "verdict": "partial"
+      },
+      "q9": {
+        "answer_given": "Old Squarespace site, intact as rollback target for about two weeks after cutover",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "I. identify registrar + DNS host, snapshot records",
+        "status": "partial"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "II. decide apex + www path to Pages",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "finishing DNS today is accepted; the launch decision is the operator's.",
+        "status": "retained"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "move the domain deeznutz.com from the old Squarespace site to an already- deployed Cloudflare Pages site.",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "note that this weakens the instant-rollback property, and give the actual rollback procedure and time for whichever path is taken.",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "prefer a DNS-record cutover that is revertible in minutes.",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "II. Choose the apex + www path",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "do this before the cutover, if the current host allows it.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "c. then make the prescribed DNS changes",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "e. /about returns 200",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "b. sitemap reminder for Search Console",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "the site's contact-form backend is not functional yet and is being fixed separately.",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "completing DNS today is accepted; the launch decision belongs to the operator.",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "it must remain intact as a rollback target for about two weeks after cutover.",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "b. still live at deeznutz.com",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "b. live at https://deeznutz.pages.dev",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the same Cloudflare account also hosts the operator's personal site.",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "a. unconfirmed",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a. Squarespace Domains, likely ↪ likely because the site was built there.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "listed so there is a written rollback snapshot before anything changes.",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "if DNS stays at Squarespace, confirm whether its DNS supports what the apex needs, meaning CNAME flattening or ALIAS.",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "if not, walk through moving only DNS hosting to Cloudflare while keeping registration where it is.",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "guide click-by-click; the operator is logged into the relevant dashboards and can screen-share tabs.",
+        "note": "delivery format / dashboard access not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "a. personal-account",
+        "note": "Cloudflare account name not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "via whois plus what the Squarespace or Domains dashboard shows.",
+        "note": "identification method not in any gold fact",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Migration task",
+            "Goal"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path",
+            "c. state the rollback cost"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Old site",
+            "Preferred mechanism"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Ordered asks",
+            "III. Lower TTLs first"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Ordered asks",
+            "IV. Add custom domains"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Ordered asks",
+            "V. Verify"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Ordered asks",
+            "VI. Close out"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Known open issue",
+            "Contact form"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Known open issue",
+            "Launch call"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Old site",
+            "Retention window"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Old site",
+            "State"
+          ]
+        },
+        "f3": {
+          "located": [
+            "New site",
+            "Project"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Blast-radius limit",
+            "Shared account"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Registrar",
+            "Status"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Registrar",
+            "Candidates"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Ordered asks",
+            "I. Identify and snapshot",
+            "c. current DNS records"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path",
+            "a. constraint check at Squarespace"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Ordered asks",
+            "II. Choose the apex + www path",
+            "b. fallback: DNS to Cloudflare"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Move the domain deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact-form backend not functional, fixed separately; completing DNS today is accepted, launch decision belongs to operator",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace, still live at deeznutz.com. New: Cloudflare Pages project deeznutz at https://deeznutz.pages.dev",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No, unconfirmed; likely Squarespace Domains (site built there), else Google Domains legacy or another registrar",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains (likely), Google Domains legacy, another registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar, current DNS host, and list current DNS records as a written rollback snapshot",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Confirm whether Squarespace DNS supports CNAME flattening or ALIAS for the apex; if not, move only DNS hosting to Cloudflare",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "It weakens the instant-rollback property; the actual rollback procedure and time must be given",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "DNS-record cutover revertible in minutes; do not cancel subscription, delete site, or transfer registration now",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "Old Squarespace site, intact as rollback target for about two weeks after cutover",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "step 1 is identifying it together,",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "if not, walk through moving only DNS hosting to Cloudflare",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "note that this weakens the instant-rollback property,",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "III. Lower TTLs first",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "completing DNS today is accepted; the launch decision belongs to the operator.",
+        "status": "retained"
+      }
+    }
+  }
+}

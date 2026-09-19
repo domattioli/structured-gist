@@ -5827,6 +5827,2024 @@
         "verbatim_node_rate": 0.2692
       }
     },
+    "opus-v0.4.12": {
+      "deep": {
+        "allowlisted_node_count": 1,
+        "allowlisted_nodes": [
+          "State"
+        ],
+        "by_role": {
+          "attribute": {
+            "total": 20,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.1
+          },
+          "concept": {
+            "total": 7,
+            "verbatim": 4,
+            "verbatim_node_rate": 0.5714
+          },
+          "enumerator": {
+            "total": 49,
+            "verbatim": 25,
+            "verbatim_node_rate": 0.5102
+          },
+          "explanation": {
+            "total": 29,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.1034
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.7841,
+        "extractive_coverage_min2": 0.5418,
+        "extractive_coverage_min3": 0.4114,
+        "longest_novel_span_length": 12,
+        "non_verbatim_node_count": 71,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Migration task"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Goal"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Delivery format"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "guide the operator click-by-click rather than acting for them."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 5,
+            "text": "operator logged into dashboards"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 8,
+            "text": "Platform"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 10,
+            "text": "project name \"deeznutz\""
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 11,
+            "text": "Current address"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 13,
+            "text": "already live at that address."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 14,
+            "text": "Deploy method"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 15,
+            "text": "direct wrangler uploads, so the project is not git-connected."
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 18,
+            "text": "Blast-radius limit"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 19,
+            "text": "Shared account"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 20,
+            "text": "the same Cloudflare account also hosts the operator's personal site."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 23,
+            "text": "Rule"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 24,
+            "text": "marked CRITICAL in the brief: do not touch that project or its DNS."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 26,
+            "text": "Platform"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 30,
+            "text": "Retention window"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 31,
+            "text": "it must remain intact as a rollback target for roughly two weeks after cutover."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 32,
+            "text": "Preferred mechanism"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 33,
+            "text": "prefer a DNS-record cutover that the operator can revert in minutes."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 34,
+            "text": "Destructive steps to avoid"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 38,
+            "text": "registration transfer is out of scope right now, not forever."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 40,
+            "text": "Status"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 42,
+            "text": "Candidates"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 44,
+            "text": "the likeliest, because the site was built there."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 46,
+            "text": "some other registrar"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 47,
+            "text": "Resolution"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 48,
+            "text": "identifying the registrar is step 1 and is done together with the operator."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 49,
+            "text": "whois lookup"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 50,
+            "text": "what the Squarespace or Domains dashboard shows"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 51,
+            "text": "Ordered asks"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 52,
+            "text": "Identify and snapshot"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 53,
+            "text": "registrar for deeznutz.com"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 56,
+            "text": "list them so there is a written rollback snapshot in hand before anything is changed."
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 57,
+            "text": "Choose the apex + www path"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 58,
+            "text": "decide the cleanest way to point both apex and www at the Pages project."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 59,
+            "text": "constraint check, DNS stays put"
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 61,
+            "text": "CNAME flattening"
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 62,
+            "text": "ALIAS record"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 63,
+            "text": "fallback, DNS moves to Cloudflare"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 64,
+            "text": "if Squarespace DNS cannot do it, walk through moving only the DNS hosting to Cloudflare."
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 65,
+            "text": "add the site as a free zone"
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 66,
+            "text": "import existing records"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 68,
+            "text": "registration stays where it is under this path."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 69,
+            "text": "rollback cost disclosure"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 70,
+            "text": "note that the nameserver move weakens the instant-rollback property."
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 72,
+            "text": "actual rollback time"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 73,
+            "text": "state both for whichever path is taken, not only the fallback."
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 75,
+            "text": "do this ahead of the cutover, if the current DNS host allows it."
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 76,
+            "text": "Add the custom domains"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 77,
+            "text": "Location"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 82,
+            "text": "apply them after adding both domains."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 84,
+            "text": "apex resolves to the new site"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 85,
+            "text": "www resolves to the new site"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 86,
+            "text": "both over HTTPS."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 87,
+            "text": "certificate issued"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 88,
+            "text": "http to https redirect works"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 89,
+            "text": "www/apex canonicalization works"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 91,
+            "text": "the extensionless path must return 200."
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 92,
+            "text": "Close out"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 94,
+            "text": "delivered as a saved note."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 95,
+            "text": "sitemap reminder"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 96,
+            "text": "remind the operator to submit the sitemap in Google Search Console after cutover."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 98,
+            "text": "Scope"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 99,
+            "text": "raised for awareness only, not as work to do here."
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 101,
+            "text": "the site's contact-form backend is not functional yet and is being fixed separately."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 102,
+            "text": "Acceptance"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 103,
+            "text": "if DNS is completed today, that is accepted."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 104,
+            "text": "Ownership"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 105,
+            "text": "the launch decision belongs to the operator."
+          }
+        ],
+        "novel_span_count": 57,
+        "novel_span_count_ge3": 31,
+        "output_token_count": 491,
+        "representative_novel_spans": [
+          {
+            "end": 30,
+            "length": 12,
+            "start": 18,
+            "text": "delivery format guide the operator click-by-click rather than acting for them operator"
+          },
+          {
+            "end": 459,
+            "length": 11,
+            "start": 448,
+            "text": "scope raised for awareness only not as work to do here"
+          },
+          {
+            "end": 485,
+            "length": 11,
+            "start": 474,
+            "text": "acceptance if dns is completed today that is accepted ownership the"
+          },
+          {
+            "end": 422,
+            "length": 10,
+            "start": 412,
+            "text": "works https://deeznutz.com/about the extensionless path must return 200 close out"
+          },
+          {
+            "end": 196,
+            "length": 9,
+            "start": 187,
+            "text": "and is done together with the operator whois lookup"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 105,
+        "verbatim_node_count": 34,
+        "verbatim_node_rate": 0.3238
+      },
+      "skim": {
+        "allowlisted_node_count": 1,
+        "allowlisted_nodes": [
+          "State"
+        ],
+        "by_role": {
+          "attribute": {
+            "total": 12,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.25
+          },
+          "concept": {
+            "total": 7,
+            "verbatim": 5,
+            "verbatim_node_rate": 0.7143
+          },
+          "enumerator": {
+            "total": 20,
+            "verbatim": 9,
+            "verbatim_node_rate": 0.45
+          },
+          "explanation": {
+            "total": 6,
+            "verbatim": 1,
+            "verbatim_node_rate": 0.1667
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8393,
+        "extractive_coverage_min2": 0.5714,
+        "extractive_coverage_min3": 0.4286,
+        "longest_novel_span_length": 12,
+        "non_verbatim_node_count": 27,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Migration task"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Goal"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "move deeznutz.com off the old Squarespace site and onto the already-deployed Cloudflare Pages site."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Format"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "guide click-by-click; the operator is logged into the dashboards and can screen-share tabs."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 7,
+            "text": "Cloudflare Pages \"deeznutz\""
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 8,
+            "text": "live at deeznutz.pages.dev"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 9,
+            "text": "Deploy method"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 14,
+            "text": "Same account"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 21,
+            "text": "Retention"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 22,
+            "text": "must stay intact as a rollback target for about two weeks after cutover."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 23,
+            "text": "Forbidden steps"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 24,
+            "text": "cancel Squarespace subscription"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 26,
+            "text": "transfer domain registration now"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 28,
+            "text": "Status"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 30,
+            "text": "Candidates"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 31,
+            "text": "Squarespace Domains, likely"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 34,
+            "text": "Ordered asks"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 35,
+            "text": "identify registrar + DNS host, snapshot records"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 36,
+            "text": "decide apex + www path to Pages"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 37,
+            "text": "lower TTLs first if allowed"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 38,
+            "text": "add custom domains in Pages"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 39,
+            "text": "verify resolution, cert, redirects"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 40,
+            "text": "save rollback note + sitemap reminder"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 43,
+            "text": "the backend is not functional yet and is being fixed separately."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 44,
+            "text": "Launch call"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 45,
+            "text": "finishing DNS today is accepted; the launch decision is the operator's."
+          }
+        ],
+        "novel_span_count": 24,
+        "novel_span_count_ge3": 12,
+        "output_token_count": 168,
+        "representative_novel_spans": [
+          {
+            "end": 139,
+            "length": 12,
+            "start": 127,
+            "text": "in pages verify resolution cert redirects save rollback note + sitemap reminder"
+          },
+          {
+            "end": 6,
+            "length": 6,
+            "start": 0,
+            "text": "migration task goal move deeznutz.com off"
+          },
+          {
+            "end": 23,
+            "length": 6,
+            "start": 17,
+            "text": "format guide click-by-click the operator is"
+          },
+          {
+            "end": 95,
+            "length": 5,
+            "start": 90,
+            "text": "now registrar status unconfirmed candidates"
+          },
+          {
+            "end": 13,
+            "length": 3,
+            "start": 10,
+            "text": "and onto the"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 45,
+        "verbatim_node_count": 18,
+        "verbatim_node_rate": 0.4
+      },
+      "standard": {
+        "allowlisted_node_count": 1,
+        "allowlisted_nodes": [
+          "State"
+        ],
+        "by_role": {
+          "attribute": {
+            "total": 15,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.2
+          },
+          "concept": {
+            "total": 7,
+            "verbatim": 4,
+            "verbatim_node_rate": 0.5714
+          },
+          "enumerator": {
+            "total": 36,
+            "verbatim": 21,
+            "verbatim_node_rate": 0.5833
+          },
+          "explanation": {
+            "total": 16,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.125
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8415,
+        "extractive_coverage_min2": 0.6599,
+        "extractive_coverage_min3": 0.5216,
+        "longest_novel_span_length": 7,
+        "non_verbatim_node_count": 44,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Migration task"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Goal"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "move the domain deeznutz.com from the old Squarespace site to an already- deployed Cloudflare Pages site."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Delivery format"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "guide click-by-click; the operator is logged into the relevant dashboards and can screen-share tabs."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 9,
+            "text": "Deploy method"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 13,
+            "text": "Blast-radius limit"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 14,
+            "text": "Shared account"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 15,
+            "text": "the same Cloudflare account also hosts the operator's personal site."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 18,
+            "text": "Rule"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 24,
+            "text": "Retention window"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 25,
+            "text": "it must remain intact as a rollback target for about two weeks after cutover."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 26,
+            "text": "Preferred mechanism"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 27,
+            "text": "prefer a DNS-record cutover that is revertible in minutes."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 28,
+            "text": "Forbidden steps"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 29,
+            "text": "cancel Squarespace subscription"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 31,
+            "text": "transfer the registration now"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 33,
+            "text": "Status"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 35,
+            "text": "Candidates"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 36,
+            "text": "Squarespace Domains, likely"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 37,
+            "text": "likely because the site was built there."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 40,
+            "text": "Resolution"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 41,
+            "text": "step 1 is identifying it together, via whois plus what the Squarespace or Domains dashboard shows."
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 42,
+            "text": "Ordered asks"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 43,
+            "text": "Identify and snapshot"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 47,
+            "text": "listed so there is a written rollback snapshot before anything changes."
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 48,
+            "text": "Choose the apex + www path"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 49,
+            "text": "constraint check at Squarespace"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 50,
+            "text": "if DNS stays at Squarespace, confirm whether its DNS supports what the apex needs, meaning CNAME flattening or ALIAS."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 51,
+            "text": "fallback: DNS to Cloudflare"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 52,
+            "text": "if not, walk through moving only DNS hosting to Cloudflare while keeping registration where it is."
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 53,
+            "text": "state the rollback cost"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 54,
+            "text": "note that this weakens the instant-rollback property, and give the actual rollback procedure and time for whichever path is taken."
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 56,
+            "text": "do this before the cutover, if the current host allows it."
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 57,
+            "text": "Add custom domains"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 60,
+            "text": "then make the prescribed DNS changes"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 62,
+            "text": "apex + www resolve over HTTPS"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 64,
+            "text": "http to https redirect"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 66,
+            "text": "/about returns 200"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 67,
+            "text": "Close out"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 69,
+            "text": "sitemap reminder for Search Console"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 72,
+            "text": "the site's contact-form backend is not functional yet and is being fixed separately."
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 73,
+            "text": "Launch call"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 74,
+            "text": "completing DNS today is accepted; the launch decision belongs to the operator."
+          }
+        ],
+        "novel_span_count": 42,
+        "novel_span_count_ge3": 20,
+        "output_token_count": 347,
+        "representative_novel_spans": [
+          {
+            "end": 26,
+            "length": 7,
+            "start": 19,
+            "text": "delivery format guide click-by-click the operator is"
+          },
+          {
+            "end": 217,
+            "length": 7,
+            "start": 210,
+            "text": "meaning cname flattening or alias fallback dns"
+          },
+          {
+            "end": 58,
+            "length": 6,
+            "start": 52,
+            "text": "account personal-account blast-radius limit shared account"
+          },
+          {
+            "end": 131,
+            "length": 6,
+            "start": 125,
+            "text": "registration now registrar status unconfirmed candidates"
+          },
+          {
+            "end": 169,
+            "length": 6,
+            "start": 163,
+            "text": "ordered asks identify and snapshot registrar"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 74,
+        "verbatim_node_count": 30,
+        "verbatim_node_rate": 0.4054
+      }
+    },
+    "opus-v0.5.0b1": {
+      "deep": {
+        "allowlisted_node_count": 1,
+        "allowlisted_nodes": [
+          "State"
+        ],
+        "by_role": {
+          "attribute": {
+            "total": 34,
+            "verbatim": 5,
+            "verbatim_node_rate": 0.1471
+          },
+          "concept": {
+            "total": 7,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.4286
+          },
+          "enumerator": {
+            "total": 32,
+            "verbatim": 13,
+            "verbatim_node_rate": 0.4062
+          },
+          "explanation": {
+            "total": 30,
+            "verbatim": 8,
+            "verbatim_node_rate": 0.2667
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8352,
+        "extractive_coverage_min2": 0.6147,
+        "extractive_coverage_min3": 0.5256,
+        "longest_novel_span_length": 13,
+        "non_verbatim_node_count": 74,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Goal"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Guidance mode"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "guide the user click-by-click"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 5,
+            "text": "User posture"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 11,
+            "text": "Live URL"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 13,
+            "text": "Deploy method"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 16,
+            "text": "the Cloudflare account name is personal-account"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 17,
+            "text": "Protected project"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 18,
+            "text": "Severity"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 19,
+            "text": "the user flags this constraint as CRITICAL"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 20,
+            "text": "Identity"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 23,
+            "text": "Relation"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 24,
+            "text": "the same Cloudflare account also hosts the user's personal site"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 25,
+            "text": "Rule"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 30,
+            "text": "Retention"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 31,
+            "text": "it must remain intact as a rollback target for about two weeks after cutover"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 32,
+            "text": "Preferred method"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 33,
+            "text": "prefer a DNS-record cutover the user can revert in minutes"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 34,
+            "text": "Destructive steps to avoid"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 35,
+            "text": "cancelling the Squarespace subscription"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 36,
+            "text": "deleting the Squarespace site"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 37,
+            "text": "transferring the domain registration now"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 38,
+            "text": "Registrar unconfirmed"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 39,
+            "text": "Candidates"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 40,
+            "text": "Squarespace Domains, likely"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 41,
+            "text": "Google Domains legacy, possibly"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 43,
+            "text": "Reason for the guess"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 44,
+            "text": "the site was built at Squarespace"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 45,
+            "text": "Resolution"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 46,
+            "text": "step 1 is identifying the registrar together with the user"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 47,
+            "text": "Evidence sources"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 50,
+            "text": "Requested steps"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 51,
+            "text": "identify registrar + DNS host"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 52,
+            "text": "Targets"
+          },
+          {
+            "depth": 3,
+            "family": "lalpha",
+            "index": 53,
+            "text": "registrar for deeznutz.com"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 55,
+            "text": "Deliverable"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 56,
+            "text": "list the current DNS records so there is a written rollback snapshot before anything changes"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 57,
+            "text": "decide the apex and www path"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 58,
+            "text": "Objective"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 59,
+            "text": "pick the cleanest path for pointing the apex and www at the Pages project"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 61,
+            "text": "if DNS stays at Squarespace, confirm whether its DNS supports what the apex needs"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 62,
+            "text": "Apex requirement"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 63,
+            "text": "CNAME flattening or ALIAS"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 64,
+            "text": "Fallback path"
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 65,
+            "text": "add the site as a free Cloudflare zone"
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 66,
+            "text": "import the records"
+          },
+          {
+            "depth": 3,
+            "family": "lroman",
+            "index": 67,
+            "text": "switch the nameservers"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 68,
+            "text": "Fallback scope"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 69,
+            "text": "move only DNS hosting to Cloudflare while keeping registration where it is"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 70,
+            "text": "Caveat"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 71,
+            "text": "note that the fallback weakens the instant rollback property"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 72,
+            "text": "Required answer"
+          },
+          {
+            "depth": 3,
+            "family": "arrow",
+            "index": 73,
+            "text": "state the actual rollback procedure and time for whichever path is taken"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 75,
+            "text": "do this only if the current host allows it"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 76,
+            "text": "add the custom domains in Pages"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 77,
+            "text": "Location"
+          },
+          {
+            "depth": 2,
+            "family": "attr",
+            "index": 82,
+            "text": "Follow-up"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 84,
+            "text": "verify the cutover"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 85,
+            "text": "apex and www resolve to the new site over HTTPS"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 87,
+            "text": "http to https redirect works"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 88,
+            "text": "www and apex canonicalization works"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 89,
+            "text": "https://deeznutz.com/about returns 200"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 90,
+            "text": "the /about check is the extensionless case"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 91,
+            "text": "close-out items"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 93,
+            "text": "reminder to submit the sitemap"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 94,
+            "text": "the sitemap goes to Google Search Console after cutover"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 96,
+            "text": "Status"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 97,
+            "text": "raised for awareness, not as a blocker"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 99,
+            "text": "the site's contact form backend is not functional yet and is being fixed separately"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 100,
+            "text": "Accepted outcome"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 101,
+            "text": "if DNS completes today that is accepted"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 102,
+            "text": "Ownership"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 103,
+            "text": "the launch decision is the user's"
+          }
+        ],
+        "novel_span_count": 51,
+        "novel_span_count_ge3": 20,
+        "output_token_count": 449,
+        "representative_novel_spans": [
+          {
+            "end": 69,
+            "length": 13,
+            "start": 56,
+            "text": "is personal-account protected project severity the user flags this constraint as critical identity"
+          },
+          {
+            "end": 374,
+            "length": 11,
+            "start": 363,
+            "text": "http to https redirect works www and apex canonicalization works https://deeznutz.com/about"
+          },
+          {
+            "end": 444,
+            "length": 11,
+            "start": 433,
+            "text": "accepted outcome if dns completes today that is accepted ownership the"
+          },
+          {
+            "end": 261,
+            "length": 10,
+            "start": 251,
+            "text": "apex requirement cname flattening or alias fallback path add the"
+          },
+          {
+            "end": 179,
+            "length": 9,
+            "start": 170,
+            "text": "the registrar together with the user evidence sources whois"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 103,
+        "verbatim_node_count": 29,
+        "verbatim_node_rate": 0.2816
+      },
+      "skim": {
+        "allowlisted_node_count": 0,
+        "allowlisted_nodes": [],
+        "by_role": {
+          "attribute": {
+            "total": 4,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.5
+          },
+          "concept": {
+            "total": 4,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.5
+          },
+          "enumerator": {
+            "total": 6,
+            "verbatim": 1,
+            "verbatim_node_rate": 0.1667
+          },
+          "explanation": {
+            "total": 3,
+            "verbatim": 0,
+            "verbatim_node_rate": 0.0
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8587,
+        "extractive_coverage_min2": 0.587,
+        "extractive_coverage_min3": 0.4783,
+        "longest_novel_span_length": 11,
+        "non_verbatim_node_count": 12,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 1,
+            "family": "arrow",
+            "index": 1,
+            "text": "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+          },
+          {
+            "depth": 1,
+            "family": "arrow",
+            "index": 2,
+            "text": "guide the user click-by-click while they are logged into the dashboards and can screen-share tabs"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 5,
+            "text": "Protected project"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 7,
+            "text": "Registrar unconfirmed"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 8,
+            "text": "Requested order"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 9,
+            "text": "identify registrar + DNS host"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 10,
+            "text": "decide apex + www path"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 12,
+            "text": "add custom domains in Pages"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 13,
+            "text": "verify resolution, certs, canonicalization"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 14,
+            "text": "rollback note + sitemap reminder"
+          },
+          {
+            "depth": 1,
+            "family": "arrow",
+            "index": 16,
+            "text": "the contact form backend is not functional yet, and completing DNS today is accepted because the launch decision is the user's"
+          }
+        ],
+        "novel_span_count": 12,
+        "novel_span_count_ge3": 5,
+        "output_token_count": 92,
+        "representative_novel_spans": [
+          {
+            "end": 68,
+            "length": 11,
+            "start": 57,
+            "text": "in pages verify resolution certs canonicalization rollback note + sitemap reminder"
+          },
+          {
+            "end": 22,
+            "length": 6,
+            "start": 16,
+            "text": "the user click-by-click while they are"
+          },
+          {
+            "end": 41,
+            "length": 4,
+            "start": 37,
+            "text": "registrar unconfirmed requested order"
+          },
+          {
+            "end": 87,
+            "length": 4,
+            "start": 83,
+            "text": "is accepted because the"
+          },
+          {
+            "end": 3,
+            "length": 3,
+            "start": 0,
+            "text": "domain migration move"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 17,
+        "verbatim_node_count": 5,
+        "verbatim_node_rate": 0.2941
+      },
+      "standard": {
+        "allowlisted_node_count": 1,
+        "allowlisted_nodes": [
+          "State"
+        ],
+        "by_role": {
+          "attribute": {
+            "total": 15,
+            "verbatim": 5,
+            "verbatim_node_rate": 0.3333
+          },
+          "concept": {
+            "total": 7,
+            "verbatim": 3,
+            "verbatim_node_rate": 0.4286
+          },
+          "enumerator": {
+            "total": 16,
+            "verbatim": 7,
+            "verbatim_node_rate": 0.4375
+          },
+          "explanation": {
+            "total": 12,
+            "verbatim": 2,
+            "verbatim_node_rate": 0.1667
+          }
+        },
+        "empty_node_count": 0,
+        "extractive_coverage_min1": 0.8636,
+        "extractive_coverage_min2": 0.6182,
+        "extractive_coverage_min3": 0.5182,
+        "longest_novel_span_length": 12,
+        "non_verbatim_node_count": 33,
+        "non_verbatim_nodes": [
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 0,
+            "text": "Domain migration"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 1,
+            "text": "Goal"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 2,
+            "text": "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 3,
+            "text": "Mode"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 4,
+            "text": "guide click-by-click; the user is logged into the relevant dashboards and can screen-share tabs"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 9,
+            "text": "Deploy method"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 12,
+            "text": "the Cloudflare account name is personal-account"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 13,
+            "text": "Protected project"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 14,
+            "text": "Severity"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 15,
+            "text": "the user marks this one CRITICAL"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 16,
+            "text": "Identity"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 19,
+            "text": "Rule"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 20,
+            "text": "the same account hosts it, so do not touch that project or its DNS"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 24,
+            "text": "Retention"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 25,
+            "text": "it must remain intact as a rollback target for about two weeks after cutover"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 26,
+            "text": "Preference"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 27,
+            "text": "prefer a DNS-record cutover revertible in minutes"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 29,
+            "text": "cancelling the Squarespace subscription"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 30,
+            "text": "deleting the Squarespace site"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 31,
+            "text": "transferring the registration right now"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 32,
+            "text": "Registrar unconfirmed"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 33,
+            "text": "Candidates"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 34,
+            "text": "Squarespace Domains, likely"
+          },
+          {
+            "depth": 2,
+            "family": "lalpha",
+            "index": 35,
+            "text": "Google Domains legacy, possibly"
+          },
+          {
+            "depth": 1,
+            "family": "attr",
+            "index": 37,
+            "text": "First step"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 38,
+            "text": "identify it with the user, from whois and what the Squarespace/Domains dashboard shows"
+          },
+          {
+            "depth": 0,
+            "family": "dash",
+            "index": 39,
+            "text": "Requested steps"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 41,
+            "text": "decide the apex and www path"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 43,
+            "text": "add the custom domains in Pages"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 44,
+            "text": "verify the new site end to end"
+          },
+          {
+            "depth": 1,
+            "family": "uroman",
+            "index": 45,
+            "text": "rollback note + sitemap reminder"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 48,
+            "text": "the site's contact form backend is not functional yet and is being fixed separately"
+          },
+          {
+            "depth": 2,
+            "family": "arrow",
+            "index": 50,
+            "text": "completing DNS today is accepted; the launch decision is the user's"
+          }
+        ],
+        "novel_span_count": 29,
+        "novel_span_count_ge3": 12,
+        "output_token_count": 220,
+        "representative_novel_spans": [
+          {
+            "end": 65,
+            "length": 12,
+            "start": 53,
+            "text": "is personal-account protected project severity the user marks this one critical identity"
+          },
+          {
+            "end": 189,
+            "length": 8,
+            "start": 181,
+            "text": "end to end rollback note + sitemap reminder"
+          },
+          {
+            "end": 22,
+            "length": 6,
+            "start": 16,
+            "text": "mode guide click-by-click the user is"
+          },
+          {
+            "end": 149,
+            "length": 5,
+            "start": 144,
+            "text": "the user from whois and"
+          },
+          {
+            "end": 4,
+            "length": 4,
+            "start": 0,
+            "text": "domain migration goal move"
+          }
+        ],
+        "status": "scored",
+        "total_semantic_nodes": 50,
+        "verbatim_node_count": 17,
+        "verbatim_node_rate": 0.34
+      }
+    },
     "sonnet": {
       "deep": {
         "allowlisted_node_count": 0,
