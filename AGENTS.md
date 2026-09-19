@@ -10,7 +10,9 @@ Repo = one Claude Code skill: `structured-gist`. Renders explain/recap output as
 /structured-gist [skim|standard|deep] [block|responsive]
 ```
 
-No args → skim + surface-keyed mode (markdown surface → responsive, terminal → block).
+No args → skim + block, on every surface. `responsive` = explicit opt-in, never auto-picked by surface.
+
+Presets (opt-in, branches optional — omit what the source doesn't support): `/structured-gist summary` (session recap), `/structured-gist report` alias `findings` (finding-first).
 
 Trigger phrases (any → activate): structured-gist, gist mode, gist this, outline this, bullet this, notes mode, structure this, break this down, distill this, give me the gist, make this skimmable, tighten this up, condense this.
 
@@ -23,10 +25,10 @@ Trigger phrases (any → activate): structured-gist, gist mode, gist this, outli
 
 No plain bullets. No `▸`→`▸` self-nest. No mixing families as siblings.
 
-## Render mode — pick by surface
+## Render mode — block default, responsive opt-in
 
-- markdown surface (GitHub, chat) → `responsive`: real GFM list, glyph-free, role = typography (bold attr, literal enum label, plain-prose leaf)
-- terminal/plain-text → `block`: fenced, literal glyphs
+- `block` = default everywhere: fenced, literal glyphs, 4-space rungs, hard-wrap at 64 cols (R11)
+- `responsive` = opt-in for a markdown-rendering surface (GitHub, chat): real GFM list, glyph-free, role = typography (bold attr, literal enum label, plain-prose leaf). Never carry block glyphs or 4-space rungs into it.
 - `inline` = deprecated, do not use, breaks on GitHub (renders as code block)
 
 ## Before you edit
@@ -34,7 +36,9 @@ No plain bullets. No `▸`→`▸` self-nest. No mixing families as siblings.
 1. Run linter: `python3 skills/structured-gist/tests/lint_outline.py < your_output.md` — 15 rules, stdlib only, zero exceptions.
 2. Run tests: `pytest skills/structured-gist/tests/` before any PR.
 3. Bump `version:` in SKILL.md frontmatter + add benchmark.md row on any behavior change — no exceptions, unmeasured bumps flagged.
-4. `skills/structured-gist/` = source of truth. `plugins/structured-gist/plugin.json` just points at it — don't duplicate skill content there.
+4. `skills/structured-gist/` = source of truth. `plugins/structured-gist/.claude-plugin/plugin.json` + the `plugins/structured-gist/skills/structured-gist` symlink just point at it — don't duplicate skill content there.
+
+5. Before a release: `bash skills/structured-gist/scripts/validate_plugin.sh` — validates the plugin through the `skills/` symlink (the stock validator skips it) + checks SKILL.md and plugin.json versions agree. Skips cleanly without the `claude` CLI.
 
 ## Scope
 
