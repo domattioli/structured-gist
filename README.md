@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/status-alpha-orange)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Version](https://img.shields.io/badge/version-0.4.12-informational)
+![Version](https://img.shields.io/badge/version-0.5.0b1-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
 ![Tests](https://img.shields.io/badge/tests-61%20passing-success)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
@@ -95,6 +95,8 @@ Rendered as an outline in `skim` granularity and `block` mode (the default modal
 ```
 
 No level given defaults to `skim`. No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface.
+
+Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
 
 Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "cliff notes", "spark notes", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 

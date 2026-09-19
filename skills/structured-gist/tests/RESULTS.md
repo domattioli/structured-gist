@@ -1,6 +1,6 @@
-# structured-gist — deterministic test results (v0.3.2)
+# structured-gist — deterministic test results (v0.5.0b1)
 
-**Date**: 2026-07-04 · **Mechanism**: `lint_outline.py` (Python stdlib, no LLM, no RNG, no clock → byte-reproducible). v0.3: 17 pytest cases + 44 smoke checks green; attribute marker `▸`, non-leaf `↪`, R8 no-self-nest. v0.3.1 added every-fenced-block coverage for SKILL.md + example files (the linter auto-extracts only the first block). v0.3.2 added R9 delimiter-split (19 pytest cases; new `good_r9.md`/`bad_r9.md` fixtures).
+**Date**: 2026-09-18 (suite counts; the verdict transcript below dates from 2026-07-04, v0.3.2) · **Current suite, v0.5.0b1**: 89 pytest cases + 84 smoke checks green. · **Mechanism**: `lint_outline.py` (Python stdlib, no LLM, no RNG, no clock → byte-reproducible). v0.3: 17 pytest cases + 44 smoke checks green; attribute marker `▸`, non-leaf `↪`, R8 no-self-nest. v0.3.1 added every-fenced-block coverage for SKILL.md + example files (the linter auto-extracts only the first block). v0.3.2 added R9 delimiter-split (19 pytest cases; new `good_r9.md`/`bad_r9.md` fixtures).
 
 ## Test subject
 

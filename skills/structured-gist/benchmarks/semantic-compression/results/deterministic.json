@@ -739,6 +739,627 @@
     },
     "test_class": "regression"
   },
+  "registrar-hedge": {
+    "haiku": {
+      "deep": {
+        "compression_ratio": 0.9134,
+        "conformance_clean": false,
+        "conformance_violation_count": 26,
+        "conformance_violations": [
+          {
+            "line": 17,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 19,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 1,
+            "message": "text too wordy (7 words, max 3)",
+            "rule": "R7"
+          },
+          {
+            "line": 5,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 8,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 11,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 13,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 15,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 31,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 37,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 42,
+            "message": "text too wordy (5 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 43,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 44,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 48,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 1,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 3,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 5,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 8,
+            "message": "parenthetical with 5 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 11,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 15,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 17,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 19,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 31,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 39,
+            "message": "'\u2192' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 42,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 43,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 348,
+        "reduction_pct": 8.66,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "skim": {
+        "compression_ratio": 0.1102,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": false,
+        "output_words": 42,
+        "reduction_pct": 88.98,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "standard": {
+        "compression_ratio": 0.5039,
+        "conformance_clean": false,
+        "conformance_violation_count": 14,
+        "conformance_violations": [
+          {
+            "line": 12,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 13,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 19,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 20,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 21,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 22,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 23,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 24,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 12,
+            "message": "text too wordy (11 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 13,
+            "message": "text too wordy (12 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 20,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 12,
+            "message": "':' followed by 7 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 13,
+            "message": "parenthetical with 6 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 20,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 192,
+        "reduction_pct": 49.61,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "opus-v0.4.12": {
+      "deep": {
+        "compression_ratio": 1.5696,
+        "conformance_clean": false,
+        "conformance_violation_count": 7,
+        "conformance_violations": [
+          {
+            "line": 78,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 80,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 81,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 82,
+            "message": "mixed sibling families: {'attr', 'lalpha'}",
+            "rule": "R6"
+          },
+          {
+            "line": 51,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 66,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 80,
+            "message": "enumerator/arrow must be nested strictly deeper than its attribute parent (both at depth 2)",
+            "rule": "R16"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 598,
+        "reduction_pct": -56.96,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "skim": {
+        "compression_ratio": 0.5643,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": false,
+        "output_words": 215,
+        "reduction_pct": 43.57,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "standard": {
+        "compression_ratio": 1.1102,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 52,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 423,
+        "reduction_pct": -11.02,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "opus-v0.5.0b1": {
+      "deep": {
+        "compression_ratio": 1.4541,
+        "conformance_clean": false,
+        "conformance_violation_count": 4,
+        "conformance_violations": [
+          {
+            "line": 66,
+            "message": "text too wordy (8 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 86,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 93,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 90,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 554,
+        "reduction_pct": -45.41,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "skim": {
+        "compression_ratio": 0.2861,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 2,
+            "message": "too many arrows (2) vs non-arrow nodes (0) in block",
+            "rule": "R5"
+          },
+          {
+            "line": 17,
+            "message": "too many arrows (1) vs non-arrow nodes (0) in block",
+            "rule": "R5"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 109,
+        "reduction_pct": 71.39,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "standard": {
+        "compression_ratio": 0.7139,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": false,
+        "output_words": 272,
+        "reduction_pct": 28.61,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "sonnet": {
+      "deep": {
+        "compression_ratio": 0.9134,
+        "conformance_clean": false,
+        "conformance_violation_count": 26,
+        "conformance_violations": [
+          {
+            "line": 17,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 19,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 1,
+            "message": "text too wordy (7 words, max 3)",
+            "rule": "R7"
+          },
+          {
+            "line": 5,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 8,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 11,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 13,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 15,
+            "message": "text too wordy (6 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 31,
+            "message": "text too wordy (7 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 37,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 42,
+            "message": "text too wordy (5 words, max 4)",
+            "rule": "R7"
+          },
+          {
+            "line": 43,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 44,
+            "message": "text too wordy (9 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 48,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 1,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 3,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 5,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 8,
+            "message": "parenthetical with 5 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 11,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 15,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 17,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 19,
+            "message": "':' followed by 4 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 31,
+            "message": "':' followed by 5 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 39,
+            "message": "'\u2192' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 42,
+            "message": "':' followed by 3 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 43,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 348,
+        "reduction_pct": 8.66,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "skim": {
+        "compression_ratio": 0.1102,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": false,
+        "output_words": 42,
+        "reduction_pct": 88.98,
+        "source_words": 381,
+        "status": "scored"
+      },
+      "standard": {
+        "compression_ratio": 0.5039,
+        "conformance_clean": false,
+        "conformance_violation_count": 14,
+        "conformance_violations": [
+          {
+            "line": 12,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 13,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 19,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 20,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 21,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 22,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 23,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 24,
+            "message": "invalid family 'uroman' at depth 2",
+            "rule": "R1"
+          },
+          {
+            "line": 12,
+            "message": "text too wordy (11 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 13,
+            "message": "text too wordy (12 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 20,
+            "message": "text too wordy (10 words, max 6)",
+            "rule": "R7"
+          },
+          {
+            "line": 12,
+            "message": "':' followed by 7 words (>2) \u2014 nest the tail as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 13,
+            "message": "parenthetical with 6 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          },
+          {
+            "line": 20,
+            "message": "parenthetical with 3 words (>2) \u2014 nest as a child",
+            "rule": "R9"
+          }
+        ],
+        "is_block_mode": false,
+        "output_words": 192,
+        "reduction_pct": 49.61,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "test_class": "pressure-tests"
+  },
   "synthetic-scale-verylarge": {
     "haiku": {
       "deep": {

@@ -13,8 +13,8 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 | case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | near-identical-numbers | sonnet | skim | 276 | 50 | 81.88 | 0 | 0.3115 | 0.25 | 57.1 | 0 | 0.5 |
-| near-identical-numbers | sonnet | standard | 276 | 160 | 42.03 | 7 | 0.9508 | 0.9167 | 0 | 0 | 1.0 |
-| near-identical-numbers | sonnet | deep | 276 | 255 | 7.61 | 6 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| near-identical-numbers | sonnet | standard | 276 | 160 | 42.03 | 11 | 0.9508 | 0.9167 | 0 | 0 | 1.0 |
+| near-identical-numbers | sonnet | deep | 276 | 255 | 7.61 | 10 | 1.0 | 1.0 | 0 | 0 | 1.0 |
 | real-benchmark-archaeology | sonnet | skim | 466 | 74 | 84.12 | 0 | 0.4658 | 0.5 | 33.3 | 0 | 0.5625 |
 | real-benchmark-archaeology | sonnet | standard | 466 | 190 | 59.23 | 3 | 0.8846 | 0.9167 | 4.2 | 0 | 0.8125 |
 | real-benchmark-archaeology | sonnet | deep | 466 | 344 | 26.18 | 2 | 0.9658 | 1.0 | 0 | 0 | 0.875 |
@@ -30,6 +30,7 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 - `cause-chain-reversal` -- reader: someone reading this after the fact (postmortem, handoff) who needs to act on the real cause; task: know which diagnosis turned out to be correct, not just the order theories were proposed in. _an outline that faithfully reports the initial theory but drops the reversal is actively misleading for this task, even though the initial-theory facts are individually true_
 - `migration-tristate` -- reader: a lead tracking migration status across systems; task: know the exact current status of each system without confusing similar-sounding states (done vs. scheduled vs. will-not vs. reverted vs. in-progress).
 - `negation-and-true-peers` -- reader: a stakeholder getting a status update spanning several unrelated workstreams; task: know what did and did NOT happen in each workstream independently, without inferring a shared cause or hierarchy that isn't there. _negations here are load-bearing -- dropping a negation changes what the fact means, not just how much detail survives_
+- `registrar-hedge` -- (no `intent` recorded yet)
 - `synthetic-scale-verylarge` -- reader: someone triaging a large weekly ops digest under time pressure; task: find the one item that actually needs attention among many that don't, without reading the full source. _most 'outcome' facts here are deliberately low-weight because they are resolved noise (f2-f4, f14-f15); f10-f12 (the true root cause and its unresolved status) are weighted high because missing them defeats the reader's actual task even though they share a category with the noise facts_
 
 | case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
@@ -52,6 +53,15 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 | negation-and-true-peers | sonnet | skim | 272 | 46 | 83.09 | 1 | 0.0316 | 0.125 | 95.0 | 0 | 0.0625 |
 | negation-and-true-peers | sonnet | standard | 272 | 225 | 17.28 | 1 | 0.9895 | 1.0 | 0 | 0 | 1.0 |
 | negation-and-true-peers | sonnet | deep | 272 | 241 | 11.4 | 1 | 0.9895 | 1.0 | 0 | 0 | 1.0 |
+| registrar-hedge | opus-v0.4.12 | skim | 381 | 215 | 43.57 | 0 | 0.6386 | 0.5 | 15.8 | 0 | 0.7 |
+| registrar-hedge | opus-v0.4.12 | standard | 381 | 423 | -11.02 | 1 | 0.9699 | 0.9 | 0 | 0 | 1.0 |
+| registrar-hedge | opus-v0.4.12 | deep | 381 | 598 | -56.96 | 7 | 1.0 | 0.9 | 0 | 1 | 1.0 |
+| registrar-hedge | opus-v0.5.0b1 | skim | 381 | 109 | 71.39 | 2 | 0.4096 | 0.5 | 31.6 | 0 | 0.35 |
+| registrar-hedge | opus-v0.5.0b1 | standard | 381 | 272 | 28.61 | 0 | 0.6446 | 0.6 | 15.8 | 0 | 0.75 |
+| registrar-hedge | opus-v0.5.0b1 | deep | 381 | 554 | -45.41 | 4 | 1.0 | 0.9 | 0 | 0 | 1.0 |
+| registrar-hedge | sonnet | skim | 381 | 42 | 88.98 | 0 | 0.2711 | 0.2 | 63.2 | 0 | 0.5 |
+| registrar-hedge | sonnet | standard | 381 | 192 | 49.61 | 14 | 0.753 | 0.8 | 5.3 | 0 | 0.95 |
+| registrar-hedge | sonnet | deep | 381 | 348 | 8.66 | 26 | 0.9217 | 0.9 | 0 | 0 | 1.0 |
 | synthetic-scale-verylarge | haiku | skim | 1313 | 61 | 95.35 | 3 | 0.1579 | 0.25 | 73.9 | 0 | 0.1875 |
 | synthetic-scale-verylarge | haiku | standard | 1313 | 240 | 81.72 | 14 | 0.5553 | 0.625 | 21.7 | 0 | 1.0 |
 | synthetic-scale-verylarge | haiku | deep | 1313 | 733 | 44.17 | 43 | 0.9079 | 0.9167 | 2.2 | 0 | 1.0 |

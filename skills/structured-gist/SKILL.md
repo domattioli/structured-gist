@@ -1,8 +1,8 @@
 ---
 name: structured-gist
-version: "0.4.12"
+version: "0.5.0b1"
 benchmark: word_count_reduction_pct
-description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — role ladder concept (-) → attribute (▸, a named property of the concept) → ordinal/nominal enumerator (I./A./i./a.) → explanation (↪, one prose sentence per branch; usually a leaf, may preview a branch). No plain bullets. Render modes — block (monospace/terminal, fenced; ladder glyphs literal; default for all surfaces) and responsive (opt-in for any markdown-rendering surface incl. GitHub issue/PR/comment bodies AND chat-app replies — a real GFM nested list the renderer wraps to its own box width; glyph-free since v0.3.9: the renderer's bullets carry structure, role moves to typography — bold attributes, literal enumerator labels, plain prose leaves); the legacy inline mode is deprecated (its 4-space rungs render as code blocks on GitHub). Granularity skim (default) / standard / deep. Independent of caveman (structure vs wording). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
+description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — role ladder concept (-) → attribute (▸, a named property of the concept) → ordinal/nominal enumerator (I./A./i./a.) → explanation (↪, one prose sentence per branch; usually a leaf, may preview a branch). No plain bullets. Render modes — block (monospace/terminal, fenced; ladder glyphs literal; default for all surfaces) and responsive (opt-in for any markdown-rendering surface incl. GitHub issue/PR/comment bodies AND chat-app replies — a real GFM nested list the renderer wraps to its own box width; glyph-free since v0.3.9: the renderer's bullets carry structure, role moves to typography — bold attributes, literal enumerator labels, plain prose leaves); the legacy inline mode is deprecated (its 4-space rungs render as code blocks on GitHub). Granularity skim (default) / standard / deep. Independent of caveman (structure vs wording). Opt-in report preset (`/structured-gist report`, alias `findings`) packages source findings as peer top concepts. Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this", "structured-gist report", "sg report", "findings outline".
 ---
 
 # structured-gist — hierarchical lecture-note output
@@ -37,6 +37,20 @@ Off: "stop structured-gist" / explicit prose request.
 
 (Enumerators under a `▸` attribute sit at depth 2, so they take the lowercase family — `a.`/`i.` — per the depth-keyed ladder below; the `▸` occupies depth 1.)
 
+**Preset-omission contract (applies to every preset below).** A preset supplies optional branch names, not required slots — omit any branch the source does not support, the summary preset included. A preset never changes the marker ladder or adds a role.
+
+**Report preset (v0.5.0b1): `/structured-gist report` (alias `findings`).** A standalone, finding-first invocation: one top concept per supported finding, multiple findings allowed as peers — never one packaging root. A finding is never invented when the source establishes none. Optional branches — Question, Method, Observed, Inferred, Next — are included only when source-supported; omit the rest per the preset-omission contract above. No generic Intro/Background/Conclusion heading — context stays nested under the finding it belongs to. Under Method, ordered steps take the lowercase ordinal family (`i.`/`ii.`) and unordered components the lowercase nominal family (`a.`/`b.`); Method itself is a named `▸` branch, never an ordinal node. Granularity and render mode apply unchanged; no new marker roles are introduced.
+
+```text
+- <finding>
+    ▸ Method
+        ↪ <how it was checked>
+    ▸ Observed
+        a. <what was seen>
+    ▸ Next
+        ↪ <follow-up action>
+```
+
 **Activation is verify-don't-assume (same bar as caveman).** Attempt the real Skill call (`/structured-gist deep`, or the level/mode in effect) — do not assume it loaded. On success, state so. On `Unknown skill` (skill not loaded at container start), emit exactly one line — `structured-gist NOT loaded → emulating from SKILL.md` — then apply the outline rules manually from this file. NEVER claim "structured-gist active" without a successful Skill call; a false claim of this exact form shipped in a session recap on 2026-06-27. The missing skill never blocks the turn — emulate and continue.
 
 **Recommended: pair with a Stop-hook activation nudge, not a blocking gate.** A model can simply forget to invoke structured-gist on a long recap/explanation — there is no in-session signal forcing the check. The fix is advisory, not blocking: a Stop hook that reads the session transcript, and if the final assistant turn is long (word-count heuristic) AND no `Launching skill: structured-gist` backed call appears anywhere in the transcript, emits one stderr nudge line. It never blocks the turn — same fail-open contract as every other advisory hook (judgement-class checks are Stop advisories, not CI-hard gates). A consumer repo wiring this hook should model it on `stop_structured_gist_activation_guard.sh` alongside a claim-vs-call guard (audits false activation *claims*) and a rule-compliance guard (audits outlines already emitted) — three independent Stop-hook checks, not overlapping: claim-vs-call, output-quality, and activation-was-skipped. Cron-silent (`CLAUDE_INTERACTIVE=1` gate) and fail-open on missing jq/python3/transcript is the recommended contract. A hook cannot itself invoke the `Skill` tool (hooks are shell, not model turns) — it can only nudge the next turn's model into doing so; a blocking variant (exit nonzero to force another turn) was considered and rejected as unnecessarily coercive for a judgement-class check. This skill ships no hook scripts itself — the above is guidance for a consumer repo's own `.claude/hooks`.
@@ -58,9 +72,11 @@ The role ladder, outer to inner: **Concept → Attribute → Enumerator → Expl
 | role | marker | answers | word budget |
 |---|---|---|---|
 | **concept** | `-` (L1 only) | "what is this?" — a top concept, claim, or outcome | ~≤3 words |
-| **attribute** | `▸` | "the parent *has a* ___" — a named property of the parent | ≤4 words |
+| **attribute** | `▸` | "what does the parent *have*?" — a named property of the parent | ≤4 words |
 | **enumerator** | `I. II.` / `A. B.` at **depth 1** · `i. ii.` / `a. b.` at **depth ≥2** | "the parent is *composed of* these ordered/grouped parts" | ≤6 words deep tiers |
-| **explanation** | `↪` (hook arrow) | "why / how" — the one LONG prose sentence | no cap |
+| **explanation** | `↪` (hook arrow) | "what needs explaining or qualifying about the parent?" (e.g. why / how) — the one LONG prose sentence | no cap |
+
+Who/what/where/when/why/how/whether are content prompts, not marker selectors — asking "why" does not pick `↪` by itself. Match by the role criteria above instead: top claim → concept, named property → attribute, ordered or grouped part → enumerator, explanation → `↪`.
 
 **Attribute vs. enumerator (the distinction).** If a child reads naturally as "the parent *has a* ___" — a purpose, a component, a constraint, a property — it is an **attribute** (`▸`), not an enumerator. Enumerators are for genuinely ordered or grouped *parts/steps/evidence*. Rendering an attribute as a sibling `-` concept (flattening) or as an enumerator (mislabeling it a part) both lose the parent-attribute relation; `▸` preserves it. Example: "Marker ladder" is an attribute *of* structured-gist (`▸ Marker ladder`), not a peer concept and not a step.
 
@@ -70,6 +86,8 @@ The role ladder, outer to inner: **Concept → Attribute → Enumerator → Expl
 
 Attributes are inherently nominal (a property has a name, not a position) — there is no ordinal `▸` variant.
 
+**Advisory attribute-name lexicon (not linter-enforced).** Names commonly source-supported: Purpose, Mechanism, Actor, Location, Timing, Certainty. Scope names a boundary and Trigger names an initiating condition — neither is a catch-all for every "where" or "when". "Whether" names a proposition to resolve, not a degree of confidence; a degree of confidence is Certainty. Prefer the source's own property names over this list, and omit any name the source does not support — this vocabulary is advisory guidance, not something the linter checks.
+
 **A `▸` occupies a depth rung like any marker.** Enumerators directly under a concept sit at depth 1 (uppercase `I.`/`A.`); enumerators directly under a `▸` attribute sit at **depth 2**, so they take the lowercase family (`i.`/`a.`) — the ladder is keyed by absolute depth, not by "first enumerator encountered." (Linter rule R1.)
 
 A child-set is one family — never mix `I.` and `A.`, or `▸` and an enumerator, as siblings. Emit literal glyphs (GFM collapses real ordered lists to `1.`). Indent rule: see `## Spacing`.
@@ -77,6 +95,8 @@ A child-set is one family — never mix `I.` and `A.`, or `▸` and an enumerato
 **No-self-nesting (never nest a marker directly under the same marker).** Concepts live only at L1 and enumerators already alternate roman↔letter by depth, so neither can self-nest; the rule bites on attributes: **a `▸` MUST NOT be the direct child of a `▸`.** To express a property-of-a-property, interpose a different node type — a non-leaf `↪` hook (see below) or an enumerator — never `▸`→`▸` directly. Linter rule R8.
 
 **Leaf marker is `↪` (hook arrow), NOT `→`.** The plain `→` is reserved for inline cause-effect (`X → Y`) inside a node's text — the caveman wording convention — so it MUST NOT appear as a marker. `↪` always starts its own indented line (structure); `→` only ever sits mid-line (wording). Distinct glyphs, distinct jobs.
+
+**Preserve source relation wording.** Keep the source's own relation wording and keep its endpoints identifiable. An association, correlation, or uncertain link is not rewritten as a causal `→`.
 
 ## Length gradient
 
@@ -105,6 +125,8 @@ Word budget — terse by default at EVERY level (recursive):
 
 - a child **belongs-to / depends-on** its parent → a real tree, not a flat list dump
 - nesting depth mirrors the actual dependency structure of the content
+
+**Observed-versus-inferred (advisory).** When the source distinguishes observation from inference, preserve that distinction. Use separate branches only when grouping would blur status; otherwise keep the attribution explicit inside the `↪`. Never infer evidential status from wording alone, and never manufacture missing evidence.
 
 ## Granularity levels
 
@@ -135,6 +157,10 @@ Applies to **markdown-rendered modes** (`responsive`, and the deprecated `inline
 ## Leaf preservation
 
 Code blocks + tables = intact leaf nodes under the owning node. Never flatten into node text.
+
+## Hedge preservation
+
+Preserve source hedges with the claim they govern, including in collapsed output. Keep the hedge in the claim text or in an immediately attached `↪`. Use a certainty branch only when the hedge's scope is unambiguous. Never turn a hedged source claim into an unhedged heading.
 
 ## Carve-outs
 
@@ -202,7 +228,7 @@ Same "Agentic harness" tree, two ways — pick the one matching your surface's d
 
 **Do not mix them (#484).** Never carry `block`'s literal `▸`/`↪` glyphs or its 4-space rungs into a `responsive` reply — the glyph doubles up with the renderer's own bullet (`• ▸`) and the 4-space rungs render as GFM code blocks past depth 1. Negative example + full detail: `reference/render-modes.md` `## Responsive mode`.
 
-In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness, not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). More examples: `examples/{skim,standard,deep,attribute}.md`.
+In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness, not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). More examples: `examples/{skim,standard,deep,attribute,report}.md`.
 
 ## Caveman coexistence
 
@@ -237,6 +263,8 @@ Carve-outs align: when caveman auto-clarity yields for security/irreversible war
 - The robustness axis measures structural conformance only — a perturbation-stability term was designed twice and cut twice with recorded proofs (`benchmarks/scoring.md`).
 - Slop reduction is non-deterministic: the linter enforces marker structure, nesting, node length, and delimiter splicing, not sentence quality — a compliant outline can still carry jargon or a weak claim inside a node's text. The tool improves skimmability; it does not remove bad prose.
 - The linter checks structure, not truth — a well-formed outline can still misrepresent its source content, and no rule catches that.
+- Accepting the hedge rule in general requires comparing source against output for both hedge retention and claim attachment — structural linting alone establishes neither, so general enforcement is deferred to the held hedge-fidelity backlog item; the shipped fidelity check covers only declared statements in this repo's own example and fixtures.
+- Relation-wording preservation is enforced only over those same declared statements, not over arbitrary sources.
 
 ## Install
 

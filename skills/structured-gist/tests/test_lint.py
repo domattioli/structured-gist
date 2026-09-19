@@ -569,6 +569,111 @@ class TestNormativeBlocks:
                 f"attribute.md block {block_index} has violations: {violations}"
             )
 
+    def test_report_example_clean(self):
+        """Test that the fenced block in examples/report.md lints cleanly."""
+        report_file = (
+            Path(__file__).parent.parent / 'examples' / 'report.md'
+        )
+        assert report_file.exists(), (
+            f"report.md not found at {report_file}"
+        )
+        block_violations = _lint_all_blocks(str(report_file))
+
+        for block_index, violations in block_violations.items():
+            assert not violations, (
+                f"report.md block {block_index} has violations: {violations}"
+            )
+
+
+class TestFidelity:
+    """Test the deterministic fidelity check (D5) over declared statements."""
+
+    _FIXTURE_DIR = (
+        Path(__file__).parent / 'fixtures' / 'fidelity'
+    )
+
+    def test_report_example_fidelity_clean(self):
+        from fidelity_check import check_fidelity
+        report_file = Path(__file__).parent.parent / 'examples' / 'report.md'
+        assert check_fidelity(str(report_file)) == []
+
+    def test_hedge_dropped_fixture_violates(self):
+        from fidelity_check import check_fidelity
+        fixture = self._FIXTURE_DIR / 'hedge_dropped.md'
+        assert len(check_fidelity(str(fixture))) >= 1
+
+    def test_relation_upgraded_fixture_violates(self):
+        from fidelity_check import check_fidelity
+        fixture = self._FIXTURE_DIR / 'relation_upgraded.md'
+        assert len(check_fidelity(str(fixture))) >= 1
+
+    def test_declaration_malformed_fixture_violates(self):
+        from fidelity_check import check_fidelity
+        fixture = self._FIXTURE_DIR / 'declaration_malformed.md'
+        assert len(check_fidelity(str(fixture))) >= 1
+
+    def test_relation_upgraded_wrapped_fixture_violates(self):
+        """Arrow-upgrade split across a hard-wrapped continuation line
+        must still be caught — proves the fidelity check merges wrapped
+        continuations before searching, not just single physical lines."""
+        from fidelity_check import check_fidelity
+        fixture = self._FIXTURE_DIR / 'relation_upgraded_wrapped.md'
+        assert len(check_fidelity(str(fixture))) >= 1
+
+    def test_branch_unsupported_fixture_violates(self):
+        """An outline branch absent from the declared `supported-branches`
+        set (a manufactured branch) must be caught by the exact
+        branch-support check, not a heuristic."""
+        from fidelity_check import check_fidelity
+        fixture = self._FIXTURE_DIR / 'branch_unsupported.md'
+        assert len(check_fidelity(str(fixture))) >= 1
+
+    def test_all_fixtures_lint_clean(self):
+        fixtures = sorted(self._FIXTURE_DIR.glob('*.md'))
+        assert len(fixtures) == 5, (
+            f"expected 5 fidelity fixtures, found {[f.name for f in fixtures]}"
+        )
+        for fixture in fixtures:
+            block_violations = _lint_all_blocks(str(fixture))
+            for block_index, violations in block_violations.items():
+                assert not violations, (
+                    f"{fixture.name} block {block_index} has violations: {violations}"
+                )
+
+    def test_report_example_lint_file_clean(self):
+        """`lint_file` (file-mode, enforces R11) over the shipped example —
+        `_lint_all_blocks` alone skips R11 by design (it operates on the
+        already-continuation-merged outline, not physical lines)."""
+        report_file = Path(__file__).parent.parent / 'examples' / 'report.md'
+        violations = lint_file(str(report_file))
+        assert violations == [], f"report.md file-mode violations: {violations}"
+
+    def test_fidelity_fixtures_lint_file_clean(self):
+        """Same file-mode (R11-enforcing) check over every fidelity
+        fixture."""
+        for fixture in sorted(self._FIXTURE_DIR.glob('*.md')):
+            violations = lint_file(str(fixture))
+            assert violations == [], (
+                f"{fixture.name} file-mode violations: {violations}"
+            )
+
+    def test_skill_md_blocks_within_r11_width(self):
+        """`lint_file` on a multi-block file only reads the FIRST fenced
+        block, so a later block (e.g. the report-preset skeleton) is not
+        R11-covered by file mode. Assert every fenced block in SKILL.md
+        stays within the 64-char (incl. indent) block-mode width directly,
+        closing that gap deterministically."""
+        skill_file = Path(__file__).parent.parent / 'SKILL.md'
+        text = skill_file.read_text()
+        blocks = re.findall(r'```(?:text)?\n(.*?)```', text, re.S)
+        assert blocks, "no fenced blocks found in SKILL.md"
+        for block_index, block in enumerate(blocks):
+            for line_index, line in enumerate(block.split('\n')):
+                assert len(line) <= 64, (
+                    f"SKILL.md block {block_index} line {line_index} exceeds "
+                    f"64 chars ({len(line)}): {line!r}"
+                )
+
 
 def _extract_readme_section(readme_text: str, heading: str) -> str:
     """

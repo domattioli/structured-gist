@@ -1,0 +1,729 @@
+{
+  "deep": {
+    "facts": {
+      "f1": {
+        "evidence": "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "tradeoff: instant rollback becomes",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "record-level cutover (revertible in minutes);",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Step 2: Choose DNS hosting path",
+        "status": "partial"
+      },
+      "f13": {
+        "evidence": "before cutover, lower TTLs if possible on",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "c. apply prescribed DNS changes",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "a. apex + www resolve to new site over HTTPS",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "a. save exact rollback steps (procedure + timing)",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "contact form backend not functional (separate",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "b. launch decision belongs to user",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "old site must remain intact ~2 weeks post-cutover",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. old site: Squarespace at deeznutz.com (live)",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "b. new site: Cloudflare Pages (deeznutz.pages.dev)",
+        "status": "partial"
+      },
+      "f4": {
+        "evidence": "c. same CF account hosts personal site (do not touch)",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "unconfirmed — must identify in Step 1",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a. Squarespace Domains (site built there, most likely)",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "a. list all current DNS records (written snapshot)",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "support CNAME flattening/ALIAS for apex",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "II. Path B: move DNS to Cloudflare",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "check registrar via whois + Squarespace/Domains",
+        "note": "Method of identification not in any gold fact",
+        "source_supported": true
+      },
+      {
+        "claim": "b. DNS revert fastest on path A, slower on path B",
+        "note": "Comparative revert speed per path not stated in gold; inference from f10",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 2: Choose DNS hosting path",
+            "II. Path B: move DNS to Cloudflare"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Preference"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 2: Choose DNS hosting path"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 3: Reduce TTLs"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 4: Add custom domains in Cloudflare"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 5: Verify cutover"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 6: Documentation + notification"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Open issue"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Open issue"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Rollback requirement"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Current state"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Current state"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Current state"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Registrar for deeznutz.com"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Registrar for deeznutz.com"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 1: Identify registrar + DNS host"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 2: Choose DNS hosting path"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Step 2: Choose DNS hosting path"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Migrate deeznutz.com from Squarespace to Cloudflare Pages",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact form backend not functional; user accepts risk, does not block",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace at deeznutz.com; new: Cloudflare Pages at deeznutz.pages.dev",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No - unconfirmed; most likely Squarespace Domains, possibly Google Domains legacy or another",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains, Google Domains legacy, another registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar + DNS host; list all DNS records as written rollback snapshot",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Squarespace DNS must support CNAME flattening/ALIAS for apex; otherwise move DNS to Cloudflare",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Instant rollback becomes documented-procedure rollback",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Record-level cutover revertible in minutes; avoid destructive steps",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "Old site intact ~2 weeks post-cutover",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "unconfirmed — must identify in Step 1",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "only if it supports ALIAS/CNAME flattening",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "tradeoff: instant rollback becomes",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "Step 6: Documentation + notification",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "c. does not block DNS migration",
+        "status": "retained"
+      }
+    }
+  },
+  "skim": {
+    "facts": {
+      "f1": {
+        "evidence": "Domain migration",
+        "status": "partial"
+      },
+      "f10": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f11": {
+        "evidence": "DNS record cutover (revertible in minutes);",
+        "status": "partial"
+      },
+      "f12": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f13": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f14": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f15": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f16": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f17": {
+        "evidence": "contact form backend broken, accepted by user",
+        "status": "partial"
+      },
+      "f18": {
+        "evidence": "accepted by user",
+        "status": "partial"
+      },
+      "f19": {
+        "evidence": "Squarespace as rollback for ~2 weeks",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f5": {
+        "evidence": "unconfirmed",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "unconfirmed — likely Squarespace Domains,",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f8": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f9": {
+        "evidence": "",
+        "status": "omitted"
+      }
+    },
+    "hallucinations": [],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Domain migration"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Domain migration",
+            "Path"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Domain migration",
+            "Risk"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Domain migration",
+            "Risk"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Domain migration",
+            "Path"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Domain migration",
+            "Registrar"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Domain migration",
+            "Registrar"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "A domain migration (domain and target not named)",
+        "verdict": "partial"
+      },
+      "q10": {
+        "answer_given": "Contact form backend broken, accepted by user",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Not stated",
+        "verdict": "unanswerable"
+      },
+      "q3": {
+        "answer_given": "No - unconfirmed; likely Squarespace Domains, possibly Google Domains legacy, or another",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains, Google Domains legacy, or another",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Not stated",
+        "verdict": "unanswerable"
+      },
+      "q6": {
+        "answer_given": "Not stated",
+        "verdict": "unanswerable"
+      },
+      "q7": {
+        "answer_given": "Not stated",
+        "verdict": "unanswerable"
+      },
+      "q8": {
+        "answer_given": "DNS record cutover revertible in minutes (destructive-step avoidance not stated)",
+        "verdict": "partial"
+      },
+      "q9": {
+        "answer_given": "Squarespace as rollback for ~2 weeks",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r2": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r3": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r4": {
+        "evidence": "",
+        "status": "lost"
+      },
+      "r5": {
+        "evidence": "contact form backend broken, accepted by user",
+        "status": "retained"
+      }
+    }
+  },
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "move deeznutz.com from Squarespace to",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "DNS move weakens instant-rollback property;",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "record-level cutover that reverts in minutes;",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "DNS hosting decision",
+        "status": "partial"
+      },
+      "f13": {
+        "evidence": "I. lower TTLs",
+        "status": "partial"
+      },
+      "f14": {
+        "evidence": "II. add custom domains (apex + www) in Cloudflare",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "IV. verify HTTPS, certs, canonicalization,",
+        "status": "partial"
+      },
+      "f16": {
+        "evidence": "V. save exact rollback procedure",
+        "status": "partial"
+      },
+      "f17": {
+        "evidence": "contact form backend is broken (being fixed",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "separately) but user accepts the risk and will",
+        "status": "partial"
+      },
+      "f19": {
+        "evidence": "Cloudflare Pages; Squarespace stays as rollback",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "move deeznutz.com from Squarespace to",
+        "status": "partial"
+      },
+      "f3": {
+        "evidence": "Cloudflare Pages; Squarespace stays as rollback",
+        "status": "partial"
+      },
+      "f4": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f5": {
+        "evidence": "unconfirmed",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "unconfirmed — likely Squarespace Domains,",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "identify which registrar + current DNS host,",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "I. if Squarespace hosts DNS: confirm it supports",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "II. if not: move DNS to Cloudflare (free zone,",
+        "status": "partial"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "VI. submit sitemap to Google Search Console",
+        "note": "Gold has a reminder to the user to submit the sitemap, not a migration step performed by the agent",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Domain migration",
+            "Scope"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Domain migration",
+            "Tradeoff"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Domain migration",
+            "Preference"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Domain migration",
+            "DNS hosting decision"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Domain migration",
+            "Steps"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Domain migration",
+            "Steps"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Domain migration",
+            "Steps"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Domain migration",
+            "Steps"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Domain migration",
+            "Open issue"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Domain migration",
+            "Open issue"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Domain migration",
+            "Scope"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Domain migration",
+            "Scope"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Domain migration",
+            "Scope"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Domain migration",
+            "Registrar for deeznutz.com"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Domain migration",
+            "Registrar for deeznutz.com"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Domain migration",
+            "Step 1"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Domain migration",
+            "DNS hosting decision"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Domain migration",
+            "DNS hosting decision"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Move deeznutz.com from Squarespace to Cloudflare Pages",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact form backend broken, but user accepts risk and proceeds",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace (deeznutz.com); new: Cloudflare Pages, URL not given",
+        "verdict": "partial"
+      },
+      "q3": {
+        "answer_given": "No - unconfirmed; likely Squarespace Domains, possibly Google Domains legacy, or another registrar",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains, Google Domains legacy, another registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar + current DNS host, snapshot all DNS records before changes",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Confirm it supports CNAME flattening/ALIAS for apex; if not, move DNS to Cloudflare",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Weakens instant-rollback; requires documented procedure instead",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Record-level cutover revertible in minutes; no destructive steps",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "Squarespace stays as rollback for ~2 weeks",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "identify which registrar + current DNS host,",
+        "status": "partial"
+      },
+      "r2": {
+        "evidence": "II. if not: move DNS to Cloudflare (free zone,",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "DNS move weakens instant-rollback property;",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "V. save exact rollback procedure",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "separately) but user accepts the risk and will",
+        "status": "retained"
+      }
+    }
+  }
+}

@@ -18,3 +18,4 @@
 
 - [examples/skim.md](skills/structured-gist/examples/skim.md), [examples/standard.md](skills/structured-gist/examples/standard.md), [examples/deep.md](skills/structured-gist/examples/deep.md): the three granularity levels on the same source content.
 - [examples/attribute.md](skills/structured-gist/examples/attribute.md): the attribute marker in isolation.
+- [examples/report.md](skills/structured-gist/examples/report.md): the opt-in report preset, two findings with differing branch sets.
