@@ -50,6 +50,18 @@ No judge verdict in any tier or level marks fact `f6` (the hedged registrar clai
 | opus-v0.5.0b1 / standard | 0.71 | 0.64 | 0.6 | 0.75 | 0 |
 | opus-v0.5.0b1 / deep | 1.45 | 1.00 | 0.9 | 1.00 | 4 |
 
+### Judged retention, all three samples per arm (added after the first pass)
+
+Samples 2 and 3 of each arm were judged by four more isolated Fable subagents with the identical prompt and blind labels; verdicts are archived as `registrar-hedge-ab/{old,new}-{2,3}/verdict.json` (not corpus tiers). Across all seven verdicts, 308 of 308 evidence quotes were confirmed verbatim, no fact is marked `mutated` anywhere, and 64 flagged claims were source-checked (2 unsupported: `old-1/deep` "rather than acting for them", `new-2/deep` "so it exercises the Pages routing behaviour").
+
+Task-weighted fact retention (same arithmetic as `combine.py`), with word count in parentheses:
+
+| level | old-1 | old-2 | old-3 | **old mean** | new-1 | new-2 | new-3 | **new mean** |
+|---|---|---|---|---|---|---|---|---|
+| skim | 0.64 (215) | 0.50 (123) | 0.39 (101) | **0.51** (146) | 0.41 (109) | 0.66 (220) | 0.48 (127) | **0.52** (152) |
+| standard | 0.97 (423) | 0.94 (322) | 0.89 (306) | **0.93** (350) | 0.65 (272) | 0.97 (485) | 0.83 (352) | **0.81** (370) |
+| deep | 1.00 (598) | 1.00 (488) | 1.00 (515) | **1.00** (534) | 1.00 (554) | 1.00 (641) | 1.00 (495) | **1.00** (563) |
+
 ### Word counts, all samples (source = 381 words)
 
 | sample | skim | standard | deep |
@@ -72,13 +84,14 @@ No judge verdict in any tier or level marks fact `f6` (the hedged registrar clai
 ## Inferred
 
 - **Hedge survival shows no difference between arms (8 of 9 each).** This is a ceiling effect: Opus kept the hedge nearly always under either text, so this case cannot show whether the new section helps. The new text says hedges are preserved "including in collapsed output"; one of three new-text skims still dropped it.
-- **The judged retention gap between the two Opus tiers is confounded by length and should not be read as an effect of the text.** Each arm produced one long sample and two short ones. The long one happened to be sample 1 in the old arm and sample 2 in the new arm, so the pre-registered choice of sample 1 compares a 215-word skim against a 109-word skim. Retention tracks length in this table. Judging samples 2 and 3 would be needed before any claim.
+- **The sample-1 retention gap between the two Opus corpus tiers was a length artifact.** Each arm produced one long sample and two short ones; the long one was sample 1 in the old arm and sample 2 in the new arm. With all three samples judged, mean length is matched across arms (within 6% at every level) and retention is equal at skim (0.51 vs 0.52) and deep (1.00 vs 1.00).
+- **At standard the new text scores lower (0.81 vs 0.93), and this is not established as an effect.** The gap comes from one sample, `new-1` (0.65, also the shortest standard outline at 272 words); the other two new-text samples (0.97, 0.83) overlap the old-text range (0.89–0.97). Three samples per arm cannot separate a real cost of the longer skill text from one short draw. It is the one signal here worth re-testing with more samples.
 - **Both Opus `standard` and `deep` outlines are longer than the source** (compression ratio above 1.0) in every sample. At those levels the outline restructures rather than compresses.
 - **A model reading `SKILL.md` cold mostly fails the skill's own linter, under either text.** Word caps (R7) dominate. The new text is no worse; with nine outlines per arm, "better" is not supported. This is the more consequential observation and is independent of this feature.
 - Two new-text generators used the new vocabulary (`▸ Certainty`; `▸ Likely` / `▸ Possible`). Recorded as an observation only; it was noticed after the fact and no metric was defined for it in advance.
 
 ## Next
 
-- Judge samples 2 and 3 of each arm so the retention comparison is not a single, length-confounded pair.
+- Re-test the standard-level retention gap with more samples per arm (done for 3; the gap rests on one draw).
 - A hedge pressure test that is not at ceiling is needed to measure the new section: more hedged facts per source, or a weaker generator tier.
 - The cold-read linter failure rate deserves its own investigation (R7 word caps first).
