@@ -524,6 +524,45 @@ class TestBadFixtures:
         # Verify we're not suppressing other violations (additive property)
         # The fixture should have at least 1 violation and R16 should be one of them
 
+    def test_r11_width_fixture_fails_at_default(self, fixtures_dir):
+        """A long line that exceeds 64 chars but fits at 120 must fail at default width."""
+        fixture_file = fixtures_dir / 'good_r11_width120.md'
+        assert fixture_file.exists(), f"good_r11_width120.md not found at {fixture_file}"
+        violations = lint_file(str(fixture_file))
+        rule_ids = [v[1] for v in violations]
+        assert 'R11' in rule_ids, f"Expected R11 violation at default width, got: {violations}"
+
+    def test_r11_width_fixture_passes_at_120(self, fixtures_dir):
+        """The same fixture must pass when width=120."""
+        fixture_file = fixtures_dir / 'good_r11_width120.md'
+        assert fixture_file.exists(), f"good_r11_width120.md not found at {fixture_file}"
+        violations = lint_file(str(fixture_file), width='120')
+        assert not violations, f"good_r11_width120.md has violations at width 120: {violations}"
+
+    def test_r11_env_width_honored(self, fixtures_dir, monkeypatch):
+        """The fixture must pass when env STRUCTURED_GIST_WIDTH=120."""
+        fixture_file = fixtures_dir / 'good_r11_width120.md'
+        assert fixture_file.exists(), f"good_r11_width120.md not found at {fixture_file}"
+        monkeypatch.setenv('STRUCTURED_GIST_WIDTH', '120')
+        violations = lint_file(str(fixture_file))
+        assert not violations, f"good_r11_width120.md has violations with env STRUCTURED_GIST_WIDTH=120: {violations}"
+
+    def test_resolve_width_fallbacks(self):
+        """Test resolve_width function fallback behavior."""
+        from lint_outline import resolve_width, DEFAULT_MAX_LINE_WIDTH
+
+        # Invalid string → DEFAULT
+        assert resolve_width('garbage') == DEFAULT_MAX_LINE_WIDTH
+
+        # Zero or negative → DEFAULT
+        assert resolve_width(0) == DEFAULT_MAX_LINE_WIDTH
+        assert resolve_width(-10) == DEFAULT_MAX_LINE_WIDTH
+
+        # "auto" → positive int (terminal width)
+        auto_width = resolve_width('auto')
+        assert isinstance(auto_width, int)
+        assert auto_width > 0
+
 
 class TestNormativeBlocks:
     """Test that EVERY fenced block in normative files lints cleanly."""

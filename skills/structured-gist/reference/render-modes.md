@@ -176,6 +176,16 @@ would overflow, hand-wrap it yourself:
   marker line's own indent — same column, no deeper hang, no shallower
 - **no marker glyph** on a continuation line (it is not a new node)
 
+**Width knob (v0.5.0b2).** The R11 line-width budget is configurable for
+wider displays. Resolution order (highest priority first): (1) explicit
+`width N` or `width auto` in the activation; (2) environment variable
+`STRUCTURED_GIST_WIDTH`; (3) default 64 chars. The `auto` mode queries
+terminal width via `shutil.get_terminal_size()` (fallback 64 when not a
+real tty). Note that `auto` is only meaningful when the linter runs in a
+real terminal — Claude Code's Bash tool is not a tty, so `tput cols`
+would report 80 on a ~160-col pane and mislead the linter; operators
+should pin a number in their CLAUDE.md for a given surface.
+
 ```
         ↪ this leaf runs long enough that a phone-width pane
         would soft-wrap it, so it is hand-wrapped here with
