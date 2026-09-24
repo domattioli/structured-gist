@@ -1,45 +1,87 @@
-# AGENTS.md
+# structured-gist agent instructions
 
-Repo = one Claude Code skill: `structured-gist`. Renders explain/recap output as nested outline, not paragraph. This file = agent-facing quick-ref. Source of truth = `skills/structured-gist/SKILL.md`; read it before implementing/extending anything here, this file is a summary not a spec.
+This repository contains the `structured-gist` Claude Code skill. It renders
+explanations and process recaps as nested outlines. The source of truth is
+`skills/structured-gist/SKILL.md`. Read it before changing the skill.
 
-## Install + invoke
+## Repository layout
 
-```
+- `skills/structured-gist/` contains the skill specification, references,
+  examples, render code, scripts, benchmarks, and tests.
+- `plugins/structured-gist/` contains the plugin manifest. Its skill entry is a
+  symlink to `skills/structured-gist/`; do not duplicate the skill there.
+- `.claude-plugin/marketplace.json` defines the repository marketplace.
+- `docs/` contains architecture decisions and investigations.
+- `specs/` contains project specifications, plans, and supporting artifacts.
+
+## Install and invoke
+
+```text
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
-/structured-gist [skim|standard|deep] [block|responsive]
+/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]
 ```
 
-No args → skim + block, on every surface. `responsive` = explicit opt-in, never auto-picked by surface.
+No arguments select `skim` and `block`. `responsive` is always an explicit
+choice. The `summary` preset produces a session recap. The `report` preset,
+also named `findings`, produces a finding-first outline. Preset branches are
+optional and must be omitted when the source does not support them.
 
-Presets (opt-in, branches optional — omit what the source doesn't support): `/structured-gist summary` (session recap), `/structured-gist report` alias `findings` (finding-first).
+## Format contract
 
-Trigger phrases (any → activate): structured-gist, gist mode, gist this, outline this, bullet this, notes mode, structure this, break this down, distill this, give me the gist, make this skimmable, tighten this up, condense this.
+The four roles are fixed and must not be mixed:
 
-## Ladder — 4 roles, fixed, never mix
+- Concept: `-`, only at the outermost depth, normally no more than three words.
+- Attribute: `▸`, a named property that reads as "the parent has a ...".
+- Enumerator: `I.` or `A.` at depth 1 and `i.` or `a.` at deeper levels.
+- Explanation: `↪`, full prose that is usually a leaf and is never compressed.
 
-- concept `-` : top claim, outermost depth only, ~3 words
-- attribute `▸` : "parent HAS A ___", named property, NOT a step
-- enumerator `I./A.` depth1, `i./a.` depth2+ : ordered/grouped parts, family = absolute depth not first-seen
-- explanation `↪` : full prose, usually leaf, never compressed even under text-compression layers
+Do not use plain bullets. Do not nest `▸` directly below `▸`. Sibling nodes use
+one marker family. Enumerator case follows absolute depth, not the first depth
+where an enumerator appears.
 
-No plain bullets. No `▸`→`▸` self-nest. No mixing families as siblings.
+`block` is the default on every surface. It uses one fenced `text` block,
+literal glyphs, four-space depth increments, and a default 64-column line
+budget. `responsive` is an explicit option for Markdown surfaces. It uses real
+GitHub Flavored Markdown lists, two-space nesting, bold attributes, literal
+enumerator labels, plain-prose explanation leaves, and no block-mode glyphs.
+The legacy `inline` mode is deprecated and must not be used for new output.
 
-## Render mode — block default, responsive opt-in
+The skill changes structure only. It does not change wording or invoke a text
+compression layer. Turning text compression on or off must not change the
+tree shape.
 
-- `block` = default everywhere: fenced, literal glyphs, 4-space rungs, hard-wrap at 64 cols (R11)
-- `responsive` = opt-in for a markdown-rendering surface (GitHub, chat): real GFM list, glyph-free, role = typography (bold attr, literal enum label, plain-prose leaf). Never carry block glyphs or 4-space rungs into it.
-- `inline` = deprecated, do not use, breaks on GitHub (renders as code block)
+## Development and release checks
 
-## Before you edit
+Run these before a pull request:
 
-1. Run linter: `python3 skills/structured-gist/tests/lint_outline.py < your_output.md` — 15 rules, stdlib only, zero exceptions.
-2. Run tests: `pytest skills/structured-gist/tests/` before any PR.
-3. Bump `version:` in SKILL.md frontmatter + add benchmark.md row on any behavior change — no exceptions, unmeasured bumps flagged.
-4. `skills/structured-gist/` = source of truth. `plugins/structured-gist/.claude-plugin/plugin.json` + the `plugins/structured-gist/skills/structured-gist` symlink just point at it — don't duplicate skill content there.
+```bash
+pytest skills/structured-gist/tests/
+bash skills/structured-gist/tests/smoke.sh
+```
 
-5. Before a release: `bash skills/structured-gist/scripts/validate_plugin.sh` — validates the plugin through the `skills/` symlink (the stock validator skips it) + checks SKILL.md and plugin.json versions agree. Skips cleanly without the `claude` CLI.
+Lint a generated outline with:
 
-## Scope
+```bash
+python3 skills/structured-gist/tests/lint_outline.py < your_output.md
+```
 
-Structure only. Never touches wording/compression (that's a separate, optional layer). Never invokes itself recursively. Independence = the test: turning text-compression on/off must never change the tree shape.
+Any behavior change requires a `version:` bump in `SKILL.md` and a row in
+`skills/structured-gist/tests/benchmark.md`. Before a release, run:
+
+```bash
+bash skills/structured-gist/scripts/validate_plugin.sh
+```
+
+That script validates the marketplace and plugin layouts and checks that the
+skill and plugin versions agree when the Claude CLI is available.
+
+## Branch workflow
+
+The default working branch is `development`. Releases use a pull request from
+`development` to `main`. Never push directly to `main` and never force-push.
+
+## Governance
+This repo is a downstream consumer of `domattioli/DomI`.
+Universal git, coding dispatch, secrets, session lifecycle, and communication rules live in DomI `.claude/policies/`.
+Spec-kit artifacts for this repo live in DomI `specs/consumers/structured-gist/`, never in a local `.specify/` directory.

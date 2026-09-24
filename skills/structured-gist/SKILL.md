@@ -13,7 +13,7 @@ Full detail beyond this file lives in `reference/` — this file is the ~2-minut
 
 ## Activation
 
-On-demand: `/structured-gist [skim|standard|deep] [block [width N|auto]|responsive|inline]`. No level → `skim` (default). No mode → `block` (default, all surfaces) — override explicitly with `responsive` when a GitHub issue/PR/comment body or chat-app reply needs a real GFM nested list instead of a fenced block. `width` sets the block-mode R11 line budget; omitted → 64, or the width the operator's CLAUDE.md names for that surface. `inline` is deprecated (v0.3.8) — do not pick it for GitHub (its 4-space rungs render as code blocks); see `## Render modes`.
+On-demand: `/structured-gist [skim|standard|deep] [block [width N|auto]|responsive|inline]`. No level → `skim` (default). No mode → `block` (default, all surfaces) — override explicitly with `responsive` when a GitHub issue/PR/comment body or chat-app reply needs a real GFM nested list instead of a fenced block. `width` sets the block-mode R11 line budget; omitted → 64, or the width the operator's AGENTS.md names for that surface. `inline` is deprecated (v0.3.8) — do not pick it for GitHub (its 4-space rungs render as code blocks); see `## Render modes`.
 Lexicon triggers: "structured-gist", "sg", "in structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this" (+ optional level/mode word).
 Elevatable: repo repository instructions may mandate as session default (+ default level + default mode), like caveman.
 Off: "stop structured-gist" / explicit prose request.
@@ -269,4 +269,3 @@ Carve-outs align: when caveman auto-clarity yields for security/irreversible war
 ## Install
 
 this repo marketplace skill — installed via the sync contract (`skills.manifest.json` / `load_local_skills` hook) or, in multi-repo cloud sessions, the boot-time installer (spec-016 WS-0). First-party, benchmark-tracked, not vendored. Full detail: `reference/install.md`.
-
