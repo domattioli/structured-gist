@@ -6,6 +6,8 @@ Pure Python 3 stdlib, no external dependencies, no randomness, no network.
 
 import sys
 import re
+import shutil
+import os
 from typing import List, Tuple, Optional
 from math import gcd
 from functools import reduce
@@ -13,6 +15,9 @@ from functools import reduce
 
 # Type: violation = (lineno: int, rule_id: str, message: str)
 Violation = Tuple[int, str, str]
+
+# Default max line width for R11 (block-mode line wrap)
+DEFAULT_MAX_LINE_WIDTH = 64
 
 
 _RESPONSIVE_ITEM = re.compile(r'^(\s*)-\s+(.*)$')
@@ -43,6 +48,69 @@ def _looks_like_ladder_marker(s: str) -> bool:
 
 
 _BOLD_ONLY = re.compile(r'^\*\*[^*].*\*\*$')
+
+
+def resolve_width(width: Optional[str] = None) -> int:
+    """
+    Resolve the R11 line-width budget from multiple sources.
+    Resolution order (highest priority first):
+    1. Explicit width argument (int or str "N" or "auto")
+    2. Environment variable STRUCTURED_GIST_WIDTH
+    3. Default constant DEFAULT_MAX_LINE_WIDTH (64)
+
+    Special values:
+    - "auto" → terminal width via shutil.get_terminal_size() (default fallback 64x24)
+    - Invalid/non-positive values → DEFAULT_MAX_LINE_WIDTH
+
+    Args:
+        width: explicit width (int, str "N", or "auto"), or None to use env/default
+
+    Returns:
+        int: positive line-width budget; never raises
+    """
+    # Try explicit width argument first
+    if width is not None:
+        if isinstance(width, int):
+            if width > 0:
+                return width
+            else:
+                return DEFAULT_MAX_LINE_WIDTH
+        if isinstance(width, str):
+            if width.lower() == "auto":
+                # Get terminal width, fallback to 64 if not a real tty
+                try:
+                    cols = shutil.get_terminal_size(fallback=(64, 24)).columns
+                    return cols if cols > 0 else DEFAULT_MAX_LINE_WIDTH
+                except Exception:
+                    return DEFAULT_MAX_LINE_WIDTH
+            # Try to parse as integer
+            try:
+                val = int(width)
+                if val > 0:
+                    return val
+            except (ValueError, TypeError):
+                pass
+            # Invalid string → fallback
+            return DEFAULT_MAX_LINE_WIDTH
+
+    # Try environment variable
+    env_width = os.environ.get('STRUCTURED_GIST_WIDTH')
+    if env_width:
+        if env_width.lower() == "auto":
+            try:
+                cols = shutil.get_terminal_size(fallback=(64, 24)).columns
+                return cols if cols > 0 else DEFAULT_MAX_LINE_WIDTH
+            except Exception:
+                return DEFAULT_MAX_LINE_WIDTH
+        try:
+            val = int(env_width)
+            if val > 0:
+                return val
+        except (ValueError, TypeError):
+            pass
+
+    # Fallback to default
+    return DEFAULT_MAX_LINE_WIDTH
 
 
 def _looks_like_bold_attr(s: str) -> bool:
@@ -296,9 +364,17 @@ def r9_delimiter_violation(text: str) -> Optional[str]:
     return None
 
 
-def lint_text(text: str) -> List[Violation]:
+def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
     """
     Lint an outline text and return list of violations.
+
+    Args:
+        text: outline text to lint
+        width: optional R11 line-width budget (int, str "N", or "auto");
+               None → use env STRUCTURED_GIST_WIDTH or default 64
+
+    Returns:
+        list of (lineno, rule_id, message) violations
     """
     outline_lines, is_block_mode = extract_outline_from_text(text)
     if not outline_lines:
@@ -596,15 +672,15 @@ def lint_text(text: str) -> List[Violation]:
     # R11: block-mode line wrap — narrow-viewport soft-wrap defect (user
     # screenshot, 2026-07-22). Block mode (fenced) only; inline mode is
     # GitHub-rendered markdown and wraps itself (SKILL.md `## Spacing`).
-    # (i) any physical line >64 chars is flagged (phone-portrait monospace
-    # budget); (ii) a hand-wrapped continuation line's leading whitespace
+    # (i) any physical line >max_width chars is flagged (phone-portrait monospace
+    # budget, configurable via width knob); (ii) a hand-wrapped continuation line's leading whitespace
     # must be IDENTICAL to its owning marker line's indent — no hanging
     # indent, no marker glyph (user spec, verbatim).
     if is_block_mode:
-        _MAX_LINE_WIDTH = 64
+        max_width = resolve_width(width)
         for merged_lineno, raw_line, is_continuation, marker_indent in raw_line_info:
-            if len(raw_line) > _MAX_LINE_WIDTH:
-                violations.append((merged_lineno, 'R11', f"line exceeds {_MAX_LINE_WIDTH} chars ({len(raw_line)})"))
+            if len(raw_line) > max_width:
+                violations.append((merged_lineno, 'R11', f"line exceeds {max_width} chars ({len(raw_line)})"))
             if is_continuation:
                 cont_indent = len(raw_line) - len(raw_line.lstrip(' '))
                 if cont_indent != marker_indent:
@@ -743,22 +819,50 @@ def lint_text(text: str) -> List[Violation]:
     return violations
 
 
-def lint_file(path: str) -> List[Violation]:
-    """Lint a file and return list of violations."""
+def lint_file(path: str, width: Optional[str] = None) -> List[Violation]:
+    """Lint a file and return list of violations.
+
+    Args:
+        path: file path to lint
+        width: optional R11 line-width budget (int, str "N", or "auto");
+               None → use env STRUCTURED_GIST_WIDTH or default 64
+
+    Returns:
+        list of (lineno, rule_id, message) violations
+    """
     try:
         with open(path, 'r', encoding='utf-8') as f:
             text = f.read()
-        return lint_text(text)
+        return lint_text(text, width=width)
     except Exception as e:
         return [(0, 'IO', f"failed to read file: {e}")]
 
 
 def main():
     """CLI entry point."""
-    if len(sys.argv) < 2:
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description='Deterministic linter for structured-gist outline format'
+    )
+    parser.add_argument(
+        'files',
+        nargs='*',
+        help='Files to lint (if none, read from stdin)'
+    )
+    parser.add_argument(
+        '--width',
+        type=str,
+        default=None,
+        help='R11 line-width budget: integer N, "auto", or None (default 64, or env STRUCTURED_GIST_WIDTH)'
+    )
+
+    args = parser.parse_args()
+
+    if not args.files:
         # Read from stdin
         text = sys.stdin.read()
-        violations = lint_text(text)
+        violations = lint_text(text, width=args.width)
         for lineno, rule, msg in sorted(violations, key=lambda x: x[0]):
             print(f" line {lineno} [{rule}]: {msg}")
         print(f"structured-gist-lint: {'PASS' if not violations else 'FAIL'} ({len(violations)} violations)")
@@ -766,8 +870,8 @@ def main():
 
     # Lint files
     all_violations = {}
-    for filepath in sys.argv[1:]:
-        violations = lint_file(filepath)
+    for filepath in args.files:
+        violations = lint_file(filepath, width=args.width)
         all_violations[filepath] = violations
         for lineno, rule, msg in sorted(violations, key=lambda x: x[0]):
             print(f" line {lineno} [{rule}]: {msg}")

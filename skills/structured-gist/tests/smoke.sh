@@ -327,6 +327,23 @@ else
 fi
 
 # ---------------------------------------------------------------------------
+# 24b. Linter tests: good_r11_width120.md fails at default, passes at width 120
+# ---------------------------------------------------------------------------
+fixture_file="$SKILL_DIR/tests/fixtures/good_r11_width120.md"
+if [ -f "$fixture_file" ]; then
+  # Should fail at default width (64)
+  output=$(python3 "$SKILL_DIR/tests/lint_outline.py" "$fixture_file" 2>&1) && rc=0 || rc=$?
+  has_r11=$(grep -q "\[R11\]" <<< "$output" && echo 1 || echo 0)
+  [ "$rc" -eq 1 ] && [ "$has_r11" -eq 1 ] && assert "good_r11_width120.md fails at default width" 0 || assert "good_r11_width120.md fails at default width" 1
+
+  # Should pass at width 120
+  python3 "$SKILL_DIR/tests/lint_outline.py" --width 120 "$fixture_file" > /dev/null 2>&1 && rc=0 || rc=$?
+  [ "$rc" -eq 0 ] && assert "good_r11_width120.md passes at --width 120" 0 || assert "good_r11_width120.md passes at --width 120" 1
+else
+  assert "good_r11_width120.md exists" 1
+fi
+
+# ---------------------------------------------------------------------------
 # 25. Linter tests: good_responsive.md lints clean
 # ---------------------------------------------------------------------------
 fixture_file="$SKILL_DIR/tests/fixtures/good_responsive.md"
