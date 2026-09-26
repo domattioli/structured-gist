@@ -1,5 +1,5 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "structured-gist",
   "description": "Hierarchical lecture-note output skill. Replace verbose prose with structured, scannable outlines. Four-role marker hierarchy (concept → attribute → enumerator → explanation), three granularities (skim/standard/deep), two render modes (block/responsive), deterministic conformance linter.",
   "owner": {

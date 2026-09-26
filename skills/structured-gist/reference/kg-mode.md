@@ -1,8 +1,7 @@
 # KG mode (experimental) — full specification
 
-Pointer target from `SKILL.md` `## KG mode (experimental)`. Spec of record:
-`specs/023-nested-notes-kg-benchmark/` (contracts/kg-schema.md is the frozen
-schema contract; this file is the skill-local reference).
+Pointer target from `SKILL.md` `## KG mode (experimental)`. This file is the public reference. The original design spec
+(spec-023) lives in a private upstream repo and is not needed to use KG mode.
 
 Fence policy in this file: ` ```text ` fences contain ONLY lint-clean outlines
 (the test suite lints every one); JSON and shell examples use their own tags.
@@ -50,8 +49,7 @@ The contract's 14-node example graph renders byte-for-byte to the
  "edges": [{"type": "has-attribute", "from": "c1", "to": "a1"}, "..."]}
 ```
 
-Full graph: `specs/023-nested-notes-kg-benchmark/contracts/kg-schema.md` and
-`tests/fixtures/kg/canonical.json`.
+Full graph: `tests/fixtures/kg/canonical.json`.
 
 ## Validation errors
 

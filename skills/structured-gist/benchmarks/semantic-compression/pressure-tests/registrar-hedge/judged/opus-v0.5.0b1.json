@@ -2,7 +2,7 @@
   "deep": {
     "facts": {
       "f1": {
-        "evidence": "migrate the domain deeznutz.com from the old",
+        "evidence": "migrate the domain acme-studio.com from the old",
         "status": "retained"
       },
       "f10": {
@@ -26,7 +26,7 @@
         "status": "retained"
       },
       "f15": {
-        "evidence": "e. https://deeznutz.com/about returns 200",
+        "evidence": "e. https://acme-studio.com/about returns 200",
         "status": "retained"
       },
       "f16": {
@@ -46,11 +46,11 @@
         "status": "retained"
       },
       "f2": {
-        "evidence": "Squarespace, still live at deeznutz.com",
+        "evidence": "Squarespace, still live at acme-studio.com",
         "status": "retained"
       },
       "f3": {
-        "evidence": "https://deeznutz.pages.dev",
+        "evidence": "https://acme-studio.pages.dev",
         "status": "retained"
       },
       "f4": {
@@ -111,7 +111,7 @@
           "located": [
             "Domain migration",
             "Goal",
-            "migrate the domain deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "migrate the domain acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           ]
         },
         "f10": {
@@ -156,7 +156,7 @@
           "located": [
             "Requested steps",
             "V. verify the cutover",
-            "e. https://deeznutz.com/about returns 200"
+            "e. https://acme-studio.com/about returns 200"
           ]
         },
         "f16": {
@@ -191,14 +191,14 @@
           "located": [
             "Old site",
             "State",
-            "Squarespace, still live at deeznutz.com"
+            "Squarespace, still live at acme-studio.com"
           ]
         },
         "f3": {
           "located": [
             "New site",
             "Live URL",
-            "https://deeznutz.pages.dev"
+            "https://acme-studio.pages.dev"
           ]
         },
         "f4": {
@@ -248,7 +248,7 @@
     },
     "questions": {
       "q1": {
-        "answer_given": "Migrate the domain deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
+        "answer_given": "Migrate the domain acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
         "verdict": "correct"
       },
       "q10": {
@@ -256,7 +256,7 @@
         "verdict": "correct"
       },
       "q2": {
-        "answer_given": "Old: Squarespace, live at deeznutz.com. New: Cloudflare Pages project deeznutz at https://deeznutz.pages.dev",
+        "answer_given": "Old: Squarespace, live at acme-studio.com. New: Cloudflare Pages project acme-studio at https://acme-studio.pages.dev",
         "verdict": "correct"
       },
       "q3": {
@@ -314,7 +314,7 @@
   "skim": {
     "facts": {
       "f1": {
-        "evidence": "move deeznutz.com from the old Squarespace site to",
+        "evidence": "move acme-studio.com from the old Squarespace site to",
         "status": "retained"
       },
       "f10": {
@@ -358,7 +358,7 @@
         "status": "omitted"
       },
       "f2": {
-        "evidence": "move deeznutz.com from the old Squarespace site",
+        "evidence": "move acme-studio.com from the old Squarespace site",
         "status": "partial"
       },
       "f3": {
@@ -402,7 +402,7 @@
         "f1": {
           "located": [
             "Domain migration",
-            "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           ]
         },
         "f12": {
@@ -450,13 +450,13 @@
         "f2": {
           "located": [
             "Domain migration",
-            "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           ]
         },
         "f3": {
           "located": [
             "Domain migration",
-            "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           ]
         },
         "f4": {
@@ -481,7 +481,7 @@
     },
     "questions": {
       "q1": {
-        "answer_given": "Move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
+        "answer_given": "Move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
         "verdict": "correct"
       },
       "q10": {
@@ -547,7 +547,7 @@
   "standard": {
     "facts": {
       "f1": {
-        "evidence": "move deeznutz.com from the old Squarespace site",
+        "evidence": "move acme-studio.com from the old Squarespace site",
         "status": "retained"
       },
       "f10": {
@@ -591,11 +591,11 @@
         "status": "retained"
       },
       "f2": {
-        "evidence": "Squarespace, still live at deeznutz.com",
+        "evidence": "Squarespace, still live at acme-studio.com",
         "status": "retained"
       },
       "f3": {
-        "evidence": "b. live at https://deeznutz.pages.dev",
+        "evidence": "b. live at https://acme-studio.pages.dev",
         "status": "retained"
       },
       "f4": {
@@ -646,7 +646,7 @@
           "located": [
             "Domain migration",
             "Goal",
-            "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           ]
         },
         "f11": {
@@ -711,14 +711,14 @@
           "located": [
             "Old site",
             "State",
-            "Squarespace, still live at deeznutz.com"
+            "Squarespace, still live at acme-studio.com"
           ]
         },
         "f3": {
           "located": [
             "New site",
             "Project",
-            "b. live at https://deeznutz.pages.dev"
+            "b. live at https://acme-studio.pages.dev"
           ]
         },
         "f4": {
@@ -750,7 +750,7 @@
     },
     "questions": {
       "q1": {
-        "answer_given": "Move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
+        "answer_given": "Move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site",
         "verdict": "correct"
       },
       "q10": {
@@ -758,7 +758,7 @@
         "verdict": "correct"
       },
       "q2": {
-        "answer_given": "Old: Squarespace, live at deeznutz.com. New: Cloudflare Pages project deeznutz at https://deeznutz.pages.dev",
+        "answer_given": "Old: Squarespace, live at acme-studio.com. New: Cloudflare Pages project acme-studio at https://acme-studio.pages.dev",
         "verdict": "correct"
       },
       "q3": {

@@ -1,5 +1,8 @@
 # splice-to-subtree — the golden before/after
 
+Note: the BEFORE blocks below break lint rules on purpose — they demonstrate
+the R9 violation the AFTER blocks fix. The lint gate excludes this file.
+
 A node that joins ≥2 independent facts with a semicolon, colon, or a *chained*
 mid-line `→` is N nodes wearing one marker. R9 flags it (any structural node
 whose tail after a delimiter runs >2 words). The fix: split the packed node into

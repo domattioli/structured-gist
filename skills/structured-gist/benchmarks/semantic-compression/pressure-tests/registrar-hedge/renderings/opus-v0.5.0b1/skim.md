@@ -1,5 +1,5 @@
 - Domain migration
-    ↪ move deeznutz.com from the old Squarespace site to
+    ↪ move acme-studio.com from the old Squarespace site to
     an already-deployed Cloudflare Pages site
     ↪ guide the user click-by-click while they are logged
     into the dashboards and can screen-share tabs

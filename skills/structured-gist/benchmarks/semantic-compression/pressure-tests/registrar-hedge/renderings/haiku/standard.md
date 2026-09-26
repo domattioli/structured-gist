@@ -1,9 +1,9 @@
 - Domain migration
     ▸ Scope
-        ↪ move deeznutz.com from Squarespace to
+        ↪ move acme-studio.com from Squarespace to
           Cloudflare Pages; Squarespace stays as rollback
           for ~2 weeks
-    ▸ Registrar for deeznutz.com
+    ▸ Registrar for acme-studio.com
         ↪ unconfirmed — likely Squarespace Domains,
           possibly Google Domains legacy, or another
           registrar

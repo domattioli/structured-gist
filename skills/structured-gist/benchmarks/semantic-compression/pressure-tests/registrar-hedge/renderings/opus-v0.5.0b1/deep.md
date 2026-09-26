@@ -1,6 +1,6 @@
 - Domain migration
     ▸ Goal
-        ↪ migrate the domain deeznutz.com from the old
+        ↪ migrate the domain acme-studio.com from the old
         Squarespace site to an already-deployed Cloudflare
         Pages site
     ▸ Guidance mode
@@ -10,9 +10,9 @@
         b. can screen-share tabs
 - New site
     ▸ Project
-        ↪ Cloudflare Pages project "deeznutz"
+        ↪ Cloudflare Pages project "acme-studio"
     ▸ Live URL
-        ↪ https://deeznutz.pages.dev
+        ↪ https://acme-studio.pages.dev
     ▸ Deploy method
         ↪ direct wrangler uploads, not git-connected
     ▸ Account
@@ -30,7 +30,7 @@
         ↪ do not touch that project or its DNS
 - Old site
     ▸ State
-        ↪ Squarespace, still live at deeznutz.com
+        ↪ Squarespace, still live at acme-studio.com
     ▸ Retention
         ↪ it must remain intact as a rollback target for
         about two weeks after cutover
@@ -57,7 +57,7 @@
 - Requested steps
     I. identify registrar + DNS host
         ▸ Targets
-            a. registrar for deeznutz.com
+            a. registrar for acme-studio.com
             b. current DNS host
         ▸ Deliverable
             ↪ list the current DNS records so there is a
@@ -89,10 +89,10 @@
         ↪ do this only if the current host allows it
     IV. add the custom domains in Pages
         ▸ Location
-            ↪ Cloudflare Pages > deeznutz > Custom domains
+            ↪ Cloudflare Pages > acme-studio > Custom domains
         ▸ Domains
-            a. deeznutz.com
-            b. www.deeznutz.com
+            a. acme-studio.com
+            b. www.acme-studio.com
         ▸ Follow-up
             ↪ then make the DNS changes it prescribes
     V. verify the cutover
@@ -100,7 +100,7 @@
         b. cert issued
         c. http to https redirect works
         d. www and apex canonicalization works
-        e. https://deeznutz.com/about returns 200
+        e. https://acme-studio.com/about returns 200
         ↪ the /about check is the extensionless case
     VI. close-out items
         a. exact rollback steps as a saved note

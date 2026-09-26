@@ -1,6 +1,6 @@
 # structured-gist agent instructions
 
-This repository contains the `structured-gist` Claude Code skill. It renders
+This repository contains the `structured-gist` agentic-AI skill. It renders
 explanations and process recaps as nested outlines. The source of truth is
 `skills/structured-gist/SKILL.md`. Read it before changing the skill.
 

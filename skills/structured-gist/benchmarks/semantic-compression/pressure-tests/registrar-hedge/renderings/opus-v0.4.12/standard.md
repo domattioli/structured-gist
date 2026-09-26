@@ -1,6 +1,6 @@
 - Migration task
     ▸ Goal
-        ↪ move the domain deeznutz.com from the
+        ↪ move the domain acme-studio.com from the
           old Squarespace site to an already-
           deployed Cloudflare Pages site.
     ▸ Delivery format
@@ -9,8 +9,8 @@
           and can screen-share tabs.
 - New site
     ▸ Project
-        a. Cloudflare Pages project "deeznutz"
-        b. live at https://deeznutz.pages.dev
+        a. Cloudflare Pages project "acme-studio"
+        b. live at https://acme-studio.pages.dev
     ▸ Deploy method
         ↪ direct wrangler uploads, not
           git-connected.
@@ -27,7 +27,7 @@
 - Old site
     ▸ State
         a. Squarespace
-        b. still live at deeznutz.com
+        b. still live at acme-studio.com
     ▸ Retention window
         ↪ it must remain intact as a rollback
           target for about two weeks after
@@ -80,8 +80,8 @@
         ↪ do this before the cutover, if the
           current host allows it.
     IV. Add custom domains
-        a. deeznutz.com
-        b. www.deeznutz.com
+        a. acme-studio.com
+        b. www.acme-studio.com
         c. then make the prescribed DNS changes
     V. Verify
         a. apex + www resolve over HTTPS
