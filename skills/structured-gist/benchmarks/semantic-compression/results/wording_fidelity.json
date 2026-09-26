@@ -5204,7 +5204,7 @@
             "depth": 0,
             "family": "dash",
             "index": 0,
-            "text": "Domain migration: deeznutz.com Squarespace \u2192 Cloudflare Pages"
+            "text": "Domain migration: acme-studio.com Squarespace \u2192 Cloudflare Pages"
           },
           {
             "depth": 1,
@@ -5216,13 +5216,13 @@
             "depth": 2,
             "family": "lalpha",
             "index": 2,
-            "text": "old site: Squarespace at deeznutz.com (live)"
+            "text": "old site: Squarespace at acme-studio.com (live)"
           },
           {
             "depth": 2,
             "family": "lalpha",
             "index": 3,
-            "text": "new site: Cloudflare Pages (deeznutz.pages.dev)"
+            "text": "new site: Cloudflare Pages (acme-studio.pages.dev)"
           },
           {
             "depth": 2,
@@ -5234,7 +5234,7 @@
             "depth": 1,
             "family": "attr",
             "index": 5,
-            "text": "Registrar for deeznutz.com"
+            "text": "Registrar for acme-studio.com"
           },
           {
             "depth": 2,
@@ -5384,13 +5384,13 @@
             "depth": 2,
             "family": "arrow",
             "index": 31,
-            "text": "Cloudflare Pages UI > deeznutz > Custom domains"
+            "text": "Cloudflare Pages UI > acme-studio > Custom domains"
           },
           {
             "depth": 2,
             "family": "lalpha",
             "index": 33,
-            "text": "add www.deeznutz.com"
+            "text": "add www.acme-studio.com"
           },
           {
             "depth": 2,
@@ -5687,13 +5687,13 @@
             "depth": 2,
             "family": "arrow",
             "index": 2,
-            "text": "move deeznutz.com from Squarespace to Cloudflare Pages; Squarespace stays as rollback for ~2 weeks"
+            "text": "move acme-studio.com from Squarespace to Cloudflare Pages; Squarespace stays as rollback for ~2 weeks"
           },
           {
             "depth": 1,
             "family": "attr",
             "index": 3,
-            "text": "Registrar for deeznutz.com"
+            "text": "Registrar for acme-studio.com"
           },
           {
             "depth": 2,
@@ -5902,7 +5902,7 @@
             "depth": 2,
             "family": "lalpha",
             "index": 10,
-            "text": "project name \"deeznutz\""
+            "text": "project name \"acme-studio\""
           },
           {
             "depth": 1,
@@ -6064,7 +6064,7 @@
             "depth": 2,
             "family": "lalpha",
             "index": 53,
-            "text": "registrar for deeznutz.com"
+            "text": "registrar for acme-studio.com"
           },
           {
             "depth": 3,
@@ -6315,7 +6315,7 @@
             "end": 422,
             "length": 10,
             "start": 412,
-            "text": "works https://deeznutz.com/about the extensionless path must return 200 close out"
+            "text": "works https://acme-studio.com/about the extensionless path must return 200 close out"
           },
           {
             "end": 196,
@@ -6379,7 +6379,7 @@
             "depth": 2,
             "family": "arrow",
             "index": 2,
-            "text": "move deeznutz.com off the old Squarespace site and onto the already-deployed Cloudflare Pages site."
+            "text": "move acme-studio.com off the old Squarespace site and onto the already-deployed Cloudflare Pages site."
           },
           {
             "depth": 1,
@@ -6397,13 +6397,13 @@
             "depth": 2,
             "family": "lalpha",
             "index": 7,
-            "text": "Cloudflare Pages \"deeznutz\""
+            "text": "Cloudflare Pages \"acme-studio\""
           },
           {
             "depth": 2,
             "family": "lalpha",
             "index": 8,
-            "text": "live at deeznutz.pages.dev"
+            "text": "live at acme-studio.pages.dev"
           },
           {
             "depth": 1,
@@ -6540,7 +6540,7 @@
             "end": 6,
             "length": 6,
             "start": 0,
-            "text": "migration task goal move deeznutz.com off"
+            "text": "migration task goal move acme-studio.com off"
           },
           {
             "end": 23,
@@ -6616,7 +6616,7 @@
             "depth": 2,
             "family": "arrow",
             "index": 2,
-            "text": "move the domain deeznutz.com from the old Squarespace site to an already- deployed Cloudflare Pages site."
+            "text": "move the domain acme-studio.com from the old Squarespace site to an already- deployed Cloudflare Pages site."
           },
           {
             "depth": 1,
@@ -7155,7 +7155,7 @@
             "depth": 3,
             "family": "lalpha",
             "index": 53,
-            "text": "registrar for deeznutz.com"
+            "text": "registrar for acme-studio.com"
           },
           {
             "depth": 2,
@@ -7317,7 +7317,7 @@
             "depth": 2,
             "family": "lalpha",
             "index": 89,
-            "text": "https://deeznutz.com/about returns 200"
+            "text": "https://acme-studio.com/about returns 200"
           },
           {
             "depth": 2,
@@ -7400,7 +7400,7 @@
             "end": 374,
             "length": 11,
             "start": 363,
-            "text": "http to https redirect works www and apex canonicalization works https://deeznutz.com/about"
+            "text": "http to https redirect works www and apex canonicalization works https://acme-studio.com/about"
           },
           {
             "end": 444,
@@ -7468,7 +7468,7 @@
             "depth": 1,
             "family": "arrow",
             "index": 1,
-            "text": "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "text": "move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           },
           {
             "depth": 1,
@@ -7621,7 +7621,7 @@
             "depth": 2,
             "family": "arrow",
             "index": 2,
-            "text": "move deeznutz.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
+            "text": "move acme-studio.com from the old Squarespace site to an already-deployed Cloudflare Pages site"
           },
           {
             "depth": 1,
@@ -7882,7 +7882,7 @@
             "depth": 0,
             "family": "dash",
             "index": 0,
-            "text": "Domain migration: deeznutz.com Squarespace \u2192 Cloudflare Pages"
+            "text": "Domain migration: acme-studio.com Squarespace \u2192 Cloudflare Pages"
           },
           {
             "depth": 1,
@@ -7894,13 +7894,13 @@
             "depth": 2,
             "family": "lalpha",
             "index": 2,
-            "text": "old site: Squarespace at deeznutz.com (live)"
+            "text": "old site: Squarespace at acme-studio.com (live)"
           },
           {
             "depth": 2,
             "family": "lalpha",
             "index": 3,
-            "text": "new site: Cloudflare Pages (deeznutz.pages.dev)"
+            "text": "new site: Cloudflare Pages (acme-studio.pages.dev)"
           },
           {
             "depth": 2,
@@ -7912,7 +7912,7 @@
             "depth": 1,
             "family": "attr",
             "index": 5,
-            "text": "Registrar for deeznutz.com"
+            "text": "Registrar for acme-studio.com"
           },
           {
             "depth": 2,
@@ -8062,13 +8062,13 @@
             "depth": 2,
             "family": "arrow",
             "index": 31,
-            "text": "Cloudflare Pages UI > deeznutz > Custom domains"
+            "text": "Cloudflare Pages UI > acme-studio > Custom domains"
           },
           {
             "depth": 2,
             "family": "lalpha",
             "index": 33,
-            "text": "add www.deeznutz.com"
+            "text": "add www.acme-studio.com"
           },
           {
             "depth": 2,
@@ -8365,13 +8365,13 @@
             "depth": 2,
             "family": "arrow",
             "index": 2,
-            "text": "move deeznutz.com from Squarespace to Cloudflare Pages; Squarespace stays as rollback for ~2 weeks"
+            "text": "move acme-studio.com from Squarespace to Cloudflare Pages; Squarespace stays as rollback for ~2 weeks"
           },
           {
             "depth": 1,
             "family": "attr",
             "index": 3,
-            "text": "Registrar for deeznutz.com"
+            "text": "Registrar for acme-studio.com"
           },
           {
             "depth": 2,

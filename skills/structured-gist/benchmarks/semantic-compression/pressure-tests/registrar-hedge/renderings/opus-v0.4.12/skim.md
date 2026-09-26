@@ -1,6 +1,6 @@
 - Migration task
     ▸ Goal
-        ↪ move deeznutz.com off the old Squarespace
+        ↪ move acme-studio.com off the old Squarespace
           site and onto the already-deployed
           Cloudflare Pages site.
     ▸ Format
@@ -9,8 +9,8 @@
           screen-share tabs.
 - New site
     ▸ Project
-        a. Cloudflare Pages "deeznutz"
-        b. live at deeznutz.pages.dev
+        a. Cloudflare Pages "acme-studio"
+        b. live at acme-studio.pages.dev
     ▸ Deploy method
         ↪ direct wrangler uploads, not
           git-connected.

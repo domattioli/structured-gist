@@ -1,7 +1,6 @@
 # Outline benchmark — scoring formulas, rationale, failure modes
 
-Spec of record: `specs/023-nested-notes-kg-benchmark/` (research.md D3–D8,
-contracts/cli-contracts.md). This file is the FR-008 audit trail: every number
+Design origin: spec-023 (private upstream repo, not required here). This file is the FR-008 audit trail: every number
 in a score record traces to a formula here. Constants here are echoed from
 `score_outline.py` and checked by the final gate (M8): weights
 `retention 0.5 / robustness 0.3 / brevity 0.2`, coverage threshold `θ = 0.5`,

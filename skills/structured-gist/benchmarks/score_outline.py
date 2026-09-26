@@ -2,8 +2,7 @@
 """
 Outline benchmark scoring: retention (recall), precision, brevity, robustness.
 
-Pure Python3 stdlib. Spec: specs/023-nested-notes-kg-benchmark/contracts/cli-contracts.md §1,
-data-model.md, research.md D3–D8, benchmarks/scoring.md.
+Pure Python3 stdlib. Formulas: benchmarks/scoring.md. Design origin: spec-023 (private upstream).
 
 Deterministic — identical inputs ⇒ byte-identical JSON output (SC-001).
 """

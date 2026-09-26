@@ -2,9 +2,9 @@
 
 ![Status](https://img.shields.io/badge/status-alpha-orange)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Version](https://img.shields.io/badge/version-0.5.0b1-informational)
+![Version](https://img.shields.io/badge/version-0.5.0b2-informational)
 ![Rules](https://img.shields.io/badge/linter%20rules-15-success)
-![Tests](https://img.shields.io/badge/tests-61%20passing-success)
+![Tests](https://img.shields.io/badge/tests-247%20passing-success)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
 ![Claude Code Plugin](https://img.shields.io/badge/claude%20code-plugin-blueviolet)
 ![Dependencies](https://img.shields.io/badge/linter-stdlib--only-informational)
@@ -29,7 +29,7 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## 1. Motivation
 
-Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganizing it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
+Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganize it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
 
 What's missing is structure: concept, sub-concept, and the relationship between them. This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
  
@@ -39,16 +39,16 @@ What's missing is structure: concept, sub-concept, and the relationship between 
 
 ## 2. Method
 
-The example below compares Opus 5's unadulterated description of how this skill works vs. the dogfood-ed skill output. It covers the marker taxonomy and overall gist of how `structured-gist` works.
+The example below compares Claude Opus's unadulterated description of how this skill works vs. the dogfood-ed skill output. It covers the marker taxonomy and overall gist of how `structured-gist` works.
 
 As a paragraph, it reads:
 
 > structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
-Rendered as an outline in `skim` granularity and `block` mode (the default modal combination), the same content drops down 64% from 191 to 68 words. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify | qualify this.
+Rendered as an outline in `skim` granularity and `block` mode (the default modal combination), the same content drops down 64% from 191 to 68 words. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify this.
 
 ```text
--- structured-gist
+- structured-gist
     ▸ Purpose
         ↪ replaces verbose prose summaries with compact
           outlines a reader takes in at a glance
@@ -86,19 +86,21 @@ Rendered as an outline in `skim` granularity and `block` mode (the default modal
 /plugin install structured-gist
 ```
 
+The skill ships one optional statusline hook (`skills/structured-gist/hooks/structured-gist-statusline.sh`, prints the installed version); it is not wired by default.
+
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 4. Usage
 
 ```bash
-/structured-gist [skim|standard|deep] [block|responsive]
+/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]
 ```
 
 No level given defaults to `skim`. No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface.
 
 Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
 
-Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "cliff notes", "spark notes", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
+Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -113,9 +115,11 @@ Representative measurements from the skill's version history, one metric per col
 | v0.4.0 | — | **0.549 → 0.760** | — | — | — | Direct prompt vs. experimental KG mode, 20-source corpus; KG mode wins structure but loses retention. Not shipped — see [Future work](#7-future-work). |
 | v0.4.2 | — | — | **11 → 15** | **33 → 46** | — | Linter rule coverage. |
 | v0.4.3 | — | — | — | **46 → 63** | — | Rename and trigger-phrase expansion; no rule-logic change. |
-| Eval only (#10) | — | — | — | — | **0.37 → 0.89 → 0.99** | Semantic-compression suite: 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8, Haiku on 3/8, full-suite Opus 5 run planned. Compression correlated *negatively* with usefulness (**r = -0.75**), so it is reported as a separate cost, never blended into the quality score. |
+| Eval only (#10) | — | — | — | — | **0.37 → 0.89 → 0.99** | Semantic-compression suite: 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8, Haiku on 3/8, full-suite Claude Opus run planned. Compression correlated *negatively* with usefulness (**r = -0.75**), so it is reported as a separate cost, never blended into the quality score. |
 
 Word count, rule/test coverage, and semantic retention (`skills/structured-gist/benchmarks/semantic-compression/`) are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
+
+Third-party dataset licenses and attribution: see [skills/structured-gist/benchmarks/semantic-compression/external-validation/THIRD_PARTY_NOTICES.md](skills/structured-gist/benchmarks/semantic-compression/external-validation/THIRD_PARTY_NOTICES.md).
 
 <!-- README-EXAMPLE:START -->
 ## registrar-hedge (Before / After)
@@ -123,17 +127,17 @@ Word count, rule/test coverage, and semantic retention (`skills/structured-gist/
 ### Before (source)
 
 ```
-Task: migrate the domain deeznutz.com from the old Squarespace site to an
+Task: migrate the domain acme-studio.com from the old Squarespace site to an
 already-deployed Cloudflare Pages site. Guide me click-by-click; I'll be
 logged into the relevant dashboards and can screen-share tabs.
 
 Context:
-- New site: Cloudflare Pages project "deeznutz", live at
-  https://deeznutz.pages.dev (direct wrangler uploads, not git-connected).
+- New site: Cloudflare Pages project "acme-studio", live at
+  https://acme-studio.pages.dev (direct wrangler uploads, not git-connected).
   Cloudflare account name: personal-account.
 - CRITICAL: the same Cloudflare account also hosts my personal site (project
   "personal-portfolio" / personal-portfolio.pages.dev). Do not touch that project or its DNS.
-- Old site: Squarespace, still live at deeznutz.com. It must remain
+- Old site: Squarespace, still live at acme-studio.com. It must remain
   intact as a rollback target for ~2 weeks after cutover. Prefer a DNS-record
   cutover I can revert in minutes; avoid destructive steps (do not cancel the
   Squarespace subscription, do not delete the Squarespace site, do not
@@ -143,7 +147,7 @@ Context:
   identifying it with me (whois + what the Squarespace/Domains dashboard shows).
 
 What I need from you, in order:
-1. Identify registrar + current DNS host for deeznutz.com; list current
+1. Identify registrar + current DNS host for acme-studio.com; list current
    DNS records so we have a written rollback snapshot before changing anything.
 2. Decide the cleanest path for pointing apex + www at the Pages project.
    Constraint check: if the DNS stays at Squarespace, confirm whether its DNS
@@ -153,11 +157,11 @@ What I need from you, in order:
    and note that this weakens the "instant rollback" property - tell me the
    actual rollback procedure and time for whichever path we take.
 3. Lower TTLs first if the current host allows it.
-4. In Cloudflare Pages > deeznutz > Custom domains: add deeznutz.com
-   and www.deeznutz.com, then make the DNS changes it prescribes.
+4. In Cloudflare Pages > acme-studio > Custom domains: add acme-studio.com
+   and www.acme-studio.com, then make the DNS changes it prescribes.
 5. Verify: apex + www resolve to the new site over HTTPS, cert issued,
    http->https and www/apex canonicalization work, and
-   https://deeznutz.com/about (extensionless) returns 200.
+   https://acme-studio.com/about (extensionless) returns 200.
 6. Give me the exact rollback steps as a saved note, and remind me to submit
    the sitemap in Google Search Console after cutover.
 
@@ -172,10 +176,10 @@ accepted - launch decision is mine.
 ```text
 - Domain migration
     ▸ Scope
-        ↪ move deeznutz.com from Squarespace to
+        ↪ move acme-studio.com from Squarespace to
           Cloudflare Pages; Squarespace stays as rollback
           for ~2 weeks
-    ▸ Registrar for deeznutz.com
+    ▸ Registrar for acme-studio.com
         ↪ unconfirmed — likely Squarespace Domains,
           possibly Google Domains legacy, or another
           registrar
@@ -273,7 +277,7 @@ accepted - launch decision is mine.
 
 ## 9. Contributing
 
-This repo is a scrub-and-sync export. Pull requests opened directly here are not merged. Report bugs or gaps as an issue, or fork and extend independently. Details: `CONTRIBUTING.md`.
+Open an issue first for anything that changes behavior. Small fixes (typos, broken links) can go straight to a pull request. Details: `CONTRIBUTING.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 

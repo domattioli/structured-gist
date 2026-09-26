@@ -7,7 +7,7 @@ Repo = one Claude Code skill: `structured-gist`. Renders explain/recap output as
 ```
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
-/structured-gist [skim|standard|deep] [block|responsive]
+/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]
 ```
 
 No args → skim + block, on every surface. `responsive` = explicit opt-in, never auto-picked by surface.

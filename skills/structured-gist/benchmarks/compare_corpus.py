@@ -2,8 +2,7 @@
 """
 Corpus comparison: score all entries × renderings, aggregate, compute verdict.
 
-Spec: specs/023-nested-notes-kg-benchmark/contracts/cli-contracts.md §3,
-data-model.md, research.md D7/H7/BL-3.
+Formulas: benchmarks/scoring.md. Design origin: spec-023 (private upstream).
 
 Deterministic — identical inputs ⇒ byte-identical JSON output (SC-001).
 """

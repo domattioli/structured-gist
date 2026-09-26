@@ -2,7 +2,7 @@
   "deep": {
     "facts": {
       "f1": {
-        "evidence": "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+        "evidence": "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
         "status": "retained"
       },
       "f10": {
@@ -46,11 +46,11 @@
         "status": "retained"
       },
       "f2": {
-        "evidence": "a. old site: Squarespace at deeznutz.com (live)",
+        "evidence": "a. old site: Squarespace at acme-studio.com (live)",
         "status": "retained"
       },
       "f3": {
-        "evidence": "b. new site: Cloudflare Pages (deeznutz.pages.dev)",
+        "evidence": "b. new site: Cloudflare Pages (acme-studio.pages.dev)",
         "status": "partial"
       },
       "f4": {
@@ -94,115 +94,115 @@
       "facts": {
         "f1": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages"
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages"
           ]
         },
         "f10": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 2: Choose DNS hosting path",
             "II. Path B: move DNS to Cloudflare"
           ]
         },
         "f11": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Preference"
           ]
         },
         "f12": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 2: Choose DNS hosting path"
           ]
         },
         "f13": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 3: Reduce TTLs"
           ]
         },
         "f14": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 4: Add custom domains in Cloudflare"
           ]
         },
         "f15": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 5: Verify cutover"
           ]
         },
         "f16": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 6: Documentation + notification"
           ]
         },
         "f17": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Open issue"
           ]
         },
         "f18": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Open issue"
           ]
         },
         "f19": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Rollback requirement"
           ]
         },
         "f2": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Current state"
           ]
         },
         "f3": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Current state"
           ]
         },
         "f4": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Current state"
           ]
         },
         "f5": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
-            "Registrar for deeznutz.com"
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
+            "Registrar for acme-studio.com"
           ]
         },
         "f6": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
-            "Registrar for deeznutz.com"
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
+            "Registrar for acme-studio.com"
           ]
         },
         "f7": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 1: Identify registrar + DNS host"
           ]
         },
         "f8": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 2: Choose DNS hosting path"
           ]
         },
         "f9": {
           "located": [
-            "Domain migration: deeznutz.com Squarespace → Cloudflare Pages",
+            "Domain migration: acme-studio.com Squarespace → Cloudflare Pages",
             "Step 2: Choose DNS hosting path"
           ]
         }
@@ -210,7 +210,7 @@
     },
     "questions": {
       "q1": {
-        "answer_given": "Migrate deeznutz.com from Squarespace to Cloudflare Pages",
+        "answer_given": "Migrate acme-studio.com from Squarespace to Cloudflare Pages",
         "verdict": "correct"
       },
       "q10": {
@@ -218,7 +218,7 @@
         "verdict": "correct"
       },
       "q2": {
-        "answer_given": "Old: Squarespace at deeznutz.com; new: Cloudflare Pages at deeznutz.pages.dev",
+        "answer_given": "Old: Squarespace at acme-studio.com; new: Cloudflare Pages at acme-studio.pages.dev",
         "verdict": "correct"
       },
       "q3": {
@@ -466,7 +466,7 @@
   "standard": {
     "facts": {
       "f1": {
-        "evidence": "move deeznutz.com from Squarespace to",
+        "evidence": "move acme-studio.com from Squarespace to",
         "status": "retained"
       },
       "f10": {
@@ -510,7 +510,7 @@
         "status": "retained"
       },
       "f2": {
-        "evidence": "move deeznutz.com from Squarespace to",
+        "evidence": "move acme-studio.com from Squarespace to",
         "status": "partial"
       },
       "f3": {
@@ -632,13 +632,13 @@
         "f5": {
           "located": [
             "Domain migration",
-            "Registrar for deeznutz.com"
+            "Registrar for acme-studio.com"
           ]
         },
         "f6": {
           "located": [
             "Domain migration",
-            "Registrar for deeznutz.com"
+            "Registrar for acme-studio.com"
           ]
         },
         "f7": {
@@ -663,7 +663,7 @@
     },
     "questions": {
       "q1": {
-        "answer_given": "Move deeznutz.com from Squarespace to Cloudflare Pages",
+        "answer_given": "Move acme-studio.com from Squarespace to Cloudflare Pages",
         "verdict": "correct"
       },
       "q10": {
@@ -671,7 +671,7 @@
         "verdict": "correct"
       },
       "q2": {
-        "answer_given": "Old: Squarespace (deeznutz.com); new: Cloudflare Pages, URL not given",
+        "answer_given": "Old: Squarespace (acme-studio.com); new: Cloudflare Pages, URL not given",
         "verdict": "partial"
       },
       "q3": {

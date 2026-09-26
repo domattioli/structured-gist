@@ -1,13 +1,13 @@
 # Example — `structured-gist skim`
 
-Source: "Explain why the load_local_skills hook was needed." ≤2 depth, concept spine only.
+Source: "Explain why a web app added a request cache." ≤2 depth, concept spine only.
 
 ```
-- Discovery gap
-    I. install_skills.sh = consumer-only
-    II. harness scans ~/.claude/skills/ only
+- Latency problem
+    I. every request hit the database
+    II. same queries repeated
 
 - The fix
-    I. SessionStart hook symlinks skills/
-    II. idempotent
+    I. cache layer added
+    II. TTL-based
 ```

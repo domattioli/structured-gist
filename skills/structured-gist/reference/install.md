@@ -1,9 +1,10 @@
 # Install
 
-Install structured-gist from the Claude Code marketplace:
+Add this repo as a plugin marketplace, then install:
 
 ```
-claude plugin install structured-gist@claude-ai
+/plugin marketplace add domattioli/structured-gist
+/plugin install structured-gist
 ```
 
 After installation, invoke the skill with:

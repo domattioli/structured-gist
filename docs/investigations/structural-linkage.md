@@ -1,10 +1,13 @@
 # Investigation: does structured-gist's output STRUCTURE represent semantic linkage?
 
-Status: PLAN v2 (post-Opus review), not yet built. v2 scopes to `standard`
+Status: completed investigation record. The diagnostic described in the
+later sections is implemented; the plan sections are historical.
+
+Status (historical): PLAN v2 (post-Opus review), not yet built. v2 scopes to `standard`
 granularity only — `skim` deferred entirely, `deep` deferred to a later
 phase — per operator call, 2026-09-12. See "Revision (v2...)" section below
 for what changed and why before treating any Decision above it as current.
-Not part of `specs/001-backlog-hedge-fidelity/` — that spec's Scope Statement binds
+Not part of the backlog-hedge-fidelity spec (moved out of this repo) — that spec's Scope Statement binds
 it to its own eleven steps; this is a separate, newly-surfaced investigation.
 
 ## Question
@@ -95,7 +98,7 @@ already produces incidentally or deliberately encodes relationships.
    (haiku/sonnet renderings, 8 of 9 cases), NOT the `sg-alone`/
    `sg-plus-caveman-lite` conditions corpus. The conditions corpus has NO
    judged data at all — that is T061's separate, currently-held blocker
-   (see `specs/001-backlog-hedge-fidelity/decisions.md` "T060/T062 —
+   (see the backlog-hedge-fidelity spec's decisions.md (moved out of this repo), "T060/T062 —
    CLOSED" entry's "Open gap surfaced" note). This investigation is
    deliberately decoupled from T061; if this investigation's findings are
    interesting, extending it to the conditions axis becomes a later
