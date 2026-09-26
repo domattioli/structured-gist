@@ -3,17 +3,17 @@
 ### Before (source)
 
 ```
-Task: migrate the domain deeznutz.com from the old Squarespace site to an
+Task: migrate the domain acme-studio.com from the old Squarespace site to an
 already-deployed Cloudflare Pages site. Guide me click-by-click; I'll be
 logged into the relevant dashboards and can screen-share tabs.
 
 Context:
-- New site: Cloudflare Pages project "deeznutz", live at
-  https://deeznutz.pages.dev (direct wrangler uploads, not git-connected).
+- New site: Cloudflare Pages project "acme-studio", live at
+  https://acme-studio.pages.dev (direct wrangler uploads, not git-connected).
   Cloudflare account name: personal-account.
 - CRITICAL: the same Cloudflare account also hosts my personal site (project
   "personal-portfolio" / personal-portfolio.pages.dev). Do not touch that project or its DNS.
-- Old site: Squarespace, still live at deeznutz.com. It must remain
+- Old site: Squarespace, still live at acme-studio.com. It must remain
   intact as a rollback target for ~2 weeks after cutover. Prefer a DNS-record
   cutover I can revert in minutes; avoid destructive steps (do not cancel the
   Squarespace subscription, do not delete the Squarespace site, do not
@@ -23,7 +23,7 @@ Context:
   identifying it with me (whois + what the Squarespace/Domains dashboard shows).
 
 What I need from you, in order:
-1. Identify registrar + current DNS host for deeznutz.com; list current
+1. Identify registrar + current DNS host for acme-studio.com; list current
    DNS records so we have a written rollback snapshot before changing anything.
 2. Decide the cleanest path for pointing apex + www at the Pages project.
    Constraint check: if the DNS stays at Squarespace, confirm whether its DNS
@@ -33,11 +33,11 @@ What I need from you, in order:
    and note that this weakens the "instant rollback" property - tell me the
    actual rollback procedure and time for whichever path we take.
 3. Lower TTLs first if the current host allows it.
-4. In Cloudflare Pages > deeznutz > Custom domains: add deeznutz.com
-   and www.deeznutz.com, then make the DNS changes it prescribes.
+4. In Cloudflare Pages > acme-studio > Custom domains: add acme-studio.com
+   and www.acme-studio.com, then make the DNS changes it prescribes.
 5. Verify: apex + www resolve to the new site over HTTPS, cert issued,
    http->https and www/apex canonicalization work, and
-   https://deeznutz.com/about (extensionless) returns 200.
+   https://acme-studio.com/about (extensionless) returns 200.
 6. Give me the exact rollback steps as a saved note, and remind me to submit
    the sitemap in Google Search Console after cutover.
 
@@ -52,10 +52,10 @@ accepted - launch decision is mine.
 ```text
 - Domain migration
     ▸ Scope
-        ↪ move deeznutz.com from Squarespace to
+        ↪ move acme-studio.com from Squarespace to
           Cloudflare Pages; Squarespace stays as rollback
           for ~2 weeks
-    ▸ Registrar for deeznutz.com
+    ▸ Registrar for acme-studio.com
         ↪ unconfirmed — likely Squarespace Domains,
           possibly Google Domains legacy, or another
           registrar

@@ -1,30 +1,33 @@
 # Example — `structured-gist deep`
 
-Source: "Explain why the load_local_skills hook was needed." Exhaustive — full ladder, ordered steps as `I.`, grouped as `a.`, arrows surfaced.
+Source: "Explain why a web app added a request cache." Exhaustive — full ladder, ordered steps as `I.`, grouped as `a.`, arrows surfaced.
 
 ```
-- Discovery gap
-    I. install_skills.sh = consumer flow
-        a. wants .claude/skills.manifest.json
-        b. looks under .claude/skills/
-            ↪ this repo uses top-level skills/ → never matches
-    II. harness scans ~/.claude/skills/ only
-        ↪ registry built once at start; no hot reload
+- Latency problem
+    I. every request hit the database
+        a. no caching layer existed
+        b. queries repeated across users
+            ↪ hot endpoints re-ran the same joins → the DB
+            became the bottleneck
+    II. no reuse between requests
+        ↪ each request opened its own connection; no shared
+        state
 
 - The fix
-    I. find each skills/<name>/SKILL.md
-        a. maxdepth 2 excludes fixtures
-        b. validate frontmatter
-    II. symlink into ~/.claude/skills/
-        ↪ skip if present; never clobber
-    III. test each link
-        a. verify SKILL.md accessible
-        b. parse version
+    I. identify cacheable endpoints
+        a. read-heavy, low write frequency
+        b. exclude user-specific data
+    II. add cache layer
+        a. keyed by query params
+        b. TTL-based expiry
+    III. verify hit rate
+        a. monitor cache metrics
+        b. tune TTL
 
 - Result
-    I. all 77 skills available at start
-    II. consumer repos load skill updates via 
-        ↪ drift check happens automatically at session bootstrap
+    I. database load cut 80%
+    II. most requests now served from cache
+        ↪ cache warms automatically after deploy
 ```
 
 Ordered loop steps → `I. II. III.`; grouped items → `a. b.`; long clauses → `↪` leaves.

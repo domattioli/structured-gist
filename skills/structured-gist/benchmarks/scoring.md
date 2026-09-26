@@ -1,7 +1,6 @@
-# Outline benchmark — scoring formulas, rationale, failure modes
+# Outline benchmark: scoring formulas, rationale, failure modes
 
-Spec of record: `specs/023-nested-notes-kg-benchmark/` (research.md D3–D8,
-contracts/cli-contracts.md). This file is the FR-008 audit trail: every number
+Design origin: spec-023 (private upstream repo, not required here). This file is the FR-008 audit trail: every number
 in a score record traces to a formula here. Constants here are echoed from
 `score_outline.py` and checked by the final gate (M8): weights
 `retention 0.5 / robustness 0.3 / brevity 0.2`, coverage threshold `θ = 0.5`,
@@ -9,7 +8,7 @@ tie threshold `ε = 1e-9`.
 
 ## Content units (retention denominator)
 
-Source and outline are normalized differently — they are different kinds of
+Source and outline are normalized differently: they are different kinds of
 text (D3):
 
 - **Source side**: NFC normalize → strip fenced-code content and inline code
@@ -18,7 +17,7 @@ text (D3):
   markdown list lines are one unit each.
 - **Outline side**: the outline is extracted via
   `lint_outline.extract_outline_from_text` (a block outline's fence is its
-  *container*, never stripped as code — source-side stripping would zero the
+  *container*, never stripped as code; source-side stripping would zero the
   outline), then each node's content text via `lint_outline.parse_line`
   (drops markers and enumerator labels).
 - **Shared token normalization**: split on non-alphanumeric → lowercase →
@@ -34,14 +33,14 @@ text (D3):
 `retention = recall = units_covered / units_total`, where a unit is covered
 iff `|unit_tokens ∩ outline_tokens| / |unit_tokens| ≥ θ` (sets).
 
-**Precision** is reported separately (never blended — FR-003): fraction of
+**Precision** is reported separately (never blended, FR-003): fraction of
 outline content tokens (set) present in the source vocabulary. Hallucinated
 additions lower precision and can never raise recall. An outline with zero
 content tokens: recall = 0.0, precision `ABSTAINED:no-outline-content`.
 
 Failure modes (accepted, documented): synonym paraphrase under-scores recall
-(hits both compared modes equally — comparison-fair); the token bag ignores
-negation ("not X" covers "X") — acceptable for mode-vs-mode deltas, wrong
+(hits both compared modes equally, comparison-fair); the token bag ignores
+negation ("not X" covers "X"): acceptable for mode-vs-mode deltas, wrong
 tool for absolute quality certification.
 
 ## Brevity
@@ -49,7 +48,7 @@ tool for absolute quality certification.
 `brevity = clamp(1 − outline_content_words / source_content_words, 0, 1)`.
 
 **Multiset/set split (BL-1)**: brevity's numerator and denominator are
-MULTISET token counts — every occurrence counts, so removing a duplicate word
+MULTISET token counts: every occurrence counts, so removing a duplicate word
 moves the score (FR-004). Coverage and precision use token SETS. A verbatim
 copy scores ≈0; the score improves monotonically as redundant wording drops.
 A source with zero content words: `ABSTAINED:no-source-content` (abstains
@@ -66,13 +65,13 @@ outline never outscores its intact original.
 **Perturbation-stability term: cut, twice, with proofs.** FR-005's
 perturbation clause is formally waived on this record:
 
-1. *Design 1* (4-perturbation recall-ratio mean — sibling-reverse,
+1. *Design 1* (4-perturbation recall-ratio mean: sibling-reverse,
    branch-delete, marker-corrupt, indent-corrupt): recall is an order-free
    token bag, so sibling-reverse, marker-corrupt, and indent-corrupt leave it
-   byte-identical — 3 of 4 terms identically 1.0, a constant dressed as
+   byte-identical; 3 of 4 terms identically 1.0, a constant dressed as
    measurement.
 2. *Design 2* (branch-delete recall ratio `recall(P2(o))/recall(o)`): (a)
-   non-monotone — an outline with a redundant tail block scores HIGHER after
+   non-monotone: an outline with a redundant tail block scores HIGHER after
    deleting a content-bearing block (ratio denominator falls faster than the
    numerator); (b) its single-block fallback equals the clamped-1.0 reward it
    claimed to avoid; (c) it is a top-level-block-count proxy (evenly-covered
@@ -84,14 +83,14 @@ perturbation clause is formally waived on this record:
 ## Composite
 
 `composite = 0.5·retention + 0.3·robustness + 0.2·brevity` (weights
-configurable via `--weights <retention>,<robustness>,<brevity>` — positional
+configurable via `--weights <retention>,<robustness>,<brevity>`, positional
 order explicit; must sum to 1.0 ± 1e-9). Ties declared at ε = 1e-9 on full
 precision; serialized values rounded to 4 dp AFTER comparison. Any ABSTAINED
-axis ⇒ composite ABSTAINED (no weight renormalization — one rule, stated).
+axis ⇒ composite ABSTAINED (no weight renormalization; one rule, stated).
 
 The comparison report also carries `composite_excl_conformance`
 (retention/brevity renormalized 5/7, 2/7) because KG-mode conformance ≡ 1.0
-by construction (self-lint gate) — tautological, so the headline verdict is
+by construction (self-lint gate): tautological, so the headline verdict is
 grounded in the conformance-excluded number first.
 
 ## Degenerate inputs (FR-007)

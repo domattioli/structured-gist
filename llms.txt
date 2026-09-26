@@ -13,9 +13,14 @@
 - [reference/render-modes.md](skills/structured-gist/reference/render-modes.md): block vs. responsive mode, worked examples.
 - [reference/composition.md](skills/structured-gist/reference/composition.md): how the skill composes with text-compression layers.
 - [reference/self-explain-notes.md](skills/structured-gist/reference/self-explain-notes.md): the skill's own docs rendered in its own format.
+- [reference/install.md](skills/structured-gist/reference/install.md): installation detail.
+- [reference/kg-mode.md](skills/structured-gist/reference/kg-mode.md): the experimental KG generation path.
 
 ## Examples
 
 - [examples/skim.md](skills/structured-gist/examples/skim.md), [examples/standard.md](skills/structured-gist/examples/standard.md), [examples/deep.md](skills/structured-gist/examples/deep.md): the three granularity levels on the same source content.
 - [examples/attribute.md](skills/structured-gist/examples/attribute.md): the attribute marker in isolation.
 - [examples/report.md](skills/structured-gist/examples/report.md): the opt-in report preset, two findings with differing branch sets.
+- [examples/caveman-combo.md](skills/structured-gist/examples/caveman-combo.md): structured-gist composed with caveman wording compression.
+- [examples/self-explain.md](skills/structured-gist/examples/self-explain.md): the skill's own docs, self-rendered.
+- [examples/splice-to-subtree.md](skills/structured-gist/examples/splice-to-subtree.md): before/after worked examples of the R9 delimiter-split rule.

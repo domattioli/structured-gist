@@ -1,14 +1,14 @@
 - Domain migration
     ▸ Goal
-        ↪ move deeznutz.com from the old Squarespace site
+        ↪ move acme-studio.com from the old Squarespace site
         to an already-deployed Cloudflare Pages site
     ▸ Mode
         ↪ guide click-by-click; the user is logged into the
         relevant dashboards and can screen-share tabs
 - New site
     ▸ Project
-        a. Cloudflare Pages project "deeznutz"
-        b. live at https://deeznutz.pages.dev
+        a. Cloudflare Pages project "acme-studio"
+        b. live at https://acme-studio.pages.dev
     ▸ Deploy method
         ↪ direct wrangler uploads, not git-connected
     ▸ Account
@@ -24,7 +24,7 @@
         project or its DNS
 - Old site
     ▸ State
-        ↪ Squarespace, still live at deeznutz.com
+        ↪ Squarespace, still live at acme-studio.com
     ▸ Retention
         ↪ it must remain intact as a rollback target for
         about two weeks after cutover

@@ -2,23 +2,23 @@
 
 Orthogonal compose: same ladder structure, ultra-terse wording (caveman's doing, not structured-gist'), markers stay Latin.
 
-Source: "Explain why the load_local_skills hook was needed."
+Source: "Explain why a web app added a request cache."
 
 ```
-- Discovery gap
-    I. install_skills.sh consumer-only
-        ↪ lacks .claude/manifest this repo has
-    II. harness scans ~/.claude/skills/ @ start only
-        ↪ registry built once; no hot reload
+- Latency problem
+    I. every req hit DB
+        ↪ same queries repeated; DB = bottleneck
+    II. no reuse between reqs
+        ↪ each req own connection; no shared state
 
 - Fix
-    A. load_local_skills.sh @ SessionStart
-        a. symlinks skills/<name>/
-        b. idempotent, fail-open
-    B. scope: ~.claude/skills/
+    A. cache layer added
+        a. keyed by query params
+        b. TTL, fail-open
+    B. cuts DB load 80%
 
 - Result
-    I. 77 skills load @ start
+    I. faster resp times
 ```
 
 Structure identical to `standard`; only the wording compressed. Under `wenyan-*` the node text becomes 文言文 — markers (`-` `I.` `A.` `a.` `↪`) stay Latin.

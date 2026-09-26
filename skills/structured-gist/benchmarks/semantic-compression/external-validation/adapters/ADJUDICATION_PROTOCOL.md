@@ -3,7 +3,7 @@
 Used only for the 7 calibration cases, where two independent annotators
 (A and B) each produced a Stage-A decomposition of the same case. For
 every other case, a single Stage-A pass is frozen directly (see
-`ANNOTATION_PROTOCOL.md`) — this document does not apply to those; see
+`ANNOTATION_PROTOCOL.md`); this document does not apply to those; see
 `FINDINGS.md` for the reliability result that justified not double-passing
 every case.
 
@@ -12,7 +12,7 @@ native `question_or_query`/`reference_answer`/`intent`/`native_evidence`,
 and both annotators' Stage-A output (`annotator_a.json`,
 `annotator_b.json`). You will NOT be given `SKILL.md`, any rendered
 output, any scoring code, or `calibration_comparison.json` (the
-quantitative overlap numbers) — adjudicate from the actual proposition
+quantitative overlap numbers); adjudicate from the actual proposition
 content, not from a similarity score.
 
 ## Rules
@@ -23,7 +23,7 @@ content, not from a similarity score.
    annotator's output is included **only if** you independently confirm
    it is source-supported (its `source_quote` genuinely appears in
    `source.md` and supports its `text`) and task-relevant (needed to
-   answer the native question/query per the case's `intent`) — not
+   answer the native question/query per the case's `intent`), not
    merely because one annotator happened to include it.
 2. **Merge obvious duplicates.** If A and B extracted essentially the
    same proposition with different wording or a different `id`, keep one
@@ -32,8 +32,8 @@ content, not from a similarity score.
    on the surviving fact for traceability.
 3. **Reject unsupported or merely-descriptive extras that don't serve the
    task.** If a fact from only one annotator is technically
-   source-supported but not needed for the question/query, leave it out
-   — this corpus is built to the same "extract only what's needed" rule
+   source-supported but not needed for the question/query, leave it out;
+   this corpus is built to the same "extract only what's needed" rule
    both annotators were given.
 4. Apply the same three rules to relations, plus: a relation only
    survives if the facts it connects both survived adjudication (renumber
@@ -49,7 +49,7 @@ content, not from a similarity score.
 6. If the two annotators' inventories are so different that a good-faith
    union/merge isn't possible (e.g. they identified essentially different
    task-relevant propositions, not just different granularity), do not
-   force an adjudication — instead, set `"adjudication_status":
+   force an adjudication; instead, set `"adjudication_status":
    "irreconcilable"` at the top level, explain why in one paragraph, and
    stop. This is a reliability finding to report, not a case to paper
    over.
