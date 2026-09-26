@@ -4,8 +4,8 @@
 
 The semantic-compression evaluation harness is structured in two lanes:
 
-1. **Deterministic lane** (`run_deterministic.sh`) — Measures structure/size metrics without model invocation
-2. **Judged lane** (`run_judged.sh`) — Semantic verdicts from an isolated judge model
+1. **Deterministic lane** (`run_deterministic.sh`): Measures structure/size metrics without model invocation
+2. **Judged lane** (`run_judged.sh`): Semantic verdicts from an isolated judge model
 
 ## SC-002 Verification Requirements
 
@@ -26,7 +26,7 @@ diff run1/results/deterministic.json run2/results/deterministic.json
 
 **Status: VERIFIED ✓**
 
-Note: an independent re-check (EXEC session, 2026-09-09) found `run_deterministic.sh`/`run_judged.sh` originally resolved `SCRIPT_DIR` from `BASH_SOURCE[0]` *after* already `cd`-ing to the repo root — this breaks when the script is invoked with a relative path from within its own directory (`cd .../semantic-compression && bash run_deterministic.sh`). Fixed by computing `SCRIPT_DIR` before changing directory. Re-verified byte-identical output from both invocation styles (own-directory and repo-root) after the fix; hash below is post-fix and matches the original figure exactly, so the underlying scoring output was never wrong — only the script's directory robustness was.
+Note: an independent re-check (EXEC session, 2026-09-09) found `run_deterministic.sh`/`run_judged.sh` originally resolved `SCRIPT_DIR` from `BASH_SOURCE[0]` *after* already `cd`-ing to the repo root; this breaks when the script is invoked with a relative path from within its own directory (`cd .../semantic-compression && bash run_deterministic.sh`). Fixed by computing `SCRIPT_DIR` before changing directory. Re-verified byte-identical output from both invocation styles (own-directory and repo-root) after the fix; hash below is post-fix and matches the original figure exactly, so the underlying scoring output was never wrong: only the script's directory robustness was.
 
 Double-run verification (2026-09-09):
 ```
@@ -103,13 +103,13 @@ Behavior verified:
 
 ## Verification Checklist
 
-- [x] run.py implementation complete (T036) — **VERIFIED** 2026-09-09
-- [x] Cache-key decision gate resolved (T033) — **RESOLVED** per specifications/001-backlog-hedge-fidelity/decisions.md
-- [x] run_deterministic.sh double-run produces byte-identical JSON — **VERIFIED** (e5bbd2ff... match)
-- [ ] run_judged.sh serves from cache with zero new model calls on second invocation — N/A (no judged cases in suite yet; framework ready for future judged case addition)
-- [x] provenance.json populated with actual run metadata — **VERIFIED** (updated after each run)
-- [ ] CI workflow (`benchmark-deterministic.yml`) passes on main/development — TBD
-- [ ] No model provider secrets referenced in any workflow file — TBD
+- [x] run.py implementation complete (T036): **VERIFIED** 2026-09-09
+- [x] Cache-key decision gate resolved (T033): **RESOLVED** per specifications/001-backlog-hedge-fidelity/decisions.md
+- [x] run_deterministic.sh double-run produces byte-identical JSON: **VERIFIED** (e5bbd2ff... match)
+- [ ] run_judged.sh serves from cache with zero new model calls on second invocation: N/A (no judged cases in suite yet; framework ready for future judged case addition)
+- [x] provenance.json populated with actual run metadata: **VERIFIED** (updated after each run)
+- [ ] CI workflow (`benchmark-deterministic.yml`) passes on main/development: TBD
+- [ ] No model provider secrets referenced in any workflow file: TBD
 
 ## Current Status
 

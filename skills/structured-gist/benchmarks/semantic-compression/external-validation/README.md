@@ -24,7 +24,7 @@ to build this corpus.
 
 ## Why these three datasets
 
-- **QMSum** (`qmsum/`, 24 cases, **primary external validation set**) —
+- **QMSum** (`qmsum/`, 24 cases, **primary external validation set**):
   externally annotated, query-focused meeting summarization with explicit
   `relevant_text_span` evidence. This is the closest public analogue to
   structured-gist's actual use case: someone asks a specific question
@@ -32,14 +32,14 @@ to build this corpus.
   everything, and the dataset's own annotators (not this project) marked
   exactly which turns of the transcript the answer depends on.
 - **Qasper** (`qasper/`, 10 cases, **external evidence/relation pressure
-  set**) — independently annotated evidence retrieval over long technical
+  set**): independently annotated evidence retrieval over long technical
   papers, with human answers and paragraph-level supporting evidence.
   Harder than QMSum in one specific way: evidence is spread across a
   structured document with headings and citations rather than a flat
   conversational transcript, and a meaningful fraction of its eligible
   pool requires *multiple* separated evidence locations per answer.
-- **HotpotQA** (`hotpotqa/`, 8 cases, **multi-hop pressure set only** —
-  `pressure_only: true` in every selection/manifest record) — deliberately
+- **HotpotQA** (`hotpotqa/`, 8 cases, **multi-hop pressure set only**,
+  `pressure_only: true` in every selection/manifest record): deliberately
   artificial (short Wikipedia paragraphs, crowdsourced questions), but the
   strongest available public source of *sentence-level* supporting-fact
   annotations that require composing two separate paragraphs to answer.
@@ -47,19 +47,19 @@ to build this corpus.
   preserve two pieces of evidence that must be connected to answer a
   question, not "is this representative of realistic recap/explain
   input." It is not pooled into a headline "external validation average"
-  with QMSum or Qasper — see "Intended roles" below.
+  with QMSum or Qasper: see "Intended roles" below.
 
 ## Why these counts
 
-- **24 QMSum** — enough breadth (3 domains x 8, roughly half single- and
+- **24 QMSum**: enough breadth (3 domains x 8, roughly half single- and
   half multi-span) to test replication of this suite's existing findings
   against fully external annotations, without turning this repo into a
   benchmark warehouse the way, e.g., raw QMSum/Qasper/HotpotQA train
   splits would.
-- **10 Qasper** — a targeted hard-evidence set, not a second broad
+- **10 Qasper**: a targeted hard-evidence set, not a second broad
   validation corpus; composition is fixed at 7 multi-evidence + 3
   single-evidence controls (see `qasper/selection.json`).
-- **8 HotpotQA** — a small sentinel pressure set. It answers one question
+- **8 HotpotQA**: a small sentinel pressure set. It answers one question
   (multi-hop evidence composition survives compression, yes/no) and does
   not need to be large to do that.
 
@@ -70,7 +70,7 @@ What "selected blind to structured-gist behavior" means concretely here:
 - Every eligibility rule (non-empty answer, resolvable evidence span,
   evidence cardinality, bridge vs. comparison type, distractor-context
   size, etc.) is evaluated purely against the upstream dataset's own
-  fields — see each `scripts/select_*.py` module docstring for the exact
+  fields: see each `scripts/select_*.py` module docstring for the exact
   rule set per dataset.
 - Every tie among eligible candidates is broken by
   `sha256(dataset_name + upstream_case_id)`
@@ -78,7 +78,7 @@ What "selected blind to structured-gist behavior" means concretely here:
   "the interesting one." Re-running `select_qmsum.py` / `select_qasper.py`
   / `select_hotpotqa.py` against the same pinned upstream data reproduces
   the exact same 42 case IDs byte-for-byte (verified in
-  `scripts/test_corpus.py`, and re-verifiable by hand — see below).
+  `scripts/test_corpus.py`, and re-verifiable by hand, see below).
 - Zero manual exclusions were used. `scripts/select_*.py`'s rejection
   counters (see "Eligibility pool and rejections" below) are the only
   candidates that were dropped, and every rejection reason is objective
@@ -129,7 +129,7 @@ external-validation/
 
 `case_id` numbering (`qmsum-01`..`qmsum-24`, `qasper-01`..`qasper-10`,
 `hotpotqa-01`..`hotpotqa-08`) is positional over each `select_*.py`'s own
-deterministic output order — not a ranking of anything.
+deterministic output order, not a ranking of anything.
 
 ## Reproducing the corpus
 
@@ -154,7 +154,7 @@ in `provenance.json`/`raw_manifest.json`; re-running them (with a fresh
 `fetch_sources.py` pull of the same pinned commit/version) is how a
 skeptical reviewer confirms "selection rerun chooses different cases"
 does *not* happen. `scripts/test_corpus.py` automates this check when
-`.raw-cache/` is present locally (it's skipped, not failed, when absent —
+`.raw-cache/` is present locally (it's skipped, not failed, when absent,
 see `HAS_CACHE` in that file) and always runs the fully-offline checks.
 
 ## Licensing and provenance
@@ -174,7 +174,7 @@ assumed:
   Hugging Face card (`cardData.license: cc-by-4.0`) and homepage
   (`allenai.org/data/qasper`); the code baseline repo
   (`allenai/qasper-led-baseline`) is separately Apache-2.0, which is the
-  *code's* license, not the *dataset's* — the two were not conflated.
+  *code's* license, not the *dataset's*; the two were not conflated.
 - HotpotQA's CC BY-SA 4.0 was confirmed against `hotpotqa.github.io`'s own
   license statement.
 
@@ -185,13 +185,13 @@ retrieval time. `fetch_sources.py` fell back to the `hotpotqa` GitHub
 organization's own official Hugging Face mirror
 (`huggingface.co/datasets/hotpotqa/hotpot_qa`), published by the same
 team, pinned to that repo's commit sha, with identical schema and
-content — only the transport differs. This is recorded in
+content; only the transport differs. This is recorded in
 `hotpotqa/cases/*/provenance.json`'s `deviations` field and in
 `.raw-cache/hotpotqa/raw_manifest.json`'s `deviation_note` (the latter is
 not committed since it lives under the gitignored cache, but is
 regenerated identically by `fetch_sources.py`). Every `provenance.json` in
 this corpus carries a `source_sha256`, `transformed_case_sha256`,
-`upstream_revision`, `license`, `retrieval_date`, and `deviations` list —
+`upstream_revision`, `license`, `retrieval_date`, and `deviations` list:
 see "Common external case schema" below for the exact case-file shape.
 
 ## Eligibility pools and rejections
@@ -200,7 +200,7 @@ see "Common external case schema" below for the exact case-file shape.
 
 Eligibility pool: **244** specific-query candidates (across the official
 `test` split of all three domains), from an initial 281 specific queries
-plus 37 general (whole-meeting) queries seen — general queries are never
+plus 37 general (whole-meeting) queries seen; general queries are never
 eligible by design (see task brief: "do not use general whole-meeting
 queries as the main validation cases"). **Zero** candidates were rejected
 as malformed; every specific query in these test splits already had a
@@ -223,8 +223,8 @@ processed in ascending order of available multi-span candidates
 (Academic 0, Committee 7, Product 31), each claims
 `min(remaining_multi_target, available, domain_quota)` multi-span slots,
 and the rest of its 8-slot quota is filled with single-span candidates.
-This is not a hand-picked split — see `scripts/select_qmsum.py`'s
-docstring for the exact rule — and it happens to land exactly on 12/12:
+This is not a hand-picked split (see `scripts/select_qmsum.py`'s
+docstring for the exact rule), and it happens to land exactly on 12/12:
 
 | domain | multi taken | single taken |
 |---|---|---|
@@ -269,19 +269,19 @@ cases: min 1,948 / p25 2,756 / median 3,482 / p75 3,759 / max 4,402.
 ### HotpotQA (`pressure_only: true`)
 
 Eligibility pool: **5,899** of 7,405 rows in the official `distractor`
-dev split (which is entirely `level: hard` by dataset construction — no
+dev split (which is entirely `level: hard` by dataset construction, no
 filtering needed there). Rejections:
 
 | reason | count |
 |---|---|
-| `not_bridge_type` (comparison-type question, excluded — see below) | 1,487 |
+| `not_bridge_type` (comparison-type question, excluded, see below) | 1,487 |
 | `insufficient_distractor_context` (fewer than 8 of the expected 10 context paragraphs present) | 18 |
 | `supporting_fact_unresolved` (a supporting-fact sentence index didn't resolve) | 1 |
 
 Comparison-type questions ("were X and Y the same nationality?") are
-excluded outright rather than down-weighted, because bridge questions —
+excluded outright rather than down-weighted, because bridge questions,
 which require using one fact to identify the entity the next fact is
-about — are the genuinely compositional type this pressure set exists to
+about, are the genuinely compositional type this pressure set exists to
 test, and bridge questions are abundant (5,918 of 7,405 rows) so nothing
 was lost by not falling back to comparison. All 8 selected cases have
 exactly 2 supporting facts across exactly 2 distinct paragraphs (the
@@ -291,13 +291,13 @@ max 1,504.
 
 ## Selection algorithm (all three datasets)
 
-1. Build the eligibility pool directly from the pinned upstream data —
+1. Build the eligibility pool directly from the pinned upstream data;
    never from anything this project generated.
 2. Compute `sha256(dataset_name + upstream_case_id)` for every eligible
    candidate (`corpus_lib.selection_sort_key`).
 3. Where a stratum/quota exists (QMSum's domain x cardinality, Qasper's
    cardinality x distance-bucket), allocate slots to strata via
-   `corpus_lib.scarcity_first_allocate` — the stratum with fewest
+   `corpus_lib.scarcity_first_allocate`: the stratum with fewest
    available candidates is filled first (up to any documented cap), so no
    stratum is starved by a more abundant one.
 4. Within each stratum (or the whole pool, for HotpotQA), take the first
@@ -310,7 +310,7 @@ max 1,504.
 
 Every case has three files. `external_gold.json` deliberately does
 **not** use this suite's own `gold.json` semantic-unit schema (facts,
-relations, weights) — that schema is this project's own ontology, and
+relations, weights): that schema is this project's own ontology, and
 forcing these three independently-annotated datasets into it before ever
 testing against them would defeat the point of an *external* validation
 corpus. A later eval-adaptation session may derive a fact/relation view
@@ -336,7 +336,7 @@ datasets natively provide, losslessly.
 `license_source`, `retrieval_date`, `source_sha256`,
 `transformed_case_sha256`, `transformation_script_version`, and
 `deviations` (a list, empty only if nothing deviated from the plain
-upstream record — every QMSum case documents the native-ID join, every
+upstream record: every QMSum case documents the native-ID join, every
 Qasper case documents the float-evidence caveat, every HotpotQA case
 documents the host-fallback deviation).
 
@@ -365,7 +365,7 @@ integration test, adds direct assertions on the stratum counts and
 distributions documented above, and unit-tests every eligibility/ordering
 primitive (span resolution, answer typing, distance bucketing,
 scarcity-first allocation, deterministic JSON serialization) with
-synthetic inputs — no network dependency anywhere in this file.
+synthetic inputs; no network dependency anywhere in this file.
 
 ## Verification performed this session
 
@@ -380,7 +380,7 @@ synthetic inputs — no network dependency anywhere in this file.
 - Full existing repo test suite
   (`pytest skills/structured-gist/benchmarks/semantic-compression/
   skills/structured-gist/tests/`): 89 passed before this work, 120 passed
-  after (89 existing + 31 new, all in `scripts/test_corpus.py`) — no
+  after (89 existing + 31 new, all in `scripts/test_corpus.py`): no
   existing test was changed or removed.
 - Corpus rebuild determinism: re-running `select_*.py` against the pinned
   upstream cache reproduced `selection.json` byte-for-byte for all three

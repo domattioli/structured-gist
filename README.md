@@ -43,7 +43,7 @@ The example below compares Claude Opus's unadulterated description of how this s
 
 As a paragraph, it reads:
 
-> structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments — anywhere a reader needs to skim a structure rather than parse a paragraph for it.
+> structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments: anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
 Rendered as an outline in `skim` granularity and `block` mode (the default modal combination), the same content drops down 64% from 191 to 68 words. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify this.
 
@@ -106,13 +106,13 @@ Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline thi
 
 ## 5. Benchmarks
 
-Representative measurements from the skill's version history, one metric per column so values in the same column can be compared across versions. Most versions only exercise one metric, so most cells are blank by design (`—`) — a filled cell means that version measured that metric. See the [full benchmark ledger](skills/structured-gist/tests/benchmark.md) for methodology and complete history.
+Representative measurements from the skill's version history, one metric per column so values in the same column can be compared across versions. Most versions only exercise one metric, so most cells are blank by design (`—`); a filled cell means that version measured that metric. See the [full benchmark ledger](skills/structured-gist/tests/benchmark.md) for methodology and complete history.
 
 | Version | Word count | Outline-quality composite | Rules gated | Tests passing | Weighted retention (skim → standard → deep) | Notes |
 |---|---|---|---|---|---|---|
 | v0.2.9 | **147 → 88 (-40.1%)** | — | — | — | — | Dense paragraph vs. skim outline, same content. |
 | v0.3.7 | **19 → 24 (+26.3%)** | — | — | — | — | Block mode vs. responsive mode, same tree; GFM bullet-token artifact, not a regression. |
-| v0.4.0 | — | **0.549 → 0.760** | — | — | — | Direct prompt vs. experimental KG mode, 20-source corpus; KG mode wins structure but loses retention. Not shipped — see [Future work](#7-future-work). |
+| v0.4.0 | — | **0.549 → 0.760** | — | — | — | Direct prompt vs. experimental KG mode, 20-source corpus; KG mode wins structure but loses retention. Not shipped: see [Future work](#7-future-work). |
 | v0.4.2 | — | — | **11 → 15** | **33 → 46** | — | Linter rule coverage. |
 | v0.4.3 | — | — | — | **46 → 63** | — | Rename and trigger-phrase expansion; no rule-logic change. |
 | Eval only (#10) | — | — | — | — | **0.37 → 0.89 → 0.99** | Semantic-compression suite: 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8, Haiku on 3/8, full-suite Claude Opus run planned. Compression correlated *negatively* with usefulness (**r = -0.75**), so it is reported as a separate cost, never blended into the quality score. |
@@ -264,14 +264,14 @@ accepted - launch decision is mine.
   - D. KG mode (experimental, opt-in)
     - a. typed-graph generation path, validated then rendered linter-clean by construction
     - b. v0.4.0 comparison: wins structure, loses retention (see [Benchmarks](#5-benchmarks))
-    - c. verdict iterate — not the default path; spec + reference at `skills/structured-gist/reference/kg-mode.md`
-- **Additional benchmark metrics**: word count, rule/test coverage, and semantic retention (see [Benchmarks](#5-benchmarks)) are the tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome — see `CONTRIBUTING.md`.
+    - c. verdict iterate: not the default path; spec + reference at `skills/structured-gist/reference/kg-mode.md`
+- **Additional benchmark metrics**: word count, rule/test coverage, and semantic retention (see [Benchmarks](#5-benchmarks)) are the tracked metrics today. Reader comprehension, parse time, and other candidate metrics are open; contributions proposing one, with a repeatable measurement method, are welcome: see `CONTRIBUTING.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 8. Documentation
 
-`skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to, including `reference/kg-mode.md` (the experimental KG generation path — see [Future work](#7-future-work)).
+`skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to, including `reference/kg-mode.md` (the experimental KG generation path, see [Future work](#7-future-work)).
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
