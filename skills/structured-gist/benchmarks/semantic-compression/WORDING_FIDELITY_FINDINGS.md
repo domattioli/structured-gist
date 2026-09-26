@@ -1,5 +1,12 @@
 # Wording fidelity: findings (measurement only)
 
+**Key takeaways**
+
+- Words mostly come from the source. Two-word copied runs cover 0.32 (skim) to 0.68 (deep) of the output.
+- Whole nodes are rarely verbatim (0.18 to 0.21). The grammar splits sentences into clipped nodes.
+- The test is exact and deterministic: no model, no fuzzy matching.
+- Status: durable regression metric (class A).
+
 `scoring/wording_fidelity.py` tests SKILL.md's own claim, quoted verbatim
 from `SKILL.md` line 10: **"structure only, wording untouched."** This is
 Eval A of a two-eval measurement-only PR (Eval B: `FINDABILITY_FINDINGS.md`).

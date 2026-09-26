@@ -1,5 +1,12 @@
 # Semantic Preservation Recall (SPR): experiment findings
 
+**Key takeaways**
+
+- SPR scores relations as first-class units beside facts.
+- It catches the causal-collapse failure this suite already suspected.
+- Blind task weights agree with category weights only 46% of the time (Spearman rho 0.30).
+- SPR has its own failure modes, so it stays experimental (class A). It is not a headline metric.
+
 This is a measurement-only follow-up to PR #12 (`eval: narrow
 weighted-fact-retention naming, fix empty-fact/source-support edge cases`).
 It runs the blinded task-weight re-annotation PR #12's `README.md` deferred

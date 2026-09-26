@@ -7,6 +7,13 @@ to explain *why* the 8 cases in `regression/` and `pressure-tests/` were
 kept and what each one is protecting or provoking. See `README.md` for how
 to use the suite day to day.
 
+**Key takeaways**
+
+- Compression hurts usefulness (r = -0.75). Report it as a cost; never fold it into a quality score.
+- Skim to standard adds about 0.52 retention. Standard to deep adds about 0.10.
+- Failures are omission or a dropped relation. No fact was ever kept with a changed meaning.
+- Passing the linter says little about meaning (r ≈ 0.2 to 0.25). Keep it as a pass/fail gate.
+
 ## 1. The lesson that motivated this suite
 
 The round-1 experiment set out to answer: *does semantic compression add

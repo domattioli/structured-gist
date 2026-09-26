@@ -1,5 +1,13 @@
 # External evaluation results
 
+**Key takeaways**
+
+- Relation loss is the main failure on external data. Relations score below facts on every dataset and level.
+- Standard is a good default. Qasper keeps 0.84 of facts at standard and 0.95 at deep.
+- Meeting transcripts (QMSum) are hardest: 0.55 facts kept at standard.
+- Linter-clean output does not predict meaning (H8 replicated).
+- Datasets are never pooled. HotpotQA is pressure-test evidence only.
+
 The frozen external-validation corpus (PR #19) and semantic-gold adapter
 (PR #20) run cold against `structured-gist` v0.4.8, one model tier
 (Sonnet 5), skim/standard/deep, judged by isolated blind judges. See
