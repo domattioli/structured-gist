@@ -184,7 +184,7 @@ terminal width via `shutil.get_terminal_size()` (fallback 64 when not a
 real tty). Note that `auto` is only meaningful when the linter runs in a
 real terminal — Claude Code's Bash tool is not a tty, so `tput cols`
 would report 80 on a ~160-col pane and mislead the linter; operators
-should pin a number in their CLAUDE.md for a given surface.
+should pin a number in their AGENTS.md for a given surface.
 
 ```
         ↪ this leaf runs long enough that a phone-width pane
