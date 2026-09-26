@@ -106,6 +106,13 @@ Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline thi
 
 ## 5. Benchmarks
 
+**Key takeaways**
+
+- Standard depth keeps most of the meaning. Retention is 0.37 at skim, 0.89 at standard, 0.99 at deep.
+- Shorter is not better. Compression correlates negatively with usefulness (r = -0.75), so it is reported as a cost.
+- Losses come from omission and dropped relations. In round 1, no judged fact was ever reworded into a wrong meaning.
+- On 42 external cases (QMSum, Qasper, HotpotQA), relations are lost more often than facts.
+
 Representative measurements from the skill's version history, one metric per column so values in the same column can be compared across versions. Most versions only exercise one metric, so most cells are blank by design (`—`); a filled cell means that version measured that metric. See the [full benchmark ledger](skills/structured-gist/tests/benchmark.md) for methodology and complete history.
 
 | Version | Word count | Outline-quality composite | Rules gated | Tests passing | Weighted retention (skim → standard → deep) | Notes |

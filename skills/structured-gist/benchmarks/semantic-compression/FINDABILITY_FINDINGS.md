@@ -1,5 +1,13 @@
 # Findability (Evidence Access Cost): findings (measurement only)
 
+**Key takeaways**
+
+- Question: does outline order make kept facts faster to find? On average, no.
+- The comparison holds content constant; only the order differs.
+- One real gain: single-relation "why" questions (access cost -0.0354, n = 36; lower is better).
+- Skim is the worst level. Deep is the least bad, not a win.
+- Status: experimental metric (class B), not a regression gate.
+
 `scoring/findability.py` tests structured-gist's practical thesis, which is
 **not** "fewer words"; it is **"hierarchical structure makes the important
 information easier to locate."** This is Eval B of a two-eval
