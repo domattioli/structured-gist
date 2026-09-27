@@ -264,8 +264,10 @@ accepted - launch decision is mine.
     - b. compares outline quality to source text
     - c. never formalized into a repeatable benchmark
   - B. JSONL claim-list target
-    - a. tested against the tree format, rejected
-    - b. recall dropped below the acceptance threshold
+    - a. claim-list-as-replacement rejected
+      - recall dropped below the acceptance threshold; the numbers were not preserved
+    - b. derived-view renderer shipped v0.4.10
+      - `render/claim_list.py`, checked for schema validity only, not recall
   - C. no SKILL.md change
     - neither direction changed the shipped spec
   - D. KG mode (experimental, opt-in)
