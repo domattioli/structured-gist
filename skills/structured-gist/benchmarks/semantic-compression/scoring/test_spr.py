@@ -240,16 +240,22 @@ def test_spearman_rho_undefined_below_two_points():
     assert spearman_rho([1], [1]) is None
 
 
-def test_deterministic_regeneration_of_real_corpus():
+def test_deterministic_regeneration_of_real_corpus(tmp_path):
     """Re-running spr.py's main() against the committed judged/gold/blind_weights
     files must reproduce results/spr.json byte-for-byte -- no model call, no
-    randomness, pure arithmetic over already-committed inputs."""
+    randomness, pure arithmetic over already-committed inputs. Writes to a temp
+    directory and never modifies tracked files."""
     import json
     import subprocess
 
     here = Path(__file__).parent
     root = here.parent
     before = (root / "results" / "spr.json").read_text(encoding="utf-8")
-    subprocess.run([sys.executable, str(here / "spr.py")], cwd=str(root), check=True, capture_output=True)
-    after = (root / "results" / "spr.json").read_text(encoding="utf-8")
+    subprocess.run(
+        [sys.executable, str(here / "spr.py"), "--out-dir", str(tmp_path)],
+        cwd=str(root),
+        check=True,
+        capture_output=True
+    )
+    after = (tmp_path / "spr.json").read_text(encoding="utf-8")
     assert json.loads(before) == json.loads(after)

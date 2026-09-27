@@ -230,7 +230,8 @@ def score_spr(gold: dict, verdict: dict, blind: dict) -> dict:
     }
 
 
-def main():
+def main(out_dir=None):
+    out_dir = Path(out_dir) if out_dir else RESULTS
     combined_path = RESULTS / "combined.json"
     if not combined_path.exists():
         raise SystemExit(
@@ -289,20 +290,21 @@ def main():
                         "conformance_violation_count": old.get("conformance_violation_count"),
                     }
 
-    RESULTS.mkdir(exist_ok=True)
-    (RESULTS / "spr.json").write_text(
+    out_dir.mkdir(exist_ok=True)
+    (out_dir / "spr.json").write_text(
         json.dumps(spr_results, indent=2, sort_keys=True), encoding="utf-8"
     )
-    print(f"Wrote {RESULTS / 'spr.json'}")
-    (RESULTS / "weight_comparison.json").write_text(
+    print(f"Wrote {out_dir / 'spr.json'}")
+    (out_dir / "weight_comparison.json").write_text(
         json.dumps(weight_comparison, indent=2, sort_keys=True), encoding="utf-8"
     )
-    print(f"Wrote {RESULTS / 'weight_comparison.json'}")
+    print(f"Wrote {out_dir / 'weight_comparison.json'}")
 
-    write_spr_table(spr_results, weight_comparison)
+    write_spr_table(spr_results, weight_comparison, out_dir)
 
 
-def write_spr_table(spr_results: dict, weight_comparison: dict):
+def write_spr_table(spr_results: dict, weight_comparison: dict, out_dir=None):
+    out_dir = Path(out_dir) if out_dir else RESULTS
     lines = []
     lines.append("# Semantic Preservation Recall (SPR): experimental results (generated, do not hand-edit)\n")
     lines.append(
@@ -352,10 +354,14 @@ def write_spr_table(spr_results: dict, weight_comparison: dict):
                 )
     lines.append("")
 
-    out = RESULTS / "SPR_SCORES.md"
+    out = out_dir / "SPR_SCORES.md"
     out.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote {out}")
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description="Semantic Preservation Recall (SPR) scoring")
+    parser.add_argument("--out-dir", default=None, help="Output directory for results (default: results/)")
+    args = parser.parse_args()
+    main(args.out_dir)
