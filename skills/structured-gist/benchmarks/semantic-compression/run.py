@@ -21,7 +21,6 @@ import argparse
 import hashlib
 import json
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 # Import the deterministic scoring module
@@ -236,7 +235,6 @@ def update_provenance(lane: str) -> None:
 
     # Update with current run info
     prov["suite_sha256"] = compute_suite_sha256()
-    prov["timestamp"] = datetime.now(timezone.utc).isoformat()
 
     if lane == "deterministic":
         prov["model_id"] = "none (deterministic lane)"

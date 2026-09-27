@@ -596,7 +596,8 @@ def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
             # Violation: mixed families among non-arrow siblings
             for lineno, _family, _text, is_arrow in siblings:
                 if not is_arrow:
-                    violations.append((lineno, 'R6', f"mixed sibling families: {non_arrow_families}"))
+                    families_str = "{" + ", ".join(repr(f) for f in sorted(non_arrow_families)) + "}"
+                    violations.append((lineno, 'R6', f"mixed sibling families: {families_str}"))
 
     # R7: word caps (REVISED: add attr cap ≤4 words; cap all depth>=2 enumerators)
     for lineno, depth, family, text, _line in parsed:
