@@ -1,0 +1,11 @@
+structured-gist
+Copyright 2026 Dominik Mattioli and structured-gist contributors
+
+This product is licensed under the Apache License, Version 2.0
+(see LICENSE). Redistributions of this work, or of derivative works,
+must retain this NOTICE file.
+
+Please cite this work when you use it:
+  Mattioli, D. structured-gist. Zenodo. https://doi.org/10.5281/zenodo.22670068
+Source: https://github.com/domattioli/structured-gist
+Machine-readable citation: CITATION.cff
