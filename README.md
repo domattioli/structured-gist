@@ -12,9 +12,9 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 ## Contents
 
-1. [Installation](#1-installation)
-2. [Usage](#2-usage)
-3. [Motivation](#3-motivation)
+1. [Motivation](#1-motivation)
+2. [Installation](#2-installation)
+3. [Usage](#3-usage)
 4. [Method](#4-method)
 5. [Benchmarks](#5-benchmarks)
 6. [Limitations](#6-limitations)
@@ -26,18 +26,26 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 1. Installation
+## 1. Motivation
+
+Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganize it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
+
+What's missing is structure: concept, sub-concept, and the relationship between them. This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
+ 
+`structured-gist` renders that decomposition as an explicit tree instead of a paragraph the reader has to parse for it. We can't get rid of the AI slop, but we can push it to the peripheries and help you get to the gist faster.
+
+<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
+
+## 2. Installation
 
 ```bash
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
 ```
 
-The skill ships one optional statusline hook (`skills/structured-gist/hooks/structured-gist-statusline.sh`, prints the installed version); it is not wired by default.
-
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 2. Usage
+## 3. Usage
 
 ```bash
 /structured-gist [block [width N|auto]|responsive]
@@ -48,16 +56,6 @@ Output uses one granularity level, `standard`. The `skim` and `deep` levels are 
 Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
 
 Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
-
-<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
-
-## 3. Motivation
-
-Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganize it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
-
-What's missing is structure: concept, sub-concept, and the relationship between them. This is also how a well-built lecture teaches a complex subject, and how a good slide deck gets built: one concept per slide, minimal words, relationships carried by layout instead of prose.
- 
-`structured-gist` renders that decomposition as an explicit tree instead of a paragraph the reader has to parse for it. We can't get rid of the AI slop, but we can push it to the peripheries and help you get to the gist faster.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
