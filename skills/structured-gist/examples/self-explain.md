@@ -1,17 +1,8 @@
 # structured-gist — self-explain example
 
-Before (paragraph, 69 words): structured-gist replaces a paragraph with a depth-coded outline — a concept, its attributes (properties of the concept, marked `▸`), then ordered or grouped enumerators, then a hook-arrow leaf carrying the one long sentence. A marker never nests under the same marker; to go deeper a hook interposes. Terse at every rung, four spaces each. Its own properties — marker ladder, length gradient, spacing — are attributes of structured-gist, unfolded at skim, standard, deep below.
+Before (paragraph, 70 words): structured-gist replaces a paragraph with a depth-coded outline — a concept, its attributes (properties of the concept, marked `▸`), then ordered or grouped enumerators, then a hook-arrow leaf carrying the one long sentence. A marker never nests under the same marker; to go deeper a hook interposes. Terse at every rung, four spaces each. Its own properties — marker ladder, length gradient, spacing — are attributes of structured-gist, unfolded below.
 
-skim (concept + its attributes):
-
-```text
-- structured-gist
-    ▸ Marker ladder
-    ▸ Length gradient
-    ▸ Spacing
-```
-
-standard (attributes carry their enumerated content):
+Outline (standard granularity; attributes carry their enumerated content):
 
 ```text
 - structured-gist
@@ -28,39 +19,19 @@ standard (attributes carry their enumerated content):
         b. blank line between siblings
 ```
 
-deep (a non-leaf `↪` previews a branch; the hook interposes so detail nests without ▸ under ▸):
+Here `Marker ladder`, `Length gradient`, `Spacing` are attributes *of* structured-gist (`▸`), not peer concepts — the fix.
 
-```text
-- structured-gist
-    ▸ Marker ladder
-        ↪ marker family by depth carries the meaning
-            a. roman: order matters
-            b. letter: grouped peers
-    ▸ Length gradient
-        a. enumerator stays terse
-        b. connective clause moves to a leaf
-            ↪ "because," "since," "so that" inside a node means
-            split it
-    ▸ Spacing
-        a. four spaces per rung
-        b. blank line between siblings
-            ↪ inline only; literal markers aren't real GFM list
-            items
-```
-
-Here `Marker ladder`, `Length gradient`, `Spacing` are attributes *of* structured-gist (`▸`), not peer concepts — the fix. In deep, `▸ Marker ladder`'s first child is a non-leaf `↪` summarizing the branch before its `a.`/`b.` detail, and that hook is also what lets the detail nest without a `▸` directly under a `▸`.
-
-Before → after (framing paragraph vs. skim block's spine, arrows excluded), measured not asserted:
+Before → after (framing paragraph vs. the standard block, arrows and list markers excluded), measured not asserted:
 
 ```text
 $ wc -w <<< "$before"
-69
+70
 $ wc -w <<< "$after"
-6
+28
 ```
 
--91%: naming the concept's attributes replaces the paragraph's connective prose.
+-60%: naming the concept's attributes replaces the paragraph's connective prose.
 
 Rule index for properties not self-demonstrated above, and the
-consolidation call vs. `skim.md`/`standard.md`/`deep.md`/`caveman-combo.md`:
+consolidation call vs. `standard.md`/`caveman-combo.md`:
 `reference/self-explain-notes.md`.

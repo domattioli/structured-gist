@@ -1,4 +1,4 @@
-# Example — `caveman ultra` + `/structured-gist standard`
+# Example — `caveman ultra` + `/structured-gist`
 
 Orthogonal compose: same ladder structure, ultra-terse wording (caveman's doing, not structured-gist'), markers stay Latin.
 

@@ -1,4 +1,4 @@
-# Example — `structured-gist standard` (default)
+# Example — `structured-gist` (standard granularity, the only level)
 
 Source: "Explain why a web app added a request cache." Full ladder, soft cap 4, arrows carry the long clauses.
 
