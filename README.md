@@ -6,8 +6,6 @@
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 [![Tests](https://github.com/domattioli/structured-gist/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/domattioli/structured-gist/actions/workflows/tests.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
-![Claude Code Plugin](https://img.shields.io/badge/claude%20code-plugin-blueviolet)
-![Dependencies](https://img.shields.io/badge/linter-stdlib--only-informational)
 [![Mentioned in Awesome Claude Skills](https://awesome.re/mentioned-badge.svg)](https://github.com/karanb192/awesome-claude-skills)
 
 A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure and via node depth; prose stays confined to explanation nodes. 
