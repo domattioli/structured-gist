@@ -1,6 +1,6 @@
 ---
 name: structured-gist
-version: "0.5.0b2"
+version: "0.5.0"
 benchmark: word_count_reduction_pct
 description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — fixed role ladder concept (-) → attribute (▸, a named property) → enumerator (I./A./i./a.) → explanation (↪, one prose sentence, usually a leaf). No plain bullets. Render modes — block (fenced, literal glyphs; default on every surface) and responsive (opt-in real GFM nested list for GitHub bodies and chat replies; glyph-free, role carried by typography). Granularity skim (default) / standard / deep. Independent of caveman (structure vs wording). Opt-in report preset (`/structured-gist report`, alias `findings`). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist this", "outline this", "bullet this", "notes mode", "break this down", "give me the gist", "make this skimmable", "condense this", "sg report".
 ---

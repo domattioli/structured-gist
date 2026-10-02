@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/assets/hero.svg" alt="structured-gist: Input, agentic-AI word vomit; Output, a skimmable outline" width="100%"></p>
 
-![Status](https://img.shields.io/badge/status-beta-yellow)
+[![Release](https://img.shields.io/github/v/release/domattioli/structured-gist)](https://github.com/domattioli/structured-gist/releases)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 [![Tests](https://github.com/domattioli/structured-gist/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/domattioli/structured-gist/actions/workflows/tests.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
