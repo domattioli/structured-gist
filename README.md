@@ -43,8 +43,6 @@ What's missing is structure: concept, sub-concept, and the relationship between 
 /plugin install structured-gist
 ```
 
-The skill ships one optional statusline hook (`skills/structured-gist/hooks/structured-gist-statusline.sh`, prints the installed version); it is not wired by default.
-
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 3. Usage
