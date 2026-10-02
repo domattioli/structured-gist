@@ -64,7 +64,7 @@ fi
 # ---------------------------------------------------------------------------
 # 4. SKILL.md contains all required section headings
 # ---------------------------------------------------------------------------
-sections=("## Activation" "## Granularity levels" "## Marker taxonomy" "## Length gradient" "## Emphasis taxonomy" "## Leaf preservation" "## Carve-outs")
+sections=("## Activation" "## Granularity" "## Marker taxonomy" "## Length gradient" "## Emphasis taxonomy" "## Leaf preservation" "## Carve-outs")
 for section in "${sections[@]}"; do
   if grep -q "^${section}$" "$FMatter"; then
     assert "section present: $section" 0
@@ -104,55 +104,29 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-# 7. Example files exist: skim.md, standard.md, deep.md
+# 7. Example file exists: standard.md (archived files in docs/archive/granularity/)
 # ---------------------------------------------------------------------------
-for example in "skim" "standard" "deep"; do
-  if [ -f "$SKILL_DIR/examples/${example}.md" ]; then
-    assert "examples/${example}.md exists" 0
-  else
-    assert "examples/${example}.md exists" 1
-  fi
-done
-
-# ---------------------------------------------------------------------------
-# 8. Granularity distinctness: skim < standard <= deep (line counts)
-# ---------------------------------------------------------------------------
-extract_code_lines() {
-  local file="$1"
-  # Extract lines between the first and last triple backtick (fenced code block)
-  awk '/^```$/{if(++c==1) {start=1; next} else {exit}} start && NF {print}' "$file" | wc -l
-}
-
-skim_lines=$(extract_code_lines "$SKILL_DIR/examples/skim.md")
-std_lines=$(extract_code_lines "$SKILL_DIR/examples/standard.md")
-deep_lines=$(extract_code_lines "$SKILL_DIR/examples/deep.md")
-
-if [ "$skim_lines" -lt "$std_lines" ]; then
-  assert "skim lines ($skim_lines) < standard lines ($std_lines)" 0
+if [ -f "$SKILL_DIR/examples/standard.md" ]; then
+  assert "examples/standard.md exists" 0
 else
-  assert "skim lines ($skim_lines) < standard lines ($std_lines)" 1
+  assert "examples/standard.md exists" 1
 fi
 
-if [ "$std_lines" -le "$deep_lines" ]; then
-  assert "standard lines ($std_lines) <= deep lines ($deep_lines)" 0
+# Check that archived granularity examples exist
+if [ -f "docs/archive/granularity/skim.md" ]; then
+  assert "docs/archive/granularity/skim.md exists" 0
 else
-  assert "standard lines ($std_lines) <= deep lines ($deep_lines)" 1
+  assert "docs/archive/granularity/skim.md exists" 1
+fi
+
+if [ -f "docs/archive/granularity/deep.md" ]; then
+  assert "docs/archive/granularity/deep.md exists" 0
+else
+  assert "docs/archive/granularity/deep.md exists" 1
 fi
 
 # ---------------------------------------------------------------------------
-# 9. Deep example uses literal ordinal glyphs: I. and a. and ↪
-# ---------------------------------------------------------------------------
-deep_file="$SKILL_DIR/examples/deep.md"
-has_deep_roman=$(grep -q "I\." "$deep_file" && echo 1 || echo 0)
-has_deep_lower=$(grep -q "a\." "$deep_file" && echo 1 || echo 0)
-has_deep_arrow=$(grep -q "↪" "$deep_file" && echo 1 || echo 0)
-
-[ "$has_deep_roman" -eq 1 ] && assert "deep.md contains I." 0 || assert "deep.md contains I." 1
-[ "$has_deep_lower" -eq 1 ] && assert "deep.md contains a." 0 || assert "deep.md contains a." 1
-[ "$has_deep_arrow" -eq 1 ] && assert "deep.md contains ↪" 0 || assert "deep.md contains ↪" 1
-
-# ---------------------------------------------------------------------------
-# 10. MANIFEST.md references structured-gist (DomI-only check; conditional —
+# 8. MANIFEST.md references structured-gist (DomI-only check; conditional —
 # public repo carries no MANIFEST.md, skip there)
 # ---------------------------------------------------------------------------
 if [ -f "MANIFEST.md" ]; then

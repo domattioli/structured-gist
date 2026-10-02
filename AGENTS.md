@@ -19,10 +19,11 @@ explanations and process recaps as nested outlines. The source of truth is
 ```text
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
-/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]
+/structured-gist [block [width N|auto]|responsive]
 ```
 
-No arguments select `skim` and `block`. `responsive` is always an explicit
+Output uses one granularity level, `standard`; `skim` and `deep` are
+archived in `docs/archive/granularity/`. No arguments select `block`. `responsive` is always an explicit
 choice. The `summary` preset produces a session recap. The `report` preset,
 also named `findings`, produces a finding-first outline. Preset branches are
 optional and must be omitted when the source does not support them.

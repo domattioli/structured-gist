@@ -42,26 +42,12 @@ class TestRealExamples:
         """Get the examples directory."""
         return Path(__file__).parent.parent / 'examples'
 
-    def test_skim_example_passes(self, examples_dir):
-        """Test that skim.md lints cleanly."""
-        skim_file = examples_dir / 'skim.md'
-        assert skim_file.exists(), f"skim.md not found at {skim_file}"
-        violations = lint_file(str(skim_file))
-        assert not violations, f"skim.md has violations: {violations}"
-
     def test_standard_example_passes(self, examples_dir):
         """Test that standard.md lints cleanly."""
         standard_file = examples_dir / 'standard.md'
         assert standard_file.exists(), f"standard.md not found at {standard_file}"
         violations = lint_file(str(standard_file))
         assert not violations, f"standard.md has violations: {violations}"
-
-    def test_deep_example_passes(self, examples_dir):
-        """Test that deep.md lints cleanly."""
-        deep_file = examples_dir / 'deep.md'
-        assert deep_file.exists(), f"deep.md not found at {deep_file}"
-        violations = lint_file(str(deep_file))
-        assert not violations, f"deep.md has violations: {violations}"
 
     def test_caveman_combo_example_passes(self, examples_dir):
         """Test that caveman-combo.md lints cleanly."""

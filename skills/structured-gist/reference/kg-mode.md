@@ -77,7 +77,7 @@ input.
 - Same graph in → byte-identical outline out, at every granularity level.
 - Every rendered outline passes `tests/lint_outline.py` with zero violations
   (the renderer self-lints and refuses to emit otherwise).
-- `skim` ⊆ `standard` ⊆ `deep` — prunes of one graph, word-count monotone.
+- `skim` ⊆ `standard` ⊆ `deep` — prunes of one graph, word-count monotone. The KG renderer keeps all three prunes as experimental; the skill itself ships `standard` only (v0.6.0).
   A pruned node's entire subtree goes with it; nothing is reparented.
 - Block mode only in v0.4.0 (fenced ` ```text `). The glyph-free responsive
   presentation cannot be deterministically linted, so a responsive flag is

@@ -1,8 +1,8 @@
 ---
 name: structured-gist
-version: "0.5.0"
+version: "0.6.0"
 benchmark: word_count_reduction_pct
-description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — fixed role ladder concept (-) → attribute (▸, a named property) → enumerator (I./A./i./a.) → explanation (↪, one prose sentence, usually a leaf). No plain bullets. Render modes — block (fenced, literal glyphs; default on every surface) and responsive (opt-in real GFM nested list for GitHub bodies and chat replies; glyph-free, role carried by typography). Granularity skim (default) / standard / deep. Independent of caveman (structure vs wording). Opt-in report preset (`/structured-gist report`, alias `findings`). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist this", "outline this", "bullet this", "notes mode", "break this down", "give me the gist", "make this skimmable", "condense this", "sg report".
+description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — fixed role ladder concept (-) → attribute (▸, a named property) → enumerator (I./A./i./a.) → explanation (↪, one prose sentence, usually a leaf). No plain bullets. Render modes — block (fenced, literal glyphs; default on every surface) and responsive (opt-in real GFM nested list for GitHub bodies and chat replies; glyph-free, role carried by typography). One granularity level (standard); skim and deep are archived. Independent of caveman (structure vs wording). Opt-in report preset (`/structured-gist report`, alias `findings`). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist this", "outline this", "bullet this", "notes mode", "break this down", "give me the gist", "make this skimmable", "condense this", "sg report".
 ---
 
 # structured-gist — hierarchical lecture-note output
@@ -13,9 +13,9 @@ Full detail beyond this file lives in `reference/` — this file is the ~2-minut
 
 ## Activation
 
-On-demand: `/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]`. No level → `skim` (default). No mode → `block` (default, all surfaces) — override explicitly with `responsive` when a GitHub issue/PR/comment body or chat-app reply needs a real GFM nested list instead of a fenced block. `width` sets the block-mode R11 line budget; omitted → 64, or the width the operator's AGENTS.md names for that surface. See `## Render modes`.
-Lexicon triggers: "structured-gist", "sg", "in structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this" (+ optional level/mode word).
-Elevatable: repo repository instructions may mandate as session default (+ default level + default mode), like caveman.
+On-demand: `/structured-gist [block [width N|auto]|responsive]`. One granularity level, `standard` (see `## Granularity`). No mode → `block` (default, all surfaces) — override explicitly with `responsive` when a GitHub issue/PR/comment body or chat-app reply needs a real GFM nested list instead of a fenced block. `width` sets the block-mode R11 line budget; omitted → 64, or the width the operator's AGENTS.md names for that surface. See `## Render modes`.
+Lexicon triggers: "structured-gist", "sg", "in structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this" (+ optional mode word).
+Elevatable: repo repository instructions may mandate as session default (+ default mode), like caveman.
 Off: "stop structured-gist" / explicit prose request.
 
 **Session-summary preset (v0.3): `/structured-gist summary` (alias `session-summary`).** A standalone invocation that emits a session-summary / handoff-shaped outline in one call, without the caller specifying structure — a quick end-of-session recap. It is self-contained (does NOT call the `handoff` skill; `handoff` is the fuller session-end retro, this is the terse inline outline). Canonical shape — the handoff sections are `-` concepts, their contents are `▸` attributes / enumerators / `↪` leaves:
@@ -51,7 +51,7 @@ Off: "stop structured-gist" / explicit prose request.
         ↪ <follow-up action>
 ```
 
-**Activation is verify-don't-assume (same bar as caveman).** Attempt the real Skill call (`/structured-gist deep`, or the level/mode in effect) — do not assume it loaded. On success, state so. On `Unknown skill` (skill not loaded at container start), emit exactly one line — `structured-gist NOT loaded → emulating from SKILL.md` — then apply the outline rules manually from this file. NEVER claim "structured-gist active" without a successful Skill call; a false claim of this exact form shipped in a session recap on 2026-06-27. The missing skill never blocks the turn — emulate and continue.
+**Activation is verify-don't-assume (same bar as caveman).** Attempt the real Skill call (`/structured-gist`, or the mode in effect) — do not assume it loaded. On success, state so. On `Unknown skill` (skill not loaded at container start), emit exactly one line — `structured-gist NOT loaded → emulating from SKILL.md` — then apply the outline rules manually from this file. NEVER claim "structured-gist active" without a successful Skill call; a false claim of this exact form shipped in a session recap on 2026-06-27. The missing skill never blocks the turn — emulate and continue.
 
 **Recommended: pair with a Stop-hook activation nudge, not a blocking gate.** A model can simply forget to invoke structured-gist on a long recap/explanation — there is no in-session signal forcing the check. The fix is advisory, not blocking: a Stop hook that reads the session transcript, and if the final assistant turn is long (word-count heuristic) AND no `Launching skill: structured-gist` backed call appears anywhere in the transcript, emits one stderr nudge line. It never blocks the turn — same fail-open contract as every other advisory hook (judgement-class checks are Stop advisories, not CI-hard gates). A consumer repo wiring this hook should model it on `stop_structured_gist_activation_guard.sh` alongside a claim-vs-call guard (audits false activation *claims*) and a rule-compliance guard (audits outlines already emitted) — three independent Stop-hook checks, not overlapping: claim-vs-call, output-quality, and activation-was-skipped. Cron-silent (`CLAUDE_INTERACTIVE=1` gate) and fail-open on missing jq/python3/transcript is the recommended contract. A hook cannot itself invoke the `Skill` tool (hooks are shell, not model turns) — it can only nudge the next turn's model into doing so; a blocking variant (exit nonzero to force another turn) was considered and rejected as unnecessarily coercive for a judgement-class check. This skill ships one optional hook itself — a statusline script (`hooks/structured-gist-statusline.sh`) that prints the installed version, not wired by default. The activation-nudge guidance above is for a consumer repo's own `.claude/hooks`.
 
@@ -128,15 +128,13 @@ Word budget — terse by default at EVERY level (recursive):
 
 **Observed-versus-inferred (advisory).** When the source distinguishes observation from inference, preserve that distinction. Use separate branches only when grouping would blur status; otherwise keep the attribution explicit inside the `↪`. Never infer evidential status from wording alone, and never manufacture missing evidence.
 
-## Granularity levels
+## Granularity
 
-- `skim` (**default**) → L1 concepts + one enumerated tier (L2). Concept spine only; low-priority detail collapsed.
-- `standard` → through L3 as the content needs.
-- `deep` → exhaustive. Every `↪` elaboration surfaced, nothing collapsed. **No depth cap.** Study / handoff.
+One level: `standard`. Surface the tree through L3 as the content needs. Keep the concept spine and its enumerated parts. Surface a `↪` where it carries a cause, a qualifier, or a hedge.
 
-Distinctness: same content → `skim` shallower than `standard` shallower-or-equal `deep`.
+`skim` and `deep` are archived (v0.6.0). The controlled benchmark scores `standard` only, so the other two have no current evidence behind them. Archived specs and examples: `docs/archive/granularity/` at the repository root. If a caller asks for `skim` or `deep`, render at `standard` and say the level is archived.
 
-**Two independent axes, not one naming scheme.** Granularity (`skim`/`standard`/`deep`, here) controls how much of the tree is surfaced — content depth. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container the same tree is wrapped in. Neither axis changes the marker ladder or which linter rule fires: the same 15 rules gate every granularity/render-mode combination. Pick a granularity for the audience, a render mode for the surface; the two choices don't interact.
+**Granularity and render mode are independent.** Granularity controls how much of the tree is surfaced. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container. Neither changes the marker ladder or which linter rule fires: the same 15 rules gate every render mode.
 
 ## Spacing
 
@@ -174,7 +172,7 @@ Note: *which* GitHub surfaces should render as `responsive` outlines, and which 
 
 ## Render modes
 
-Same outline, two active containers, **scoped by surface**. The structure (ladder / nesting / `↪`) is identical; only the wrapper differs. Render mode is a presentation choice, independent of granularity (`## Granularity levels` above) and of the linter's structural rules — see the independence note there.
+Same outline, two active containers, **scoped by surface**. The structure (ladder / nesting / `↪`) is identical; only the wrapper differs. Render mode is a presentation choice, independent of granularity (`## Granularity` above) and of the linter's structural rules — see the independence note there.
 
 | surface | mode |
 |---|---|
@@ -228,7 +226,7 @@ Same "Agentic harness" tree, two ways — pick the one matching your surface's d
 
 **Do not mix them.** Never carry `block`'s literal `▸`/`↪` glyphs or its 4-space rungs into a `responsive` reply — the glyph doubles up with the renderer's own bullet (`• ▸`) and the 4-space rungs render as GFM code blocks past depth 1. Negative example + full detail: `reference/render-modes.md` `## Responsive mode`.
 
-In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness, not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). More examples: `examples/{skim,standard,deep,attribute,report}.md`.
+In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness, not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). More examples: `examples/{standard,attribute,report}.md`.
 
 ## Caveman coexistence
 
