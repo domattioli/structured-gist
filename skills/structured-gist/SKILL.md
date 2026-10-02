@@ -136,7 +136,7 @@ Word budget — terse by default at EVERY level (recursive):
 
 Distinctness: same content → `skim` shallower than `standard` shallower-or-equal `deep`.
 
-**Two independent axes, not one naming scheme.** Granularity (`skim`/`standard`/`deep`, here) controls how much of the tree is surfaced — content depth. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container the same tree is wrapped in. Neither axis changes the marker ladder or which linter rule fires: the same 17 rules gate every granularity/render-mode combination. Pick a granularity for the audience, a render mode for the surface; the two choices don't interact.
+**Two independent axes, not one naming scheme.** Granularity (`skim`/`standard`/`deep`, here) controls how much of the tree is surfaced — content depth. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container the same tree is wrapped in. Neither axis changes the marker ladder or which linter rule fires: the same 15 rules gate every granularity/render-mode combination. Pick a granularity for the audience, a render mode for the surface; the two choices don't interact.
 
 ## Spacing
 
