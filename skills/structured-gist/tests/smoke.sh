@@ -718,6 +718,29 @@ else
 fi
 
 # ---------------------------------------------------------------------------
+# 46. Report-only: lint all semantic-compression renderings/*.md files.
+# Never fails the script; informational count only (part 1 of #22's fix).
+# ---------------------------------------------------------------------------
+renderings_dir="$SKILL_DIR/benchmarks/semantic-compression"
+if [ -d "$renderings_dir" ]; then
+  rl_total=0
+  rl_violating=0
+  rl_violations=0
+  while IFS= read -r rl_file; do
+    rl_total=$((rl_total + 1))
+    rl_output=$(python3 "$SKILL_DIR/tests/lint_outline.py" "$rl_file" 2>&1)
+    rl_count=$(printf '%s\n' "$rl_output" | grep -c '\[R[0-9]*\]')
+    if [ "$rl_count" -gt 0 ]; then
+      rl_violating=$((rl_violating + 1))
+      rl_violations=$((rl_violations + rl_count))
+    fi
+  done < <(find "$renderings_dir" -type d -name renderings -exec find {} -type f -name "*.md" \;)
+  echo "smoke(info): renderings lint — $rl_total files, $rl_violating with violations, $rl_violations total violations"
+else
+  echo "smoke(info): renderings lint — 0 files, 0 with violations, 0 total violations (no semantic-compression dir)"
+fi
+
+# ---------------------------------------------------------------------------
 # Summary
 # ---------------------------------------------------------------------------
 echo

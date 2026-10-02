@@ -8,15 +8,16 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
 ![Claude Code Plugin](https://img.shields.io/badge/claude%20code-plugin-blueviolet)
 ![Dependencies](https://img.shields.io/badge/linter-stdlib--only-informational)
+[![Mentioned in Awesome Claude Skills](https://awesome.re/mentioned-badge.svg)](https://github.com/karanb192/awesome-claude-skills)
 
 A skill turning agentic-AI word vomit into a skimmable gist. Information is encoded intuitively within a nested bulleted structure and via node depth; prose stays confined to explanation nodes. 
 
 ## Contents
 
-1. [Motivation](#1-motivation)
-2. [Method](#2-method)
-3. [Installation](#3-installation)
-4. [Usage](#4-usage)
+1. [Installation](#1-installation)
+2. [Usage](#2-usage)
+3. [Motivation](#3-motivation)
+4. [Method](#4-method)
 5. [Benchmarks](#5-benchmarks)
 6. [Limitations](#6-limitations)
 7. [Future work](#7-future-work)
@@ -27,7 +28,32 @@ A skill turning agentic-AI word vomit into a skimmable gist. Information is enco
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 1. Motivation
+## 1. Installation
+
+```bash
+/plugin marketplace add domattioli/structured-gist
+/plugin install structured-gist
+```
+
+The skill ships one optional statusline hook (`skills/structured-gist/hooks/structured-gist-statusline.sh`, prints the installed version); it is not wired by default.
+
+<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
+
+## 2. Usage
+
+```bash
+/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]
+```
+
+No level given defaults to `skim`. No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface.
+
+Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
+
+Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
+
+<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
+
+## 3. Motivation
 
 Claude's explanatory prose is increasingly a dense, rambling, incomprehensible mess with unexplained jargon and padded with filler. Word-count compression does not fix this. For instance, [caveman](https://github.com/JuliusBrussee/caveman), can shorten Claudish prose but does not reorganize it. Other mechanisms like [claudish-to-english](https://github.com/gvzdv/claudish-to-english) still rely on unstructured prose. Both are useful, but neither deterministically cuts through the noise.
 
@@ -37,7 +63,7 @@ What's missing is structure: concept, sub-concept, and the relationship between 
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
-## 2. Method
+## 4. Method
 
 The example below compares Claude Opus's unadulterated description of how this skill works vs. the dogfood-ed skill output. It covers the marker taxonomy and overall gist of how `structured-gist` works.
 
@@ -45,16 +71,16 @@ As a paragraph, it reads:
 
 > structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments: anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
-Rendered as an outline in `skim` granularity and `block` mode (the default modal combination), the same content drops down 64% from 191 to 68 words. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify this.
+Rendered as an outline in `skim` granularity and `block` mode (the default modal combination), the same content drops down 64% from 191 to 68 words, because skim granularity omits detail and keeps only the top-level structure, not because the sentences were reworded. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify this.
 
 ```text
 - structured-gist
     ▸ Purpose
         ↪ replaces verbose prose summaries with compact
-          outlines a reader takes in at a glance
+        outlines a reader takes in at a glance
     ▸ Mechanism
         ↪ role hierarchy, not sentence grammar, carries
-          relationships: node position encodes meaning
+        relationships: node position encodes meaning
     ▸ Role ladder
         i. concept
         ii. attribute
@@ -70,37 +96,12 @@ Rendered as an outline in `skim` granularity and `block` mode (the default modal
         a. lint_outline.py
         b. stdlib-only
 - Fit
-    a. session recaps
-    b. cause-chain explanations
-    c. GitHub issue + PR comments
+    A. session recaps
+    B. cause-chain explanations
+    C. GitHub issue + PR comments
 ```
 
 `block` is one of three render modes and is the default on all surfaces; `responsive` (opt-in for GitHub issue/PR/comment bodies and chat-app replies) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
-
-<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
-
-## 3. Installation
-
-```bash
-/plugin marketplace add domattioli/structured-gist
-/plugin install structured-gist
-```
-
-The skill ships one optional statusline hook (`skills/structured-gist/hooks/structured-gist-statusline.sh`, prints the installed version); it is not wired by default.
-
-<div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
-
-## 4. Usage
-
-```bash
-/structured-gist [skim|standard|deep] [block [width N|auto]|responsive]
-```
-
-No level given defaults to `skim`. No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface.
-
-Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
-
-Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -128,10 +129,13 @@ Word count, rule/test coverage, and semantic retention (`skills/structured-gist/
 
 Third-party dataset licenses and attribution: see [skills/structured-gist/benchmarks/semantic-compression/external-validation/THIRD_PARTY_NOTICES.md](skills/structured-gist/benchmarks/semantic-compression/external-validation/THIRD_PARTY_NOTICES.md).
 
-<!-- README-EXAMPLE:START -->
-## registrar-hedge (Before / After)
+<details>
+<summary>Worked example: registrar-hedge (before / after, recorded Opus rendering at standard granularity)</summary>
 
-### Before (source)
+<!-- README-EXAMPLE:START -->
+### registrar-hedge (Before / After)
+
+#### Before (source)
 
 ```
 Task: migrate the domain acme-studio.com from the old Squarespace site to an
@@ -178,63 +182,83 @@ accepted - launch decision is mine.
 
 ```
 
-### After (structured-gist rendering)
+#### After (structured-gist rendering)
 
 ```text
 - Domain migration
-    ▸ Scope
-        ↪ move acme-studio.com from Squarespace to
-          Cloudflare Pages; Squarespace stays as rollback
-          for ~2 weeks
-    ▸ Registrar for acme-studio.com
-        ↪ unconfirmed — likely Squarespace Domains,
-          possibly Google Domains legacy, or another
-          registrar
-        a. Squarespace Domains
-        b. Google Domains legacy
-        c. Another registrar
-    ▸ Step 1
-        ↪ identify which registrar + current DNS host,
-          snapshot all current DNS records before any changes
-    ▸ DNS hosting decision
-        I. if Squarespace hosts DNS: confirm it supports
-           CNAME flattening/ALIAS for apex
-        II. if not: move DNS to Cloudflare (free zone,
-            import records, switch nameservers)
-    ▸ Tradeoff
-        ↪ DNS move weakens instant-rollback property;
-          requires documented procedure instead
+    ▸ Goal
+        ↪ move acme-studio.com from the old Squarespace site
+        to an already-deployed Cloudflare Pages site
+    ▸ Mode
+        ↪ guide click-by-click; the user is logged into the
+        relevant dashboards and can screen-share tabs
+- New site
+    ▸ Project
+        a. Cloudflare Pages project "acme-studio"
+        b. live at https://acme-studio.pages.dev
+    ▸ Deploy method
+        ↪ direct wrangler uploads, not git-connected
+    ▸ Account
+        ↪ the Cloudflare account name is personal-account
+- Protected project
+    ▸ Severity
+        ↪ the user marks this one CRITICAL
+    ▸ Identity
+        a. project "personal-portfolio"
+        b. personal-portfolio.pages.dev
+    ▸ Rule
+        ↪ the same account hosts it, so do not touch that
+        project or its DNS
+- Old site
+    ▸ State
+        ↪ Squarespace, still live at acme-studio.com
+    ▸ Retention
+        ↪ it must remain intact as a rollback target for
+        about two weeks after cutover
     ▸ Preference
-        ↪ record-level cutover that reverts in minutes;
-          no destructive steps (keep Squarespace site + subscription intact,
-          do not transfer domain registration yet)
-    ▸ Steps
-        I. lower TTLs
-        II. add custom domains (apex + www) in Cloudflare
-            Pages UI
-        III. apply DNS changes it prescribes
-        IV. verify HTTPS, certs, canonicalization,
-            extensionless paths
-        V. save exact rollback procedure
-        VI. submit sitemap to Google Search Console
-    ▸ Open issue
-        ↪ contact form backend is broken (being fixed
-          separately) but user accepts the risk and will
-          proceed
+        ↪ prefer a DNS-record cutover revertible in minutes
+    ▸ Avoid
+        a. cancelling the Squarespace subscription
+        b. deleting the Squarespace site
+        c. transferring the registration right now
+- Registrar unconfirmed
+    ▸ Candidates
+        a. Squarespace Domains, likely
+        b. Google Domains legacy, possibly
+        c. another registrar
+    ▸ First step
+        ↪ identify it with the user, from whois and what
+        the Squarespace/Domains dashboard shows
+- Requested steps
+    I. identify registrar + current DNS host
+    II. decide the apex and www path
+    III. lower TTLs first
+    IV. add the custom domains in Pages
+    V. verify the new site end to end
+    VI. rollback note + sitemap reminder
+- Known open issue
+    ▸ Contact form
+        ↪ the site's contact form backend is not functional
+        yet and is being fixed separately
+    ▸ Accepted
+        ↪ completing DNS today is accepted; the launch
+        decision is the user's
 
 ```
 
 **Metrics:**
 - Source: 381 words
-- Rendering: 192 words
-- Compression: 49.6%
+- Rendering: 272 words
+- Compression: 28.6%
 
 **Key structure:**
-- The registrar hedge is encoded as an attribute node (`▸`) with the uncertainty hedge on the node itself
-- Three qualified candidates appear as enumerated children (a./b./c.) beneath the attribute
-- This structure preserves the epistemic qualifier and its alternatives without flattening them into prose
+- The registrar hedge is the concept node `Registrar unconfirmed`, so the uncertainty is stated on the node itself
+- Its `▸ Candidates` attribute lists three enumerated children (a./b./c.), each keeping its own qualifier: Squarespace Domains as likely, Google Domains legacy as possibly, and another registrar
+- The `▸ First step` explanation keeps how to identify the registrar: from whois and the Squarespace/Domains dashboard, with the user
 
 <!-- README-EXAMPLE:END -->
+
+</details>
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -264,8 +288,10 @@ accepted - launch decision is mine.
     - b. compares outline quality to source text
     - c. never formalized into a repeatable benchmark
   - B. JSONL claim-list target
-    - a. tested against the tree format, rejected
-    - b. recall dropped below the acceptance threshold
+    - a. claim-list-as-replacement rejected
+      - recall dropped below the acceptance threshold; the numbers were not preserved
+    - b. derived-view renderer shipped v0.4.10
+      - `render/claim_list.py`, checked for schema validity only, not recall
   - C. no SKILL.md change
     - neither direction changed the shipped spec
   - D. KG mode (experimental, opt-in)
@@ -278,13 +304,13 @@ accepted - launch decision is mine.
 
 ## 8. Documentation
 
-`skills/structured-gist/SKILL.md` is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. `skills/structured-gist/reference/` holds the extended reference documents it links out to, including `reference/kg-mode.md` (the experimental KG generation path, see [Future work](#7-future-work)).
+[skills/structured-gist/SKILL.md](skills/structured-gist/SKILL.md) is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. [skills/structured-gist/reference/](skills/structured-gist/reference/) holds the extended reference documents it links out to, including [reference/kg-mode.md](skills/structured-gist/reference/kg-mode.md) (the experimental KG generation path, see [Future work](#7-future-work)).
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 9. Contributing
 
-Open an issue first for anything that changes behavior. Small fixes (typos, broken links) can go straight to a pull request. Details: `CONTRIBUTING.md`.
+Open an issue first for anything that changes behavior. Small fixes (typos, broken links) can go straight to a pull request. Details: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
