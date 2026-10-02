@@ -4,7 +4,7 @@
 
 ![Status](https://img.shields.io/badge/status-beta-yellow)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Tests](https://img.shields.io/badge/tests-93%20passing-success)
+[![Tests](https://github.com/domattioli/structured-gist/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/domattioli/structured-gist/actions/workflows/tests.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22670068.svg)](https://doi.org/10.5281/zenodo.22670068)
 ![Claude Code Plugin](https://img.shields.io/badge/claude%20code-plugin-blueviolet)
 ![Dependencies](https://img.shields.io/badge/linter-stdlib--only-informational)
