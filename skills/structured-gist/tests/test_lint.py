@@ -725,7 +725,7 @@ def _extract_readme_section(readme_text: str, heading: str) -> str:
     how the Method section's broken outline shipped undetected).
     """
     pattern = re.compile(
-        r'^##\s+' + re.escape(heading) + r'\b.*$(.*?)(?=^##\s|\Z)',
+        r'^##\s+' + re.escape(heading) + r'\b[^\n]*$(.*?)(?=^##\s|\Z)',
         re.MULTILINE | re.DOTALL,
     )
     m = pattern.search(readme_text)
@@ -758,9 +758,13 @@ class TestReadmeOutlines:
         return readme_file.read_text(encoding='utf-8')
 
     def test_method_section_outline_clean(self, readme_text):
-        """README '## 2. Method' section's outline must lint clean — this
+        """README '## 4. Method' section's outline must lint clean — this
         is the section that regressed (bold-attr + plain-leaf responsive
-        forms the linter couldn't recognize before the v0.4.4 fix)."""
-        section = _extract_readme_section(readme_text, '2. Method')
-        violations = lint_text(section)
+        forms the linter couldn't recognize before the v0.4.4 fix). Lints
+        the section's first ```text fence WITH its fence lines, so block-mode
+        rules (R11 width and continuation indent) apply."""
+        section = _extract_readme_section(readme_text, '4. Method')
+        fence = re.search(r'^```text\n.*?^```', section, re.MULTILINE | re.DOTALL)
+        assert fence, "README Method section has no ```text outline block"
+        violations = lint_text(fence.group(0))
         assert not violations, f"README Method section has violations: {violations}"

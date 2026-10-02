@@ -1,6 +1,6 @@
-## registrar-hedge (Before / After)
+### registrar-hedge (Before / After)
 
-### Before (source)
+#### Before (source)
 
 ```
 Task: migrate the domain acme-studio.com from the old Squarespace site to an
@@ -47,58 +47,76 @@ accepted - launch decision is mine.
 
 ```
 
-### After (structured-gist rendering)
+#### After (structured-gist rendering)
 
 ```text
 - Domain migration
-    ▸ Scope
-        ↪ move acme-studio.com from Squarespace to
-          Cloudflare Pages; Squarespace stays as rollback
-          for ~2 weeks
-    ▸ Registrar for acme-studio.com
-        ↪ unconfirmed — likely Squarespace Domains,
-          possibly Google Domains legacy, or another
-          registrar
-        a. Squarespace Domains
-        b. Google Domains legacy
-        c. Another registrar
-    ▸ Step 1
-        ↪ identify which registrar + current DNS host,
-          snapshot all current DNS records before any changes
-    ▸ DNS hosting decision
-        I. if Squarespace hosts DNS: confirm it supports
-           CNAME flattening/ALIAS for apex
-        II. if not: move DNS to Cloudflare (free zone,
-            import records, switch nameservers)
-    ▸ Tradeoff
-        ↪ DNS move weakens instant-rollback property;
-          requires documented procedure instead
+    ▸ Goal
+        ↪ move acme-studio.com from the old Squarespace site
+        to an already-deployed Cloudflare Pages site
+    ▸ Mode
+        ↪ guide click-by-click; the user is logged into the
+        relevant dashboards and can screen-share tabs
+- New site
+    ▸ Project
+        a. Cloudflare Pages project "acme-studio"
+        b. live at https://acme-studio.pages.dev
+    ▸ Deploy method
+        ↪ direct wrangler uploads, not git-connected
+    ▸ Account
+        ↪ the Cloudflare account name is personal-account
+- Protected project
+    ▸ Severity
+        ↪ the user marks this one CRITICAL
+    ▸ Identity
+        a. project "personal-portfolio"
+        b. personal-portfolio.pages.dev
+    ▸ Rule
+        ↪ the same account hosts it, so do not touch that
+        project or its DNS
+- Old site
+    ▸ State
+        ↪ Squarespace, still live at acme-studio.com
+    ▸ Retention
+        ↪ it must remain intact as a rollback target for
+        about two weeks after cutover
     ▸ Preference
-        ↪ record-level cutover that reverts in minutes;
-          no destructive steps (keep Squarespace site + subscription intact,
-          do not transfer domain registration yet)
-    ▸ Steps
-        I. lower TTLs
-        II. add custom domains (apex + www) in Cloudflare
-            Pages UI
-        III. apply DNS changes it prescribes
-        IV. verify HTTPS, certs, canonicalization,
-            extensionless paths
-        V. save exact rollback procedure
-        VI. submit sitemap to Google Search Console
-    ▸ Open issue
-        ↪ contact form backend is broken (being fixed
-          separately) but user accepts the risk and will
-          proceed
+        ↪ prefer a DNS-record cutover revertible in minutes
+    ▸ Avoid
+        a. cancelling the Squarespace subscription
+        b. deleting the Squarespace site
+        c. transferring the registration right now
+- Registrar unconfirmed
+    ▸ Candidates
+        a. Squarespace Domains, likely
+        b. Google Domains legacy, possibly
+        c. another registrar
+    ▸ First step
+        ↪ identify it with the user, from whois and what
+        the Squarespace/Domains dashboard shows
+- Requested steps
+    I. identify registrar + current DNS host
+    II. decide the apex and www path
+    III. lower TTLs first
+    IV. add the custom domains in Pages
+    V. verify the new site end to end
+    VI. rollback note + sitemap reminder
+- Known open issue
+    ▸ Contact form
+        ↪ the site's contact form backend is not functional
+        yet and is being fixed separately
+    ▸ Accepted
+        ↪ completing DNS today is accepted; the launch
+        decision is the user's
 
 ```
 
 **Metrics:**
 - Source: 381 words
-- Rendering: 192 words
-- Compression: 49.6%
+- Rendering: 272 words
+- Compression: 28.6%
 
 **Key structure:**
-- The registrar hedge is encoded as an attribute node (`▸`) with the uncertainty hedge on the node itself
-- Three qualified candidates appear as enumerated children (a./b./c.) beneath the attribute
-- This structure preserves the epistemic qualifier and its alternatives without flattening them into prose
+- The registrar hedge is the concept node `Registrar unconfirmed`, so the uncertainty is stated on the node itself
+- Its `▸ Candidates` attribute lists three enumerated children (a./b./c.), each keeping its own qualifier: Squarespace Domains as likely, Google Domains legacy as possibly, and another registrar
+- The `▸ First step` explanation keeps how to identify the registrar: from whois and the Squarespace/Domains dashboard, with the user

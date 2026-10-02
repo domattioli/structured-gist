@@ -253,7 +253,7 @@ def update_provenance(lane: str) -> None:
 def emit_readme_example(case_id: str) -> None:
     """
     Emit a before/after example for README.md.
-    Reads source.md and haiku/standard rendering, writes to results/readme_example.md.
+    Reads source.md and opus-v0.5.0b1/standard rendering, writes to results/readme_example.md.
     """
     # Find the case in regression or pressure-tests
     case_dir = None
@@ -268,29 +268,29 @@ def emit_readme_example(case_id: str) -> None:
         sys.exit(1)
 
     source_path = case_dir / "source.md"
-    rendering_path = case_dir / "renderings" / "haiku" / "standard.md"
+    rendering_path = case_dir / "renderings" / "opus-v0.5.0b1" / "standard.md"
 
     if not source_path.exists():
         print(f"ERROR: {case_id} missing source.md", file=sys.stderr)
         sys.exit(1)
 
     if not rendering_path.exists():
-        print(f"ERROR: {case_id} missing renderings/haiku/standard.md", file=sys.stderr)
+        print(f"ERROR: {case_id} missing renderings/opus-v0.5.0b1/standard.md", file=sys.stderr)
         sys.exit(1)
 
     source_text = read(source_path)
     rendering_text = read(rendering_path)
 
     # Generate markdown block
-    markdown = f"""## {case_id} (Before / After)
+    markdown = f"""### {case_id} (Before / After)
 
-### Before (source)
+#### Before (source)
 
 ```
 {source_text}
 ```
 
-### After (structured-gist rendering)
+#### After (structured-gist rendering)
 
 ```text
 {rendering_text}
@@ -302,9 +302,9 @@ def emit_readme_example(case_id: str) -> None:
 - Compression: {100 * (1 - len(rendering_text.split()) / len(source_text.split())):.1f}%
 
 **Key structure:**
-- The registrar hedge is encoded as an attribute node (`▸`) with the uncertainty hedge on the node itself
-- Three qualified candidates appear as enumerated children (a./b./c.) beneath the attribute
-- This structure preserves the epistemic qualifier and its alternatives without flattening them into prose
+- The registrar hedge is the concept node `Registrar unconfirmed`, so the uncertainty is stated on the node itself
+- Its `▸ Candidates` attribute lists three enumerated children (a./b./c.), each keeping its own qualifier: Squarespace Domains as likely, Google Domains legacy as possibly, and another registrar
+- The `▸ First step` explanation keeps how to identify the registrar: from whois and the Squarespace/Domains dashboard, with the user
 """
 
     # Write to results/readme_example.md
