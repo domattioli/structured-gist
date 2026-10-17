@@ -1,0 +1,16 @@
+# Usage text of gask.sh, read from the script source (header comment lines),
+# NOT from executing it: the wrapper has no --help flag and would send
+# any unknown argument to the provider as a prompt.
+# Source: agents-inc release 291b6170.../skills/codex-bridge/scripts/gask.sh
+# Source sha256: 213f7c477ba330330ec1306e2fc93454f23b45b2f3d02da2fe8f291cf6e1d222
+# Captured: 2026-09-27
+
+# codex-bridge gask: Send a prompt to Gemini API
+# Usage: gask.sh [--tier digest|cheap|deep] [--file PATH]... [--glob PATTERN] [--raw] [--plain] ["prompt"]
+
+# Option cases in the argument parser:
+#   --tier)
+#   --file)
+#   --glob)
+#   --raw)
+#   --plain)

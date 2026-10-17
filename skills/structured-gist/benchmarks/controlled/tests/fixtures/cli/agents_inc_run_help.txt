@@ -1,0 +1,7 @@
+usage: agents-inc run [-h] --model MODEL [--effort EFFORT] --cwd CWD
+
+options:
+  -h, --help       show this help message and exit
+  --model MODEL
+  --effort EFFORT
+  --cwd CWD

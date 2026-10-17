@@ -1,0 +1,399 @@
+{
+  "agreement": {
+    "alpha": "krippendorff_ordinal",
+    "kappa": "quadratic_weighted_pairwise",
+    "raw_percent": true,
+    "scale": [
+      "lost",
+      "partial",
+      "retained"
+    ],
+    "threshold": null
+  },
+  "bootstrap": {
+    "level": 0.95,
+    "resamples": 10000,
+    "seed_diff": "master_seed:dataset:control",
+    "seed_function": "int(sha256(seed_string).hexdigest()[:16], 16)",
+    "seed_mean": "master_seed:dataset:method",
+    "seed_permutation": "master_seed:perm:dataset:control:score",
+    "type": "paired_percentile"
+  },
+  "corpus": {
+    "corpus_manifest_sha256": "d00987546e01da532b22de016dd2d8ade8132e095df3fea32ff0e791741691b7",
+    "datasets": {
+      "hotpotqa": 8,
+      "qasper": 10,
+      "qmsum": 24
+    },
+    "derived_manifest_sha256": "38460499d582012a8d7f5c15a19fee695057e703d55cd630ad94f0ec27e9c7b2",
+    "gold_relation_counts": {
+      "hotpotqa": 7,
+      "qasper": 5,
+      "qmsum": 50
+    },
+    "relation_check_threshold": 20,
+    "zero_relation_cases": {
+      "hotpotqa": 1,
+      "qasper": 6,
+      "qmsum": 3
+    }
+  },
+  "cost": {
+    "canary_calls_exempt_from_confirm": true,
+    "ceiling_counts_reasoning": true,
+    "ceiling_paid_tokens": 5000000,
+    "confirmed_by_operator": "2026-09-27",
+    "estimate_inputs": "pinned and frozen: projected N per case = word count of the prior standard outline EV/evaluation/<ds>/renderings/<case>/standard.md; output tokens = 1.33 x N; input tokens = characters / 4 of the prompt template plus the frozen source or gold; fixed per-call overhead. No generated sample enters the estimate, so estimate_sha is stable across stages and resumes.",
+    "estimate_paid_tokens": 3050000,
+    "estimate_paid_tokens_status": "superseded by run.py estimate (operator decision 2026-10-16); the 2026-09-27 value above counted a third paid vendor that was removed and no longer applies",
+    "paid_vendors": [
+      "anthropic",
+      "openai"
+    ]
+  },
+  "dry_run": {
+    "case_rule": "first case_id per dataset in ascending order",
+    "cases": {
+      "hotpotqa": "hotpotqa-01",
+      "qasper": "qasper-01",
+      "qmsum": "qmsum-01"
+    },
+    "may_change": [
+      "adapters",
+      "parsing",
+      "retries",
+      "timeouts"
+    ],
+    "may_not_change": [
+      "methods",
+      "prompts",
+      "metrics",
+      "tests",
+      "thresholds",
+      "case_set",
+      "judge_ids"
+    ],
+    "reads": [
+      "exit_codes",
+      "record_validity",
+      "cost"
+    ],
+    "reported": false,
+    "reused": false,
+    "run_id": "dryrun-{prereg_sha256[:12]}",
+    "scores_inspected": false
+  },
+  "generator": {
+    "backend": "claude-isolated-config",
+    "check_resolved_model": true,
+    "effort": "medium",
+    "failure_retries": 2,
+    "max_regenerations": 2,
+    "model": "claude-opus-5-5",
+    "prompt_sha256": {
+      "bullets_instruction": "c40dfc89790f97b481ae0f7c0192716213ae28140b6d3ddf1771183e57bc73f4",
+      "plain_system": "f7b93e52a08bc1fefa3dc5524cc4989c1c7626eeea54ae13d29484c34dad8c08",
+      "prose_instruction": "15c8dcd497846635e45265be194653b7abf17c21902e4614f9d7b7b2b75e90e5",
+      "shared_user": "c7b3cfe2594ac14f4479ab87d1cf443385e6ef93f9119eacde316a206fca23f2",
+      "skill_instruction": "eeb45fcce3887b16ae22dd844a31c840da92b225d31ed9fef3515147b0e439f4"
+    },
+    "render_modes_md_sha256": "5c43291bd42a45dd56c250e028945b0d6b044858ab787e12d8bf22dfe4c73d31",
+    "skill_invocation": "block",
+    "skill_md_sha256": "ce2833d35e6b22ba0fdfabe53f9a97c08badfc012f81e1553157494a63829eac",
+    "skill_version": "0.7.0"
+  },
+  "judges": {
+    "call_order_seed": "master_seed:order:judge_id",
+    "call_timeout_seconds": 600,
+    "free_judge_id_change": "stop_judge_keep_scores",
+    "judge_prompt_sha256": "24d9cb0db8e99a4e698ab8d21a2316f66c14d82556ba0ebe0700159a6d6be956",
+    "main": {
+      "check_resolved_model": true,
+      "effort": "medium",
+      "id": "sol",
+      "max_attempts": 3,
+      "model": "gpt-5.6-sol"
+    },
+    "notice_sha256": "463711420fb2e97f84b8ffc5ddde82ba5f116e65e8ec69e07621252fa48d6c82",
+    "opaque_sample_id": "sha256(master_seed + ':' + sample_id)[:12]",
+    "panel": [
+      {
+        "coverage": "all_best_effort",
+        "daily_cap": 200,
+        "id": "gemini_flash",
+        "model": "gemini-3.8-flash"
+      },
+      {
+        "coverage": "all_best_effort",
+        "daily_cap": 50,
+        "fallback": {
+          "after_hours_without_success": 24,
+          "id": "qwen_fallback",
+          "model": "qwen/qwen3.8-27b:free",
+          "never_judges": [
+            "wildchat"
+          ]
+        },
+        "id": "nemotron_ultra",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
+      }
+    ],
+    "retry_queue": {
+      "attempt_limit": 8,
+      "base_minutes": 15,
+      "cap_hours": 24,
+      "creates_entries": false,
+      "jitter": 0.1,
+      "paid_ceiling_check": true,
+      "retries_paid_judges": true,
+      "tick_seconds": 1800
+    },
+    "subset_rule": {
+      "first_priority_for": [
+        "gemini_flash",
+        "nemotron_ultra"
+      ],
+      "order": "sha256(master_seed + ':subset:' + case_id) ascending",
+      "per_dataset": {
+        "hotpotqa": 2,
+        "qasper": 2,
+        "qmsum": 5
+      }
+    }
+  },
+  "length": {
+    "band": "[ceil(0.9 * N), floor(1.1 * N)]",
+    "failed_generation": "scored as zero retention and counted separately",
+    "flags": [
+      "source_shorter_than_band",
+      "length_violation"
+    ],
+    "n_fallback": {
+      "applies_when": "skill generation empty or refused after failure_retries retries",
+      "marker": "n_source: fallback_median_ratio",
+      "rule": "round(source_words * median(N / source_words)) over the dataset's successful skill samples"
+    },
+    "over_band": "trim at the last whole word at or below floor(1.1 * N); trim recorded",
+    "strip_html_comments": true,
+    "strip_list_labels": true,
+    "tolerance": 0.1,
+    "under_band": "plain arms: up to max_regenerations fresh regenerations with the identical prompt; first in-band attempt used; else last attempt with length_violation",
+    "word_counter": "alnum-token-v2"
+  },
+  "master_seed": "c7d2b98d6ebbaa4cd9e1b95481fcb6c9",
+  "methods": [
+    "skill",
+    "plain_prose",
+    "plain_bullets",
+    "lead_n",
+    "textrank"
+  ],
+  "question": "Does a structured-gist outline keep more of a source's facts and relations than other short versions of the same length?",
+  "report": {
+    "early_signal": [
+      "qasper",
+      "hotpotqa"
+    ],
+    "first_row_control": "plain_bullets",
+    "fr022_sentence": "Plain bullets were not significantly worse than the skill on this dataset, so any gain here may come from list format alone and not from the skill's rules.",
+    "freeze_days_after_main_run": 7,
+    "pooled": false
+  },
+  "scores": {
+    "combine_py_sha256": "e3e7cea9b98b89ada16923848b97165ae4d19ed0510a2bcaeb6a101878ff67df",
+    "fact_weighting": "weighted",
+    "main": [
+      "fact_retention",
+      "relation_retention"
+    ],
+    "relation_weighting": "unweighted"
+  },
+  "secondary": {
+    "hotpotqa": "answer_containment",
+    "normalization": "squad_v1",
+    "qasper": "answer_token_recall",
+    "qmsum": "rouge_l_recall"
+  },
+  "slop": {
+    "addendum_path": "slop/PREREGISTRATION.md",
+    "annotator": {
+      "fallback": "dots-studio/dots-3-note-preview:free",
+      "model": "qwen/qwen3.8-27b:free",
+      "queue": "retry_queue",
+      "via": "oask.sh"
+    },
+    "run_id_from": "addendum_v1_sha256",
+    "secondary_scores": "n/a"
+  },
+  "testing_criteria": [
+    {
+      "judge": "sol",
+      "labels": [
+        "retained",
+        "partial",
+        "lost"
+      ],
+      "name": "judge_labels.sol",
+      "pass_threshold": null,
+      "type": "label_model"
+    },
+    {
+      "judge": "sol",
+      "name": "fact_retention.sol",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, fact retention (weighted)",
+      "type": "python"
+    },
+    {
+      "judge": "sol",
+      "name": "relation_retention.sol",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, relation retention (unweighted)",
+      "type": "python"
+    },
+    {
+      "judge": "gemini_flash",
+      "labels": [
+        "retained",
+        "partial",
+        "lost"
+      ],
+      "name": "judge_labels.gemini_flash",
+      "pass_threshold": null,
+      "type": "label_model"
+    },
+    {
+      "judge": "gemini_flash",
+      "name": "fact_retention.gemini_flash",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, fact retention (weighted)",
+      "type": "python"
+    },
+    {
+      "judge": "gemini_flash",
+      "name": "relation_retention.gemini_flash",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, relation retention (unweighted)",
+      "type": "python"
+    },
+    {
+      "judge": "nemotron_ultra",
+      "labels": [
+        "retained",
+        "partial",
+        "lost"
+      ],
+      "name": "judge_labels.nemotron_ultra",
+      "pass_threshold": null,
+      "type": "label_model"
+    },
+    {
+      "judge": "nemotron_ultra",
+      "name": "fact_retention.nemotron_ultra",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, fact retention (weighted)",
+      "type": "python"
+    },
+    {
+      "judge": "nemotron_ultra",
+      "name": "relation_retention.nemotron_ultra",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, relation retention (unweighted)",
+      "type": "python"
+    },
+    {
+      "judge": "qwen_fallback",
+      "labels": [
+        "retained",
+        "partial",
+        "lost"
+      ],
+      "name": "judge_labels.qwen_fallback",
+      "pass_threshold": null,
+      "type": "label_model"
+    },
+    {
+      "judge": "qwen_fallback",
+      "name": "fact_retention.qwen_fallback",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, fact retention (weighted)",
+      "type": "python"
+    },
+    {
+      "judge": "qwen_fallback",
+      "name": "relation_retention.qwen_fallback",
+      "pass_threshold": null,
+      "source": "scoring/combine.py score_semantic, relation retention (unweighted)",
+      "type": "python"
+    },
+    {
+      "dataset": "qmsum",
+      "evaluation_metric": "rouge_l",
+      "name": "rouge_l_recall",
+      "pass_threshold": null,
+      "reported": "recall",
+      "type": "text_similarity"
+    },
+    {
+      "dataset": "qasper",
+      "name": "answer_token_recall",
+      "pass_threshold": null,
+      "type": "python"
+    },
+    {
+      "dataset": "hotpotqa",
+      "name": "answer_containment",
+      "pass_threshold": null,
+      "type": "python"
+    },
+    {
+      "diagnostic": true,
+      "name": "words",
+      "pass_threshold": null,
+      "type": "python",
+      "word_counter": "alnum-token-v2"
+    },
+    {
+      "diagnostic": true,
+      "name": "lint",
+      "pass_threshold": null,
+      "source": "skills/structured-gist/tests/lint_outline.py",
+      "type": "python"
+    }
+  ],
+  "textrank": {
+    "damping": 0.85,
+    "max_iter": 200,
+    "stopwords_sha256": "074d55c8652048903cc5d48bb7d932259d5a4ce49e613e48fb075da73473a280",
+    "tol": 1e-06
+  },
+  "version": 1,
+  "win_rule": {
+    "alpha": 0.05,
+    "controls": [
+      "plain_bullets",
+      "plain_prose",
+      "lead_n",
+      "textrank"
+    ],
+    "exact_max_n": 20,
+    "holm_families": [
+      "fact_greater",
+      "fact_less"
+    ],
+    "monte_carlo_draws": 100000,
+    "relation_guard_holm": false,
+    "test": "sign_flip_permutation_one_sided",
+    "tie_tolerance": 1e-12,
+    "unadjusted": [
+      "relation_less"
+    ],
+    "verdict_labels": [
+      "skill ahead",
+      "mixed: facts ahead, relations behind",
+      "no difference shown",
+      "skill behind"
+    ]
+  }
+}

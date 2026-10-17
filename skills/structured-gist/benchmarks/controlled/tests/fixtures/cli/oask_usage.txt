@@ -1,0 +1,15 @@
+# Usage text of oask.sh, read from the script source (header comment lines),
+# NOT from executing it: the wrapper has no --help flag and would send
+# any unknown argument to the provider as a prompt.
+# Source: agents-inc release 291b6170.../skills/codex-bridge/scripts/oask.sh
+# Source sha256: a2bfc3b4af1f5e22b2dc51a451c0a980682a73e01b37c1d5fd736faf50c915c4
+# Captured: 2026-09-27
+
+# codex-bridge oask: Send a prompt to OpenRouter API (free tier only)
+# Usage: oask.sh [--file PATH]... [--glob PATTERN] [--raw] ["prompt"]
+
+# Option cases in the argument parser:
+#   --file)
+#   --glob)
+#   --list)
+#   --raw)

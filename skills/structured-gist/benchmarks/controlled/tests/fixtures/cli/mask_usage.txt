@@ -1,0 +1,17 @@
+# Usage text of mask.sh, read from the script source (header comment lines),
+# NOT from executing it: the wrapper has no --help flag and would send
+# any unknown argument to the provider as a prompt.
+# Source: agents_Inc skills/codex-bridge/scripts/mask.sh (working copy at HEAD ba82a09)
+# Source sha256: 0562d72580869d32a4e911cf7cf4825631ba20d53eabc0ae50bcde7fb3d47ed9
+# Captured: 2026-10-16
+
+# codex-bridge mask: Send a prompt to a provider API (vendor name omitted; no
+# controlled-benchmark path calls this wrapper)
+# Usage: mask.sh [--tier cheap|code|deep] [--agent] [--reset] [--file PATH]... [--raw] ["prompt"]
+
+# Option cases in the argument parser:
+#   --tier)
+#   --file)
+#   --agent)
+#   --reset)
+#   --raw)

@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "controlled-benchmark/records.schema.json",
+  "title": "Controlled benchmark local records (OpenAI-Evals-shaped, FR-016)",
+  "description": "One $defs entry per record type. items.jsonl lines are {\"item\": Item}; samples.jsonl lines are Sample; graders/<name>.jsonl lines are GraderResult; calls/**.json are CallRecord; queue/<judge>/<sample_id>.json and queue/<annotator>/<case_id>.json are QueueEntry. Nothing is uploaded anywhere.",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "dataset": {"enum": ["qmsum", "qasper", "hotpotqa", "wildchat"]},
+    "method": {"enum": ["skill", "plain_prose", "plain_bullets", "lead_n", "textrank"]},
+    "judge_id": {"enum": ["sol", "gemini_flash", "nemotron_ultra", "qwen_fallback"]},
+    "annotator_id": {"enum": ["qwen_annotator", "dots_annotator"]},
+
+    "ItemLine": {
+      "type": "object", "additionalProperties": false, "required": ["item"],
+      "properties": {"item": {"$ref": "#/$defs/Item"}}
+    },
+    "Item": {
+      "type": "object", "additionalProperties": false,
+      "required": ["item_id", "dataset", "case_id", "source_sha256", "source_words", "facts", "relations", "reference_answer", "question_or_query"],
+      "properties": {
+        "item_id": {"type": "string", "description": "<dataset>/<case_id>"},
+        "dataset": {"$ref": "#/$defs/dataset"},
+        "case_id": {"type": "string"},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "source_words": {"type": "integer", "minimum": 1},
+        "facts": {"type": "array", "items": {"type": "object", "required": ["id", "text", "category", "weight"],
+          "properties": {"id": {"type": "string"}, "text": {"type": "string"}, "category": {"type": "string"}, "weight": {"type": "number", "minimum": 1, "maximum": 3}}}},
+        "relations": {"type": "array", "items": {"type": "object", "required": ["id", "text", "type", "fact_ids"],
+          "properties": {"id": {"type": "string"}, "text": {"type": "string"}, "type": {"type": "string"}, "fact_ids": {"type": "array", "items": {"type": "string"}}}}},
+        "reference_answer": {"type": ["string", "null"], "description": "Used only by secondary graders; never sent to a judge. null for wildchat, whose secondary scores are n/a (FR-014)."},
+        "question_or_query": {"type": ["string", "null"], "description": "Never sent to a generator or judge. null for wildchat items."}
+      }
+    },
+
+    "Sample": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sample_id", "item_id", "method", "status", "output_text", "words", "n_target", "band", "length_flags", "call_keys"],
+      "properties": {
+        "sample_id": {"type": "string", "description": "<dataset>/<case_id>/<method>"},
+        "item_id": {"type": "string"},
+        "method": {"$ref": "#/$defs/method"},
+        "status": {"enum": ["generated", "failed"]},
+        "output_text": {"type": "string"},
+        "output_sha256": {"$ref": "#/$defs/sha256"},
+        "words": {"type": "integer", "minimum": 0, "description": "Benchmark word counter (research R4)."},
+        "n_target": {"type": ["integer", "null"], "description": "N for the case; null on the skill sample itself."},
+        "n_source": {"enum": ["skill_sample", "fallback_median_ratio"]},
+        "band": {"type": ["array", "null"], "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+        "length_flags": {"type": "array", "items": {"enum": ["trimmed", "regenerated", "length_violation", "source_shorter_than_band"]}},
+        "trim": {"type": ["object", "null"], "properties": {"words_before": {"type": "integer"}, "words_after": {"type": "integer"}}},
+        "attempts": {"type": "integer", "minimum": 0},
+        "call_keys": {"type": "array", "items": {"$ref": "#/$defs/sha256"}, "description": "Empty for lead_n and textrank."}
+      }
+    },
+
+    "CallRecord": {
+      "type": "object", "additionalProperties": false,
+      "required": ["key", "backend", "model_requested", "model_resolved", "effort", "prompt_sha256", "system_prompt_sha256", "attempt", "started_at", "finished_at", "outcome", "tokens"],
+      "properties": {
+        "key": {"$ref": "#/$defs/sha256"},
+        "purpose": {"enum": ["generate", "judge", "annotate", "canary"]},
+        "sample_id": {"type": "string"},
+        "case_id": {"type": "string", "description": "annotate calls only."},
+        "backend": {"enum": ["claude-isolated-config", "claude-bare", "agents-inc-codex", "mask.sh", "gask.sh", "oask.sh"]},
+        "model_requested": {"type": "string"},
+        "model_resolved": {"type": ["string", "null"]},
+        "effort": {"type": ["string", "null"], "description": "null where the backend has no effort setting."},
+        "prompt_sha256": {"$ref": "#/$defs/sha256"},
+        "system_prompt_sha256": {"type": ["string", "null"]},
+        "notice_sha256": {"type": ["string", "null"], "description": "FR-025 block hash; required non-null for outside providers."},
+        "wrapper_modifies_prompt": {"type": "boolean"},
+        "attempt": {"type": "integer", "minimum": 1},
+        "started_at": {"type": "string", "format": "date-time"},
+        "finished_at": {"type": "string", "format": "date-time"},
+        "outcome": {"enum": ["ok", "transient_error", "timeout", "quota_exhausted", "malformed", "refusal", "model_policy_violation", "error"]},
+        "error_text": {"type": ["string", "null"], "maxLength": 600},
+        "stdout": {"type": "string", "description": "Raw response text (FR-021 provenance)."},
+        "tokens": {
+          "type": "object", "required": ["input", "output", "source"],
+          "properties": {
+            "input": {"type": "integer"}, "output": {"type": "integer"},
+            "reasoning": {"type": ["integer", "null"]}, "cached": {"type": ["integer", "null"]},
+            "source": {"enum": ["reported", "estimated"]}
+          }
+        },
+        "cost_usd_reported": {"type": ["number", "null"]}
+      }
+    },
+
+    "GraderResult": {
+      "type": "object", "additionalProperties": false,
+      "required": ["grader", "grader_type", "sample_id", "status"],
+      "properties": {
+        "grader": {"type": "string", "description": "e.g. judge_labels.sol, fact_retention.sol, relation_retention.sol, rouge_l_recall, answer_token_recall, answer_containment, words, lint"},
+        "grader_type": {"enum": ["label_model", "python", "text_similarity", "string_check"]},
+        "sample_id": {"type": "string"},
+        "status": {"enum": ["scored", "not_applicable", "incomplete", "failed_generation", "pending"]},
+        "score": {"type": ["number", "null"]},
+        "labels": {"type": ["object", "null"], "description": "label_model only: {unit_id: {status, evidence}} as returned by the judge."},
+        "detail": {"type": ["object", "null"], "description": "e.g. {precision, recall, f} for rouge_l_recall; {lint_violations: [...]}"},
+        "method_mention": {"type": ["boolean", "null"]},
+        "call_key": {"type": ["string", "null"]}
+      }
+    },
+
+    "DatasetResults": {
+      "type": "object",
+      "required": ["dataset", "result_counts", "per_testing_criteria_results", "per_model_usage", "verdicts"],
+      "properties": {
+        "dataset": {"$ref": "#/$defs/dataset"},
+        "early_signal": {"type": "boolean"},
+        "result_counts": {"type": "object", "required": ["total", "passed", "failed", "errored"],
+          "properties": {"total": {"type": "integer"}, "passed": {"type": "integer"}, "failed": {"type": "integer"}, "errored": {"type": "integer"}}},
+        "per_testing_criteria_results": {"type": "array", "items": {"type": "object", "required": ["testing_criteria", "passed", "failed"],
+          "properties": {"testing_criteria": {"type": "string"}, "passed": {"type": "integer"}, "failed": {"type": "integer"}, "errored": {"type": "integer"}, "mean": {"type": ["number", "null"]}}}},
+        "per_model_usage": {"type": "array", "items": {"type": "object", "required": ["model_name", "invocation_count", "prompt_tokens", "completion_tokens", "total_tokens"],
+          "properties": {"model_name": {"type": "string"}, "invocation_count": {"type": "integer"}, "prompt_tokens": {"type": "integer"}, "completion_tokens": {"type": "integer"}, "cached_tokens": {"type": "integer"}, "total_tokens": {"type": "integer"}}}},
+        "verdicts": {"type": "array", "items": {"$ref": "#/$defs/Verdict"}},
+        "agreement": {"type": "object"},
+        "free_judge_coverage": {"type": "object"}
+      }
+    },
+    "Verdict": {
+      "type": "object",
+      "required": ["control", "fact", "relation_check_applied", "verdict"],
+      "properties": {
+        "control": {"enum": ["plain_bullets", "plain_prose", "lead_n", "textrank"]},
+        "fact": {"$ref": "#/$defs/Comparison"},
+        "verdict": {"enum": ["skill ahead", "mixed: facts ahead, relations behind", "no difference shown", "skill behind"]},
+        "relation": {"oneOf": [{"$ref": "#/$defs/Comparison"}, {"type": "null"}]},
+        "relation_check_applied": {"type": "boolean"},
+        "relation_check_reason": {"type": "string"},
+        "fr022_sentence": {"type": "boolean", "description": "plain_bullets only: true when the FR-022 fixed sentence is printed."}
+      }
+    },
+    "Comparison": {
+      "type": "object",
+      "required": ["n_pairs", "mean_diff", "ci95", "p_greater", "p_less", "p_greater_holm", "p_less_holm", "test"],
+      "description": "For the relation comparison, p_less_holm equals p_less: the relation guard is not Holm-corrected (FR-010).",
+      "properties": {
+        "n_pairs": {"type": "integer"}, "excluded_ids": {"type": "array", "items": {"type": "string"}},
+        "mean_skill": {"type": "number"}, "mean_control": {"type": "number"}, "mean_diff": {"type": "number"},
+        "ci95": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "p_greater": {"type": "number"}, "p_less": {"type": "number"},
+        "p_greater_holm": {"type": ["number", "null"], "description": "null for the relation comparison (only R- is tested)."}, "p_less_holm": {"type": "number"},
+        "test": {"enum": ["exact", "monte_carlo"]}, "seed": {"type": "integer"}
+      }
+    },
+
+    "RunManifest": {
+      "type": "object",
+      "required": ["run_id", "prereg_sha256", "prereg_commit", "created_at", "state", "models", "seeds", "cost", "isolation", "counts"],
+      "properties": {
+        "run_id": {"type": "string"},
+        "prereg_sha256": {"$ref": "#/$defs/sha256"},
+        "prereg_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "state": {"enum": ["created", "generating", "judging", "grading", "reported"]},
+        "models": {"type": "object", "description": "Per role: requested, resolved set, effort, backend, backend version."},
+        "seeds": {"type": "object"},
+        "cost": {"type": "object", "properties": {
+          "estimate_sha": {"type": "string"}, "estimate_tokens": {"type": "object"}, "confirmed_at": {"type": "string"},
+          "actual_tokens": {"type": "object"}, "overrun": {"type": ["object", "null"]}}},
+        "isolation": {"type": "object", "properties": {
+          "generator_backend": {"enum": ["claude-isolated-config", "claude-bare"]},
+          "canary_passed": {"type": "boolean"},
+          "judge_cwd_outside_git": {"type": "boolean"},
+          "codex_global_agents_md_sha256": {"type": ["string", "null"]}}},
+        "judge_switches": {"type": "array"},
+        "deviations": {"type": "array", "items": {"type": "object", "required": ["date", "change", "reason"]}},
+        "slop_addendum_sha256": {"type": ["string", "null"], "description": "Latest committed version (v2 after T097)."},
+        "slop_addendum_v1_sha256": {"type": ["string", "null"], "description": "Version 1; its first 12 hex characters form the slop run id."},
+        "counts": {"type": "object", "description": "samples, failed generations, trims, length violations, incomplete per judge."}
+      }
+    },
+
+    "QueueEntry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["model", "state", "attempts", "next_attempt_at", "first_attempt_at"],
+      "oneOf": [
+        {"required": ["judge", "sample_id"], "not": {"anyOf": [{"required": ["annotator"]}, {"required": ["case_id"]}]}},
+        {"required": ["annotator", "case_id"], "not": {"anyOf": [{"required": ["judge"]}, {"required": ["sample_id"]}]}}
+      ],
+      "properties": {
+        "judge": {"$ref": "#/$defs/judge_id"},
+        "annotator": {"$ref": "#/$defs/annotator_id"},
+        "model": {"type": "string"},
+        "sample_id": {"type": "string"},
+        "case_id": {"type": "string"},
+        "paid": {"type": "boolean", "description": "true for sol entries; tick checks the paid ceiling first."},
+        "state": {"enum": ["pending", "done", "gave_up"]},
+        "attempts": {"type": "integer", "minimum": 0},
+        "first_attempt_at": {"type": ["string", "null"]},
+        "next_attempt_at": {"type": "string"},
+        "last_error_class": {"enum": ["transient", "timeout", "malformed", "quota", "ceiling_hold", "other", null]},
+        "last_call_key": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
