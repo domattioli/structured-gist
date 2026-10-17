@@ -134,7 +134,7 @@ def make_prereg(root: Path) -> dict:
             "seed_permutation": "master_seed:perm:dataset:control:score",
         },
         "judges": {
-            "main": {"id": "sol", "model": "gpt-5.6-sol", "effort": "medium", "max_attempts": 3, "check_resolved_model": True},
+            "main": {"id": "sol", "model": "gpt-6.1-sol", "effort": "medium", "max_attempts": 3, "check_resolved_model": True},
             "panel": [
                 {"id": "gemini_flash", "model": "gemini-3.8-flash", "coverage": "all_best_effort", "daily_cap": 200},
                 {"id": "nemotron_ultra", "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "coverage": "all_best_effort", "daily_cap": 50,
@@ -150,16 +150,22 @@ def make_prereg(root: Path) -> dict:
         },
         "agreement": {"scale": ["lost", "partial", "retained"], "kappa": "quadratic_weighted_pairwise", "alpha": "krippendorff_ordinal", "raw_percent": True, "threshold": None},
         "secondary": {"qmsum": "rouge_l_recall", "qasper": "answer_token_recall", "hotpotqa": "answer_containment", "normalization": "squad_v1"},
-        "report": {"pooled": False, "early_signal": ["qasper", "hotpotqa"], "first_row_control": "plain_bullets", "freeze_days_after_main_run": 7},
+        "report": {"pooled": False, "early_signal": ["qasper", "hotpotqa"], "first_row_control": "plain_bullets",
+                   "fr022_sentence": "Plain bullets were not significantly worse than the skill on this dataset, so any gain here may come from list format alone and not from the skill's rules.", "freeze_days_after_main_run": 7},
         "testing_criteria": testing_criteria(),
-        "dry_run": {"cases": "first_case_id_per_dataset_ascending", "run_id": "dryrun-{prereg_sha256[:12]}",
+        "dry_run": {"cases": {"qmsum": "qmsum-01", "qasper": "qasper-01", "hotpotqa": "hotpotqa-01"}, "run_id": "dryrun-{prereg_sha256[:12]}",
                     "reported": False, "scores_inspected": False, "reads": ["exit_codes", "record_validity", "cost"],
-                    "may_change": ["adapters", "parsing", "retries", "timeouts"]},
+                    "may_change": ["adapters", "parsing", "retries", "timeouts", "cost_calibration"]},
         "slop": {"addendum_path": "slop/PREREGISTRATION.md", "secondary_scores": "n/a", "run_id_from": "addendum_v1_sha256",
                  "annotator": {"model": "qwen/qwen3.8-27b:free", "fallback": "dots-studio/dots-3-note-preview:free", "via": "oask.sh", "queue": "retry_queue"}},
         "cost": {"estimate_paid_tokens": 3050000, "paid_vendors": ["anthropic", "openai"], "ceiling_paid_tokens": 5000000,
                  "ceiling_counts_reasoning": True, "canary_calls_exempt_from_confirm": True, "confirmed_by_operator": "2026-09-27",
-                 "estimate_inputs": "pinned and frozen inputs only"},
+                 "estimate_inputs": "pinned and frozen inputs only",
+                 "estimate_params": {"chars_per_token": 4, "output_tokens_per_word": 1.33, "thinking_ratio": 1.0,
+                                     "safety_margin": 0,
+                                     "per_call_overhead_tokens": {"anthropic": 1000, "openai": 2000},
+                                     "overhead_measured": {"date": "2026-10-17", "method": "canary"}},
+                 "window_budget": {"tokens_per_backend": 1000000, "window_hours": 5, "applies_to": "full_run_only"}},
     }
 
 

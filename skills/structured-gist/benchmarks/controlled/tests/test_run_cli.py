@@ -123,16 +123,46 @@ def test_model_calling_with_unmatched_confirm_exits_4(root, argv):
     assert run.main([*argv, "--confirm", "0" * 64]) == 4
 
 
-@pytest.mark.parametrize("flag", ["--canary", "--judge-canary"])
-def test_canary_is_exempt_from_confirm(root, flag):
-    # Exempt from --confirm (pre-registered); not implemented until its story.
-    assert run.main(["preflight", flag]) == 2
+@pytest.fixture
+def fakes(monkeypatch, tmp_path):
+    from bench import generate as g, judge as j
+    from tests.fakes import FakeAgentsInc, FakeClaude
+    c, a = FakeClaude(), FakeAgentsInc()
+    monkeypatch.setattr(g, "RUNNER", c)
+    monkeypatch.setattr(j, "RUNNER", a)
+    monkeypatch.setenv("SG_BENCH_CLAUDE_BIN", "/fake/claude")
+    monkeypatch.setenv("SG_BENCH_AGENTS_INC", "/fake/agents-inc")
+    monkeypatch.setenv("SG_BENCH_AGENTS_INC_PYTHON", "/fake/python3.14")
+    monkeypatch.setenv("SG_BENCH_CLAUDE_CONFIG_DIR", str(tmp_path / "cfg"))
+    return c, a
 
 
-@pytest.mark.parametrize("argv", [["estimate"], ["preflight"], ["grade"], ["report"]])
-def test_unimplemented_subcommands_exit_2_after_gate(root, argv, capsys):
-    assert run.main(argv) == 2
+@pytest.mark.parametrize("argv,key", [(["preflight", "--canary"], "reported_input_tokens"),
+                                      (["generate", "--canary"], "reported_input_tokens"),
+                                      (["preflight", "--judge-canary"], "reported_total_tokens"),
+                                      (["judge", "--judge-canary"], "reported_total_tokens")])
+def test_canary_is_exempt_from_confirm(root, fakes, argv, key, capsys):
+    assert run.main(argv) == 0
+    assert key in json.loads(capsys.readouterr().out)
+    assert not list((root / "runs").glob("*/calls"))
+
+
+@pytest.mark.parametrize("argv", [["estimate"], ["generate", "--canary"]])
+def test_gated_commands_still_reach_gate(root, argv):
+    _dirty(root)
+    assert run.main(argv) == 3
+
+
+def test_preflight_plain_is_not_implemented(root, capsys):
+    assert run.main(["preflight"]) == 2
     assert "not implemented" in capsys.readouterr().err
+
+
+@pytest.mark.parametrize("argv", [["grade"], ["report"]])
+def test_grade_report_need_prior_stages(root, argv, capsys):
+    assert run.main(argv) == 2
+    err = capsys.readouterr().err
+    assert "needs" in err or "run grade first" in err
 
 
 def test_verify_prereg_ok(root):
