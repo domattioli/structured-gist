@@ -12,6 +12,11 @@ SKILL_DIR="skills/structured-gist"
 PASS=0
 FAIL=0
 
+# Scratch space for checks that must not write tracked files or use process substitution.
+smoke_tmp="$(mktemp -d "${TMPDIR:-/tmp}/smoke.XXXXXX")" || { echo "FATAL: mktemp failed"; exit 2; }
+[ -n "$smoke_tmp" ] || { echo "FATAL: no temp dir"; exit 2; }
+trap 'rm -rf "$smoke_tmp"' EXIT
+
 assert() {
   local desc="$1" rc="$2"
   if [ "$rc" -eq 0 ]; then
@@ -89,15 +94,15 @@ has_attr=$(grep -q "▸" "$FMatter" && echo 1 || echo 0)
 [ "$has_attr" -eq 1 ] && assert "marker glyph ▸ present" 0 || assert "marker glyph ▸ present" 1
 
 # ---------------------------------------------------------------------------
-# 6. Benchmark file exists and contains "word_count_reduction_pct"
+# 6. Benchmark file exists and contains "fact_retention_delta"
 # ---------------------------------------------------------------------------
 bench_file="$SKILL_DIR/tests/benchmark.md"
 if [ -f "$bench_file" ]; then
   assert "benchmark.md exists" 0
-  if grep -q "word_count_reduction_pct" "$bench_file"; then
-    assert "benchmark references word_count_reduction_pct" 0
+  if grep -q "fact_retention_delta" "$bench_file"; then
+    assert "benchmark references fact_retention_delta" 0
   else
-    assert "benchmark references word_count_reduction_pct" 1
+    assert "benchmark references fact_retention_delta" 1
   fi
 else
   assert "benchmark.md exists" 1
@@ -656,13 +661,13 @@ fi
 # ---------------------------------------------------------------------------
 SC_RUN_PY="$SKILL_DIR/benchmarks/semantic-compression/run.py"
 if [ -f "$SC_RUN_PY" ]; then
-  # Run the regenerator
-  python3 "$SC_RUN_PY" --emit-readme-example registrar-hedge > /dev/null 2>&1
+  # Regenerate into the temp dir; tracked results/ files are never written here
+  python3 "$SC_RUN_PY" --emit-readme-example registrar-hedge --out-dir "$smoke_tmp" > /dev/null 2>&1
   rc=$?
 
   if [ "$rc" -eq 0 ]; then
-    # Extract generated content from results/readme_example.md
-    generated_file="$SKILL_DIR/benchmarks/semantic-compression/results/readme_example.md"
+    # Generated output lives in the temp dir
+    generated_file="$smoke_tmp/readme_example.md"
     if [ -f "$generated_file" ]; then
       # Extract content between markers in README.md
       readme_block=$(sed -n '/<!-- README-EXAMPLE:START -->/,/<!-- README-EXAMPLE:END -->/p' "README.md" | \
@@ -671,13 +676,20 @@ if [ -f "$SC_RUN_PY" ]; then
       # Extract content from the generated file (everything)
       generated_content=$(cat "$generated_file")
 
-      # Normalize whitespace and compare
-      if diff <(echo "$readme_block" | sed 's/[[:space:]]*$//') \
-              <(echo "$generated_content" | sed 's/[[:space:]]*$//')  > /dev/null 2>&1; then
+      # Normalize whitespace into two temp files and diff them
+      printf '%s\n' "$readme_block" | sed 's/[[:space:]]*$//' > "$smoke_tmp/t048_readme.txt"
+      printf '%s\n' "$generated_content" | sed 's/[[:space:]]*$//' > "$smoke_tmp/t048_generated.txt"
+      diff "$smoke_tmp/t048_readme.txt" "$smoke_tmp/t048_generated.txt" > /dev/null 2> "$smoke_tmp/t048_diff.err"
+      diff_rc=$?
+
+      if [ "$diff_rc" -eq 0 ]; then
         assert "T048: regeneration-diff registrar-hedge example matches README" 0
-      else
+      elif [ "$diff_rc" -eq 1 ]; then
         assert "T048: regeneration-diff registrar-hedge example matches README" 1
         echo " (diffs detected between generated and README marker block)"
+      else
+        assert "T048: regeneration-diff registrar-hedge example matches README" 1
+        echo " (diff comparison error, exit $diff_rc: $(cat "$smoke_tmp/t048_diff.err"))"
       fi
     else
       assert "T048: regeneration-diff registrar-hedge example matches README" 1
@@ -697,6 +709,10 @@ fi
 # ---------------------------------------------------------------------------
 renderings_dir="$SKILL_DIR/benchmarks/semantic-compression"
 if [ -d "$renderings_dir" ]; then
+  rl_list="$smoke_tmp/renderings_list.txt"
+  rl_tags="$smoke_tmp/renderings_tags.txt"
+  find "$renderings_dir" -path '*/renderings/*' -name standard.md > "$rl_list"
+  : > "$rl_tags"
   rl_total=0
   rl_violating=0
   rl_violations=0
@@ -707,9 +723,12 @@ if [ -d "$renderings_dir" ]; then
     if [ "$rl_count" -gt 0 ]; then
       rl_violating=$((rl_violating + 1))
       rl_violations=$((rl_violations + rl_count))
+      printf '%s\n' "$rl_output" | grep -o '\[R[0-9]*\]' >> "$rl_tags"
     fi
-  done < <(find "$renderings_dir" -type d -name renderings -exec find {} -type f -name "*.md" \;)
-  echo "smoke(info): renderings lint — $rl_total files, $rl_violating with violations, $rl_violations total violations"
+  done < "$rl_list"
+  echo "smoke(info): renderings lint (standard only) — $rl_total files, $rl_violating with violations, $rl_violations total violations"
+  echo "smoke(info): violations per rule:"
+  sort "$rl_tags" | uniq -c | sed 's/^/smoke(info):   /'
 else
   echo "smoke(info): renderings lint — 0 files, 0 with violations, 0 total violations (no semantic-compression dir)"
 fi
