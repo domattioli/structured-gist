@@ -510,8 +510,9 @@ class TestBadFixtures:
         # Verify we're not suppressing other violations (additive property)
         # The fixture should have at least 1 violation and R16 should be one of them
 
-    def test_r11_width_fixture_fails_at_default(self, fixtures_dir):
+    def test_r11_width_fixture_fails_at_default(self, fixtures_dir, monkeypatch):
         """A long line that exceeds 64 chars but fits at 120 must fail at default width."""
+        monkeypatch.delenv('STRUCTURED_GIST_WIDTH', raising=False)
         fixture_file = fixtures_dir / 'good_r11_width120.md'
         assert fixture_file.exists(), f"good_r11_width120.md not found at {fixture_file}"
         violations = lint_file(str(fixture_file))
@@ -533,9 +534,11 @@ class TestBadFixtures:
         violations = lint_file(str(fixture_file))
         assert not violations, f"good_r11_width120.md has violations with env STRUCTURED_GIST_WIDTH=120: {violations}"
 
-    def test_resolve_width_fallbacks(self):
+    def test_resolve_width_fallbacks(self, monkeypatch):
         """Test resolve_width function fallback behavior."""
         from lint_outline import resolve_width, DEFAULT_MAX_LINE_WIDTH
+
+        monkeypatch.delenv('STRUCTURED_GIST_WIDTH', raising=False)
 
         # Invalid string → DEFAULT
         assert resolve_width('garbage') == DEFAULT_MAX_LINE_WIDTH
@@ -544,10 +547,33 @@ class TestBadFixtures:
         assert resolve_width(0) == DEFAULT_MAX_LINE_WIDTH
         assert resolve_width(-10) == DEFAULT_MAX_LINE_WIDTH
 
-        # "auto" → positive int (terminal width)
-        auto_width = resolve_width('auto')
-        assert isinstance(auto_width, int)
-        assert auto_width > 0
+        # "auto" → clamp(cols - 8, 32, 120)
+        monkeypatch.setenv('COLUMNS', '172')
+        assert resolve_width('auto') == 120  # clamped high
+        monkeypatch.setenv('COLUMNS', '100')
+        assert resolve_width('auto') == 92  # cols - 8
+        monkeypatch.setenv('COLUMNS', '40')
+        assert resolve_width('auto') == 32  # cols - 8 is exactly the floor
+        monkeypatch.setenv('COLUMNS', '20')
+        assert resolve_width('auto') == 32  # clamped low
+
+        # Explicit integer width is used as given, with no cap
+        assert resolve_width('172') == 172
+        assert resolve_width(172) == 172
+
+    def test_resolve_width_auto_no_terminal(self, monkeypatch):
+        """With no COLUMNS and no real terminal, auto resolves to 64, unclamped."""
+        import os
+        from lint_outline import resolve_width, DEFAULT_MAX_LINE_WIDTH
+
+        monkeypatch.delenv('STRUCTURED_GIST_WIDTH', raising=False)
+        monkeypatch.delenv('COLUMNS', raising=False)
+
+        def _no_tty(*args, **kwargs):
+            raise OSError("not a terminal")
+
+        monkeypatch.setattr(os, 'get_terminal_size', _no_tty)
+        assert resolve_width('auto') == DEFAULT_MAX_LINE_WIDTH
 
 
 class TestNormativeBlocks:
@@ -578,6 +604,16 @@ class TestNormativeBlocks:
             assert not violations, (
                 f"self-explain.md block {block_index} has violations: {violations}"
             )
+
+    def test_render_modes_responsive_right_example_clean(self):
+        """The RIGHT responsive example in reference/render-modes.md lints cleanly."""
+        doc = Path(__file__).parent.parent / 'reference' / 'render-modes.md'
+        text = doc.read_text(encoding='utf-8')
+        marker = '**RIGHT — glyph-free, 2-space real-list nesting, same tree:**'
+        assert marker in text, "RIGHT example heading not found in render-modes.md"
+        match = re.search(r'```\n(.*?)```', text.split(marker, 1)[1], re.S)
+        assert match, "RIGHT example fence not found in render-modes.md"
+        assert lint_text(match.group(1)) == []
 
     def test_attribute_example_clean(self):
         """Test that the fenced block in examples/attribute.md lints cleanly."""

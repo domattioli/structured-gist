@@ -26,18 +26,18 @@ highlight anyway. `text` = plaintext = no highlighting. Tag the fence
   wide non-wrapping code boxes and depth-1 `▸` lines became emoji-led
   paragraphs. Use `responsive` for GitHub instead (below); `inline` is kept
   only so pre-v0.3.8 committed outlines still lint.
-- **`responsive`** — a real GFM nested list (`- ▸ …`, 2 spaces/rung); the
-  renderer wraps each line to its own box width with no code blocks. Correct on
+- **`responsive`** (v0.3.7, glyph-free since v0.3.9) — a real GFM nested
+  list, 2 spaces per rung, with no ladder glyph in the content: attribute →
+  `- **Purpose**`, enumerator → `- a. tool execution`, explanation → a plain
+  prose item. Every node is a real list item, so the renderer wraps each line
+  to its own box width with a hanging indent and no code blocks. Correct on
   **any** markdown-rendering surface — GitHub issue/PR/comment bodies AND
-  chat-app replies. Opt-in only — `block` is the default on all surfaces; pick
-  `responsive` explicitly when a real GFM nested list is wanted instead. GitHub
-  wraps its own markdown, so R11 does not apply.
-- **`responsive`** (v0.3.7) — every node IS a real GFM list item, so the
-  chat-app renderer (Claude Code app/web, or any markdown surface with a
-  variable viewport) wraps each line to its own box width with a hanging
-  indent, same as any other markdown list. No fence, no linter-side width
-  budget, no `↪` continuation-line grammar to hand-author — R11 does not
-  apply. Full spec + worked example: `## Responsive mode` below.
+  chat-app replies (Claude Code app/web, or any surface with a variable
+  viewport). Opt-in only — `block` is the default on all surfaces; pick
+  `responsive` explicitly when a real GFM nested list is wanted instead. No
+  fence, no linter-side width budget, no continuation-line grammar to
+  hand-author — R11 does not apply. Full spec + worked example:
+  `## Responsive mode` below.
 
 ## Responsive mode
 
@@ -114,8 +114,10 @@ code blocks past depth 1. This exact shape shipped twice in one session
     ▸ Goal
         ↪ find a state representation that lets RL agent complete meshing on all 7 domains, evidence-only, no cherry-picking
     ▸ Method
-        a. Stage A — cheap 2-domain CPU screen, filters candidates
-        b. Stage B — full 7-domain eval, only for Stage A survivors
+        a. Stage A
+            ↪ cheap 2-domain CPU screen, filters candidates
+        b. Stage B
+            ↪ full 7-domain eval, only for Stage A survivors
 ```
 
 **RIGHT — glyph-free, 2-space real-list nesting, same tree:**
@@ -125,8 +127,10 @@ code blocks past depth 1. This exact shape shipped twice in one session
   - **Goal**
     - find a state representation that lets RL agent complete meshing on all 7 domains, evidence-only, no cherry-picking
   - **Method**
-    - a. Stage A — cheap 2-domain CPU screen, filters candidates
-    - b. Stage B — full 7-domain eval, only for Stage A survivors
+    - a. Stage A
+      - cheap 2-domain CPU screen, filters candidates
+    - b. Stage B
+      - full 7-domain eval, only for Stage A survivors
 ```
 
 Rule of thumb: if you are about to type `▸` or `↪` in a `responsive`-mode
@@ -138,16 +142,15 @@ hard-wrap the source, and R11 never fires on it (`lint_outline.py` gates R11
 to `is_block_mode` only; `responsive` lines are reclassified before R1–R10
 run but always report `is_block_mode=False`, exactly like `inline`).
 
-**Linter detection.** The glyph-keyed detection below covers the v0.3.7
-glyph-form, which remains the *authoring/lint* representation for committed
-examples and fixtures. The v0.3.9 glyph-free form is the *emitted
-presentation* on markdown surfaces and is deliberately indistinguishable
-from ordinary well-formed GFM — there is nothing for the ladder linter to
-gate there (R1–R10 govern the source tree; the renderer owns the bullets).
-A non-fenced outline is classified `responsive`
+**Linter detection.** The linter checks both responsive forms: the v0.3.7
+glyph form and, since v0.4.4, the v0.3.9 glyph-free form. In the
+glyph-free form, an item at depth ≥ 1 whose whole content is one bold span
+is read as an attribute, and a plain item at depth ≥ 1 is read as an
+explanation leaf. A non-fenced outline is classified `responsive`
 (instead of `inline`) only when at least one `- ` list item's content
 itself starts with a non-dash ladder glyph (`▸`/`↪`/`→`/an ordinal or
-nominal enumerator) — a shape `inline` mode never produces, since `inline`
+nominal enumerator), or is a bold-only item at depth ≥ 1 — shapes `inline`
+mode never produces, since `inline`
 emits the bare glyph with no leading list dash past depth 0. This keeps
 detection conservative: a plain `inline` outline (bare glyphs, no `- `
 prefix on nested nodes) is never misclassified. Detected `responsive` lines
@@ -167,24 +170,52 @@ indent ladder and skimmability.
 
 **Rule (R11, v0.3.6 — user spec, verbatim): "new lines are ok but they
 should have precisely identical indenting as the first line."** Keep each
-block line **≤ 64 chars** including indent (fits typical phone-portrait
-monospace). When a node's content — any node type, `↪` leaves included —
+block line within the **resolved budget (default 64)** including indent
+(64 fits typical phone-portrait monospace). When a node's content — any node type, `↪` leaves included —
 would overflow, hand-wrap it yourself:
 
-- the marker line stays as-is, up to the 64-char budget
+- the marker line stays as-is, up to the resolved budget (default 64)
 - every continuation line's leading whitespace is **IDENTICAL** to the
   marker line's own indent — same column, no deeper hang, no shallower
 - **no marker glyph** on a continuation line (it is not a new node)
 
-**Width knob (v0.5.0b2).** The R11 line-width budget is configurable for
-wider displays. Resolution order (highest priority first): (1) explicit
-`width N` or `width auto` in the activation; (2) environment variable
-`STRUCTURED_GIST_WIDTH`; (3) default 64 chars. The `auto` mode queries
-terminal width via `shutil.get_terminal_size()` (fallback 64 when not a
-real tty). Note that `auto` is only meaningful when the linter runs in a
-real terminal — Claude Code's Bash tool is not a tty, so `tput cols`
-would report 80 on a ~160-col pane and mislead the linter; operators
-should pin a number in their AGENTS.md for a given surface.
+**Width knob (v0.5.0b2; terminal hint since v0.8.0).** The R11 line-width
+budget is configurable for wider displays. The model resolves it in this
+order, first match wins:
+
+1. an explicit `width N` or `width auto` in the activation;
+2. a width the consumer repo's AGENTS.md pins for that surface;
+3. for terminal replies only, the host's terminal-width hint
+   (`term_cols=N`), resolved as `auto`;
+4. the default, 64 chars.
+
+`auto` resolves to clamp(N − 8, 32, 120), where N is the terminal width in
+columns. The 8 columns leave room for the host's gutter, the floor of 32
+keeps a narrow pane usable, and the cap of 120 stops long `↪` prose from
+filling a very wide pane. An explicit `width N` is used as given, with no
+cap. The hint describes the terminal that shows the reply, so it applies to
+terminal replies only. Files, committed fences, and tool-posted bodies
+(issue, PR, and comment bodies) skip the hint and use 64 unless a width is
+set explicitly or pinned; `test_lint.py` checks the SKILL.md and example
+fences at 64.
+
+The linter (`lint_outline.py --width`) follows the same rules for `N` and
+`auto`, reading terminal columns from `COLUMNS` or the real tty; when
+neither gives a width, `auto` falls back to 64. With no `--width`, the
+linter reads the environment variable `STRUCTURED_GIST_WIDTH`, then uses
+64. That variable is the linter's default knob; the model does not read
+it. Lint a terminal reply with `--width <resolved N>`, the budget the
+reply was rendered at; a plain run checks against 64 and flags wider
+lines.
+
+**Surface guide (advice, not a rule).**
+
+| surface | suggested mode and width |
+|---|---|
+| terminal (CLI) reply | `block`, hint width per the order above |
+| app or web chat reply | `block` at 64, or opt-in `responsive` |
+| GitHub body or committed `.md` | `block` at 64, or explicit `responsive` |
+| phone or narrow chat | `block` at 64, or `responsive` |
 
 ```
         ↪ this leaf runs long enough that a phone-width pane
@@ -202,7 +233,7 @@ Wrong (hanging indent — the pre-v0.3.6 shape, now an R11 violation):
 
 The linter (`lint_outline.py` R11) folds a markerless continuation line into
 its owning node's text either way (structure), but separately flags (i) any
-physical line over the 64-char budget and (ii) any continuation line whose
+physical line over the resolved budget (default 64) and (ii) any continuation line whose
 indent does not exactly match its marker line's indent — both checks fire
 in `block` mode only (fenced content); `inline` mode is GitHub-rendered
 markdown and wraps itself, so R11 does not apply there. Prefer splitting

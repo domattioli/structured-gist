@@ -51,7 +51,7 @@ What's missing is structure: concept, sub-concept, and the relationship between 
 /structured-gist [block [width N|auto]|responsive]
 ```
 
-Output uses one granularity level, `standard`. The `skim` and `deep` levels are archived (see [Future work](#7-future-work)). No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface.
+Output uses one granularity level, `standard`. The `skim` and `deep` levels are archived (see [Future work](#7-future-work)). No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface. The `block` line budget is 64 columns by default. `width auto` sizes it to the terminal (terminal width minus 8, clamped to 32-120), and `width N` sets it exactly with no cap.
 
 Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
 
@@ -97,7 +97,7 @@ Rendered as an outline at `standard` granularity in `block` mode, the same conte
     C. GitHub issue + PR comments
 ```
 
-`block` is one of three render modes and is the default on all surfaces; `responsive` (opt-in for GitHub issue/PR/comment bodies and chat-app replies) and the deprecated `inline` form are documented, with worked examples of each, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
+There are two active render modes. `block` is the default on all surfaces; `responsive` is opt-in for GitHub issue/PR/comment bodies and chat-app replies. Both are documented, with worked examples, in `skills/structured-gist/SKILL.md` under `## Render modes` and `reference/render-modes.md`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 

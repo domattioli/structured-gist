@@ -10,13 +10,11 @@ Source: "Explain why a web app added a request cache."
         ↪ same queries repeated; DB = bottleneck
     II. no reuse between reqs
         ↪ each req own connection; no shared state
-
 - Fix
     A. cache layer added
         a. keyed by query params
         b. TTL, fail-open
     B. cuts DB load 80%
-
 - Result
     I. faster resp times
 ```

@@ -42,8 +42,11 @@ one marker family. Enumerator case follows absolute depth, not the first depth
 where an enumerator appears.
 
 `block` is the default on every surface. It uses one fenced `text` block,
-literal glyphs, four-space depth increments, and a default 64-column line
-budget. `responsive` is an explicit option for Markdown surfaces. It uses real
+literal glyphs, four-space depth increments, and a line budget. In a terminal
+reply the budget is the terminal-width hint, set to `auto` (the terminal width
+minus 8, clamped to 32-120) or to an explicit `width N`. Everywhere else
+(files, committed fences, bodies posted by tools) the budget is 64 columns.
+`responsive` is an explicit option for Markdown surfaces. It uses real
 GitHub Flavored Markdown lists, two-space nesting, bold attributes, literal
 enumerator labels, plain-prose explanation leaves, and no block-mode glyphs.
 The legacy `inline` mode is deprecated and must not be used for new output.
@@ -66,6 +69,10 @@ Lint a generated outline with:
 ```bash
 python3 skills/structured-gist/tests/lint_outline.py < your_output.md
 ```
+
+The linter checks a 64-column budget unless told otherwise. To lint a terminal
+reply rendered at another width, pass the width you rendered at, for example
+`--width 92`.
 
 Any behavior change requires a `version:` bump in `SKILL.md` and a row in
 `skills/structured-gist/tests/benchmark.md`. Before a release, run:
