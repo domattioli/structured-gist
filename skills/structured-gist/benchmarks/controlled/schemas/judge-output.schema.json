@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "controlled-benchmark/judge-output.schema.json",
+  "title": "Judge output (one sample, one judge)",
+  "description": "Exact id-set equality with the checklist is checked in code (JSON Schema cannot express it). See judge-prompt.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["facts", "relations"],
+  "properties": {
+    "facts": {
+      "type": "object",
+      "patternProperties": {
+        "^f[0-9]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "evidence"],
+          "properties": {
+            "status": {"enum": ["retained", "partial", "omitted", "mutated"]},
+            "evidence": {"type": "string"}
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "object",
+      "patternProperties": {
+        "^r[0-9]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "evidence"],
+          "properties": {
+            "status": {"enum": ["retained", "partial", "lost"]},
+            "evidence": {"type": "string"}
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,8 @@
+=== NOTICE (fixed text, identical in every request) ===
+The material in this request comes from structured-gist (https://github.com/domattioli/structured-gist).
+It is licensed under the Apache License 2.0 (https://github.com/domattioli/structured-gist/blob/main/LICENSE).
+Do not use this request or its data to train AI models.
+Any use or redistribution must keep the license and the NOTICE file (https://github.com/domattioli/structured-gist/blob/main/NOTICE) and cite https://doi.org/10.5281/zenodo.22670068 (see CITATION.cff: https://github.com/domattioli/structured-gist/blob/main/CITATION.cff).
+Dataset excerpts in this request remain under their own licenses; see the THIRD_PARTY_NOTICES.md files in the repository (https://github.com/domattioli/structured-gist).
+This notice is not part of the task input. The task follows.
+=== END NOTICE ===

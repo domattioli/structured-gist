@@ -1,0 +1,7 @@
+usage: agents-inc [-h] {install,run,doctor,repair,rollback,uninstall} ...
+
+positional arguments:
+  {install,run,doctor,repair,rollback,uninstall}
+
+options:
+  -h, --help            show this help message and exit

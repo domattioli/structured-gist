@@ -19,6 +19,11 @@ Violation = Tuple[int, str, str]
 # Default max line width for R11 (block-mode line wrap)
 DEFAULT_MAX_LINE_WIDTH = 64
 
+# `auto` width: clamp(cols - AUTO_GUTTER, AUTO_MIN_WIDTH, AUTO_MAX_WIDTH)
+AUTO_GUTTER = 8
+AUTO_MIN_WIDTH = 32
+AUTO_MAX_WIDTH = 120
+
 
 _RESPONSIVE_ITEM = re.compile(r'^(\s*)-\s+(.*)$')
 
@@ -50,6 +55,25 @@ def _looks_like_ladder_marker(s: str) -> bool:
 _BOLD_ONLY = re.compile(r'^\*\*[^*].*\*\*$')
 
 
+def _auto_width() -> int:
+    """
+    Resolve `auto` to a line-width budget from the terminal width.
+
+    Terminal columns come from shutil.get_terminal_size(), which reads
+    COLUMNS first and then the real tty. The (0, 0) fallback is a sentinel
+    for "no terminal width known": it resolves to DEFAULT_MAX_LINE_WIDTH
+    (64) unclamped. A known width resolves to
+    clamp(cols - AUTO_GUTTER, AUTO_MIN_WIDTH, AUTO_MAX_WIDTH).
+    """
+    try:
+        cols = shutil.get_terminal_size(fallback=(0, 0)).columns
+    except Exception:
+        return DEFAULT_MAX_LINE_WIDTH
+    if cols <= 0:
+        return DEFAULT_MAX_LINE_WIDTH
+    return max(AUTO_MIN_WIDTH, min(cols - AUTO_GUTTER, AUTO_MAX_WIDTH))
+
+
 def resolve_width(width: Optional[str] = None) -> int:
     """
     Resolve the R11 line-width budget from multiple sources.
@@ -59,7 +83,9 @@ def resolve_width(width: Optional[str] = None) -> int:
     3. Default constant DEFAULT_MAX_LINE_WIDTH (64)
 
     Special values:
-    - "auto" → terminal width via shutil.get_terminal_size() (default fallback 64x24)
+    - "auto" → _auto_width(): clamp(cols - 8, 32, 120), or 64 when no
+      terminal width is known
+    - An explicit integer N is used as given (no clamp)
     - Invalid/non-positive values → DEFAULT_MAX_LINE_WIDTH
 
     Args:
@@ -77,12 +103,7 @@ def resolve_width(width: Optional[str] = None) -> int:
                 return DEFAULT_MAX_LINE_WIDTH
         if isinstance(width, str):
             if width.lower() == "auto":
-                # Get terminal width, fallback to 64 if not a real tty
-                try:
-                    cols = shutil.get_terminal_size(fallback=(64, 24)).columns
-                    return cols if cols > 0 else DEFAULT_MAX_LINE_WIDTH
-                except Exception:
-                    return DEFAULT_MAX_LINE_WIDTH
+                return _auto_width()
             # Try to parse as integer
             try:
                 val = int(width)
@@ -97,11 +118,7 @@ def resolve_width(width: Optional[str] = None) -> int:
     env_width = os.environ.get('STRUCTURED_GIST_WIDTH')
     if env_width:
         if env_width.lower() == "auto":
-            try:
-                cols = shutil.get_terminal_size(fallback=(64, 24)).columns
-                return cols if cols > 0 else DEFAULT_MAX_LINE_WIDTH
-            except Exception:
-                return DEFAULT_MAX_LINE_WIDTH
+            return _auto_width()
         try:
             val = int(env_width)
             if val > 0:
@@ -855,7 +872,9 @@ def main():
         '--width',
         type=str,
         default=None,
-        help='R11 line-width budget: integer N, "auto", or None (default 64, or env STRUCTURED_GIST_WIDTH)'
+        help=('R11 line-width budget: integer N (used as given), or "auto" '
+              '(terminal columns - 8, clamped to 32..120; 64 when no terminal '
+              'width is known). Omitted: env STRUCTURED_GIST_WIDTH, else 64')
     )
 
     args = parser.parse_args()

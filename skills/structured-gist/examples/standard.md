@@ -10,16 +10,14 @@ Source: "Explain why a web app added a request cache." Full ladder, soft cap 4, 
     II. no reuse between requests
         ↪ each request opened its own connection; no shared
         state
-
 - The fix
     A. request cache added
         a. keyed by query params
         b. TTL-based expiry
         c. fail-open
     B. cuts database load 80%
-
 - Result
     I. faster response times
 ```
 
-Ladder: `-` concept · `I./A.` first enumerator tier · `a./b.` deeper tier · `↪` long-sentence leaf.
+Ladder: `-` concept · `I./A.` depth-1 tier · `a./b.` deeper tier · `↪` long-sentence leaf.

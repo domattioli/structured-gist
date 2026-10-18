@@ -15,8 +15,8 @@ Outline (standard granularity; attributes carry their enumerated content):
         b. connective clause to a leaf
             ↪ because/since inside a node means split it
     ▸ Spacing
-        a. four spaces per rung
-        b. blank line between siblings
+        a. block rung four spaces
+        b. no gap between siblings
 ```
 
 Here `Marker ladder`, `Length gradient`, `Spacing` are attributes *of* structured-gist (`▸`), not peer concepts — the fix.

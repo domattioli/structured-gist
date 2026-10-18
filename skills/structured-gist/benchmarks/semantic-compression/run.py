@@ -21,6 +21,7 @@ import argparse
 import hashlib
 import json
 import sys
+import tempfile
 from pathlib import Path
 
 # Import the deterministic scoring module
@@ -250,10 +251,10 @@ def update_provenance(lane: str) -> None:
     print(f"Updated {prov_path}")
 
 
-def emit_readme_example(case_id: str) -> None:
+def emit_readme_example(case_id: str, out_dir: Path) -> None:
     """
     Emit a before/after example for README.md.
-    Reads source.md and opus-v0.5.0b1/standard rendering, writes to results/readme_example.md.
+    Reads source.md and opus-v0.5.0b1/standard rendering, writes to out_dir/readme_example.md.
     """
     # Find the case in regression or pressure-tests
     case_dir = None
@@ -307,9 +308,9 @@ def emit_readme_example(case_id: str) -> None:
 - The `▸ First step` explanation keeps how to identify the registrar: from whois and the Squarespace/Domains dashboard, with the user
 """
 
-    # Write to results/readme_example.md
-    RESULTS.mkdir(exist_ok=True)
-    out_path = RESULTS / "readme_example.md"
+    # Write to out_dir/readme_example.md (tracked results/ is never touched here)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "readme_example.md"
     out_path.write_text(markdown, encoding="utf-8")
     print(f"Wrote {out_path}")
 
@@ -330,16 +331,29 @@ def main():
         metavar="CASE_ID",
         help="Emit a before/after example for README.md",
     )
+    parser.add_argument(
+        "--out-dir",
+        type=Path,
+        default=None,
+        help="Directory for generated readme_example.md (default: a temporary directory)",
+    )
+    parser.add_argument(
+        "--update",
+        action="store_true",
+        help="Rewrite the tracked provenance.json (lane runs only)",
+    )
     args = parser.parse_args()
 
     if args.emit_readme_example:
-        emit_readme_example(args.emit_readme_example)
+        out_dir = args.out_dir or Path(tempfile.mkdtemp(prefix="readme_example_"))
+        emit_readme_example(args.emit_readme_example, out_dir)
     elif args.lane:
         if args.lane == "deterministic":
             run_deterministic_lane()
         elif args.lane == "judged":
             run_judged_lane()
-        update_provenance(args.lane)
+        if args.update:
+            update_provenance(args.lane)
     else:
         parser.print_help()
         sys.exit(1)

@@ -30,11 +30,9 @@ def fixtures_dir():
 
 
 @pytest.fixture
-def scratchpad():
-    """Get the scratchpad temp directory."""
-    path = Path('/tmp/claude-0/-home-user-DomI/54806399-06a5-5258-9765-ee8e2992fcdf/scratchpad')  # nosec B108 — test fixture path, not a real tmp-file write
-    path.mkdir(parents=True, exist_ok=True)
-    return path
+def scratchpad(tmp_path):
+    """Get a per-test temp directory (pytest tmp_path)."""
+    return tmp_path
 
 
 @pytest.fixture
