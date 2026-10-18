@@ -144,7 +144,7 @@ by source position. Stopword list `bench/stopwords.txt`, SHA-256
 
 ## 7. Main judge and effort
 
-- Main judge: sol, model `gpt-5.6-sol`, `medium`
+- Main judge: sol, model `gpt-6.1-sol`, `medium`
   effort, through the `agents-inc` launcher. It is a different vendor from
   the generator.
 - Every call records the resolved model id. A resolved id that differs from
@@ -292,10 +292,35 @@ order: `qmsum-01`, `qasper-01`, `hotpotqa-01`) runs under run id
 `dryrun-<first 12 hex of prereg_sha256>`. Its outputs are never reported or
 reused, and its scores are not inspected; only exit codes, record validity,
 and cost are read. The dry run may lead to plumbing changes only (adapters,
-parsing, retries, timeouts). It may not change methods, prompts, metrics,
+parsing, retries, timeouts, cost calibration). It may not change methods, prompts, metrics,
 tests, thresholds, the case set, or judge ids. Any change after the dry run
 is a logged deviation.
 
+### Cost estimate and pacing
+
+`run.py estimate` computes the paid-token estimate as a pure function of
+`prereg.json` (`cost.estimate_params`). Input tokens per call = characters / 4
+of the arm's full prompt (system prompt included; for the skill arm, SKILL.md
+plus render-modes.md) plus the frozen source or gold, plus a fixed per-call
+overhead per backend: anthropic 580, openai 14,535 tokens, measured on
+2026-10-18 by one canary call per backend (reported input tokens minus
+characters / 4 of what was sent). Output tokens = 1.33 x N x (1 + thinking
+ratio). The thinking ratio is 1.0 for the dry run; the dry run measures the
+real ratio, and that value replaces 1.0 for the full run ("cost calibration"
+in the dry-run rule). There is no safety margin; the 5,000,000-token paid
+ceiling halt is the guard. The full run (not the dry run) stops each paid
+backend at 1,000,000 tokens per 5-hour window and resumes from the call cache
+in the next window with the same confirmed estimate.
+
 ### Deviations
 
-None.
+- 2026-10-18. Change: main judge model pinned as `gpt-6.1-sol` (was
+  `gpt-5.6-sol`). Reason: the agents-inc `sol` alias now resolves to the
+  slug `gpt-6.1-sol` (judge canary, 2026-10-17), and the runner requires the
+  resolved slug to equal the pinned model. Same judge id, effort and prompt.
+- 2026-10-18. Change: cost estimate parameters, measured per-backend overheads,
+  thinking ratio 1.0, no margin, 1,000,000-token per-backend 5-hour window
+  budget (full run only), and "cost_calibration" added to the dry-run
+  may-change list (spec 006 FR-017, FR-018). Reason: the estimate must be a
+  pinned pure function of this record before any paid call. No prompt,
+  method, metric, threshold, case or judge id changed.

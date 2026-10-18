@@ -47,10 +47,31 @@
     "estimate_inputs": "pinned and frozen: projected N per case = word count of the prior standard outline EV/evaluation/<ds>/renderings/<case>/standard.md; output tokens = 1.33 x N; input tokens = characters / 4 of the prompt template plus the frozen source or gold; fixed per-call overhead. No generated sample enters the estimate, so estimate_sha is stable across stages and resumes.",
     "estimate_paid_tokens": 3050000,
     "estimate_paid_tokens_status": "superseded by run.py estimate (operator decision 2026-10-16); the 2026-09-27 value above counted a third paid vendor that was removed and no longer applies",
+    "estimate_params": {
+      "chars_per_token": 4,
+      "output_tokens_per_word": 1.33,
+      "overhead_measured": {
+        "date": "2026-10-18",
+        "method": "one canary call per backend (prompt 'Reply with the single word OK.'); overhead = reported input tokens minus chars/4 of what was sent. anthropic: claude -p isolated config, input_tokens+cache_creation+cache_read = 594, sent 54 chars -> 580. openai: sol via agents-inc with isolated CODEX_HOME, Codex reports only a total (14,544), so overhead = total - chars/4 sent (8) - chars/4 output (1) = 14,535."
+      },
+      "per_call_overhead_tokens": {
+        "anthropic": 580,
+        "openai": 14535
+      },
+      "safety_margin": 0,
+      "thinking_ratio": 1.0,
+      "thinking_ratio_status": "provisional for the dry run; the dry run measures the real ratio, which replaces this value for the full run (dry_run.may_change cost_calibration)"
+    },
     "paid_vendors": [
       "anthropic",
       "openai"
-    ]
+    ],
+    "window_budget": {
+      "applies_to": "full_run_only",
+      "resume": "a scheduled job resumes from the call cache on the next window with the same confirmed estimate; no new estimate or confirm",
+      "tokens_per_backend": 1000000,
+      "window_hours": 5
+    }
   },
   "dry_run": {
     "case_rule": "first case_id per dataset in ascending order",
@@ -63,7 +84,8 @@
       "adapters",
       "parsing",
       "retries",
-      "timeouts"
+      "timeouts",
+      "cost_calibration"
     ],
     "may_not_change": [
       "methods",
@@ -113,7 +135,7 @@
       "effort": "medium",
       "id": "sol",
       "max_attempts": 3,
-      "model": "gpt-5.6-sol"
+      "model": "gpt-6.1-sol"
     },
     "notice_sha256": "463711420fb2e97f84b8ffc5ddde82ba5f116e65e8ec69e07621252fa48d6c82",
     "opaque_sample_id": "sha256(master_seed + ':' + sample_id)[:12]",
