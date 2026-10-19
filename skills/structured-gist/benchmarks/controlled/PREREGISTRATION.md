@@ -49,9 +49,9 @@ Generator: `claude-opus-5-5` at `medium` effort, through the
 id; a resolved id that differs from the pinned id is refused and not scored
 (FR-021).
 
-Skill: `SKILL.md` version `0.5.0b2`, SHA-256
-`ce2833d35e6b22ba0fdfabe53f9a97c08badfc012f81e1553157494a63829eac`. `reference/render-modes.md` SHA-256
-`5c43291bd42a45dd56c250e028945b0d6b044858ab787e12d8bf22dfe4c73d31`.
+Skill: `SKILL.md` version `0.9.0`, SHA-256
+`baa1c4c5a6b8f365d2ebc57cba8f349aa73d2d4bc1c80f2bcd9ab0070eb4d4ce`. `reference/render-modes.md` SHA-256
+`c9a84ae76f9f792ce64a0e3fe4c506b06cc2dacbf5db8f70c9f68ef1a47b0bb9`.
 
 Prompt files in `prompts/` (SHA-256 of the exact bytes):
 
@@ -324,3 +324,10 @@ in the next window with the same confirmed estimate.
   may-change list (spec 006 FR-017, FR-018). Reason: the estimate must be a
   pinned pure function of this record before any paid call. No prompt,
   method, metric, threshold, case or judge id changed.
+- 2026-10-19. Change: skill arm re-pinned to `SKILL.md` version `0.9.0`
+  (SHA-256 `baa1c4c5a6b8...`) and `reference/render-modes.md` SHA-256
+  `c9a84ae76f9f...` (were 0.7.0, `ce2833d35e6b...` and `5c43291bd42a...`).
+  Reason: releases 0.8.0 (terminal-aware `block` width) and 0.9.0 (pre-emit
+  check, issue #22) changed both files before any full run; the pins must
+  match the skill the arm loads. The 0.7.0 dry run is superseded and not
+  reported. No prompt, method, metric, threshold, case or judge id changed.
