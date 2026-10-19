@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "structured-gist"
+version = "0.9.0"
+description = "Deterministic linter for structured-gist nested lecture-note outlines"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Dominik O. Mattioli" }]
+keywords = ["outline", "linter", "structured-notes", "claude-code", "agent-skill"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Topic :: Text Processing :: Markup",
+]
+
+[project.urls]
+Homepage = "https://github.com/domattioli/structured-gist"
+Repository = "https://github.com/domattioli/structured-gist"
+Issues = "https://github.com/domattioli/structured-gist/issues"
+DOI = "https://doi.org/10.5281/zenodo.22670068"
+
+[project.scripts]
+structured-gist-lint = "structured_gist.lint_outline:main"
+structured-gist-claims = "structured_gist.claim_list:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/structured_gist"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"skills/structured-gist/tests/lint_outline.py" = "structured_gist/lint_outline.py"
+"skills/structured-gist/render/claim_list.py" = "structured_gist/claim_list.py"
+"skills/structured-gist/render/claim_list.schema.json" = "structured_gist/claim_list.schema.json"
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+    "pyproject.toml",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md",
+    "src/structured_gist",
+    "skills/structured-gist/tests/lint_outline.py",
+    "skills/structured-gist/render/claim_list.py",
+    "skills/structured-gist/render/claim_list.schema.json",
+]
+exclude = [".gitignore"]
