@@ -1,0 +1,11 @@
+# Repo extension to the DomI release-ignore baseline.
+
+[verify]
+# The sdist must carry the linter at its source path so a wheel built from
+# the sdist can force-include it as structured_gist/lint_outline.py. It is
+# the shipped module, not test scaffolding. Hatchling always adds the root
+# .gitignore to an sdist; the exclude setting does not remove it.
+allow = [
+    "skills/structured-gist/tests/lint_outline.py",
+    ".gitignore",
+]

@@ -1,0 +1,144 @@
+# DomI-managed release workflow template (spec 032, CHILmesh #326). Copied by the release-setup skill
+# to .github/workflows/release.yml; set values through repo variables, do not fork the structure.
+#
+# Tag push only, no manual trigger: re-run failed jobs instead (no untrusted input).
+# The gate job FAILS CLOSED: an empty DOMI_RO_TOKEN, a failed DomI fetch, or any failed check stops the
+# release before publish-pypi runs. There is no override variable. The tool is fetched from DomI at
+# run time and never vendored (#326).
+#
+# Repo variables (each has a default): RELEASE_PYTHON_VERSION, RELEASE_INSTALL_CMD, RELEASE_TEST_CMD,
+#   RELEASE_DIST_NAME, RELEASE_TITLE, DOMI_TOOL_REF.
+# Repo secret: DOMI_RO_TOKEN (read-only PAT on domattioli/DomI).
+# GitHub environment: pypi (PyPI trusted publisher).
+name: release
+
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ vars.RELEASE_PYTHON_VERSION || '3.12' }}
+      - name: Install
+        run: ${{ vars.RELEASE_INSTALL_CMD || 'python -m pip install -e . pytest' }}
+      - name: Run test suite (includes the concept-DOI guard test)
+        run: ${{ vars.RELEASE_TEST_CMD || 'python -m pytest -q' }}
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ vars.RELEASE_PYTHON_VERSION || '3.12' }}
+      - name: Build sdist and wheel
+        run: |
+          python -m pip install build
+          python -m build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  gate:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require DOMI_RO_TOKEN
+        env:
+          DOMI_RO_TOKEN: ${{ secrets.DOMI_RO_TOKEN }}
+        run: |
+          if [ -z "$DOMI_RO_TOKEN" ]; then
+            echo "::error::secret DOMI_RO_TOKEN not set; release stopped before publish"
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch release-integrity tool from DomI
+        uses: actions/checkout@v4
+        with:
+          repository: domattioli/DomI
+          ref: ${{ vars.DOMI_TOOL_REF || 'main' }}
+          token: ${{ secrets.DOMI_RO_TOKEN }}
+          path: .domi-tool
+          sparse-checkout: skills/release-integrity
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ vars.RELEASE_PYTHON_VERSION || '3.12' }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Install twine
+        run: python -m pip install twine
+      - name: Version consistency and twine check
+        run: python .domi-tool/skills/release-integrity/scripts/release_integrity.py preflight --pypi
+      - name: Release-ignore drift check
+        run: python .domi-tool/skills/release-integrity/scripts/release_ignore.py generate --check
+      - name: Scan built artifacts for leaks
+        run: python .domi-tool/skills/release-integrity/scripts/release_ignore.py verify --channel all --dist dist
+
+  publish-pypi:
+    needs: [test, gate]
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Job summary
+        run: echo "Published https://pypi.org/project/${{ vars.RELEASE_DIST_NAME || github.event.repository.name }}/${GITHUB_REF_NAME#v}/" >> "$GITHUB_STEP_SUMMARY"
+
+  github-release:
+    needs: publish-pypi
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Extract release notes from CHANGELOG.md
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            index($0, "## [" v "]") == 1 { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > release-notes.md
+          if ! grep -q '[^[:space:]]' release-notes.md; then
+            echo "No CHANGELOG.md section for ${version}" >&2
+            exit 1
+          fi
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" dist/* \
+            --repo "${GITHUB_REPOSITORY}" \
+            --verify-tag \
+            --title "${{ vars.RELEASE_TITLE || github.event.repository.name }} ${GITHUB_REF_NAME#v}" \
+            --notes-file release-notes.md
+
+  # >>> extra channels (HF, docs, ...): add jobs here with needs: [gate] (and publish-pypi if they must follow PyPI) <<<
+  # Zenodo needs no job: its GitHub integration is a repository webhook and archives the release.

@@ -711,15 +711,19 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-# 46. Report-only: lint all semantic-compression renderings/*.md files.
-# Never fails the script; informational count only (part 1 of #22's fix).
+# 46. Ratchet: lint all semantic-compression renderings/*/standard.md files
+# and compare per-rule violation counts to tests/renderings_lint_baseline.json
+# (part 2 of #22's fix). A rule above its baseline count, or a rule absent
+# from the baseline with any violations, fails. A rule below baseline prints
+# an info line suggesting a refresh. SMOKE_UPDATE_RENDERINGS_BASELINE=1
+# rewrites the baseline from the measured counts and passes.
 # ---------------------------------------------------------------------------
 renderings_dir="$SKILL_DIR/benchmarks/semantic-compression"
+rl_tags="$smoke_tmp/renderings_tags.txt"
+: > "$rl_tags"
 if [ -d "$renderings_dir" ]; then
   rl_list="$smoke_tmp/renderings_list.txt"
-  rl_tags="$smoke_tmp/renderings_tags.txt"
   find "$renderings_dir" -path '*/renderings/*' -name standard.md > "$rl_list"
-  : > "$rl_tags"
   rl_total=0
   rl_violating=0
   rl_violations=0
@@ -739,6 +743,64 @@ if [ -d "$renderings_dir" ]; then
 else
   echo "smoke(info): renderings lint — 0 files, 0 with violations, 0 total violations (no semantic-compression dir)"
 fi
+
+# Compare (or rewrite) per-rule counts. Python prints one line per finding:
+# "over RULE MEASURED BASELINE", "under RULE MEASURED BASELINE",
+# "updated PATH", or "missing PATH".
+rl_baseline="$SKILL_DIR/tests/renderings_lint_baseline.json"
+rl_ratchet="$smoke_tmp/renderings_ratchet.txt"
+python3 - "$rl_tags" "$rl_baseline" "${SMOKE_UPDATE_RENDERINGS_BASELINE:-0}" > "$rl_ratchet" <<'PY'
+import json, os, re, sys
+tags_path, baseline_path, update = sys.argv[1], sys.argv[2], sys.argv[3] == '1'
+measured = {}
+with open(tags_path, encoding='utf-8') as f:
+    for line in f:
+        m = re.match(r'\[(R\d+)\]', line.strip())
+        if m:
+            measured[m.group(1)] = measured.get(m.group(1), 0) + 1
+if update:
+    with open(baseline_path, 'w', encoding='utf-8') as f:
+        f.write(json.dumps({'per_rule': measured, 'total': sum(measured.values())},
+                           indent=2, sort_keys=True) + '\n')
+    print(f'updated {baseline_path}')
+    sys.exit(0)
+if not os.path.isfile(baseline_path):
+    print(f'missing {baseline_path}')
+    sys.exit(0)
+with open(baseline_path, encoding='utf-8') as f:
+    baseline = json.load(f).get('per_rule', {})
+for rule in sorted(set(measured) | set(baseline)):
+    got, base = measured.get(rule, 0), baseline.get(rule, 0)
+    if got > base:
+        print(f'over {rule} {got} {base}')
+    elif got < base:
+        print(f'under {rule} {got} {base}')
+PY
+rl_rc=$?
+rl_over=0
+if [ "$rl_rc" -ne 0 ]; then
+  assert "renderings lint ratchet ran (python3 exit $rl_rc)" 1
+  rl_over=1
+fi
+while read -r rl_kind rl_rule rl_got rl_base; do
+  case "$rl_kind" in
+    over)
+      assert "renderings lint ratchet: $rl_rule $rl_got violations > baseline $rl_base" 1
+      rl_over=1
+      ;;
+    under)
+      echo "smoke(info): renderings lint $rl_rule $rl_got < baseline $rl_base — refresh with SMOKE_UPDATE_RENDERINGS_BASELINE=1"
+      ;;
+    updated)
+      echo "smoke(info): renderings lint baseline rewritten: $rl_rule"
+      ;;
+    missing)
+      assert "renderings lint baseline exists: $rl_rule" 1
+      rl_over=1
+      ;;
+  esac
+done < "$rl_ratchet"
+[ "$rl_over" -eq 0 ] && assert "renderings lint at or below baseline" 0
 
 # ---------------------------------------------------------------------------
 # Summary

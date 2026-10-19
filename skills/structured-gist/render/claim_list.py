@@ -18,10 +18,14 @@ from pathlib import Path
 from typing import List, Tuple, Optional, Dict, Any
 from io import StringIO
 
-# Add parent directory to path for lint_outline import
-sys.path.insert(0, str(Path(__file__).parent.parent / 'tests'))
+try:
+    # Installed package: lint_outline sits beside this module
+    from .lint_outline import parse_line, extract_outline_from_text, lint_text
+except ImportError:
+    # Script or flat import: add parent directory to path for lint_outline import
+    sys.path.insert(0, str(Path(__file__).parent.parent / 'tests'))
 
-from lint_outline import parse_line, extract_outline_from_text, lint_text
+    from lint_outline import parse_line, extract_outline_from_text, lint_text
 
 
 # Load and cache the schema
@@ -344,8 +348,8 @@ def render_claim_list(outline_text: str) -> str:
     return output.getvalue()
 
 
-if __name__ == '__main__':
-    # CLI entry point
+def main():
+    """CLI entry point."""
     if len(sys.argv) > 1:
         # Read from file
         with open(sys.argv[1], 'r', encoding='utf-8') as f:
@@ -361,3 +365,7 @@ if __name__ == '__main__':
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()

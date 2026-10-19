@@ -120,10 +120,10 @@
       "shared_user": "c7b3cfe2594ac14f4479ab87d1cf443385e6ef93f9119eacde316a206fca23f2",
       "skill_instruction": "eeb45fcce3887b16ae22dd844a31c840da92b225d31ed9fef3515147b0e439f4"
     },
-    "render_modes_md_sha256": "5c43291bd42a45dd56c250e028945b0d6b044858ab787e12d8bf22dfe4c73d31",
+    "render_modes_md_sha256": "c9a84ae76f9f792ce64a0e3fe4c506b06cc2dacbf5db8f70c9f68ef1a47b0bb9",
     "skill_invocation": "block",
-    "skill_md_sha256": "ce2833d35e6b22ba0fdfabe53f9a97c08badfc012f81e1553157494a63829eac",
-    "skill_version": "0.7.0"
+    "skill_md_sha256": "baa1c4c5a6b8f365d2ebc57cba8f349aa73d2d4bc1c80f2bcd9ab0070eb4d4ce",
+    "skill_version": "0.9.0"
   },
   "judges": {
     "call_order_seed": "master_seed:order:judge_id",

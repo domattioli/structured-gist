@@ -183,7 +183,9 @@ def test_model_policy_violation_exits_6(root, fakes):
     assert rec["outcome"] == "model_policy_violation"
 
 
-def test_adapter_flags_wrong_resolved_model():
+def test_adapter_flags_wrong_resolved_model(monkeypatch, tmp_path):
+    monkeypatch.setenv("SG_BENCH_CLAUDE_BIN", "/fake/claude")
+    monkeypatch.setenv("SG_BENCH_CLAUDE_CONFIG_DIR", str(tmp_path / "cfg"))
     c = FakeClaude()
     c.resolved = "other-model"
     res = gen.invoke("s", "u", model="claude-opus-5-5", effort="medium", runner=c)

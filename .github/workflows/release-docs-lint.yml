@@ -1,0 +1,59 @@
+# DomI-managed workflow: release-docs lint template. Copied by the release-setup skill
+# to .github/workflows/release-docs-lint.yml; set values through repo variables, do not fork the structure.
+#
+# Runs when README.md, .zenodo.json or CITATION.cff change. zenodo_description.py FAILS the job when the
+# description shape or the README Now/Next/Later bullets are wrong. roadmap_lint.py only WARNS about
+# closed issues linked from the roadmap and always exits 0.
+# Forks and repos without the secret skip with a warning (forks get no secrets). The tool is fetched
+# from DomI at run time and never vendored (#326).
+#
+# Repo variable (has a default): DOMI_TOOL_REF.
+# Repo secret: DOMI_RO_TOKEN (read-only PAT on domattioli/DomI).
+name: release-docs-lint
+
+on:
+  push:
+    paths: ["README.md", ".zenodo.json", "CITATION.cff"]
+  pull_request:
+    paths: ["README.md", ".zenodo.json", "CITATION.cff"]
+
+concurrency:
+  group: release-docs-lint-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check DOMI_RO_TOKEN
+        id: gate
+        env:
+          HAS_TOKEN: ${{ secrets.DOMI_RO_TOKEN != '' }}
+        run: |
+          if [ "$HAS_TOKEN" != "true" ]; then
+            echo "::warning::DOMI_RO_TOKEN not set; release-docs lint skipped"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Fetch release tools from DomI
+        if: steps.gate.outputs.skip != 'true'
+        uses: actions/checkout@v5
+        with:
+          repository: domattioli/DomI
+          ref: ${{ vars.DOMI_TOOL_REF || 'main' }}
+          token: ${{ secrets.DOMI_RO_TOKEN }}
+          path: .domi
+          sparse-checkout: skills/release
+      - name: Description shape and README roadmap bullets
+        if: steps.gate.outputs.skip != 'true'
+        run: python3 .domi/skills/release/scripts/zenodo_description.py --repo .
+      - name: Roadmap links to closed issues (warning only)
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .domi/skills/release/scripts/roadmap_lint.py --repo . --repo-slug ${{ github.repository }}

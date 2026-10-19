@@ -1,6 +1,6 @@
 ---
 name: structured-gist
-version: "0.8.0"
+version: "0.9.0"
 benchmark: fact_retention_delta
 description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — fixed role ladder concept (-) → attribute (▸, a named property) → enumerator (I./A./i./a.) → explanation (↪, one prose sentence, usually a leaf). No plain bullets. Render modes — block (fenced, literal glyphs; default on every surface) and responsive (opt-in real GFM nested list for GitHub bodies and chat replies; glyph-free, role carried by typography). One granularity level (standard); skim and deep are archived. Independent of caveman (structure vs wording). Opt-in report preset (`/structured-gist report`, alias `findings`). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist this", "outline this", "bullet this", "notes mode", "break this down", "give me the gist", "make this skimmable", "condense this", "sg report".
 ---
@@ -127,6 +127,19 @@ Word budget — terse by default at EVERY level (recursive):
 - nesting depth mirrors the actual dependency structure of the content
 
 **Observed-versus-inferred (advisory).** When the source distinguishes observation from inference, preserve that distinction. Use separate branches only when grouping would blur status; otherwise keep the attribution explicit inside the `↪`. Never infer evidential status from wording alone, and never manufacture missing evidence.
+
+## Pre-emit check
+
+Run this pass over every outline before you send it. The rules above say what is valid; this pass makes you apply them. Cold renders by the strongest model tier broke R7, R1 and R9 most often (#22).
+
+1. **Word caps (R7).** Count the words on each structural node: concept ≤3, attribute ≤4, enumerator at depth ≥2 ≤6. Over the cap, move the extra words to a `↪` child.
+2. **Enumerator case (R1).** Read each enumerator's absolute depth. Depth 1 takes `I.`/`A.`; depth ≥2 takes `i.`/`a.`, including every enumerator under a `▸`.
+3. **Delimiter tails (R9).** On each structural node, find a spaced dash, colon, semicolon, `→` or parenthetical. More than 2 words after it, split the tail into a child.
+4. **Arrow rarity (R5).** In each top-level block, leaf `↪` nodes must not outnumber the other nodes. Too many, merge or drop the weakest leaves.
+5. **Siblings (R6, R8).** One marker family per child-set. No `▸` directly under a `▸`.
+6. **Line width (R11, `block` only).** Hard-wrap any line past the resolved budget; the continuation keeps the marker line's indent.
+
+Terseness never overrides this pass. When caveman or another wording layer pulls toward fewer nodes, keep the split and compress the words inside each node instead.
 
 ## Granularity
 

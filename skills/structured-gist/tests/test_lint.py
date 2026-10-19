@@ -7,11 +7,12 @@ Tests that real examples pass and bad fixtures fail.
 import pytest
 from pathlib import Path
 import re
+import subprocess
 
 # Import the linter
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
-from lint_outline import lint_file, lint_text
+from lint_outline import lint_file, lint_text, lint_advisories
 
 
 def _lint_all_blocks(path):
@@ -790,3 +791,66 @@ class TestReadmeOutlines:
         assert fence, "README Method section has no ```text outline block"
         violations = lint_text(fence.group(0))
         assert not violations, f"README Method section has violations: {violations}"
+
+
+def _r17_outline(leaf: str) -> str:
+    """One-leaf block outline whose explanation leaf text is `leaf`."""
+    return f"```text\n- Topic\n    ▸ Detail\n        ↪ {leaf}\n```\n"
+
+
+class TestR17Advisory:
+    """R17 (issue #9): 2+ commas in an explanation leaf, advisory-only."""
+
+    def test_two_comma_leaf_flagged(self):
+        advisories = lint_advisories(_r17_outline("parses input, checks rules, prints results"))
+        assert [rule for _, rule, _ in advisories] == ['R17']
+
+    def test_one_comma_leaf_not_flagged(self):
+        assert lint_advisories(_r17_outline("parses input, then prints results")) == []
+
+    @pytest.mark.parametrize("leaf", [
+        "runs `f(a, b, c)` once",
+        'prints "x, y, z" once',
+        "reads inputs (a, b, c) once",
+    ])
+    def test_shielded_commas_not_counted(self, leaf):
+        assert lint_advisories(_r17_outline(leaf)) == []
+
+    def test_non_arrow_nodes_ignored(self):
+        text = "```text\n- Topic\n    ▸ Detail\n        a. one, two, three\n```\n"
+        assert lint_advisories(text) == []
+
+    def test_r17_absent_from_lint_text(self):
+        violations = lint_text(_r17_outline("parses input, checks rules, prints results"))
+        assert 'R17' not in [rule for _, rule, _ in violations]
+
+    def test_every_fence_checked(self):
+        text = "```bash\necho hi\n```\n\n" + _r17_outline("a, b, c")
+        advisories = lint_advisories(text)
+        assert len(advisories) == 1
+        assert 'fence 2' in advisories[0][2]
+
+    def test_advisory_flag_keeps_exit_code(self, tmp_path):
+        clean = tmp_path / 'clean.md'
+        clean.write_text(_r17_outline("parses input, checks rules, prints results"), encoding='utf-8')
+        linter = Path(__file__).parent / 'lint_outline.py'
+        plain = subprocess.run([sys.executable, str(linter), str(clean)],
+                               capture_output=True, text=True)
+        advisory = subprocess.run([sys.executable, str(linter), '--advisory', str(clean)],
+                                  capture_output=True, text=True)
+        assert plain.returncode == 0, plain.stdout
+        assert advisory.returncode == plain.returncode
+        assert '[R17]' not in plain.stdout
+        assert '[R17] (advisory):' in advisory.stdout
+        assert 'structured-gist-lint: 1 advisories' in advisory.stdout
+
+    def test_readme_advisory_cli(self):
+        readme = Path(__file__).parent.parent.parent.parent / 'README.md'
+        linter = Path(__file__).parent / 'lint_outline.py'
+        plain = subprocess.run([sys.executable, str(linter), str(readme)],
+                               capture_output=True, text=True)
+        advisory = subprocess.run([sys.executable, str(linter), '--advisory', str(readme)],
+                                  capture_output=True, text=True)
+        assert '[R17]' not in plain.stdout
+        assert '[R17] (advisory):' in advisory.stdout
+        assert advisory.returncode == plain.returncode

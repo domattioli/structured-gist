@@ -1,6 +1,6 @@
 # structured-gist
 
-<p align="center"><img src="docs/assets/hero.svg" alt="structured-gist: Input, agentic-AI word vomit; Output, a skimmable outline" width="100%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/domattioli/structured-gist/main/docs/assets/hero.svg" alt="structured-gist: Input, agentic-AI word vomit; Output, a skimmable outline" width="100%"></p>
 
 [![Release](https://img.shields.io/github/v/release/domattioli/structured-gist)](https://github.com/domattioli/structured-gist/releases)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
@@ -42,6 +42,17 @@ What's missing is structure: concept, sub-concept, and the relationship between 
 /plugin marketplace add domattioli/structured-gist
 /plugin install structured-gist
 ```
+
+The outline linter and claim-list renderer also ship on PyPI, stdlib only:
+
+```bash
+pip install structured-gist
+structured-gist-lint your_output.md              # exit 1 on any violation
+structured-gist-lint --advisory your_output.md   # also print R17 advisories
+structured-gist-claims your_output.md            # JSONL claim list
+```
+
+In Python, `from structured_gist.lint_outline import lint_text`.
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
@@ -275,6 +286,12 @@ accepted - launch decision is mine.
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 
 ## 7. Future work
+
+Status and roadmap at 0.9.0:
+
+- **Now:** hedge-fidelity axis, waiting on review of the hedge lexicon ([#17](https://github.com/domattioli/structured-gist/issues/17)).
+- **Next:** run the pre-registered controlled benchmark that compares five rendering methods.
+- **Later:** a drill-down mode that expands one node of a rendered outline ([#16](https://github.com/domattioli/structured-gist/issues/16)).
 
 - **Explored directions**
   - A. SCU scoring
