@@ -381,21 +381,38 @@ def r9_delimiter_violation(text: str) -> Optional[str]:
     return None
 
 
-def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
+def r17_comma_chain(text: str) -> Optional[str]:
     """
-    Lint an outline text and return list of violations.
+    Return a short reason string if an explanation leaf's TEXT holds 2+
+    commas — the comma-split shape of issue #9 (a `↪` sentence listing
+    several facts that should nest as children). Inline code spans, HTML
+    entities, double-quoted strings and parentheticals are stripped first
+    (same stripping as R9), so commas inside them never count.
+    """
+    t = re.sub(r'`[^`]*`', '', text)
+    t = re.sub(r'&#?\w+;', ' ', t)
+    if t.startswith('**') and t.endswith('**'):
+        t = t[2:-2]
+    t = re.sub(r'"[^"]*"', ' ', t)
+    t = re.sub(r'\([^)]*\)', ' ', t)
+    comma_count = t.count(',')
+    if comma_count >= 2:
+        return f"{comma_count} commas chain several facts in one explanation — consider nesting each as a child"
+    return None
 
-    Args:
-        text: outline text to lint
-        width: optional R11 line-width budget (int, str "N", or "auto");
-               None → use env STRUCTURED_GIST_WIDTH or default 64
 
-    Returns:
-        list of (lineno, rule_id, message) violations
+def _parse_outline(text: str):
+    """
+    Shared parse for lint_text and lint_advisories.
+
+    Returns (parsed, raw_line_info, is_block_mode), or None when the text
+    holds no outline lines. parsed rows are (lineno, depth, family, text,
+    line); raw_line_info rows are (merged_lineno, raw_line, is_continuation,
+    marker_indent).
     """
     outline_lines, is_block_mode = extract_outline_from_text(text)
     if not outline_lines:
-        return []
+        return None
 
     # Step 1: Merge continuation lines into marker lines.
     # A continuation line is one whose parse_line returns family='unknown'.
@@ -445,6 +462,26 @@ def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
         depth, family, text = parse_line(line, unit=unit)
         parsed.append((i + 1, depth, family, text, line)) # lineno is 1-indexed within merged
 
+    return parsed, raw_line_info, is_block_mode
+
+
+def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
+    """
+    Lint an outline text and return list of violations.
+
+    Args:
+        text: outline text to lint
+        width: optional R11 line-width budget (int, str "N", or "auto");
+               None → use env STRUCTURED_GIST_WIDTH or default 64
+
+    Returns:
+        list of (lineno, rule_id, message) violations
+    """
+    result = _parse_outline(text)
+    if result is None:
+        return []
+    parsed, raw_line_info, is_block_mode = result
+
     violations: List[Violation] = []
 
     # Pre-compute parent info for each line
@@ -466,7 +503,9 @@ def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
 
     # FR-003a rule-identifier allocation:
     # R16 = depth-indent rule (issue #6)
-    # R17 = comma-split rule (issue #9)
+    # R17 = comma-split rule (issue #9) — implemented as advisory-only in
+    #       lint_advisories(), never returned here. Blocked from error
+    #       promotion until hedge detection exists (issue #9 comment).
 
     # R1: ladder-by-depth (NEW: bullet invalid at all depths, arrow valid at any depth, attr valid at depth>=1)
     for lineno, depth, family, _text, _line in parsed:
@@ -837,6 +876,52 @@ def lint_text(text: str, width: Optional[str] = None) -> List[Violation]:
     return violations
 
 
+def lint_advisories(text: str, width: Optional[str] = None) -> List[Violation]:
+    """
+    Return advisory findings for an outline text. Advisories never count as
+    violations: lint_text/lint_file never return them and they never change
+    the CLI exit code.
+
+    R17 (issue #9): an explanation leaf with 2+ commas. Applies to family
+    'arrow' only. Responsive mode is covered too: extract_outline_from_text
+    rewrites its glyph-free explanation leaves to '↪ ', so they parse as
+    'arrow' as well.
+
+    Unlike lint_text, which only reads the FIRST fenced block, this checks
+    EVERY fenced block in `text` (each parsed the same way lint_text parses
+    one outline), so a document whose first fence is a shell snippet still
+    gets its outlines checked. Line numbers are merged-line indexes within
+    their block, as in lint_text; with fences present each message names its
+    1-based fence number.
+
+    Args:
+        text: outline text to check
+        width: accepted for signature parity with lint_text; unused
+
+    Returns:
+        list of (lineno, rule_id, message) advisories
+    """
+    fences = [m.group(0) for m in re.finditer(r'^```[^\n]*\n.*?^```', text, re.MULTILINE | re.DOTALL)]
+    blocks = [(f"fence {k}: ", body) for k, body in enumerate(fences, 1)] or [('', text)]
+
+    advisories: List[Violation] = []
+    for prefix, block in blocks:
+        result = _parse_outline(block)
+        if result is None:
+            continue
+        parsed, _raw_line_info, _is_block_mode = result
+        for i, (lineno, depth, family, node_text, _line) in enumerate(parsed):
+            if family != 'arrow':
+                continue
+            is_leaf = not (i + 1 < len(parsed) and parsed[i + 1][1] > depth)
+            if not is_leaf:
+                continue
+            reason = r17_comma_chain(node_text)
+            if reason is not None:
+                advisories.append((lineno, 'R17', prefix + reason))
+    return advisories
+
+
 def lint_file(path: str, width: Optional[str] = None) -> List[Violation]:
     """Lint a file and return list of violations.
 
@@ -854,6 +939,12 @@ def lint_file(path: str, width: Optional[str] = None) -> List[Violation]:
         return lint_text(text, width=width)
     except Exception as e:
         return [(0, 'IO', f"failed to read file: {e}")]
+
+
+def _print_advisory_lines(advisories: List[Violation]) -> None:
+    """Print advisories as ' line N [R17] (advisory): msg', in fence order."""
+    for lineno, rule, msg in advisories:
+        print(f" line {lineno} [{rule}] (advisory): {msg}")
 
 
 def main():
@@ -876,6 +967,12 @@ def main():
               '(terminal columns - 8, clamped to 32..120; 64 when no terminal '
               'width is known). Omitted: env STRUCTURED_GIST_WIDTH, else 64')
     )
+    parser.add_argument(
+        '--advisory',
+        action='store_true',
+        help=('Also print advisory findings (R17) after the violations. '
+              'Advisories never change the exit code')
+    )
 
     args = parser.parse_args()
 
@@ -886,10 +983,15 @@ def main():
         for lineno, rule, msg in sorted(violations, key=lambda x: x[0]):
             print(f" line {lineno} [{rule}]: {msg}")
         print(f"structured-gist-lint: {'PASS' if not violations else 'FAIL'} ({len(violations)} violations)")
+        if args.advisory:
+            advisories = lint_advisories(text, width=args.width)
+            _print_advisory_lines(advisories)
+            print(f"structured-gist-lint: {len(advisories)} advisories")
         sys.exit(0 if not violations else 1)
 
     # Lint files
     all_violations = {}
+    all_advisories = []
     for filepath in args.files:
         violations = lint_file(filepath, width=args.width)
         all_violations[filepath] = violations
@@ -897,6 +999,17 @@ def main():
             print(f" line {lineno} [{rule}]: {msg}")
         status = 'PASS' if not violations else 'FAIL'
         print(f"structured-gist-lint {filepath}: {status} ({len(violations)} violations)")
+        if args.advisory:
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    advisories = lint_advisories(f.read(), width=args.width)
+            except Exception:
+                advisories = [] # read failure already reported as an IO violation
+            _print_advisory_lines(advisories)
+            all_advisories.extend(advisories)
+
+    if args.advisory:
+        print(f"structured-gist-lint: {len(all_advisories)} advisories")
 
     # Exit with success only if all files are clean
     has_violations = any(all_violations.values())
