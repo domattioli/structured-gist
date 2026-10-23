@@ -4,6 +4,12 @@ Release notes for tagged versions. The release workflow publishes the section th
 
 ## [Unreleased]
 
+## [0.9.1] — 2026-10-23
+
+### Fixed
+
+- `structured-gist-claims --help` no longer crashes with `FileNotFoundError`. The command now parses its arguments with argparse: an optional `file` argument (stdin when omitted), `-h/--help` and `--version`. Output and exit codes for file and stdin input are unchanged.
+
 ## [0.9.0] — 2026-10-19
 
 First release on PyPI. It covers the unreleased 0.7.0 and 0.8.0 work and the changes below.
