@@ -49,8 +49,8 @@ Generator: `claude-opus-5-5` at `medium` effort, through the
 id; a resolved id that differs from the pinned id is refused and not scored
 (FR-021).
 
-Skill: `SKILL.md` version `0.9.0`, SHA-256
-`baa1c4c5a6b8f365d2ebc57cba8f349aa73d2d4bc1c80f2bcd9ab0070eb4d4ce`. `reference/render-modes.md` SHA-256
+Skill: `SKILL.md` version `0.9.1`, SHA-256
+`5740a744154a4121160a3146fc66ce5c53a685a06318832414d86243db23faf0`. `reference/render-modes.md` SHA-256
 `c9a84ae76f9f792ce64a0e3fe4c506b06cc2dacbf5db8f70c9f68ef1a47b0bb9`.
 
 Prompt files in `prompts/` (SHA-256 of the exact bytes):
@@ -331,3 +331,9 @@ in the next window with the same confirmed estimate.
   check, issue #22) changed both files before any full run; the pins must
   match the skill the arm loads. The 0.7.0 dry run is superseded and not
   reported. No prompt, method, metric, threshold, case or judge id changed.
+- 2026-10-23. Change: skill arm re-pinned to `SKILL.md` version `0.9.1`
+  (SHA-256 `5740a744154a...`, was `baa1c4c5a6b8...`). `reference/render-modes.md`
+  is unchanged. Reason: release 0.9.1 bumped only the `version:` frontmatter
+  field of `SKILL.md`; the skill text the arm loads is byte-identical apart
+  from that field. No prompt, method, metric, threshold, case or judge id
+  changed.
