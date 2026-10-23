@@ -1,7 +1,8 @@
 """Every version source in the repo names the same release version.
 
 stdlib + pytest only. Sources: pyproject.toml [project] version, SKILL.md
-frontmatter, plugin.json, CITATION.cff and .zenodo.json.
+frontmatter, plugin.json, CITATION.cff, .zenodo.json and the
+_FALLBACK_VERSION constant in claim_list.py.
 """
 import json
 import pathlib
@@ -48,6 +49,13 @@ def _zenodo_version():
     return json.loads((REPO / ".zenodo.json").read_text(encoding="utf-8"))["version"]
 
 
+def _claim_list_fallback_version():
+    text = (REPO / "skills/structured-gist/render/claim_list.py").read_text(encoding="utf-8")
+    match = re.search(r'(?m)^_FALLBACK_VERSION\s*=\s*"([^"]+)"', text)
+    assert match, "claim_list.py has no _FALLBACK_VERSION"
+    return match.group(1)
+
+
 def test_all_version_sources_agree():
     versions = {
         "pyproject.toml": _pyproject_version(),
@@ -55,5 +63,6 @@ def test_all_version_sources_agree():
         "plugin.json": _plugin_version(),
         "CITATION.cff": _citation_version(),
         ".zenodo.json": _zenodo_version(),
+        "claim_list.py": _claim_list_fallback_version(),
     }
     assert len(set(versions.values())) == 1, versions

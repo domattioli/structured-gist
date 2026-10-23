@@ -348,11 +348,38 @@ def render_claim_list(outline_text: str) -> str:
     return output.getvalue()
 
 
-def main():
+_FALLBACK_VERSION = "0.9.1"
+
+
+def _package_version():
+    """Installed distribution version, else the bundled constant."""
+    try:
+        from importlib.metadata import version, PackageNotFoundError
+        try:
+            return version("structured-gist")
+        except PackageNotFoundError:
+            return _FALLBACK_VERSION
+    except ImportError:
+        return _FALLBACK_VERSION
+
+
+def main(argv=None):
     """CLI entry point."""
-    if len(sys.argv) > 1:
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        prog="structured-gist-claims",
+        description="Render a structured-gist outline as JSONL claim records.",
+    )
+    parser.add_argument("file", nargs="?", default=None,
+                        help="outline file to read (default: stdin)")
+    parser.add_argument("--version", action="version",
+                        version=f"%(prog)s {_package_version()}")
+    args = parser.parse_args(argv)
+
+    if args.file is not None:
         # Read from file
-        with open(sys.argv[1], 'r', encoding='utf-8') as f:
+        with open(args.file, 'r', encoding='utf-8') as f:
             text = f.read()
     else:
         # Read from stdin
