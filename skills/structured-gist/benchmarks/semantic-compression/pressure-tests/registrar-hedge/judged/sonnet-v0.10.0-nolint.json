@@ -1,0 +1,282 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Migrate acme-studio.com from the old Squarespace site",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "weakens the instant-rollback property, so give the",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "Prefer a DNS-record cutover the user can revert in",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "II. Choose apex and www path",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "\u21aa Only if the current host allows it.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "add acme-studio.com and www.acme-studio.com, then make",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "e. Extensionless /about returns 200",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "remind the user to submit the sitemap in Google Search",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "\u21aa Not functional yet; being fixed separately.",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "The launch decision belongs to the user.",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "\u21aa It must remain intact for about 2 weeks after",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. Squarespace, live at acme-studio.com",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "c. Deployed by wrangler upload",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "CRITICAL: the same Cloudflare account also hosts the",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "\u21aa Unconfirmed. Likely Squarespace Domains, since the",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "possibly Google Domains legacy",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "rollback snapshot before changing anything.",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "supports what the apex needs: CNAME flattening or",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "site as a free zone, import records, switch",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "d. Account personal-account",
+        "note": "Account name not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "\u21aa Use whois and what the Squarespace or Domains",
+        "note": "whois method not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "user click-by-click; they will be logged into the",
+        "note": "Click-by-click guidance and screen-share details not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Migration task",
+            "Goal"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Requested steps",
+            "II. Choose apex and www path"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Constraints",
+            "Cutover preference"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Requested steps",
+            "II. Choose apex and www path"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Requested steps",
+            "III. Lower TTLs first"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Requested steps",
+            "IV. Add custom domains"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Requested steps",
+            "V. Verify cutover"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Requested steps",
+            "VI. Save rollback note"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Known issue",
+            "Contact form backend"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Known issue",
+            "Launch decision"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Constraints",
+            "Old site",
+            "b. Rollback target"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Constraints",
+            "Old site"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Migration task",
+            "New site"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Constraints",
+            "Protected project"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Constraints",
+            "Registrar"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Constraints",
+            "Registrar"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Requested steps",
+            "I. Identify registrar and DNS host"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Requested steps",
+            "II. Choose apex and www path"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Requested steps",
+            "II. Choose apex and www path"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Migrate acme-studio.com from Squarespace to Cloudflare Pages",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact form backend is not functional yet, being fixed separately; accepted if DNS completes today, launch decision is the user's",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace at acme-studio.com. New: Cloudflare Pages project acme-studio at acme-studio.pages.dev",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No. Unconfirmed; likely Squarespace Domains, possibly Google Domains legacy or another registrar",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains (likely), Google Domains legacy, or another registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar and DNS host (whois, dashboard); list current DNS records as a written rollback snapshot",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Confirm it supports CNAME flattening or ALIAS for the apex; if not, move DNS hosting to Cloudflare",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Weakens instant-rollback property; actual rollback procedure and time must be given",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "DNS-record cutover revertible in minutes; avoid destructive steps: cancel Squarespace, delete site, transfer registration",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "Old Squarespace site must remain intact as rollback target for about 2 weeks after cutover",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "\u21aa Unconfirmed. Likely Squarespace Domains, since the",
+        "status": "partial"
+      },
+      "r2": {
+        "evidence": "\u21aa If not, move just DNS hosting to Cloudflare: add the",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "weakens the instant-rollback property, so give the",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "VI. Save rollback note",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "\u21aa If DNS is completed today, that is accepted. The",
+        "status": "retained"
+      }
+    }
+  }
+}

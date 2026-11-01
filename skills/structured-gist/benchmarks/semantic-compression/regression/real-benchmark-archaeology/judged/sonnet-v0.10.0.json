@@ -1,0 +1,322 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "`seconds_to_locate_fact` was wall-clock time for a",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "a. direct-prompt 0.5488",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "b. KG mode 0.7604",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "↪ KG mode scored a perfect 1.0 by construction, since it",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "b. KG mode 0.7608",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "↪ KG mode's stricter word budgets ended up dropping real",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "↪ Recorded as \"iterate,\" not \"ship\": KG mode never",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "became the default rendering path, and was later",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "scaffold under spec-026's FR-006.",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "↪ None of it exists anywhere in this checkout; it lived",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "commits stripped it out when this public scaffold was",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "reader to find a single fact by scanning an outline",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "↪ Only tiny non-functional placeholder stub files and",
+        "status": "retained"
+      },
+      "f21": {
+        "evidence": "against source text unit by unit, but was never formalized",
+        "status": "retained"
+      },
+      "f22": {
+        "evidence": "into a repeatable benchmark anyone could rerun.",
+        "status": "retained"
+      },
+      "f23": {
+        "evidence": "outline; rejected outright because its recall dropped below",
+        "status": "retained"
+      },
+      "f24": {
+        "evidence": "should KG mode be revisited, or does its retention gap",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "Across six version bumps it was never once measured;",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "Formally retired on 2026-07-03.",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "`word_count_reduction_pct` became the declared primary",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "ever recorded a real number for.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "88-word outline over the same matched scope, a 40.1%",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "v0.4.0 introduced `outline_quality_composite` under",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "mode, across a 20-source corpus.",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "every historical row citing it reads \"not-measured\" or",
+        "note": "not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "reduction computed with a literal word count rather than",
+        "note": "not in gold Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Retired metric",
+            "Definition"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Composite benchmark",
+            "Composite scores"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Composite benchmark",
+            "Composite scores"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Composite benchmark",
+            "Robustness"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Composite benchmark",
+            "Retention scores"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Composite benchmark",
+            "Retention gap"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Composite benchmark",
+            "Verdict"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Composite benchmark",
+            "Verdict"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Composite benchmark",
+            "Verdict"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Missing machinery",
+            "Status"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Missing machinery",
+            "Cause"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Retired metric",
+            "Definition"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Missing machinery",
+            "Surviving evidence"
+          ]
+        },
+        "f21": {
+          "located": [
+            "Abandoned approaches",
+            "A. SCU scoring"
+          ]
+        },
+        "f22": {
+          "located": [
+            "Abandoned approaches",
+            "A. SCU scoring"
+          ]
+        },
+        "f23": {
+          "located": [
+            "Abandoned approaches",
+            "B. JSONL claim list"
+          ]
+        },
+        "f24": {
+          "located": [
+            "Open question",
+            "Proposition"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Retired metric",
+            "Track record"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Retired metric",
+            "Retirement"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Replacement metric",
+            "Name"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Replacement metric",
+            "Name"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Replacement metric",
+            "Evidence"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Composite benchmark",
+            "Origin"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Composite benchmark",
+            "Comparison"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "seconds_to_locate_fact; never measured across six version bumps, then retired 2026-07-03.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "word_count_reduction_pct, as the only metric with a real recorded number.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Lower: 0.7608 vs 0.8285.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Its stricter word budgets dropped real content.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; verdict was iterate and it was excluded from the public scaffold.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "No; stripped by sync commits; only stub files and benchmark.md row remain.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Its recall dropped below the team's acceptance threshold.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Whether KG mode should be revisited given a real retention-scoring approach and its retention gap.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "↪ Formally retired on 2026-07-03.",
+        "status": "partial"
+      },
+      "r2": {
+        "evidence": "b. KG mode 0.7608",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "↪ KG mode's stricter word budgets ended up dropping real",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "↪ Recorded as \"iterate,\" not \"ship\": KG mode never",
+        "status": "partial"
+      },
+      "r5": {
+        "evidence": "commits stripped it out when this public scaffold was",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "outline; rejected outright because its recall dropped below",
+        "status": "retained"
+      }
+    }
+  }
+}

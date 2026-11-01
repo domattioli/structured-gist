@@ -1,0 +1,609 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Only the fourth alert had real financial impact, is",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "The retry path is missing an idempotency check.",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "has not been reviewed; the fix has not shipped.",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "checkout-service, ranked above every other open",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "still live in production and could recur at any",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "job was triggered manually and it cleared in about 2",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "service, not a checkout-service fault; resolved on",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "Only the fourth alert had real financial impact, is",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "still unresolved at the code level, and was missed by",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "automated monitoring; the other five were unremarkable",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "the other five were unremarkable",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "cleared in 3 minutes with no human involvement.",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "a. v3.14.1 launch crash",
+        "status": "partial"
+      },
+      "f21": {
+        "evidence": "train as a whole are independent of the other",
+        "status": "retained"
+      },
+      "f22": {
+        "evidence": "older OS version with a one-line null check; shipped",
+        "status": "retained"
+      },
+      "f23": {
+        "evidence": "a particular screen notch shape; purely cosmetic, no",
+        "status": "retained"
+      },
+      "f24": {
+        "evidence": "Rushed fix for a login-flow regression introduced",
+        "status": "retained"
+      },
+      "f25": {
+        "evidence": "aggressive and also suppressed a legitimate error",
+        "status": "retained"
+      },
+      "f26": {
+        "evidence": "v3.14.3 is the only release that depends on an earlier",
+        "status": "retained"
+      },
+      "f27": {
+        "evidence": "in response to accessibility feedback.",
+        "status": "retained"
+      },
+      "f28": {
+        "evidence": "The other releases and the",
+        "status": "partial"
+      },
+      "f29": {
+        "evidence": "Upstream schema drift: a source system added or",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "once traffic normalized across new pods, about 5",
+        "status": "retained"
+      },
+      "f30": {
+        "evidence": "The source CRM renamed `lead_status` to",
+        "status": "retained"
+      },
+      "f31": {
+        "evidence": "existing single-currency assumption.",
+        "status": "retained"
+      },
+      "f32": {
+        "evidence": "Same reason as crm-connector, a renamed column,",
+        "status": "retained"
+      },
+      "f33": {
+        "evidence": "dropped entirely rather than renamed; the mapping",
+        "status": "retained"
+      },
+      "f34": {
+        "evidence": "`campaign_id` was renamed to `campaign_uuid`;",
+        "status": "retained"
+      },
+      "f35": {
+        "evidence": "before a connector fails at ingest, not after. That work",
+        "status": "retained"
+      },
+      "f36": {
+        "evidence": "has not started; it is logged as a next-quarter",
+        "status": "retained"
+      },
+      "f37": {
+        "evidence": "Four workstreams ran in parallel this week and do not",
+        "status": "partial"
+      },
+      "f38": {
+        "evidence": "Four workstreams ran in parallel this week and do not",
+        "status": "retained"
+      },
+      "f39": {
+        "evidence": "The on-call runbook covered 40 alert types across a",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "customer-facing impact confirmed afterward.",
+        "status": "retained"
+      },
+      "f40": {
+        "evidence": "updated in over a year, so several sections were",
+        "status": "retained"
+      },
+      "f41": {
+        "evidence": "a. split into per-service files",
+        "status": "retained"
+      },
+      "f42": {
+        "evidence": "c. archived nine decommissioned sections",
+        "status": "retained"
+      },
+      "f43": {
+        "evidence": "surviving section's guidance is byte-for-byte the same,",
+        "status": "retained"
+      },
+      "f44": {
+        "evidence": "A new hire's feedback during their first on-call",
+        "status": "retained"
+      },
+      "f45": {
+        "evidence": "causing a mishandled alert prompted it.",
+        "status": "retained"
+      },
+      "f46": {
+        "evidence": "code-owner metadata updated to point at the right team;",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "About 140 customers were charged twice for the",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "stale state and let a duplicate charge through.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "No alert or monitoring signal caught it, as",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "A support ticket flagged the duplicate charge roughly six hours later and",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "140 customers and all were refunded the same day",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "A cache layer served slightly outdated pricing",
+        "note": "pricing detail not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "Autoscaler added capacity during a traffic burst",
+        "note": "traffic burst not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "A log volume approached capacity",
+        "note": "log volume detail not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "and the load failed",
+        "note": "load failure detail not in gold Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Checkout reliability",
+            "Alerts"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Cause"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Fix status"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Priority"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Priority"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "e. Disk-space warning"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "f. Dependency 500 spike"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Checkout reliability",
+            "Comparison"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Checkout reliability",
+            "Comparison"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Checkout reliability",
+            "Comparison"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Checkout reliability",
+            "Comparison"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "a. CPU spike"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Mobile releases",
+            "Releases"
+          ]
+        },
+        "f21": {
+          "located": [
+            "Mobile releases",
+            "Dependencies"
+          ]
+        },
+        "f22": {
+          "located": [
+            "Mobile releases",
+            "Releases",
+            "a. v3.14.1 launch crash"
+          ]
+        },
+        "f23": {
+          "located": [
+            "Mobile releases",
+            "Releases",
+            "b. v3.14.2 layout bug"
+          ]
+        },
+        "f24": {
+          "located": [
+            "Mobile releases",
+            "Releases",
+            "c. v3.14.3 hotfix"
+          ]
+        },
+        "f25": {
+          "located": [
+            "Mobile releases",
+            "Releases",
+            "c. v3.14.3 hotfix"
+          ]
+        },
+        "f26": {
+          "located": [
+            "Mobile releases",
+            "Dependencies"
+          ]
+        },
+        "f27": {
+          "located": [
+            "Mobile releases",
+            "Releases",
+            "d. v3.14.4 animation setting"
+          ]
+        },
+        "f28": {
+          "located": [
+            "Mobile releases",
+            "Dependencies"
+          ]
+        },
+        "f29": {
+          "located": [
+            "Connector maintenance",
+            "Failure class"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "b. Deploy latency warning"
+          ]
+        },
+        "f30": {
+          "located": [
+            "Connector maintenance",
+            "Connectors",
+            "a. `crm-connector` Monday"
+          ]
+        },
+        "f31": {
+          "located": [
+            "Connector maintenance",
+            "Connectors",
+            "b. `billing-events-connector` Tuesday"
+          ]
+        },
+        "f32": {
+          "located": [
+            "Connector maintenance",
+            "Connectors",
+            "c. `support-tickets-connector` Wednesday"
+          ]
+        },
+        "f33": {
+          "located": [
+            "Connector maintenance",
+            "Connectors",
+            "d. `inventory-connector` Thursday"
+          ]
+        },
+        "f34": {
+          "located": [
+            "Connector maintenance",
+            "Connectors",
+            "e. `marketing-events-connector` Friday"
+          ]
+        },
+        "f35": {
+          "located": [
+            "Connector maintenance",
+            "Follow-up"
+          ]
+        },
+        "f36": {
+          "located": [
+            "Connector maintenance",
+            "Follow-up"
+          ]
+        },
+        "f37": {
+          "located": [
+            "Recap scope",
+            "Grouping"
+          ]
+        },
+        "f38": {
+          "located": [
+            "Recap scope",
+            "Grouping"
+          ]
+        },
+        "f39": {
+          "located": [
+            "Runbook cleanup",
+            "Problem"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "c. Stale-cache warning"
+          ]
+        },
+        "f40": {
+          "located": [
+            "Runbook cleanup",
+            "Problem"
+          ]
+        },
+        "f41": {
+          "located": [
+            "Runbook cleanup",
+            "Changes"
+          ]
+        },
+        "f42": {
+          "located": [
+            "Runbook cleanup",
+            "Changes"
+          ]
+        },
+        "f43": {
+          "located": [
+            "Runbook cleanup",
+            "Guidance"
+          ]
+        },
+        "f44": {
+          "located": [
+            "Runbook cleanup",
+            "Trigger"
+          ]
+        },
+        "f45": {
+          "located": [
+            "Runbook cleanup",
+            "Trigger"
+          ]
+        },
+        "f46": {
+          "located": [
+            "Runbook cleanup",
+            "Open item"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Impact"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Cause"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Detection"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Detection"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Checkout reliability",
+            "Alerts",
+            "d. Duplicate charges",
+            "Response"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "The fourth alert, the duplicate charges: only one with financial impact, unresolved in code, missed by monitoring; other five noise.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "About 140 customers within a 40-minute window, roughly 09:10 to 09:50.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Not caught by monitoring; a support ticket flagged it roughly six hours later.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No; a design exists but is unreviewed, and it is the highest-priority unresolved action.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "v3.14.3 depends on v3.14.1; the null check was too aggressive so v3.14.3 narrowed it.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Five connectors, all hit by upstream schema drift breaking the fixed mapping.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "A new hire could not find the right section under pressure; no incident of the runbook causing a mishandled alert.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "No; guidance is byte-for-byte the same, only layout and index changed.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "stale state and let a duplicate charge through.",
+        "status": "retained"
+      },
+      "r10": {
+        "evidence": "updated in over a year, so several sections were",
+        "status": "retained"
+      },
+      "r11": {
+        "evidence": "A new hire's feedback during their first on-call",
+        "status": "retained"
+      },
+      "r12": {
+        "evidence": "and only the file layout and index changed.",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "No alert or monitoring signal caught it, as",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "Only the fourth alert had real financial impact, is",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "A support ticket flagged the duplicate charge roughly six hours later and",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "ranked above every other open",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "v3.14.3 is the only release that depends on an earlier",
+        "status": "retained"
+      },
+      "r7": {
+        "evidence": "The other releases and the",
+        "status": "partial"
+      },
+      "r8": {
+        "evidence": "Same reason as crm-connector, a renamed column,",
+        "status": "retained"
+      },
+      "r9": {
+        "evidence": "As this was the fifth time in as many days that the",
+        "status": "retained"
+      }
+    }
+  }
+}

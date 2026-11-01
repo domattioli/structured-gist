@@ -1,0 +1,285 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "move acme-studio.com from the old Squarespace site to",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "property; state the actual rollback procedure and",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "minutes",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "II. Choose apex + www path",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "if the current host allows it",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "add acme-studio.com and www.acme-studio.com, then make",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "e. /about returns 200",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "reminder to submit the sitemap in Google Search Console",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "the backend is not functional yet and is being fixed",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "launch decision is the user's",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "remain intact as a rollback target for ~2 weeks after",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "Squarespace, still live at acme-studio.com; it must",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "https://acme-studio.pages.dev",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the same Cloudflare account hosts the personal site",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "unconfirmed - likely Squarespace Domains (site was",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "built there), possibly Google Domains legacy or another",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "list current DNS records as a written rollback",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "needs (CNAME flattening/ALIAS)",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "import records, switch nameservers, keeping",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "guided click-by-click",
+        "note": "not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "d. account personal-account",
+        "note": "account name not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "use whois and what the Squarespace/Domains dashboard shows",
+        "note": "method not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Domain migration",
+            "Goal"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Steps",
+            "II. Choose apex + www path",
+            "c. rollback procedure and time"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Constraints",
+            "B. revertible DNS cutover"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Steps",
+            "II. Choose apex + www path"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Steps",
+            "III. Lower TTLs first"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Steps",
+            "IV. Add Pages custom domains"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Steps",
+            "V. Verify",
+            "e. /about returns 200"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Steps",
+            "VI. Save rollback note"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Open issue",
+            "Contact form"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Open issue",
+            "Contact form"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Domain migration",
+            "Old site"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Domain migration",
+            "Old site"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Domain migration",
+            "New site"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Constraints",
+            "A. personal-portfolio untouched"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Domain migration",
+            "Registrar"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Domain migration",
+            "Registrar"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Steps",
+            "I. Identify registrar, DNS host"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Steps",
+            "II. Choose apex + www path",
+            "a. DNS stays at Squarespace"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Steps",
+            "II. Choose apex + www path",
+            "b. DNS hosting moves to Cloudflare"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Migrate acme-studio.com from Squarespace to Cloudflare Pages",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "Contact form backend not functional, being fixed separately; completing DNS today is accepted, launch decision is the user's",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Old: Squarespace live at acme-studio.com; new: Cloudflare Pages at acme-studio.pages.dev",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No; unconfirmed, likely Squarespace Domains, possibly Google Domains legacy or another registrar",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "Squarespace Domains, Google Domains legacy, or another registrar",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Identify registrar and DNS host; list current DNS records as a written rollback snapshot",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Confirm Squarespace DNS supports CNAME flattening/ALIAS for apex; if not, move DNS hosting to Cloudflare",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Moving DNS weakens instant rollback; must state actual rollback procedure and time",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "DNS-record cutover revertible in minutes; no destructive steps (keep Squarespace subscription/site, no registration transfer)",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "The old Squarespace site, intact as rollback target for ~2 weeks after cutover",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "unconfirmed - likely Squarespace Domains (site was",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "if not supported: add the site as a free zone,",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "moving DNS weakens the \"instant rollback\"",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "I. Identify registrar, DNS host",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "completing DNS today is accepted, and the",
+        "status": "retained"
+      }
+    }
+  }
+}

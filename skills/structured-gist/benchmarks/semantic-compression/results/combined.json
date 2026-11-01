@@ -141,6 +141,30 @@
         "weighted_retention": 0.8
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.9133,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 337,
+        "recoverability": 1.0,
+        "reduction_pct": 8.67,
+        "relation_retention": 1.0,
+        "source_words": 369,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "test_class": "pressure-tests"
   },
   "cause-chain-reversal": {
@@ -332,6 +356,30 @@
         "output_words": 356,
         "recoverability": 0.8125,
         "reduction_pct": 1.39,
+        "relation_retention": 1.0,
+        "source_words": 361,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.9747,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.975,
+        "weighted_retention": 0.9747
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.8476,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 3,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 306,
+        "recoverability": 1.0,
+        "reduction_pct": 15.24,
         "relation_retention": 1.0,
         "source_words": 361,
         "status": "scored",
@@ -630,12 +678,84 @@
         "weighted_retention": 0.9477
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.9143,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 256,
+        "recoverability": 1.0,
+        "reduction_pct": 8.57,
+        "relation_retention": 1.0,
+        "source_words": 280,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "test_class": "pressure-tests"
   },
   "near-identical-numbers": {
     "intent": {
       "reader": "an engineer who needs to act on the exact values in this recap (cite a version, path, or SHA) without re-reading the source",
       "task": "precise recall of exact identifiers under compression -- near-miss numbers/paths/SHAs must not become interchangeable"
+    },
+    "opus-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.9928,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 3,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 274,
+        "recoverability": 1.0,
+        "reduction_pct": 0.72,
+        "relation_retention": 1.0,
+        "source_words": 276,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "standard": {
+        "compression_ratio": 1.0145,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 0,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 280,
+        "recoverability": 1.0,
+        "reduction_pct": -1.45,
+        "relation_retention": 1.0,
+        "source_words": 276,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
     },
     "pressure_tags": [
       "adversarial",
@@ -818,6 +938,65 @@
         "weighted_retention": 0.9508
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 1.029,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 284,
+        "recoverability": 1.0,
+        "reduction_pct": -2.9,
+        "relation_retention": 0.9167,
+        "source_words": 276,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "standard": {
+        "compression_ratio": 0.9783,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 8,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          },
+          {
+            "line": 15,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          }
+        ],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 270,
+        "recoverability": 1.0,
+        "reduction_pct": 2.17,
+        "relation_retention": 1.0,
+        "source_words": 276,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "test_class": "regression"
   },
   "negation-and-true-peers": {
@@ -917,6 +1096,30 @@
         "unverified_claim_count": 0,
         "unweighted_retention": 0.975,
         "weighted_retention": 0.9895
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.7941,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.05,
+        "output_words": 216,
+        "recoverability": 0.9375,
+        "reduction_pct": 20.59,
+        "relation_retention": 0.875,
+        "source_words": 272,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.8947,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.9,
+        "weighted_retention": 0.8947
       }
     },
     "test_class": "pressure-tests"
@@ -1027,12 +1230,84 @@
         "weighted_retention": 0.8846
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.8155,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 380,
+        "recoverability": 1.0,
+        "reduction_pct": 18.45,
+        "relation_retention": 0.8333,
+        "source_words": 466,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "test_class": "regression"
   },
   "real-hook-discovery": {
     "intent": {
       "reader": "an engineer resuming this debugging thread later, or a teammate picking it up cold",
       "task": "confirm what broke, why, and whether the fix is complete enough to trust without re-reading the full investigation"
+    },
+    "opus-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.7792,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 180,
+        "recoverability": 1.0,
+        "reduction_pct": 22.08,
+        "relation_retention": 0.9,
+        "source_words": 231,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.9615,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.9667,
+        "weighted_retention": 0.9615
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "standard": {
+        "compression_ratio": 0.9567,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 221,
+        "recoverability": 1.0,
+        "reduction_pct": 4.33,
+        "relation_retention": 1.0,
+        "source_words": 231,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
     },
     "pressure_tags": [
       "realistic_recap",
@@ -1107,10 +1382,112 @@
         "weighted_retention": 0.9538
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.9264,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 214,
+        "recoverability": 1.0,
+        "reduction_pct": 7.36,
+        "relation_retention": 0.9,
+        "source_words": 231,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "standard": {
+        "compression_ratio": 0.8139,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 21,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          }
+        ],
+        "flagged_vs_gold_count": 1,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 188,
+        "recoverability": 1.0,
+        "reduction_pct": 18.61,
+        "relation_retention": 1.0,
+        "source_words": 231,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "test_class": "regression"
   },
   "registrar-hedge": {
     "intent": null,
+    "opus-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.8819,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 4,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 336,
+        "recoverability": 1.0,
+        "reduction_pct": 11.81,
+        "relation_retention": 0.8,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "standard": {
+        "compression_ratio": 0.9396,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 3,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 358,
+        "recoverability": 1.0,
+        "reduction_pct": 6.04,
+        "relation_retention": 0.9,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "opus-v0.4.12": {
       "deep": {
         "compression_ratio": 1.5696,
@@ -1605,6 +1982,54 @@
         "weighted_retention": 0.753
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 1.0446,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 2,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 398,
+        "recoverability": 1.0,
+        "reduction_pct": -4.46,
+        "relation_retention": 0.9,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "standard": {
+        "compression_ratio": 1.0315,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 3,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 393,
+        "recoverability": 1.0,
+        "reduction_pct": -3.15,
+        "relation_retention": 0.8,
+        "source_words": 381,
+        "status": "scored",
+        "task_weighted_fact_retention": 1.0,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 1.0,
+        "weighted_retention": 1.0
+      }
+    },
     "test_class": "pressure-tests"
   },
   "synthetic-scale-verylarge": {
@@ -2070,6 +2495,30 @@
         "unverified_claim_count": 0,
         "unweighted_retention": 0.7391,
         "weighted_retention": 0.7316
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "compression_ratio": 0.6931,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "flagged_vs_gold_count": 4,
+        "is_block_mode": true,
+        "mutation_rate": 0.0,
+        "omission_rate": 0.0,
+        "output_words": 910,
+        "recoverability": 1.0,
+        "reduction_pct": 30.69,
+        "relation_retention": 0.9583,
+        "source_words": 1313,
+        "status": "scored",
+        "task_weighted_fact_retention": 0.9632,
+        "unsupported_claim_count": 0,
+        "unsupported_claims": [],
+        "unverified_claim_count": 0,
+        "unweighted_retention": 0.9674,
+        "weighted_retention": 0.9632
       }
     },
     "test_class": "pressure-tests"

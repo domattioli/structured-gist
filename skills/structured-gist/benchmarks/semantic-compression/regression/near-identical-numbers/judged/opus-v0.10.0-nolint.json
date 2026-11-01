@@ -1,0 +1,217 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "b. 30 seconds to 5 seconds",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "not a raw timeout-seconds change: the timeout unit\n        changed from seconds to a duration string",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "functionally\n        keeping the same 30-second effective timeout",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "b. target version `2.4.0-rc1`",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "the\n        deploy was stopped mid-rollout after a health check\n        failure",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "Service D still runs its previous config\n        unchanged",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. commit `abc1234`",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "the decrease was intentional \u2014 Service A was masking\n        slow downstream failures by waiting too long before\n        giving up",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the shorter timeout forces faster\n        failure detection",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "b. 30 seconds to 45 seconds",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a. commit `def5678`",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Service B was timing out on legitimate slow requests\n        during nightly batch jobs",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "so the timeout was raised to\n        give those requests room to finish",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "a. version bump to `2.3.1`",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Service A",
+            "Change",
+            "b. 30 seconds to 5 seconds"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Service C",
+            "Effect"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Service C",
+            "Effect"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Service D",
+            "Status",
+            "b. target version `2.4.0-rc1`"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Service D",
+            "Cause"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Service D",
+            "Cause"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Service A",
+            "Location",
+            "a. commit `abc1234`"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Service A",
+            "Purpose"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Service A",
+            "Purpose"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Service B",
+            "Change",
+            "b. 30 seconds to 45 seconds"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Service B",
+            "Location",
+            "a. commit `def5678`"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Service B",
+            "Purpose"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Service B",
+            "Purpose"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Service C",
+            "Change",
+            "a. version bump to `2.3.1`"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "From 30 seconds to 5 seconds.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "From 30 seconds to 45 seconds.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No; A decreased (opposite directions), B increased.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "abc1234 for Service A, def5678 for Service B.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; the unit changed from seconds to a duration string, effective timeout stays 30 seconds.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Version 2.4.0-rc1; not completed, aborted mid-rollout after a health check failure.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Its previous config, unchanged.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "A: forces faster failure detection since it masked slow downstream failures. B: legitimate slow nightly batch requests needed room to finish.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "A cut its timeout to a sixth of its",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "Service A was masking",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "so the timeout was raised to",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "not a raw timeout-seconds change: the timeout unit",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "c. different commits",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "deploy was stopped mid-rollout after a health check",
+        "status": "retained"
+      }
+    }
+  }
+}

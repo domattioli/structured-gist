@@ -97,6 +97,27 @@
         "status": "scored"
       }
     },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/causality-heavy-explain/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/causality-heavy-explain/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9133,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 337,
+        "reduction_pct": 8.67,
+        "source_words": 369,
+        "status": "scored"
+      }
+    },
     "test_class": "pressure-tests"
   },
   "cause-chain-reversal": {
@@ -218,6 +239,27 @@
         "is_block_mode": true,
         "output_words": 356,
         "reduction_pct": 1.39,
+        "source_words": 361,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/cause-chain-reversal/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/cause-chain-reversal/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.8476,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 306,
+        "reduction_pct": 15.24,
         "source_words": 361,
         "status": "scored"
       }
@@ -433,9 +475,72 @@
         "status": "scored"
       }
     },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/migration-tristate/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/migration-tristate/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9143,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 256,
+        "reduction_pct": 8.57,
+        "source_words": 280,
+        "status": "scored"
+      }
+    },
     "test_class": "pressure-tests"
   },
   "near-identical-numbers": {
+    "opus-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/opus-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/opus-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9928,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 274,
+        "reduction_pct": 0.72,
+        "source_words": 276,
+        "status": "scored"
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/opus-v0.10.0-nolint/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/opus-v0.10.0-nolint/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 1.0145,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 280,
+        "reduction_pct": -1.45,
+        "source_words": 276,
+        "status": "scored"
+      }
+    },
     "sonnet": {
       "deep": {
         "compression_ratio": 0.9239,
@@ -578,6 +683,59 @@
         "status": "scored"
       }
     },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 1.029,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 284,
+        "reduction_pct": -2.9,
+        "source_words": 276,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/sonnet-v0.10.0-nolint/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/near-identical-numbers/renderings/sonnet-v0.10.0-nolint/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9783,
+        "conformance_clean": false,
+        "conformance_violation_count": 2,
+        "conformance_violations": [
+          {
+            "line": 8,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          },
+          {
+            "line": 15,
+            "message": "line exceeds 64 chars (65)",
+            "rule": "R11"
+          }
+        ],
+        "is_block_mode": true,
+        "output_words": 270,
+        "reduction_pct": 2.17,
+        "source_words": 276,
+        "status": "scored"
+      }
+    },
     "test_class": "regression"
   },
   "negation-and-true-peers": {
@@ -630,6 +788,27 @@
         "is_block_mode": true,
         "output_words": 225,
         "reduction_pct": 17.28,
+        "source_words": 272,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/negation-and-true-peers/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/negation-and-true-peers/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.7941,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 216,
+        "reduction_pct": 20.59,
         "source_words": 272,
         "status": "scored"
       }
@@ -699,9 +878,72 @@
         "status": "scored"
       }
     },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-benchmark-archaeology/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-benchmark-archaeology/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.8155,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 380,
+        "reduction_pct": 18.45,
+        "source_words": 466,
+        "status": "scored"
+      }
+    },
     "test_class": "regression"
   },
   "real-hook-discovery": {
+    "opus-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/opus-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/opus-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.7792,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 180,
+        "reduction_pct": 22.08,
+        "source_words": 231,
+        "status": "scored"
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/opus-v0.10.0-nolint/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/opus-v0.10.0-nolint/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9567,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 221,
+        "reduction_pct": 4.33,
+        "source_words": 231,
+        "status": "scored"
+      }
+    },
     "sonnet": {
       "deep": {
         "compression_ratio": 0.7229,
@@ -733,6 +975,54 @@
         "is_block_mode": true,
         "output_words": 125,
         "reduction_pct": 45.89,
+        "source_words": 231,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9264,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 214,
+        "reduction_pct": 7.36,
+        "source_words": 231,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/sonnet-v0.10.0-nolint/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/regression/real-hook-discovery/renderings/sonnet-v0.10.0-nolint/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.8139,
+        "conformance_clean": false,
+        "conformance_violation_count": 1,
+        "conformance_violations": [
+          {
+            "line": 21,
+            "message": "text too wordy (7 words, max 6)",
+            "rule": "R7"
+          }
+        ],
+        "is_block_mode": true,
+        "output_words": 188,
+        "reduction_pct": 18.61,
         "source_words": 231,
         "status": "scored"
       }
@@ -973,6 +1263,48 @@
         "is_block_mode": false,
         "output_words": 192,
         "reduction_pct": 49.61,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "opus-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/opus-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/opus-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.8819,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 336,
+        "reduction_pct": 11.81,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/opus-v0.10.0-nolint/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/opus-v0.10.0-nolint/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.9396,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 358,
+        "reduction_pct": 6.04,
         "source_words": 381,
         "status": "scored"
       }
@@ -1354,6 +1686,48 @@
         "is_block_mode": false,
         "output_words": 192,
         "reduction_pct": 49.61,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 1.0446,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 398,
+        "reduction_pct": -4.46,
+        "source_words": 381,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/sonnet-v0.10.0-nolint/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/registrar-hedge/renderings/sonnet-v0.10.0-nolint/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 1.0315,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 393,
+        "reduction_pct": -3.15,
         "source_words": 381,
         "status": "scored"
       }
@@ -1741,6 +2115,27 @@
         "is_block_mode": true,
         "output_words": 462,
         "reduction_pct": 64.81,
+        "source_words": 1313,
+        "status": "scored"
+      }
+    },
+    "sonnet-v0.10.0": {
+      "deep": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/synthetic-scale-verylarge/renderings/sonnet-v0.10.0/deep.md",
+        "status": "missing"
+      },
+      "skim": {
+        "path": "/Users/domattioli/Projects/structured-gist/skills/structured-gist/benchmarks/semantic-compression/pressure-tests/synthetic-scale-verylarge/renderings/sonnet-v0.10.0/skim.md",
+        "status": "missing"
+      },
+      "standard": {
+        "compression_ratio": 0.6931,
+        "conformance_clean": true,
+        "conformance_violation_count": 0,
+        "conformance_violations": [],
+        "is_block_mode": true,
+        "output_words": 910,
+        "reduction_pct": 30.69,
         "source_words": 1313,
         "status": "scored"
       }

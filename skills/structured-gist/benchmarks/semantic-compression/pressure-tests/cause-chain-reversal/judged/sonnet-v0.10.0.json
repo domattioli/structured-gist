@@ -1,0 +1,287 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "It started at 14:02",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "It shipped two days earlier",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "silently dropped an\n        index the query depended on.",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "The missing index was the root cause, not the\n        connection pool.",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "it was downstream of the slow query.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "schema migration",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "It only bought headroom and reduced how often the\n        symptom surfaced; it did not fix the query",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "the\n        slow-query behavior kept recurring under peak load.",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "Later that day the missing index was added back",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "bringing the query under 100 milliseconds and\n        eliminating the connection pileup entirely.",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "The size was left at 150 afterward, as there was no\n        reason to revert it.",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "the first signal on-call saw was\n        a wave of database connection errors from the payments\n        service.",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "The team was explicit that the pool increase was\n        never the fix; the index was.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "the theory was that traffic had exhausted the connection\n        pool",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "Pool size was raised from 50 to 150 at 14:24",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "error rates dropped noticeably, which felt like\n        confirmation of pool exhaustion as root cause.",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "Error rates were not fully normal",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Query-level tracing found it taking upward of eight\n        seconds per call instead of under 100 milliseconds.",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "Each slow call held a connection for the full\n        duration",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "under load enough were tied up at once\n        to starve everything else",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "on-call spent twenty minutes on that assumption",
+        "note": "twenty minutes not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "Connection errors were first visible in the logs",
+        "note": "logs detail not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "Query-level tracing found it",
+        "note": "tracing method not in gold Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Checkout outage",
+            "Onset"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Cause chain",
+            "I. schema migration"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Cause chain",
+            "I. schema migration"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Root cause",
+            "Culprit"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Cause chain",
+            "IV. pool exhaustion"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Cause chain",
+            "I. schema migration"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Pool increase",
+            "Effect"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Pool increase",
+            "Effect"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Resolution",
+            "Fix"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Resolution",
+            "Fix"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Pool increase",
+            "Status"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Checkout outage",
+            "Onset"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Resolution",
+            "Postmortem"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Checkout outage",
+            "Initial theory"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Checkout outage",
+            "Stopgap"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Checkout outage",
+            "Stopgap"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Checkout outage",
+            "Residue"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Cause chain",
+            "II. slow order-history query"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Cause chain",
+            "III. connections held open"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Cause chain",
+            "III. connections held open"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Connection pool exhaustion.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Missing index dropped by a schema migration two days earlier; slow query held connections.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "A symptom, downstream of the slow query.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No; only reduced symptom frequency, slow-query behavior kept recurring.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Adding the missing index back.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Before; raised at 14:24, secondary investigation ran in parallel.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "No, left at 150.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Two days.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "I. schema migration",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "it was downstream of the slow query.",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "The missing index was the root cause, not the\n        connection pool.",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "bringing the query under 100 milliseconds and\n        eliminating the connection pileup entirely.",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "it did not fix the query",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "so a slower\n        secondary investigation kept going in parallel.",
+        "status": "retained"
+      }
+    }
+  }
+}

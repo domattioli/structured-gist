@@ -1,0 +1,222 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Request timeout decreased from 30 seconds to 5\n        seconds.",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "changing the\n        timeout unit from seconds to a duration string. Not a\n        raw timeout-seconds change.",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "Functionally the same 30-second effective timeout,\n        but how it is configured changed.",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Targeted version `2.4.0-rc1`",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "Aborted before completion, stopped mid-rollout after\n        a health check failure.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "Still running its previous config unchanged.",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "Shipped at commit `abc1234` in `config/service-a.yaml`.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "Service A was masking slow downstream\n        failures by waiting too long before giving up",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the\n        shorter timeout forces faster failure detection",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Request timeout increased from 30 seconds to 45\n        seconds.",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "Shipped at commit `def5678` in `config/service-b.yaml`.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "It was timing out on legitimate slow requests during\n        nightly batch jobs",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "so the timeout was raised to give\n        those requests room to finish.",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "Bumped to version `2.3.1`.",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "was meant to change\n        its timeout as well",
+        "note": "Gold does not say Service D was meant to change its timeout. Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "Four services shipped timeout-config rollouts this\n        week.",
+        "note": "Count and 'this week' timing not in gold facts. Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Service A",
+            "Change"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Service C",
+            "Change"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Service C",
+            "Effective timeout"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Service D",
+            "Target"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Service D",
+            "Status"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Service D",
+            "Current config"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Service A",
+            "Commit"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Service A",
+            "Reason"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Service A",
+            "Reason"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Service B",
+            "Change"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Service B",
+            "Commit"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Service B",
+            "Reason"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Service B",
+            "Reason"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Service C",
+            "Version"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "From 30 seconds to 5 seconds.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "From 30 seconds to 45 seconds.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No; A cut its timeout (to a sixth) while B increased it (nearly doubled).",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "abc1234 for Service A, def5678 for Service B.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; unit changed to a duration string but effective timeout stayed 30 seconds.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Version 2.4.0-rc1; not completed, stopped mid-rollout after a health check failure.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Its previous config, unchanged.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "A: masking slow downstream failures, shorter timeout forces faster failure detection. B: legitimate slow nightly batch requests needed room to finish.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "A cut its timeout to a sixth of its previous value,\n        while B nearly doubled its own. Opposite directions and\n        opposite motivations.",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "Intentional. Service A was masking slow downstream\n        failures by waiting too long before giving up, and the\n        shorter timeout forces faster failure detection.",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "It was timing out on legitimate slow requests during\n        nightly batch jobs, so the timeout was raised to give\n        those requests room to finish.",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "Functionally the same 30-second effective timeout,\n        but how it is configured changed.",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "`abc1234` versus `def5678` look superficially similar\n        as short hashes.",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "Aborted before completion, stopped mid-rollout after\n        a health check failure.",
+        "status": "retained"
+      }
+    }
+  }
+}

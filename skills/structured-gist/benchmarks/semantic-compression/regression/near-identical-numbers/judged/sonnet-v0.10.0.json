@@ -1,0 +1,222 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Request timeout decreased from 30 seconds to 5",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "Changed the timeout unit from seconds to a duration",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "string, functionally keeping the same 30-second",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Version `2.4.0-rc1`, meant to change its timeout as",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "The deploy was stopped mid-rollout after a health",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "Still running its previous config unchanged.",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "`abc1234` in `config/service-a.yaml`.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "slow downstream failures by waiting too long before",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "giving up, and the shorter timeout forces faster",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Request timeout increased from 30 seconds to 45",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "`def5678` in `config/service-b.yaml`.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Service B was timing out on legitimate slow requests",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "give those requests room to finish.",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "to version `2.3.1` and touched",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "meant to change its timeout as well",
+        "note": "Not in gold; Service D's intended change is unsupported. Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "Four services got timeout-config rollouts this week,",
+        "note": "Count and 'this week' timing not in gold facts. Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Service A",
+            "Change"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Service C",
+            "Effect"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Service C",
+            "Effect"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Service D",
+            "Target"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Service D",
+            "Cause"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Service D",
+            "State"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Service A",
+            "Commit"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Service A",
+            "Purpose"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Service A",
+            "Purpose"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Service B",
+            "Change"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Service B",
+            "Commit"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Service B",
+            "Purpose"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Service B",
+            "Purpose"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Service C",
+            "Change"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "From 30 seconds to 5 seconds.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "From 30 seconds to 45 seconds.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No; A decreased, B increased.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "abc1234 for Service A, def5678 for Service B.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; unit changed to duration string, effective timeout stayed 30 seconds.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Version 2.4.0-rc1; aborted before completion after a health check failure.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Its previous config, unchanged.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "A: masked slow downstream failures, shorter timeout forces faster detection. B: legitimate slow nightly batch requests needed room to finish.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "A cut its timeout to a sixth of its previous value",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "giving up, and the shorter timeout forces faster",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "so the timeout was raised to",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "string, functionally keeping the same 30-second",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "`abc1234` versus `def5678` look superficially similar",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "The deploy was stopped mid-rollout after a health",
+        "status": "partial"
+      }
+    }
+  }
+}
