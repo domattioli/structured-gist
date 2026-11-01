@@ -106,7 +106,7 @@ Word budget — terse by default at EVERY level (recursive):
 - the long explanatory sentence does NOT sit in an enumerator node → it rides a `↪` leaf
 - a shallow node wordier than its own descendants = anti-pattern
 
-**Connective-clause test (any depth).** A node carrying a reasoning connective — `because`, `since`, `so that`, `given that`, `as a result`, `which means`, or a parenthetical doing the same job (`(…, never verified against …)`) — is two nodes wearing one marker. Split it: the claim stays on the enumerator node; the reasoning moves to a `↪` child. This applies at L1 same as any deeper rung — a summary/`Net assessment`-style top bullet is not exempt just because it sits high in the tree.
+**Connective-clause test (any depth).** A node carrying a reasoning connective — `because`, `since`, `so that`, `given that`, `as a result`, `which means`, or a parenthetical doing the same job (`(…, never verified against …)`) — is two nodes wearing one marker. Split it: the claim stays on the enumerator node; the reasoning moves to a `↪` child. This applies at L1 same as any deeper rung — a summary/`Net assessment`-style top bullet is not exempt just because it sits high in the tree. Linter rule R12 flags `because`, `since` and `so that` on any non-`↪` node; quoted spans are exempt.
 
 **Delimiter-split test (R9, any depth).** The same split is forced by *punctuation*, not just connective words. A structural node — concept `-`, attribute `▸`, or enumerator — that appends content after a **spaced dash** (` - ` / ` — `), a **colon**, a **semicolon**, an **arrow** `→`, or inside a **parenthetical** `(…)` is two nodes wearing one marker — **unless the tail is only 1–2 words** (a terse qualifier like `scope: user dir` or `(default)` stays inline). When **>2 words** follow the delimiter, split: the head stays on the node, the tail drops to a nested child — a `↪` leaf when it explains, an enumerator when it is a genuine part. Exemptions: the `↪` leaf itself (the prose home — a colon/dash/arrow *inside* a `↪` sentence is fine), **intra-word hyphens** (`lecture-note` is one word, not a delimiter — only a space-flanked dash counts), inline code (`` `file:line` `` never counts), and **HTML entities** (`&amp;` / `&#x27;` — the trailing `;` is not a prose semicolon). Linter rule R9. A *chained* mid-line `→` (`X → Y; Z → W`) packs multiple facts under one marker and trips R9 the same way, while a **single** `X → Y` causality idiom (≤2-word tail) stays exempt — worked before/after: `examples/splice-to-subtree.md`.
 
@@ -138,6 +138,10 @@ Run this pass over every outline before you send it. The rules above say what is
 4. **Arrow rarity (R5).** In each top-level block, leaf `↪` nodes must not outnumber the other nodes. Too many, merge or drop the weakest leaves.
 5. **Siblings (R6, R8).** One marker family per child-set. No `▸` directly under a `▸`.
 6. **Line width (R11, `block` only).** Hard-wrap any line past the resolved budget; the continuation keeps the marker line's indent.
+7. **Connectives (R12).** No `because`, `since` or `so that` on a structural node. Move the reason to a `↪` child.
+8. **Concept echo (R13).** An attribute directly under a top concept must not repeat the concept's text. `- Properties` → `▸ Properties` fails.
+9. **Question-word attributes (R14).** An attribute must not start with What, Why, How, When, Where, Which or Who. Write `▸ Cause`, not `▸ Why it happened`.
+10. **Count prefixes (R15).** A top concept must not start with a number or count-word (`Three`, `Several`, `Many`, …). `- Three findings` fails; write `- Findings`.
 
 Terseness never overrides this pass. When caveman or another wording layer pulls toward fewer nodes, keep the split and compress the words inside each node instead.
 
@@ -147,7 +151,7 @@ One level: `standard`. Surface the tree through L3 as the content needs. Keep th
 
 `skim` and `deep` are archived (v0.6.0). The controlled benchmark scores `standard` only, so the other two have no current evidence behind them. Archived specs and examples: `docs/archive/granularity/` at the repository root. If a caller asks for `skim` or `deep`, render at `standard` and say the level is archived.
 
-**Granularity and render mode are independent.** Granularity controls how much of the tree is surfaced. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container. Neither changes the marker ladder or which linter rule fires: the same 15 rules gate every render mode.
+**Granularity and render mode are independent.** Granularity controls how much of the tree is surfaced. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container. Neither changes the marker ladder or which linter rule fires: the same 16 rules gate every render mode.
 
 ## Spacing
 
