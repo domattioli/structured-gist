@@ -50,7 +50,7 @@ id; a resolved id that differs from the pinned id is refused and not scored
 (FR-021).
 
 Skill: `SKILL.md` version `0.10.0`, SHA-256
-`26377511bbd202800a7146f0f710577c9dace6bfa3cbed175ab9292da22ef77b`. `reference/render-modes.md` SHA-256
+`5777438825ed3c4c5cc00b008e7b22173a15e989daaa4f5bf3b7706216fa9322`. `reference/render-modes.md` SHA-256
 `c9a84ae76f9f792ce64a0e3fe4c506b06cc2dacbf5db8f70c9f68ef1a47b0bb9`.
 
 Prompt files in `prompts/` (SHA-256 of the exact bytes):
@@ -338,7 +338,7 @@ in the next window with the same confirmed estimate.
   from that field. No prompt, method, metric, threshold, case or judge id
   changed.
 - 2026-11-01. Change: skill arm re-pinned to `SKILL.md` version `0.10.0`
-  (SHA-256 `26377511bbd2...`, was `5740a744154a...`). `reference/render-modes.md`
+  (SHA-256 `5777438825ed...`, was `5740a744154a...`). `reference/render-modes.md`
   is unchanged. Reason: release 0.10.0 changed the skill text the arm loads,
   not only the version field: the body prose was compressed, the frontmatter
   description and trigger list were replaced, and linter rules R12-R15 were

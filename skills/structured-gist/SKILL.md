@@ -147,7 +147,7 @@ Run over every outline before sending. Cold renders by strongest model tier brok
 6. **Line width (R11, `block` only).** Hard-wrap any line past resolved budget; continuation keeps marker line's indent.
 7. **Connectives (R12).** No `because`, `since` or `so that` on a structural node. Move the reason to a `↪` child.
 8. **Concept echo (R13).** An attribute directly under a top concept must not repeat the concept's exact text. `- Properties` → `▸ Properties` fails.
-9. **Question-word attributes (R14).** An attribute must not start with What, Why, How, When, Where, Which or Who. Write `▸ Cause`, not `▸ Why it happened`.
+9. **Question-word attributes (R14).** An attribute must not start with the capitalized word What, Why, How, When, Where, Which or Who. Write `▸ Cause`, not `▸ Why it happened`.
 10. **Count prefixes (R15).** A top concept must not start with a number or count-word (`Three`, `Several`, `Many`, …). `- Three findings` fails; write `- Findings`.
 
 Terseness never overrides this pass. Caveman or another wording layer pulls toward fewer nodes → keep split, compress words inside each node.
@@ -164,9 +164,9 @@ One level: `standard`. Surface tree through L3 as content needs. Keep concept sp
 
 **Indent: 4 spaces per rung in `block`** (L1=0, L2=4, L3=8, `↪`=parent content +4). Single source of truth for indent. `responsive`: 2 spaces per rung (real GFM nesting).
 
-**Block-mode line wrap (R11).** Max line width incl. indent = **budget per `## Activation`** (64 chars default; hint → clamp(N−8, 32, 120); `width N` → N). Overflow soft-wraps to column 0, wrecking ladder → hard-wrap yourself: continuation lines carry leading whitespace **identical** to marker line's indent; no hanging indent, no glyph. Every node type, `↪` included. `inline` and `responsive` UNAFFECTED (renderer wraps). Full spec + worked wrap: `reference/render-modes.md`.
+**Block-mode line wrap (R11).** Max line width incl. indent = **budget per `## Activation`** (64 chars default; terminal reply with width hint → clamp(N−8, 32, 120); `width N` → N). Overflow soft-wraps to column 0, wrecking ladder → hard-wrap yourself: continuation lines carry leading whitespace **identical** to marker line's indent; no hanging indent, no glyph. Every node type, `↪` included. `inline` and `responsive` UNAFFECTED: renderer wraps; hard-wrapping there injects spurious line breaks. Full spec + worked wrap: `reference/render-modes.md`.
 
-**No blank line between siblings** in `block` or `responsive`.
+**No blank line between siblings** in `block` or `responsive` (required only in deprecated `inline`).
 
 ## Emphasis taxonomy
 
@@ -260,7 +260,7 @@ Orthogonal — caveman = wording, structured-gist = structure.
 
 Holds in every caveman mode (lite, full, ultra, wenyan-lite, wenyan-full, wenyan-ultra): structure unchanged; markers stay **Latin even under wenyan**. Per-mode table + invariants: `reference/composition.md`.
 
-On public reader-facing prose surfaces, a separate public-prose wording skill, if you use one, owns wording inside nodes and `↪` leaves — not caveman.
+On public reader-facing prose surfaces, a separate public-prose wording skill, if you use one, owns wording inside nodes and `↪` leaves — not caveman. caveman stays out of public surfaces entirely; per-mode table applies only where caveman is the active wording layer (non-public, computer-facing surfaces).
 
 Carve-outs align: caveman auto-clarity yields for security/irreversible warnings → structured-gist also yields to plain clarity. Public-surface wording ownership + caveman compose-per-node steps: `reference/composition.md`.
 

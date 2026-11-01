@@ -9,7 +9,7 @@ Release notes for tagged versions. The release workflow publishes the section th
 ### Changed
 
 - `SKILL.md` frontmatter description rewritten (794 characters). It names the `summary` and `report` presets and the carve-outs. The triggers "bullet this", "condense this", "give me the gist", "break this down", "make this skimmable" and "tighten this up" are removed because they fired on requests that were not outline requests.
-- `SKILL.md` body compressed from 4,448 to about 2,950 words with no rule change. The Stop-hook activation guidance moved to `reference/activation-hooks.md` and the per-mode caveman table moved to `reference/composition.md`.
+- `SKILL.md` body compressed from 4,448 to about 2,990 words with no rule change. The Stop-hook activation guidance moved to `reference/activation-hooks.md` and the per-mode caveman table moved to `reference/composition.md`.
 - `SKILL.md` `## Pre-emit check` now lists linter rules R12, R13, R14 and R15, and the connective-clause test is labelled R12. The rule count reads 16 (R1, R2, R4–R17).
 
 ### Fixed
