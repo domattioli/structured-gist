@@ -245,7 +245,7 @@ In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the age
 
 Orthogonal — caveman = wording, structured-gist = structure.
 
-On public reader-facing prose surfaces specifically, `write-like-scientist` (renamed from `dom-write`) — not caveman — owns the wording inside nodes and `↪` leaves (see `## Composition with the other output layers`); caveman stays out of those surfaces entirely, so the coexistence table below applies only where caveman is the active wording layer (non-public, computer-facing surfaces).
+On public reader-facing prose surfaces, a separate public-prose wording skill, if you use one, owns the wording inside nodes and `↪` leaves — not caveman. caveman stays out of those surfaces, so the coexistence table below applies only where caveman is the active wording layer (non-public, computer-facing surfaces). Detail: `reference/composition.md`.
 
 **Independence (load-bearing)**: structured-gist NEVER invokes, activates, or implies caveman, and changes no wording itself. caveman OFF → nodes use normal prose. caveman *separately* active → caveman compresses the enumerator wording, **but never the `↪` leaf** (its job is to stay a readable explanation). The structure (ladder / nesting / `↪`) is identical either way. Token throughput restructures, it does not compress — that is the independence test.
 
@@ -264,10 +264,8 @@ Invariants across ALL 6 caveman modes:
 | wenyan-full | 文言文 | Latin | readable |
 | wenyan-ultra | extreme 文言 | Latin | readable |
 
-Carve-outs align: when caveman auto-clarity yields for security/irreversible warnings → structured-gist also yields to plain clarity. 's ownership of public-surface wording, and the caveman compose-per-node steps: `reference/composition.md`.
+Carve-outs align: when caveman auto-clarity yields for security/irreversible warnings → structured-gist also yields to plain clarity. Public-surface wording ownership and the caveman compose-per-node steps: `reference/composition.md`.
 
-
-- The benchmark scorer never calls a model, network, or randomness at scoring time; if those are unavailable it cannot fail for their absence.
 
 ## Limitations
 
@@ -276,6 +274,7 @@ Carve-outs align: when caveman auto-clarity yields for security/irreversible war
 - The linter checks structure, not truth — a well-formed outline can still misrepresent its source content, and no rule catches that.
 - Accepting the hedge rule in general requires comparing source against output for both hedge retention and claim attachment — structural linting alone establishes neither, so general enforcement is deferred to the held hedge-fidelity backlog item; the shipped fidelity check covers only declared statements in this repo's own example and fixtures.
 - Relation-wording preservation is enforced only over those same declared statements, not over arbitrary sources.
+- The benchmark scorer never calls a model, network, or randomness at scoring time; if those are unavailable it cannot fail for their absence.
 
 ## Install
 
