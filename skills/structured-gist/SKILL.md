@@ -2,7 +2,7 @@
 name: structured-gist
 version: "0.9.1"
 benchmark: fact_retention_delta
-description: Render explanatory or process-recap prose as a nested lecture-note outline instead of paragraphs — fixed role ladder concept (-) → attribute (▸, a named property) → enumerator (I./A./i./a.) → explanation (↪, one prose sentence, usually a leaf). No plain bullets. Render modes — block (fenced, literal glyphs; default on every surface) and responsive (opt-in real GFM nested list for GitHub bodies and chat replies; glyph-free, role carried by typography). One granularity level (standard); skim and deep are archived. Independent of caveman (structure vs wording). Opt-in report preset (`/structured-gist report`, alias `findings`). Use for "what I did and why" recaps, concept/cause-chain explanations, and human-facing GitHub prose. NOT for code, commits, bot-template fixed fields, footers, or single-fact answers. Triggers — "structured-gist", "sg", "gist this", "outline this", "bullet this", "notes mode", "break this down", "give me the gist", "make this skimmable", "condense this", "sg report".
+description: 'Rewrite explanatory or process-recap prose as a nested lecture-note outline on a fixed marker ladder (concept → attribute → enumerator → `↪` explanation; no plain bullets). Use for agent "what I did and why" recaps, concept / trade-off / cause-chain explanations, session handoffs (`/structured-gist summary`), and finding-first reports (`/structured-gist report`, alias `findings`). Triggers: "structured-gist", "sg", "gist this", "outline this", "notes mode", "sg report", "sg summary", or any request to restructure explanatory text into a skimmable hierarchy. Do NOT use for code, commit messages, bot-template fields or footers, single-fact answers, security or irreversible-action warnings, or when plain prose is requested. Changes structure only, never wording (independent of caveman).'
 ---
 
 # structured-gist — hierarchical lecture-note output
@@ -21,7 +21,7 @@ On-demand: `/structured-gist [block [width N|auto]|responsive]`. Granularity: `s
 
 `auto` = clamp(N−8, 32, 120), N = terminal width in columns. Explicit `width N` used as given, no cap. Files, committed fences, tool-posted bodies (issue, PR, comment) skip the hint → 64 unless width set explicitly or pinned. `STRUCTURED_GIST_WIDTH` = linter's default knob; model does not read it. See `## Render modes`.
 
-Lexicon triggers: "structured-gist", "sg", "in structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this" (+ optional mode word).
+Lexicon triggers: "structured-gist", "sg", "in structured-gist", "gist mode", "gist this", "outline this", "notes mode", "structure this", "distill this" (+ optional mode word).
 Elevatable: repository instructions may mandate as session default (+ default mode), like caveman.
 Off: "stop structured-gist" / explicit prose request.
 
