@@ -11,7 +11,7 @@ Open an issue first for anything that changes behavior: a new rule, a render-mod
 ## Development
 
 - `skills/structured-gist/SKILL.md` is the complete specification. Read it before changing linter behavior.
-- Linter: `python3 skills/structured-gist/tests/lint_outline.py < your_output.md` (15 rules, stdlib only, zero dependencies).
+- Linter: `python3 skills/structured-gist/tests/lint_outline.py < your_output.md` (16 rules, stdlib only, zero dependencies).
 - Tests: `pytest skills/structured-gist/tests/`. Run before every PR.
 - Any rule change needs a fixture pair (`good_*.md` / `bad_*.md`) and a test asserting both.
 

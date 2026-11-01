@@ -66,7 +66,7 @@ Output uses one granularity level, `standard`. The `skim` and `deep` levels are 
 
 Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
 
-Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this".
+Trigger phrases: "structured-gist", "sg", "gist mode", "gist this", "outline this", "notes mode", "structure this", "distill this", "sg report", "sg summary".
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 

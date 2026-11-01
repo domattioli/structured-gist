@@ -1,0 +1,8 @@
+# Activation hooks — optional Stop-hook nudge
+
+Pointer target from `SKILL.md` `## Activation`. Maintainer and consumer-repo
+guidance; the model does not need it to render outlines.
+
+## Stop-hook activation nudge
+
+**Recommended: pair with a Stop-hook activation nudge, not a blocking gate.** A model can simply forget to invoke structured-gist on a long recap/explanation — there is no in-session signal forcing the check. The fix is advisory, not blocking: a Stop hook that reads the session transcript, and if the final assistant turn is long (word-count heuristic) AND no `Launching skill: structured-gist` backed call appears anywhere in the transcript, emits one stderr nudge line. It never blocks the turn — same fail-open contract as every other advisory hook (judgement-class checks are Stop advisories, not CI-hard gates). A consumer repo wiring this hook should model it on `stop_structured_gist_activation_guard.sh` alongside a claim-vs-call guard (audits false activation *claims*) and a rule-compliance guard (audits outlines already emitted) — three independent Stop-hook checks, not overlapping: claim-vs-call, output-quality, and activation-was-skipped. Cron-silent (`CLAUDE_INTERACTIVE=1` gate) and fail-open on missing jq/python3/transcript is the recommended contract. A hook cannot itself invoke the `Skill` tool (hooks are shell, not model turns) — it can only nudge the next turn's model into doing so; a blocking variant (exit nonzero to force another turn) was considered and rejected as unnecessarily coercive for a judgement-class check. This skill ships no hook scripts. The activation-nudge guidance above is for a consumer repo's own `.claude/hooks`.
