@@ -1,6 +1,6 @@
 ---
 name: structured-gist
-version: "0.9.1"
+version: "0.10.0"
 benchmark: fact_retention_delta
 description: 'Rewrite explanatory or process-recap prose as a nested lecture-note outline on a fixed marker ladder (concept → attribute → enumerator → `↪` explanation; no plain bullets). Use for agent "what I did and why" recaps, concept / trade-off / cause-chain explanations, session handoffs (`/structured-gist summary`), and finding-first reports (`/structured-gist report`, alias `findings`). Triggers: "structured-gist", "sg", "gist this", "outline this", "notes mode", "sg report", "sg summary", or any request to restructure explanatory text into a skimmable hierarchy. Do NOT use for code, commit messages, bot-template fields or footers, single-fact answers, security or irreversible-action warnings, or when plain prose is requested. Changes structure only, never wording (independent of caveman).'
 ---

@@ -122,8 +122,8 @@
     },
     "render_modes_md_sha256": "c9a84ae76f9f792ce64a0e3fe4c506b06cc2dacbf5db8f70c9f68ef1a47b0bb9",
     "skill_invocation": "block",
-    "skill_md_sha256": "5740a744154a4121160a3146fc66ce5c53a685a06318832414d86243db23faf0",
-    "skill_version": "0.9.1"
+    "skill_md_sha256": "26377511bbd202800a7146f0f710577c9dace6bfa3cbed175ab9292da22ef77b",
+    "skill_version": "0.10.0"
   },
   "judges": {
     "call_order_seed": "master_seed:order:judge_id",
