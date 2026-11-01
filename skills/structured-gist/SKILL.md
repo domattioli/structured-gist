@@ -7,18 +7,25 @@ description: Render explanatory or process-recap prose as a nested lecture-note 
 
 # structured-gist — hierarchical lecture-note output
 
-Replace paragraph printouts (esp. "what I did + my reasoning" recaps) with a nested, easily skimmable outline. Concept, attribute, and enumerator nodes carry structure with terse content; the `↪` hook-arrow carries the prose explanation (usually a branch leaf). Marker type conveys meaning on a fixed depth-ladder — never random. Structure only — wording untouched (independent of caveman).
-
-Full detail beyond this file lives in `reference/` — this file is the ~2-minute read; each `## ` section below links out where there's more.
+Replace paragraph printouts (esp. "what I did + my reasoning" recaps) with nested, skimmable outline. Concept, attribute, enumerator nodes = terse structure; `↪` = prose explanation. Marker type = meaning, never random. Structure only; wording untouched (independent of caveman). ~2-minute read; detail in `reference/`.
 
 ## Activation
 
-On-demand: `/structured-gist [block [width N|auto]|responsive]`. One granularity level, `standard` (see `## Granularity`). No mode → `block` (default, all surfaces) — override explicitly with `responsive` when a GitHub issue/PR/comment body or chat-app reply needs a real GFM nested list instead of a fenced block. `width` sets the block-mode R11 line budget. Resolution order, first match wins: (1) explicit `width N` or `width auto`; (2) the width the consumer repo's AGENTS.md pins for that surface; (3) for terminal replies only, the host's terminal-width hint (`term_cols=N`), resolved as `auto`; (4) 64. `auto` resolves to clamp(N−8, 32, 120), where N is the terminal width in columns. An explicit `width N` is used as given, with no cap. Files, committed fences, and tool-posted bodies (issue, PR, and comment bodies) skip the hint and use 64 unless a width is set explicitly or pinned. `STRUCTURED_GIST_WIDTH` is the linter's default knob; the model does not read it. See `## Render modes`.
+On-demand: `/structured-gist [block [width N|auto]|responsive]`. Granularity: `standard` only. No mode → `block` (default, all surfaces). `responsive` = explicit opt-in for GitHub issue/PR/comment bodies or chat-app replies needing real GFM nested list.
+
+`width` sets block-mode R11 line budget. Resolution, first match wins:
+1. explicit `width N` or `width auto`
+2. width the consumer repo's AGENTS.md pins for that surface
+3. terminal replies only: host terminal-width hint (`term_cols=N`), resolved as `auto`
+4. 64
+
+`auto` = clamp(N−8, 32, 120), N = terminal width in columns. Explicit `width N` used as given, no cap. Files, committed fences, tool-posted bodies (issue, PR, comment) skip the hint → 64 unless width set explicitly or pinned. `STRUCTURED_GIST_WIDTH` = linter's default knob; model does not read it. See `## Render modes`.
+
 Lexicon triggers: "structured-gist", "sg", "in structured-gist", "gist mode", "gist this", "outline this", "bullet this", "notes mode", "structure this", "break this down", "distill this", "give me the gist", "make this skimmable", "tighten this up", "condense this" (+ optional mode word).
-Elevatable: repo repository instructions may mandate as session default (+ default mode), like caveman.
+Elevatable: repository instructions may mandate as session default (+ default mode), like caveman.
 Off: "stop structured-gist" / explicit prose request.
 
-**Session-summary preset (v0.3): `/structured-gist summary` (alias `session-summary`).** A standalone invocation that emits a session-summary / handoff-shaped outline in one call, without the caller specifying structure — a quick end-of-session recap. It is self-contained (does NOT call the `handoff` skill; `handoff` is the fuller session-end retro, this is the terse inline outline). Canonical shape — the handoff sections are `-` concepts, their contents are `▸` attributes / enumerators / `↪` leaves:
+**Session-summary preset: `/structured-gist summary` (alias `session-summary`).** One-call handoff-shaped recap; caller gives no structure. Does NOT call `handoff` skill (fuller retro). Sections = `-` concepts; contents = `▸` / enumerators / `↪`:
 
 ```text
 - Session summary
@@ -35,11 +42,11 @@ Off: "stop structured-gist" / explicit prose request.
         ↪ <question still unresolved>
 ```
 
-(Enumerators under a `▸` attribute sit at depth 2, so they take the lowercase family — `a.`/`i.` — per the depth-keyed ladder below; the `▸` occupies depth 1.)
+(Enumerators under `▸` sit at depth 2 → lowercase family `a.`/`i.`, per depth-keyed ladder below; `▸` occupies depth 1.)
 
-**Preset-omission contract (applies to every preset below).** A preset supplies optional branch names, not required slots — omit any branch the source does not support, the summary preset included. A preset never changes the marker ladder or adds a role.
+**Preset-omission contract (every preset, summary included).** Branch names optional, not required slots; omit any the source does not support. Preset never changes marker ladder or adds a role.
 
-**Report preset (v0.5.0b1): `/structured-gist report` (alias `findings`).** A standalone, finding-first invocation: one top concept per supported finding, multiple findings allowed as peers — never one packaging root. A finding is never invented when the source establishes none. Optional branches — Question, Method, Observed, Inferred, Next — are included only when source-supported; omit the rest per the preset-omission contract above. No generic Intro/Background/Conclusion heading — context stays nested under the finding it belongs to. Under Method, ordered steps take the lowercase ordinal family (`i.`/`ii.`) and unordered components the lowercase nominal family (`a.`/`b.`); Method itself is a named `▸` branch, never an ordinal node. Granularity and render mode apply unchanged; no new marker roles are introduced.
+**Report preset: `/structured-gist report` (alias `findings`).** Finding-first. One top concept per supported finding; findings = peers, never one packaging root. Never invent a finding. Optional branches — Question, Method, Observed, Inferred, Next — only when source-supported. No generic Intro/Background/Conclusion heading; context nests under its finding. Under Method: ordered steps → lowercase ordinal (`i.`/`ii.`); unordered components → lowercase nominal (`a.`/`b.`). Method itself = named `▸` branch, never ordinal node. Granularity, render mode apply unchanged; no new marker roles.
 
 ```text
 - <finding>
@@ -51,23 +58,23 @@ Off: "stop structured-gist" / explicit prose request.
         ↪ <follow-up action>
 ```
 
-**Activation is verify-don't-assume (same bar as caveman).** Attempt the real Skill call (`/structured-gist`, or the mode in effect) — do not assume it loaded. On success, state so. On `Unknown skill` (skill not loaded at container start), emit exactly one line — `structured-gist NOT loaded → emulating from SKILL.md` — then apply the outline rules manually from this file. NEVER claim "structured-gist active" without a successful Skill call; a false claim of this exact form shipped in a session recap on 2026-06-27. The missing skill never blocks the turn — emulate and continue.
+**Activation is verify-don't-assume (same bar as caveman).** Attempt real Skill call (`/structured-gist`, or mode in effect); success → say so. On `Unknown skill` (skill not loaded at container start) emit exactly one line — `structured-gist NOT loaded → emulating from SKILL.md` — then apply outline rules manually from this file. NEVER claim "structured-gist active" without successful Skill call. Missing skill never blocks the turn — emulate, continue.
 
-**Recommended: pair with a Stop-hook activation nudge, not a blocking gate.** A model can simply forget to invoke structured-gist on a long recap/explanation — there is no in-session signal forcing the check. The fix is advisory, not blocking: a Stop hook that reads the session transcript, and if the final assistant turn is long (word-count heuristic) AND no `Launching skill: structured-gist` backed call appears anywhere in the transcript, emits one stderr nudge line. It never blocks the turn — same fail-open contract as every other advisory hook (judgement-class checks are Stop advisories, not CI-hard gates). A consumer repo wiring this hook should model it on `stop_structured_gist_activation_guard.sh` alongside a claim-vs-call guard (audits false activation *claims*) and a rule-compliance guard (audits outlines already emitted) — three independent Stop-hook checks, not overlapping: claim-vs-call, output-quality, and activation-was-skipped. Cron-silent (`CLAUDE_INTERACTIVE=1` gate) and fail-open on missing jq/python3/transcript is the recommended contract. A hook cannot itself invoke the `Skill` tool (hooks are shell, not model turns) — it can only nudge the next turn's model into doing so; a blocking variant (exit nonzero to force another turn) was considered and rejected as unnecessarily coercive for a judgement-class check. This skill ships no hook scripts. The activation-nudge guidance above is for a consumer repo's own `.claude/hooks`.
+Optional advisory Stop-hook activation nudge for consumer repos: `reference/activation-hooks.md`.
 
 ## When — primary target
 
 Default-render as outline when active:
-- agent **process/recap prose** — "what I did and why" (the main case)
+- agent **process/recap prose** — "what I did and why" (main case)
 - explanations — concept / system / trade-off / cause-chain
 
-NOT only on explicit "explain X". NOT on the carve-outs below.
+NOT only on explicit "explain X". NOT on carve-outs below.
 
 ## Marker taxonomy
 
-**Consistent depth-ladder — marker type conveys meaning, never random.** Deepen one rung per nesting level; never skip rungs. A rung is a depth level, not a role: a concept may parent an enumerator directly (concept → enumerator is valid), with no attribute between them. **No plain bullet** — parts, steps, and evidence are all enumerable, so every sub-item enumerates.
+**Consistent depth-ladder — marker type conveys meaning, never random.** One rung per nesting level; never skip. Rung = depth, not role: concept may parent enumerator directly. **No plain bullet** — every sub-item enumerates.
 
-The role ladder, outer to inner: **Concept → Attribute → Enumerator → Explanation.** Each answers a different question about its parent, so each has its own marker.
+Role ladder, outer to inner: **Concept → Attribute → Enumerator → Explanation.**
 
 | role | marker | answers | word budget |
 |---|---|---|---|
@@ -76,106 +83,106 @@ The role ladder, outer to inner: **Concept → Attribute → Enumerator → Expl
 | **enumerator** | `I. II.` / `A. B.` at **depth 1** · `i. ii.` / `a. b.` at **depth ≥2** | "the parent is *composed of* these ordered/grouped parts" | ≤6 words deep tiers |
 | **explanation** | `↪` (hook arrow) | "what needs explaining or qualifying about the parent?" (e.g. why / how) — the one LONG prose sentence | no cap |
 
-Who/what/where/when/why/how/whether are content prompts, not marker selectors — asking "why" does not pick `↪` by itself. Match by the role criteria above instead: top claim → concept, named property → attribute, ordered or grouped part → enumerator, explanation → `↪`.
+Who/what/where/when/why/how/whether = content prompts, not marker selectors; "why" alone does not pick `↪`. Match by role: top claim → concept, named property → attribute, ordered or grouped part → enumerator, explanation → `↪`.
 
-**Attribute vs. enumerator (the distinction).** If a child reads naturally as "the parent *has a* ___" — a purpose, a component, a constraint, a property — it is an **attribute** (`▸`), not an enumerator. Enumerators are for genuinely ordered or grouped *parts/steps/evidence*. Rendering an attribute as a sibling `-` concept (flattening) or as an enumerator (mislabeling it a part) both lose the parent-attribute relation; `▸` preserves it. Example: "Marker ladder" is an attribute *of* structured-gist (`▸ Marker ladder`), not a peer concept and not a step.
+**Attribute vs. enumerator.** Child reads "the parent *has a* ___" (purpose, component, constraint, property) → **attribute** (`▸`). Enumerators = genuinely ordered or grouped *parts/steps/evidence*. Flattening to sibling `-` or mislabeling as enumerator loses the relation. Example: `▸ Marker ladder` = attribute *of* structured-gist, not peer concept, not step.
 
-**Ordinal vs nominal** picks the enumerator family, by the content:
-- **ordinal** (roman: `I.`/`i.`) when ORDER matters — a sequence, steps, a ranking.
-- **nominal** (letter: `A.`/`a.`) when items are distinct GROUPED peers, order-agnostic.
+**Ordinal vs nominal** picks enumerator family by content:
+- **ordinal** (roman: `I.`/`i.`) when ORDER matters — sequence, steps, ranking.
+- **nominal** (letter: `A.`/`a.`) when items = distinct GROUPED peers, order-agnostic.
 
-Attributes are inherently nominal (a property has a name, not a position) — there is no ordinal `▸` variant.
+Attributes inherently nominal (property has name, not position); no ordinal `▸` variant.
 
-**Advisory attribute-name lexicon (not linter-enforced).** Names commonly source-supported: Purpose, Mechanism, Actor, Location, Timing, Certainty. Scope names a boundary and Trigger names an initiating condition — neither is a catch-all for every "where" or "when". "Whether" names a proposition to resolve, not a degree of confidence; a degree of confidence is Certainty. Prefer the source's own property names over this list, and omit any name the source does not support — this vocabulary is advisory guidance, not something the linter checks.
+**Advisory attribute-name lexicon (not linter-enforced).** Common names: Purpose, Mechanism, Actor, Location, Timing, Certainty. Scope = boundary, Trigger = initiating condition; neither is catch-all "where"/"when". "Whether" = proposition to resolve; confidence degree = Certainty. Prefer source's own names; omit unsupported ones.
 
-**A `▸` occupies a depth rung like any marker.** Enumerators directly under a concept sit at depth 1 (uppercase `I.`/`A.`); enumerators directly under a `▸` attribute sit at **depth 2**, so they take the lowercase family (`i.`/`a.`) — the ladder is keyed by absolute depth, not by "first enumerator encountered." (Linter rule R1.)
+**`▸` occupies a depth rung like any marker.** Enumerators directly under concept sit at depth 1 (uppercase `I.`/`A.`); enumerators directly under `▸` sit at **depth 2** → lowercase `i.`/`a.`. Ladder keyed by absolute depth, not "first enumerator encountered." (Linter rule R1.)
 
-A child-set is one family — never mix `I.` and `A.`, or `▸` and an enumerator, as siblings. Emit literal glyphs (GFM collapses real ordered lists to `1.`). Indent rule: see `## Spacing`.
+Child-set = one family; never mix `I.` and `A.`, or `▸` and enumerator, as siblings. Emit literal glyphs (GFM collapses real ordered lists to `1.`). Indent: `## Spacing`.
 
-**No-self-nesting (never nest a marker directly under the same marker).** Concepts live only at L1 and enumerators already alternate roman↔letter by depth, so neither can self-nest; the rule bites on attributes: **a `▸` MUST NOT be the direct child of a `▸`.** To express a property-of-a-property, interpose a different node type — a non-leaf `↪` hook (see below) or an enumerator — never `▸`→`▸` directly. Linter rule R8.
+**No-self-nesting.** Concepts only at L1; enumerators alternate roman↔letter → only attributes can self-nest. **`▸` MUST NOT be direct child of `▸`.** Property-of-a-property → interpose non-leaf `↪` or enumerator. Linter rule R8.
 
-**Leaf marker is `↪` (hook arrow), NOT `→`.** The plain `→` is reserved for inline cause-effect (`X → Y`) inside a node's text — the caveman wording convention — so it MUST NOT appear as a marker. `↪` always starts its own indented line (structure); `→` only ever sits mid-line (wording). Distinct glyphs, distinct jobs.
+**Leaf marker is `↪` (hook arrow), NOT `→`.** Plain `→` reserved for inline cause-effect (`X → Y`) inside node text (caveman wording convention) → MUST NOT appear as marker. `↪` always starts its own indented line (structure); `→` only mid-line (wording).
 
-**Preserve source relation wording.** Keep the source's own relation wording and keep its endpoints identifiable. An association, correlation, or uncertain link is not rewritten as a causal `→`.
+**Preserve source relation wording.** Keep source's relation wording; keep endpoints identifiable. Association, correlation, uncertain link never rewritten as causal `→`.
 
 ## Length gradient
 
 Word budget — terse by default at EVERY level (recursive):
-- every enumerator node = terse **concept** (denotes, does not explain); it embeds its meaning in hierarchy + short content, NOT prose
-- higher tiers = fewest words; deeper nodes MAY use a few more *only when needed*
-- the long explanatory sentence does NOT sit in an enumerator node → it rides a `↪` leaf
-- a shallow node wordier than its own descendants = anti-pattern
+- enumerator node = terse **concept**; denotes, does not explain
+- higher tiers fewest words; deeper MAY use a few more *only when needed*
+- long explanatory sentence → `↪` leaf, never enumerator
+- shallow node wordier than own descendants = anti-pattern
 
-**Connective-clause test (any depth).** A node carrying a reasoning connective — `because`, `since`, `so that`, `given that`, `as a result`, `which means`, or a parenthetical doing the same job (`(…, never verified against …)`) — is two nodes wearing one marker. Split it: the claim stays on the enumerator node; the reasoning moves to a `↪` child. This applies at L1 same as any deeper rung — a summary/`Net assessment`-style top bullet is not exempt just because it sits high in the tree. Linter rule R12 flags `because`, `since` and `so that` on any non-`↪` node; quoted spans are exempt.
+**Connective-clause test (R12, any depth).** Node carrying reasoning connective — `because`, `since`, `so that`, `given that`, `as a result`, `which means`, or parenthetical doing same job (`(…, never verified against …)`) — = two nodes wearing one marker. Claim stays; reasoning → `↪` child. L1 not exempt (incl. `Net assessment`-style top bullet). Linter rule R12 flags `because`, `since` and `so that` on any non-`↪` node; quoted spans exempt.
 
-**Delimiter-split test (R9, any depth).** The same split is forced by *punctuation*, not just connective words. A structural node — concept `-`, attribute `▸`, or enumerator — that appends content after a **spaced dash** (` - ` / ` — `), a **colon**, a **semicolon**, an **arrow** `→`, or inside a **parenthetical** `(…)` is two nodes wearing one marker — **unless the tail is only 1–2 words** (a terse qualifier like `scope: user dir` or `(default)` stays inline). When **>2 words** follow the delimiter, split: the head stays on the node, the tail drops to a nested child — a `↪` leaf when it explains, an enumerator when it is a genuine part. Exemptions: the `↪` leaf itself (the prose home — a colon/dash/arrow *inside* a `↪` sentence is fine), **intra-word hyphens** (`lecture-note` is one word, not a delimiter — only a space-flanked dash counts), inline code (`` `file:line` `` never counts), and **HTML entities** (`&amp;` / `&#x27;` — the trailing `;` is not a prose semicolon). Linter rule R9. A *chained* mid-line `→` (`X → Y; Z → W`) packs multiple facts under one marker and trips R9 the same way, while a **single** `X → Y` causality idiom (≤2-word tail) stays exempt — worked before/after: `examples/splice-to-subtree.md`.
+**Delimiter-split test (R9, any depth).** Punctuation forces same split. Structural node (concept `-`, attribute `▸`, enumerator) appending content after **spaced dash** (` - ` / ` — `), **colon**, **semicolon**, **arrow** `→`, or inside **parenthetical** `(…)` = two nodes wearing one marker — **unless tail is only 1–2 words** (terse qualifier like `scope: user dir` or `(default)` stays inline). **>2 words** after delimiter → split: head stays, tail → nested child (`↪` leaf when it explains, enumerator when genuine part). Exemptions: `↪` leaf itself (prose home; colon/dash/arrow *inside* `↪` sentence fine), **intra-word hyphens** (`lecture-note` = one word; only space-flanked dash counts), inline code (`` `file:line` `` never counts), **HTML entities** (`&amp;` / `&#x27;`; trailing `;` not prose semicolon). Linter rule R9. *Chained* mid-line `→` (`X → Y; Z → W`) packs multiple facts under one marker → trips R9; **single** `X → Y` causality idiom (≤2-word tail) stays exempt. Worked before/after: `examples/splice-to-subtree.md`.
 
-**Double-marker test (R10, any depth).** A node's *content* must not begin with a second marker glyph. Emitting `▸ • target` or the terminal-rendered `- • target` (dash concept + bullet) or `- → foo` puts two markers on one line — the exact defect that made a fresh emulation render un-skimmable in a plain terminal (no markdown to collapse the leading `-`) while the same outline was clean in the Claude Code app. Pick ONE marker per node from the depth-ladder; never prefix the content with `•`, `→`, `↪`, `▸`, or another `-`. This bites emulation most: when the skill is not loaded and you render from this file by hand, indent with spaces and lead with a *single* ladder glyph — do not fall back to markdown `-`/`•` bullets. A mid-text causality arrow (`X → Y` inside a node) is fine — R10 fires only on a *leading* stray glyph, so the caveman single-arrow idiom is preserved. Arrow (`↪`/`→`) markers are the one legitimate leading glyph and are exempt. Linter rule R10.
+**Double-marker test (R10, any depth).** Node *content* must not begin with second marker glyph: `▸ • target`, `- • target`, `- → foo` all fail. ONE ladder marker per node; never prefix content with `•`, `→`, `↪`, `▸`, or another `-`. Emulating by hand → indent with spaces, single ladder glyph, no markdown `-`/`•` fallback. Mid-text `X → Y` fine (R10 checks *leading* glyph only). Arrow (`↪`/`→`) markers exempt. Linter rule R10.
 
 ## Hook-arrow `↪` — the explanatory node
 
-- `↪` is the ONLY place prose explanation lives — enumerator + attribute nodes carry meaning by structure + terse content
-- **usually a leaf** — one key cause-effect / elaboration per branch, rare, not every line
-- **may be a non-leaf branch-summary** (v0.3): an `↪` MAY carry deeper children when it previews the subtree below it — a one-line "here's the gist, detail follows." A non-leaf `↪` MUST be the **first child** of its parent (a summary precedes the detail it introduces); an `↪` placed after its siblings stays a leaf. Linter rule R4.
-- **subtree-preview guideline** — use a non-leaf `↪` only when the branch genuinely benefits from a one-line orientation before the reader descends, OR as the interposer that lets an attribute nest under another attribute without `▸`→`▸` (the no-self-nesting escape hatch). Do not summary-preview every branch; that reinflates the outline back toward prose.
-- always starts its own indented line; never glued mid-line (that is the plain `→` inline-causality role, which `↪` deliberately does not share)
-- **not caveman-compressed** — even when enumerator wording is compressed, the `↪` explanation stays a full, readable clause
+- `↪` = ONLY place prose explanation lives; enumerator + attribute nodes carry meaning by structure + terse content
+- **usually a leaf** — one key cause-effect / elaboration per branch; rare, not every line
+- **may be non-leaf branch-summary**: `↪` MAY carry deeper children when it previews subtree below ("gist, detail follows"). Non-leaf `↪` MUST be **first child** of parent (summary precedes detail); `↪` after siblings stays leaf. Linter rule R4.
+- **subtree-preview guideline** — non-leaf `↪` only when one-line orientation helps, OR as `▸`→`▸` interposer. Not every branch; reinflates toward prose.
+- always own indented line; never mid-line (that = `→`)
+- **not caveman-compressed** — enumerator wording may compress; `↪` explanation stays full readable clause
 
 ## Nest by dependency
 
-- a child **belongs-to / depends-on** its parent → a real tree, not a flat list dump
-- nesting depth mirrors the actual dependency structure of the content
+- child **belongs-to / depends-on** parent → real tree, not flat list dump
+- nesting depth mirrors actual dependency structure
 
-**Observed-versus-inferred (advisory).** When the source distinguishes observation from inference, preserve that distinction. Use separate branches only when grouping would blur status; otherwise keep the attribution explicit inside the `↪`. Never infer evidential status from wording alone, and never manufacture missing evidence.
+**Observed-versus-inferred (advisory).** Source distinguishes observation from inference → preserve it. Separate branches only when grouping would blur status; otherwise keep attribution explicit inside `↪`. Never infer evidential status from wording alone; never manufacture missing evidence.
 
 ## Pre-emit check
 
-Run this pass over every outline before you send it. The rules above say what is valid; this pass makes you apply them. Cold renders by the strongest model tier broke R7, R1 and R9 most often (#22).
+Run over every outline before sending. Cold renders by strongest model tier broke R7, R1, R9 most often (#22).
 
-1. **Word caps (R7).** Count the words on each structural node: concept ≤3, attribute ≤4, enumerator at depth ≥2 ≤6. Over the cap, move the extra words to a `↪` child.
-2. **Enumerator case (R1).** Read each enumerator's absolute depth. Depth 1 takes `I.`/`A.`; depth ≥2 takes `i.`/`a.`, including every enumerator under a `▸`.
-3. **Delimiter tails (R9).** On each structural node, find a spaced dash, colon, semicolon, `→` or parenthetical. More than 2 words after it, split the tail into a child.
-4. **Arrow rarity (R5).** In each top-level block, leaf `↪` nodes must not outnumber the other nodes. Too many, merge or drop the weakest leaves.
-5. **Siblings (R6, R8).** One marker family per child-set. No `▸` directly under a `▸`.
-6. **Line width (R11, `block` only).** Hard-wrap any line past the resolved budget; the continuation keeps the marker line's indent.
+1. **Word caps (R7).** Count words per structural node: concept ≤3, attribute ≤4, enumerator at depth ≥2 ≤6. Over cap → move extra words to `↪` child.
+2. **Enumerator case (R1).** Read each enumerator's absolute depth. Depth 1 → `I.`/`A.`; depth ≥2 → `i.`/`a.`, including every enumerator under `▸`.
+3. **Delimiter tails (R9).** On each structural node find spaced dash, colon, semicolon, `→` or parenthetical. More than 2 words after it → split tail into child.
+4. **Arrow rarity (R5).** Per top-level block, leaf `↪` nodes must not outnumber other nodes. Too many → merge or drop weakest leaves.
+5. **Siblings (R6, R8).** One marker family per child-set. No `▸` directly under `▸`.
+6. **Line width (R11, `block` only).** Hard-wrap any line past resolved budget; continuation keeps marker line's indent.
 7. **Connectives (R12).** No `because`, `since` or `so that` on a structural node. Move the reason to a `↪` child.
-8. **Concept echo (R13).** An attribute directly under a top concept must not repeat the concept's text. `- Properties` → `▸ Properties` fails.
+8. **Concept echo (R13).** An attribute directly under a top concept must not repeat the concept's exact text. `- Properties` → `▸ Properties` fails.
 9. **Question-word attributes (R14).** An attribute must not start with What, Why, How, When, Where, Which or Who. Write `▸ Cause`, not `▸ Why it happened`.
 10. **Count prefixes (R15).** A top concept must not start with a number or count-word (`Three`, `Several`, `Many`, …). `- Three findings` fails; write `- Findings`.
 
-Terseness never overrides this pass. When caveman or another wording layer pulls toward fewer nodes, keep the split and compress the words inside each node instead.
+Terseness never overrides this pass. Caveman or another wording layer pulls toward fewer nodes → keep split, compress words inside each node.
 
 ## Granularity
 
-One level: `standard`. Surface the tree through L3 as the content needs. Keep the concept spine and its enumerated parts. Surface a `↪` where it carries a cause, a qualifier, or a hedge.
+One level: `standard`. Surface tree through L3 as content needs. Keep concept spine + enumerated parts. Surface `↪` where it carries cause, qualifier, or hedge.
 
-`skim` and `deep` are archived (v0.6.0). The controlled benchmark scores `standard` only, so the other two have no current evidence behind them. Archived specs and examples: `docs/archive/granularity/` at the repository root. If a caller asks for `skim` or `deep`, render at `standard` and say the level is archived.
+`skim` and `deep` archived (no current benchmark evidence): `docs/archive/granularity/` at repository root. Asked for either → render `standard`, say level archived.
 
-**Granularity and render mode are independent.** Granularity controls how much of the tree is surfaced. Render mode (`block`/`responsive`/`inline`, `## Render modes` below) controls only the display container. Neither changes the marker ladder or which linter rule fires: the same 16 rules gate every render mode.
+**Granularity and render mode are independent.** Granularity = how much tree surfaces. Render mode (`block`/`responsive`/`inline`, `## Render modes`) = display container only. Neither changes marker ladder or which linter rule fires: the same 16 rules gate every render mode.
 
 ## Spacing
 
-**Indent: 4 spaces per rung in `block`** (L1=0, L2=4, L3=8, `↪`=parent content +4) — single source of truth for indent, referenced by Marker taxonomy above. 2-space steps render too tight past L2 in a monospace fence. `responsive` uses 2 spaces per rung, because there each rung is real GFM list nesting.
+**Indent: 4 spaces per rung in `block`** (L1=0, L2=4, L3=8, `↪`=parent content +4). Single source of truth for indent. `responsive`: 2 spaces per rung (real GFM nesting).
 
-**Block-mode line wrap (R11, v0.3.6).** Target max physical line width, including indent, is **the budget resolved per `## Activation`**: 64 chars by default, which fits typical phone-portrait monospace; a terminal reply with a width hint uses clamp(N−8, 32, 120); an explicit `width N` uses N. A narrow viewport soft-wraps an overflowing line back to column 0, wrecking the indent ladder (user screenshot, 2026-07-22 — "notes flagship", "existing " landed at column 0). When a node's content would overflow, hard-wrap it yourself: every continuation line carries leading whitespace **identical** to the marker line's indent — no deeper hanging indent, no marker glyph on the continuation. Applies to every node type, `↪` leaves included (their uncapped prose is the usual overflow case). `inline` and `responsive` modes are UNAFFECTED — GitHub, and the chat-app renderer respectively, wrap markdown themselves; hard-wrapping there would inject spurious line breaks (in `responsive`, a real GFM list item, the wrap is delegated to whatever box width the renderer has, which is the entire point of that mode — see `## Render modes`). Full spec + worked wrap: `reference/render-modes.md`.
+**Block-mode line wrap (R11).** Max line width incl. indent = **budget per `## Activation`** (64 chars default; hint → clamp(N−8, 32, 120); `width N` → N). Overflow soft-wraps to column 0, wrecking ladder → hard-wrap yourself: continuation lines carry leading whitespace **identical** to marker line's indent; no hanging indent, no glyph. Every node type, `↪` included. `inline` and `responsive` UNAFFECTED (renderer wraps). Full spec + worked wrap: `reference/render-modes.md`.
 
-**Blank line between siblings** — omitted in `block` and in `responsive`, was required only in the deprecated `inline` mode. In `responsive` each node IS a real GFM list item, so the renderer spaces siblings correctly with no blank lines. In `block` mode monospace already puts each line on its own row. (The old inline rule existed because its literal glyphs were *not* real list items and collapsed vertically without a blank-line separator — one more reason inline is retired.)
+**No blank line between siblings** in `block` or `responsive`.
 
 ## Emphasis taxonomy
 
-Applies to **markdown-rendered modes** (`responsive`, and the deprecated `inline`). In `block` mode everything inside the fence is literal, so no emphasis is used there.
-- L1 top concepts → **bold** (the scannable concept spine)
+Applies to **markdown-rendered modes** (`responsive`, and deprecated `inline`). `block`: everything in fence literal → no emphasis.
+- L1 top concepts → **bold** (scannable concept spine)
 - inline + sparing, deeper: `code` → literal tokens (paths, ids, values, verbatim errors) · *italic* → term-of-art first mention · ~~strike~~ → rejected/deprecated
 - `<u>underline</u>` → definition anchor (best-effort; surface lacks `<u>` → fall back *italic*)
-- never alters the marker ladder or nesting
+- never alters marker ladder or nesting
 
 ## Leaf preservation
 
-Code blocks + tables = intact leaf nodes under the owning node. Never flatten into node text.
+Code blocks + tables = intact leaf nodes under owning node. Never flatten into node text.
 
 ## Hedge preservation
 
-Preserve source hedges with the claim they govern, including in collapsed output. Keep the hedge in the claim text or in an immediately attached `↪`. Use a certainty branch only when the hedge's scope is unambiguous. Never turn a hedged source claim into an unhedged heading.
+Preserve source hedges with the claim they govern, collapsed output included. Hedge stays in claim text or immediately attached `↪`. Certainty branch only when hedge scope unambiguous. Never turn hedged source claim into unhedged heading.
 
 ## Carve-outs
 
@@ -185,11 +192,11 @@ Preserve source hedges with the claim they govern, including in collapsed output
 - code / commit messages / bot-template fixed fields (A–G) / footers / markers
 - explicit prose request → prose that turn
 
-Note: *which* GitHub surfaces should render as `responsive` outlines, and which template/footer scaffolding stays verbatim, is a consuming repo's authoring **policy**, not a rule of this skill — this skill only supplies the `responsive` render mechanism (see `## Render modes`). Policy owner: the consuming repo.
+*Which* GitHub surfaces render as `responsive` outlines, and which template/footer scaffolding stays verbatim = consuming repo's authoring **policy**, not a rule of this skill. Skill supplies only the `responsive` render mechanism (`## Render modes`).
 
 ## Render modes
 
-Same outline, two active containers, **scoped by surface**. The structure (ladder / nesting / `↪`) is identical; only the wrapper differs. Render mode is a presentation choice, independent of granularity (`## Granularity` above) and of the linter's structural rules — see the independence note there.
+Same outline, two active containers, **scoped by surface**; only wrapper differs.
 
 | surface | mode |
 |---|---|
@@ -197,11 +204,11 @@ Same outline, two active containers, **scoped by surface**. The structure (ladde
 | **any markdown-rendering surface** — GitHub issue/PR/comment bodies AND chat-app replies (Claude Code app/web, or any variable-viewport renderer) — **opt-in via explicit `responsive` mode; `block` is the default everywhere** | `responsive` — real GFM list items, 2-space/rung real list nesting, no fence; **glyph-free since v0.3.9**: the renderer already draws a bullet per item, so carrying `▸`/`↪` inside the content produced `• ▸` double markers (render-layer R10). Role moves to typography — attribute → `- **Bold Name**`, enumerator → literal label content (`- a. tool execution`), explanation leaf → plain prose item (no `↪`). The renderer wraps to its own box width — R11 does NOT apply |
 | ~~GitHub prose via literal-glyph 4-space rungs~~ | `inline` — **DEPRECATED (v0.3.8).** Its ≥6-space (depth-2+) rungs render as **indented code blocks** on GFM (wide, non-wrapping, horizontal-scroll boxes) and its depth-1 `▸` lines as emoji-led paragraphs — the exact GitHub-rendering mess `responsive` fixes. Retained only so pre-v0.3.8 committed outlines still lint; never pick it for a new GitHub body. |
 
-Full spec (fence-tag rationale, per-mode cost tradeoffs, block-mode line-wrapping, responsive-mode worked example, why `inline` breaks on GFM): `reference/render-modes.md`.
+`inline` = deprecated, lint-only; never pick it for new output. Full spec (fence-tag rationale, per-mode cost tradeoffs, block-mode wrapping, responsive worked example, why `inline` breaks on GFM): `reference/render-modes.md`.
 
 ## Worked example
 
-Same "Agentic harness" tree, two ways — pick the one matching your surface's default from `## Render modes` above (**`block` is the default everywhere**; `responsive` is opt-in for GitHub/chat). Attributes (`▸`/bold) name properties of the concept; enumerators (`I.`/`A.`/`a.`) are ordered/grouped parts; the explanation leaf carries the prose. Note `Capabilities` groups an attribute; its parts are enumerated below it — attribute, then its composition.
+Same "Agentic harness" tree, two ways. `Capabilities` = attribute; its parts enumerate below it.
 
 **`block` — default everywhere, literal glyphs, 4-space rungs, fenced (` ```text `):**
 
@@ -222,7 +229,7 @@ Same "Agentic harness" tree, two ways — pick the one matching your surface's d
     IV. repeat until done / budget cap
 ```
 
-**`responsive` — opt-in for GitHub/chat, glyph-free since v0.3.9, 2-space real-list nesting, no fence:**
+**`responsive` — opt-in for GitHub/chat, glyph-free, 2-space real-list nesting, no fence:**
 
 ```
 - **Agentic harness**
@@ -241,44 +248,29 @@ Same "Agentic harness" tree, two ways — pick the one matching your surface's d
   - IV. repeat until done / budget cap
 ```
 
-**Do not mix them.** Never carry `block`'s literal `▸`/`↪` glyphs or its 4-space rungs into a `responsive` reply — the glyph doubles up with the renderer's own bullet (`• ▸`) and the 4-space rungs render as GFM code blocks past depth 1. Negative example + full detail: `reference/render-modes.md` `## Responsive mode`.
+**Do not mix them.** `block` glyphs in `responsive` double with renderer bullet (`• ▸`); 4-space rungs render as GFM code blocks past depth 1. Detail: `reference/render-modes.md` `## Responsive mode`.
 
-In both trees, `Purpose`, `Capabilities`, `Output` are **attributes of** the agentic harness, not peer concepts and not steps; `Control loop` is a separate concept whose children are genuinely ordered steps (`I.`–`IV.`). More examples: `examples/{standard,attribute,report}.md`.
+`Purpose`, `Capabilities`, `Output` = **attributes of** agentic harness; `Control loop` = separate concept, ordered steps (`I.`–`IV.`). More examples: `examples/{standard,attribute,report}.md`.
 
 ## Caveman coexistence
 
 Orthogonal — caveman = wording, structured-gist = structure.
 
-On public reader-facing prose surfaces, a separate public-prose wording skill, if you use one, owns the wording inside nodes and `↪` leaves — not caveman. caveman stays out of those surfaces, so the coexistence table below applies only where caveman is the active wording layer (non-public, computer-facing surfaces). Detail: `reference/composition.md`.
+**Independence (load-bearing)**: structured-gist NEVER invokes, activates, or implies caveman, and changes no wording itself. caveman OFF → nodes use normal prose. caveman *separately* active → caveman compresses enumerator wording, **never the `↪` leaf** (stays readable explanation). Structure (ladder / nesting / `↪`) identical either way. Token throughput restructures, it does not compress — that is the independence test.
 
-**Independence (load-bearing)**: structured-gist NEVER invokes, activates, or implies caveman, and changes no wording itself. caveman OFF → nodes use normal prose. caveman *separately* active → caveman compresses the enumerator wording, **but never the `↪` leaf** (its job is to stay a readable explanation). The structure (ladder / nesting / `↪`) is identical either way. Token throughput restructures, it does not compress — that is the independence test.
+Holds in every caveman mode (lite, full, ultra, wenyan-lite, wenyan-full, wenyan-ultra): structure unchanged; markers stay **Latin even under wenyan**. Per-mode table + invariants: `reference/composition.md`.
 
-Invariants across ALL 6 caveman modes:
-- structure (markers + indent + `↪`) unchanged — markers stay **Latin even under wenyan** (localizing to 一/甲 would break the taxonomy + cross-surface scan)
-- the structural leaf marker is `↪`; the plain `→` in the wording column below is the inline cause-effect glyph (`X → Y`), a DIFFERENT role — they never swap
-- enumerator wording delegated to caveman; the `↪` leaf is exempt from compression
+On public reader-facing prose surfaces, a separate public-prose wording skill, if you use one, owns wording inside nodes and `↪` leaves — not caveman.
 
-| caveman mode | enumerator wording | markers | ↪ leaf |
-|---|---|---|---|
-| (none) | normal EN | Latin | readable |
-| lite | tight EN | Latin | readable |
-| full | fragments | Latin | readable |
-| ultra | abbrev + `→` | Latin | readable |
-| wenyan-lite | semi-文言 | Latin | readable |
-| wenyan-full | 文言文 | Latin | readable |
-| wenyan-ultra | extreme 文言 | Latin | readable |
-
-Carve-outs align: when caveman auto-clarity yields for security/irreversible warnings → structured-gist also yields to plain clarity. Public-surface wording ownership and the caveman compose-per-node steps: `reference/composition.md`.
-
+Carve-outs align: caveman auto-clarity yields for security/irreversible warnings → structured-gist also yields to plain clarity. Public-surface wording ownership + caveman compose-per-node steps: `reference/composition.md`.
 
 ## Limitations
 
-- The robustness axis measures structural conformance only — a perturbation-stability term was designed twice and cut twice with recorded proofs (`benchmarks/scoring.md`).
-- Slop reduction is non-deterministic: the linter enforces marker structure, nesting, node length, and delimiter splicing, not sentence quality — a compliant outline can still carry jargon or a weak claim inside a node's text. The tool improves skimmability; it does not remove bad prose.
-- The linter checks structure, not truth — a well-formed outline can still misrepresent its source content, and no rule catches that.
-- Accepting the hedge rule in general requires comparing source against output for both hedge retention and claim attachment — structural linting alone establishes neither, so general enforcement is deferred to the held hedge-fidelity backlog item; the shipped fidelity check covers only declared statements in this repo's own example and fixtures.
-- Relation-wording preservation is enforced only over those same declared statements, not over arbitrary sources.
-- The benchmark scorer never calls a model, network, or randomness at scoring time; if those are unavailable it cannot fail for their absence.
+- Robustness axis = structural conformance only; perturbation-stability term cut twice (`benchmarks/scoring.md`).
+- Linter checks structure, not sentence quality or truth. Compliant outline can still carry jargon, weak claims, or misrepresent source.
+- General hedge enforcement needs source-vs-output comparison; deferred to held hedge-fidelity backlog item. Shipped fidelity check covers only declared statements in this repo's own example and fixtures.
+- Relation-wording preservation enforced only over those same declared statements, not arbitrary sources.
+- Benchmark scorer never calls model, network, or randomness at scoring time; if those are unavailable it cannot fail for their absence.
 
 ## Install
 
