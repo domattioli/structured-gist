@@ -62,7 +62,7 @@ In Python, `from structured_gist.lint_outline import lint_text`.
 /structured-gist [block [width N|auto]|responsive]
 ```
 
-Output uses one granularity level, `standard`. The `skim` and `deep` levels are archived (see [Future work](#7-future-work)). No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface. The `block` line budget is 64 columns by default. `width auto` sizes it to the terminal (terminal width minus 8, clamped to 32-120), and `width N` sets it exactly with no cap.
+Output uses one granularity level, `standard`. The `skim` and `deep` levels are archived (see [Future work](#7-future-work)). No mode given defaults to `block` on all surfaces; pick `responsive` explicitly for a real GFM nested list on a markdown-rendering surface. The `block` line budget is 64 columns for files, committed fences and tool-posted bodies; terminal replies follow the terminal-width hint as `width auto`. `width auto` sizes it to the terminal (terminal width minus 8, clamped to 32-120), and `width N` sets it exactly with no cap.
 
 Two opt-in presets are also available: the summary preset (`/structured-gist summary`, alias `session-summary`) and the report preset (`/structured-gist report`, alias `findings`).
 
@@ -76,7 +76,7 @@ The example below compares Claude Opus's unadulterated description of how this s
 
 As a paragraph, it reads:
 
-> structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with fifteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all fifteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments: anywhere a reader needs to skim a structure rather than parse a paragraph for it.
+> structured-gist is a documentation tool that replaces verbose prose summaries with compact outlines, trading paragraphs a reader has to work through for a structure they can take in at a glance. Rather than relying on sentence grammar to carry relationships, it uses a role hierarchy in which each node's position in the tree encodes its meaning: a concept sits at the root, named attributes hang beneath it, ordinal or nominal enumerators sequence the branches, and prose explanations appear only as leaves. Because a format like that decays quickly when written by hand, a linter enforces it with sixteen rules in total. Two representative examples: one flags shallow-depth stalling, where a node occupies a level without contributing any real structure beneath it, and another detects punctuation-spliced facts, where two distinct claims are welded together with a comma or semicolon instead of being split into separate sibling nodes. The linter lives at lint_outline.py, depends only on the standard library, and applies all sixteen rules automatically. It fits session recaps, cause-chain explanations, and GitHub issue and PR comments: anywhere a reader needs to skim a structure rather than parse a paragraph for it.
 
 Rendered as an outline at `standard` granularity in `block` mode, the same content drops 68% from 190 to 61 words (list markers not counted). The drop comes from removing connective prose, not from rewording sentences. The tree also cuts parsing cost for the reader, but [Future work](#7-future-work) needs to quantify this.
 
@@ -116,7 +116,7 @@ There are two active render modes. `block` is the default on all surfaces; `resp
 
 **Key takeaways**
 
-- Standard depth keeps most of the meaning. Retention is 0.37 at skim, 0.89 at standard, 0.99 at deep. Since v0.6.0, `standard` is the only shipped level.
+- Standard depth keeps most of the meaning. In round 1 (11 cases), retention was 0.37 at skim, 0.89 at standard and 0.99 at deep. Only `standard` ships now. At 0.10.0, Sonnet `standard` retention on the 9-case suite is 0.98, up from 0.89, with less word reduction (11% against 43%). Since v0.6.0, `standard` is the only shipped level.
 - Shorter is not better. Compression correlates negatively with usefulness (r = -0.75), so it is reported as a cost.
 - Losses come from omission and dropped relations. In round 1, no judged fact was ever reworded into a wrong meaning.
 - On 42 external cases (QMSum, Qasper, HotpotQA), relations are lost more often than facts.
@@ -130,14 +130,15 @@ Representative measurements from the skill's version history, one metric per col
 | v0.4.0 | — | **0.549 → 0.760** | — | — | — | Direct prompt vs. experimental KG mode, 20-source corpus; KG mode wins structure but loses retention. Not shipped: see [Future work](#7-future-work). |
 | v0.4.2 | — | — | **11 → 15** | **33 → 46** | — | Linter rule coverage. |
 | v0.4.3 | — | — | — | **46 → 63** | — | Rename and trigger-phrase expansion; no rule-logic change. |
-| Eval only (#10) | — | — | — | — | **0.37 → 0.89 → 0.99** | Semantic-compression suite: 8 curated regression/pressure-test cases scored against gold fact lists; Sonnet ran on 8/8, Haiku on 3/8, full-suite Claude Opus run planned. Compression correlated *negatively* with usefulness (**r = -0.75**), so it is reported as a separate cost, never blended into the quality score. |
+| Eval only (#10) | — | — | — | — | **0.37 → 0.89 → 0.99** | Round-1 exploration (11 cases) scored against gold fact lists; the retained suite is 9 curated regression/pressure-test cases (Sonnet 9/9, Haiku 3/9). Compression correlated *negatively* with usefulness (**r = -0.75**), so it is reported as a separate cost, never blended into the quality score. |
+| v0.10.0 | — | — | — | — | **standard 0.89 → 0.98** | Semantic-compression suite re-run at `standard`: Sonnet on 9/9 cases (mean weighted fact retention 0.887 → 0.981, mean word reduction 42.6% → 11.4%); Opus on 3 cases, with and without a lint-and-fix loop. |
 
 Word count, rule/test coverage, and semantic retention (`skills/structured-gist/benchmarks/semantic-compression/`) are the metrics tracked today. Other metrics (reader comprehension, parse time) remain open; see [Future work](#7-future-work) for status and how to propose one.
 
 Third-party dataset licenses and attribution: see [skills/structured-gist/benchmarks/semantic-compression/external-validation/THIRD_PARTY_NOTICES.md](skills/structured-gist/benchmarks/semantic-compression/external-validation/THIRD_PARTY_NOTICES.md).
 
 <details>
-<summary>Worked example: registrar-hedge (before / after, recorded Opus rendering at standard granularity)</summary>
+<summary>Worked example: registrar-hedge (before / after, recorded Opus v0.5.0b1 rendering at standard granularity)</summary>
 
 <!-- README-EXAMPLE:START -->
 ### registrar-hedge (Before / After)
@@ -287,7 +288,7 @@ accepted - launch decision is mine.
 
 ## 7. Future work
 
-Status and roadmap at 0.9.0:
+Status and roadmap at 0.10.0:
 
 - **Now:** hedge-fidelity axis, waiting on review of the hedge lexicon ([#17](https://github.com/domattioli/structured-gist/issues/17)).
 - **Next:** run the pre-registered controlled benchmark that compares five rendering methods.
@@ -305,10 +306,10 @@ Status and roadmap at 0.9.0:
       - `render/claim_list.py`, checked for schema validity only, not recall
   - C. no SKILL.md change
     - neither direction changed the shipped spec
-  - D. KG mode (experimental, opt-in)
+  - D. KG mode (experimental, not reachable from SKILL.md)
     - a. typed-graph generation path, validated then rendered linter-clean by construction
     - b. v0.4.0 comparison: wins structure, loses retention (see [Benchmarks](#5-benchmarks))
-    - c. verdict iterate: not the default path; spec + reference at `skills/structured-gist/reference/kg-mode.md`
+    - c. verdict iterate: not wired into SKILL.md; spec + reference at `skills/structured-gist/reference/kg-mode.md`
 - **Archived granularity levels**
   - A. skim and deep
     - archived in v0.6.0 at [docs/archive/granularity/](docs/archive/granularity/), with their spec text and examples
@@ -320,7 +321,7 @@ Status and roadmap at 0.9.0:
 
 ## 8. Documentation
 
-[skills/structured-gist/SKILL.md](skills/structured-gist/SKILL.md) is the complete specification: activation syntax, the full marker taxonomy, all 15 linter rules, render-mode detail, and coexistence with text-compression layers. [skills/structured-gist/reference/](skills/structured-gist/reference/) holds the extended reference documents it links out to, including [reference/kg-mode.md](skills/structured-gist/reference/kg-mode.md) (the experimental KG generation path, see [Future work](#7-future-work)).
+[skills/structured-gist/SKILL.md](skills/structured-gist/SKILL.md) is the complete specification: activation syntax, the full marker taxonomy, all 16 linter rules, render-mode detail, and coexistence with text-compression layers. [skills/structured-gist/reference/](skills/structured-gist/reference/) holds the extended reference documents it links out to. [reference/kg-mode.md](skills/structured-gist/reference/kg-mode.md) separately documents the experimental KG generation path (see [Future work](#7-future-work)).
 
 <div align="right"><a href="#structured-gist"><sub>^ Back to top</sub></a></div>
 

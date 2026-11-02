@@ -44,6 +44,22 @@
         "unweighted_relation_retention": 0.5625
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.9133,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 21,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 8.67,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
+      }
+    },
     "test_class": "pressure-tests"
   },
   "cause-chain-reversal": {
@@ -130,6 +146,22 @@
         "legacy_task_weighted_fact_retention": 0.9747,
         "recoverability": 0.8125,
         "reduction_pct": 1.39,
+        "semantic_preservation_recall": 0.9839,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 0.9787,
+        "compression_ratio": 0.8476,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 13,
+        "legacy_task_weighted_fact_retention": 0.9747,
+        "recoverability": 1.0,
+        "reduction_pct": 15.24,
         "semantic_preservation_recall": 0.9839,
         "task_weighted_relation_recall": 1.0,
         "unweighted_relation_retention": 1.0
@@ -226,9 +258,57 @@
         "unweighted_relation_retention": 0.9167
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.9143,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 12,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 8.57,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
+      }
+    },
     "test_class": "pressure-tests"
   },
   "near-identical-numbers": {
+    "opus-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.9928,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 12,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 0.72,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 1.0145,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 12,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": -1.45,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
+      }
+    },
     "sonnet": {
       "deep": {
         "blinded_task_weighted_fact_recall": 1.0,
@@ -271,6 +351,38 @@
         "semantic_preservation_recall": 0.88,
         "task_weighted_relation_recall": 0.9062,
         "unweighted_relation_retention": 0.9167
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 1.029,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 1,
+        "critical_units_total": 12,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": -2.9,
+        "semantic_preservation_recall": 0.97,
+        "task_weighted_relation_recall": 0.9062,
+        "unweighted_relation_retention": 0.9167
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.9783,
+        "conformance_violation_count": 2,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 12,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 2.17,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
       }
     },
     "test_class": "regression"
@@ -320,6 +432,22 @@
         "unweighted_relation_retention": 1.0
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 0.8922,
+        "compression_ratio": 0.7941,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 1,
+        "critical_units_partial": 2,
+        "critical_units_total": 17,
+        "legacy_task_weighted_fact_retention": 0.8947,
+        "recoverability": 0.9375,
+        "reduction_pct": 20.59,
+        "semantic_preservation_recall": 0.8889,
+        "task_weighted_relation_recall": 0.875,
+        "unweighted_relation_retention": 0.875
+      }
+    },
     "test_class": "pressure-tests"
   },
   "real-benchmark-archaeology": {
@@ -367,9 +495,57 @@
         "unweighted_relation_retention": 0.9167
       }
     },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.8155,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 2,
+        "critical_units_total": 13,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 18.45,
+        "semantic_preservation_recall": 0.9559,
+        "task_weighted_relation_recall": 0.8,
+        "unweighted_relation_retention": 0.8333
+      }
+    },
     "test_class": "regression"
   },
   "real-hook-discovery": {
+    "opus-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 0.9571,
+        "compression_ratio": 0.7792,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 2,
+        "critical_units_total": 8,
+        "legacy_task_weighted_fact_retention": 0.9615,
+        "recoverability": 1.0,
+        "reduction_pct": 22.08,
+        "semantic_preservation_recall": 0.9362,
+        "task_weighted_relation_recall": 0.875,
+        "unweighted_relation_retention": 0.9
+      }
+    },
+    "opus-v0.10.0-nolint": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.9567,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 8,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 4.33,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
+      }
+    },
     "sonnet": {
       "deep": {
         "blinded_task_weighted_fact_recall": 1.0,
@@ -412,6 +588,38 @@
         "semantic_preservation_recall": 0.9362,
         "task_weighted_relation_recall": 0.875,
         "unweighted_relation_retention": 0.9
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.9264,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 1,
+        "critical_units_total": 8,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 7.36,
+        "semantic_preservation_recall": 0.9681,
+        "task_weighted_relation_recall": 0.875,
+        "unweighted_relation_retention": 0.9
+      }
+    },
+    "sonnet-v0.10.0-nolint": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 1.0,
+        "compression_ratio": 0.8139,
+        "conformance_violation_count": 1,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 8,
+        "legacy_task_weighted_fact_retention": 1.0,
+        "recoverability": 1.0,
+        "reduction_pct": 18.61,
+        "semantic_preservation_recall": 1.0,
+        "task_weighted_relation_recall": 1.0,
+        "unweighted_relation_retention": 1.0
       }
     },
     "test_class": "regression"
@@ -503,6 +711,22 @@
         "semantic_preservation_recall": 0.7644,
         "task_weighted_relation_recall": 0.8095,
         "unweighted_relation_retention": 0.7917
+      }
+    },
+    "sonnet-v0.10.0": {
+      "standard": {
+        "blinded_task_weighted_fact_recall": 0.9773,
+        "compression_ratio": 0.6931,
+        "conformance_violation_count": 0,
+        "critical_units_lost": 0,
+        "critical_units_partial": 0,
+        "critical_units_total": 9,
+        "legacy_task_weighted_fact_retention": 0.9632,
+        "recoverability": 1.0,
+        "reduction_pct": 30.69,
+        "semantic_preservation_recall": 0.977,
+        "task_weighted_relation_recall": 0.9762,
+        "unweighted_relation_retention": 0.9583
       }
     },
     "test_class": "pressure-tests"

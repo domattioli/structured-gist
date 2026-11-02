@@ -375,6 +375,10 @@ def build_report() -> dict:
             judged = load_json(judged_path)
             if LEVEL not in judged:
                 continue
+            # Judged files without relation node paths (e.g. the 0.10.0
+            # re-run) cannot be scored for linkage; skip them.
+            if "relations" not in judged[LEVEL].get("node_paths", {}):
+                continue
             renderings[tier] = score_rendering(case_dir, tier, gold, judged)
         effects = [r["proximity_advantage"] for r in renderings.values()
                    if r["proximity_advantage"] is not None]
