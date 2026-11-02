@@ -1,0 +1,263 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "independent of the other three workstreams",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "no dependency on the security audit or vice versa",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "same quarter purely by scheduling coincidence",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "why the dashboard was loading slowly for some users",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "the database, the first suspect",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "was not the\n        bottleneck",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "query times were normal",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "an unoptimized client-side rendering path re-ran the\n        same computation on every scroll event",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "not expanding headcount at all",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "it backfills exactly\n        one departure from earlier this year, nothing more",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "no connection to the other three workstreams",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "no dependency on the security audit or vice versa",
+        "status": "partial"
+      },
+      "f20": {
+        "evidence": "not\n        motivated by their findings, and neither blocks nor\n        unblocks any of them",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "",
+        "status": "omitted"
+      },
+      "f4": {
+        "evidence": "classes",
+        "status": "partial"
+      },
+      "f5": {
+        "evidence": "third-party dependencies are out of scope for this\n        audit",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "tracked as a separate future effort, not an\n        oversight",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "no critical-severity issues so far, only a handful of\n        low-severity findings, already fixed",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "so each is rewritten from scratch",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "both were found to describe an old version of the\n        setup flow",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "sometimes assumed to mean the team is growing",
+        "note": "not supported by gold; no fact says anyone assumes this Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Security audit",
+            "Independence"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Docs overhaul",
+            "Independence"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Docs overhaul",
+            "Independence"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Performance investigation",
+            "Question"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Performance investigation",
+            "Ruled out"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Performance investigation",
+            "Ruled out"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Performance investigation",
+            "Ruled out"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Performance investigation",
+            "Bottleneck"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Hiring push",
+            "Headcount"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Hiring push",
+            "Headcount"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Hiring push",
+            "Independence"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Docs overhaul",
+            "Independence"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Hiring push",
+            "Independence"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Security audit",
+            "Scope"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Security audit",
+            "Exclusion"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Security audit",
+            "Exclusion"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Security audit",
+            "Findings"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Docs overhaul",
+            "Reason"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Docs overhaul",
+            "Reason"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "Third-party dependencies.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Deliberate; tracked as a separate future effort, not an oversight.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No; ruled out, query times were normal.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "An unoptimized client-side rendering path re-running the same computation on every scroll event.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; backfills exactly one departure, not expanding headcount.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "No; no connection to the other three workstreams, not motivated by their findings.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "No; no dependency either way, same quarter by scheduling coincidence.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Each workstream is independent of the others, but no explicit statement about no shared parent theme or sub-part relations.",
+        "verdict": "partial"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "the database, the first suspect, was not the\n        bottleneck; query times were normal",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "no dependency on the security audit or vice versa;\n        same quarter purely by scheduling coincidence",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "no connection to the other three workstreams; not\n        motivated by their findings, and neither blocks nor\n        unblocks any of them",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "independent of the other three workstreams",
+        "status": "partial"
+      }
+    }
+  }
+}

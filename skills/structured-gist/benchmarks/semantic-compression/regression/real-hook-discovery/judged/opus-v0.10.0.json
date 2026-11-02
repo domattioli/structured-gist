@@ -1,0 +1,229 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "it looked for a manifest at",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "II. validate each match's frontmatter",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "any name already linked is skipped rather than\n        clobbered",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "confirms the symlink resolves",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "the target's\n        version field parses, so a broken link fails\n        loudly instead of silently",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "A. all 77 skills load",
+        "status": "partial"
+      },
+      "f15": {
+        "evidence": "updates are picked up the next time a session\n        bootstraps, with no manual resync step required",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "directories under `.claude/skills/`",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "this\n            repo keeps its skills at the top level, in\n            `skills/`",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "b. nothing symlinked into `~/.claude/skills/`",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "the harness only scans `~/.claude/skills/` once\n            at startup",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a skill that missed the initial\n            scan never appeared for the rest of the session",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "I. walk repo for `skills/<name>/SKILL.md`",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "the search is capped at `maxdepth 2`",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "so fixture\n        directories nested deeper under `tests/fixtures/`\n        are not mistaken for real skills",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "newly-added skills never showed up for consumer\n        repos",
+        "note": "Gold does not mention consumer repos or newly-added skills in the symptom Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Missing skills",
+            "Cause",
+            "a. installer `load_local_skills` path mismatch"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Fix",
+            "II. validate each match's frontmatter"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Fix",
+            "III. symlink into `~/.claude/skills/`"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Fix",
+            "IV. verify every new link"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Fix",
+            "IV. verify every new link"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Outcome",
+            "A. all 77 skills load"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Outcome",
+            "B. consumer repos auto-update"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Missing skills",
+            "Cause",
+            "a. installer `load_local_skills` path mismatch"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Missing skills",
+            "Cause",
+            "a. installer `load_local_skills` path mismatch"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Missing skills",
+            "Cause",
+            "b. nothing symlinked into `~/.claude/skills/`"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Missing skills",
+            "Cause",
+            "c. no hot reload"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Missing skills",
+            "Cause",
+            "c. no hot reload"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Fix",
+            "I. walk repo for `skills/<name>/SKILL.md`"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Fix",
+            "I. walk repo for `skills/<name>/SKILL.md`"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Fix",
+            "I. walk repo for `skills/<name>/SKILL.md`"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "load_local_skills looked for a manifest at .claude/skills.manifest.json and skills under .claude/skills/, but the repo keeps skills at top-level skills/.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "The installer's expected .claude/ paths did not match the repo's top-level skills/ layout, so nothing was symlinked.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "The harness only scans ~/.claude/skills/ once at startup and has no hot reload.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "So fixture directories nested deeper under tests/fixtures/ are not mistaken for real skills.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; any name already linked is skipped rather than clobbered.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Before; validation (II) precedes symlinking (III).",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "77",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Nothing manual; updates are picked up the next time a session bootstraps.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "a. installer `load_local_skills` path mismatch",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "so a skill that missed the initial\n            scan never appeared for the rest of the session",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "II. validate each match's frontmatter",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "IV. verify every new link",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "Outcome",
+        "status": "partial"
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ preservation, carve-outs, caveman independence): full content lives in
 inlined the outline verbatim and drifted stale against the actual example
 after the v0.2.5 taxonomy redesign; single source of truth now). GitHub
 authoring is no longer a structured-gist rule as of v0.2.11; it moved to
-`write-like-scientist` since it's this repo's own
+a separate public-prose wording skill, since it is a
 comment-discipline policy, not a rule of this skill.
 
 ## Verdict

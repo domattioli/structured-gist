@@ -1,0 +1,276 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Migrate acme-studio.com from the old",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "This weakens the",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "A DNS-record cutover that can be reverted in",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Choose the cleanest way to point apex and www",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "Do this first, if the current host allows it.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "domains, add acme-studio.com and www.acme-",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "e. /about (extensionless) returns 200",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "and remind the user to submit the sitemap in",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "The contact form backend is not functional yet",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "today, that is accepted; the launch decision is",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "must remain intact as a rollback target for",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "Squarespace, still live at acme-studio.com.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "b. live at acme-studio.pages.dev",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "hosts the personal site, project \"personal-",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "Unconfirmed. Likely Squarespace Domains (site",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "was built there), possibly Google Domains legacy",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Also list current DNS records, so a written",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "Squarespace, confirm whether it supports what",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "walk through moving just DNS hosting to",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "d. account personal-account",
+        "note": "Account name not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "Identify it together using whois and what the",
+        "note": "whois / dashboard method not in gold Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Migration task",
+            "Goal"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Requested steps",
+            "II. Decide apex and www path"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Old site",
+            "Preferred approach"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Requested steps",
+            "II. Decide apex and www path"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Requested steps",
+            "III. Lower TTLs"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Requested steps",
+            "IV. Add custom domains"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Requested steps",
+            "V. Verify"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Requested steps",
+            "VI. Save rollback note"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Known issue",
+            "Status"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Known issue",
+            "Status"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Old site",
+            "Status"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Old site",
+            "Status"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Migration task",
+            "New site"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Protected site",
+            "Constraint"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Registrar",
+            "Certainty"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Registrar",
+            "Certainty"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Requested steps",
+            "I. Identify registrar and DNS host"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Requested steps",
+            "II. Decide apex and www path"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Requested steps",
+            "II. Decide apex and www path"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q10": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      },
+      "q9": {
+        "answer_given": "answered from outline",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Identify it together using whois and what the",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "If not,",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "This weakens the",
+        "status": "partial"
+      },
+      "r4": {
+        "evidence": "I. Identify registrar and DNS host",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "is being fixed separately. If DNS completes",
+        "status": "retained"
+      }
+    }
+  }
+}

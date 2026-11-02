@@ -1,0 +1,285 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Moved from synchronous processing to a queue-based",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "which pushed more calls past\n        the timeout threshold and produced more retries.",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "In ordinary traffic the loop stayed small and went\n        unnoticed",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "at peak it ran hot enough to cascade:\n        downstream queue depth grew faster than it could\n        drain, latency, timeout rates and retry volume\n        climbed",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "until the receiver spent most of its\n        capacity on retried requests instead of new ones.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "The cascade drove the decision to introduce a\n        message queue in front of the enrichment step.",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "The receiver acknowledges the sender immediately on\n        receipt",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "hands the enrichment work to a worker\n        process instead of doing it inline.",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "The receiver's response time no longer depends on\n        the enrichment API's response time, so the two\n        latencies stopped being coupled to each other.",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "A slow downstream call no longer produces a\n        sender-facing timeout",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "which means no retry",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "the handler called a downstream\n        enrichment API directly and held the HTTP request\n        open until that call returned.",
+        "status": "retained"
+      },
+      "f20": {
+        "evidence": "the\n        retry-storm failure mode that caused the cascades\n        is gone, not just less frequent.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "Already slow under normal conditions, often taking\n        several seconds to respond.",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "Because the handler waited synchronously, the\n        sender's HTTP connection stayed open for those same\n        several seconds.",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "some calls ran long enough to\n        exceed the sender's timeout",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "Senders assume a timed-out request failed and, by\n        design, retry it",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Senders assume a timed-out request failed and, by\n        design, retry it",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "each retry was a new synchronous\n        call to the same already-slow endpoint.",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "Retries did not relieve pressure on the downstream\n        API, they added to it",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "so a meaningful fraction of\n        requests timed out.",
+        "note": "Quantifier not in gold; gold says only some calls exceeded the timeout. Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Webhook receiver",
+            "Change"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Failure chain",
+            "VI. retry feedback loop"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Failure chain",
+            "VII. peak-traffic cascade"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Failure chain",
+            "VII. peak-traffic cascade"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Failure chain",
+            "VII. peak-traffic cascade"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Queue fix",
+            "Trigger"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Queue fix",
+            "Mechanism"
+          ]
+        },
+        "f16": {
+          "located": [
+            "Queue fix",
+            "Mechanism"
+          ]
+        },
+        "f17": {
+          "located": [
+            "Queue fix",
+            "Decoupling"
+          ]
+        },
+        "f18": {
+          "located": [
+            "Queue fix",
+            "Outcome"
+          ]
+        },
+        "f19": {
+          "located": [
+            "Queue fix",
+            "Outcome"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Failure chain",
+            "I. synchronous handler design"
+          ]
+        },
+        "f20": {
+          "located": [
+            "Queue fix",
+            "Outcome"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Failure chain",
+            "II. slow downstream API"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Failure chain",
+            "III. sender connection held open"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Failure chain",
+            "IV. sender timeouts"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Failure chain",
+            "V. sender retries"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Failure chain",
+            "V. sender retries"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Failure chain",
+            "V. sender retries"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Failure chain",
+            "VI. retry feedback loop"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "The cascade of the retry feedback loop under peak traffic drove the decision.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Synchronous handler held sender's HTTP connection open for the slow downstream call, causing sender timeouts.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Each retry was a new synchronous call to the same already-slow endpoint, adding load.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "No; it stayed small and unnoticed, cascading only at peak.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; receiver acks immediately, decoupled, so no timeout and no retry.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Gone, not just less frequent.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "A worker process, after the receiver acknowledges immediately.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Acknowledgement first, then enrichment handed to a worker.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Because the handler waited synchronously, the\n        sender's HTTP connection stayed open",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "some calls ran long enough to\n        exceed the sender's timeout",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "by\n        design, retry it",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "each retry was a new synchronous\n        call to the same already-slow endpoint",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "which pushed more calls past\n        the timeout threshold and produced more retries.",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "at peak it ran hot enough to cascade",
+        "status": "retained"
+      },
+      "r7": {
+        "evidence": "The cascade drove the decision to introduce a\n        message queue in front of the enrichment step.",
+        "status": "retained"
+      },
+      "r8": {
+        "evidence": "A slow downstream call no longer produces a\n        sender-facing timeout, which means no retry",
+        "status": "retained"
+      }
+    }
+  }
+}

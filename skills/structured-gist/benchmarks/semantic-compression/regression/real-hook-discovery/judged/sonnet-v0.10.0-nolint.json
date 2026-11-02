@@ -1,0 +1,230 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "`load_local_skills` expected a manifest at",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "validate each frontmatter",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "Any name already linked is skipped rather than",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "Confirms the symlink resolves",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "version field parses, so a broken link fails loudly",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "all 77 skills load at session start",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "This happens automatically the next time a repo",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "`.claude/skills.manifest.json` and skill directories",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "top-level `skills/`, so the paths never matched.",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "nothing symlinked into `~/.claude/skills/`",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "harness scans only at startup",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "initial scan never appeared for the rest of the",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "find every `skills/<name>/SKILL.md`",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "The search is capped at `maxdepth 2`",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "directories nested deeper under `tests/fixtures/`",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "Newly-added skills never showed up for consumer repos.",
+        "note": "Symptom statement not in gold facts Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Skill discovery bug",
+            "Cause"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Fix",
+            "Steps"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Fix",
+            "Steps",
+            "symlink into `~/.claude/skills/`"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Fix",
+            "Steps",
+            "verify each new link"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Fix",
+            "Steps",
+            "verify each new link"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Result",
+            "Outcome"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Result",
+            "Outcome",
+            "consumer repos pick up updates"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Skill discovery bug",
+            "Cause"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Skill discovery bug",
+            "Cause"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Skill discovery bug",
+            "Consequence"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Skill discovery bug",
+            "Consequence"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Skill discovery bug",
+            "Consequence",
+            "harness scans only at startup"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Fix",
+            "Steps"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Fix",
+            "Steps",
+            "find every `skills/<name>/SKILL.md`"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Fix",
+            "Steps",
+            "find every `skills/<name>/SKILL.md`"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "load_local_skills expected .claude/ paths but repo keeps skills at top-level skills/, so paths never matched.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "The expected paths never matched the repo's layout.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Harness scans only at startup and has no hot reload.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "So fixture directories nested deeper under tests/fixtures/ are not mistaken for real skills.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No, names already linked are skipped rather than clobbered.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Before; validation is step ii, symlink step iii.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "77",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Nothing manual; automatic at next session bootstrap.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "but this repo keeps skills at",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "There is no hot reload, so a skill that missed the",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "ii. validate each frontmatter",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "iv. verify each new link",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "a. all 77 skills load at session start",
+        "status": "retained"
+      }
+    }
+  }
+}

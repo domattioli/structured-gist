@@ -1,0 +1,268 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "Fully migrated; the cutover completed last month.",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "Final for now, not a scheduling delay.",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "Migrated, then rolled back; it is back on the old",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "i. attempted two months ago\n        ii. ran about three weeks",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "reverted after user-hit bugs",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "infrastructure, fully reverted.",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "Whether to attempt the migration again has not been",
+        "status": "retained"
+      },
+      "f16": {
+        "evidence": "Mid-migration, actively in progress right now.",
+        "status": "retained"
+      },
+      "f17": {
+        "evidence": "Some endpoints already serve production traffic on",
+        "status": "retained"
+      },
+      "f18": {
+        "evidence": "The rest are served from the old infrastructure until",
+        "status": "retained"
+      },
+      "f19": {
+        "evidence": "The only service on this list running on both",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "The old billing infrastructure has been decommissioned\n        entirely, so no fallback path is left even if wanted.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "Not started; nothing has moved and it still runs",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "Scheduled to migrate next quarter, once the billing",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "cutover's lessons are folded into the migration runbook.",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "entirely on the old infrastructure today.",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Explicitly not going to be migrated, at least not",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "It carries a large amount of bespoke compliance logic",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "judged the migration risk not worth the benefit.",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "in ways the old infrastructure never exhibited",
+        "note": "not supported by gold facts Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "billing-service",
+            "Status"
+          ]
+        },
+        "f10": {
+          "located": [
+            "auth-service",
+            "Decision"
+          ]
+        },
+        "f11": {
+          "located": [
+            "search-service",
+            "Status"
+          ]
+        },
+        "f12": {
+          "located": [
+            "search-service",
+            "History"
+          ]
+        },
+        "f13": {
+          "located": [
+            "search-service",
+            "History",
+            "iii"
+          ]
+        },
+        "f14": {
+          "located": [
+            "search-service",
+            "Status"
+          ]
+        },
+        "f15": {
+          "located": [
+            "search-service",
+            "Open decision"
+          ]
+        },
+        "f16": {
+          "located": [
+            "reporting-service",
+            "Status"
+          ]
+        },
+        "f17": {
+          "located": [
+            "reporting-service",
+            "Cut over"
+          ]
+        },
+        "f18": {
+          "located": [
+            "reporting-service",
+            "Remaining"
+          ]
+        },
+        "f19": {
+          "located": [
+            "reporting-service",
+            "Distinction"
+          ]
+        },
+        "f2": {
+          "located": [
+            "billing-service",
+            "Fallback"
+          ]
+        },
+        "f3": {
+          "located": [
+            "notifications-service",
+            "Status"
+          ]
+        },
+        "f4": {
+          "located": [
+            "notifications-service",
+            "Timing"
+          ]
+        },
+        "f5": {
+          "located": [
+            "notifications-service",
+            "Timing"
+          ]
+        },
+        "f6": {
+          "located": [
+            "notifications-service",
+            "Status"
+          ]
+        },
+        "f7": {
+          "located": [
+            "auth-service",
+            "Status"
+          ]
+        },
+        "f8": {
+          "located": [
+            "auth-service",
+            "Reason"
+          ]
+        },
+        "f9": {
+          "located": [
+            "auth-service",
+            "Reason"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "auth-service",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "Bespoke compliance logic, expensive and risky to port; risk judged not worth the benefit.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Final for now, not a scheduling delay.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "search-service",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "Data-consistency bugs; search results lagged behind the source-of-truth database.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "reporting-service, the only one on both infrastructures.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Next quarter.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "No, not yet decided.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "Scheduled to migrate next quarter, once the billing",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "judged the migration risk not worth the benefit.",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "iii. reverted after user-hit bugs",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "Migrated, then rolled back; it is back on the old",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "Explicitly not going to be migrated, at least not",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "The only service on this list running on both",
+        "status": "retained"
+      }
+    }
+  }
+}

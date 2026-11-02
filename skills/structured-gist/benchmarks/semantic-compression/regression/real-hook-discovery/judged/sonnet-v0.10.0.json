@@ -1,0 +1,243 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "`load_local_skills` looked for a manifest at `.claude/skills.manifest.json`",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "validate frontmatter first",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "skipping any name already linked rather than clobbering it.",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "As a last step it walks every link it just created and confirms the symlink resolves",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "the target's version field parses, so a broken link fails loudly instead of silently.",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "all 77 skills load at startup",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "consumer repos update automatically",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "expected skill directories under `.claude/skills/`.",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "This repo keeps its skills at the top level, in `skills/`, with no `.claude/` prefix at all.",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "The paths never matched, so nothing was symlinked into `~/.claude/skills/`.",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "The harness scans that directory only once at startup",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a skill that missed the initial scan never appeared for the rest of the session",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "It finds every `skills/<name>/SKILL.md`",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "capping the search at `maxdepth 2`",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "so fixture directories nested deeper under `tests/fixtures/` are not mistaken for real skills.",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "however long you waited",
+        "note": "embellishment not in gold Source check: source.md states this.",
+        "source_supported": true
+      },
+      {
+        "claim": "Newly-added skills never showed up for consumer repos.",
+        "note": "symptom framing not in gold facts Source check: source.md states this.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "install flow looked in wrong place"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "validate frontmatter first"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "symlink skill directory"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "verify created links"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "verify created links"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Skill discovery bug",
+            "Result",
+            "a"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Skill discovery bug",
+            "Result",
+            "b"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "install flow looked in wrong place"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "repo layout differs"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "no hot reload"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "no hot reload"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "no hot reload"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "walk repo for skills"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "walk repo for skills"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Skill discovery bug",
+            "Fix",
+            "walk repo for skills"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "load_local_skills looked under .claude/ but repo keeps skills at top-level skills/.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "The paths never matched, so nothing was symlinked.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "Harness scans ~/.claude/skills/ only once at startup.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "So fixture directories under tests/fixtures/ are not mistaken for real skills.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; it skips names already linked rather than clobbering.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Before; validation is listed before symlinking.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "77",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Nothing manual; consumer repos update automatically, no manual resync.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "The paths never matched, so nothing was symlinked",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "The harness scans that directory only once at startup, so a skill that missed the initial scan never appeared",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "validate frontmatter first",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "As a last step it walks every link it just created",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "all 77 skills load at startup",
+        "status": "partial"
+      }
+    }
+  }
+}

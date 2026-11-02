@@ -1,0 +1,227 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "c. to 5 seconds",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "\u21aa Not a raw timeout-seconds change: the timeout unit",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "keeping the same 30-second effective timeout but",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "a. `2.4.0-rc1`",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "b. stopped mid-rollout",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "a. previous config, unchanged",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "a. `abc1234`",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "slow downstream failures by waiting too long before",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "giving up, and the shorter timeout forces faster",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "c. to 45 seconds",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "a. `def5678`",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "Service B was timing out on legitimate slow requests",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "during nightly batch jobs, so the timeout was raised to",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "a. bumped to `2.3.1`",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "\u21aa It was meant to change its timeout as well.",
+        "note": "Service D's intent to change its timeout is not in gold. Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "a. four services",
+        "note": "Service count not in gold. Source check: keyword found in source.md.",
+        "source_supported": true
+      },
+      {
+        "claim": "b. this week",
+        "note": "Timeframe not in gold facts. Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Service A",
+            "Change"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Service C",
+            "Change"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Service C",
+            "Change"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Service D",
+            "Target version"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Service D",
+            "Status"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Service D",
+            "Current config"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Service A",
+            "Commit"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Service A",
+            "Motivation"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Service A",
+            "Motivation"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Service B",
+            "Change"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Service B",
+            "Commit"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Service B",
+            "Motivation"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Service B",
+            "Motivation"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Service C",
+            "Version"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "From 30 seconds to 5 seconds.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "From 30 seconds to 45 seconds.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "No; A decreased (cut to a sixth), B increased (nearly doubled).",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "abc1234 for Service A, def5678 for Service B.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; unit changed from seconds to a duration string, effective timeout stays 30 seconds.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "2.4.0-rc1; no, rollout aborted/stopped mid-rollout after health check failure.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "Its previous config, unchanged.",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "A: to force faster failure detection after masking slow downstream failures. B: to give legitimate slow nightly batch requests room to finish.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "a. A cut to a sixth",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "slow downstream failures by waiting too long before",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "during nightly batch jobs, so the timeout was raised to",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "keeping the same 30-second effective timeout but",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "a. `abc1234` versus `def5678`",
+        "status": "retained"
+      },
+      "r6": {
+        "evidence": "a. health check failure",
+        "status": "retained"
+      }
+    }
+  }
+}

@@ -348,7 +348,7 @@ def render_claim_list(outline_text: str) -> str:
     return output.getvalue()
 
 
-_FALLBACK_VERSION = "0.9.1"
+_FALLBACK_VERSION = "0.10.0"
 
 
 def _package_version():

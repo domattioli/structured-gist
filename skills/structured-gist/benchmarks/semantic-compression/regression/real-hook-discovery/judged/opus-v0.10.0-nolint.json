@@ -1,0 +1,229 @@
+{
+  "standard": {
+    "facts": {
+      "f1": {
+        "evidence": "a manifest at `.claude/skills.manifest.json`",
+        "status": "retained"
+      },
+      "f10": {
+        "evidence": "II. validate frontmatter",
+        "status": "retained"
+      },
+      "f11": {
+        "evidence": "already linked rather than clobbering it",
+        "status": "retained"
+      },
+      "f12": {
+        "evidence": "confirms each symlink resolves",
+        "status": "retained"
+      },
+      "f13": {
+        "evidence": "version field parses, so a broken link fails loudly",
+        "status": "retained"
+      },
+      "f14": {
+        "evidence": "all 77 skills load at session start",
+        "status": "retained"
+      },
+      "f15": {
+        "evidence": "time it bootstraps a session, with no manual resync",
+        "status": "retained"
+      },
+      "f2": {
+        "evidence": "skill directories under `.claude/skills/`",
+        "status": "retained"
+      },
+      "f3": {
+        "evidence": "this repo keeps its skills at the top level, in",
+        "status": "retained"
+      },
+      "f4": {
+        "evidence": "the paths never matched, so nothing ever got",
+        "status": "retained"
+      },
+      "f5": {
+        "evidence": "the harness only scans `~/.claude/skills/` once",
+        "status": "retained"
+      },
+      "f6": {
+        "evidence": "missed the initial scan never appeared for the",
+        "status": "retained"
+      },
+      "f7": {
+        "evidence": "finds every `skills/<name>/SKILL.md`",
+        "status": "retained"
+      },
+      "f8": {
+        "evidence": "`maxdepth 2` so fixture directories nested deeper",
+        "status": "retained"
+      },
+      "f9": {
+        "evidence": "under `tests/fixtures/` are not mistaken for skills",
+        "status": "retained"
+      }
+    },
+    "hallucinations": [
+      {
+        "claim": "no matter how long you waited",
+        "note": "embellishment not in gold Source check: keyword found in source.md.",
+        "source_supported": true
+      }
+    ],
+    "node_paths": {
+      "facts": {
+        "f1": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "expected paths"
+          ]
+        },
+        "f10": {
+          "located": [
+            "Fix",
+            "validate frontmatter"
+          ]
+        },
+        "f11": {
+          "located": [
+            "Fix",
+            "symlink skill directory"
+          ]
+        },
+        "f12": {
+          "located": [
+            "Fix",
+            "verify new links"
+          ]
+        },
+        "f13": {
+          "located": [
+            "Fix",
+            "verify new links"
+          ]
+        },
+        "f14": {
+          "located": [
+            "Outcome",
+            "77 skills load"
+          ]
+        },
+        "f15": {
+          "located": [
+            "Outcome",
+            "automatic updates"
+          ]
+        },
+        "f2": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "expected paths"
+          ]
+        },
+        "f3": {
+          "located": [
+            "Skill discovery bug",
+            "Cause",
+            "actual location"
+          ]
+        },
+        "f4": {
+          "located": [
+            "Skill discovery bug",
+            "Effect",
+            "nothing symlinked"
+          ]
+        },
+        "f5": {
+          "located": [
+            "Skill discovery bug",
+            "Effect",
+            "skill never appeared"
+          ]
+        },
+        "f6": {
+          "located": [
+            "Skill discovery bug",
+            "Effect",
+            "skill never appeared"
+          ]
+        },
+        "f7": {
+          "located": [
+            "Fix",
+            "walk repo"
+          ]
+        },
+        "f8": {
+          "located": [
+            "Fix",
+            "walk repo"
+          ]
+        },
+        "f9": {
+          "located": [
+            "Fix",
+            "walk repo"
+          ]
+        }
+      }
+    },
+    "questions": {
+      "q1": {
+        "answer_given": "load_local_skills looked for a manifest and skills under .claude/, but the repo keeps skills at top-level skills/.",
+        "verdict": "correct"
+      },
+      "q2": {
+        "answer_given": "The expected .claude/ paths never matched the repo's top-level skills/ layout.",
+        "verdict": "correct"
+      },
+      "q3": {
+        "answer_given": "The harness scans ~/.claude/skills/ only once at startup, with no hot reload.",
+        "verdict": "correct"
+      },
+      "q4": {
+        "answer_given": "So fixture directories nested deeper under tests/fixtures/ are not mistaken for skills.",
+        "verdict": "correct"
+      },
+      "q5": {
+        "answer_given": "No; it skips any name already linked rather than clobbering it.",
+        "verdict": "correct"
+      },
+      "q6": {
+        "answer_given": "Before; validate frontmatter is step II, symlink step III.",
+        "verdict": "correct"
+      },
+      "q7": {
+        "answer_given": "77",
+        "verdict": "correct"
+      },
+      "q8": {
+        "answer_given": "Nothing manual; it picks up updates automatically at next session bootstrap.",
+        "verdict": "correct"
+      }
+    },
+    "relations": {
+      "r1": {
+        "evidence": "the paths never matched, so nothing ever got",
+        "status": "retained"
+      },
+      "r2": {
+        "evidence": "with no hot reload, so a skill that",
+        "status": "retained"
+      },
+      "r3": {
+        "evidence": "II. validate frontmatter",
+        "status": "retained"
+      },
+      "r4": {
+        "evidence": "IV. verify new links",
+        "status": "retained"
+      },
+      "r5": {
+        "evidence": "A. 77 skills load",
+        "status": "retained"
+      }
+    }
+  }
+}

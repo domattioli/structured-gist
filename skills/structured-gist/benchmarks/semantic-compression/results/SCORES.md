@@ -12,12 +12,21 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 
 | case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| near-identical-numbers | opus-v0.10.0-nolint | standard | 276 | 280 | -1.45 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| near-identical-numbers | opus-v0.10.0 | standard | 276 | 274 | 0.72 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| near-identical-numbers | sonnet-v0.10.0-nolint | standard | 276 | 270 | 2.17 | 2 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| near-identical-numbers | sonnet-v0.10.0 | standard | 276 | 284 | -2.9 | 0 | 1.0 | 0.9167 | 0 | 0 | 1.0 |
 | near-identical-numbers | sonnet | skim | 276 | 50 | 81.88 | 0 | 0.3115 | 0.25 | 57.1 | 0 | 0.5 |
 | near-identical-numbers | sonnet | standard | 276 | 160 | 42.03 | 11 | 0.9508 | 0.9167 | 0 | 0 | 1.0 |
 | near-identical-numbers | sonnet | deep | 276 | 255 | 7.61 | 10 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| real-benchmark-archaeology | sonnet-v0.10.0 | standard | 466 | 380 | 18.45 | 0 | 1.0 | 0.8333 | 0 | 0 | 1.0 |
 | real-benchmark-archaeology | sonnet | skim | 466 | 74 | 84.12 | 0 | 0.4658 | 0.5 | 33.3 | 0 | 0.5625 |
 | real-benchmark-archaeology | sonnet | standard | 466 | 190 | 59.23 | 3 | 0.8846 | 0.9167 | 4.2 | 0 | 0.8125 |
 | real-benchmark-archaeology | sonnet | deep | 466 | 344 | 26.18 | 2 | 0.9658 | 1.0 | 0 | 0 | 0.875 |
+| real-hook-discovery | opus-v0.10.0-nolint | standard | 231 | 221 | 4.33 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| real-hook-discovery | opus-v0.10.0 | standard | 231 | 180 | 22.08 | 0 | 0.9615 | 0.9 | 0 | 0 | 1.0 |
+| real-hook-discovery | sonnet-v0.10.0-nolint | standard | 231 | 188 | 18.61 | 1 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| real-hook-discovery | sonnet-v0.10.0 | standard | 231 | 214 | 7.36 | 0 | 1.0 | 0.9 | 0 | 0 | 1.0 |
 | real-hook-discovery | sonnet | skim | 231 | 49 | 78.79 | 0 | 0.3923 | 0.6 | 40.0 | 0 | 0.6875 |
 | real-hook-discovery | sonnet | standard | 231 | 125 | 45.89 | 0 | 0.9538 | 0.9 | 0 | 0 | 1.0 |
 | real-hook-discovery | sonnet | deep | 231 | 167 | 27.71 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
@@ -35,36 +44,45 @@ Regenerate with `python3 scoring/deterministic.py && python3 scoring/combine.py`
 
 | case | tier | level | src_w | out_w | reduction% | conform_viol | twFactRetention | relRetention | omission% | unsupported_claims | recoverability |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| causality-heavy-explain | sonnet-v0.10.0 | standard | 369 | 337 | 8.67 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
 | causality-heavy-explain | sonnet | skim | 369 | 51 | 86.18 | 0 | 0.5556 | 0.0625 | 20.0 | 0 | 0.5625 |
 | causality-heavy-explain | sonnet | standard | 369 | 166 | 55.01 | 6 | 0.8 | 0.5625 | 5.0 | 0 | 0.9375 |
 | causality-heavy-explain | sonnet | deep | 369 | 333 | 9.76 | 6 | 0.9722 | 0.9375 | 0 | 0 | 1.0 |
 | cause-chain-reversal | haiku | skim | 361 | 16 | 95.57 | 0 | 0.101 | 0.0833 | 85.0 | 0 | 0.3125 |
 | cause-chain-reversal | haiku | standard | 361 | 71 | 80.33 | 2 | 0.5707 | 0.5 | 30.0 | 0 | 0.625 |
 | cause-chain-reversal | haiku | deep | 361 | 133 | 63.16 | 8 | 0.8333 | 0.9167 | 10.0 | 0 | 0.9375 |
+| cause-chain-reversal | sonnet-v0.10.0 | standard | 361 | 306 | 15.24 | 0 | 0.9747 | 1.0 | 0 | 0 | 1.0 |
 | cause-chain-reversal | sonnet | skim | 361 | 90 | 75.07 | 0 | 0.6414 | 0.6667 | 15.0 | 0 | 0.8125 |
 | cause-chain-reversal | sonnet | standard | 361 | 356 | 1.39 | 0 | 0.9747 | 1.0 | 0 | 0 | 0.8125 |
 | cause-chain-reversal | sonnet | deep | 361 | 411 | -13.85 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
 | migration-tristate | haiku | skim | 280 | 29 | 89.64 | 2 | 0.25 | 0.1667 | 68.4 | 0 | 0.3125 |
 | migration-tristate | haiku | standard | 280 | 127 | 54.64 | 5 | 0.7442 | 0.75 | 15.8 | 0 | 0.6875 |
 | migration-tristate | haiku | deep | 280 | 252 | 10.0 | 20 | 0.9884 | 1.0 | 0 | 0 | 1.0 |
+| migration-tristate | sonnet-v0.10.0 | standard | 280 | 256 | 8.57 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
 | migration-tristate | sonnet | skim | 280 | 27 | 90.36 | 0 | 0.314 | 0.25 | 57.9 | 0 | 0.3125 |
 | migration-tristate | sonnet | standard | 280 | 144 | 48.57 | 0 | 0.9477 | 0.9167 | 0 | 0 | 1.0 |
 | migration-tristate | sonnet | deep | 280 | 189 | 32.5 | 0 | 1.0 | 1.0 | 0 | 0 | 1.0 |
+| negation-and-true-peers | sonnet-v0.10.0 | standard | 272 | 216 | 20.59 | 0 | 0.8947 | 0.875 | 5.0 | 0 | 0.9375 |
 | negation-and-true-peers | sonnet | skim | 272 | 46 | 83.09 | 1 | 0.0316 | 0.125 | 95.0 | 0 | 0.0625 |
 | negation-and-true-peers | sonnet | standard | 272 | 225 | 17.28 | 1 | 0.9895 | 1.0 | 0 | 0 | 1.0 |
 | negation-and-true-peers | sonnet | deep | 272 | 241 | 11.4 | 1 | 0.9895 | 1.0 | 0 | 0 | 1.0 |
+| registrar-hedge | opus-v0.10.0-nolint | standard | 381 | 358 | 6.04 | 0 | 1.0 | 0.9 | 0 | 0 | 1.0 |
+| registrar-hedge | opus-v0.10.0 | standard | 381 | 336 | 11.81 | 0 | 1.0 | 0.8 | 0 | 0 | 1.0 |
 | registrar-hedge | opus-v0.4.12 | skim | 381 | 215 | 43.57 | 0 | 0.6386 | 0.5 | 15.8 | 0 | 0.7 |
 | registrar-hedge | opus-v0.4.12 | standard | 381 | 423 | -11.02 | 1 | 0.9699 | 0.9 | 0 | 0 | 1.0 |
 | registrar-hedge | opus-v0.4.12 | deep | 381 | 598 | -56.96 | 7 | 1.0 | 0.9 | 0 | 1 | 1.0 |
 | registrar-hedge | opus-v0.5.0b1 | skim | 381 | 109 | 71.39 | 2 | 0.4096 | 0.5 | 31.6 | 0 | 0.35 |
 | registrar-hedge | opus-v0.5.0b1 | standard | 381 | 272 | 28.61 | 0 | 0.6446 | 0.6 | 15.8 | 0 | 0.75 |
 | registrar-hedge | opus-v0.5.0b1 | deep | 381 | 554 | -45.41 | 4 | 1.0 | 0.9 | 0 | 0 | 1.0 |
+| registrar-hedge | sonnet-v0.10.0-nolint | standard | 381 | 393 | -3.15 | 0 | 1.0 | 0.8 | 0 | 0 | 1.0 |
+| registrar-hedge | sonnet-v0.10.0 | standard | 381 | 398 | -4.46 | 0 | 1.0 | 0.9 | 0 | 0 | 1.0 |
 | registrar-hedge | sonnet | skim | 381 | 42 | 88.98 | 0 | 0.2711 | 0.2 | 63.2 | 0 | 0.5 |
 | registrar-hedge | sonnet | standard | 381 | 192 | 49.61 | 14 | 0.753 | 0.8 | 5.3 | 0 | 0.95 |
 | registrar-hedge | sonnet | deep | 381 | 348 | 8.66 | 26 | 0.9217 | 0.9 | 0 | 0 | 1.0 |
 | synthetic-scale-verylarge | haiku | skim | 1313 | 61 | 95.35 | 3 | 0.1579 | 0.25 | 73.9 | 0 | 0.1875 |
 | synthetic-scale-verylarge | haiku | standard | 1313 | 240 | 81.72 | 14 | 0.5553 | 0.625 | 21.7 | 0 | 1.0 |
 | synthetic-scale-verylarge | haiku | deep | 1313 | 733 | 44.17 | 43 | 0.9079 | 0.9167 | 2.2 | 0 | 1.0 |
+| synthetic-scale-verylarge | sonnet-v0.10.0 | standard | 1313 | 910 | 30.69 | 0 | 0.9632 | 0.9583 | 0 | 0 | 1.0 |
 | synthetic-scale-verylarge | sonnet | skim | 1313 | 72 | 94.52 | 0 | 0.2526 | 0.25 | 58.7 | 0 | 0.3125 |
 | synthetic-scale-verylarge | sonnet | standard | 1313 | 462 | 64.81 | 0 | 0.7316 | 0.7917 | 8.7 | 0 | 1.0 |
 | synthetic-scale-verylarge | sonnet | deep | 1313 | 972 | 25.97 | 2 | 0.9947 | 0.9583 | 0 | 0 | 1.0 |
