@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
+
+# Benchmark run outputs and caches
+skills/structured-gist/benchmarks/model-effort-sweep/runs/
+skills/structured-gist/benchmarks/model-effort-sweep/judged/
+skills/structured-gist/benchmarks/controlled/runs/dryrun-*/

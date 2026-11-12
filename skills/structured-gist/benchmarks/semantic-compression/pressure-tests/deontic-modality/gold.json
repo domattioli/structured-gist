@@ -1,0 +1,145 @@
+{
+  "case_id": "deontic-modality",
+  "size_bucket": "medium",
+  "pressure_tags": [
+    "deontic",
+    "modality"
+  ],
+  "source_word_count": 350,
+  "facts": [
+    {
+      "id": "policy_must",
+      "text": "Documentation is authored in outline format",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "Documentation MUST be authored in outline format."
+    },
+    {
+      "id": "qualifier_must",
+      "text": "The requirement is mandatory (MUST)",
+      "category": "epistemic",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "MUST",
+      "attaches_to": "policy_must"
+    },
+    {
+      "id": "policy_should",
+      "text": "Agent-facing rules are tabular, not prose",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "Agent-facing rules SHOULD be tabular, not prose."
+    },
+    {
+      "id": "qualifier_should",
+      "text": "The recommendation is less binding than a requirement (SHOULD)",
+      "category": "epistemic",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "SHOULD",
+      "attaches_to": "policy_should"
+    },
+    {
+      "id": "policy_may",
+      "text": "Complex examples remain in prose if tabular form loses nuance",
+      "category": "outcome",
+      "weight": 2.5,
+      "precision_sensitive": false,
+      "source_quote": "Complex examples MAY remain in prose if tabular form loses nuance."
+    },
+    {
+      "id": "qualifier_may",
+      "text": "The option is permissive, not required (MAY)",
+      "category": "epistemic",
+      "weight": 3,
+      "precision_sensitive": false,
+      "source_quote": "MAY",
+      "attaches_to": "policy_may"
+    },
+    {
+      "id": "rationale_accuracy",
+      "text": "Outline format might improve agent rule-following accuracy",
+      "category": "epistemic",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "Outline format might improve agent rule-following accuracy"
+    },
+    {
+      "id": "rationale_loss",
+      "text": "Terse nodes might cause structure loss unless rules are inherently list-shaped",
+      "category": "epistemic",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "Terse nodes might cause structure loss unless rules are inherently list-shaped."
+    },
+    {
+      "id": "measurement",
+      "text": "Measurement is required before adoption",
+      "category": "outcome",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "It requires measurement before adoption"
+    },
+    {
+      "id": "scope_narratives",
+      "text": "Rewriting unstructured prose narratives into outlines is out of scope",
+      "category": "descriptive",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "Rewriting unstructured prose narratives into outlines is out of scope."
+    },
+    {
+      "id": "scope_skill",
+      "text": "Changing SKILL.md is out of scope until measurement is complete",
+      "category": "descriptive",
+      "weight": 2,
+      "precision_sensitive": false,
+      "source_quote": "Changing SKILL.md itself is also out of scope until measurement is complete."
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_measurement",
+      "type": "conditional",
+      "text": "Measurement precedes adoption.",
+      "fact_ids": [
+        "measurement"
+      ],
+      "source_quote": "It requires measurement before adoption"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_must",
+      "question": "What force does the documentation outline rule have?",
+      "gold_answer": "It is mandatory.",
+      "type": "factual",
+      "fact_ids": [
+        "policy_must",
+        "qualifier_must"
+      ]
+    },
+    {
+      "id": "q_should",
+      "question": "What force does the rule for agent-facing rules have?",
+      "gold_answer": "It is a recommendation.",
+      "type": "factual",
+      "fact_ids": [
+        "policy_should",
+        "qualifier_should"
+      ]
+    },
+    {
+      "id": "q_may",
+      "question": "What force does the rule for complex examples have?",
+      "gold_answer": "It grants permission under the stated condition.",
+      "type": "factual",
+      "fact_ids": [
+        "policy_may",
+        "qualifier_may"
+      ]
+    }
+  ]
+}
