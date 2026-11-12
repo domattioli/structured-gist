@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" role="img" aria-label="Recoverability by effort and generator">
+<title>Recoverability by effort and generator</title>
+<style>svg{--bg:#ffffff;--fg:#1f2328;--muted:#59636e;--grid:#d1d9e0;--c0:#0072b2;--c1:#d55e00;--c2:#009e73;--c3:#cc79a7;--c4:#b8860b;--c5:#56b4e9}@media (prefers-color-scheme: dark){svg{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--grid:#3d444d;--c0:#5cb3ff;--c1:#ff8c42;--c2:#3ddc97;--c3:#e39ad0;--c4:#f5c242;--c5:#9fd8ff}}.bg{fill:var(--bg)}text{fill:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}.muted{fill:var(--muted)}.axis{stroke:var(--fg);stroke-width:1;fill:none}.grid{stroke:var(--grid);stroke-width:1;fill:none}.line{fill:none;stroke-width:2}.whisker{fill:none;stroke-width:1.5;opacity:0.45}.open{fill:none;stroke-width:2}.s0{stroke:var(--c0)}.mk.s0{fill:var(--c0)}.s1{stroke:var(--c1)}.mk.s1{fill:var(--c1)}.s2{stroke:var(--c2)}.mk.s2{fill:var(--c2)}.s3{stroke:var(--c3)}.mk.s3{fill:var(--c3)}.s4{stroke:var(--c4)}.mk.s4{fill:var(--c4)}.s5{stroke:var(--c5)}.mk.s5{fill:var(--c5)}</style>
+<rect class="bg" x="0" y="0" width="760" height="440"/>
+<text x="295.0" y="22.0" text-anchor="middle" font-size="16" font-weight="600">Recoverability</text>
+<line class="grid" x1="64.0" y1="342.0" x2="574.0" y2="342.0"/>
+<text class="muted" x="58.0" y="346.0" text-anchor="end" font-size="12">0</text>
+<line class="grid" x1="64.0" y1="280.8" x2="574.0" y2="280.8"/>
+<text class="muted" x="58.0" y="284.8" text-anchor="end" font-size="12">0.2</text>
+<line class="grid" x1="64.0" y1="219.6" x2="574.0" y2="219.6"/>
+<text class="muted" x="58.0" y="223.6" text-anchor="end" font-size="12">0.4</text>
+<line class="grid" x1="64.0" y1="158.4" x2="574.0" y2="158.4"/>
+<text class="muted" x="58.0" y="162.4" text-anchor="end" font-size="12">0.6</text>
+<line class="grid" x1="64.0" y1="97.2" x2="574.0" y2="97.2"/>
+<text class="muted" x="58.0" y="101.2" text-anchor="end" font-size="12">0.8</text>
+<line class="grid" x1="64.0" y1="36.0" x2="574.0" y2="36.0"/>
+<text class="muted" x="58.0" y="40.0" text-anchor="end" font-size="12">1</text>
+<path class="axis" d="M64.0,36.0V342.0H574.0"/>
+<text x="149.0" y="358.0" text-anchor="middle" font-size="12">low</text>
+<text x="319.0" y="358.0" text-anchor="middle" font-size="12">medium</text>
+<text x="489.0" y="358.0" text-anchor="middle" font-size="12">high</text>
+<text class="muted" x="319.0" y="374.0" text-anchor="middle" font-size="12">effort</text>
+<text class="muted" x="14.0" y="189.0" text-anchor="middle" font-size="12" transform="rotate(-90 14.0 189.0)">questions answered (0-1)</text>
+<line class="whisker s0" fill="none" x1="123.5" y1="112.5" x2="123.5" y2="36.0"/>
+<line class="whisker s0" fill="none" x1="293.5" y1="112.5" x2="293.5" y2="36.0"/>
+<line class="whisker s0" fill="none" x1="463.5" y1="93.4" x2="463.5" y2="36.0"/>
+<path class="line s0" fill="none" d="M123.5,70.0L293.5,77.6L463.5,58.1"/>
+<circle class="mk s0" cx="123.5" cy="70.0" r="4.5"/>
+<circle class="mk s0" cx="293.5" cy="77.6" r="4.5"/>
+<circle class="mk s0" cx="463.5" cy="58.1" r="4.5"/>
+<line class="whisker s1" fill="none" x1="133.7" y1="55.1" x2="133.7" y2="36.0"/>
+<line class="whisker s1" fill="none" x1="303.7" y1="342.0" x2="303.7" y2="36.0"/>
+<line class="whisker s1" fill="none" x1="473.7" y1="55.1" x2="473.7" y2="36.0"/>
+<path class="line s1" fill="none" d="M133.7,39.8L303.7,74.2L473.7,38.1"/>
+<rect class="mk s1" x="129.2" y="35.3" width="9.0" height="9.0"/>
+<rect class="mk s1" x="299.2" y="69.8" width="9.0" height="9.0"/>
+<rect class="mk s1" x="469.2" y="33.6" width="9.0" height="9.0"/>
+<line class="whisker s2" fill="none" x1="143.9" y1="55.1" x2="143.9" y2="36.0"/>
+<line class="whisker s2" fill="none" x1="313.9" y1="55.1" x2="313.9" y2="36.0"/>
+<path class="line s2" fill="none" d="M143.9,38.1L313.9,38.1L483.9,36.0"/>
+<polygon class="mk s2" points="143.9,32.7 148.8,41.7 139.0,41.7"/>
+<polygon class="mk s2" points="313.9,32.7 318.8,41.7 308.9,41.7"/>
+<polygon class="mk s2" points="483.9,30.6 488.8,39.6 478.9,39.6"/>
+<line class="whisker s3" fill="none" x1="154.1" y1="112.5" x2="154.1" y2="36.0"/>
+<line class="whisker s3" fill="none" x1="324.1" y1="131.6" x2="324.1" y2="36.0"/>
+<line class="whisker s3" fill="none" x1="494.1" y1="93.4" x2="494.1" y2="36.0"/>
+<path class="line s3" fill="none" d="M154.1,58.5L324.1,62.8L494.1,53.8"/>
+<polygon class="mk s3" points="154.1,52.7 159.9,58.5 154.1,64.4 148.2,58.5"/>
+<polygon class="mk s3" points="324.1,56.9 330.0,62.8 324.1,68.6 318.2,62.8"/>
+<polygon class="mk s3" points="494.1,48.0 500.0,53.8 494.1,59.7 488.2,53.8"/>
+<line class="whisker s4" fill="none" x1="164.3" y1="112.5" x2="164.3" y2="36.0"/>
+<line class="whisker s4" fill="none" x1="334.3" y1="97.2" x2="334.3" y2="36.0"/>
+<line class="whisker s4" fill="none" x1="504.3" y1="81.9" x2="504.3" y2="36.0"/>
+<path class="line s4" fill="none" d="M164.3,53.0L334.3,51.3L504.3,53.8"/>
+<path class="s4 open" fill="none" d="M159.4,48.1L169.2,58.0M159.4,58.0L169.2,48.1"/>
+<path class="s4 open" fill="none" d="M329.4,46.4L339.2,56.3M329.4,56.3L339.2,46.4"/>
+<path class="s4 open" fill="none" d="M499.4,48.9L509.2,58.8M499.4,58.8L509.2,48.9"/>
+<line class="whisker s5" fill="none" x1="174.5" y1="55.1" x2="174.5" y2="36.0"/>
+<line class="whisker s5" fill="none" x1="514.5" y1="55.1" x2="514.5" y2="36.0"/>
+<path class="line s5" fill="none" d="M174.5,39.8L344.5,36.0L514.5,38.1"/>
+<polygon class="mk s5" points="174.5,45.2 179.4,36.2 169.6,36.2"/>
+<polygon class="mk s5" points="344.5,41.4 349.4,32.4 339.6,32.4"/>
+<polygon class="mk s5" points="514.5,43.5 519.5,34.5 509.6,34.5"/>
+<path class="line s0" fill="none" d="M600.0,60.0H624.0"/>
+<circle class="mk s0" cx="612.0" cy="60.0" r="4.5"/>
+<text x="630.0" y="64.0" font-size="12">haiku</text>
+<text class="muted" x="630.0" y="76.0" font-size="9">claude-haiku-4-5-20251001</text>
+<path class="line s1" fill="none" d="M600.0,94.0H624.0"/>
+<rect class="mk s1" x="607.5" y="89.5" width="9.0" height="9.0"/>
+<text x="630.0" y="98.0" font-size="12">sonnet</text>
+<text class="muted" x="630.0" y="110.0" font-size="9">claude-sonnet-5-5</text>
+<path class="line s2" fill="none" d="M600.0,128.0H624.0"/>
+<polygon class="mk s2" points="612.0,122.6 617.0,131.6 607.0,131.6"/>
+<text x="630.0" y="132.0" font-size="12">opus</text>
+<text class="muted" x="630.0" y="144.0" font-size="9">claude-opus-5-5</text>
+<path class="line s3" fill="none" d="M600.0,162.0H624.0"/>
+<polygon class="mk s3" points="612.0,156.2 617.9,162.0 612.0,167.8 606.1,162.0"/>
+<text x="630.0" y="166.0" font-size="12">luna</text>
+<path class="line s4" fill="none" d="M600.0,196.0H624.0"/>
+<path class="s4 open" fill="none" d="M607.0,191.1L617.0,200.9M607.0,200.9L617.0,191.1"/>
+<text x="630.0" y="200.0" font-size="12">terra</text>
+<path class="line s5" fill="none" d="M600.0,230.0H624.0"/>
+<polygon class="mk s5" points="612.0,235.4 617.0,226.4 607.0,226.4"/>
+<text x="630.0" y="234.0" font-size="12">sol</text>
+<text class="muted" x="16" y="410" font-size="11">Points: mean over n = 9 cases per point (of 9 in the suite); whiskers: min-max.</text>
+<text class="muted" x="16" y="425" font-size="11">Judge resolution: single judge fable, unresolved by a second judge.</text>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "generators": [
+    {"name": "haiku", "backend": "claude", "model": "claude-haiku-4-5-20251001"},
+    {"name": "sonnet", "backend": "claude", "model": "claude-sonnet-5-5"},
+    {"name": "opus", "backend": "claude", "model": "claude-opus-5-5"},
+    {"name": "luna", "backend": "codex", "model": "luna"},
+    {"name": "terra", "backend": "codex", "model": "terra"},
+    {"name": "sol", "backend": "codex", "model": "sol"}
+  ],
+  "efforts": ["low", "medium", "high"],
+  "judges": [
+    {"name": "fable", "backend": "claude", "model": "claude-fable-5-1"},
+    {"name": "astra", "backend": "codex", "model": "astra"}
+  ],
+  "judge_effort": "medium",
+  "granularity": "standard",
+  "mode": "block",
+  "condition": {"caveman": "off"},
+  "suite_dir": "../semantic-compression",
+  "skill_path": "../../SKILL.md",
+  "codex_home": "~/.codex-bench",
+  "concurrency": 3,
+  "timeout_s": 600
+}
