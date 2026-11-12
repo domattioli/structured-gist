@@ -91,7 +91,7 @@ def test_config_matrix_shape(cfg):
     assert [j["name"] for j in cfg["judges"]] == ["fable", "astra"]
     assert cfg["condition"] == {"caveman": "off"}
     assert cfg["granularity"] == "standard" and cfg["mode"] == "block"
-    assert len(generate.load_cases(cfg)) == 9
+    assert len(generate.load_cases(cfg)) == 10
 
 
 # ------------------------------------------------------------------ prompts
@@ -237,7 +237,7 @@ def test_generate_dry_run_makes_no_calls(cfg_path, tmp_path, capsys):
     rc = generate.main(["--dry-run", "--config", str(cfg_path), "--root", str(tmp_path)], call_fn=boom)
     assert rc == 0
     out = capsys.readouterr().out
-    assert "= 162 cells" in out and "no model calls made" in out
+    assert "= 180 cells" in out and "no model calls made" in out
     assert not (tmp_path / "runs").exists()
 
 

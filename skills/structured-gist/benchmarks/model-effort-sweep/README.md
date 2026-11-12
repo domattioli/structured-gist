@@ -1,7 +1,7 @@
 # Model-effort sweep
 
 This harness measures how the generator model and its reasoning effort
-affect structured-gist outlines. Six generator models each render the nine
+affect structured-gist outlines. Six generator models each render the ten
 cases of the semantic-compression suite at three effort levels, using the
 `standard` granularity in `block` mode. Two judges from different vendors
 then grade every outline against the suite's gold facts, relations, and
@@ -21,13 +21,13 @@ which runs the shipped linter).
 |---|---|
 | generator | haiku (`claude-haiku-4-5-20251001`), sonnet (`claude-sonnet-5-5`), opus (`claude-opus-5-5`) through the Claude CLI; luna, terra, sol through `agents-inc run` (Codex aliases) |
 | effort | low, medium, high |
-| case | the 9 cases in `suite.json` |
+| case | the 10 cases in `suite.json` |
 | granularity, mode | `standard`, `block` (fixed) |
 | condition | `{"caveman": "off"}` (fixed in this sweep) |
 
-That gives 6 x 3 x 9 = 162 generation cells. Each cell is judged by fable
+That gives 6 x 3 x 10 = 180 generation cells. Each cell is judged by fable
 (`claude-fable-5-1`) and astra (Codex alias), both at medium effort, so a
-full run makes 324 judge items, each with up to two calls.
+full run makes 360 judge items, each with up to two calls.
 
 All settings live in `config.json`.
 
@@ -95,7 +95,7 @@ README section "Hallucination / unsupported-claim correction".
 Run every step from this folder.
 
 ```bash
-python3 generate.py --dry-run     # print the 162-cell matrix and planned commands
+python3 generate.py --dry-run     # print the 180-cell matrix and planned commands
 python3 generate.py               # write runs/<case>/<model>-<effort>/
 python3 judge.py --dry-run
 python3 judge.py                  # write judged/<judge>/<case>/<model>-<effort>.json
@@ -120,6 +120,8 @@ python3 -m pytest tests -q
 
 ## Outputs
 
+The committed results come from the nine-case run before deontic-modality was added and cover nine cases.
+
 - `runs/<case>/<model>-<effort>/standard.md`: the extracted outline.
 - `runs/.../raw.txt`: the unparsed reply.
 - `runs/.../meta.json`: model id, backend, effort, condition, tokens, cost,
@@ -140,7 +142,7 @@ input and output token counts and cost stay empty rather than zero.
 
 - Each cell runs once. Differences between neighbouring effort levels can be
   within run-to-run noise, and the harness does not estimate that noise.
-- Nine small cases cannot represent every kind of source text. The min-max
+- Ten small cases cannot represent every kind of source text. The min-max
   whiskers show spread across cases, not a confidence interval.
 - Judges can favour outputs from their own model family. Using one judge
   from each vendor and showing both judges' scores next to the resolved score

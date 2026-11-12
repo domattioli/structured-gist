@@ -78,7 +78,7 @@ Behavior verified:
 | `run_judged.sh` | Judged lane entry point | ✓ Implemented (calls `python3 run.py --lane judged`) |
 | `cache_key.py` | SHA-256 cache key computation | ✓ Implemented (ready for run.py) |
 | `test_cache.py` | Cache key logic tests | ✓ Implemented (9 test cases) |
-| `suite.json` | Case roster + lane assignments (9 cases) | ✓ Implemented |
+| `suite.json` | Case roster + lane assignments (10 cases) | ✓ Implemented |
 | `provenance.json` | Run metadata (model, prompt, timestamp) | ✓ Updated by run.py on each invocation |
 | `.github/workflows/benchmark-deterministic.yml` | CI workflow for deterministic lane | ✓ Implemented (no model secrets) |
 

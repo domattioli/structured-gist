@@ -8,7 +8,8 @@
     {"id": "migration-tristate", "lane": "deterministic"},
     {"id": "negation-and-true-peers", "lane": "deterministic"},
     {"id": "registrar-hedge", "lane": "deterministic"},
-    {"id": "synthetic-scale-verylarge", "lane": "deterministic"}
+    {"id": "synthetic-scale-verylarge", "lane": "deterministic"},
+    {"id": "deontic-modality", "lane": "deterministic"}
   ],
   "conditions": {}
 }
