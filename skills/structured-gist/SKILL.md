@@ -1,6 +1,6 @@
 ---
 name: structured-gist
-version: "0.10.0"
+version: "0.11.0"
 benchmark: fact_retention_delta
 description: 'Rewrite explanatory or process-recap prose as a nested lecture-note outline on a fixed marker ladder (concept → attribute → enumerator → `↪` explanation; no plain bullets). Use for agent "what I did and why" recaps, concept / trade-off / cause-chain explanations, session handoffs (`/structured-gist summary`), and finding-first reports (`/structured-gist report`, alias `findings`). Triggers: "structured-gist", "sg", "gist this", "outline this", "notes mode", "sg report", "sg summary", or any request to restructure explanatory text into a skimmable hierarchy. Do NOT use for code, commit messages, bot-template fields or footers, single-fact answers, security or irreversible-action warnings, or when plain prose is requested. Changes structure only, never wording (independent of caveman).'
 ---
@@ -12,6 +12,8 @@ Replace paragraph printouts (esp. "what I did + my reasoning" recaps) with neste
 ## Activation
 
 On-demand: `/structured-gist [block [width N|auto]|responsive]`. Granularity: `standard` only. No mode → `block` (default, all surfaces). `responsive` = explicit opt-in for GitHub issue/PR/comment bodies or chat-app replies needing real GFM nested list.
+
+Drill-down: naming one node of a rendered outline and asking for more detail or its source → see `## Drill-down`.
 
 `width` sets block-mode R11 line budget. Resolution, first match wins:
 1. explicit `width N` or `width auto`
@@ -193,6 +195,21 @@ Preserve source hedges with the claim they govern, collapsed output included. He
 - explicit prose request → prose that turn
 
 *Which* GitHub surfaces render as `responsive` outlines, and which template/footer scaffolding stays verbatim = consuming repo's authoring **policy**, not a rule of this skill. Skill supplies only the `responsive` render mechanism (`## Render modes`).
+
+## Drill-down
+
+Reader names one node of a rendered outline and asks for more detail or its source. Reply expands that node only; the rest of the document is not re-rendered. Synthetic fixtures in `tests/fixtures/drilldown/` define the contract.
+
+- **Trigger**: explicit request naming a node ("tell me more about A > B", "show the source of A > B"). A bare label is not a request.
+- **Target**: full node text or a path of full node texts. An enumerator is named by its full text, never by its ordinal. Wrap breaks in the rendered outline do not change identity.
+- **Ambiguity**: several nodes match, or several outlines are in view → single-fact reply listing candidates or asking which outline; never guess. No match → not-found notice; no near match → no-candidates notice.
+- **Scope**: default = target plus its subtree. "just this node" = single node. Whole-document asks stay inside the target and say so.
+- **Detail reply**: hierarchical. Keep the target's ancestor chain (same role, same absolute depth, same text), then add new nodes under the target using the normal ladder. A `↪` leaf target gains its detail as an enumerator child placed after the `↪` leaf. Obey the R5 arrow limit: nest detail under enumerators, never stack sibling `↪` leaves.
+- **Mode and width**: render at the destination width. Mode = the one the reader asked for, otherwise the outline's own mode.
+- **Source**: quote only text whose bytes occur in the original source and belong to the target. Put it in a quote fence (longer than any backtick run in the payload) inside a `↪` leaf; payload lines carry the fence's leading whitespace as prefix and are never re-indented. Quote fences are exempt from the width budget. Reply with one verbatim span alone → single-fact reply.
+- **Unavailable or unverifiable source** (no source, claim-list only, outline edited since render, quote not tied to target) → notice, no quote, never present rendered wording as a source quote.
+- **No further detail** → no-further-detail notice; add nothing unsupported.
+- Only `standard` granularity exists; deep/skim asks get `standard` detail plus a notice.
 
 ## Render modes
 

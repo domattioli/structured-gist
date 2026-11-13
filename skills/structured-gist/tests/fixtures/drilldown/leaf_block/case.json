@@ -1,0 +1,32 @@
+{
+  "ancestors": [
+    {
+      "depth": 0,
+      "role": "concept",
+      "text": "Cache migration"
+    },
+    {
+      "depth": 1,
+      "role": "attribute",
+      "text": "Writes"
+    },
+    {
+      "depth": 2,
+      "role": "enumerator",
+      "text": "i. Quorum writes"
+    }
+  ],
+  "assertion": "hierarchical",
+  "associated_span": null,
+  "case_type": "positive",
+  "input_mode": "block",
+  "output_mode": "block",
+  "scope": "subtree",
+  "target_path": [
+    "Cache migration",
+    "Writes",
+    "i. Quorum writes",
+    "Each write waits for two replicas."
+  ],
+  "width": 64
+}

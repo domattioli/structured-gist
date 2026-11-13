@@ -803,6 +803,44 @@ done < "$rl_ratchet"
 [ "$rl_over" -eq 0 ] && assert "renderings lint at or below baseline" 0
 
 # ---------------------------------------------------------------------------
+# Drill-down fixtures: positive hierarchical replies lint clean
+# (quote-fence fixtures, R5 negatives and checker rejections are covered by pytest)
+# ---------------------------------------------------------------------------
+dd_dir="$SKILL_DIR/tests/fixtures/drilldown"
+dd_bad=0
+dd_n=0
+if [ -d "$dd_dir" ]; then
+  while IFS=$'\t' read -r dd_case dd_width; do
+    dd_n=$((dd_n + 1))
+    python3 "$SKILL_DIR/tests/lint_outline.py" --width "$dd_width" < "$dd_dir/$dd_case/expected.md" > /dev/null 2>&1 && rc=0 || rc=$?
+    if [ "$rc" -ne 0 ]; then
+      assert "drilldown fixture lints clean: $dd_case" 1
+      dd_bad=1
+    fi
+  done < <(python3 - "$dd_dir" <<'PY'
+import json, os, sys
+root = sys.argv[1]
+for name in sorted(os.listdir(root)):
+    d = os.path.join(root, name)
+    cj = os.path.join(d, "case.json")
+    if not os.path.isfile(cj):
+        continue
+    c = json.load(open(cj, encoding="utf-8"))
+    if c["case_type"] != "positive" or c.get("assertion") != "hierarchical":
+        continue
+    if c.get("r5_counts", {}).get("expect_r5"):
+        continue
+    if "````" in open(os.path.join(d, "expected.md"), encoding="utf-8").read():
+        continue
+    print(name + "\t" + str(c["width"]))
+PY
+)
+  [ "$dd_n" -gt 0 ] && [ "$dd_bad" -eq 0 ] && assert "drilldown positive fixtures lint clean ($dd_n)" 0
+else
+  assert "drilldown fixtures directory exists" 1
+fi
+
+# ---------------------------------------------------------------------------
 # Summary
 # ---------------------------------------------------------------------------
 echo

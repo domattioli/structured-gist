@@ -4,6 +4,17 @@ Release notes for tagged versions. The release workflow publishes the section th
 
 ## [Unreleased]
 
+## [0.11.0] — 2026-11-13
+
+### Added
+
+- `SKILL.md` `## Drill-down` section: a reader names one node of a rendered outline and asks for more detail or its source. The reply expands that node only. It keeps the ancestor chain, follows the R5 arrow limit, renders at the destination width, and quotes the source only inside a quote fence whose bytes match the original source for that node. Unavailable or unverifiable sources get a notice, never a quote.
+- 42 synthetic fixture cases in `skills/structured-gist/tests/fixtures/drilldown/` and `skills/structured-gist/tests/test_drilldown.py`, plus a smoke check that lints the positive hierarchical fixtures.
+
+### Evidence
+
+- Fixture contract only. Real-agent behaviour for SC-003 and SC-004 is not measured in this release. This is an operator-accepted risk against constitution principle P2 (decision 2026-11-13); behavioural acceptance needs its own later decision.
+
 ## [0.10.0] — 2026-11-01
 
 ### Changed

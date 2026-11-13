@@ -1,0 +1,26 @@
+{
+  "ancestors": [
+    {
+      "depth": 0,
+      "role": "concept",
+      "text": "Cache migration"
+    },
+    {
+      "depth": 1,
+      "role": "attribute",
+      "text": "Read path"
+    }
+  ],
+  "assertion": "hierarchical",
+  "associated_span": null,
+  "case_type": "positive",
+  "input_mode": "block",
+  "output_mode": "block",
+  "scope": "subtree",
+  "target_path": [
+    "Cache migration",
+    "Read path",
+    "Median read latency fell from 40 ms to 12 ms after the move to three nodes."
+  ],
+  "width": 64
+}

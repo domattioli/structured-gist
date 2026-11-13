@@ -1,0 +1,20 @@
+{
+  "ancestors": [
+    {
+      "depth": 0,
+      "role": "concept",
+      "text": "Cache migration"
+    }
+  ],
+  "assertion": "notice",
+  "associated_span": null,
+  "case_type": "positive",
+  "input_mode": "block",
+  "output_mode": "block",
+  "scope": "subtree",
+  "target_path": [
+    "Cache migration",
+    "Writes"
+  ],
+  "width": 64
+}
