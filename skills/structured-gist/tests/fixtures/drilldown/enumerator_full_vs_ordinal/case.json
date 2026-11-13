@@ -1,0 +1,39 @@
+{
+  "associated_span": null,
+  "case_type": "positive",
+  "input_mode": "block",
+  "output_mode": "block",
+  "scope": "subtree",
+  "sub_requests": [
+    {
+      "ancestors": [
+        {
+          "depth": 0,
+          "role": "concept",
+          "text": "Cache migration"
+        },
+        {
+          "depth": 1,
+          "role": "attribute",
+          "text": "Writes"
+        }
+      ],
+      "assertion": "hierarchical",
+      "expected": "expected_full.md",
+      "request": "request_full.txt",
+      "target_path": [
+        "Cache migration",
+        "Writes",
+        "i. Quorum writes"
+      ]
+    },
+    {
+      "ancestors": [],
+      "assertion": "notice",
+      "expected": "expected_ordinal.md",
+      "request": "request_ordinal.txt",
+      "target_path": null
+    }
+  ],
+  "width": 64
+}

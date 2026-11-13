@@ -1,0 +1,20 @@
+{
+  "ancestors": [
+    {
+      "depth": 0,
+      "role": "concept",
+      "text": "Cache migration"
+    }
+  ],
+  "assertion": "single_fact",
+  "associated_span": "Three nodes make two replicas a majority.",
+  "case_type": "positive",
+  "input_mode": "block",
+  "output_mode": "block",
+  "scope": "subtree",
+  "target_path": [
+    "Cache migration",
+    "Writes"
+  ],
+  "width": 64
+}

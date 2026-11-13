@@ -1,0 +1,20 @@
+{
+  "ancestors": [
+    {
+      "depth": 0,
+      "role": "concept",
+      "text": "Cache migration"
+    }
+  ],
+  "assertion": "single_fact",
+  "associated_span": "The migration plan moved every cache shard to a three node cluster, kept the old node as a cold standby for two weeks, and recorded read and write latency every minute so the team could compare each shard against its own baseline before it retired the standby.",
+  "case_type": "positive",
+  "input_mode": "block",
+  "output_mode": "block",
+  "scope": "subtree",
+  "target_path": [
+    "Cache migration",
+    "Writes"
+  ],
+  "width": 64
+}

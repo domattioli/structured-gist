@@ -1,0 +1,20 @@
+{
+  "ancestors": [
+    {
+      "depth": 0,
+      "role": "concept",
+      "text": "Cache migration"
+    }
+  ],
+  "assertion": "hierarchical",
+  "associated_span": null,
+  "case_type": "positive",
+  "input_mode": "responsive",
+  "output_mode": "block",
+  "scope": "subtree",
+  "target_path": [
+    "Cache migration",
+    "Writes"
+  ],
+  "width": 48
+}
