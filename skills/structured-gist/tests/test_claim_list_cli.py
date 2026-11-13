@@ -29,7 +29,7 @@ def test_help_exits_zero():
 def test_version_exits_zero():
     result = _run(["--version"])
     assert result.returncode == 0, result.stderr
-    assert "0.10.0" in result.stdout
+    assert "0.11.0" in result.stdout
 
 
 def test_stdin_round_trip_one_record():
