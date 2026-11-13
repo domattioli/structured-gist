@@ -288,11 +288,11 @@ accepted - launch decision is mine.
 
 ## 7. Future work
 
-Status and roadmap at 0.10.0:
+Status and roadmap at 0.11.0:
 
 - **Now:** hedge-fidelity axis, waiting on review of the hedge lexicon ([#17](https://github.com/domattioli/structured-gist/issues/17)).
 - **Next:** run the pre-registered controlled benchmark that compares five rendering methods.
-- **Later:** a drill-down mode that expands one node of a rendered outline ([#16](https://github.com/domattioli/structured-gist/issues/16)).
+- **Done in 0.11.0:** a drill-down mode that expands one node of a rendered outline ([#16](https://github.com/domattioli/structured-gist/issues/16)). Fixture contract only; real-agent behaviour is not measured.
 
 - **Explored directions**
   - A. SCU scoring
