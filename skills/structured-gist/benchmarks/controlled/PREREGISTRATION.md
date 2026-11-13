@@ -49,8 +49,8 @@ Generator: `claude-opus-5-5` at `medium` effort, through the
 id; a resolved id that differs from the pinned id is refused and not scored
 (FR-021).
 
-Skill: `SKILL.md` version `0.10.0`, SHA-256
-`5777438825ed3c4c5cc00b008e7b22173a15e989daaa4f5bf3b7706216fa9322`. `reference/render-modes.md` SHA-256
+Skill: `SKILL.md` version `0.11.0`, SHA-256
+`e8e259cc8bd15bd72cea8134d68f0fa354b72c1083e393b26dfd5481df7ea3ea`. `reference/render-modes.md` SHA-256
 `c9a84ae76f9f792ce64a0e3fe4c506b06cc2dacbf5db8f70c9f68ef1a47b0bb9`.
 
 Prompt files in `prompts/` (SHA-256 of the exact bytes):
@@ -345,3 +345,10 @@ in the next window with the same confirmed estimate.
   added to the pre-emit check. No linter rule logic changed. Results from
   runs against 0.9.x do not carry over to this pin. No prompt, method, metric,
   threshold, case or judge id changed.
+- 2026-11-13. Change: skill arm re-pinned to `SKILL.md` version `0.11.0`
+  (SHA-256 `e8e259cc8bd1...`, was `5777438825ed...`). `reference/render-modes.md`
+  is unchanged. Reason: release 0.11.0 changed the skill text the arm loads,
+  not only the version field: a `## Drill-down` section and one Activation
+  line were added. No linter rule logic changed. Results from runs against
+  0.10.x do not carry over to this pin. No prompt, method, metric, threshold,
+  case or judge id changed.
