@@ -15,6 +15,12 @@ Open an issue first for anything that changes behavior: a new rule, a render-mod
 - Tests: `pytest skills/structured-gist/tests/`. Run before every PR.
 - Any rule change needs a fixture pair (`good_*.md` / `bad_*.md`) and a test asserting both.
 
+## Releasing to Zenodo
+
+- Keep the Zenodo GitHub switch for this repository off. The `zenodo-concept` job in `.github/workflows/release.yml` deposits each release as a new version under concept DOI `10.5281/zenodo.22670068` (`tools/zenodo_deposit.py`, then `tools/check_zenodo_concept.py`).
+- The repository secret `ZENODO_TOKEN` is required. Without it the job fails and nothing is published.
+- The job does nothing when the version is already archived under the concept. It refuses when the version sits under another concept.
+
 ## Good patterns
 
 - One rule, one PR. A linter-rule change and a docs fix are two PRs, not one.

@@ -140,5 +140,28 @@ jobs:
             --title "${{ vars.RELEASE_TITLE || github.event.repository.name }} ${GITHUB_REF_NAME#v}" \
             --notes-file release-notes.md
 
+  zenodo-concept:
+    needs: github-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ vars.RELEASE_PYTHON_VERSION || '3.12' }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Deposit the release on Zenodo under the concept DOI
+        # The Zenodo GitHub integration stays off (CONTRIBUTING.md). This step publishes the built
+        # wheel and sdist as a new version of the newest record under 10.5281/zenodo.22670068, with
+        # metadata from .zenodo.json at the tag. It is a no-op when the version is already archived
+        # and refuses when the version sits under another concept or ZENODO_TOKEN is missing.
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: python tools/zenodo_deposit.py "${GITHUB_REF_NAME}" --dist dist
+      - name: Check Zenodo lists the release under the concept DOI
+        run: python tools/check_zenodo_concept.py "${GITHUB_REF_NAME}" --attempts 10 --interval 30
+
   # >>> extra channels (HF, docs, ...): add jobs here with needs: [gate] (and publish-pypi if they must follow PyPI) <<<
-  # Zenodo needs no job: its GitHub integration is a repository webhook and archives the release.
+  # The Zenodo GitHub integration stays off (no repository webhook); the zenodo-concept job above deposits.
